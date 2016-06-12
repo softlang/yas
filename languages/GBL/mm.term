@@ -1,0 +1,1 @@
+[class(false,world,[],[ (part,persons,person,star)]),class(false,person,[],[ (value,name,string,one), (reference,buddy,person,option)]),datatype(string)].

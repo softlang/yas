@@ -1,0 +1,21 @@
+from: locked, input: ticket, to: unlocked
+collect
+from: unlocked, input: pass, to: locked
+from: locked, input: ticket, to: unlocked
+collect
+from: unlocked, input: pass, to: locked
+from: locked, input: ticket, to: unlocked
+collect
+from: unlocked, input: ticket, to: unlocked
+eject
+from: unlocked, input: pass, to: locked
+from: locked, input: pass, to: exception
+alarm
+from: exception, input: ticket, to: exception
+eject
+from: exception, input: pass, to: exception
+from: exception, input: mute, to: exception
+from: exception, input: release, to: locked
+from: locked, input: ticket, to: unlocked
+collect
+from: unlocked, input: pass, to: locked

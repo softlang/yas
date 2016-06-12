@@ -1,0 +1,7 @@
+[
+  elementOf('div.eipl', eipl(text)),
+  macro(ill_formed('var-clash.eipl')),
+  macro(ill_formed('proc-clash.eipl')),
+  macro(ill_formed('missing-var-dec.eipl')),
+  macro(ill_formed('missing-proc-dec.eipl'))
+].

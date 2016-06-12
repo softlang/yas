@@ -1,0 +1,4 @@
+type figure = element* ;
+symbol line: point # point -> element ;
+symbol circle: point # integer -> element ;
+type point = integer # integer ;

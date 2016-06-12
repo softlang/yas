@@ -1,0 +1,4 @@
+[const] expr : nat ;
+[add] expr : expr '+' expr ;
+[zero] nat : 'zero' ;
+[succ] nat : 'succ' '(' nat ')' ;

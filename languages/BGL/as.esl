@@ -1,0 +1,7 @@
+type grammar = rule* ;
+type rule = label # nonterminal # symbol* ;
+symbol t : terminal -> symbol ;
+symbol n : nonterminal -> symbol ;
+type nonterminal = string ;
+type terminal = string ;
+type label = string ;

@@ -1,0 +1,1 @@
+vbox(text('a'), vbox(text('b'), text('c'))).

@@ -1,0 +1,20 @@
+{
+  class : family,
+  name : smallFamily,
+  members : [
+    42 &
+    {
+      class : person,
+      firstName : x,
+      emailAddresses : [ 'x@small.family.com', 'x42@earth.com' ],
+      closestFriend : [ #88 ]
+    },
+    88 &
+    {
+      class : person,
+      firstName : y,
+      emailAddresses : [ ],
+      closestFriend : [ ]
+    }
+  ]
+}.

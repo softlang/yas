@@ -1,0 +1,64 @@
+language Any
+language L <= Any
+language DiffAny
+language DiffL <= DiffAny
+function diff : L # L -> DiffL
+function applyDiff : DiffL # L -> L
+function invDiff : DiffL -> DiffL
+constant emptyDiff : DiffL
+axiom apply {
+ forall x <- L.
+  forall y <- L.
+   forall d <- DiffL.
+    (diff(x, y) = d) => (applyDiff(d, x) = y)
+}
+axiom inv {
+ forall x <- L.
+  forall y <- L.
+   invDiff(diff(x, y)) = diff(y, x)
+}
+axiom diffEmpty {
+ forall x <- L.
+  diff(x, x) = emptyDiff
+}
+axiom empty {
+ forall x <- L.
+  applyDiff(emptyDiff, x) = x
+}
+axiom invEmpty {
+ invDiff(emptyDiff) = emptyDiff
+}
+axiom invTwice {
+ forall d <- DiffL.
+  invDiff(invDiff(d)) = d
+}
+relation consistent : L # DiffL
+language XAny
+language XL <= XAny
+function interpret : XL # L ~> L
+function interpret : XL # DiffL ~> DiffL
+axiom consistency {
+ forall t <- XL.
+  forall a <- L.
+   forall c <- L.
+    forall b <- DiffL.
+     forall d <- DiffL.
+      ((consistent(a, b)) /\ ((interpret(t, a) = c) /\ (interpret(t, b) = d))) => (consistent(c, d))
+}
+relation compatible : L # L
+axiom {
+ forall x <- L.
+  forall y <- L.
+   forall delta <- DiffL.
+    ((compatible(x, y)) /\ (diff(x, y) = delta)) => (consistent(x, delta))
+}
+axiom {
+ forall a <- L.
+  forall b <- L.
+   forall delta1 <- DiffL.
+    ((applyDiff(delta1, a) = b) /\ (compatible(a, b))) => (forall t <- XL.
+                                                            forall c <- L.
+                                                             forall delta2 <- DiffL.
+                                                              ((interpret(t, a) = c) /\ (interpret(t, delta1) = delta2)) => (exists d <- L.
+                                                                                                                              (applyDiff(delta2, c) = d) /\ (compatible(c, d))))
+}

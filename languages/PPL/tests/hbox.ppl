@@ -1,0 +1,1 @@
+hbox(text('a'), hbox(text(' '), text('b'))).

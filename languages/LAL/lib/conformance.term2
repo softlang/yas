@@ -1,0 +1,1 @@
+[language('Any',[]),language('L',['Any']),language('DefAny',[]),language('DefL',['DefAny']),constant(defL,ref('DefL')),relation(conformsTo,[ref('Any'),ref('DefL')]),axiom([],forall(bindv(x),ref('Any'),iff(element(var(x),ref('L')),relapp(conformsTo,[var(x),var(defL)]))))].

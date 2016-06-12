@@ -1,0 +1,1 @@
+[ ([],term,[t(true)]), ([],term,[t(false)]), ([],term,[t(zero)]), ([],term,[t(succ),n(term)]), ([],term,[t(pred),n(term)]), ([],term,[t(iszero),n(term)]), ([],term,[t(if),n(term),n(term),n(term)])].

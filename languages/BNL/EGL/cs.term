@@ -1,0 +1,1 @@
+[ ([number],number,[plus([n(bit)]),option([t('.'),plus([n(bit)])])]), ([zero],bit,[t('0')]), ([one],bit,[t('1')])].

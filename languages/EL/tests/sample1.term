@@ -1,0 +1,1 @@
+unary(not,binary(eq,intconst(88),intconst(42))).

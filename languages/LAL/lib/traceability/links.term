@@ -1,0 +1,1 @@
+[reuse([traceability],[]),relation(links,[star(product([ref('RefL1'),ref('RefL2')])),ref('L1'),ref('L2')]),axiom([],forall(bindv(ls),star(product([ref('RefL1'),ref('RefL2')])),forall(bindv(a1),ref('L1'),forall(bindv(a2),ref('L2'),iff(foreach(bindt([bindv(r1),bindv(r2)]),var(ls),relapp(link,[var(r1),var(r2),var(a1),var(a2)])),relapp(links,[var(ls),var(a1),var(a2)]))))))].

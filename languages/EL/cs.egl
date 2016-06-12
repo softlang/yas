@@ -1,0 +1,28 @@
+// Expressions
+[unary] expr : uop term ;
+[binary] expr : term bop term ;
+expr : term ;
+
+// Simpler expressions
+[intconst] term : integer ;
+[boolconst] term : boolean ;
+[var] term : name ;
+term : '(' expr ')' ;
+
+// Unary operators
+[neg] uop : '-' ;
+[not] uop : '~' ;
+
+// Binary operators
+[add] bop : '+' ;
+[sub] bop : '-' ;
+[mul] bop : '*' ;
+[eq] bop : '==' ;
+[geq] bop : '>=' ;
+[gt] bop : '>' ;
+[and] bop : '&&' ;
+[or] bop : '||' ;
+
+// Boolean constants
+[true] boolean : 'true' ;
+[false] boolean : 'false' ;

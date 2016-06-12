@@ -1,0 +1,21 @@
+[
+  % Syntax
+  macro(basicSyntax(bnl)),
+
+  % Languages for results
+  language(bnl(value(term))),
+  membership(bnl(value(term)), number, []),
+  language(bnl(formula(term))),
+  membership(bnl(formula(term)), bnlFormula:formula, []),
+	  
+  % DCG-based evaluators
+  function(evaluate, [bnl(tokens(term))], [bnl(value(term))], bnlTextEvaluator:evaluate, []),
+  function(convert, [bnl(tokens(term))], [bnl(formula(term))], bnlTextConverter:convert, []),
+
+  % AST-based evaluators
+  function(evaluate, [bnl(term)], [bnl(value(term))], bnlTermEvaluator:evaluate, []),
+  function(convert, [bnl(term)], [bnl(formula(term))], bnlTermConverter:convert, []),
+
+  % Solver
+  function(solve, [bnl(formula(term))], [bnl(value(term))], bnlSolver:solve, []) 
+].

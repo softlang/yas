@@ -1,0 +1,4 @@
+[
+  elementOf('10.term', yabnl(term)),
+  elementOf('5comma25.term', yabnl(term))
+].

@@ -1,0 +1,29 @@
+[
+
+  % Wellness
+  language(ok(bfpl(term))),
+  membership(ok(bfpl(term)), bfplProg:ok, []),
+  elementOf('../samples/factorial.term', ok(bfpl(term))),
+  elementOf('../samples/exp.term', ok(bfpl(term))),
+
+  % Results of interpretation
+  language(bfpl(value(term))),
+  language(bfpl(normal(term))),
+  membership(bfpl(value(term)), intOrBool:value, []),
+  membership(bfpl(normal(term)), bfplNormal:normal, []),
+  elementOf('../samples/factorial.value', bfpl(value(term))),
+  elementOf('../samples/exp.value', bfpl(value(term))),
+  elementOf('../samples/factorial.normal', bfpl(normal(term))),
+
+  % Interpreters
+  function(bigstep, [ok(bfpl(term))], [bfpl(value(term))], bfplBigstep:evaluate, []),
+  function(smallstep, [ok(bfpl(term))], [bfpl(normal(term))], bfplSmallstep:allSteps, []),
+  function(denotational, [ok(bfpl(term))], [bfpl(value(term))], bfplDenotational:prog, []),
+
+  % Application of interpreters
+  mapsTo(bigstep, ['../samples/factorial.term'], ['../samples/factorial.value']),
+  mapsTo(bigstep, ['../samples/exp.term'], ['../samples/exp.value']),
+  mapsTo(smallstep, ['../samples/factorial.term'], ['../samples/factorial.normal']),
+  mapsTo(denotational, ['../samples/factorial.term'], ['../samples/factorial.value'])
+
+].

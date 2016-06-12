@@ -1,0 +1,4 @@
+[ (leaf, [nat], tree),
+  (fork, [tree, tree], tree),
+  (zero, [], nat),
+  (succ, [nat], nat) ].

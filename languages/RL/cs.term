@@ -1,0 +1,1 @@
+[ ([],rules,[star([n(rule)])]), ([n],rule,[t(n),t(:),n(n),t(->),n(n),t(;)]), (['_n'],n,[n(rlvar)])].

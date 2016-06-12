@@ -1,0 +1,3 @@
+reuse coupling
+function mapping : L1 -> L2 // Mapping between languages
+axiom { forall a <- L1. forall b <- L2. mapping(a) = b => consistent(a, b) }

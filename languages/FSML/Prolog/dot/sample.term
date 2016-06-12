@@ -1,0 +1,19 @@
+(
+  % States
+  [ 
+    (locked,locked,ellipse,[filled]),
+    (unlocked,unlocked,ellipse,[]),
+    (exception,exception,ellipse,[])
+  ],
+  % Edges
+  [
+    (locked,unlocked,['ticket/collect']),
+    (locked,exception,['pass/alarm']),
+    (unlocked,unlocked,['ticket/eject']),
+    (unlocked,locked,[pass]),
+    (exception,exception,['ticket/eject']),
+    (exception,exception,[pass]),
+    (exception,exception,[mute]),
+    (exception,locked,[release])
+  ]
+).

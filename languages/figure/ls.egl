@@ -1,0 +1,2 @@
+integer : { digit }+ ;
+layout : { space }+ ;

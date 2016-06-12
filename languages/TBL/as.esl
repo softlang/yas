@@ -1,0 +1,2 @@
+type world = person* ;
+type person = string # string? ;

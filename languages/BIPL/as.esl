@@ -1,0 +1,29 @@
+// Statements
+symbol skip : -> stmt ;
+symbol assign : string # expr -> stmt ;
+symbol seq : stmt # stmt -> stmt ;
+symbol if : expr # stmt # stmt -> stmt ;
+symbol while : expr # stmt -> stmt ;
+
+// Expressions
+symbol intconst : integer -> expr ;
+symbol var : string -> expr ;
+symbol unary : uop # expr -> expr ;
+symbol binary : bop # expr # expr -> expr ;
+
+// Unary operators
+symbol negate : -> uop ;
+symbol not : -> uop ;
+
+// Binary operators
+symbol add : -> bop ;
+symbol sub : -> bop ;
+symbol mul : -> bop ;
+symbol lt : -> bop ;
+symbol leq : -> bop ;
+symbol eq : -> bop ;
+symbol geq : -> bop ;
+symbol gt : -> bop ;
+symbol and : -> bop ;
+symbol or : -> bop ;
+

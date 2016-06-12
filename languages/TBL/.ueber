@@ -1,0 +1,16 @@
+[
+  macro(eglSyntax(tbl)),
+  macro(eslSyntax(tbl)),
+  macro(mmlSyntax(tbl)),
+  function(mapping, [tbl(term)], [tbl(graph(term))], tblGraph:(=>), []),
+  elementOf('mm.term', tree(mml(term))),
+
+  % Well-formedness
+  language(ok(tbl(term))),
+  membership(ok(tbl(term)), tblOk:world, []),
+
+  % A world with one buddy for everyone
+  language(one(tbl(term))),
+  membership(one(tbl(term)), tblOne:world, [])
+
+].

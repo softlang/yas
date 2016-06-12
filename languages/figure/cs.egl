@@ -1,0 +1,4 @@
+figure : {element ';'}* ;
+[line] element : 'line' 'from' ':' point ',' 'to' ':' point ;
+[circle ] element : 'circle' 'origin' ':' point ',' 'radius' ':' integer ;
+point : '(' integer ',' integer ')' ;

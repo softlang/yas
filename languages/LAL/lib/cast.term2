@@ -1,0 +1,1 @@
+[language('Any',[]),language('L',['Any']),function(cast,[ref('Any')],partial,ref('L')),axiom([castOk],forall(bindv(e),ref('L'),eq(funapp(cast,[var(e)]),var(e)))),axiom([castFail],forall(bindv(e1),ref('Any'),ifthen(not(element(var(e1),ref('L'))),not(exists(bindv(e2),ref('L'),eq(funapp(cast,[var(e1)]),var(e2)))))))].

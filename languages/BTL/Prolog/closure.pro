@@ -1,0 +1,6 @@
+% BEGIN ...
+:- module(btlSmallstep, []).
+:- use_module('smallstep.pro', [step/2]).
+% END ...
+steps(T, T) :- isValue(T).
+steps(T1, T3) :- step(T1, T2), steps(T2, T3).

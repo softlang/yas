@@ -1,0 +1,8 @@
+[
+
+  macro(mmlSyntax(familyByRef)),
+  macro(graphSample(familyByRef, 'empty-family')),
+  macro(graphSample(familyByRef, 'singleton-family')),
+  macro(graphSample(familyByRef, 'small-family'))
+
+].

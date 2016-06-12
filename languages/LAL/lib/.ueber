@@ -1,0 +1,28 @@
+[
+% Basics
+    macro(processLal('language.lal')),
+    macro(processLal('language/mathml.lal')),
+    macro(processLal('membership.lal')),
+    macro(processLal('conformance.lal')),    
+    macro(processLal('conformance/mathml.lal')),    
+    macro(processLal('transformation.lal')),
+    macro(processLal('interpretation.lal')),
+    macro(processLal('application.lal')),
+    macro(processLal('composition.lal')),
+    macro(processLal('correspondence.lal')),    
+    macro(processLal('correspondence/oneToOne.lal')),    
+    macro(processLal('referencing.lal')),
+    macro(processLal('traceability.lal')),
+    macro(processLal('traceability/links.lal')),
+    macro(processLal('differencing.lal')),    
+    macro(processLal('cast.lal')),
+    macro(processLal('coupling.lal')),    
+
+% Patterns
+    macro(processLal('cx/mapping.lal')),    
+    macro(processLal('cx/invariant.lal')),    
+    macro(processLal('cx/cotransformation.lal')),    
+    macro(processLal('cx/delta.lal')),    
+    macro(processLal('bx/state.lal')),    
+    macro(processLal('bx/delta.lal'))
+].

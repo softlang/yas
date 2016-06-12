@@ -1,0 +1,6 @@
+[
+  (const,[nat],expr),
+  (add,[expr,expr],expr),
+  (zero,[],nat),
+  (succ,[nat],nat)
+].

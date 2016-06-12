@@ -1,0 +1,18 @@
+fork(
+  (number,number,[n(bits),n(rest)]), % rule
+  [ % list of branches
+    fork( % 1st branch
+      (many,bits,[n(bit),n(bits)]), % rule
+      [ % list of branches
+        fork( % 1st branch
+	  (one,bit,[t('1')]), % rule
+	  [leaf('1')]), % leaf
+	fork( % 2nd branch
+	  (single,bits,[n(bit)]), % rule
+	  [ % list of branches
+	    fork( % 1st branch % rule
+	      (zero,bit,[t('0')]),
+	      [leaf('0')])])]), % leaf
+    fork( % 2nd branch
+      (integer,rest,[]), % rule
+      [])]). % empty list of branches

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema 	xmlns="http://www.w3.org/2001/XMLSchema"
+ 		targetNamespace="http://www.softlangbook.org/BNL" 
+ 		xmlns:tns="http://www.softlangbook.org/BNL" elementFormDefault="qualified">
+  <element name="number">
+    <complexType>
+      <sequence>
+        <element name="bit" type="tns:bit" maxOccurs="unbounded"/>
+        <element name="rest" minOccurs="0">
+          <complexType>
+            <sequence>
+              <element name="bit" type="tns:bit" maxOccurs="unbounded"/>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+    </complexType>
+  </element>
+  <complexType name="bit">
+    <choice>
+      <element name="zero"><complexType></complexType></element>
+      <element name="one"><complexType></complexType></element>
+    </choice>
+  </complexType>
+</schema>

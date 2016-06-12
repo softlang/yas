@@ -1,0 +1,10 @@
+language Any
+language L <= Any
+constant pos : Any
+constant neg : Any
+axiom member {
+ pos <- L
+}
+axiom notMember {
+ ~ (neg <- L)
+}

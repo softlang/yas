@@ -1,0 +1,1 @@
+[ (exp, ([int,int],int),[x,n],if(binary(eq,arg(n),intconst(0)),intconst(1),binary(mul,arg(x),apply(exp,[arg(x),binary(sub,arg(n),intconst(1))]))))],apply(exp,[intconst(2),intconst(3)]).

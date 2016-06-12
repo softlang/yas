@@ -1,0 +1,45 @@
+// Megamodels
+type model = decl* ;
+
+// Declarations
+symbol reuse : mname # subst* -> decl ;
+type mname = name+ ;
+type name = string ;
+type subst = name # name ;
+symbol language : name # name? -> decl ;
+symbol relation : name # types -> decl ;
+symbol function : name # types # arrow # type -> decl ;
+symbol total : -> arrow ;
+symbol partial : -> arrow ;
+symbol constant : name # type -> decl ;
+symbol axiom : name? # formula -> decl ;
+symbol link : name # url -> decl ;
+type url = string ;
+
+// Type expressions
+type types = type+ ;
+symbol ref : name -> type ;
+symbol star : type -> type ;
+symbol product : types -> type ;
+
+// Formulae
+symbol forall : var # type # formula -> formula ;
+symbol foreach : var # expr # formula -> formula ;
+symbol exists : var # type # formula -> formula ;
+symbol existsu : var # type # formula -> formula ;
+symbol relapp : name # expr+ -> formula ;
+symbol element : expr # type -> formula ;
+symbol eq : expr # expr -> formula ;
+symbol and : formula # formula -> formula ;
+symbol or : formula # formula -> formula ;
+symbol not : formula -> formula ;
+symbol iff : formula # formula -> formula ;
+symbol ifthen : formula # formula -> formula ;
+
+// Expressions
+symbol funapp : name # expr+ -> expr ;
+symbol var : name -> expr ;
+
+// Variables and tuple patterns
+symbol bindv : name -> var ;
+symbol bindt : var+ -> var ;

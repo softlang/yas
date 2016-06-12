@@ -1,0 +1,12 @@
+[
+  macro(eglSyntax(lal)),
+  macro(eslSyntax(lal)),
+  language(ok(lal(term))),
+  membership(ok(lal(term)), lalOk:model, []),
+  equivalence(lal(term), lalEq:eq, []),
+  normalization(lal(term), lalNorm:(=>), []),
+  function(deps, [lal(term)], [deps(term)], lalDeps:deps, []),
+  function(transform, [lal(term)], [lal(term)], lalReuse:(=>), []),
+  function(pp, [lal(term)], [lal(text)], lalPp:pp,[]),
+  function(translate, [lal(term), lal(config(term))], [ueber(term)], lalUeber:translate, [])
+].

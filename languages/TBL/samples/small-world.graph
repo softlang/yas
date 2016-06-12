@@ -1,0 +1,1 @@
+{class:world,persons:[{class:person,name:joe,buddy:[bill]},{class:person,name:bill,buddy:[joe]}]}.

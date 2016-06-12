@@ -1,0 +1,8 @@
+reuse referencing [ L |-> L1, RefL |-> RefL1 ]
+reuse referencing [ L |-> L2, RefL |-> RefL2 ]
+relation link : RefL1 # RefL2 # L1 # L2
+axiom { forall r1 <- RefL1 . forall r2 <- RefL2 .
+  forall a1 <- L1 . forall a2 <- L2 .
+    (exists b1 <- L1 . exists b2 <- L2 .
+      deref(r1, a1) = b1 /\ deref(r2, a2) = b2)
+        <=> link(r1, r2, a1, a2) }

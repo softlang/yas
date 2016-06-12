@@ -1,0 +1,4 @@
+language XML
+language MathML <= XML
+link MathML to 'https://www.w3.org/TR/MathML3'
+link XML to 'https://www.w3.org/XML'

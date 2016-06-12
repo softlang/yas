@@ -1,0 +1,6 @@
+[
+  language(prolog),
+  membership(prolog, succeed, []),
+  equivalence(prolog, prologEq:eq, []),
+  function(applyIO, [term, term], [term], applyIO, [])
+].

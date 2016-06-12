@@ -1,0 +1,6 @@
+[ language(bstl(term)),
+  membership(bstl(term), eslLanguage, ['as.term']),
+  function(interpret,
+    [bstl(term), bsl(term)], [bsl(term)], bstlSig:interpret, []),
+  function(interpret,
+     [bstl(term), term], [term], bstlTerm:interpret, []) ].

@@ -1,0 +1,6 @@
+[
+  macro(eslSyntax(dgl)),
+  language(dgl(text)),
+  membership(dgl(text), succeed, []),
+  macro(ppSample(dgl))
+].

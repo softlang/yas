@@ -1,0 +1,1 @@
+[symbol(sequ,[sort(trafo),sort(trafo)],trafo),symbol(renameSort,[sort(sort),sort(sort)],trafo),symbol(renameSym,[sort(sym),sort(sym)],trafo),type(sort,string),type(sym,string)].

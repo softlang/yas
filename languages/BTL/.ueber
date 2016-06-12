@@ -1,0 +1,8 @@
+[
+  macro(eglSyntax(btl)),
+  macro(eslSyntax(btl)),
+  elementOf('sample.btl', btl(text)),
+  elementOf('sample.term', btl(term)),
+  elementOf('value.term', btl(term))
+].
+

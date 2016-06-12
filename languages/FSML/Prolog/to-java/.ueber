@@ -1,0 +1,10 @@
+[
+  macro(eslSyntax(java)),
+  language(java(text)),
+  membership(java(text), succeed, []),
+  elementOf('sample.term', java(term)),
+  elementOf('sample.java', java(text)),
+  function(ppJavaDecl, [java(term)], [java(text)], ppJavaDecl, []),
+  mapsTo(ppJavaDecl, ['sample.term'], ['sample.java'])
+].
+

@@ -1,0 +1,8 @@
+[
+  macro(eglSyntax(elrl)),
+  macro(eslSyntax(elrl)),
+  macro(rl('../EL')),
+  macro(rules('rules/simplify.elrl')),
+  macro(rules('rules/commute.elrl')),
+  macro(rules('rules/associate.elrl'))
+].

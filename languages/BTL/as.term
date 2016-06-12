@@ -1,0 +1,1 @@
+[symbol(true,[],term),symbol(false,[],term),symbol(zero,[],term),symbol(succ,[term],term),symbol(pred,[term],term),symbol(iszero,[term],term),symbol(if,[term,term,term],term)].

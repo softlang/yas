@@ -1,0 +1,9 @@
+type schema = table* ;
+type table = name # column* ;
+type column = name # type # clause* ;
+symbol integer : -> type ;
+symbol varchar : integer -> type ;
+symbol notNull : -> clause ;
+symbol primaryKey : -> clause ;
+symbol foreignKey : name # name -> clause ;
+type name = string ;

@@ -1,0 +1,6 @@
+% BEGIN ...
+:- module(intOrBool, []).
+% END ...
+% int or bool values
+value(intval(_)).
+value(boolval(_)).

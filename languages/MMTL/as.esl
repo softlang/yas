@@ -1,0 +1,6 @@
+symbol renameClassifier : name # name -> trafo ;
+symbol renameMember : name # name # name -> trafo ;
+symbol partToReference : name # name -> trafo ;
+symbol valueToReference : name # name # name # name -> trafo ;
+// ...
+type name = string ;

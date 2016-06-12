@@ -1,0 +1,13 @@
+[ language('L1', term),
+  language('Any1', term),
+  language('L2', bsl(term)),
+  language('Any2', term),
+  language('XL', bstl(term)),
+  language('XAny', term),
+  relation(consistent, conformsTo),
+  axiom(consistency, [
+    (t, 'trafo1.term'),
+    (a, 'term1.term'),
+    (b, 'sig1.term'),
+    (c, 'term2.term'),
+    (d, 'sig2.term') ])].

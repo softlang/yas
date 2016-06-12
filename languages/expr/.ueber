@@ -1,0 +1,11 @@
+[
+
+  % Different syntaxes
+  macro(basicSyntax(expr)),
+  macro(mmlSyntax(expr)),
+
+  % A simple example
+  macro(parseSamplePickily(expr)),
+  macro(graphSample(expr))
+
+].

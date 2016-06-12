@@ -1,0 +1,59 @@
+rules :  { rule }* ;
+
+// Productions for rules per nonterminal
+[expr] rule : 'expr' ':' expr '->' expr ';' ;
+[term] rule : 'term' ':' term '->' term ';' ;
+[uop] rule : 'uop' ':' uop '->' uop ';' ;
+[bop] rule : 'bop' ':' bop '->' bop ';' ;
+[boolean] rule : 'boolean' ':' boolean '->' boolean ';' ;
+
+// Productions for variables per nonterminal
+[_expr] expr : rlvar ;
+[_term] term : rlvar ;
+[_uop] uop : rlvar ;
+[_bop] bop : rlvar ;
+[_boolean] boolean : rlvar ;
+
+// Expressions
+// ...
+// BEGIN ...
+[unary] expr : uop term ;
+[binary] expr : term bop term ;
+expr : term ;
+
+// END ...
+// Simpler expressions
+// ...
+// BEGIN ...
+[intconst] term : integer ;
+[boolconst] term : boolean ;
+[var] term : name ;
+term : '(' expr ')' ;
+
+// END ...
+// Unary operators
+// ...
+// BEGIN ...
+[neg] uop : '-' ;
+[not] uop : '~' ;
+
+// END ...
+// Binary operators
+// ...
+// BEGIN ...
+[add] bop : '+' ;
+[sub] bop : '-' ;
+[mul] bop : '*' ;
+[eq] bop : '==' ;
+[geq] bop : '>=' ;
+[gt] bop : '>' ;
+[and] bop : '&&' ;
+[or] bop : '||' ;
+
+// END ...
+// Boolean constants
+// ...
+// BEGIN ...
+[true] boolean : 'true' ;
+[false] boolean : 'false' ;
+// END ...

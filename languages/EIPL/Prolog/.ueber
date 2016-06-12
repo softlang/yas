@@ -1,0 +1,19 @@
+[
+  % Outputs
+  elementOf('dynamic.output', term),
+  elementOf('mixed.output', term),
+  elementOf('static.output', term),
+
+  % Well-typedness
+  language(ok(eipl(term))),
+  membership(ok(eipl(term)), eiplTyping:main, []),
+  elementOf('../sample.term', ok(eipl(term))),
+
+  % Interpretation
+  function(executeDynamic, [eipl(term)], [term], eiplDynamic:main, []),
+  function(executeMixed, [eipl(term)], [term], eiplMixed:main, []),
+  function(executeStatic, [eipl(term)], [term], eiplStatic:main, []),
+  mapsTo(executeDynamic, ['../sample.term'], ['dynamic.output']),
+  mapsTo(executeMixed, ['../sample.term'], ['mixed.output']),
+  mapsTo(executeStatic, ['../sample.term'], ['static.output'])
+].

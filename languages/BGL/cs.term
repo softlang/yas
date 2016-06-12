@@ -1,0 +1,1 @@
+[ ([],grammar,[star([n(rule)])]), ([],rule,[t('['),n(label),t(']'),n(nonterminal),t(:),star([n(gsymbol)]),t(;)]), ([t],gsymbol,[n(terminal)]), ([n],gsymbol,[n(nonterminal)]), ([],label,[n(name)]), ([],terminal,[n(qstring)]), ([],nonterminal,[n(name)])].

@@ -1,0 +1,4 @@
+[
+  macro(eslSyntax(ppl)),
+  function(pp, [ppl(term)], [text], pplRender:render, [])
+].

@@ -1,0 +1,22 @@
+[
+
+  % Typing
+  language(ok(efpl(term))),
+  membership(ok(efpl(term)), efplInference:okProg, []),
+  elementOf('../tests/sample-with-signatures.term', ok(efpl(term))),
+  elementOf('../tests/sample-without-signatures.term', ok(efpl(term))),
+  elementOf('../tests/sample-without-polymorphism.term', ok(efpl(term))),
+  function(infer, [ok(efpl(term))], [ok(efpl(term))], efplInference:inferProg, []),
+  mapsTo(infer, ['../tests/sample-without-signatures.term'], ['../tests/sample-with-signatures.term']),
+
+  % Results of interpretation
+  language(efpl(value(term))),
+  membership(efpl(value(term)), intOrBool:value, []),
+  elementOf('sample.value', efpl(value(term))),
+
+  % Interpretation
+  function(bigstep, [ok(efpl(term))], [efpl(value(term))], efplBigstep:evaluate, []),
+  mapsTo(bigstep, ['../tests/sample-without-polymorphism.term'], ['sample.value']),
+  mapsTo(bigstep, ['../tests/sample-without-signatures.term'], ['sample.value'])
+
+].

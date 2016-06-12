@@ -1,0 +1,1 @@
+[var(x,intconst(0)),proc(p,assign(x,binary(mul,var(x),intconst(2)))),proc(q,call(p))],scope(([var(x,intconst(5)),proc(p,assign(x,binary(add,var(x),intconst(1))))],seq(call(q),write(var(x))))).

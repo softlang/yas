@@ -1,0 +1,7 @@
+[
+  language(graph(term)),
+  membership(graph(term), graph, []),
+  equivalence(graph(term), graphEq, []),
+  normalization(graph(term), graphNf, [])
+].
+

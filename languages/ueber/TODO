@@ -1,0 +1,43 @@
+TODO ueber
+
+- Spelling languages: BFPL instead bfpl
+  * Need to associate extension with language
+  * Default could be lower case language name
+  * Problem: Would need to quote in Prolog!
+  * Alternative: Associate "print name" in language declaration
+  * Can we have concrete syntax?
+    - Do macros cause issues?
+    - Does staging cause issues?
+- Different language representations
+  * Currently: bfpl(text), bfpl(term), bfpl(ok(term))
+  * Issue:
+    - Representation mixed with well-formedness (see ok(...))
+    - Is there other properties like "ok"?
+  * Idea 1:
+    - bfpl(text) -> bfpl<text (BFPL as subset of text)
+    - bfpl(term) -> bfpl<term (BFPL as subset of term)
+    - bfpl(ok(term)) -> bfpl(ok)<term ???
+  * Idea 2:
+    - bfpl(text) -> text(bfpl) (Establish text representation)
+    - bfpl(term) -> term(bfpl) (Establish term representation)
+    - bfpl(ok(term) -> ok(term(bfpl)) (Establish well-formedness)
+- How to separate Prolog logic and declarations in macros?
+  * Each macro consists of
+    * A list of declarations like an ueber file
+    * A predicate that maps macro args to additional args
+    * Do we always suffice with fixed number of declarations?
+- What ontological concepts should we identify?
+  * We do have parsers - what about ...
+    - translators
+    - generators
+    - interpreters
+    - well-formedness checkers
+    - name binders
+- How to connect other test frameworks and build management?
+  * Haskell unit tests
+  * Java unit tests
+  * Makefiles
+  * What else?
+- Can we switch to a more flexible MegaL-like setup?
+  * New entity types?
+  * New relationship types?

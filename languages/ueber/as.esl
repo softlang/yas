@@ -1,0 +1,17 @@
+type model = decl* ;
+symbol language : lang -> decl ;
+symbol elementOf : file # lang -> decl ;
+symbol notElementOf : file # lang -> decl ;
+symbol membership : lang # goal # file* -> decl ;
+symbol relation : rela # lang* # goal # file* -> decl ;
+symbol relatesTo : rela # file* -> decl ;
+symbol function : func # lang* # lang* # goal # file* -> decl ;
+symbol mapsTo : func # file* # file* -> decl ;
+symbol equivalence : lang # goal # file* -> decl ;
+symbol normalization : lang # goal # file* -> decl ;
+symbol macro : goal -> decl ;
+type file = string ; // filenames
+type rela = string ; // names of relations
+type func = string ; // names of functions
+type lang = term ; // names of languages
+type goal = term ; // Prolog literals

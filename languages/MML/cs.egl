@@ -1,0 +1,16 @@
+metamodel : { classifier }* ;
+[datatype] classifier : 'datatype' name ';' ;
+[class] classifier : abstract 'class' name super members ;
+super : { 'extends' name }? ;
+[abstract] abstract : 'abstract' ;
+[concrete] abstract : ;
+members : '{' { member }* '}' ;
+member : kind name ':' type ';' ;
+[value] kind : 'value' ;
+[part] kind : 'part' ;
+[reference] kind : 'reference' ;
+type : name cardinality ;
+[plus] cardinality : '+' ;
+[star] cardinality : '*' ;
+[option] cardinality : '?' ;
+[one] cardinality : ;

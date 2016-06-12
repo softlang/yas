@@ -1,0 +1,12 @@
+class Handler():
+
+    def __init__(self):
+        self.actions = dict()
+        {% for action in actions %}self.actions['{{ action }}']= self.handle{{ action|default('Empty', true)|capitalize() }}
+        {% endfor %}
+    def handle(self, Action):
+        self.actions[Action]()
+    {% for action in actions %}
+    def handle{{ action|default('Empty', true)|capitalize() }}(self):
+        pass
+    {% endfor %}

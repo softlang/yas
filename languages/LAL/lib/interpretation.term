@@ -1,0 +1,1 @@
+[reuse([language],[ ('L','L1'), ('Any','Any1')]),reuse([language],[ ('L','L2'), ('Any','Any2')]),reuse([language],[ ('L','XL'), ('Any','XAny')]),function(interpret,[ref('XL'),ref('L1')],partial,ref('L2'))].

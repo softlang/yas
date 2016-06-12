@@ -1,0 +1,3 @@
+[number] number :  { bit }+ { '.' { bit }+ }? ;
+[zero] bit : '0' ;
+[one] bit : '1' ;

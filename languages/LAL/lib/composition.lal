@@ -1,0 +1,8 @@
+reuse language
+relation partOf, partOfPlus, partOfStar : L # L
+axiom partAsym { forall x, y <- L. partOf(x, y) => ~partOf(y, x) }
+axiom partReflexive { forall x <- L. partOfStar(x, x) }
+axiom partTransitive { forall x, y <- L.
+  (partOf(x, y) => partOfPlus(x, y))
+  /\ (partOfPlus(x, y) => partOfStar(x, y))
+  /\ (forall z <- L. partOfPlus(x, y) /\ partOfPlus(y, z) => partOfPlus(x, z)) }

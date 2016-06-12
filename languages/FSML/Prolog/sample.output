@@ -1,0 +1,16 @@
+[
+  ([collect], unlocked),
+  ([], locked),
+  ([collect], unlocked),
+  ([], locked),
+  ([collect], unlocked),
+  ([eject], unlocked),
+  ([], locked),
+  ([alarm], exception),
+  ([eject], exception),
+  ([], exception),
+  ([], exception),
+  ([], locked),
+  ([collect], unlocked),
+  ([], locked)
+].

@@ -1,0 +1,1 @@
+[reuse([language],[]),constant(pos,ref('Any')),constant(neg,ref('Any')),axiom([member],element(var(pos),ref('L'))),axiom([notMember],not(element(var(neg),ref('L'))))].

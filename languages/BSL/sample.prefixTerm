@@ -1,0 +1,5 @@
+% A simple expression term "0 + 1"
+add(
+  const(zero),
+  const(succ(zero))
+).

@@ -1,0 +1,34 @@
+language Any
+language L <= Any
+language DiffAny
+language DiffL <= DiffAny
+function diff : L # L -> DiffL
+function applyDiff : DiffL # L -> L
+function invDiff : DiffL -> DiffL
+constant emptyDiff : DiffL
+axiom apply {
+ forall x <- L.
+  forall y <- L.
+   forall d <- DiffL.
+    (diff(x, y) = d) => (applyDiff(d, x) = y)
+}
+axiom inv {
+ forall x <- L.
+  forall y <- L.
+   invDiff(diff(x, y)) = diff(y, x)
+}
+axiom diffEmpty {
+ forall x <- L.
+  diff(x, x) = emptyDiff
+}
+axiom empty {
+ forall x <- L.
+  applyDiff(emptyDiff, x) = x
+}
+axiom invEmpty {
+ invDiff(emptyDiff) = emptyDiff
+}
+axiom invTwice {
+ forall d <- DiffL.
+  invDiff(invDiff(d)) = d
+}

@@ -1,0 +1,1 @@
+[ (dec,[fun(int,int)],[x],binary(sub,name(x),intconst(1))), (factorial,[fun(int,int)],[x],if(binary(eq,name(x),intconst(0)),intconst(1),binary(mul,name(x),apply(name(factorial),[apply(name(dec),[name(x)])])))), (twice,[fun(fun(typevar(a),typevar(a)),fun(typevar(a),typevar(a)))],[f,x],apply(name(f),[apply(name(f),[name(x)])]))],apply(name(twice),[name(factorial),intconst(3)]).

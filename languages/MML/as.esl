@@ -1,0 +1,13 @@
+type metamodel = classifier* ;
+symbol class : abstract # name # extends? # member* -> classifier ;
+symbol datatype : name -> classifier ;
+type member = kind # name # name # cardinality ;
+symbol value : -> kind ;
+symbol part : -> kind ;
+symbol reference : -> kind ;
+symbol one : -> cardinality ;
+symbol option : -> cardinality ;
+symbol star : -> cardinality ;
+type abstract = boolean ;
+type extends = name ;
+type name = string ;

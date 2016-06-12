@@ -1,0 +1,1 @@
+[symbol(renameClassifier,[sort(name),sort(name)],trafo),symbol(renameMember,[sort(name),sort(name),sort(name)],trafo),symbol(partToReference,[sort(name),sort(name)],trafo),symbol(valueToReference,[sort(name),sort(name),sort(name),sort(name)],trafo),type(name,string)].

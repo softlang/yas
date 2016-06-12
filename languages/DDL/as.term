@@ -1,0 +1,1 @@
+[type(schema,star(sort(table))),type(table,tuple([sort(name),star(sort(column))])),type(column,tuple([sort(name),sort(type),star(sort(clause))])),symbol(integer,[],type),symbol(varchar,[integer],type),symbol(notNull,[],clause),symbol(primaryKey,[],clause),symbol(foreignKey,[sort(name),sort(name)],clause),type(name,string)].

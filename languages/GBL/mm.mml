@@ -1,0 +1,6 @@
+class world { part persons : person* ; }
+class person {
+  value name : string ;
+  reference buddy : person? ;
+}
+datatype string ;

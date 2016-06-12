@@ -1,0 +1,12 @@
+{
+  class : family,
+  name : singletonFamily,
+  members : [
+    {
+      class : person,
+      firstName : joe,
+      emailAddresses : [],
+      closestFriend : []
+    }
+  ]
+}.

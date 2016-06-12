@@ -1,0 +1,2 @@
+language Any // The universe to draw elements from
+language L <= Any // A language as a subset of the universe

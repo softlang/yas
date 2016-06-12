@@ -1,0 +1,1 @@
+:- dynamic declaration/1.

@@ -1,0 +1,14 @@
+[
+  language(bgl(text)),
+  membership(bgl(text), elementOfBgl, []),
+  function(parse, [bgl(text)], [bgl(term)], parserOfBgl, []),
+  function(project, [bgl(term)], [bsl(term)], bglToBsl:(=>), []),
+  function(acceptBottomUp, [bgl(term), term], [], acceptBottomUp:accept, []),
+  function(acceptTopDown, [bgl(term), term], [], acceptTopDown:accept, []),
+  function(parseTopDown, [bgl(term), term], [term], parseTopDown:parse, []),
+
+  % Redundant BGL syntax -- BGL is already processed as EGL subset
+  macro(eglSyntax(bgl)),
+  macro(eslSyntax(bgl))
+].
+

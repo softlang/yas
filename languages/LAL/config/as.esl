@@ -1,0 +1,7 @@
+type config = entry* ;
+symbol language : string # term -> entry ;
+symbol constant : string # string -> entry ;
+symbol function : string # string -> entry ;
+symbol relation : string # string -> entry ;
+symbol axiom : string # map -> entry ;
+type map = (string # string)* ;

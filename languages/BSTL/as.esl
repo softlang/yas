@@ -1,0 +1,6 @@
+symbol sequ : trafo # trafo -> trafo ;
+symbol renameSort : sort # sort -> trafo ;
+symbol renameSym : sym # sym -> trafo ;
+// ...
+type sort = string ;
+type sym = string ;

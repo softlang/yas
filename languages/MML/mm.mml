@@ -1,0 +1,20 @@
+abstract class base { value name : string; }
+class metamodel { part classifiers : classifier*; }
+abstract class classifier extends base { }
+class datatype extends classifier { }
+class class extends classifier {
+  value abstract : boolean;
+  reference super : class?;
+  part members : member*;
+}
+abstract class member extends base { part cardinality : cardinality; }
+class value extends member { reference type : datatype; }
+class part extends member { reference type : class; }
+class reference extends member { reference type : class; }
+abstract class cardinality { }
+class one extends cardinality { }
+class star extends cardinality { }
+class plus extends cardinality { }
+class option extends cardinality { }
+datatype string;
+datatype boolean;

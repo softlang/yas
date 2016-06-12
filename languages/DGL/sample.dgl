@@ -1,0 +1,6 @@
+digraph G {
+  a [label="A", shape=ellipse, style=filled]
+  b [label="B", shape=box]
+  a -> b [label=" a2b "]
+  b -> b
+}

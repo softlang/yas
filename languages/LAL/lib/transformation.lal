@@ -1,0 +1,3 @@
+reuse language [ L |-> L1, Any |-> Any1 ]
+reuse language [ L |-> L2, Any |-> Any2 ]
+function transform : L1 ~> L2

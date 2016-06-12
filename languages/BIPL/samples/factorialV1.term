@@ -1,0 +1,1 @@
+seq(assign(y,intconst(1)),seq(assign(i,intconst(1)),while(binary(leq,var(i),var(x)),seq(assign(y,binary(mul,var(y),var(x))),assign(i,binary(add,var(i),intconst(1))))))).

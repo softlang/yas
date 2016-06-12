@@ -1,0 +1,6 @@
+{
+  class : family,
+  name : emptyFamily,
+  members : [
+  ]
+}.

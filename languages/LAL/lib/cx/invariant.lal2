@@ -1,0 +1,15 @@
+language Any1
+language L1 <= Any1
+language Any2
+language L2 <= Any2
+relation consistent : L1 # L2
+language XAny
+language XL <= XAny
+function interpret : XL # L1 ~> L1
+axiom {
+ forall t <- XL.
+  forall a <- L1.
+   forall c <- L1.
+    forall b <- L2.
+     ((consistent(a, b)) /\ (interpret(t, a) = c)) => (consistent(c, b))
+}

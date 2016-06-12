@@ -1,0 +1,6 @@
+[
+  language(text),
+  membership(text, succeed, []),
+  equivalence(text, textEq:eq, []),
+  function(loc, [text], [term], textLoc:loc, [])
+].

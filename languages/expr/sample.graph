@@ -1,0 +1,18 @@
+{
+ class : add,
+ left : {
+         class : const,
+         value : {
+                  class : zero
+                 }
+        },
+ right : {
+          class : const,
+          value : {
+                   class : succ,
+                   pred : {
+                           class : zero
+                          }
+                  }
+         }
+}.

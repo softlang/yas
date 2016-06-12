@@ -1,0 +1,9 @@
+{
+  class : metamodel,
+  classifiers : [
+    {
+      class : datatype,
+      name : atom
+    }
+  ]
+}.

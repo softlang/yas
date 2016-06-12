@@ -1,0 +1,3 @@
+signature : { symbol ';' }* ;
+symbol : 'symbol' name ':' args '->' name ;
+args : { name { '#' name }* }? ;

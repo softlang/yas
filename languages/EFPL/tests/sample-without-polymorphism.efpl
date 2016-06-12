@@ -1,0 +1,17 @@
+-- The decrement function
+dec :: Int -> Int
+dec x = (-) x 1
+
+-- The factorial function
+factorial :: Int -> Int
+factorial x =
+  if (==) x 0
+    then 1
+    else (*) x (factorial (dec x))
+
+-- The function combinator to apply a function twice
+twice :: (Int -> Int) -> Int -> Int
+twice f x = f (f x)
+
+-- Apply the factorial function twice to 3
+main = print $ twice factorial 3 -- Prints 720

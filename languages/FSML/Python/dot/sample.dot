@@ -1,0 +1,18 @@
+digraph  {
+	graph [nodesep=0.5,
+		rankdir=LR,
+		title="Sample FSM"
+	];
+	exception	 [shape=ellipse];
+	exception -> exception	 [label="ticket/eject"];
+	exception -> exception	 [label="mute/"];
+	exception -> exception	 [label="pass/"];
+	locked	 [shape=ellipse,
+		style=filled];
+	exception -> locked	 [label="release/"];
+	locked -> exception	 [label="pass/alarm"];
+	unlocked	 [shape=ellipse];
+	locked -> unlocked	 [label="ticket/collect"];
+	unlocked -> locked	 [label="pass/"];
+	unlocked -> unlocked	 [label="ticket/eject"];
+}

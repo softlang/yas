@@ -1,0 +1,38 @@
+// Program = typed functions + main expression
+type program = functions # expr ;
+type functions = function* ;
+type function = string # funsig # fundef ;
+type funsig = type* # type ;
+type fundef = string* # expr ;
+
+// Simple types
+symbol int : -> type ;
+symbol bool : -> type ;
+
+// Expressions
+symbol intconst : integer -> expr ;
+symbol boolconst : boolean -> expr ;
+symbol arg : string -> expr ;
+symbol if : expr # expr # expr -> expr ;
+symbol unary : uop # expr -> expr ;
+symbol binary : bop # expr # expr -> expr ;
+symbol apply : string # expr* -> expr ;
+
+// Unary operators
+symbol negate : -> uop ;
+symbol not : -> uop ;
+
+// Binary operators
+symbol add : -> bop ;
+// ...
+// BEGIN ...
+symbol sub : -> bop ;
+symbol mul : -> bop ;
+symbol lt : -> bop ;
+symbol le : -> bop ;
+symbol eq : -> bop ;
+symbol geq : -> bop ;
+symbol gt : -> bop ;
+symbol and : -> bop ;
+// END ...
+symbol or : -> bop ;

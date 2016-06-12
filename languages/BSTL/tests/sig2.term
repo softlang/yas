@@ -1,0 +1,1 @@
+[ (leaf,[nat],bintree), (fork,[bintree,bintree],bintree), (z,[],nat), (s,[nat],nat)].

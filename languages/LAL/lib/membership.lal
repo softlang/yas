@@ -1,0 +1,4 @@
+reuse language
+constant pos, neg : Any // Candidate elements
+axiom member { pos <- L } // A member
+axiom notMember { ~ (neg <- L) } // A non-member

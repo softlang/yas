@@ -1,0 +1,48 @@
+// Megamodels
+model : { decl }* ;
+
+// Declarations
+[reuse] decl : 'reuse' mname { substs }? ;
+mname : name { '.' name }* ;
+substs : '[' subst { ',' subst }* ']' ;
+subst : name '|->' name ;
+[language] decl : 'language' name { '<=' name }? ;
+[relation] decl : 'relation' names ':' types ;
+names : name { ',' name }* ;
+[function] decl : 'function' names ':' types arrow type ;
+[total] arrow : '->' ;
+[partial] arrow : '~>' ;
+[constant] decl : 'constant' names ':' type ;
+[axiom] decl : 'axiom' { name }? '{' formula '}' ;
+[link] decl : 'link' name 'to' url ;
+
+// Types
+types : type { '#' type }* ;
+[star] type : typeterm { '*' }* ;
+[ref] typeterm : name ;
+[product] typeterm : '(' types ')' ;
+
+// Formulae
+[forall] formula : 'forall' vars '<-' type '.' formula ;
+[foreach] formula : 'foreach' var ':' expr '.' formula ;
+[exists] formula : 'exists' vars '<-' type '.' formula ;
+[existsu] formula : 'exists!' vars '<-' type '.' formula ;
+[ifetal] formula : orforumula { ifetal formula }? ;
+[iff] ifetal : '<=>' ;
+[ifthen] ifetal : '=>' ;
+[or] orforumula : andformula { '\/' orforumula }? ;
+[and] andformula : basicformula { '/\' andformula }? ;
+[not] basicformula : '~' basicformula ;
+[relapp] basicformula : name '(' expr { ',' expr }* ')' ;
+[eq] basicformula : expr '=' expr ;
+[element] basicformula : expr '<-' type ;
+basicformula : '(' formula ')' ;
+
+// Expressions
+[funapp] expr : name '(' expr { ',' expr }* ')' ;
+[var] expr : name ;
+
+// Variables and tuple patterns
+vars : var { ',' var }* ;
+[bindv] var : name ;
+[bindt] var : '(' var { ',' var }+ ')' ;

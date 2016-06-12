@@ -1,0 +1,22 @@
+language Any1
+language L1 <= Any1
+language Any2
+language L2 <= Any2
+relation consistent : L1 # L2
+function get : L1 -> L2
+axiom {
+ forall a <- L1.
+  forall b <- L2.
+   (get(a) = b) => (consistent(a, b))
+}
+function put : L1 # L2 ~> L1
+axiom GetPut {
+ forall s <- L1.
+  put(s, get(s)) = s
+}
+axiom PutGet {
+ forall s1 <- L1.
+  forall s2 <- L1.
+   forall v <- L2.
+    (put(s1, v) = s2) => (get(s2) = v)
+}

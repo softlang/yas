@@ -1,0 +1,27 @@
+// Scopes
+type scope = decl* # stmt ;
+
+// Declarations
+symbol var : string # expr -> decl ;
+symbol proc : string # stmt -> decl ;
+
+// Statements
+symbol skip : -> stmt ;
+symbol assign : string # expr -> stmt ;
+symbol seq : stmt # stmt -> stmt ;
+symbol if : expr # stmt # stmt -> stmt ;
+symbol while : expr # stmt -> stmt ;
+symbol scope : scope -> stmt ;
+symbol call : string -> stmt ;
+symbol write : expr -> stmt ;
+
+// Expressions
+symbol intconst : integer -> expr ;
+symbol var : string -> expr ;
+symbol binary : binop # expr # expr -> expr ;
+
+// Binary operators
+symbol add : -> binop ;
+symbol sub : -> binop ;
+symbol mul : -> binop ;
+symbol geq : -> binop ;

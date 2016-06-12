@@ -1,0 +1,7 @@
+symbol true : -> term ; // The Boolean "true"
+symbol false : -> term ; // The Boolean "false"
+symbol zero : -> term ; // The natural number zero
+symbol succ : term -> term ; // Successor of a natural number
+symbol pred : term -> term ; // Predecessor of a natural number
+symbol iszero : term -> term ; // Test for a number to be zero
+symbol if : term # term # term -> term ; // Conditional

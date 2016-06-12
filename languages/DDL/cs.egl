@@ -1,0 +1,15 @@
+schema : { table }+ ;
+
+table : 'CREATE' 'TABLE' name '(' { column { ',' column }* }? ')' ';' ;
+
+column : name type { clause }* ;
+
+[integer] type : 'INTEGER' ;
+
+[varchar] type : 'VARCHAR' '(' integer ')' ;
+
+[notNull] clause : 'NOT' 'NULL' ;
+
+[primaryKey] clause : 'PRIMARY' 'KEY' ;
+
+[foreignKey] clause : 'FOREIGN' 'KEY' 'REFERENCES' name '(' name ')' ;

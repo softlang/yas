@@ -1,0 +1,63 @@
+language Any1
+language L1 <= Any1
+language Any2
+language L2 <= Any2
+relation consistent : L1 # L2
+function get : L1 -> L2
+axiom {
+ forall a <- L1.
+  forall b <- L2.
+   (get(a) = b) => (consistent(a, b))
+}
+function put : L1 # L2 ~> L1
+axiom GetPut {
+ forall s <- L1.
+  put(s, get(s)) = s
+}
+axiom PutGet {
+ forall s1 <- L1.
+  forall s2 <- L1.
+   forall v <- L2.
+    (put(s1, v) = s2) => (get(s2) = v)
+}
+language DiffAny
+language DiffL <= DiffAny
+function diff : L2 # L2 -> DiffL
+function applyDiff : DiffL # L2 -> L2
+function invDiff : DiffL -> DiffL
+constant emptyDiff : DiffL
+axiom apply {
+ forall x <- L2.
+  forall y <- L2.
+   forall d <- DiffL.
+    (diff(x, y) = d) => (applyDiff(d, x) = y)
+}
+axiom inv {
+ forall x <- L2.
+  forall y <- L2.
+   invDiff(diff(x, y)) = diff(y, x)
+}
+axiom diffEmpty {
+ forall x <- L2.
+  diff(x, x) = emptyDiff
+}
+axiom empty {
+ forall x <- L2.
+  applyDiff(emptyDiff, x) = x
+}
+axiom invEmpty {
+ invDiff(emptyDiff) = emptyDiff
+}
+axiom invTwice {
+ forall d <- DiffL.
+  invDiff(invDiff(d)) = d
+}
+function propagate : L1 # DiffL ~> L1
+axiom {
+ forall s1 <- L1.
+  forall s2 <- L1.
+   forall v1 <- L2.
+    forall v2 <- L2.
+     forall delta <- DiffL.
+      ((get(s1) = v1) /\ ((diff(v1, v2) = delta) /\ (propagate(s1, delta) = s2))) => ((put(s1, v2) = s2) /\ (get(s2) = v2))
+}

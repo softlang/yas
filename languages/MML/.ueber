@@ -1,0 +1,31 @@
+[
+
+  % Syntax of MML
+  macro(eglSyntax(mml)),
+  macro(eslSyntax(mml)),
+
+  % The metametamodel
+  macro(mmlSyntax(mml)),
+  membership(mml(graph(term)), metamodel, []), % Alternative characterization
+  membership(mml(term), metamodelOk, []), % Extra constraints
+  function(resolve, [mml(term)], [mml(graph(term))], termToGraph:(=>), []),
+
+  % Metamodels restricted to tree shape
+  language(tree(mml(term))),
+  membership(tree(mml(term)), mmlTree:metamodel, []),
+
+  % MT support for Relaxed metamodels
+  function(relax, [mml(graph(term))], [mml(graph(term))], relaxMm, []),
+  function(recardinalize, [mml(graph(term)), mml(graph(term)), graph(term)], [graph(term)], recardinalize, []),
+
+  % MML to DDL mapping
+  language(ddl(mml(term))),
+  membership(ddl(mml(term)), simpleMetamodel, []),
+  function(mmlToDll, [ddl(mml(term))], [ddl(term)], classesToTables, []),
+
+  % Count metrics
+  function(count, [mml(term)], [term], mmlCount:count, []),
+  elementOf('mm.count', term),
+  mapsTo(count, ['mm.term'], ['mm.count'])
+
+].

@@ -1,0 +1,23 @@
+{
+  "exception": [{
+      "initial": false,
+      "transitions": {
+        "release": [["", "locked"]],
+        "ticket": [["eject", "exception"]],
+        "mute": [["", "exception"]],
+        "pass": [["", "exception"]]
+      }}],
+  "locked": [{
+      "initial": true,
+      "transitions": {
+        "ticket": [["collect", "unlocked"]],
+        "pass": [["alarm", "exception"]]
+      }}],
+  "unlocked": [
+    {
+      "initial": false,
+      "transitions": {
+        "ticket": [["eject", "unlocked"]],
+        "pass": [["", "locked"]]
+      }}]
+}

@@ -1,0 +1,25 @@
+// Scopes
+scope : 'begin' { decl }* stmt 'end' ;
+
+// Declarations
+[var] decl : 'var' name '=' expr ';' ;
+[proc] decl : 'proc' name stmt ;
+
+// Statements
+[skip] stmt : ';' ;
+[assign] stmt : name '=' expr ';' ;
+[if] stmt : 'if' '(' expr ')' stmt { 'else' stmt }? ;
+[while] stmt : 'while' '(' expr ')' stmt ;
+[block] stmt : '{' { stmt }* '}' ;
+[scope] stmt : scope ;
+[call] stmt : 'call' name ';' ;
+[write] stmt : 'write' expr ';' ;
+
+// Expressions
+[geq] expr : aexpr { '>=' expr }? ;
+[add] aexpr : term { '+' aexpr }? ;
+[sub] aexpr : term { '-' aexpr }? ;
+[mul] term : factor { '*' term }? ;
+[intconst] factor : integer ;
+[var] factor : name ;
+[brackets] factor : '(' expr ')' ;

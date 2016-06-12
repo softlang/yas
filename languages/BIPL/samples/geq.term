@@ -1,0 +1,1 @@
+assign(x,binary(geq,intconst(88),intconst(42))).

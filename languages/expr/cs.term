@@ -1,0 +1,6 @@
+[ 
+  (const, expr, [n(nat)]),
+  (add, expr, [n(expr), t(+), n(expr)]),
+  (zero, nat, [t(zero)]),
+  (succ, nat, [t(succ), t('('), n(nat), t(')')])
+].

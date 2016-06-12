@@ -1,0 +1,6 @@
+[
+  macro(graphSample(gbl, 'empty')),
+  macro(graphSample(gbl, 'singleton')),
+  macro(graphSample(gbl, 'small-world')),
+  mapsTo(mapping, ['../../TBL/samples/small-world.graph'], ['small-world.graph'])
+].

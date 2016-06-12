@@ -1,0 +1,1 @@
+[type(grammar,star(sort(rule))),type(rule,tuple([sort(label),sort(nonterminal),star(sort(symbol))])),symbol(t,[sort(terminal)],symbol),symbol(n,[sort(nonterminal)],symbol),type(nonterminal,string),type(terminal,string),type(label,string)].

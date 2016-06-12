@@ -1,0 +1,14 @@
+[
+  macro(well_formed('simple.fsml')),
+  macro(unparseable('syntaxError.fsml')),
+  macro(ill_formed('initialNotOk1.fsml')),
+  macro(ill_formed('initialNotOk2.fsml')),
+  macro(ill_formed('idsNotOk.fsml')),
+  macro(ill_formed('resolutionNotOk.fsml')),
+  macro(ill_formed('determinismNotOk.fsml')),
+  macro(ill_formed('reachabilityNotOk.fsml')),
+  elementOf('illegalSymbol.input', term),
+  elementOf('infeasibleSymbol.input', term),
+  relatesTo(notAcceptFsm, ['../sample.term', 'illegalSymbol.input']),
+  relatesTo(notAcceptFsm, ['../sample.term', 'infeasibleSymbol.input'])
+].

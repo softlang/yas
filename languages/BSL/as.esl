@@ -1,0 +1,4 @@
+type signature = profile* ;
+type profile = sym # sort* # sort ;
+type sym = string ;
+type sort = string ;

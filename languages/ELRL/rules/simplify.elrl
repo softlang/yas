@@ -1,0 +1,4 @@
+expr : $X + 0 -> $X ;
+expr : $X * 1 -> $X ;
+expr : $X * 0 -> 0 ;
+expr : ($X * $Y) + ($X * $Z) -> $X * ($Y + $Z) ;

@@ -1,0 +1,1 @@
+[expr(binary(add,binary(add,'_expr'(rlvar('X')),'_expr'(rlvar('Y'))),'_expr'(rlvar('Z'))),binary(add,'_expr'(rlvar('X')),binary(add,'_expr'(rlvar('Y')),'_expr'(rlvar('Z'))))),expr(binary(mul,binary(mul,'_expr'(rlvar('X')),'_expr'(rlvar('Y'))),'_expr'(rlvar('Z'))),binary(mul,'_expr'(rlvar('X')),binary(mul,'_expr'(rlvar('Y')),'_expr'(rlvar('Z')))))].

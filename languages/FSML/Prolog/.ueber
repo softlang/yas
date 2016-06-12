@@ -1,0 +1,26 @@
+[
+  language(ok(fsml(term))),
+  membership(ok(fsml(term)), fsmlOk:ok, []),
+  elementOf('../sample.term', ok(fsml(term))),
+  elementOf('sample.input', term),
+  elementOf('sample.output', term),
+
+  % Simulation
+  function(simulateFsm, [fsml(term), term], [term], simulateFsm, []),
+  relation(acceptFsm, [fsml(term), term], acceptFsm, []),
+  relation(notAcceptFsm, [fsml(term), term], notAcceptFsm, []),
+
+  % Code generation
+  function(statesOfFsm, [fsml(term)], [java(text)], statesOfFsm, []),
+  function(inputsOfFsm, [fsml(term)], [java(text)], inputsOfFsm, []),
+  function(actionsOfFsm, [fsml(term)], [java(text)], actionsOfFsm, []),
+  function(stepperOfFsm, [fsml(term)], [java(text)], stepperOfFsm, []),
+
+  % Application to example
+  mapsTo(simulateFsm, ['../sample.term', 'sample.input'], ['sample.output']),
+  relatesTo(acceptFsm, ['../sample.term', 'sample.input']),
+  mapsTo(statesOfFsm, ['../sample.term'], ['generated/State.java']),
+  mapsTo(inputsOfFsm, ['../sample.term'], ['generated/Input.java']),
+  mapsTo(actionsOfFsm, ['../sample.term'], ['generated/Action.java']),
+  mapsTo(stepperOfFsm, ['../sample.term'], ['generated/Stepper.java'])
+].

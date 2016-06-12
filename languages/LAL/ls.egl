@@ -1,0 +1,4 @@
+name : csymf { csym }* ;
+url : quote { { quote }~ }+ quote ;
+layout : { space }+ ;
+layout : '//' { { end_of_line }~ }* end_of_line ;

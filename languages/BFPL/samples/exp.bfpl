@@ -1,0 +1,9 @@
+-- The exponentiation function
+exp :: Int -> Int -> Int
+exp x n =
+  if ((==) n 0)
+    then 1
+    else ((*) x (exp x ((-) n 1)))
+
+-- Apply the function
+main = print $ exp 2 3 -- Prints 8

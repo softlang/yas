@@ -1,0 +1,41 @@
+language Any1
+language L1 <= Any1
+relation partOf : L1 # L1
+relation partOfPlus : L1 # L1
+relation partOfStar : L1 # L1
+axiom partAsym {
+ forall x <- L1.
+  forall y <- L1.
+   (partOf(x, y)) => (~ (partOf(y, x)))
+}
+axiom partReflexive {
+ forall x <- L1.
+  partOfStar(x, x)
+}
+axiom partTransitive {
+ forall x <- L1.
+  forall y <- L1.
+   ((partOf(x, y)) => (partOfPlus(x, y))) /\ (((partOfPlus(x, y)) => (partOfStar(x, y))) /\ (forall z <- L1.
+                                                                                              ((partOfPlus(x, y)) /\ (partOfPlus(y, z))) => (partOfPlus(x, z))))
+}
+language Any2
+language L2 <= Any2
+relation partOf : L2 # L2
+relation partOfPlus : L2 # L2
+relation partOfStar : L2 # L2
+axiom partAsym {
+ forall x <- L2.
+  forall y <- L2.
+   (partOf(x, y)) => (~ (partOf(y, x)))
+}
+axiom partReflexive {
+ forall x <- L2.
+  partOfStar(x, x)
+}
+axiom partTransitive {
+ forall x <- L2.
+  forall y <- L2.
+   ((partOf(x, y)) => (partOfPlus(x, y))) /\ (((partOfPlus(x, y)) => (partOfStar(x, y))) /\ (forall z <- L2.
+                                                                                              ((partOfPlus(x, y)) /\ (partOfPlus(y, z))) => (partOfPlus(x, z))))
+}
+relation correspondsTo : L1 # L2

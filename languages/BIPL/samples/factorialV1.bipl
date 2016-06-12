@@ -1,0 +1,9 @@
+{
+  // Assume x to be positive
+  y = 1;
+  i = 1;
+  while (i <= x) {
+    y = y * x;
+    i = i + 1;
+  }
+}

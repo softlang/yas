@@ -1,0 +1,23 @@
+// Statements
+[skip] stmt : ';' ;
+[assign] stmt : name '=' expr ';' ;
+[block] stmt : '{' { stmt }* '}' ;
+[if] stmt : 'if' '(' expr ')' stmt { 'else' stmt }? ;
+[while] stmt : 'while' '(' expr ')' stmt ;
+
+// Expressions
+[or] expr : bexpr { '||' expr }? ;
+[and] bexpr : cexpr { '&&' bexpr }? ;
+[lt] cexpr : aexpr { '<' aexpr }? ;
+[leq] cexpr : aexpr { '<=' aexpr }? ;
+[eq] cexpr : aexpr { '==' aexpr }? ;
+[geq] cexpr : aexpr { '>=' aexpr }? ;
+[gt] cexpr : aexpr { '>' aexpr }? ;
+[add] aexpr : term { '+' aexpr }? ;
+[sub] aexpr : term { '-' aexpr }? ;
+[mul] term : factor { '*' term }? ;
+[negate] factor : '-' factor ;
+[not] factor : '!' factor ;
+[intconst] factor : integer ;
+[var] factor : name ;
+[brackets] factor : '(' expr ')' ;

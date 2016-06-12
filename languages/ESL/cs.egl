@@ -1,0 +1,16 @@
+signature : { decl ';' }* ;
+[type] decl : 'type' name '=' typeexprs ;
+[symbol] decl : 'symbol' name ':' { typeexprs }? '->' name ;
+typeexprs : typeexpr { '#' typeexpr }* ;
+typeexpr : factor cardinality ;
+[boolean] factor : 'boolean' ;
+[integer] factor : 'integer' ;
+[float] factor : 'float' ;
+[string] factor : 'string' ; 
+[term] factor : 'term' ; 
+[tuple] factor : '(' typeexpr { '#' typeexpr }+ ')' ;
+[sort] factor : name ;
+[star] cardinality : '*' cardinality ;
+[plus] cardinality : '+' cardinality ;
+[option] cardinality : '?' cardinality ;
+[none] cardinality : ;

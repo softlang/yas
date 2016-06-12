@@ -1,0 +1,1 @@
+[type(number,tuple([plus(sort(bit)),star(sort(bit))])),symbol(zero,[],bit),symbol(one,[],bit)].

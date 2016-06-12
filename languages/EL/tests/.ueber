@@ -1,0 +1,21 @@
+[
+  macro(parseFile('sample1.el')),  
+  macro(parseFile('sample2.el')),  
+  macro(parseFile('sample3.el')),  
+  macro(parseFile('sample4.el')),  
+  macro(parseFile('sample5.el')),  
+  elementOf('sample1.value', term),
+  function(evaluate, [el(term)], [term], elEvaluate:evaluate, []),
+  mapsTo(evaluate, ['sample1.term'], ['sample1.value']),
+
+  function(normalize1, [el(term)], [el(term)], try(simplify), []),
+  function(normalize2, [el(term)], [el(term)], repeat(simplify), []),
+  function(normalize3, [el(term)], [el(term)], oncebu(simplify), []),
+  function(normalize4, [el(term)], [el(term)], innermost(simplify), []),
+  function(normalize5, [el(term)], [el(term)], innermost(vary(commute, simplify)), []),
+  mapsTo(normalize1, ['sample3.term'], ['sample3.term']),
+  mapsTo(normalize2, ['sample3.term'], ['sample3.term']),
+  mapsTo(normalize3, ['sample3.term'], ['sample4.term']),
+  mapsTo(normalize4, ['sample3.term'], ['sample4.term']),
+  mapsTo(normalize5, ['sample3.term'], ['sample5.term'])
+].

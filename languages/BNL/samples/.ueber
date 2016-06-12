@@ -1,0 +1,25 @@
+[
+  macro(parseFilePickily('10.bnl')),
+  macro(parseFilePickily('5comma25.bnl')),
+
+  % Results of BNL evaluation
+  elementOf('5comma25.formula', bnl(formula(term))),
+  elementOf('5comma25.value', bnl(value(term))),
+
+  % Solve symbolic representation
+  mapsTo(solve, ['5comma25.formula'], ['5comma25.value']),
+  
+  % DCG-based evaluators
+  mapsTo(evaluate, ['5comma25.tokens'], ['5comma25.value']),
+  mapsTo(convert, ['5comma25.tokens'], ['5comma25.formula']),
+
+  % AST-based evaluators
+  mapsTo(evaluate, ['5comma25.term'], ['5comma25.value']),
+  mapsTo(convert, ['5comma25.term'], ['5comma25.formula']),
+
+  % Illustration of conformance
+  relation(conformsTo, [tokens(term), bgl(term)], bglConformance, []),
+  relatesTo(conformsTo, ['5comma25.tokens', '../cs.term']),
+  relatesTo(conformsTo, ['5comma25.term', '../as.term'])
+  
+].

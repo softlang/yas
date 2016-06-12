@@ -1,0 +1,40 @@
+language Any
+language L <= Any
+language QAny
+language QL <= QAny
+relation partOf : L # L
+axiom {
+ forall x <- L.
+  forall y <- L.
+   (partOf(x, y)) => (~ (partOf(y, x)))
+}
+relation partOfPlus : L # L
+relation partOfStar : L # L
+axiom {
+ forall x <- L.
+  forall y <- L.
+   (partOf(x, y)) => (partOfPlus(x, y))
+}
+axiom {
+ forall x <- L.
+  forall y <- L.
+   forall z <- L.
+    ((partOfPlus(x, y)) /\ (partOfPlus(y, z))) => (partOfPlus(x, z))
+}
+axiom {
+ forall x <- L.
+  partOfStar(x, x)
+}
+axiom {
+ forall x <- L.
+  forall y <- L.
+   (partOfPlus(x, y)) => (partOfStar(x, y))
+}
+function select : QL # L ~> L*
+axiom {
+ forall q <- QL.
+  forall x <- L.
+   forall ys <- L*.
+    (select(q, x) = ys) => (foreach y : ys.
+                             partOfStar(y, x))
+}

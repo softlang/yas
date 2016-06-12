@@ -1,0 +1,1 @@
+[type(figure,star(sort(element))),symbol(line,[sort(point),sort(point)],element),symbol(circle,[sort(point),integer],element),type(point,tuple([integer,integer]))].

@@ -1,0 +1,4 @@
+[
+  macro(parseFile('factorial.bfpl')),
+  macro(parseFile('exp.bfpl'))
+].

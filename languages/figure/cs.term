@@ -1,0 +1,22 @@
+[
+  ([], figure, [star([n(element), t(';')])]),
+  ([line], element, [
+     t('line'),
+     t('from'), t(':'), n(point),
+     t(','),
+     t('to'), t(':'), n(point)
+  ]),
+  ([circle], element, [
+     t('circle'),
+     t('origin'), t(':'), n(point),
+     t(','),
+     t('radius'), t(':'), n(integer)
+  ]),
+  ([], point, [
+     t('('),
+     n(integer),
+     t(','),
+     n(integer),
+     t(')')
+  ])
+].

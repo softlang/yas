@@ -1,0 +1,24 @@
+{
+    "$schema": "http://http://www.softlangbook.org/BNL#",
+    "name": "number",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [ "bits" ],
+    "properties": {
+        "bits": {
+           "type": "array",
+           "minItems": 1,
+           "items": { "$ref": "#/definitions/bit" }
+        },
+        "rest": {
+           "type": "array",
+           "minItems": 1,
+           "items": { "$ref": "#/definitions/bit" }
+        }
+    },
+    "definitions" : {
+        "bit": {
+           "enum": [ "zero", "one" ]
+        }
+    }
+}

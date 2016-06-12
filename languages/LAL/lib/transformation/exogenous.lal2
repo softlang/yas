@@ -1,0 +1,19 @@
+language Any
+language XAny
+language XL <= XAny
+function IAny : XL # Any ~> Any
+language L1 <= Any
+language L2 <= Any
+function I : XL # L1 ~> L2
+axiom cast {
+ forall t <- XL.
+  forall x <- L1.
+   forall y <- L2.
+    (I(t, x) = y) <=> (IAny(t, x) = y)
+}
+axiom welltyped {
+ forall t <- XL.
+  forall x <- L1.
+   forall y <- Any.
+    (IAny(t, x) = y) => (y <- L2)
+}

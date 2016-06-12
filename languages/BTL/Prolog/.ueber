@@ -1,0 +1,21 @@
+[
+%  language(btl(prolog(term))),
+%  language(btl(prolog(ok(term)))),
+%  language(btl(prolog(type(term)))),
+  language(btl(term)),
+  language(ok(btl(term))),
+  language(btl(type(term))),
+  membership(btl(term), btlSyntax:isTerm, []),
+  membership(ok(btl(term)), btlTyping:ok, []),
+  membership(btl(type(term)), btlTyping:isType, []),
+  elementOf('../sample.term', btl(term)),
+  elementOf('../sample.term', ok(btl(term))),
+  elementOf('../value.term', btl(term)),
+  elementOf('../type.term', btl(type(term))),
+  function(typeOf, [btl(term)], [btl(type(term))], btlTyping:typeOf, []),
+  function(bigstep, [ok(btl(term))], [btl(term)], btlBigstep:evaluate, []),
+  function(smallstep, [ok(btl(term))], [btl(term)], btlSmallstep:steps, []),
+  mapsTo(typeOf, ['../sample.term'], ['../type.term']),
+  mapsTo(bigstep, ['../sample.term'], ['../value.term']),
+  mapsTo(smallstep, ['../sample.term'], ['../value.term'])
+].

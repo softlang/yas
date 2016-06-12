@@ -1,0 +1,5 @@
+[
+    macro(parseFile('sig1.bsl')),
+    macro(parseFile('sig2.bsl')),
+    macro(include('trafo1.ueber'))
+].

@@ -1,0 +1,12 @@
+grammar : {rule}* ;
+rule : {'[' label ']'}? nonterminal ':' gsymbols ';' ;
+[t] gsymbol : terminal ;
+[n] gsymbol : nonterminal ;
+[star] gsymbol : '{' gsymbols '}' '*' ;
+[plus] gsymbol : '{' gsymbols '}' '+' ;
+[option] gsymbol : '{' gsymbols '}' '?' ;
+[not] gsymbol : '{' gsymbols '}' '~' ;
+gsymbols : {gsymbol}* ;
+label : name ;
+terminal : qstring ;
+nonterminal : name ;

@@ -1,0 +1,9 @@
+[
+
+  % Demonstration of accept/parse options
+  mapsTo(acceptBottomUp, ['../cs.term', '../sample.tokens'], []),
+  mapsTo(acceptTopDown, ['../cs.term', '../sample.tokens'], []),
+  mapsTo(parseTopDown, ['../cs.term', '../sample.tokens'], ['../sample.tree'])
+
+].
+

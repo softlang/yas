@@ -1,0 +1,6 @@
+[
+  macro(eglSyntax(rl)),
+  macro(eslSyntax(rl)),
+  function(rlToPro, [term, term], [prolog], rlToPro:main, []),
+  function(rlDerive, [term, term, term], [term, term, term], rlDerive:main, [])
+].

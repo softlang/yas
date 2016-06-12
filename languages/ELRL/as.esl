@@ -1,0 +1,42 @@
+type rules = rule* ;
+symbol rlvar : string -> rlvar ;
+
+// Symbols for rules per nonterminal
+symbol expr : expr # expr -> rule ;
+symbol uop : uop # uop -> rule ;
+symbol bop : bop # bop -> rule ;
+
+// Symbols for variables per nonterminal
+symbol _expr : rlvar -> expr ;
+symbol _uop : rlvar -> uop ;
+symbol _bop : rlvar -> bop ;
+
+// Expressions
+// ...
+// BEGIN ...
+symbol intconst : integer -> expr ;
+symbol boolconst : boolean -> expr ;
+symbol var : string -> expr ;
+symbol unary : uop # expr -> expr ;
+symbol binary : bop # expr # expr -> expr ;
+
+// END ...
+// Unary operators
+// ...
+// BEGIN ...
+symbol neg : -> uop ;
+symbol not : -> uop ;
+
+// END ...
+// Binary operators
+// ...
+// BEGIN ...
+symbol add : -> bop ;
+symbol sub : -> bop ;
+symbol mul : -> bop ;
+symbol eq : -> bop ;
+symbol geq : -> bop ;
+symbol gt : -> bop ;
+symbol and : -> bop ;
+symbol or : -> bop ;
+// END ...

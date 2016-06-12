@@ -1,0 +1,5 @@
+reuse traceability
+relation links : (RefL1 # RefL2)* # L1 # L2
+axiom {
+  forall ls <- (RefL1 # RefL2)* . forall a1 <- L1 . forall a2 <- L2 .
+    (foreach (r1, r2) : ls . link(r1, r2, a1, a2)) <=> links(ls, a1, a2) }

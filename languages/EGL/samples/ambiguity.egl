@@ -1,0 +1,4 @@
+[binary] expr : expr bop expr ;
+[const] expr : integer ;
+[add] bop : '+' ;
+[mul] bop : '*' ;

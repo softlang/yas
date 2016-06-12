@@ -1,0 +1,24 @@
+{
+  class : metamodel,
+  classifiers : [
+    {
+      class : class,
+      name : aClass,
+      abstract : false,
+      super : [],
+      members : [
+        {
+          class : value,
+          name : aValue,
+          type : #atom,
+          cardinality : { class : one }
+        }
+      ]
+    },
+    atom &
+    {
+      class : datatype,
+      name : atom
+    }
+  ]
+}.

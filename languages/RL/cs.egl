@@ -1,0 +1,3 @@
+rules : { rule }* ;
+[n] rule : 'n' ':' n '->' n ';' ;
+[_n] n : rlvar ;

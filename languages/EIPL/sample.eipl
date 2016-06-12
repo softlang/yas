@@ -1,0 +1,13 @@
+begin
+  var x = 0;
+  proc p { x = x * 2; }
+  proc q { call p; }
+  begin
+    var x = 5;
+    proc p { x = x + 1; }
+    {
+      call q;
+      write x;
+    }
+  end
+end

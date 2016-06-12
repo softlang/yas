@@ -1,0 +1,13 @@
+language XML
+language MathML <= XML
+language XSD <= XML
+constant MathMLSchema : XSD
+relation conformsTo : XML # XSD
+axiom {
+ forall x <- XML.
+  (x <- MathML) <=> (conformsTo(x, MathMLSchema))
+}
+link XML to 'https://www.w3.org/XML'
+link XSD to 'https://www.w3.org/XML/Schema'
+link MathML to 'https://www.w3.org/TR/MathML3'
+link MathMLSchema to 'https://www.w3.org/Math/XMLSchema'

@@ -1,0 +1,9 @@
+[
+
+  % Basics
+  macro(eglSyntax(figure)),
+  macro(eslSyntax(figure)),
+  macro(parseSample(figure)),
+  macro(ppSample(figure))
+
+].

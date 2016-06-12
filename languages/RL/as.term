@@ -1,0 +1,1 @@
+[type(rules,star(sort(rule))),symbol(rlvar,[string],rlvar),symbol(n,[sort(n),sort(n)],rule),symbol('_n',[sort(rlvar)],n)].

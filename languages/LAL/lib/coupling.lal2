@@ -1,0 +1,5 @@
+language Any1
+language L1 <= Any1
+language Any2
+language L2 <= Any2
+relation consistent : L1 # L2

@@ -1,0 +1,1 @@
+seq(assign(r,intconst(1)),seq(assign(r,binary(mul,var(r),var(x))),seq(assign(n,binary(sub,var(n),intconst(1))),seq(assign(r,binary(mul,var(r),var(x))),seq(assign(n,binary(sub,var(n),intconst(1))),seq(assign(r,binary(mul,var(r),var(x))),assign(n,binary(sub,var(n),intconst(1))))))))).

@@ -1,0 +1,4 @@
+[
+  elementOf('cotransformation.lalconfig', lal(config(term))),
+  mapsTo(translate, ['cotransformation.term2', 'cotransformation.lalconfig'], ['../../../BSTL/tests/trafo1.ueber'])
+].

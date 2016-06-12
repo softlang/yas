@@ -1,0 +1,8 @@
+initial state stateA {
+  eventI/actionI -> stateC;
+}
+initial state stateB { 
+  eventI/actionII -> stateC;
+}
+state stateC {
+}

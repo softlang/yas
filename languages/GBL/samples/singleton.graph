@@ -1,0 +1,10 @@
+{
+  class : world,
+  persons : [
+    {
+      class : person,
+      name : joe,
+      buddy : [ ]
+    }
+  ]
+}.

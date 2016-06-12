@@ -1,0 +1,40 @@
+// Program = functions + main expression
+program : { function }* main ;
+function : funsig fundef ;
+funsig : name '::' funtype ;
+fundef : name { name }* '=' expr ;
+funtype : simpletype { '->' simpletype }* ;
+main : 'main' '=' 'print' '$' expr ;
+
+// Simple types
+[int] simpletype :  'Int' ;
+[bool] simpletype :  'Bool' ;
+
+// Expressions
+[unary] expr : uop subexpr subexpr ;
+[binary] expr : '(' bop ')' subexpr subexpr ;
+[subexpr] expr : subexpr ;
+[apply] expr : name { subexpr }+ ;
+[intconst] subexpr : integer ;
+[brackets] subexpr : '(' expr ')' ;
+[if] subexpr : 'if' expr 'then' expr 'else' expr ;
+[arg] subexpr : name ;
+
+// Unary operators
+[negate] uop : '-' ;
+[not] uop : 'not' ;
+
+// Binary operators
+[add] bop : '+' ;
+// ...
+// BEGIN ...
+[sub] bop : '-' ;
+[mul] bop : '*' ;
+[lt] bop : '<' ;
+[le] bop : '<=' ;
+[eq] bop : '==' ;
+[geq] bop : '>=' ;
+[gt] bop : '>' ;
+[and] bop : '&&' ;
+// END ...
+[or] bop : '||' ;

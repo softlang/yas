@@ -1,0 +1,44 @@
+grammar :
+  rules # rule*
+  ;
+
+rule : chain ;
+rule : struct ;
+
+chain : 
+  super # name
+  ':'
+  sub # name
+  ';' 
+  ;
+
+struct :
+  lhs # name
+  ':'
+  rhs # symbol* 
+  ';'
+  ;
+
+symbol : t ;
+symbol : n ;
+
+t :
+  terminal # qstring 
+  ;
+
+n :
+  selector # name
+  '#'
+  nonterminal # name
+  cardinality # cardinality
+  ;
+
+cardinality : star ;
+cardinality : plus ;
+cardinality : option ;
+cardinality : one ;
+
+star : '*' ;
+plus : '+' ;
+option : '?' ;
+one : ;

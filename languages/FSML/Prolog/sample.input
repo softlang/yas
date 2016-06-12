@@ -1,0 +1,16 @@
+[
+  ticket, % Regular insertion of a ticket
+  pass, % Regular passage of turnstile
+  ticket, % Regular insertion of a ticket
+  pass, % Regular passage of turnstile
+  ticket, % Regular insertion of a ticket
+  ticket, % Tickets are ejected in unlocked state
+  pass, % Regular passage of turnstile
+  pass, % Attempt leads to exceptional state
+  ticket, % Tickets are ejected in exceptional state
+  pass, % Passage attempt keeps us in exceptional state
+  mute, % Mute indeed
+  release, % Return to normal
+  ticket, % Regular insertion of a ticket
+  pass % Regular passage of turnstile
+].

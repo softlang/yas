@@ -1,0 +1,7 @@
+[number] number : bits rest ;
+[single] bits : bit ;
+[many] bits : bit bits ;
+[zero] bit : '0' ;
+[one] bit : '1' ; 
+[integer] rest : ; 
+[rational] rest : '.' bits ;

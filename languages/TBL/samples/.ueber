@@ -1,0 +1,29 @@
+[
+  macro(parseFile('empty.tbl')),
+  macro(parseFile('singleton.tbl')),
+  macro(parseFile('small-world.tbl')),
+  macro(parseFile('notOk1.tbl')),
+  macro(parseFile('notOk2.tbl')),
+  elementOf('small-world.graph', tbl(graph(term))),
+  mapsTo(mapping, ['small-world.term'], ['small-world.graph']),
+
+  % Well-formedness
+  elementOf('empty.term', ok(tbl(term))),
+  elementOf('singleton.term', ok(tbl(term))),
+  elementOf('small-world.term', ok(tbl(term))),
+  notElementOf('notOk1.term', ok(tbl(term))),
+  notElementOf('notOk2.term', ok(tbl(term))),
+
+  % A world with one buddy for everyone
+  elementOf('empty.term', one(tbl(term))),
+  notElementOf('singleton.term', one(tbl(term))),
+  elementOf('small-world.term', one(tbl(term))),
+
+  % LOC metric
+  elementOf('empty.loc', term),
+  elementOf('singleton.loc', term),
+  elementOf('small-world.loc', term),
+  mapsTo(loc, ['empty.tbl'], ['empty.loc']),
+  mapsTo(loc, ['singleton.tbl'], ['singleton.loc']),
+  mapsTo(loc, ['small-world.tbl'], ['small-world.loc'])
+].

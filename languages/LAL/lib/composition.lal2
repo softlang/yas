@@ -1,0 +1,20 @@
+language Any
+language L <= Any
+relation partOf : L # L
+relation partOfPlus : L # L
+relation partOfStar : L # L
+axiom partAsym {
+ forall x <- L.
+  forall y <- L.
+   (partOf(x, y)) => (~ (partOf(y, x)))
+}
+axiom partReflexive {
+ forall x <- L.
+  partOfStar(x, x)
+}
+axiom partTransitive {
+ forall x <- L.
+  forall y <- L.
+   ((partOf(x, y)) => (partOfPlus(x, y))) /\ (((partOfPlus(x, y)) => (partOfStar(x, y))) /\ (forall z <- L.
+                                                                                              ((partOfPlus(x, y)) /\ (partOfPlus(y, z))) => (partOfPlus(x, z))))
+}

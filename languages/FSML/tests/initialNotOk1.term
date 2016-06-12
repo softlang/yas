@@ -1,0 +1,1 @@
+[ (false,stateA,[ (eventI,[actionI],stateB)]), (false,stateB,[ (eventII,[actionII],stateA)])].
