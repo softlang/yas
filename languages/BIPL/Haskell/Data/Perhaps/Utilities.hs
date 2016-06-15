@@ -3,6 +3,7 @@
 module Data.Perhaps.Utilities where
 
 import Data.Perhaps
+import Data.Monoid (Monoid,mappend,mempty)
 
 -- END ...
 -- Pattern of partial order definition

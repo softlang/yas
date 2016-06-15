@@ -16,6 +16,7 @@ import Data.Perhaps.Either
 import Data.Perhaps.Map
 import Data.Perhaps.Finiteness
 import Data.Perhaps.Bottomness
+import Data.Monoid (mconcat)
 
 -- END ...
 analysis :: Alg AStore AValue
