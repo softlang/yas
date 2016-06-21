@@ -2,16 +2,16 @@
 :- module(lalReuse, []).
 % END ...
 % Case for megamodels (lists of declarations)
-Ds1 => Ds2 :-
-    map(lalReuse:(=>), Ds1, Dss),
+inline(Ds1, Ds2) :-
+    map(lalReuse:inline, Ds1, Dss),
     concat(Dss, Ds2).
        
 % Case for non-reuse declarations
-D => [D] :-
+inline(D, [D]) :-
     \+ D = reuse(_, _).
 
 % Case for reuse declarations
-reuse(MN, Ss) => Ds2 :-
+inline(reuse(MN, Ss), Ds2) :-
     lalDeps:filename(MN, F),
     readTermFile(F, Ds1),
     substs(Ss, Ds1, Ds2).

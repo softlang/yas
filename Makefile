@@ -5,7 +5,7 @@ test:
 
 # 
 elide:
-	cd ..; make elide
+	cd tools; make elide
 
 # Be verbose
 verbose:

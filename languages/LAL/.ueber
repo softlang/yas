@@ -6,7 +6,7 @@
   equivalence(lal(term), lalEq:eq, []),
   normalization(lal(term), lalNorm:(=>), []),
   function(deps, [lal(term)], [deps(term)], lalDeps:deps, []),
-  function(transform, [lal(term)], [lal(term)], lalReuse:(=>), []),
+  function(transform, [lal(term)], [lal(term)], lalReuse:inline, []),
   function(pp, [lal(term)], [lal(text)], lalPp:pp,[]),
   function(translate, [lal(term), lal(config(term))], [ueber(term)], lalUeber:translate, [])
 ].

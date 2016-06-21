@@ -16,7 +16,6 @@ compare(Ds, F, L, Expected1, Actual1) :-
             (mode(override), ueberIO:writeFile(F, L, Actual2)),
             'Baseline ~w: disagreeing.', [F] )
       ))
-    ;
-      assume(
+    ; assume(
         (mode(create), ueberIO:writeFile(F, L, Actual2)),
         'Baseline ~w: missing.', [F] ) ).

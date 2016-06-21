@@ -1,6 +1,5 @@
 % BEGIN ...
 :- module(ueberOk, []).
-% END ...
 ok(_, language(L)) :-
   assume(
     languageToBase(L, _),
@@ -11,17 +10,11 @@ ok(Ds, D) :-
   ; D = equivalence(L, _, _)
   ; D = normalization(L, _, _)),
   assumeLanguage(Ds, L).
+% END ...
 
 ok(Ds, elementOf(F, L)) :-
   assumeMembership(Ds, L),
   assumeBase(Ds, F, L).
-
-ok(Ds, notElementOf(F, L)) :- % ...
-% BEGIN ...
-  assumeMembership(Ds, L),
-  assumeBase(Ds, F, L),
-  assumeFile(Ds, F).
-% END ...
 
 ok(Ds, function(_, InLs, OutLs, _, _)) :-
   map(ueberOk:assumeLanguage(Ds), InLs),
@@ -36,6 +29,13 @@ ok(Ds, mapsTo(R, InFs, OutFs)) :-
   assume(
     ueberDispatch:overloads(Ds, R, InFs, OutFs, [_|_]),
     'Overload ~w:(~w) -> (~w): missing.', [R, InFs, OutFs] ).
+
+% ...
+% BEGIN ...
+ok(Ds, notElementOf(F, L)) :-
+  assumeMembership(Ds, L),
+  assumeBase(Ds, F, L),
+  assumeFile(Ds, F).
 
 assumeMembership(Ds, L) :-
   assumeLanguage(Ds, L),
@@ -62,3 +62,4 @@ assumeFile(Ds, F) :-
   assume(
     member(elementOf(F, _), Ds),
     'File ~w: language missing.', [F]).
+% END ...

@@ -1,12 +1,12 @@
 % BEGIN ...
 :- module(ueberVerify, []).
-% END ...
 verify(_, language(_)).
 verify(_, membership(_, _, _)).
 verify(_, function(_, _, _, _, _)).
 verify(_, equivalence(_, _, _)).
 verify(_, normalization(_, _, _)).
 
+% END ...
 verify(Ds, elementOf(F, L)) :-
   ueberIO:readFile(F, L, Content1),
   ueberNorm:normalize(Ds, F, L, Content1, Content2),
@@ -16,8 +16,7 @@ verify(Ds, elementOf(F, L)) :-
      append(Args1, [Content2], Args2),
      \+ assume(
        once(apply(Pred, Args2)),
-       'File ~w element of language ~w: failed.', [F, L2] )
-  ).
+       'File ~w element of language ~w: failed.', [F, L2] ) ).
 
 verify(Ds, notElementOf(F, L)) :- % ...
 % BEGIN ...
