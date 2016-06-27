@@ -29,7 +29,6 @@ ok(Ds, mapsTo(R, InFs, OutFs)) :-
   assume(
     ueberDispatch:overloads(Ds, R, InFs, OutFs, [_|_]),
     'Overload ~w:(~w) -> (~w): missing.', [R, InFs, OutFs] ).
-
 % ...
 % BEGIN ...
 ok(Ds, notElementOf(F, L)) :-
