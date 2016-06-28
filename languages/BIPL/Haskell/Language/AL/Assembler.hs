@@ -2,6 +2,8 @@
 module Language.AL.Assembler where
 import qualified Language.AL.Syntax as AL
 import qualified Language.ML.Syntax as ML
+import Data.List (nub, findIndex)
+import Data.Maybe (fromJust)
 -- END ...
 assemble :: [AL.Instr] -> [ML.Instr]
 assemble zs = concat (map f zs)
@@ -29,11 +31,11 @@ assemble zs = concat (map f zs)
 
     -- Map register to memory address
     address :: String -> Int
-    address x = address' 0  zs
+    address x = fromJust (findIndex (==x) symbols)
       where
-        address' i (AL.Store x' : zs) =
-          if x==x' then i else address' (i+1) zs
-        address' i (_ : zs) = address' i zs
+        symbols = nub (concat (map symbol zs))
+        symbol (AL.Store x) = [x]
+        symbol _ = []
 
     -- Map label to instruction counter
     counter :: String -> Int
