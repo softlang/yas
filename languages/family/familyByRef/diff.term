@@ -1,1 +1,14 @@
-list(cons(id,cons(subterms([id,id,id,list(cons(id,add((value,lastName,atom,one),cons(id,cons(id,nil)))))]),cons(id,nil)))).
+list(
+  cons(id,
+  cons(subterms([
+    id,
+    id,
+    id,
+    list(
+      cons(id,
+      add((value,lastName,atom,one),
+      cons(id,
+      cons(id,
+      nil)))))]),
+  cons(id,
+  nil)))).
