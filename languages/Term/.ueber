@@ -11,4 +11,3 @@
   language(store(term)), % Stores as manipulated by semantics
   language(type(term)) % Types as manipulated by type systems
 ].
-

@@ -3,6 +3,18 @@
   macro(mmlSyntax(familyByRef)),
   macro(graphSample(familyByRef, 'empty-family')),
   macro(graphSample(familyByRef, 'singleton-family')),
-  macro(graphSample(familyByRef, 'small-family'))
+  macro(graphSample(familyByRef, 'small-family')),
 
+  % Apply the MML to DDL mapping 
+  elementOf('mm.term', ddl(mml(term))),
+  mapsTo(mmlToDll, ['mm.term'], ['../../DDL/familyByRef.term']),
+
+  % Diff between two versions
+  elementOf('diff.term', diff(term)),
+  elementOf('invdiff.term', diff(term)),
+  mapsTo(diff, ['mm.term', 'familyByRef2/mm.term'], ['diff.term']),
+  mapsTo(invDiff, ['diff.term'], ['invdiff.term']),
+  mapsTo(applyDiff, ['diff.term', 'mm.term'], ['familyByRef2/mm.term']),
+  mapsTo(applyDiff, ['invdiff.term', 'familyByRef2/mm.term'], ['mm.term'])
+	
 ].

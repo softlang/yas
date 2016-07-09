@@ -1,0 +1,11 @@
+class family {
+  value name : atom;
+  part members : person*;
+}
+class person {
+  value firstName : atom;
+  value lastName : atom;
+  value emailAddresses : atom*;
+  reference closestFriend : person?;
+}
+datatype atom;

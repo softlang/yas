@@ -1,0 +1,1 @@
+list(cons(id,cons(subterms([id,id,id,list(cons(id,sub((value,lastName,atom,one),cons(id,cons(id,nil)))))]),cons(id,nil)))).

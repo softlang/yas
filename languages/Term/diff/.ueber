@@ -1,0 +1,6 @@
+[
+    macro(eslSyntax(diff)),
+    function(diff, [term, term], [diff(term)], termDiff:diff, []),
+    function(applyDiff, [diff(term), term], [term], termApplyDiff:apply, []),
+    function(invDiff, [diff(term)], [diff(term)], termInvDiff:inv, [])
+].

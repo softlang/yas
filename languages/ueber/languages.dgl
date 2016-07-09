@@ -80,87 +80,89 @@ digraph G {
   79 [label="normal(term)", shape=ellipse]
   80 [label="store(term)", shape=ellipse]
   81 [label="type(term)", shape=ellipse]
-  82 [label="graph(term)", shape=ellipse, style=filled]
-  83 [label="text", shape=ellipse, style=filled]
-  84 [label="expr(text)", shape=ellipse, style=filled]
-  85 [label="expr(tokens(term))", shape=ellipse, style=filled]
-  86 [label="expr(tree(term))", shape=ellipse, style=filled]
-  87 [label="expr(term)", shape=ellipse, style=filled]
-  88 [label="expr(graph(term))", shape=ellipse, style=filled]
-  89 [label="exprRelaxed(graph(term))", shape=ellipse, style=filled]
-  90 [label="familyByName(graph(term))", shape=ellipse, style=filled]
-  91 [label="familyByRef(graph(term))", shape=ellipse, style=filled]
-  92 [label="figure(text)", shape=ellipse, style=filled]
-  93 [label="figure(term)", shape=ellipse, style=filled]
-  94 [label="figure(tokens(term))", shape=ellipse, style=filled]
-  95 [label="ueber(term)", shape=ellipse, style=filled]
-  1 -> 83
+  82 [label="diff(term)", shape=ellipse, style=filled]
+  83 [label="graph(term)", shape=ellipse, style=filled]
+  84 [label="text", shape=ellipse, style=filled]
+  85 [label="expr(text)", shape=ellipse, style=filled]
+  86 [label="expr(tokens(term))", shape=ellipse, style=filled]
+  87 [label="expr(tree(term))", shape=ellipse, style=filled]
+  88 [label="expr(term)", shape=ellipse, style=filled]
+  89 [label="expr(graph(term))", shape=ellipse, style=filled]
+  90 [label="exprRelaxed(graph(term))", shape=ellipse, style=filled]
+  91 [label="familyByName(graph(term))", shape=ellipse, style=filled]
+  92 [label="familyByRef(graph(term))", shape=ellipse, style=filled]
+  93 [label="familyByRef2(graph(term))", shape=ellipse, style=filled]
+  94 [label="figure(text)", shape=ellipse, style=filled]
+  95 [label="figure(term)", shape=ellipse, style=filled]
+  96 [label="figure(tokens(term))", shape=ellipse, style=filled]
+  97 [label="ueber(term)", shape=ellipse, style=filled]
+  1 -> 84
   2 -> 45
   3 -> 2
   4 -> 77
   5 -> 79
-  6 -> 83
+  6 -> 84
   7 -> 45
-  8 -> 83
+  8 -> 84
   9 -> 45
   10 -> 80
-  11 -> 83
+  11 -> 84
   12 -> 75
   13 -> 76
   14 -> 45
   15 -> 77
   16 -> 78
-  17 -> 83
+  17 -> 84
   18 -> 45
-  19 -> 83
+  19 -> 84
   20 -> 45
   21 -> 45
   22 -> 45
   23 -> 45
-  24 -> 83
+  24 -> 84
   25 -> 45
   26 -> 25
   27 -> 81
-  28 -> 83
+  28 -> 84
   29 -> 45
   30 -> 45
-  31 -> 83
-  32 -> 83
+  31 -> 84
+  32 -> 84
   33 -> 45
   34 -> 33
   35 -> 77
-  36 -> 83
+  36 -> 84
   37 -> 45
-  38 -> 83
+  38 -> 84
   39 -> 45
   40 -> 39
-  41 -> 83
+  41 -> 84
   42 -> 45
-  43 -> 83
+  43 -> 84
   44 -> 45
-  46 -> 83
+  46 -> 84
   47 -> 45
-  48 -> 83
+  48 -> 84
   49 -> 45
   50 -> 49
   51 -> 45
-  52 -> 83
-  53 -> 82
-  54 -> 83
+  52 -> 84
+  53 -> 83
+  54 -> 84
   55 -> 45
   56 -> 55
-  58 -> 83
+  58 -> 84
   59 -> 45
-  60 -> 82
+  60 -> 83
   61 -> 59
   62 -> 59
   63 -> 45
   64 -> 45
-  66 -> 83
+  66 -> 84
   67 -> 45
-  68 -> 83
+  68 -> 84
   69 -> 45
-  70 -> 82
+  70 -> 83
   71 -> 69
   72 -> 69
   73 -> 45
@@ -173,16 +175,18 @@ digraph G {
   80 -> 45
   81 -> 45
   82 -> 45
-  84 -> 83
-  85 -> 75
-  86 -> 76
-  87 -> 45
-  88 -> 82
-  89 -> 82
-  90 -> 82
-  91 -> 82
+  83 -> 45
+  85 -> 84
+  86 -> 75
+  87 -> 76
+  88 -> 45
+  89 -> 83
+  90 -> 83
+  91 -> 83
   92 -> 83
-  93 -> 45
-  94 -> 75
+  93 -> 83
+  94 -> 84
   95 -> 45
+  96 -> 75
+  97 -> 45
 }
