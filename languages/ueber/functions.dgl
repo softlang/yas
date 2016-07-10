@@ -77,9 +77,9 @@ digraph G {
   76 [label="rlDerive # rlDerive", shape=box]
   77 [label="parse # eglParser(tblAbstract: (=>))", shape=box]
   78 [label="mapping # tblGraph", shape=box]
-  79 [label="diff # termDiff", shape=box]
-  80 [label="applyDiff # termApplyDiff", shape=box]
-  81 [label="invDiff # termInvDiff", shape=box]
+  79 [label="diff # tdlDiff", shape=box]
+  80 [label="applyDiff # tdlApply", shape=box]
+  81 [label="invDiff # tdlInv", shape=box]
   82 [label="loc # textLoc", shape=box]
   83 [label="scan # exprScanner", shape=box]
   84 [label="parse # bglParser", shape=box]
@@ -156,9 +156,9 @@ digraph G {
   155 [label="tbl(text)", shape=ellipse, style=filled]
   156 [label="tbl(term)", shape=ellipse, style=filled]
   157 [label="tbl(graph(term))", shape=ellipse, style=filled]
-  158 [label="deps(term)", shape=ellipse, style=filled]
-  159 [label="tokens(term)", shape=ellipse, style=filled]
-  160 [label="diff(term)", shape=ellipse, style=filled]
+  158 [label="tdl(term)", shape=ellipse, style=filled]
+  159 [label="deps(term)", shape=ellipse, style=filled]
+  160 [label="tokens(term)", shape=ellipse, style=filled]
   161 [label="graph(term)", shape=ellipse, style=filled]
   162 [label="text", shape=ellipse, style=filled]
   163 [label="expr(text)", shape=ellipse, style=filled]
@@ -192,7 +192,7 @@ digraph G {
   110 -> 22
   111 -> 23
   101 -> 24
-  159 -> 24
+  160 -> 24
   113 -> 25
   113 -> 26
   114 -> 27
@@ -259,8 +259,8 @@ digraph G {
   156 -> 78
   135 -> 79
   135 -> 80
-  160 -> 80
-  160 -> 81
+  158 -> 80
+  158 -> 81
   162 -> 82
   163 -> 83
   164 -> 84
@@ -329,7 +329,7 @@ digraph G {
   59 -> 141
   60 -> 142
   61 -> 144
-  62 -> 158
+  62 -> 159
   63 -> 144
   64 -> 143
   65 -> 169
@@ -346,9 +346,9 @@ digraph G {
   76 -> 135
   77 -> 156
   78 -> 157
-  79 -> 160
+  79 -> 158
   80 -> 135
-  81 -> 160
+  81 -> 158
   82 -> 135
   83 -> 164
   84 -> 166

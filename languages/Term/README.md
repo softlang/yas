@@ -1,1 +1,1 @@
-The language of Prolog terms as assumed by softlangbook
+# Term: the language of Prolog terms

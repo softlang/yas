@@ -74,16 +74,16 @@ digraph G {
   73 [label="tbl(graph(term))", shape=ellipse, style=filled]
   74 [label="ok(tbl(term))", shape=ellipse, style=filled]
   75 [label="one(tbl(term))", shape=ellipse, style=filled]
-  76 [label="deps(term)", shape=ellipse, style=filled]
-  77 [label="ini(term)", shape=ellipse]
-  78 [label="tokens(term)", shape=ellipse]
-  79 [label="tree(term)", shape=ellipse]
-  80 [label="value(term)", shape=ellipse]
-  81 [label="formula(term)", shape=ellipse]
-  82 [label="normal(term)", shape=ellipse]
-  83 [label="store(term)", shape=ellipse]
-  84 [label="type(term)", shape=ellipse]
-  85 [label="diff(term)", shape=ellipse, style=filled]
+  76 [label="tdl(term)", shape=ellipse, style=filled]
+  77 [label="deps(term)", shape=ellipse, style=filled]
+  78 [label="ini(term)", shape=ellipse]
+  79 [label="tokens(term)", shape=ellipse]
+  80 [label="tree(term)", shape=ellipse]
+  81 [label="value(term)", shape=ellipse]
+  82 [label="formula(term)", shape=ellipse]
+  83 [label="normal(term)", shape=ellipse]
+  84 [label="store(term)", shape=ellipse]
+  85 [label="type(term)", shape=ellipse]
   86 [label="graph(term)", shape=ellipse, style=filled]
   87 [label="text", shape=ellipse, style=filled]
   88 [label="expr(text)", shape=ellipse, style=filled]
@@ -99,19 +99,19 @@ digraph G {
   1 -> 87
   2 -> 45
   3 -> 2
-  4 -> 80
-  5 -> 82
+  4 -> 81
+  5 -> 83
   6 -> 87
   7 -> 45
   8 -> 87
   9 -> 45
-  10 -> 83
+  10 -> 84
   11 -> 87
-  12 -> 78
-  13 -> 79
+  12 -> 79
+  13 -> 80
   14 -> 45
-  15 -> 80
-  16 -> 81
+  15 -> 81
+  16 -> 82
   17 -> 87
   18 -> 45
   19 -> 87
@@ -122,7 +122,7 @@ digraph G {
   24 -> 87
   25 -> 45
   26 -> 25
-  27 -> 84
+  27 -> 85
   28 -> 87
   29 -> 45
   30 -> 45
@@ -130,7 +130,7 @@ digraph G {
   32 -> 87
   33 -> 45
   34 -> 33
-  35 -> 80
+  35 -> 81
   36 -> 87
   37 -> 45
   38 -> 87
@@ -180,13 +180,13 @@ digraph G {
   85 -> 45
   86 -> 45
   88 -> 87
-  89 -> 78
-  90 -> 79
+  89 -> 79
+  90 -> 80
   91 -> 45
   92 -> 86
   93 -> 86
   94 -> 87
   95 -> 45
-  96 -> 78
+  96 -> 79
   97 -> 45
 }

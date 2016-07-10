@@ -1,10 +1,10 @@
-:- module(termApplyDiff, []).
+:- module(tdlApply, []).
 
 apply(id, X, X).
 apply(replace(X, Y), X, Y).
 apply(subterms(Ds), X, Y) :-
     X =.. [F|Xs],
-    map(termApplyDiff:apply, Ds, Xs, Ys),
+    map(tdlApply:apply, Ds, Xs, Ys),
     Y =.. [F|Ys].
 apply(list(Ds), X, Y) :-
     applyl(Ds, X, Y).

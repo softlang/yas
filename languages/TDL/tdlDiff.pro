@@ -1,4 +1,4 @@
-:- module(termDiff, []).
+:- module(tdlDiff, []).
 
 diff(X, X, id).
 diff(X, Y, replace(X, Y)) :-
@@ -12,7 +12,7 @@ diff(X, Y, subterms(Ds)) :-
     \+ is_list(Y),
     X =.. [F|Xs],
     Y =.. [F|Ys],
-    map(termDiff:diff, Xs, Ys, Ds).
+    map(tdlDiff:diff, Xs, Ys, Ds).
 diff(X, Y, list(Ds)) :-
     \+ X = Y,
     is_list(X),
