@@ -1,0 +1,23 @@
+[
+
+  macro(mmlSyntax(frl)),
+  macro(graphSample(frl, 'empty-family')),
+  macro(graphSample(frl, 'singleton-family')),
+  macro(graphSample(frl, 'small-family')),
+
+  % Parse DDL-based representation
+  macro(parseFile('dd.ddl')),
+
+  % Apply the MML to DDL mapping 
+  elementOf('mm.term', ddl(mml(term))),
+  mapsTo(mmlToDll, ['mm.term'], ['dd.term']),
+
+  % Diff between two versions
+  elementOf('diff.term', diff(term)),
+  elementOf('invdiff.term', diff(term)),
+  mapsTo(diff, ['mm.term', 'FRL2/mm.term'], ['diff.term']),
+  mapsTo(invDiff, ['diff.term'], ['invdiff.term']),
+  mapsTo(applyDiff, ['diff.term', 'mm.term'], ['FRL2/mm.term']),
+  mapsTo(applyDiff, ['invdiff.term', 'FRL2/mm.term'], ['mm.term'])
+	
+].

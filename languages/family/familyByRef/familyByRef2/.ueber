@@ -1,8 +1,0 @@
-[
-    macro(mmlSyntax(familyByRef2)),
-
-    % Apply the MML to DDL mapping 
-    elementOf('mm.term', ddl(mml(term))),
-    mapsTo(mmlToDll, ['mm.term'], ['../../../DDL/familyByRef2.term'])
-
-].

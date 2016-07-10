@@ -1,6 +1,4 @@
 [
     macro(eglSyntax(ddl)),
-    macro(eslSyntax(ddl)),
-    macro(parseFile('familyByRef.ddl')),
-    macro(parseFile('familyByRef2.ddl'))
+    macro(eslSyntax(ddl))
 ].
