@@ -1,5 +1,6 @@
 grammar : {rule}* ;
-rule : '[' label ']' nonterminal ':' {gsymbol}* ';' ;
+rule : '[' label ']' nonterminal ':' gsymbols ';' ;
+gsymbols : {gsymbol}* ;
 [t] gsymbol : terminal ;
 [n] gsymbol : nonterminal ;
 label : name ;

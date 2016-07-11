@@ -1,0 +1,9 @@
+generalize
+  rule : '[' label ']' nonterminal ':' gsymbols ';' ;
+to
+  rule : {'[' label ']'}? nonterminal ':' gsymbols ';' ;
+
+add [star] gsymbol : '{' gsymbols '}' '*' ;
+add [plus] gsymbol : '{' gsymbols '}' '+' ;
+add [option] gsymbol : '{' gsymbols '}' '?' ;
+add [not] gsymbol : '{' gsymbols '}' '~' ;

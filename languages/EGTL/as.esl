@@ -1,4 +1,12 @@
-type grammar = rule* ;
+symbol sequ : trafo* -> trafo ;
+symbol renameT : terminal # terminal -> trafo ;
+symbol renameN : terminal # terminal -> trafo ;
+symbol generalize : rule # rule -> trafo ;
+symbol specialize : rule # rule -> trafo ;
+symbol add : rule -> trafo ;
+symbol remove : rule -> trafo ;
+
+// EGL constructs
 type rule = label? # nonterminal # symbols ;
 type symbols = symbol* ;
 symbol t : terminal -> symbol ;

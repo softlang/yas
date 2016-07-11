@@ -1,0 +1,7 @@
+[
+    macro(eglSyntax(egtl)),
+    macro(eslSyntax(egtl)),
+    language(extension(egtl(term))),
+    membership(extension(egtl(term)), egtlExtension:ok, []),
+    function(interpret, [egtl(term), egl(term)], [egl(term)], egtlInterpret:interpret, [])
+].

@@ -1,0 +1,5 @@
+[
+    macro(parseFile('bgl2egl.egtl')),
+    elementOf('bgl2egl.term', extension(egtl(term))),
+    mapsTo(interpret, ['bgl2egl.term', '../../BGL/cs.term'], ['../../EGL/cs.term'])
+].

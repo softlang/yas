@@ -1,0 +1,25 @@
+[sequ] trafos : { trafo }* ;
+[renameT] trafo : 'rename' terminal 'to' terminal ';' ;
+[renameN] trafo : 'rename' nonterminal 'to' nonterminal ';' ;
+[generalize] trafo : 'generalize' rule 'to' rule ;
+[specialize] trafo : 'specialize' rule 'to' rule ;
+[add] trafo : 'add' rule ;
+[remove] trafo : 'remove' rule ;
+// ...
+
+// EGL constructs
+rule : {'[' label ']'}? nonterminal ':' gsymbols ';' ;
+// ...
+// BEGIN ...
+gsymbols : {gsymbol}* ;
+[t] gsymbol : terminal ;
+[n] gsymbol : nonterminal ;
+[star] gsymbol : '{' gsymbols '}' '*' ;
+[plus] gsymbol : '{' gsymbols '}' '+' ;
+[option] gsymbol : '{' gsymbols '}' '?' ;
+[not] gsymbol : '{' gsymbols '}' '~' ;
+
+label : name ;
+terminal : qstring ;
+nonterminal : name ;
+// END ...
