@@ -13,11 +13,11 @@
   mapsTo(mmlToDll, ['mm.term'], ['dd.term']),
 
   % Diff between two versions
-  elementOf('diff.term', tdl(term)),
-  elementOf('invdiff.term', tdl(term)),
-  mapsTo(diff, ['mm.term', 'FRL2/mm.term'], ['diff.term']),
-  mapsTo(invDiff, ['diff.term'], ['invdiff.term']),
-  mapsTo(applyDiff, ['diff.term', 'mm.term'], ['FRL2/mm.term']),
-  mapsTo(applyDiff, ['invdiff.term', 'FRL2/mm.term'], ['mm.term'])
+  elementOf('termdiff.term', tdl(term)),
+  elementOf('terminvdiff.term', tdl(term)),
+  mapsTo(diff, ['mm.term', 'FRL2/mm.term'], ['termdiff.term']),
+  mapsTo(invDiff, ['termdiff.term'], ['terminvdiff.term']),
+  mapsTo(applyDiff, ['termdiff.term', 'mm.term'], ['FRL2/mm.term']),
+  mapsTo(applyDiff, ['terminvdiff.term', 'FRL2/mm.term'], ['mm.term'])
 	
 ].
