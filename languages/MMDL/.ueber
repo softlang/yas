@@ -1,0 +1,13 @@
+[
+
+    macro(eslSyntax(mmdl)),
+
+    % Metamodel diff
+    function(diff, [term, term], [mmdl(term)], mmdlDiff:diff, []),
+    function(applyDiff, [mmdl(term), mml(term)], [mml(term)], mmdlApply:apply, []),
+    function(invDiff, [mmdl(term)], [mmdl(term)], mmdlInv:inv, []),
+
+    % Apply metamodel diff to data definition
+    function(applyDiff, [mmdl(term), ddl(term)], [ddl(term)], mmdlToDdl:apply, [])
+
+].

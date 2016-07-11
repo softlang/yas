@@ -6,6 +6,6 @@
 
     % Apply the MML to DDL mapping 
     elementOf('mm.term', ddl(mml(term))),
-    mapsTo(mmlToDll, ['mm.term'], ['dd.term'])
+    mapsTo(mmlToDdl, ['mm.term'], ['dd.term'])
 
 ].

@@ -8,16 +8,28 @@
   % Parse DDL-based representation
   macro(parseFile('dd.ddl')),
 
-  % Apply the MML to DDL mapping 
-  elementOf('mm.term', ddl(mml(term))),
-  mapsTo(mmlToDll, ['mm.term'], ['dd.term']),
-
-  % Diff between two versions
+  % Term diff between two versions
   elementOf('termdiff.term', tdl(term)),
   elementOf('terminvdiff.term', tdl(term)),
   mapsTo(diff, ['mm.term', 'FRL2/mm.term'], ['termdiff.term']),
   mapsTo(invDiff, ['termdiff.term'], ['terminvdiff.term']),
   mapsTo(applyDiff, ['termdiff.term', 'mm.term'], ['FRL2/mm.term']),
-  mapsTo(applyDiff, ['terminvdiff.term', 'FRL2/mm.term'], ['mm.term'])
-	
+  mapsTo(applyDiff, ['terminvdiff.term', 'FRL2/mm.term'], ['mm.term']),
+
+  % Metamodel diff between two versions
+  elementOf('mmdiff.term', mmdl(term)),
+  elementOf('mminvdiff.term', mmdl(term)),
+  mapsTo(diff, ['mm.term', 'FRL2/mm.term'], ['mmdiff.term']),
+  mapsTo(invDiff, ['mmdiff.term'], ['mminvdiff.term']),
+  mapsTo(applyDiff, ['mmdiff.term', 'mm.term'], ['FRL2/mm.term']),
+  mapsTo(applyDiff, ['mminvdiff.term', 'FRL2/mm.term'], ['mm.term']),
+
+  % Apply MML to DDL mapping 
+  elementOf('mm.term', ddl(mml(term))),
+  mapsTo(mmlToDdl, ['mm.term'], ['dd.term']),
+
+  % Apply incremental MML to DDL mapping 
+  elementOf('FRL2/mm.term', ddl(mml(term))),
+  mapsTo(applyDiff, ['mmdiff.term', 'dd.term'], ['FRL2/dd.term'])
+  
 ].

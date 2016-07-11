@@ -3,6 +3,7 @@
   % Syntax of MML
   macro(eglSyntax(mml)),
   macro(eslSyntax(mml)),
+  equivalence(mml(term), mmlEq:eq, []),
 
   % The metametamodel
   macro(mmlSyntax(mml)),
@@ -20,8 +21,8 @@
 
   % MML to DDL mapping
   language(ddl(mml(term))),
-  membership(ddl(mml(term)), simpleMetamodel, []),
-  function(mmlToDll, [ddl(mml(term))], [ddl(term)], classesToTables, []),
+  membership(ddl(mml(term)), mmlDdl:metamodel, []),
+  function(mmlToDdl, [ddl(mml(term))], [ddl(term)], mmlToDdl:classesToTables, []),
 
   % Count metrics
   function(count, [mml(term)], [term], mmlCount:count, []),

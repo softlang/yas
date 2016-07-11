@@ -1,4 +1,7 @@
 [
+    
     macro(eglSyntax(ddl)),
-    macro(eslSyntax(ddl))
+    macro(eslSyntax(ddl)),
+    equivalence(ddl(term), ddlEq:eq, [])
+
 ].

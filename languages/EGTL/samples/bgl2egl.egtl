@@ -1,8 +1,10 @@
+// Labels are mandatory in BGL to simplify CST-to-AST mapping
 generalize
   rule : '[' label ']' nonterminal ':' gsymbols ';' ;
 to
   rule : {'[' label ']'}? nonterminal ':' gsymbols ';' ;
 
+// EBNF-like constructs (and negation)
 add [star] gsymbol : '{' gsymbols '}' '*' ;
 add [plus] gsymbol : '{' gsymbols '}' '+' ;
 add [option] gsymbol : '{' gsymbols '}' '?' ;

@@ -1,6 +1,8 @@
+:- module(mmlDdl, []).
+
 % Simplicity of metamodels
-simpleMetamodel(Classifiers) :-
-  map(simpleClassifier, Classifiers).
+metamodel(Classifiers) :-
+  map(mmlDdl:simpleClassifier, Classifiers).
 
 % Simplicity of classes
 simpleClassifier(
