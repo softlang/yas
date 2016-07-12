@@ -2,6 +2,8 @@
 test:
 	@swipl -q -f main.pro
 
+view:
+	cd languages/ueber; make
 
 # 
 elide:
