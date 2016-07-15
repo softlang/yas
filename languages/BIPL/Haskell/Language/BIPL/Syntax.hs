@@ -20,7 +20,7 @@ data Expr
   | Binary BOp Expr Expr
 -- BEGIN ...
   deriving Show
--- END ...Sign/Sample.hs
+-- END ...
 
 -- Unary and binary operators
 data UOp = Negate | Not
