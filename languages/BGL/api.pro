@@ -1,5 +1,3 @@
-bglTree(_).
-
 % BGL-based conformance for token sequences
 bglConformance(Input, Grammar) 
  :-

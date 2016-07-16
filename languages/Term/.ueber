@@ -4,7 +4,6 @@
   membership(deps(term), succeed, []),
   language(ini(term)), % Configuration data
   language(tokens(term)), % Token sequences as input for parsing
-  language(tree(term)), % Parse trees as derived by parsing
   language(value(term)), % Values as computed by semantics
   language(formula(term)), % Formulae as computed by semantics
   language(normal(term)), % Normal forms as computed by semantics

@@ -6,83 +6,83 @@ digraph G {
   5 [label="bfpl(normal(term))", shape=ellipse, style=filled]
   6 [label="bgl(text)", shape=ellipse, style=filled]
   7 [label="bgl(term)", shape=ellipse, style=filled]
-  8 [label="bipl(text)", shape=ellipse, style=filled]
-  9 [label="bipl(term)", shape=ellipse, style=filled]
-  10 [label="bipl(store(term))", shape=ellipse, style=filled]
-  11 [label="bnl(text)", shape=ellipse, style=filled]
-  12 [label="bnl(tokens(term))", shape=ellipse, style=filled]
-  13 [label="bnl(tree(term))", shape=ellipse, style=filled]
-  14 [label="bnl(term)", shape=ellipse, style=filled]
-  15 [label="bnl(value(term))", shape=ellipse, style=filled]
-  16 [label="bnl(formula(term))", shape=ellipse, style=filled]
-  17 [label="yabnl(text)", shape=ellipse, style=filled]
-  18 [label="yabnl(term)", shape=ellipse, style=filled]
-  19 [label="bsl(text)", shape=ellipse, style=filled]
-  20 [label="bsl(term)", shape=ellipse, style=filled]
-  21 [label="tuple(term)", shape=ellipse, style=filled]
-  22 [label="prefix(term)", shape=ellipse, style=filled]
-  23 [label="bstl(term)", shape=ellipse, style=filled]
-  24 [label="btl(text)", shape=ellipse, style=filled]
-  25 [label="btl(term)", shape=ellipse, style=filled]
-  26 [label="ok(btl(term))", shape=ellipse, style=filled]
-  27 [label="btl(type(term))", shape=ellipse, style=filled]
-  28 [label="ddl(text)", shape=ellipse, style=filled]
-  29 [label="ddl(term)", shape=ellipse, style=filled]
-  30 [label="dgl(term)", shape=ellipse, style=filled]
-  31 [label="dgl(text)", shape=ellipse, style=filled]
-  32 [label="efpl(text)", shape=ellipse, style=filled]
-  33 [label="efpl(term)", shape=ellipse, style=filled]
-  34 [label="ok(efpl(term))", shape=ellipse, style=filled]
-  35 [label="efpl(value(term))", shape=ellipse, style=filled]
-  36 [label="egl(text)", shape=ellipse, style=filled]
-  37 [label="egl(term)", shape=ellipse, style=filled]
-  38 [label="egtl(text)", shape=ellipse, style=filled]
-  39 [label="egtl(term)", shape=ellipse, style=filled]
-  40 [label="extension(egtl(term))", shape=ellipse, style=filled]
-  41 [label="eipl(text)", shape=ellipse, style=filled]
-  42 [label="eipl(term)", shape=ellipse, style=filled]
-  43 [label="ok(eipl(term))", shape=ellipse, style=filled]
-  44 [label="el(text)", shape=ellipse, style=filled]
-  45 [label="el(term)", shape=ellipse, style=filled]
-  46 [label="elrl(text)", shape=ellipse, style=filled]
-  47 [label="elrl(term)", shape=ellipse, style=filled]
-  48 [label="term", shape=ellipse, style=filled]
-  49 [label="esl(text)", shape=ellipse, style=filled]
-  50 [label="esl(term)", shape=ellipse, style=filled]
-  51 [label="fnl(graph(term))", shape=ellipse, style=filled]
-  52 [label="frl(graph(term))", shape=ellipse, style=filled]
-  53 [label="frl2(graph(term))", shape=ellipse, style=filled]
-  54 [label="fsml(text)", shape=ellipse, style=filled]
-  55 [label="fsml(term)", shape=ellipse, style=filled]
-  56 [label="ok(fsml(term))", shape=ellipse, style=filled]
-  57 [label="java(term)", shape=ellipse, style=filled]
-  58 [label="java(text)", shape=ellipse, style=filled]
-  59 [label="gbl(graph(term))", shape=ellipse, style=filled]
-  60 [label="lal(text)", shape=ellipse, style=filled]
-  61 [label="lal(term)", shape=ellipse, style=filled]
-  62 [label="ok(lal(term))", shape=ellipse, style=filled]
-  63 [label="lal(config(term))", shape=ellipse, style=filled]
-  64 [label="mmdl(term)", shape=ellipse, style=filled]
-  65 [label="mml(text)", shape=ellipse, style=filled]
-  66 [label="mml(term)", shape=ellipse, style=filled]
-  67 [label="mml(graph(term))", shape=ellipse, style=filled]
-  68 [label="tree(mml(term))", shape=ellipse, style=filled]
-  69 [label="ddl(mml(term))", shape=ellipse, style=filled]
-  70 [label="mmtl(term)", shape=ellipse, style=filled]
-  71 [label="ppl(term)", shape=ellipse, style=filled]
-  72 [label="prolog", shape=ellipse, style=filled]
-  73 [label="rl(text)", shape=ellipse, style=filled]
-  74 [label="rl(term)", shape=ellipse, style=filled]
-  75 [label="tbl(text)", shape=ellipse, style=filled]
-  76 [label="tbl(term)", shape=ellipse, style=filled]
-  77 [label="tbl(graph(term))", shape=ellipse, style=filled]
-  78 [label="ok(tbl(term))", shape=ellipse, style=filled]
-  79 [label="one(tbl(term))", shape=ellipse, style=filled]
-  80 [label="tdl(term)", shape=ellipse, style=filled]
-  81 [label="deps(term)", shape=ellipse, style=filled]
-  82 [label="ini(term)", shape=ellipse]
-  83 [label="tokens(term)", shape=ellipse]
-  84 [label="tree(term)", shape=ellipse]
+  8 [label="bgtl(term)", shape=ellipse, style=filled]
+  9 [label="bipl(text)", shape=ellipse, style=filled]
+  10 [label="bipl(term)", shape=ellipse, style=filled]
+  11 [label="bipl(store(term))", shape=ellipse, style=filled]
+  12 [label="bnl(text)", shape=ellipse, style=filled]
+  13 [label="bnl(tokens(term))", shape=ellipse, style=filled]
+  14 [label="bnl(bgtl(term))", shape=ellipse, style=filled]
+  15 [label="bnl(term)", shape=ellipse, style=filled]
+  16 [label="bnl(value(term))", shape=ellipse, style=filled]
+  17 [label="bnl(formula(term))", shape=ellipse, style=filled]
+  18 [label="yabnl(text)", shape=ellipse, style=filled]
+  19 [label="yabnl(term)", shape=ellipse, style=filled]
+  20 [label="bsl(text)", shape=ellipse, style=filled]
+  21 [label="bsl(term)", shape=ellipse, style=filled]
+  22 [label="tuple(term)", shape=ellipse, style=filled]
+  23 [label="prefix(term)", shape=ellipse, style=filled]
+  24 [label="bstl(term)", shape=ellipse, style=filled]
+  25 [label="btl(text)", shape=ellipse, style=filled]
+  26 [label="btl(term)", shape=ellipse, style=filled]
+  27 [label="ok(btl(term))", shape=ellipse, style=filled]
+  28 [label="btl(type(term))", shape=ellipse, style=filled]
+  29 [label="ddl(text)", shape=ellipse, style=filled]
+  30 [label="ddl(term)", shape=ellipse, style=filled]
+  31 [label="dgl(term)", shape=ellipse, style=filled]
+  32 [label="dgl(text)", shape=ellipse, style=filled]
+  33 [label="efpl(text)", shape=ellipse, style=filled]
+  34 [label="efpl(term)", shape=ellipse, style=filled]
+  35 [label="ok(efpl(term))", shape=ellipse, style=filled]
+  36 [label="efpl(value(term))", shape=ellipse, style=filled]
+  37 [label="egl(text)", shape=ellipse, style=filled]
+  38 [label="egl(term)", shape=ellipse, style=filled]
+  39 [label="egtl(text)", shape=ellipse, style=filled]
+  40 [label="egtl(term)", shape=ellipse, style=filled]
+  41 [label="extension(egtl(term))", shape=ellipse, style=filled]
+  42 [label="eipl(text)", shape=ellipse, style=filled]
+  43 [label="eipl(term)", shape=ellipse, style=filled]
+  44 [label="ok(eipl(term))", shape=ellipse, style=filled]
+  45 [label="el(text)", shape=ellipse, style=filled]
+  46 [label="el(term)", shape=ellipse, style=filled]
+  47 [label="elrl(text)", shape=ellipse, style=filled]
+  48 [label="elrl(term)", shape=ellipse, style=filled]
+  49 [label="term", shape=ellipse, style=filled]
+  50 [label="esl(text)", shape=ellipse, style=filled]
+  51 [label="esl(term)", shape=ellipse, style=filled]
+  52 [label="fnl(graph(term))", shape=ellipse, style=filled]
+  53 [label="frl(graph(term))", shape=ellipse, style=filled]
+  54 [label="frl2(graph(term))", shape=ellipse, style=filled]
+  55 [label="fsml(text)", shape=ellipse, style=filled]
+  56 [label="fsml(term)", shape=ellipse, style=filled]
+  57 [label="ok(fsml(term))", shape=ellipse, style=filled]
+  58 [label="java(term)", shape=ellipse, style=filled]
+  59 [label="java(text)", shape=ellipse, style=filled]
+  60 [label="gbl(graph(term))", shape=ellipse, style=filled]
+  61 [label="lal(text)", shape=ellipse, style=filled]
+  62 [label="lal(term)", shape=ellipse, style=filled]
+  63 [label="ok(lal(term))", shape=ellipse, style=filled]
+  64 [label="lal(config(term))", shape=ellipse, style=filled]
+  65 [label="mmdl(term)", shape=ellipse, style=filled]
+  66 [label="mml(text)", shape=ellipse, style=filled]
+  67 [label="mml(term)", shape=ellipse, style=filled]
+  68 [label="mml(graph(term))", shape=ellipse, style=filled]
+  69 [label="tree(mml(term))", shape=ellipse, style=filled]
+  70 [label="ddl(mml(term))", shape=ellipse, style=filled]
+  71 [label="mmtl(term)", shape=ellipse, style=filled]
+  72 [label="ppl(term)", shape=ellipse, style=filled]
+  73 [label="prolog", shape=ellipse, style=filled]
+  74 [label="rl(text)", shape=ellipse, style=filled]
+  75 [label="rl(term)", shape=ellipse, style=filled]
+  76 [label="tbl(text)", shape=ellipse, style=filled]
+  77 [label="tbl(term)", shape=ellipse, style=filled]
+  78 [label="tbl(graph(term))", shape=ellipse, style=filled]
+  79 [label="ok(tbl(term))", shape=ellipse, style=filled]
+  80 [label="one(tbl(term))", shape=ellipse, style=filled]
+  81 [label="tdl(term)", shape=ellipse, style=filled]
+  82 [label="deps(term)", shape=ellipse, style=filled]
+  83 [label="ini(term)", shape=ellipse]
+  84 [label="tokens(term)", shape=ellipse]
   85 [label="value(term)", shape=ellipse]
   86 [label="formula(term)", shape=ellipse]
   87 [label="normal(term)", shape=ellipse]
@@ -92,7 +92,7 @@ digraph G {
   91 [label="text", shape=ellipse, style=filled]
   92 [label="expr(text)", shape=ellipse, style=filled]
   93 [label="expr(tokens(term))", shape=ellipse, style=filled]
-  94 [label="expr(tree(term))", shape=ellipse, style=filled]
+  94 [label="expr(bgtl(term))", shape=ellipse, style=filled]
   95 [label="expr(term)", shape=ellipse, style=filled]
   96 [label="expr(graph(term))", shape=ellipse, style=filled]
   97 [label="exprRelaxed(graph(term))", shape=ellipse, style=filled]
@@ -101,100 +101,100 @@ digraph G {
   100 [label="figure(tokens(term))", shape=ellipse, style=filled]
   101 [label="ueber(term)", shape=ellipse, style=filled]
   1 -> 91
-  2 -> 48
+  2 -> 49
   3 -> 2
   4 -> 85
   5 -> 87
   6 -> 91
-  7 -> 48
-  8 -> 91
-  9 -> 48
-  10 -> 88
-  11 -> 91
-  12 -> 83
+  7 -> 49
+  8 -> 49
+  9 -> 91
+  10 -> 49
+  11 -> 88
+  12 -> 91
   13 -> 84
-  14 -> 48
-  15 -> 85
-  16 -> 86
-  17 -> 91
-  18 -> 48
-  19 -> 91
-  20 -> 48
-  21 -> 48
-  22 -> 48
-  23 -> 48
-  24 -> 91
-  25 -> 48
-  26 -> 25
-  27 -> 89
-  28 -> 91
-  29 -> 48
-  30 -> 48
-  31 -> 91
+  14 -> 8
+  15 -> 49
+  16 -> 85
+  17 -> 86
+  18 -> 91
+  19 -> 49
+  20 -> 91
+  21 -> 49
+  22 -> 49
+  23 -> 49
+  24 -> 49
+  25 -> 91
+  26 -> 49
+  27 -> 26
+  28 -> 89
+  29 -> 91
+  30 -> 49
+  31 -> 49
   32 -> 91
-  33 -> 48
-  34 -> 33
-  35 -> 85
-  36 -> 91
-  37 -> 48
-  38 -> 91
-  39 -> 48
-  40 -> 39
-  41 -> 91
-  42 -> 48
-  43 -> 42
-  44 -> 91
-  45 -> 48
-  46 -> 91
-  47 -> 48
-  49 -> 91
-  50 -> 48
-  51 -> 90
+  33 -> 91
+  34 -> 49
+  35 -> 34
+  36 -> 85
+  37 -> 91
+  38 -> 49
+  39 -> 91
+  40 -> 49
+  41 -> 40
+  42 -> 91
+  43 -> 49
+  44 -> 43
+  45 -> 91
+  46 -> 49
+  47 -> 91
+  48 -> 49
+  50 -> 91
+  51 -> 49
   52 -> 90
   53 -> 90
-  54 -> 91
-  55 -> 48
-  56 -> 55
-  57 -> 48
-  58 -> 91
-  59 -> 90
-  60 -> 91
-  61 -> 48
-  62 -> 61
-  64 -> 48
-  65 -> 91
-  66 -> 48
-  67 -> 90
-  68 -> 66
-  69 -> 66
-  70 -> 48
-  71 -> 48
-  73 -> 91
-  74 -> 48
-  75 -> 91
-  76 -> 48
-  77 -> 90
-  78 -> 76
-  79 -> 76
-  80 -> 48
-  81 -> 48
-  82 -> 48
-  83 -> 48
-  84 -> 48
-  85 -> 48
-  86 -> 48
-  87 -> 48
-  88 -> 48
-  89 -> 48
-  90 -> 48
+  54 -> 90
+  55 -> 91
+  56 -> 49
+  57 -> 56
+  58 -> 49
+  59 -> 91
+  60 -> 90
+  61 -> 91
+  62 -> 49
+  63 -> 62
+  65 -> 49
+  66 -> 91
+  67 -> 49
+  68 -> 90
+  69 -> 67
+  70 -> 67
+  71 -> 49
+  72 -> 49
+  74 -> 91
+  75 -> 49
+  76 -> 91
+  77 -> 49
+  78 -> 90
+  79 -> 77
+  80 -> 77
+  81 -> 49
+  82 -> 49
+  83 -> 49
+  84 -> 49
+  85 -> 49
+  86 -> 49
+  87 -> 49
+  88 -> 49
+  89 -> 49
+  90 -> 49
   92 -> 91
-  93 -> 83
-  94 -> 84
-  95 -> 48
+  93 -> 84
+  94 -> 8
+  95 -> 49
   96 -> 90
   97 -> 90
   98 -> 91
-  99 -> 48
-  100 -> 83
-  101 -> 48
+  99 -> 49
+  100 -> 84
+  101 -> 49
 }

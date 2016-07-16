@@ -1,0 +1,13 @@
+symbol leaf : terminal -> ptree ;
+symbol fork : rule # ptree* -> ptree ;
+// Rules as in BGL
+// ...
+// BEGIN ...
+type rule = label # nonterminal # symbols ;
+type symbols = symbol* ;
+symbol t : terminal -> symbol ;
+symbol n : nonterminal -> symbol ;
+type label = string ;
+type terminal = string ;
+type nonterminal = string ;
+// END ...

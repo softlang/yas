@@ -8,7 +8,7 @@ parseFilePickily(TextF) :-
   file_name_extension(Base, term, TermF),
   TextL =.. [L, text],
   TokensL =.. [L, tokens(term)],
-  TreeL =.. [L, tree(term)],
+  TreeL =.. [L, bgtl(term)],
   TermL =.. [L, term],
   ueber([
     macro(fxy(scan, TextF, TextL, TokensF, TokensL)),

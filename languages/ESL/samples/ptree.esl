@@ -1,2 +1,0 @@
-symbol leaf : terminal -> ptree ;
-symbol fork : rule # ptree* -> ptree ;
