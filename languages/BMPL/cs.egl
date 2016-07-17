@@ -1,0 +1,5 @@
+program : { rule }* ;
+rule : expr '->' expr ';' ;
+[var] expr : var ;
+[functor] expr : fsym { '(' expr { ',' expr }* ')' }? ;
+[integer] expr : integer ;

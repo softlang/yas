@@ -1,0 +1,5 @@
+[
+    macro(eglSyntax(bmpl)),
+    macro(eslSyntax(bmpl)),
+    function(pp, [bmpl(term)], [prolog(text)], bmplToProlog:main, [])
+].

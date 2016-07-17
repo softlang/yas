@@ -1,0 +1,1 @@
+[type(program,star(sort(rule))),type(rule,tuple([sort(expr),sort(expr)])),symbol(var,[string],expr),symbol(functor,[sort(fsym),star(sort(expr))],expr),symbol(integer,[integer],expr),type(fsym,string)].

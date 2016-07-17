@@ -1,0 +1,1 @@
+[ ([],program,[star([n(rule)])]), ([],rule,[n(expr),t(->),n(expr),t(;)]), ([var],expr,[n(var)]), ([functor],expr,[n(fsym),option([t('('),n(expr),star([t(','),n(expr)]),t(')')])]), ([integer],expr,[n(integer)])].

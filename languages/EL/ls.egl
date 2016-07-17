@@ -1,4 +1,3 @@
-name : lower { alpha }* ;
+name : { alpha }+ ;
 integer : { digit }+ ;
 layout : { space }+ ;
-layout : '--' { { end_of_line }~ }* end_of_line ;

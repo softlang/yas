@@ -1,0 +1,8 @@
+fsym : lower { csymf }* ;
+var : upper { csymf }* ;
+boolean : 'true' ;
+boolean : 'false' ;
+integer : { digit }+ ;
+string : quote { { quote }~ }+ quote ;
+layout : { space }+ ;
+layout : '%' { { end_of_line }~ }* end_of_line ;

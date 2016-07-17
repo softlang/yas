@@ -1,3 +1,5 @@
+:- module(elOps, []).
+
 uop(neg, intval(I1), intval(I0)) :- I0 is - I1.
 uop(not, boolval(true), boolval(false)).
 uop(not, boolval(false), boolval(true)).

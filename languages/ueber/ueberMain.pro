@@ -10,7 +10,7 @@ ueberRun :-
   ( mode(verbose) ->
         format('~nMegamodel verification:~n', []),
 	map(ueberVerify(Ds), Ds)
-      ; map(try(ueberVerify:verify(Ds)), Ds) ),
+      ; map(try(callVerify(Ds)), Ds) ),
   ( problem(_, _) ->
         format('~nMegamodel problems:~n', []),
 	findall((M, Ps), problem(M, Ps), X),
@@ -35,12 +35,12 @@ ueberOk(Ds, D) :-
     )
   ).
 
-% Verify a declaration
+% Verify a declaration with reporting
 ueberVerify(Ds, D) :-
   format(' * ~q: ',[D]),
   flush_output,
   once(
-    ( ueberVerify:verify(Ds, D) ->
+    ( callVerify(Ds, D) ->
         format('VERIFIED~n',[])
       ; 
         format('FAIL~n',[]),
@@ -48,6 +48,11 @@ ueberVerify(Ds, D) :-
     )
   ).
 
+
+callVerify(Ds, D) :-
+    nb_setval(current, D),
+    ueberVerify:verify(Ds, D).
+		  
 % Report a problem on a failing goal
 assume(G, M, Ps) :- G -> true; report(M, Ps), fail.
 

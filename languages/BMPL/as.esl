@@ -1,0 +1,6 @@
+type program = rule* ;
+type rule = expr # expr ;
+symbol var : string -> expr ;
+symbol functor : fsym # expr* -> expr ;
+symbol integer : integer -> expr ; 
+type fsym = string ;

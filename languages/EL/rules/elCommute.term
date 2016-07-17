@@ -1,0 +1,1 @@
+[ (functor(binary,[functor(add,[]),var('X'),var('Y')]),functor(binary,[functor(add,[]),var('Y'),var('X')])), (functor(binary,[functor(mul,[]),var('X'),var('Y')]),functor(binary,[functor(mul,[]),var('Y'),var('X')]))].

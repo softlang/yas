@@ -12,6 +12,7 @@
 :- ['languages/ueber/macros/fxy.pro'].
 :- ['languages/ueber/macros/forall.pro'].
 :- ['languages/ueber/macros/lal.pro'].
+:- ['languages/ueber/macros/bmpl.pro'].
 :- nb_setval(ueber_level, 1).
 :- nb_setval(ueber_dir, '.').
 

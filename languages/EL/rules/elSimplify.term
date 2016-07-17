@@ -1,0 +1,1 @@
+[ (functor(binary,[functor(add,[]),var('X'),functor(intconst,[integer(0)])]),var('X')), (functor(binary,[functor(mul,[]),var('X'),functor(intconst,[integer(1)])]),var('X')), (functor(binary,[functor(mul,[]),var('X'),functor(intconst,[integer(0)])]),functor(intconst,[integer(0)]))].

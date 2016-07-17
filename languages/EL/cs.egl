@@ -1,28 +1,17 @@
 // Expressions
-[unary] expr : uop term ;
-[binary] expr : term bop term ;
-expr : term ;
+[or] expr : bexpr { '||' expr }? ;
+[and] bexpr : cexpr { '&&' bexpr }? ;
+[lt] cexpr : aexpr { '<' aexpr }? ;
+[leq] cexpr : aexpr { '<=' aexpr }? ;
+[eq] cexpr : aexpr { '==' aexpr }? ;
+[geq] cexpr : aexpr { '>=' aexpr }? ;
+[gt] cexpr : aexpr { '>' aexpr }? ;
+[add] aexpr : term { '+' aexpr }? ;
+[sub] aexpr : term { '-' aexpr }? ;
+[mul] term : factor { '*' term }? ;
+[negate] factor : '-' factor ;
+[not] factor : '!' factor ;
+[intconst] factor : integer ;
+[var] factor : name ;
+[brackets] factor : '(' expr ')' ;
 
-// Simpler expressions
-[intconst] term : integer ;
-[boolconst] term : boolean ;
-[var] term : name ;
-term : '(' expr ')' ;
-
-// Unary operators
-[neg] uop : '-' ;
-[not] uop : '~' ;
-
-// Binary operators
-[add] bop : '+' ;
-[sub] bop : '-' ;
-[mul] bop : '*' ;
-[eq] bop : '==' ;
-[geq] bop : '>=' ;
-[gt] bop : '>' ;
-[and] bop : '&&' ;
-[or] bop : '||' ;
-
-// Boolean constants
-[true] boolean : 'true' ;
-[false] boolean : 'false' ;
