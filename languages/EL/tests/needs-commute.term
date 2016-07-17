@@ -1,0 +1,1 @@
+binary(add,intconst(0),var(a)).

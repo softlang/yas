@@ -1,0 +1,1 @@
+binary(mul,var(a),binary(mul,var(b),binary(mul,var(c),var(d)))).

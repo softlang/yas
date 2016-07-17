@@ -20,7 +20,7 @@ try(S,X,Y) :-
 repeat(S,X,Y) :-
   try(seq(S,repeat(S)),X,Y).
 
-% Apply S to one immediate subterm successfully 
+% Apply S to one immediate subterm 
 one(S,X,Y) :-
   X =.. [F|LX],
   append(LX1, [EX|LX2], LX),
@@ -28,9 +28,23 @@ one(S,X,Y) :-
   append(LX1, [EY|LX2], LY),
   Y =.. [F|LY].
 
+% Apply S to all immediate subterms 
+all(S,X,Y) :-
+  X =.. [F|LX],
+  map(S, LX, LY),
+  Y =.. [F|LY].
+
 % Apply S once in bottom-up order
 oncebu(S,X,Y) :-
-  choice(one(oncebu(S)),S,X,Y).
+  choice(one(oncebu(S)), S, X, Y).
+
+% Apply S everywhere in bottom-up order
+fullbu(S,X,Y) :-
+  seq(all(fullbu(S)), S, X, Y).
+
+% Apply S everywhere in top-down order
+fulltd(S,X,Y) :-
+  seq(S, all(fulltd(S)), X, Y).
 
 % Repeat oncebu exhaustively
 innermost(S,X,Y) :- 

@@ -1,21 +1,35 @@
 [
-  macro(parseFile('sample1.el')),  
-  macro(parseFile('sample2.el')),  
-  macro(parseFile('sample3.el')),  
-  macro(parseFile('sample4.el')),  
-  macro(parseFile('sample5.el')),  
-  elementOf('sample1.value', term),
-  function(evaluate, [el(term)], [term], elEvaluate:evaluate, []),
-  mapsTo(evaluate, ['sample1.term'], ['sample1.value']),
+    % EL evaluation
+    macro(parseFile('no-vars.el')),  
+    elementOf('no-vars.value', term),
+    function(evaluate, [el(term)], [term], elEvaluate:evaluate, []),
+    mapsTo(evaluate, ['no-vars.term'], ['no-vars.value']),
 
-  function(normalize1, [el(term)], [el(term)], try(elSimplify:(~>)), []),
-  function(normalize2, [el(term)], [el(term)], repeat(elSimplify:(~>)), []),
-  function(normalize3, [el(term)], [el(term)], oncebu(elSimplify:(~>)), []),
-  function(normalize4, [el(term)], [el(term)], innermost(elSimplify:(~>)), []),
-  function(normalize5, [el(term)], [el(term)], innermost(vary(elCommute:(~>), elSimplify:(~>))), []),
-  mapsTo(normalize1, ['sample3.term'], ['sample3.term']),
-  mapsTo(normalize2, ['sample3.term'], ['sample3.term']),
-  mapsTo(normalize3, ['sample3.term'], ['sample4.term']),
-  mapsTo(normalize4, ['sample3.term'], ['sample4.term']),
-  mapsTo(normalize5, ['sample3.term'], ['sample5.term'])
+    % Samples for optimization
+    macro(parseFile('a.el')),  
+    macro(parseFile('add-unit.el')),  
+    macro(parseFile('needs-commute.el')),  
+    macro(parseFile('needs-fullbu.el')),
+    macro(parseFile('left-associated.el')),  
+    macro(parseFile('mix-associated.el')),  
+    macro(parseFile('right-associated.el')),
+
+    % Rewriting options
+    function(rewrite, [el(term)], [el(term)], elRewrite:rewrite, []),
+    function(try, [el(term)], [el(term)], elRewrite:try, []),
+    function(vtry, [el(term)], [el(term)], elRewrite:vtry, []),
+    function(fulltd, [el(term)], [el(term)], elRewrite:fulltd, []),
+    function(fullbu, [el(term)], [el(term)], elRewrite:fullbu, []),
+    function(innermost, [el(term)], [el(term)], elRewrite:innermost, []),
+
+    % Testing rewriting
+    mapsTo(rewrite, ['add-unit.term'], ['a.term']),
+    mapsTo(try, ['a.term'], ['a.term']),
+    mapsTo(try, ['needs-commute.term'], ['needs-commute.term']),
+    mapsTo(vtry, ['needs-commute.term'], ['a.term']),
+    mapsTo(fulltd, ['needs-fullbu.term'], ['add-unit.term']), 
+    mapsTo(fullbu, ['needs-fullbu.term'], ['a.term']),
+    mapsTo(fullbu, ['left-associated.term'], ['mix-associated.term']),
+    mapsTo(innermost, ['left-associated.term'], ['right-associated.term'])
+
 ].

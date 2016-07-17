@@ -1,0 +1,1 @@
+binary(add,var(a),binary(mul,var(b),intconst(0))).
