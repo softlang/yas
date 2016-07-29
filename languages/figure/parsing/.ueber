@@ -9,7 +9,7 @@
   function(scannerless, 
     [figure(text)],
     [figure(term)],
-    eglParserScannerless(layout, figureAbstract:(=>)), 
+    eglParserScannerless(layout, figureAbstract:(~>)), 
     ['../cs.term', '../ls.term']
   ),
   mapsTo(scannerless, ['../sample.figure'], ['../sample.term']),

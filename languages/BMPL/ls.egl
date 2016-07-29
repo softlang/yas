@@ -1,5 +1,6 @@
 fsym : lower { csymf }* ;
 var : upper { csymf }* ;
+var : '_' { csymf }* ;
 boolean : 'true' ;
 boolean : 'false' ;
 integer : { digit }+ ;

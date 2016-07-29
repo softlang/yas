@@ -6,8 +6,8 @@ eglSyntax(Lang) :-
   TermLang =.. [Lang, term],
   Files = ['cs.term', 'ls.term'],
   atom_concat(Lang, 'Abstract', Mapping),
-  Acceptor = eglAcceptor(Mapping:(=>)),
-  Parser = eglParser(Mapping:(=>)),
+  Acceptor = eglAcceptor(Mapping:(~>)),
+  Parser = eglParser(Mapping:(~>)),
   ueber([
     language(TextLang),
     language(TermLang),

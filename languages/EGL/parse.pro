@@ -25,11 +25,9 @@ xparse(
          LOpt = [],
          list2tuple([], Trees, Tree1)
        ),
-       ( apply(Mapping, [N:Tree1, Tree2]) -> 
+       ( apply(Mapping, [(N, Tree1), Tree2]) -> 
              true
-           ; ( apply(Mapping, [Tree1, Tree2]) ->
-                   true
-                 ; Tree1 = Tree2 )). 
+           ; Tree1 = Tree2 ). 
 
 % The case for external nonterminals
 xparse(Config, n(N), [Tree], Input0, Input1) :-

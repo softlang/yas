@@ -1,6 +1,0 @@
-% BEGIN ...
-:- module(btlAbstract, []).
-
-% END ...
-(_, _) => _ :- fail.
-

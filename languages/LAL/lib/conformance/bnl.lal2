@@ -1,0 +1,12 @@
+language Text
+language BNL <= Text
+language BGL <= Text
+constant bnlGrammar : BGL
+relation conformsTo : Text # BGL
+axiom {
+ forall x <- Text.
+  (x <- BNL) <=> (conformsTo(x, bnlGrammar))
+}
+link BNL to 'https://github.com/softlang/yas/blob/master/languages/BNL'
+link BGL to 'https://github.com/softlang/yas/blob/master/languages/BGL'
+link bnlGrammar to 'https://github.com/softlang/yas/blob/master/languages/BGL/cs.bgl'

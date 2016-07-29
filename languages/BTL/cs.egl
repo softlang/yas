@@ -1,8 +1,0 @@
-term : "true" ;
-term : "false" ;
-term : "zero" ;
-term : "succ" term ;
-term : "pred" term ;
-term : "iszero" term ;
-term : "if" term term term ;
-

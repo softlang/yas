@@ -2,20 +2,20 @@
 :- module(eslAbstract, []).
 
 % END ...
-typeexpr:(T1, C) => T2 :-
+(typeexpr, (T1, C)) ~> T2 :-
   eslCardinality(T1, C, T2).
 
-factor:tuple(T, Ts) => tuple([T|Ts]).
+(factor, tuple(T, Ts)) ~> tuple([T|Ts]).
 
-name:String => Atom :- name(Atom, String).
+(name, String) ~> Atom :- name(Atom, String).
 
-typeexprs:(X, Y) => [X|Y].
+(typeexprs, (X, Y)) ~> [X|Y].
 
-type(N, [T]) => type(N, T).
-type(N, Ts) => type(N, tuple(Ts)) :- Ts = [_|_].
+(_, type(N, [T])) ~> type(N, T).
+(_, type(N, Ts)) ~> type(N, tuple(Ts)) :- Ts = [_|_].
 
-symbol(N1, [], N2) => symbol(N1, [], N2).
-symbol(N1, [Args], N2) => symbol(N1, Args, N2).
+(_, symbol(N1, [], N2)) ~> symbol(N1, [], N2).
+(_, symbol(N1, [Args], N2)) ~> symbol(N1, Args, N2).
 
 % Helper for mapping of cardinalities
 eslCardinality(T, none, T).

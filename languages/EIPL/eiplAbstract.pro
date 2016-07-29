@@ -2,4 +2,4 @@
 :- module(eiplAbstract, []).
 
 % END ...
-T1 => T2 :- biplAbstract:'=>'(T1, T2).
+(N, T1) ~> T2 :- biplAbstract:'~>'((N, T1), T2).

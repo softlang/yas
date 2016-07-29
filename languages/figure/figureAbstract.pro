@@ -2,4 +2,4 @@
 :- module(figureAbstract, []).
 
 % END ...
-integer:Digits => Int :- number_codes(Int, Digits).
+(integer, Digits) ~> Int :- number_codes(Int, Digits).

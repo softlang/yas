@@ -1,0 +1,7 @@
+[true] expr : "true" ;
+[false] expr : "false" ;
+[zero] expr : "zero" ;
+[succ] expr : "succ" "(" expr ")" ;
+[pred] expr : "pred" "(" expr ")" ;
+[iszero] expr : "iszero" "(" expr ")" ;
+[if] expr : "if" expr "then" expr "else" expr ;

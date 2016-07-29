@@ -5,6 +5,7 @@
     macro(processLal('membership.lal')),
     macro(processLal('conformance.lal')),    
     macro(processLal('conformance/mathml.lal')),    
+    macro(processLal('conformance/bnl.lal')),    
     macro(processLal('transformation.lal')),
     macro(processLal('interpretation.lal')),
     macro(processLal('application.lal')),

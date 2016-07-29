@@ -24,7 +24,7 @@ parserOfBsl(Text, Term2) :-
     readTermFile(FileLexSyn, LexSyn)),
   require(
     parserFailed(esl),
-    scannerless(layout, eslAbstract:(=>), CfSyn, LexSyn, Text, Term1)),
+    scannerless(layout, eslAbstract:(~>), CfSyn, LexSyn, Text, Term1)),
   require(
     bglSubset,
     eslToBsl(Term1, Term2)
