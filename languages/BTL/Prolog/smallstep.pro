@@ -1,13 +1,13 @@
 % BEGIN ...
 :- module(btlSmallStep, [step/2]).
 % END ...
-step(succ(T1), succ(T2)) :- step(T1, T2).
-step(pred(T1), pred(T2)) :- step(T1, T2).
+step(succ(E1), succ(E2)) :- step(E1, E2).
+step(pred(E1), pred(E2)) :- step(E1, E2).
 step(pred(zero), zero).
 step(pred(succ(N)), N) :- isNat(N).
-step(iszero(T1), iszero(T2)) :- step(T1, T2).
+step(iszero(E1), iszero(E2)) :- step(E1, E2).
 step(iszero(zero), true).
 step(iszero(succ(N)), false) :- isNat(N).
-step(if(T0a, T1, T2), if(T0b, T1, T2)) :- step(T0a, T0b).
-step(if(true, T1, _T2), T1).
-step(if(false, _T1, T2), T2).
+step(if(E0a, E1, E2), if(E0b, E1, E2)) :- step(E0a, E0b).
+step(if(true, E1, _E2), E1).
+step(if(false, _E1, E2), E2).

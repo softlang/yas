@@ -13,5 +13,5 @@
 % END ...
 
 % Make target state mandatory, resolve implicit state, if necessary
-mapTransition(_, (I, A, [S]), (I, A, S)).
-mapTransition(N, (I, A, []), (I, A, N)).
+mapTransition(_, (E, A, [S]), (E, A, S)).
+mapTransition(N, (E, A, []), (E, A, N)).

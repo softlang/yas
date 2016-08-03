@@ -2,14 +2,14 @@
 -- Syntax of BTL terms
 module Language.BTL.Syntax where
 -- END ...
-data Term
+data Expr
   = TRUE -- True taken by Haskell Prelude
   | FALSE -- False taken by Haskell Prelude
   | Zero
-  | Succ Term
-  | Pred Term
-  | IsZero Term
-  | If Term Term Term
+  | Succ Expr
+  | Pred Expr
+  | IsZero Expr
+  | If Expr Expr Expr
 -- BEGIN ...
   deriving (Show)
 -- END ...

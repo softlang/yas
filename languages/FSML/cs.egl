@@ -1,6 +1,6 @@
 fsm : {state}* ;
 state : {'initial'}? 'state' id '{' {transition}* '}' ;
-transition : input {'/' action}? {'->' id}? ';' ;
+transition : event {'/' action}? {'->' id}? ';' ;
 id : name ;
-input : name ;
+event : name ;
 action : name ;

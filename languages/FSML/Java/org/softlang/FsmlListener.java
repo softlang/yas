@@ -1,5 +1,6 @@
 // Generated from org/softlang/Fsml.g4 by ANTLR 4.4
 
+	// Injection of package and import into generated code
 	package org.softlang;
 	import org.softlang.influent.*;
 
@@ -12,6 +13,16 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface FsmlListener extends ParseTreeListener {
 	/**
+	 * Enter a parse tree produced by {@link FsmlParser#fsm}.
+	 * @param ctx the parse tree
+	 */
+	void enterFsm(@NotNull FsmlParser.FsmContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FsmlParser#fsm}.
+	 * @param ctx the parse tree
+	 */
+	void exitFsm(@NotNull FsmlParser.FsmContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link FsmlParser#stateid}.
 	 * @param ctx the parse tree
 	 */
@@ -22,25 +33,15 @@ public interface FsmlListener extends ParseTreeListener {
 	 */
 	void exitStateid(@NotNull FsmlParser.StateidContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link FsmlParser#event}.
+	 * Enter a parse tree produced by {@link FsmlParser#statedecl}.
 	 * @param ctx the parse tree
 	 */
-	void enterEvent(@NotNull FsmlParser.EventContext ctx);
+	void enterStatedecl(@NotNull FsmlParser.StatedeclContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link FsmlParser#event}.
+	 * Exit a parse tree produced by {@link FsmlParser#statedecl}.
 	 * @param ctx the parse tree
 	 */
-	void exitEvent(@NotNull FsmlParser.EventContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link FsmlParser#fsm}.
-	 * @param ctx the parse tree
-	 */
-	void enterFsm(@NotNull FsmlParser.FsmContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link FsmlParser#fsm}.
-	 * @param ctx the parse tree
-	 */
-	void exitFsm(@NotNull FsmlParser.FsmContext ctx);
+	void exitStatedecl(@NotNull FsmlParser.StatedeclContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link FsmlParser#action}.
 	 * @param ctx the parse tree
@@ -52,6 +53,16 @@ public interface FsmlListener extends ParseTreeListener {
 	 */
 	void exitAction(@NotNull FsmlParser.ActionContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link FsmlParser#event}.
+	 * @param ctx the parse tree
+	 */
+	void enterEvent(@NotNull FsmlParser.EventContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FsmlParser#event}.
+	 * @param ctx the parse tree
+	 */
+	void exitEvent(@NotNull FsmlParser.EventContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link FsmlParser#transition}.
 	 * @param ctx the parse tree
 	 */
@@ -61,14 +72,4 @@ public interface FsmlListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitTransition(@NotNull FsmlParser.TransitionContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link FsmlParser#statedecl}.
-	 * @param ctx the parse tree
-	 */
-	void enterStatedecl(@NotNull FsmlParser.StatedeclContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link FsmlParser#statedecl}.
-	 * @param ctx the parse tree
-	 */
-	void exitStatedecl(@NotNull FsmlParser.StatedeclContext ctx);
 }

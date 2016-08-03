@@ -1,5 +1,6 @@
 // Generated from org/softlang/Fsml.g4 by ANTLR 4.4
 
+	// Injection of package and import into generated code
 	package org.softlang;
 	import org.softlang.influent.*;
 
@@ -20,6 +21,18 @@ public class FsmlBaseListener implements FsmlListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterFsm(@NotNull FsmlParser.FsmContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFsm(@NotNull FsmlParser.FsmContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterStateid(@NotNull FsmlParser.StateidContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -32,25 +45,13 @@ public class FsmlBaseListener implements FsmlListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEvent(@NotNull FsmlParser.EventContext ctx) { }
+	@Override public void enterStatedecl(@NotNull FsmlParser.StatedeclContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEvent(@NotNull FsmlParser.EventContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterFsm(@NotNull FsmlParser.FsmContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitFsm(@NotNull FsmlParser.FsmContext ctx) { }
+	@Override public void exitStatedecl(@NotNull FsmlParser.StatedeclContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -68,6 +69,18 @@ public class FsmlBaseListener implements FsmlListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterEvent(@NotNull FsmlParser.EventContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitEvent(@NotNull FsmlParser.EventContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterTransition(@NotNull FsmlParser.TransitionContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -75,18 +88,6 @@ public class FsmlBaseListener implements FsmlListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitTransition(@NotNull FsmlParser.TransitionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterStatedecl(@NotNull FsmlParser.StatedeclContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitStatedecl(@NotNull FsmlParser.StatedeclContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

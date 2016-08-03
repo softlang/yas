@@ -5,7 +5,7 @@
   language(btl(term)),
   language(ok(btl(term))),
   language(btl(type(term))),
-  membership(btl(term), btlSyntax:isTerm, []),
+  membership(btl(term), btlSyntax:isExpr, []),
   membership(ok(btl(term)), btlTyping:ok, []),
   membership(btl(type(term)), btlTyping:isType, []),
   elementOf('../sample.term', btl(term)),

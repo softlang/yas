@@ -7,20 +7,20 @@ isType(bool).
 
 % BEGIN ...
 % A well-typed term is of some type
-ok(T) :- typeOf(T, _).
+ok(E) :- typeOf(E, _).
 
 % END ...
 % Type of a term
 typeOf(true, bool).
 typeOf(false, bool).
 typeOf(zero, nat).
-typeOf(succ(T), nat) :-
-  typeOf(T, nat).
-typeOf(pred(T), nat) :-
-  typeOf(T, nat).
-typeOf(iszero(T), bool) :-
-  typeOf(T, nat).
-typeOf(if(T0, T1, T2), Ty) :-
-  typeOf(T0, bool),
-  typeOf(T1, Ty),
-  typeOf(T2, Ty).
+typeOf(succ(E), nat) :-
+  typeOf(E, nat).
+typeOf(pred(E), nat) :-
+  typeOf(E, nat).
+typeOf(iszero(E), bool) :-
+  typeOf(E, nat).
+typeOf(if(E0, E1, E2), T) :-
+  typeOf(E0, bool),
+  typeOf(E1, T),
+  typeOf(E2, T).

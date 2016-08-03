@@ -5,17 +5,17 @@ module Language.BTL.Nf where
 import Language.BTL.Syntax
 -- END ...
 -- Boolean values
-isBool :: Term -> Bool
+isBool :: Expr -> Bool
 isBool TRUE = True
 isBool FALSE = True
 isBool _ = False
 
 -- Natural numbers
-isNat :: Term -> Bool
+isNat :: Expr -> Bool
 isNat Zero = True
 isNat (Succ t) = isNat t
 isNat _ = False
 
 -- Values
-isValue :: Term -> Bool
+isValue :: Expr -> Bool
 isValue t = isBool t || isNat t

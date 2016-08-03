@@ -1,1 +1,1 @@
-pred(if iszero(zero) then succ(succ(zero)) else zero)
+pred(if iszero(zero) then succ(zero) else zero)

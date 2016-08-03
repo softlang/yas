@@ -1,1 +1,1 @@
-[ ([],fsm,[star([n(state)])]), ([],state,[option([t(initial)]),t(state),n(id),t('{'),star([n(transition)]),t('}')]), ([],transition,[n(input),option([t(/),n(action)]),option([t(->),n(id)]),t(;)]), ([],id,[n(name)]), ([],input,[n(name)]), ([],action,[n(name)])].
+[ ([],fsm,[star([n(state)])]), ([],state,[option([t(initial)]),t(state),n(id),t('{'),star([n(transition)]),t('}')]), ([],transition,[n(event),option([t(/),n(action)]),option([t(->),n(id)]),t(;)]), ([],id,[n(name)]), ([],event,[n(name)]), ([],action,[n(name)])].

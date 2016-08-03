@@ -1,5 +1,6 @@
 // Generated from org/softlang/Fsml.g4 by ANTLR 4.4
 
+	// Injection of package and import into generated code
 	package org.softlang;
 	import org.softlang.influent.*;
 
@@ -22,7 +23,7 @@ public class FsmlParser extends Parser {
 	public static final int
 		T__6=1, T__5=2, T__4=3, T__3=4, T__2=5, T__1=6, T__0=7, NAME=8, WS=9;
 	public static final String[] tokenNames = {
-		"<INVALID>", "'->'", "'initial'", "'{'", "'/'", "'}'", "';'", "'state'", 
+		"<INVALID>", "'/'", "'->'", "'state'", "'initial'", "';'", "'{'", "'}'", 
 		"NAME", "WS"
 	};
 	public static final int
@@ -48,6 +49,7 @@ public class FsmlParser extends Parser {
 	public ATN getATN() { return _ATN; }
 
 
+		// Injection of attribute for FSM model
 		public Fsm fsm = new Fsm();
 
 	public FsmlParser(TokenStream input) {
@@ -55,13 +57,13 @@ public class FsmlParser extends Parser {
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 	public static class FsmContext extends ParserRuleContext {
-		public StatedeclContext statedecl(int i) {
-			return getRuleContext(StatedeclContext.class,i);
-		}
 		public List<StatedeclContext> statedecl() {
 			return getRuleContexts(StatedeclContext.class);
 		}
 		public TerminalNode EOF() { return getToken(FsmlParser.EOF, 0); }
+		public StatedeclContext statedecl(int i) {
+			return getRuleContext(StatedeclContext.class,i);
+		}
 		public FsmContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -86,7 +88,7 @@ public class FsmlParser extends Parser {
 			setState(15);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while (_la==T__5 || _la==T__0) {
+			while (_la==T__4 || _la==T__3) {
 				{
 				{
 				setState(12); statedecl();
@@ -115,11 +117,11 @@ public class FsmlParser extends Parser {
 		public StateidContext stateid() {
 			return getRuleContext(StateidContext.class,0);
 		}
-		public TransitionContext transition(int i) {
-			return getRuleContext(TransitionContext.class,i);
-		}
 		public List<TransitionContext> transition() {
 			return getRuleContexts(TransitionContext.class);
+		}
+		public TransitionContext transition(int i) {
+			return getRuleContext(TransitionContext.class,i);
 		}
 		public StatedeclContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -145,17 +147,17 @@ public class FsmlParser extends Parser {
 			boolean initial = false;
 			setState(23);
 			_la = _input.LA(1);
-			if (_la==T__5) {
+			if (_la==T__3) {
 				{
-				setState(21); match(T__5);
+				setState(21); match(T__3);
 				initial = true;
 				}
 			}
 
-			setState(25); match(T__0);
+			setState(25); match(T__4);
 			setState(26); ((StatedeclContext)_localctx).stateid = stateid();
 			fsm.getStates().add(new State((((StatedeclContext)_localctx).stateid!=null?_input.getText(((StatedeclContext)_localctx).stateid.start,((StatedeclContext)_localctx).stateid.stop):null), initial));
-			setState(28); match(T__4);
+			setState(28); match(T__1);
 			setState(32);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
@@ -169,7 +171,7 @@ public class FsmlParser extends Parser {
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(35); match(T__2);
+			setState(35); match(T__0);
 			}
 		}
 		catch (RecognitionException re) {
@@ -188,11 +190,11 @@ public class FsmlParser extends Parser {
 		public EventContext event;
 		public ActionContext action;
 		public StateidContext stateid;
-		public StateidContext stateid() {
-			return getRuleContext(StateidContext.class,0);
-		}
 		public ActionContext action() {
 			return getRuleContext(ActionContext.class,0);
+		}
+		public StateidContext stateid() {
+			return getRuleContext(StateidContext.class,0);
 		}
 		public EventContext event() {
 			return getRuleContext(EventContext.class,0);
@@ -224,9 +226,9 @@ public class FsmlParser extends Parser {
 			String action = null;
 			setState(43);
 			_la = _input.LA(1);
-			if (_la==T__3) {
+			if (_la==T__6) {
 				{
-				setState(39); match(T__3);
+				setState(39); match(T__6);
 				setState(40); ((TransitionContext)_localctx).action = action();
 				action = (((TransitionContext)_localctx).action!=null?_input.getText(((TransitionContext)_localctx).action.start,((TransitionContext)_localctx).action.stop):null);
 				}
@@ -235,16 +237,16 @@ public class FsmlParser extends Parser {
 			String target = source;
 			setState(50);
 			_la = _input.LA(1);
-			if (_la==T__6) {
+			if (_la==T__5) {
 				{
-				setState(46); match(T__6);
+				setState(46); match(T__5);
 				setState(47); ((TransitionContext)_localctx).stateid = stateid();
 				target = (((TransitionContext)_localctx).stateid!=null?_input.getText(((TransitionContext)_localctx).stateid.start,((TransitionContext)_localctx).stateid.stop):null);
 				}
 			}
 
 			fsm.getTranss().add(new Trans(source, (((TransitionContext)_localctx).event!=null?_input.getText(((TransitionContext)_localctx).event.start,((TransitionContext)_localctx).event.stop):null), action, target));
-			setState(53); match(T__1);
+			setState(53); match(T__2);
 			}
 		}
 		catch (RecognitionException re) {
@@ -375,13 +377,13 @@ public class FsmlParser extends Parser {
 		"\21\3\2\2\2\4\26\3\2\2\2\6\'\3\2\2\2\b9\3\2\2\2\n;\3\2\2\2\f=\3\2\2\2"+
 		"\16\20\5\4\3\2\17\16\3\2\2\2\20\23\3\2\2\2\21\17\3\2\2\2\21\22\3\2\2\2"+
 		"\22\24\3\2\2\2\23\21\3\2\2\2\24\25\7\2\2\3\25\3\3\2\2\2\26\31\b\3\1\2"+
-		"\27\30\7\4\2\2\30\32\b\3\1\2\31\27\3\2\2\2\31\32\3\2\2\2\32\33\3\2\2\2"+
-		"\33\34\7\t\2\2\34\35\5\b\5\2\35\36\b\3\1\2\36\"\7\5\2\2\37!\5\6\4\2 \37"+
-		"\3\2\2\2!$\3\2\2\2\" \3\2\2\2\"#\3\2\2\2#%\3\2\2\2$\"\3\2\2\2%&\7\7\2"+
-		"\2&\5\3\2\2\2\'(\5\n\6\2(-\b\4\1\2)*\7\6\2\2*+\5\f\7\2+,\b\4\1\2,.\3\2"+
-		"\2\2-)\3\2\2\2-.\3\2\2\2./\3\2\2\2/\64\b\4\1\2\60\61\7\3\2\2\61\62\5\b"+
+		"\27\30\7\6\2\2\30\32\b\3\1\2\31\27\3\2\2\2\31\32\3\2\2\2\32\33\3\2\2\2"+
+		"\33\34\7\5\2\2\34\35\5\b\5\2\35\36\b\3\1\2\36\"\7\b\2\2\37!\5\6\4\2 \37"+
+		"\3\2\2\2!$\3\2\2\2\" \3\2\2\2\"#\3\2\2\2#%\3\2\2\2$\"\3\2\2\2%&\7\t\2"+
+		"\2&\5\3\2\2\2\'(\5\n\6\2(-\b\4\1\2)*\7\3\2\2*+\5\f\7\2+,\b\4\1\2,.\3\2"+
+		"\2\2-)\3\2\2\2-.\3\2\2\2./\3\2\2\2/\64\b\4\1\2\60\61\7\4\2\2\61\62\5\b"+
 		"\5\2\62\63\b\4\1\2\63\65\3\2\2\2\64\60\3\2\2\2\64\65\3\2\2\2\65\66\3\2"+
-		"\2\2\66\67\b\4\1\2\678\7\b\2\28\7\3\2\2\29:\7\n\2\2:\t\3\2\2\2;<\7\n\2"+
+		"\2\2\66\67\b\4\1\2\678\7\7\2\28\7\3\2\2\29:\7\n\2\2:\t\3\2\2\2;<\7\n\2"+
 		"\2<\13\3\2\2\2=>\7\n\2\2>\r\3\2\2\2\7\21\31\"-\64";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
