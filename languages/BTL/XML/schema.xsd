@@ -1,0 +1,31 @@
+<schema
+         xmlns="http://www.w3.org/2001/XMLSchema"
+         targetNamespace="http://www.softlang.org/BTL" 
+         xmlns:tns="http://www.softlang.org/BTL"
+         elementFormDefault="qualified">
+   <element name="true"><complexType/></element>
+   <element name="false"><complexType/></element>
+   <element name="zero"><complexType/></element>
+   <element name="succ" type="tns:expr"/>
+   <element name="pred" type="tns:expr"/>
+   <element name="iszero" type="tns:expr"/>
+   <element name="if">
+      <complexType>
+         <group ref="tns:expr" minOccurs="3" maxOccurs="3"/>           
+      </complexType>
+   </element>
+   <complexType name="expr">
+      <group ref="tns:expr"/>
+   </complexType>
+   <group name="expr">
+     <choice>
+       <element ref="tns:true"/>
+       <element ref="tns:false"/>
+       <element ref="tns:zero"/>
+       <element ref="tns:succ"/>
+       <element ref="tns:pred"/>
+       <element ref="tns:iszero"/>
+       <element ref="tns:if"/>
+     </choice>
+   </group>
+</schema>

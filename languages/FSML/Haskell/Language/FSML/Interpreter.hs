@@ -7,21 +7,23 @@ import Data.Maybe (maybeToList)
 -- END ...
 -- FSM simulation starting from initial state
 simulate :: Fsm -> Input -> Output
-simulate fsm xs = snd (foldl makeTransition (getInitial, []) xs)
+simulate (Fsm ss) xs = snd (foldl makeTransition (getInitial, []) xs)
   where
     -- Look up initial state
-    getInitial :: Id
-    getInitial = id where [(_, id, _)] = [ s | s@(initial, _, _) <- fsm, initial ]
+    getInitial :: StateId
+    getInitial = ini
+      where [State _ ini _] =
+              [ s | s@(State initial _ _) <- ss, initial ]
 
     -- Process event; extent output
-    makeTransition :: (Id, Output) -> Event -> (Id, Output)
-    makeTransition (id, as) x = (id', maybeToList a ++ as)
+    makeTransition :: (StateId, Output) -> Event -> (StateId, Output)
+    makeTransition (source, as) x = (target, as ++ maybeToList a)
       where
-        (_, a, id') = getTransition id x
+        (Transition _ a target) = getTransition source x
 
     -- Look up transition
-    getTransition :: Id -> Event -> Transition
-    getTransition id x = t
+    getTransition :: StateId -> Event -> Transition
+    getTransition sid x = t
       where
-        [t] = [ t | t@(x', _, _) <- ts, x == x' ]
-        [(_, _, ts)] = [ s | s@(_, id', _) <- fsm, id == id' ]
+        [t] = [ t | t@(Transition x' _ _) <- ts, x == x' ]
+        [(State _ _ ts)] = [ s | s@(State _ sid' _) <- ss, sid == sid' ]

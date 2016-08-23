@@ -9,7 +9,7 @@ main(Rs, T) :-
 
     % Map BRL rules to Prolog clauses
     map(bmplToProlog:rule, Rs, Bs),
-    pplRender:render(vlist([B|Bs]), T).
+    pplRender:render(vlist([text('% BEGIN ...'),B,text('% END ...')|Bs]), T).
 
 rule((E1, E2), hlist([B1, text(' ~> '), B2, text('.')])) :-
     expr(E1, B1),

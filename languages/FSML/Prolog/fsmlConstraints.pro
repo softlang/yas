@@ -1,35 +1,35 @@
 % BEGIN ...
-:- module(fsmlOk, []).
+:- module(fsmlConstraints, []).
 
 % END ...
 % Wellness of FSMs
 ok(Fsm) :-
-  singleInitial(Fsm),
-  distinctIds(Fsm),
-  resolvable(Fsm),
-  deterministic(Fsm),
-  reachable(Fsm).
+  singleInitialState(Fsm),
+  distinctStateIds(Fsm),
+  resolvableTargetStates(Fsm),
+  deterministicTransitions(Fsm),
+  reachableStates(Fsm).
 
 % There is a single initial state
-singleInitial(Fsm) :- findall(_, member((true, _, _), Fsm), [_]).
+singleInitialState(Fsm) :- findall(_, member((true, _, _), Fsm), [_]).
 
 % All state ids are distinct
-distinctIds(Fsm) :- findall(Id, member((_, Id, _), Fsm), Ids), set(Ids).
+distinctStateIds(Fsm) :- findall(Id, member((_, Id, _), Fsm), Ids), set(Ids).
 
 % All state ids are resolvable to states
-resolvable(Fsm) :- \+ (
+resolvableTargetStates(Fsm) :- \+ (
   member((_, _, Ts), Fsm),
   member((_, _, Id), Ts),
   \+ member((_, Id, _), Fsm)).
 
 % Input is handled deterministically per state
-deterministic(Fsm) :- \+ (
+deterministicTransitions(Fsm) :- \+ (
   member((_, _, Ts), Fsm),
   findall(I, member((I, _, _), Ts), Is),
   \+ set(Is)).
 
 % All states are reachable from the initial state
-reachable(Fsm) :- % ...
+reachableStates(Fsm) :- % ...
 % BEGIN ...
   findall(
     Id,

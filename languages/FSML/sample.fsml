@@ -10,5 +10,5 @@ state exception {
   ticket/eject;
   pass;
   mute;
-  release -> locked; 
+  release -> locked;
 }

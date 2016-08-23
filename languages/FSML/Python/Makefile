@@ -4,6 +4,10 @@ all:
 	make run
 	make test
 
+install-very-specific:
+	sudo pip install --user antlr4-python2-runtime
+	sudo pip install --user pygraphviz --install-option="--include-path=/usr/local/include" --install-option="--library-path=/usr/local/lib"
+
 generate:
 	java -cp .:../ANTLR/antlr-4.4-complete.jar org.antlr.v4.Tool Fsml.g4
 

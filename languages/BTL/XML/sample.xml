@@ -1,0 +1,7 @@
+<pred xmlns="http://www.softlang.org/BTL">
+   <if>
+      <iszero><zero/></iszero>
+      <succ><succ><zero/></succ></succ>
+      <zero/>
+   </if>
+</pred>

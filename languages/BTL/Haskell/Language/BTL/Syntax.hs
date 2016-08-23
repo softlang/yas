@@ -11,5 +11,5 @@ data Expr
   | IsZero Expr
   | If Expr Expr Expr
 -- BEGIN ...
-  deriving (Show)
+  deriving (Eq, Read, Show)
 -- END ...

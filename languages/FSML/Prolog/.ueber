@@ -1,6 +1,6 @@
 [
   language(ok(fsml(term))),
-  membership(ok(fsml(term)), fsmlOk:ok, []),
+  membership(ok(fsml(term)), fsmlConstraints:ok, []),
   elementOf('../sample.term', ok(fsml(term))),
   elementOf('sample.input', term),
   elementOf('sample.output', term),

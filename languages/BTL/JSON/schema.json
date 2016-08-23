@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "schema for BTL syntax",
+    "type": "object",
+    "oneOf": [
+      {
+        "properties": { "true" : { "additionalProperties": false } },
+        "additionalProperties": false
+      },
+      {
+        "properties": { "false" : { "additionalProperties": false } },
+        "additionalProperties": false
+      },
+      {
+        "properties": { "zero" : { "additionalProperties": false } },
+        "additionalProperties": false
+      },
+      {
+        "properties": { "succ" : { "$ref": "" } },
+        "additionalProperties": false
+      },
+      {
+        "properties": { "pred" : { "$ref": "" } },
+        "additionalProperties": false
+      },
+      {
+        "properties": { "iszero" : { "$ref": "" } },
+        "additionalProperties": false
+      },
+      {
+        "properties": {
+          "if": {
+            "properties": {
+              "x": { "$ref": "" },
+              "y": { "$ref": "" },
+              "z": { "$ref": "" }
+            },
+            "required": [ "x", "y", "z" ],
+            "additionalProperties": false 
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+}

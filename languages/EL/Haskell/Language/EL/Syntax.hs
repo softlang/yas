@@ -1,0 +1,26 @@
+-- BEGIN ...
+{-# LANGUAGE DeriveDataTypeable, DeriveLift #-}
+module Language.EL.Syntax where
+import Language.Haskell.TH.Syntax (Lift)
+import Data.Generics
+-- END ...
+-- Expressions
+data Expr
+  = IntConst Int
+  | BoolConst Bool
+  | Var String
+  | Unary UOp Expr
+  | Binary BOp Expr Expr
+-- BEGIN ...
+  deriving (Eq, Read, Show, Lift, Typeable, Data)
+-- END ...
+-- Unary operators
+data UOp = Negate | Not
+-- BEGIN ...
+  deriving (Eq, Read, Show, Lift, Typeable, Data)
+-- END ...
+-- Binary operators
+data BOp = Add | Sub | Mul | Lt | Le | Eq | Geq | Gt | And | Or
+-- BEGIN ...
+  deriving (Eq, Read, Show, Lift, Typeable, Data)
+-- END ...
