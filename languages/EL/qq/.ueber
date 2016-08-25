@@ -1,0 +1,4 @@
+[
+    macro(eglSyntax(elqq)),
+    macro(eslSyntax(elqq))
+].

@@ -47,7 +47,7 @@ exts["pll"] = exts["hs"]
 exts["bipl"] = exts["java"]
 exts["mml"] = exts["java"]
 exts["eipl"] = exts["java"]
-for root in ["languages", "lib"]:
+for root in ["languages", "lib", "samples"]:
     for (dirpath, dirnames, filenames) in os.walk(root):
         print dirpath
         for filename in filenames:

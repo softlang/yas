@@ -49,153 +49,157 @@ digraph G {
   48 [label="ok(eipl(term))", shape=ellipse, style=filled]
   49 [label="el(text)", shape=ellipse, style=filled]
   50 [label="el(term)", shape=ellipse, style=filled]
-  51 [label="term", shape=ellipse, style=filled]
-  52 [label="esl(text)", shape=ellipse, style=filled]
-  53 [label="esl(term)", shape=ellipse, style=filled]
-  54 [label="fnl(graph(term))", shape=ellipse, style=filled]
-  55 [label="frl(graph(term))", shape=ellipse, style=filled]
-  56 [label="frl2(graph(term))", shape=ellipse, style=filled]
-  57 [label="fsml(text)", shape=ellipse, style=filled]
-  58 [label="fsml(term)", shape=ellipse, style=filled]
-  59 [label="ok(fsml(term))", shape=ellipse, style=filled]
-  60 [label="java(term)", shape=ellipse, style=filled]
-  61 [label="java(text)", shape=ellipse, style=filled]
-  62 [label="gbl(graph(term))", shape=ellipse, style=filled]
-  63 [label="lal(text)", shape=ellipse, style=filled]
-  64 [label="lal(term)", shape=ellipse, style=filled]
-  65 [label="ok(lal(term))", shape=ellipse, style=filled]
-  66 [label="lal(config(term))", shape=ellipse, style=filled]
-  67 [label="mmdl(term)", shape=ellipse, style=filled]
-  68 [label="mml(text)", shape=ellipse, style=filled]
-  69 [label="mml(term)", shape=ellipse, style=filled]
-  70 [label="mml(graph(term))", shape=ellipse, style=filled]
-  71 [label="tree(mml(term))", shape=ellipse, style=filled]
-  72 [label="ddl(mml(term))", shape=ellipse, style=filled]
-  73 [label="mmtl(term)", shape=ellipse, style=filled]
-  74 [label="ppl(term)", shape=ellipse, style=filled]
-  75 [label="prolog(text)", shape=ellipse, style=filled]
-  76 [label="tbl(text)", shape=ellipse, style=filled]
-  77 [label="tbl(term)", shape=ellipse, style=filled]
-  78 [label="tbl(graph(term))", shape=ellipse, style=filled]
-  79 [label="ok(tbl(term))", shape=ellipse, style=filled]
-  80 [label="one(tbl(term))", shape=ellipse, style=filled]
-  81 [label="tdl(term)", shape=ellipse, style=filled]
-  82 [label="deps(term)", shape=ellipse, style=filled]
-  83 [label="ini(term)", shape=ellipse]
-  84 [label="tokens(term)", shape=ellipse]
-  85 [label="value(term)", shape=ellipse]
-  86 [label="formula(term)", shape=ellipse]
-  87 [label="normal(term)", shape=ellipse]
-  88 [label="store(term)", shape=ellipse]
-  89 [label="type(term)", shape=ellipse]
-  90 [label="graph(term)", shape=ellipse, style=filled]
-  91 [label="text", shape=ellipse, style=filled]
-  92 [label="expr(text)", shape=ellipse, style=filled]
-  93 [label="expr(tokens(term))", shape=ellipse, style=filled]
-  94 [label="expr(bgtl(term))", shape=ellipse, style=filled]
-  95 [label="expr(term)", shape=ellipse, style=filled]
-  96 [label="expr(graph(term))", shape=ellipse, style=filled]
-  97 [label="exprRelaxed(graph(term))", shape=ellipse, style=filled]
-  98 [label="figure(text)", shape=ellipse, style=filled]
-  99 [label="figure(term)", shape=ellipse, style=filled]
-  100 [label="figure(tokens(term))", shape=ellipse, style=filled]
-  101 [label="ueber(term)", shape=ellipse, style=filled]
-  1 -> 91
-  2 -> 51
+  51 [label="elqq(text)", shape=ellipse, style=filled]
+  52 [label="elqq(term)", shape=ellipse, style=filled]
+  53 [label="term", shape=ellipse, style=filled]
+  54 [label="esl(text)", shape=ellipse, style=filled]
+  55 [label="esl(term)", shape=ellipse, style=filled]
+  56 [label="fnl(graph(term))", shape=ellipse, style=filled]
+  57 [label="frl(graph(term))", shape=ellipse, style=filled]
+  58 [label="frl2(graph(term))", shape=ellipse, style=filled]
+  59 [label="fsml(text)", shape=ellipse, style=filled]
+  60 [label="fsml(term)", shape=ellipse, style=filled]
+  61 [label="ok(fsml(term))", shape=ellipse, style=filled]
+  62 [label="java(term)", shape=ellipse, style=filled]
+  63 [label="java(text)", shape=ellipse, style=filled]
+  64 [label="gbl(graph(term))", shape=ellipse, style=filled]
+  65 [label="lal(text)", shape=ellipse, style=filled]
+  66 [label="lal(term)", shape=ellipse, style=filled]
+  67 [label="ok(lal(term))", shape=ellipse, style=filled]
+  68 [label="lal(config(term))", shape=ellipse, style=filled]
+  69 [label="mmdl(term)", shape=ellipse, style=filled]
+  70 [label="mml(text)", shape=ellipse, style=filled]
+  71 [label="mml(term)", shape=ellipse, style=filled]
+  72 [label="mml(graph(term))", shape=ellipse, style=filled]
+  73 [label="tree(mml(term))", shape=ellipse, style=filled]
+  74 [label="ddl(mml(term))", shape=ellipse, style=filled]
+  75 [label="mmtl(term)", shape=ellipse, style=filled]
+  76 [label="ppl(term)", shape=ellipse, style=filled]
+  77 [label="prolog(text)", shape=ellipse, style=filled]
+  78 [label="tbl(text)", shape=ellipse, style=filled]
+  79 [label="tbl(term)", shape=ellipse, style=filled]
+  80 [label="tbl(graph(term))", shape=ellipse, style=filled]
+  81 [label="ok(tbl(term))", shape=ellipse, style=filled]
+  82 [label="one(tbl(term))", shape=ellipse, style=filled]
+  83 [label="tdl(term)", shape=ellipse, style=filled]
+  84 [label="deps(term)", shape=ellipse, style=filled]
+  85 [label="ini(term)", shape=ellipse]
+  86 [label="tokens(term)", shape=ellipse]
+  87 [label="value(term)", shape=ellipse]
+  88 [label="formula(term)", shape=ellipse]
+  89 [label="normal(term)", shape=ellipse]
+  90 [label="store(term)", shape=ellipse]
+  91 [label="type(term)", shape=ellipse]
+  92 [label="graph(term)", shape=ellipse, style=filled]
+  93 [label="text", shape=ellipse, style=filled]
+  94 [label="expr(text)", shape=ellipse, style=filled]
+  95 [label="expr(tokens(term))", shape=ellipse, style=filled]
+  96 [label="expr(bgtl(term))", shape=ellipse, style=filled]
+  97 [label="expr(term)", shape=ellipse, style=filled]
+  98 [label="expr(graph(term))", shape=ellipse, style=filled]
+  99 [label="exprRelaxed(graph(term))", shape=ellipse, style=filled]
+  100 [label="figure(text)", shape=ellipse, style=filled]
+  101 [label="figure(term)", shape=ellipse, style=filled]
+  102 [label="figure(tokens(term))", shape=ellipse, style=filled]
+  103 [label="ueber(term)", shape=ellipse, style=filled]
+  1 -> 93
+  2 -> 53
   3 -> 2
-  4 -> 85
-  5 -> 87
-  6 -> 91
-  7 -> 51
-  8 -> 51
-  9 -> 91
-  10 -> 51
-  11 -> 88
-  12 -> 91
-  13 -> 51
-  14 -> 91
-  15 -> 84
+  4 -> 87
+  5 -> 89
+  6 -> 93
+  7 -> 53
+  8 -> 53
+  9 -> 93
+  10 -> 53
+  11 -> 90
+  12 -> 93
+  13 -> 53
+  14 -> 93
+  15 -> 86
   16 -> 8
-  17 -> 51
-  18 -> 85
-  19 -> 86
-  20 -> 91
-  21 -> 51
-  22 -> 91
-  23 -> 51
-  24 -> 51
-  25 -> 51
-  26 -> 51
-  27 -> 91
-  28 -> 84
+  17 -> 53
+  18 -> 87
+  19 -> 88
+  20 -> 93
+  21 -> 53
+  22 -> 93
+  23 -> 53
+  24 -> 53
+  25 -> 53
+  26 -> 53
+  27 -> 93
+  28 -> 86
   29 -> 8
-  30 -> 51
+  30 -> 53
   31 -> 30
-  32 -> 89
-  33 -> 91
-  34 -> 51
-  35 -> 51
-  36 -> 91
-  37 -> 91
-  38 -> 51
+  32 -> 91
+  33 -> 93
+  34 -> 53
+  35 -> 53
+  36 -> 93
+  37 -> 93
+  38 -> 53
   39 -> 38
-  40 -> 85
-  41 -> 91
-  42 -> 51
-  43 -> 91
-  44 -> 51
+  40 -> 87
+  41 -> 93
+  42 -> 53
+  43 -> 93
+  44 -> 53
   45 -> 44
-  46 -> 91
-  47 -> 51
+  46 -> 93
+  47 -> 53
   48 -> 47
-  49 -> 91
-  50 -> 51
-  52 -> 91
-  53 -> 51
-  54 -> 90
-  55 -> 90
-  56 -> 90
-  57 -> 91
-  58 -> 51
-  59 -> 58
-  60 -> 51
-  61 -> 91
-  62 -> 90
-  63 -> 91
-  64 -> 51
-  65 -> 64
-  67 -> 51
-  68 -> 91
-  69 -> 51
-  70 -> 90
-  71 -> 69
-  72 -> 69
-  73 -> 51
-  74 -> 51
-  75 -> 91
-  76 -> 91
-  77 -> 51
-  78 -> 90
-  79 -> 77
-  80 -> 77
-  81 -> 51
-  82 -> 51
-  83 -> 51
-  84 -> 51
-  85 -> 51
-  86 -> 51
-  87 -> 51
-  88 -> 51
-  89 -> 51
-  90 -> 51
-  92 -> 91
-  93 -> 84
-  94 -> 8
-  95 -> 51
-  96 -> 90
-  97 -> 90
-  98 -> 91
-  99 -> 51
-  100 -> 84
-  101 -> 51
+  49 -> 93
+  50 -> 53
+  51 -> 93
+  52 -> 53
+  54 -> 93
+  55 -> 53
+  56 -> 92
+  57 -> 92
+  58 -> 92
+  59 -> 93
+  60 -> 53
+  61 -> 60
+  62 -> 53
+  63 -> 93
+  64 -> 92
+  65 -> 93
+  66 -> 53
+  67 -> 66
+  69 -> 53
+  70 -> 93
+  71 -> 53
+  72 -> 92
+  73 -> 71
+  74 -> 71
+  75 -> 53
+  76 -> 53
+  77 -> 93
+  78 -> 93
+  79 -> 53
+  80 -> 92
+  81 -> 79
+  82 -> 79
+  83 -> 53
+  84 -> 53
+  85 -> 53
+  86 -> 53
+  87 -> 53
+  88 -> 53
+  89 -> 53
+  90 -> 53
+  91 -> 53
+  92 -> 53
+  94 -> 93
+  95 -> 86
+  96 -> 8
+  97 -> 53
+  98 -> 92
+  99 -> 92
+  100 -> 93
+  101 -> 53
+  102 -> 86
+  103 -> 53
 }

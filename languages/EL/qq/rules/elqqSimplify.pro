@@ -1,0 +1,6 @@
+% BEGIN ...
+:- module(elqqSimplify, []).
+% END ...
+{|el || $X + 0 |} ~> {|el || $X |}.
+{|el || $X * 1 |} ~> {|el || $X |}.
+{|el || $X * 0 |} ~> {|el || 0 |}.

@@ -22,10 +22,11 @@ reportTesting :-
   format('Test summary: OK: ~w; FAIL: ~w~n', [Trues, Fails]),
 
   % Producing the right exit code
-  ( Fails > 0 ->
+  ( mode(session); 
+    ( Fails > 0 ->
         halt(1)
       ; halt
-  ).
+    )).
 
 % Assertion with predicate serving as reportable constraint
 require(P) :-

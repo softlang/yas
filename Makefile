@@ -9,6 +9,10 @@ view:
 elide:
 	cd tools; make elide
 
+# Do not exit session
+session:
+	@swipl -q -f main.pro -- session
+
 # Be verbose
 verbose:
 	@swipl -q -f main.pro -- verbose 
