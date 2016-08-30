@@ -1,11 +1,15 @@
+// The same syntax as before
+// ...
+// BEGIN ...
 // Expressions
 symbol intconst : integer -> expr ;
 symbol boolconst : boolean -> expr ;
 symbol var : string -> expr ;
 symbol unary : uop # expr -> expr ;
 symbol binary : bop # expr # expr -> expr ;
-symbol metavar : string -> expr ;
-
+// END ...
+symbol metavar : string -> expr ; // An additional symbol for the abstract syntax
+// BEGIN ...
 // Unary operators
 symbol negate : -> uop ;
 symbol not : -> uop ;
@@ -21,4 +25,4 @@ symbol geq : -> bop ;
 symbol gt : -> bop ;
 symbol and : -> bop ;
 symbol or : -> bop ;
-
+// END ...

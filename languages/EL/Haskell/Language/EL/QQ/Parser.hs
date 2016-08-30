@@ -1,3 +1,4 @@
+-- BEGIN ...
 module Language.EL.QQ.Parser(expr) where
 import Language.EL.QQ.Syntax
 import Language.EL.QQ.Lexer
@@ -42,12 +43,15 @@ term = do
   e1 <- factor
   e2 <- optionMaybe (op "*" >> term)
   return $ maybe e1 (Binary Mul e1) e2
-
+-- END ...
 factor :: Parser Expr
-factor =
+factor
+  = -- ... -- The same syntax as before
+-- BEGIN ...
       (IntConst <$> int)
   <|> (Var <$> identifier)
-  <|> (MetaVar <$> (op "$" >> identifier))
   <|> (parens expr)
   <|> (Unary Negate <$> (op "-" >> factor))
   <|> (Unary Not <$> (op "!" >> factor))
+-- END ...
+  <|> (MetaVar <$> (op "$" >> identifier)) -- An additional choice in parsing

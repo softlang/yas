@@ -10,7 +10,7 @@
 :- ['lib/Prolog/data.pro'].
 :- ['lib/Prolog/assoc.pro'].
 :- ['lib/Prolog/higher-order.pro'].
-:- ['lib/Prolog/strategyPrimitives.pro'].
+:- ['lib/Prolog/strategyBasics.pro'].
 :- ['lib/Prolog/strategySchemes.pro'].
 :- ['lib/Prolog/logvars.pro'].
 :- ['lib/Prolog/generics.pro'].

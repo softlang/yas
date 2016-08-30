@@ -1,9 +1,5 @@
 -- BEGIN ...
---
--- (C) 2016 softlang.org and Simon Schauss and Ralf Laemmel
---
-module Language.FSML.Lexer where
-
+module Language.EGL.Lexer where
 import Text.Parsec hiding (State)
 import Text.Parsec.Language (emptyDef)
 import Text.Parsec.String (Parser)
@@ -18,8 +14,8 @@ fsmlDef = emptyDef
     , Token.identStart       = letter
     , Token.identLetter      = alphaNum
     , Token.nestedComments   = True
-    , Token.reservedNames    = ["initial", "state"]
-    , Token.reservedOpNames  = ["/", "->"]
+    , Token.reservedNames    = []
+    , Token.reservedOpNames  = ["*", "+", "?"]
     }
 
 lexer :: Token.TokenParser ()
@@ -42,3 +38,10 @@ symbol = Token.symbol lexer
 
 identifier :: Parser String
 identifier = Token.identifier lexer
+
+qstring :: Parser String
+qstring =
+     string "'"
+  *> (many $ noneOf "'")
+  <* string "'"
+  <* spaces

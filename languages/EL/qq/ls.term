@@ -1,1 +1,1 @@
-[ ([],name,[plus([n(alpha)])]), ([],integer,[plus([n(digit)])]), ([],layout,[plus([n(space)])])].
+[ ([],identifier,[plus([n(lower)])]), ([],integer,[plus([n(digit)])]), ([],layout,[plus([n(space)])])].

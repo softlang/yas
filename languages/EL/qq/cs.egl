@@ -1,4 +1,6 @@
-// Expressions
+// The same syntax as before
+// ...
+// BEGIN ...
 [or] expr : bexpr { '||' expr }? ;
 [and] bexpr : cexpr { '&&' bexpr }? ;
 [lt] cexpr : aexpr { '<' aexpr }? ;
@@ -12,6 +14,7 @@
 [negate] factor : '-' factor ;
 [not] factor : '!' factor ;
 [intconst] factor : integer ;
-[var] factor : name ;
+[var] factor : identifier ;
 [brackets] factor : '(' expr ')' ;
-[metavar] factor : '$' name ;
+// END ...
+[metavar] factor : '$' identifier ; // An additional choice in parsing

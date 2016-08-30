@@ -18,6 +18,6 @@ state =
    >> braces (many transition)
 transition =
       identifier
-   >> optional (reservedOp "/" >> identifier)
-   >> optional (reservedOp "->" >> identifier)
+   >> optional (op "/" >> identifier)
+   >> optional (op "->" >> identifier)
    >> semi

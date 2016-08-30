@@ -22,6 +22,6 @@ transition :: StateId -> Parser Transition
 transition source =
   Transition
     <$> identifier
-    <*> optionMaybe (reservedOp "/" *> identifier)
-    <*> option source (reservedOp "->" *> identifier)
+    <*> optionMaybe (op "/" *> identifier)
+    <*> option source (op "->" *> identifier)
     <* semi

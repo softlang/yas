@@ -8,8 +8,8 @@
   map(fsmlAbstract:mapTransition(N), Ts1, Ts2).
 % ...
 % BEGIN ...
-% Lexical mapping for name
-(name, String) ~> Atom :- name(Atom, String).
+% Lexical mapping for identifiers
+(identifier, String) ~> Atom :- name(Atom, String).
 % END ...
 
 % Make target state mandatory, resolve implicit state, if necessary

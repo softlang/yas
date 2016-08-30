@@ -1,3 +1,3 @@
-name : { alpha }+ ;
+identifier : { lower }+ ;
 integer : { digit }+ ;
 layout : { space }+ ;

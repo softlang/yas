@@ -7,7 +7,7 @@
 
     % Samples for optimization
     macro(parseFile('a.el')),  
-    macro(parseFile('add-unit.el')),  
+    macro(parseFile('top-unit.el')),  
     macro(parseFile('needs-commute.el')),  
     macro(parseFile('needs-fullbu.el')),
     macro(parseFile('left-associated.el')),  
@@ -23,11 +23,11 @@
     function(innermost, [el(term)], [el(term)], elRewrite:innermost, []),
 
     % Testing rewriting
-    mapsTo(rewrite, ['add-unit.term'], ['a.term']),
+    mapsTo(rewrite, ['top-unit.term'], ['a.term']),
     mapsTo(try, ['a.term'], ['a.term']),
     mapsTo(try, ['needs-commute.term'], ['needs-commute.term']),
     mapsTo(vtry, ['needs-commute.term'], ['a.term']),
-    mapsTo(fulltd, ['needs-fullbu.term'], ['add-unit.term']), 
+    mapsTo(fulltd, ['needs-fullbu.term'], ['top-unit.term']), 
     mapsTo(fullbu, ['needs-fullbu.term'], ['a.term']),
     mapsTo(fullbu, ['left-associated.term'], ['mix-associated.term']),
     mapsTo(innermost, ['left-associated.term'], ['right-associated.term'])

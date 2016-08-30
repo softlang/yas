@@ -1,0 +1,2 @@
+Binary Add (Var "a") (Binary Add (Var "b") (IntConst 0))
+

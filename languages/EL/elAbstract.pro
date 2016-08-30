@@ -20,5 +20,5 @@
 % Lexical mapping for integer
 (integer, Digits) ~> Int :- number_codes(Int, Digits).
 
-% Lexical mapping for name
-(name, String) ~> Atom :- name(Atom, String).
+% Lexical mapping for identifier
+(identifier, String) ~> Atom :- name(Atom, String).
