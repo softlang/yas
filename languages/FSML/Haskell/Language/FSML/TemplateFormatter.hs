@@ -9,17 +9,16 @@ templates :: STGroup String
 templates = groupStringTemplates [
     ("main", newSTMP "$fsm.states:state(); separator='\n'$"),
     ("state", newSTMP $ unlines [
-         "$if(it.initial)$initial $endif$" ++
-         "state $it.stateid$ {",
+         "$if(it.initial)$initial $endif$state $it.stateid$ {",
          "$it.transitions:transition(); separator='\n'$",
          "}"
        ]
     ),
     ("transition", newSTMP (
-            "  $it.event$"
-         ++ "$if(it.action)$/$it.action$$endif$"
-         ++ "$if(it.target)$ -> $it.target$$endif$"
-         ++ ";"
+            "  $it.event$\
+            \$if(it.action)$/$it.action$$endif$\
+            \$if(it.target)$ -> $it.target$$endif$\
+            \;"
        )
     )
   ]

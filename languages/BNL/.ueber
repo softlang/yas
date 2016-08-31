@@ -13,7 +13,7 @@
   function(convert, [bnl(tokens(term))], [bnl(formula(term))], bnlTextConverter:convert, []),
 
   % AST-based evaluators
-  function(evaluate, [bnl(term)], [bnl(value(term))], bnlTermEvaluator:evaluate, []),
+  function(evaluate, [bnl(term)], [bnl(value(term))], bnlTermEvaluator:number, []),
   function(convert, [bnl(term)], [bnl(formula(term))], bnlTermConverter:convert, []),
 
   % Solver
