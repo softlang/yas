@@ -1,5 +1,7 @@
-// Generated from org/softlang/Fsml.g4 by ANTLR 4.4
- package org.softlang; 
+// Generated from org/softlang/EiplChecker.g4 by ANTLR 4.4
+
+package org.softlang;
+
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.misc.NotNull;
@@ -7,83 +9,71 @@ import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 /**
- * This class provides an empty implementation of {@link FsmlListener},
+ * This class provides an empty implementation of {@link EiplCheckerListener},
  * which can be extended to create a listener which only needs to handle a subset
  * of the available methods.
  */
-public class FsmlBaseListener implements FsmlListener {
+public class EiplCheckerBaseListener implements EiplCheckerListener {
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFsm(@NotNull FsmlParser.FsmContext ctx) { }
+	@Override public void enterDecl(@NotNull EiplCheckerParser.DeclContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFsm(@NotNull FsmlParser.FsmContext ctx) { }
+	@Override public void exitDecl(@NotNull EiplCheckerParser.DeclContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterStateid(@NotNull FsmlParser.StateidContext ctx) { }
+	@Override public void enterScope(@NotNull EiplCheckerParser.ScopeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitStateid(@NotNull FsmlParser.StateidContext ctx) { }
+	@Override public void exitScope(@NotNull EiplCheckerParser.ScopeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAction(@NotNull FsmlParser.ActionContext ctx) { }
+	@Override public void enterExpr(@NotNull EiplCheckerParser.ExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAction(@NotNull FsmlParser.ActionContext ctx) { }
+	@Override public void exitExpr(@NotNull EiplCheckerParser.ExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterState(@NotNull FsmlParser.StateContext ctx) { }
+	@Override public void enterProgram(@NotNull EiplCheckerParser.ProgramContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitState(@NotNull FsmlParser.StateContext ctx) { }
+	@Override public void exitProgram(@NotNull EiplCheckerParser.ProgramContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEvent(@NotNull FsmlParser.EventContext ctx) { }
+	@Override public void enterStmt(@NotNull EiplCheckerParser.StmtContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEvent(@NotNull FsmlParser.EventContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterTransition(@NotNull FsmlParser.TransitionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitTransition(@NotNull FsmlParser.TransitionContext ctx) { }
+	@Override public void exitStmt(@NotNull EiplCheckerParser.StmtContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

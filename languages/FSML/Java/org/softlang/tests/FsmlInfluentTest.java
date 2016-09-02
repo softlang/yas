@@ -2,8 +2,8 @@ package org.softlang.tests;
 
 import org.junit.Test;
 import org.softlang.FsmlSimulator;
-import org.softlang.influent.FunctionalSample;
-import org.softlang.influent.ImperativeSample;
+import org.softlang.FunctionalSample;
+import org.softlang.ImperativeSample;
 
 import static org.junit.Assert.assertArrayEquals;
 

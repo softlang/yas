@@ -1,4 +1,4 @@
-cp = -cp .:antlr-4.4-complete.jar
+cp = -cp .:../../../lib/Java/antlr-4.4-complete.jar
 antlr = java ${cp} org.antlr.v4.Tool
 BnlBnfSyntaxChecker = java ${cp} org.softlang.BnlBnfSyntaxChecker
 BnlEbnfSyntaxChecker = java ${cp} org.softlang.BnlEbnfSyntaxChecker
@@ -6,7 +6,6 @@ BnlBnfConversion = java ${cp} org.softlang.BnlBnfConversion
 BnlEbnfConversion = java ${cp} org.softlang.BnlEbnfConversion
 
 all:
-	make clean
 	make generate
 	make compile
 	make test

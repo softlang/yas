@@ -1,3 +1,5 @@
+program : scope ;
+
 // Scopes
 scope : 'begin' { decl }* stmt 'end' ;
 
@@ -8,11 +10,11 @@ scope : 'begin' { decl }* stmt 'end' ;
 // Statements
 [skip] stmt : ';' ;
 [assign] stmt : name '=' expr ';' ;
+[call] stmt : 'call' name ';' ;
+[scope] stmt : scope ;
 [if] stmt : 'if' '(' expr ')' stmt { 'else' stmt }? ;
 [while] stmt : 'while' '(' expr ')' stmt ;
 [block] stmt : '{' { stmt }* '}' ;
-[scope] stmt : scope ;
-[call] stmt : 'call' name ';' ;
 [write] stmt : 'write' expr ';' ;
 
 // Expressions

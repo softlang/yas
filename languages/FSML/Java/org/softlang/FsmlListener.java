@@ -1,9 +1,5 @@
 // Generated from org/softlang/Fsml.g4 by ANTLR 4.4
-
-	// Injection of package and import into generated code
-	package org.softlang;
-	import org.softlang.influent.*;
-
+ package org.softlang; 
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
@@ -33,16 +29,6 @@ public interface FsmlListener extends ParseTreeListener {
 	 */
 	void exitStateid(@NotNull FsmlParser.StateidContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link FsmlParser#statedecl}.
-	 * @param ctx the parse tree
-	 */
-	void enterStatedecl(@NotNull FsmlParser.StatedeclContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link FsmlParser#statedecl}.
-	 * @param ctx the parse tree
-	 */
-	void exitStatedecl(@NotNull FsmlParser.StatedeclContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link FsmlParser#action}.
 	 * @param ctx the parse tree
 	 */
@@ -52,6 +38,16 @@ public interface FsmlListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitAction(@NotNull FsmlParser.ActionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FsmlParser#state}.
+	 * @param ctx the parse tree
+	 */
+	void enterState(@NotNull FsmlParser.StateContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FsmlParser#state}.
+	 * @param ctx the parse tree
+	 */
+	void exitState(@NotNull FsmlParser.StateContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link FsmlParser#event}.
 	 * @param ctx the parse tree

@@ -1,9 +1,5 @@
 // Generated from org/softlang/Fsml.g4 by ANTLR 4.4
-
-	// Injection of package and import into generated code
-	package org.softlang;
-	import org.softlang.influent.*;
-
+ package org.softlang; 
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -33,10 +29,6 @@ public class FsmlLexer extends Lexer {
 	public static final String[] ruleNames = {
 		"T__6", "T__5", "T__4", "T__3", "T__2", "T__1", "T__0", "NAME", "WS"
 	};
-
-
-		// Injection of attribute for FSM model
-		public Fsm fsm = new Fsm();
 
 
 	public FsmlLexer(CharStream input) {

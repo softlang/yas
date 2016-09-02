@@ -1,6 +1,6 @@
 begin
   var x = 0;
-  proc p { x = x * 2; }
+  proc p { x = x + x; }
   proc q { call p; }
   begin
     var x = 5;

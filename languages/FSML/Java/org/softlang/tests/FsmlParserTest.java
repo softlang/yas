@@ -3,9 +3,9 @@ package org.softlang.tests;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-import org.softlang.influent.Fsm;
-import org.softlang.FsmlLexer;
-import org.softlang.FsmlParser;
+import org.softlang.FsmlToObjectsLexer;
+import org.softlang.FsmlToObjectsParser;
+import org.softlang.Fsm;
 import org.softlang.FsmlSimulator;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
@@ -22,10 +22,10 @@ public class FsmlParserTest {
 	
 	@Test
 	public void runSample() throws IOException {
-		FsmlParser parser =
-				  new FsmlParser(
+		FsmlToObjectsParser parser =
+				  new FsmlToObjectsParser(
 				    new CommonTokenStream(
-				      new FsmlLexer(
+				      new FsmlToObjectsLexer(
 				        new ANTLRInputStream(
 				          new FileInputStream("../sample.fsml")))));
 		parser.fsm();

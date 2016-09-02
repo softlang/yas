@@ -1,4 +1,4 @@
-package org.softlang.influent;
+package org.softlang;
 
 public class ImperativeSample {
 	
@@ -11,61 +11,61 @@ public class ImperativeSample {
 		// Declare all states
 		State s;
 		s = new State();
-		s.setState("locked");
+		s.setStateid("locked");
 		s.setInitial(true);
 		sample.getStates().add(s);
 		s = new State();
-		s.setState("unlocked");
+		s.setStateid("unlocked");
 		sample.getStates().add(s);
 		s = new State();
-		s.setState("exception");
+		s.setStateid("exception");
 		sample.getStates().add(s);	
 
 		// Add all transitions
-		Trans t;
-		t = new Trans();
+		Transition t;
+		t = new Transition();
 		t.setSource("locked");
 		t.setEvent("ticket");
 		t.setAction("collect");
 		t.setTarget("unlocked");
-		sample.getTranss().add(t);
-		t = new Trans();
+		sample.getTransitions().add(t);
+		t = new Transition();
 		t.setSource("locked");
 		t.setEvent("pass");
 		t.setAction("alarm");
 		t.setTarget("exception");
-		sample.getTranss().add(t);
-		t = new Trans();
+		sample.getTransitions().add(t);
+		t = new Transition();
 		t.setSource("unlocked");
 		t.setEvent("ticket");
 		t.setAction("eject");
 		t.setTarget("unlocked");
-		sample.getTranss().add(t);
-		t = new Trans();
+		sample.getTransitions().add(t);
+		t = new Transition();
 		t.setSource("unlocked");
 		t.setEvent("pass");
 		t.setTarget("locked");
-		sample.getTranss().add(t);
-		t = new Trans();
+		sample.getTransitions().add(t);
+		t = new Transition();
 		t.setSource("exception");
 		t.setEvent("ticket");
 		t.setAction("eject");
 		t.setTarget("exception");
-		sample.getTranss().add(t);
-		t = new Trans();
+		sample.getTransitions().add(t);
+		t = new Transition();
 		t.setSource("exception");
 		t.setEvent("pass");
 		t.setTarget("exception");
-		sample.getTranss().add(t);
-		t = new Trans();
+		sample.getTransitions().add(t);
+		t = new Transition();
 		t.setSource("exception");
 		t.setEvent("mute");
 		t.setTarget("exception");
-		sample.getTranss().add(t);
-		t = new Trans();
+		sample.getTransitions().add(t);
+		t = new Transition();
 		t.setSource("exception");
 		t.setEvent("release");
 		t.setTarget("locked");
-		sample.getTranss().add(t);	
+		sample.getTransitions().add(t);	
 	}	
 }
