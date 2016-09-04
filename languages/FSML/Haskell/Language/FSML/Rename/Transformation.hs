@@ -7,12 +7,10 @@ import Control.Monad (guard)
 -- END ...
 rename :: StateId -> StateId -> Fsm -> Maybe Fsm
 rename i i' x = do
-    guard pre
-    guard post
+    guard $ pre i i' x
+    guard $ post i i' y
     return y
   where
-    pre = elem i (states x) && not (elem i' (states x))
-    post = not (elem i (states y)) && elem i' (states y)
     y = Fsm (map perState (getStates x))
     perState s =
       State

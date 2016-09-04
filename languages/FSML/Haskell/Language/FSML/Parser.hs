@@ -14,14 +14,18 @@ fsm = Fsm <$> many state
 state :: Parser State
 state = do
   ini <- option False (symbol "initial" >> return True)
-  source <- reserved "state" >> identifier
+  source <- reserved "state" >> stateid
   ts <- braces (many (transition source))
   return (State ini source ts)
 
 transition :: StateId -> Parser Transition
 transition source =
   Transition
-    <$> identifier
-    <*> optionMaybe (op "/" *> identifier)
-    <*> option source (op "->" *> identifier)
+    <$> event
+    <*> optionMaybe (op "/" *> action)
+    <*> option source (op "->" *> stateid)
     <* semi
+
+stateid = name
+event = name
+action = name

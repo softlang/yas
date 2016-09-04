@@ -1,5 +1,8 @@
 -- BEGIN ...
+{-# LANGUAGE DeriveDataTypeable #-}
 module Language.BIPL.Syntax where
+import Data.Data
+import Data.Typeable
 -- END ...
 -- Statements
 data Stmt
@@ -9,7 +12,7 @@ data Stmt
   | If Expr Stmt Stmt
   | While Expr Stmt
 -- BEGIN ...
-  deriving Show
+  deriving (Show, Data, Typeable)
 -- END ...
 
 -- Expressions
@@ -19,15 +22,15 @@ data Expr
   | Unary UOp Expr
   | Binary BOp Expr Expr
 -- BEGIN ...
-  deriving Show
+  deriving (Show, Data, Typeable)
 -- END ...
 
 -- Unary and binary operators
 data UOp = Negate | Not
 -- BEGIN ...
-  deriving Show
+  deriving (Show, Data, Typeable)
 -- END ...
 data BOp = Add | Sub | Mul | Lt | Leq | Eq | Geq | Gt | And | Or
 -- BEGIN ...
-  deriving Show
+  deriving (Show, Data, Typeable)
 -- END ...

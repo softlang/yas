@@ -40,5 +40,5 @@ op = Token.reservedOp lexer
 symbol :: String -> Parser String
 symbol = Token.symbol lexer
 
-identifier :: Parser String
-identifier = Token.identifier lexer
+name :: Parser String
+name = Token.identifier lexer

@@ -10,14 +10,22 @@ import Language.FSML.Lexer
 import Text.Parsec
 import Text.Parsec.String
 -- END ...
-fsm = many state
+type Acceptor = Parsec String () ()
+fsm, state, transition :: Acceptor
+fsm = many state >> void
 state =
       optional (symbol "initial")
    >> reserved "state"
-   >> identifier
+   >> stateid
    >> braces (many transition)
+   >> void
 transition =
-      identifier
-   >> optional (op "/" >> identifier)
-   >> optional (op "->" >> identifier)
+      event
+   >> optional (op "/" >> action)
+   >> optional (op "->" >> stateid)
    >> semi
+   >> void
+stateid = name
+event = name
+action = name
+void = return ()

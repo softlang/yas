@@ -20,5 +20,5 @@ data Instr
   | Gt
   | And
   | Or
-  deriving Show
+  deriving (Eq, Show)
 -- END ...

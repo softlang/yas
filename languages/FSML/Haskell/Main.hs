@@ -15,6 +15,7 @@ import Language.FSML.Merge.Transformation
 import Language.FSML.Rename.Sample as S4
 import Language.FSML.Rename.Transformation
 import Language.FSML.Merge.Sample as S5
+import Language.FSML.Extraction
 import Text.Parsec hiding (State)
 import Test.HUnit (runTestTT, Test(TestLabel, TestList), errors, failures, (~=?))
 import System.Exit (exitSuccess, exitFailure)

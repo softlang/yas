@@ -1,2 +1,2 @@
-identifier : { alpha }+ ;
+name : { alpha }+ ;
 layout : { space }+ ;
