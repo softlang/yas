@@ -4,17 +4,17 @@
 % END ...
 % Wellness of FSMs
 ok(Fsm) :-
-  singleInitialState(Fsm),
   distinctStateIds(Fsm),
+  singleInitialState(Fsm),
   resolvableTargetStates(Fsm),
   deterministicTransitions(Fsm),
   reachableStates(Fsm).
 
-% There is a single initial state
-singleInitialState(Fsm) :- findall(_, member((true, _, _), Fsm), [_]).
-
 % All state ids are distinct
 distinctStateIds(Fsm) :- findall(Id, member((_, Id, _), Fsm), Ids), set(Ids).
+
+% There is a single initial state
+singleInitialState(Fsm) :- findall(_, member((true, _, _), Fsm), [_]).
 
 % All state ids are resolvable to states
 resolvableTargetStates(Fsm) :- \+ (

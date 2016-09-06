@@ -3,7 +3,7 @@ import qualified Language.BIPL.Goto.Sample
 import qualified Language.BIPL.Sign.Sample
 import qualified Language.AL.Sample
 import qualified Language.ML.Sample
-import Language.BIPL.Typing
+import Language.BIPL.Checker
 import Language.BIPL.Interpreter as V0
 import Language.BIPL.DS.Interpreter as V1
 import Language.BIPL.CS.Interpreter as V2

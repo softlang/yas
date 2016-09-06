@@ -1,5 +1,5 @@
 -- BEGIN ...
-module Language.BIPL.Typing where
+module Language.BIPL.Checker where
 
 import Language.BIPL.Syntax
 import Prelude hiding (lookup)
@@ -35,7 +35,7 @@ okStmt (Assign x e) ctx =
       (Just ty') -> if ty==ty' then Just ctx else Nothing
 okStmt (Seq s1 s2) ctx =
   case okStmt s1 ctx of
-    (Just _) -> okStmt s2 ctx
+    (Just ctx') -> okStmt s2 ctx'
     Nothing -> Nothing
 okStmt (If e s1 s2) ctx =
   case typeOfExpr e ctx of
@@ -58,10 +58,18 @@ okStmt (While e s) ctx =
 typeOfExpr :: Expr -> Context -> Maybe Type
 typeOfExpr (IntConst i) _ = Just IntType
 typeOfExpr (Var n) ctx = lookup n ctx
+typeOfExpr (Unary o e) ctx =
+  case (o, typeOfExpr e ctx) of
+    (Not, Just IntType) -> Just IntType
+    -- ...
+    _ -> Nothing
 typeOfExpr (Binary o e1 e2) ctx =
   case (o, typeOfExpr e1 ctx, typeOfExpr e2 ctx) of
     (Add, Just IntType, Just IntType) -> Just IntType
+    -- ...
+-- BEGIN ...
     (Sub, Just IntType, Just IntType) -> Just IntType
     (Mul, Just IntType, Just IntType) -> Just IntType
     (Geq, Just IntType, Just IntType) -> Just BoolType
+-- END ...
     _ -> Nothing

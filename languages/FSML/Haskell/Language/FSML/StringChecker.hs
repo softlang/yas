@@ -1,8 +1,8 @@
 -- BEGIN ...
-module Language.FSML.Checker ( check ) where
+module Language.FSML.StringChecker ( check ) where
 import Language.FSML.Syntax
 import Data.List (concatMap, nub)
-import qualified Data.List as L
+import Data.List ((\\))
 import Data.Set (fromList, toList, union)
 import qualified Data.Set as S
 
@@ -19,7 +19,7 @@ distinctStateIds :: Fsm -> [String]
 distinctStateIds (Fsm ss) = map ("Multiple declarations of state " ++) doubles
   where
     sids = [ sid | (State _ sid _) <- ss ]
-    doubles = (L.\\) sids (nub sids)
+    doubles = (\\) sids (nub sids)
 
 singleInitialState :: Fsm -> [String]
 singleInitialState (Fsm ss) =
@@ -37,7 +37,9 @@ resolvableTargetStates (Fsm ss) = concatMap (\(State _ _ ts) -> concatMap f ts) 
         else []
 
 deterministicTransitions :: Fsm -> [String]
-deterministicTransitions (Fsm ss) = concatMap (\(State _ source ts) -> f source ts) ss
+deterministicTransitions (Fsm ss) = -- ...
+-- BEGIN ...
+    concatMap (\(State _ source ts) -> f source ts) ss
   where
     f source ts =
         map (\event ->
@@ -45,7 +47,8 @@ deterministicTransitions (Fsm ss) = concatMap (\(State _ source ts) -> f source 
                " in state " ++ source) doubles
       where 
         events = [ event | (Transition event _ _) <- ts ]
-        doubles = (L.\\) events (nub events)
+        doubles = (\\) events (nub events)
+-- END ...
 
 reachableStates :: Fsm -> [String]
 reachableStates (Fsm ss) = -- ...
