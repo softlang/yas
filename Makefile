@@ -9,6 +9,10 @@ view:
 elide:
 	cd tools; make elide
 
+haskell:
+	cd languages/FSML/Haskell; make
+	cd languages/BTL/Haskell; make
+
 # Do not exit session
 session:
 	@swipl -q -f main.pro -- session

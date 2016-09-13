@@ -1,6 +1,7 @@
 [
   % Syntax
   macro(basicSyntax(bnl)),
+  membership(bnl(tokens(term)), bnlAcceptor:accept, []),
 
   % Languages for results
   language(bnl(value(term))),
@@ -8,7 +9,8 @@
   language(bnl(formula(term))),
   membership(bnl(formula(term)), bnlFormula:formula, []),
 	  
-  % DCG-based evaluators
+  % DCG-based operations
+  function(parse,[bnl(tokens(term))],[bnl(term)],bnlParser:parse,[]),
   function(evaluate, [bnl(tokens(term))], [bnl(value(term))], bnlTextEvaluator:evaluate, []),
   function(convert, [bnl(tokens(term))], [bnl(formula(term))], bnlTextConverter:convert, []),
 

@@ -2,7 +2,7 @@
 {-# LANGUAGE FlexibleContexts #-}
 module Language.FSML.QuasiQuoter ( fsml ) where
 import Language.FSML.Syntax
-import Language.FSML.Parser
+import Language.FSML.ApplicativeParser
 import Language.FSML.StringChecker
 import Language.Haskell.TH
 import Language.Haskell.TH.Quote

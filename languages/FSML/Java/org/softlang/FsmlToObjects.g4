@@ -8,9 +8,10 @@ state :
   ('initial' {initial = true;})? 
   'state' stateid
   {fsm.getStates().add(new State($stateid.text, initial));}
-  '{' transition[$stateid.text]* '}'
+  '{' transition* '}'
   ;
-transition[String source] : 
+transition :
+  {String source = fsm.getStates().getLast().getStateid();}
   event 
   {String action = null;}
   ('/' action {action = $action.text;})? 

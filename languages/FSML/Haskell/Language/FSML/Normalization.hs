@@ -7,8 +7,5 @@ normalize :: Fsm -> Fsm
 normalize =
     Fsm
   . sortOn getId
-  . map (\s -> State
-                 (getInitial s)
-                 (getId s)
-                 (sort (getTransitions s)))
+  . map (\s -> State (getInitial s) (getId s) (sort (getTransitions s)))
   . getStates

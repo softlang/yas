@@ -2,8 +2,8 @@
 module Language.BTL.Universal.Sample where
 import Data.TermRep
 -- END ...
-sample :: TermRep
-sample =
+sampleExpr :: TermRep
+sampleExpr =
   TermRep "Pred" [
     TermRep "If" [
       TermRep "IsZero" [TermRep "Zero" []],

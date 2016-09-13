@@ -2,7 +2,7 @@
 --
 -- (C) 2016 softlang.org and Simon Schauss and Ralf Laemmel
 --
-module Language.FSML.Parser (fsm) where
+module Language.FSML.ApplicativeParser (fsm) where
 import Language.FSML.Syntax
 import Language.FSML.Lexer
 import Text.Parsec hiding (State)
@@ -13,7 +13,7 @@ fsm = Fsm <$> many state
 
 state :: Parser State
 state = do
-  ini <- option False (symbol "initial" >> return True)
+  ini <- option False (reserved "initial" >> return True)
   source <- reserved "state" >> stateid
   ts <- braces (many (transition source))
   return (State ini source ts)
@@ -25,7 +25,8 @@ transition source =
     <*> optionMaybe (op "/" *> action)
     <*> option source (op "->" *> stateid)
     <* semi
-
+-- BEGIN ...
 stateid = name
 event = name
 action = name
+-- END ...

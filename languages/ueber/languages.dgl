@@ -6,7 +6,7 @@ digraph G {
   5 [label="bfpl(normal(term))", shape=ellipse, style=filled]
   6 [label="bgl(text)", shape=ellipse, style=filled]
   7 [label="bgl(term)", shape=ellipse, style=filled]
-  8 [label="bgtl(term)", shape=ellipse, style=filled]
+  8 [label="bgptl(term)", shape=ellipse, style=filled]
   9 [label="bipl(text)", shape=ellipse, style=filled]
   10 [label="bipl(term)", shape=ellipse, style=filled]
   11 [label="bipl(store(term))", shape=ellipse, style=filled]
@@ -14,7 +14,7 @@ digraph G {
   13 [label="bmpl(term)", shape=ellipse, style=filled]
   14 [label="bnl(text)", shape=ellipse, style=filled]
   15 [label="bnl(tokens(term))", shape=ellipse, style=filled]
-  16 [label="bnl(bgtl(term))", shape=ellipse, style=filled]
+  16 [label="bnl(bgstl(term))", shape=ellipse, style=filled]
   17 [label="bnl(term)", shape=ellipse, style=filled]
   18 [label="bnl(value(term))", shape=ellipse, style=filled]
   19 [label="bnl(formula(term))", shape=ellipse, style=filled]
@@ -27,7 +27,7 @@ digraph G {
   26 [label="bstl(term)", shape=ellipse, style=filled]
   27 [label="btl(text)", shape=ellipse, style=filled]
   28 [label="btl(tokens(term))", shape=ellipse, style=filled]
-  29 [label="btl(bgtl(term))", shape=ellipse, style=filled]
+  29 [label="btl(bgstl(term))", shape=ellipse, style=filled]
   30 [label="btl(term)", shape=ellipse, style=filled]
   31 [label="ok(btl(term))", shape=ellipse, style=filled]
   32 [label="btl(type(term))", shape=ellipse, style=filled]
@@ -94,7 +94,7 @@ digraph G {
   93 [label="text", shape=ellipse, style=filled]
   94 [label="expr(text)", shape=ellipse, style=filled]
   95 [label="expr(tokens(term))", shape=ellipse, style=filled]
-  96 [label="expr(bgtl(term))", shape=ellipse, style=filled]
+  96 [label="expr(bgstl(term))", shape=ellipse, style=filled]
   97 [label="expr(term)", shape=ellipse, style=filled]
   98 [label="expr(graph(term))", shape=ellipse, style=filled]
   99 [label="exprRelaxed(graph(term))", shape=ellipse, style=filled]
@@ -117,7 +117,6 @@ digraph G {
   13 -> 53
   14 -> 93
   15 -> 86
-  16 -> 8
   17 -> 53
   18 -> 87
   19 -> 88
@@ -130,7 +129,6 @@ digraph G {
   26 -> 53
   27 -> 93
   28 -> 86
-  29 -> 8
   30 -> 53
   31 -> 30
   32 -> 91
@@ -194,7 +192,6 @@ digraph G {
   92 -> 53
   94 -> 93
   95 -> 86
-  96 -> 8
   97 -> 53
   98 -> 92
   99 -> 92

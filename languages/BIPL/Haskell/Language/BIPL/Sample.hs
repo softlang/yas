@@ -3,8 +3,8 @@ module Language.BIPL.Sample where
 
 import Language.BIPL.Syntax
 -- END ...
-sample :: Stmt
-sample =
+sampleProgram :: Stmt
+sampleProgram =
   -- Sample operands for Euclidian division
    Seq (Assign "x" (IntConst 14))
   (Seq (Assign "y" (IntConst 4))

@@ -57,7 +57,7 @@ okStmt (While e s) ctx =
 -- Type analysis of expressions
 typeOfExpr :: Expr -> Context -> Maybe Type
 typeOfExpr (IntConst i) _ = Just IntType
-typeOfExpr (Var n) ctx = lookup n ctx
+typeOfExpr (Var x) ctx = lookup x ctx
 typeOfExpr (Unary o e) ctx =
   case (o, typeOfExpr e ctx) of
     (Not, Just IntType) -> Just IntType

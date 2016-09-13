@@ -19,8 +19,8 @@ import Language.ML.Machine
 import Language.BIPL.Rename.Transformation
 import Data.Map (empty)
 
-s = Language.BIPL.Sample.sample
-s' = Language.BIPL.Goto.Sample.sample
+s = Language.BIPL.Sample.sampleProgram
+s' = Language.BIPL.Goto.Sample.sampleProgram
 facv1 = Language.BIPL.Sign.Sample.factorialV1
 facv2 = Language.BIPL.Sign.Sample.factorialV2 
 sto'' = Language.BIPL.Sign.Sample.store
@@ -38,8 +38,8 @@ main = do
   print $ V4a.interpret (V4c2.analysis) facv1 sto''
   print $ V4a.interpret (V4c1.analysis) facv2 sto''
   print $ V4a.interpret (V4c2.analysis) facv2 sto''
-  print $ s_al == Language.AL.Sample.sample
-  print $ s_ml == Language.ML.Sample.sample
+  print $ s_al == Language.AL.Sample.sampleProgram
+  print $ s_ml == Language.ML.Sample.sampleProgram
   print $ run s_ml
   print $ ops s
 

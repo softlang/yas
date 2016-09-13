@@ -24,8 +24,8 @@ public class FsmlToObjectsTest {
 		walker.walk(listener, tree);
 		return listener.getFsm();
 	}
-
 // BEGIN ...
+
 	@Test
 	public void textToObjects() throws IOException {
 		textToObjects("../sample.fsml");

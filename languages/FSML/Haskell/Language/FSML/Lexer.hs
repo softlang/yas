@@ -37,8 +37,5 @@ reserved = Token.reserved lexer
 op :: String -> Parser ()
 op = Token.reservedOp lexer
 
-symbol :: String -> Parser String
-symbol = Token.symbol lexer
-
 name :: Parser String
 name = Token.identifier lexer

@@ -15,12 +15,12 @@ exts["value"] = None
 exts["formula"] = None
 exts["fsml"] = None
 exts["g4"] = exts["java"]
-exts["Makefile"] = None
+exts["py"] = ("# BEGIN ...", "# END ...", "# ...")
+exts["Makefile"] = exts["py"]
 exts["json"] = None
 exts["tbl"] = None
 exts["xml"] = None
 exts["xsd"] = None
-exts["py"] = ("# BEGIN ...", "# END ...", "# ...")
 exts["input"] = None
 exts["output"] = None
 exts["el"] = None
@@ -56,7 +56,7 @@ for root in ["languages", "lib", "samples"]:
                 print " " + filename
                 with open(dirpath + "/" + filename, "r") as infile:
                     with open(dirpath + "/" + filename + "...", "w") as outfile:
-                        if exts[ext] is None:
+                        if ext in exts and exts[ext] is None:
                             for line in infile:
                                 outfile.write(line)
                         else:

@@ -1,5 +1,5 @@
 % BEGIN ...
-:- module(bgtlOk, []).
+:- module(bgstlOk, []).
 
 main(F, T) :-
     readTermFile(F, G),

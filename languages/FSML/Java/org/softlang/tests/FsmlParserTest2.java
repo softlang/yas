@@ -1,18 +1,15 @@
+// BEGIN ...
 package org.softlang.tests;
 
-import java.io.IOException;
-
-import org.softlang.FsmlToObjectsLexer;
-import org.softlang.FsmlToObjectsParser;
-import org.softlang.Fsm;
-import org.softlang.FsmlSimulator;
+import org.softlang.*;
 import org.antlr.v4.runtime.ANTLRFileStream;
 import org.antlr.v4.runtime.CommonTokenStream;
+import java.io.IOException;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertArrayEquals;
 
-public class FsmlSimulatorTest {
+public class FsmlParserTest2 {
 		
 	private static final String[] input = 
 		{"ticket", "ticket", "pass", "pass", "ticket", "mute", "release"};
@@ -20,13 +17,14 @@ public class FsmlSimulatorTest {
 		{"collect", "eject", "alarm", "eject"};
 
 	public Fsm textToObjects(String filename) throws IOException {
-		FsmlToObjectsParser parser =
-				  new FsmlToObjectsParser(
+		FsmlToObjects2Parser parser =
+				  new FsmlToObjects2Parser(
 				    new CommonTokenStream(
-				      new FsmlToObjectsLexer(
+				      new FsmlToObjects2Lexer(
 						new ANTLRFileStream(filename))));
-		parser.fsm();
-		Fsm fsm = parser.fsm;
+// END ...
+		Fsm fsm = parser.fsm().result;
+// BEGIN ...
 		assertEquals(0, parser.getNumberOfSyntaxErrors());
 		return fsm;
 	}
@@ -37,3 +35,4 @@ public class FsmlSimulatorTest {
 		assertArrayEquals(output, new FsmlSimulator(sample).run(input));
 	}
 }
+// END ...

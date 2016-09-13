@@ -1,10 +1,10 @@
 -- BEGIN ...
+-- Evaluation of terms
 module Language.BTL.Interpreter where
 
 import Language.BTL.Syntax
 import Language.BTL.Domains
 -- END ...
--- Evaluation of terms
 evaluate :: Expr -> Value
 evaluate TRUE = Right True
 evaluate FALSE = Right False
