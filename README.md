@@ -69,9 +69,9 @@ which directly takes one to the github repo softlang/yas.
 Overall, the underlying paper links to the important artifacts while
 the repo contains additional details, e.g., additional
 megamodels. Thus, the paper may be best suited for inspecting the
-artifact. Additionally, some additional pointers are provided
-here. That is, the coupled transformation example of Section 5 of the
-paper is summarized here in terms of the involved files.
+artifact. Additionally, some pointers are provided here. That is, the
+coupled transformation example of Section 5 of the paper is summarized
+here in terms of the involved files.
 
 ## Ingredients of the transformation
 
@@ -87,7 +87,7 @@ paper is summarized here in terms of the involved files.
 * [The syntax of the transformation language](languages/BSTL/as.esl)
 * [The syntax of signatures](languages/BSL/as.esl)
 * The coupled transformation
- * [Term-level interpretation](languages/BSTL/bstTerm.pro)
+ * [Term-level interpretation](languages/BSTL/bstlTerm.pro)
  * [Signature-level interpretation](languages/BSTL/bstlSig.pro)
 
 ## Megamodeling ingredients
