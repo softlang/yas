@@ -1,10 +1,10 @@
-language Any
-language L <= Any
-language DefAny
-language DefL <= DefAny
+sort Any
+sort L <= Any
+sort DefAny
+sort DefL <= DefAny
 constant defL : DefL
 relation conformsTo : Any # DefL
 axiom {
  forall x <- Any.
-  (x <- L) <=> (conformsTo(x, defL))
+  (x <- L) <=> conformsTo(x, defL)
 }

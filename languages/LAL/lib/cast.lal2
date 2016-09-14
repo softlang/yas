@@ -1,5 +1,5 @@
-language Any
-language L <= Any
+sort Any
+sort L <= Any
 function cast : Any ~> L
 axiom castOk {
  forall e <- L.

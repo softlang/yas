@@ -1,5 +1,5 @@
-language Any
-language L <= Any
+sort Any
+sort L <= Any
 constant pos : Any
 constant neg : Any
 axiom member {

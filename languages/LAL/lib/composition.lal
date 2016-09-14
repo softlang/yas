@@ -5,4 +5,4 @@ axiom partReflexive { forall x <- L. partOfStar(x, x) }
 axiom partTransitive { forall x, y <- L.
   (partOf(x, y) => partOfPlus(x, y))
   /\ (partOfPlus(x, y) => partOfStar(x, y))
-  /\ (forall z <- L. partOfPlus(x, y) /\ partOfPlus(y, z) => partOfPlus(x, z)) }
+  /\ (forall z <- L. partOfPlus(x, z) /\ partOfPlus(z, y) => partOfPlus(x, y)) }

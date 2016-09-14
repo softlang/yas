@@ -68,7 +68,7 @@ parserOfBgl(Text, Term2) :-
   require(
     scannerFailed(egl),
     tokens(eglToken, Text, Tokens)),
-  File = 'languages/egl/cs.term',
+  File = 'languages/EGL/cs.term',
   require(
     fileNotReadable(File),
     readTermFile(File, Egl)),

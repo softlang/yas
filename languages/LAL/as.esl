@@ -6,7 +6,7 @@ symbol reuse : mname # subst* -> decl ;
 type mname = name+ ;
 type name = string ;
 type subst = name # name ;
-symbol language : name # name? -> decl ;
+symbol sort : name # name? -> decl ;
 symbol relation : name # types -> decl ;
 symbol function : name # types # arrow # type -> decl ;
 symbol total : -> arrow ;

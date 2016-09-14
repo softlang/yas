@@ -14,7 +14,7 @@
     macro(processLal('correspondence/oneToOne.lal')),    
     macro(processLal('referencing.lal')),
     macro(processLal('traceability.lal')),
-    macro(processLal('traceability/links.lal')),
+    macro(processLal('traceability/refs.lal')),
     macro(processLal('differencing.lal')),    
     macro(processLal('cast.lal')),
     macro(processLal('coupling.lal')),    

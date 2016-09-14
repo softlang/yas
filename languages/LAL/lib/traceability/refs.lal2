@@ -1,5 +1,5 @@
-sort Any1
-sort L1 <= Any1
+sort Any
+sort L1 <= Any
 relation partOf : L1 # L1
 relation partOfPlus : L1 # L1
 relation partOfStar : L1 # L1
@@ -18,8 +18,16 @@ axiom partTransitive {
    (partOf(x, y) => partOfPlus(x, y)) /\ ((partOfPlus(x, y) => partOfStar(x, y)) /\ (forall z <- L1.
                                                                                       (partOfPlus(x, z) /\ partOfPlus(z, y)) => partOfPlus(x, y)))
 }
-sort Any2
-sort L2 <= Any2
+sort RefAny
+sort RefL1 <= RefAny
+function deref : RefL1 # L1 ~> L1
+axiom {
+ forall r <- RefL1.
+  forall x <- L1.
+   forall y <- L1.
+    deref(r, x) = y => partOfStar(y, x)
+}
+sort L2 <= Any
 relation partOf : L2 # L2
 relation partOfPlus : L2 # L2
 relation partOfStar : L2 # L2
@@ -38,14 +46,29 @@ axiom partTransitive {
    (partOf(x, y) => partOfPlus(x, y)) /\ ((partOfPlus(x, y) => partOfStar(x, y)) /\ (forall z <- L2.
                                                                                       (partOfPlus(x, z) /\ partOfPlus(z, y)) => partOfPlus(x, y)))
 }
-relation correspondsTo : L1 # L2
-relation related : L1 # L2
+sort RefL2 <= RefAny
+function deref : RefL2 # L2 ~> L2
 axiom {
- forall a1 <- L1.
-  forall a2 <- L2.
-   (related(a1, a2) /\ ((forall b1 <- L1.
-                          partOf(b1, a1) => (exists! b2 <- L2.
-                                              partOf(b2, a2) /\ correspondsTo(b1, b2))) /\ (forall b2 <- L2.
-                                                                                             partOf(b2, a2) => (exists! b1 <- L1.
-                                                                                                                 partOf(b1, a1) /\ correspondsTo(b1, b2))))) => correspondsTo(a1, a2)
+ forall r <- RefL2.
+  forall x <- L2.
+   forall y <- L2.
+    deref(r, x) = y => partOfStar(y, x)
+}
+relation ref : RefL1 # RefL2 # L1 # L2
+axiom {
+ forall r1 <- RefL1.
+  forall r2 <- RefL2.
+   forall a1 <- L1.
+    forall a2 <- L2.
+     (exists b1 <- L1.
+       exists b2 <- L2.
+        deref(r1, a1) = b1 /\ deref(r2, a2) = b2) <=> ref(r1, r2, a1, a2)
+}
+relation refs : (RefL1 # RefL2)* # L1 # L2
+axiom {
+ forall ls <- (RefL1 # RefL2)*.
+  forall a1 <- L1.
+   forall a2 <- L2.
+    (foreach (r1, r2) : ls.
+      ref(r1, r2, a1, a2)) <=> refs(ls, a1, a2)
 }

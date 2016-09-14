@@ -1,3 +1,9 @@
+javadirs = languages/ASL/samples/adts/Java languages/BNL/ANTLR languages/BNL/ESL/java languages/BNL/Java languages/BTL/Java languages/EIPL/ANTLR languages/FSML/Java languages/GBL/Java samples/xcoupled
+haskelldirs = languages/BFPL/Haskell languages/BGL/Haskell languages/BIPL/Haskell languages/BNL/ESL/haskell languages/BNL/Haskell languages/BTL/Haskell languages/EGL/Haskell languages/EL/Haskell languages/FSML/Haskell languages/GBL/Haskell lib/Haskell samples/Haskell
+pythondirs = languages/FSML/Python
+nonprologdirs = ${javadirs} ${haskelldirs} ${pythondirs}
+nonsle16dirs = ${nonprologdirs} attic tools
+
 # The ueber-based test approach
 test:
 	@swipl -q -f main.pro
@@ -50,3 +56,7 @@ test-old:
 	@echo Testing package $* ...
 	@swipl -q -f packages/$*.pro -g $*_main
 
+remove-nonsle16dirs:
+	for dir in ${nonsle16dirs} ; do \
+		rm -rf $$dir ; \
+	done

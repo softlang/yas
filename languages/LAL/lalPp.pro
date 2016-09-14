@@ -11,9 +11,9 @@ pp(Ds, T) :-
     Ds => Bs.
 
 % All other forms
-language(N, []) => B :- decl(language, N, B).
-language(N1, [N2]) => hlist([B, indent(text('<=')), indent(text(N2))]) :-
-    decl(language, N1, B).
+sort(N, []) => B :- decl(sort, N, B).
+sort(N1, [N2]) => hlist([B, indent(text('<=')), indent(text(N2))]) :-
+    decl(sort, N1, B).
 relation(N, TEs) => hbox(B1, B2) :-
     tdecl(relation, N, B1),
     texprs(TEs, B2).
@@ -58,29 +58,20 @@ element(T, TE) => hlist([B1, indent(text('<-')), indent(B2)]) :-
 eq(T1, T2) => hlist([B1, indent(text('=')), indent(B2)]) :-
     T1 => B1,
     T2 => B2.
-and(F1, F2) => hlist([B3, indent(text('/\\')), indent(B4)]) :-
-    F1 => B1,
-    F2 => B2,
-    parens(B1, B3),
-    parens(B2, B4).
-or(F1, F2) => hlist([B3, indent(text('\\/')), indent(B4)]) :-
-    F1 => B1,
-    F2 => B2,
-    parens(B1, B3),
-    parens(B2, B4).
-not(F) => hbox(text('~'), indent(B2)) :-
-    F => B1,
-    parens(B1, B2).
-iff(F1, F2) => hlist([B3, indent(text('<=>')), indent(B4)]) :-
-    F1 => B1,
-    F2 => B2,
-    parens(B1, B3),
-    parens(B2, B4).
-ifthen(F1, F2) => hlist([B3, indent(text('=>')), indent(B4)]) :-
-    F1 => B1,
-    F2 => B2,
-    parens(B1, B3),
-    parens(B2, B4).
+and(F1, F2) => hlist([B1, indent(text('/\\')), indent(B2)]) :-
+    formulaparens(F1, B1),
+    formulaparens(F2, B2).
+or(F1, F2) => hlist([B1, indent(text('\\/')), indent(B2)]) :-
+    formulaparens(F1, B1),
+    formulaparens(F2, B2).
+not(F) => hbox(text('~'), indent(B)) :-
+    formulaparens(F, B).
+iff(F1, F2) => hlist([B1, indent(text('<=>')), indent(B2)]) :-
+    formulaparens(F1, B1),
+    formulaparens(F2, B2).
+ifthen(F1, F2) => hlist([B1, indent(text('=>')), indent(B2)]) :-
+    formulaparens(F1, B1),
+    formulaparens(F2, B2).
 funapp(N, Ts) => hbox(text(N), B) :-
     commaparens(Ts, B).
 var(N) => text(N).
@@ -100,3 +91,11 @@ parens(B, hlist([text('('), B, text(')')])).
 commaparens(Xs, B) :-
     map(lalPp:(=>), Xs, Bs),
     parens(hseplist(text(', '), Bs), B).
+formulaparens(F, B) :-
+    ( F = relapp(_, _); F = eq(_, _) ),
+    F => B.
+formulaparens(F, B2) :-
+    \+ ( F = relapp(_, _); F = eq(_, _) ),
+    F => B1,
+    parens(B1, B2).
+

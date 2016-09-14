@@ -69,7 +69,7 @@ existsu([V|Vs], TE, F1) ~> existsu(V, TE, F2) :-
 singleDecls([], []).
 singleDecls([D|Ds1], [D|Ds2]) :-
     ( D = reuse(_, _)
-    ; D = language(_, _)
+    ; D = sort(_, _)
     ; D = axiom(_, _)	       
     ; D = link(_, _) ),	       
     singleDecls(Ds1, Ds2).

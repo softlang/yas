@@ -1,11 +1,11 @@
-language XML
-language MathML <= XML
-language XSD <= XML
+sort XML
+sort MathML <= XML
+sort XSD <= XML
 constant MathMLSchema : XSD
 relation conformsTo : XML # XSD
 axiom {
  forall x <- XML.
-  (x <- MathML) <=> (conformsTo(x, MathMLSchema))
+  (x <- MathML) <=> conformsTo(x, MathMLSchema)
 }
 link XML to 'https://www.w3.org/XML'
 link XSD to 'https://www.w3.org/XML/Schema'

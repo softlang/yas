@@ -24,9 +24,9 @@ substs([(N1, N2)|Ss], Ds1, Ds3) :-
     substs(Ss, Ds2, Ds3).
 
 % Patterns relevant for substitution
-subst(N1, N2, language(N1, [N1]), language(N2, [N2])).
-subst(N1, N2, language(N1, N3), language(N2, N3)).
-subst(N1, N2, language(N3, [N1]), language(N3, [N2])).
+subst(N1, N2, sort(N1, [N1]), sort(N2, [N2])).
+subst(N1, N2, sort(N1, N3), sort(N2, N3)).
+subst(N1, N2, sort(N3, [N1]), sort(N3, [N2])).
 subst(N1, N2, ref(N1), ref(N2)).
 subst(N1, N2, relation(N1, Ts), relation(N2, Ts)).
 subst(N1, N2, relapp(N1, Es), relapp(N2, Es)).

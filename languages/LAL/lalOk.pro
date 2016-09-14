@@ -13,7 +13,7 @@ typesOfNames(Ds) :- \+ (
     declToName(D2, F2, N),
     \+ F1 == F2 ).
 
-declToName(language(N, _), language, N).
+declToName(sort(N, _), sort, N).
 declToName(relation(N, _), relation, N).
 declToName(function(N, _, _, _), function, N).
 declToName(constant(N, _), constant, N).
@@ -27,13 +27,13 @@ type(Ds, product(Ts)) :- map(lalOk:type(Ds), Ts).
 % Subtyping relationship
 subTypeOf(_, T, T).
 subTypeOf(Ds, ref(N1), ref(N2)) :-
-    member(language(N1, [N2]), Ds).
+    member(sort(N1, [N2]), Ds).
 
 % Well-formedness of declarations
-decl(Ds, language(N, X)) :- % ...
+decl(Ds, sort(N, X)) :- % ...
 % BEGIN ...
     \+ (
-      member(language(N, Y), Ds),
+      member(sort(N, Y), Ds),
       \+ X == Y ).
 % END ...
 decl(Ds, relation(_, Ts)) :- % ...

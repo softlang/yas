@@ -6,7 +6,7 @@ model : { decl }* ;
 mname : name { '.' name }* ;
 substs : '[' subst { ',' subst }* ']' ;
 subst : name '|->' name ;
-[language] decl : 'language' name { '<=' name }? ;
+[sort] decl : 'sort' name { '<=' name }? ;
 [relation] decl : 'relation' names ':' types ;
 names : name { ',' name }* ;
 [function] decl : 'function' names ':' types arrow type ;

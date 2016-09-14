@@ -1,4 +1,4 @@
-:- module(lalEq, []).
+:- module(lalTermEq, []).
 
 eq(Lal1, Lal2) :-
     apply(lalNorm:(=>), [Lal1, Lal]),

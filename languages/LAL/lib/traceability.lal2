@@ -1,12 +1,12 @@
-language Any
-language L1 <= Any
+sort Any
+sort L1 <= Any
 relation partOf : L1 # L1
 relation partOfPlus : L1 # L1
 relation partOfStar : L1 # L1
 axiom partAsym {
  forall x <- L1.
   forall y <- L1.
-   (partOf(x, y)) => (~ (partOf(y, x)))
+   partOf(x, y) => (~ partOf(y, x))
 }
 axiom partReflexive {
  forall x <- L1.
@@ -15,26 +15,26 @@ axiom partReflexive {
 axiom partTransitive {
  forall x <- L1.
   forall y <- L1.
-   ((partOf(x, y)) => (partOfPlus(x, y))) /\ (((partOfPlus(x, y)) => (partOfStar(x, y))) /\ (forall z <- L1.
-                                                                                              ((partOfPlus(x, y)) /\ (partOfPlus(y, z))) => (partOfPlus(x, z))))
+   (partOf(x, y) => partOfPlus(x, y)) /\ ((partOfPlus(x, y) => partOfStar(x, y)) /\ (forall z <- L1.
+                                                                                      (partOfPlus(x, z) /\ partOfPlus(z, y)) => partOfPlus(x, y)))
 }
-language RefAny
-language RefL1 <= RefAny
+sort RefAny
+sort RefL1 <= RefAny
 function deref : RefL1 # L1 ~> L1
 axiom {
  forall r <- RefL1.
   forall x <- L1.
    forall y <- L1.
-    (deref(r, x) = y) => (partOfStar(y, x))
+    deref(r, x) = y => partOfStar(y, x)
 }
-language L2 <= Any
+sort L2 <= Any
 relation partOf : L2 # L2
 relation partOfPlus : L2 # L2
 relation partOfStar : L2 # L2
 axiom partAsym {
  forall x <- L2.
   forall y <- L2.
-   (partOf(x, y)) => (~ (partOf(y, x)))
+   partOf(x, y) => (~ partOf(y, x))
 }
 axiom partReflexive {
  forall x <- L2.
@@ -43,18 +43,18 @@ axiom partReflexive {
 axiom partTransitive {
  forall x <- L2.
   forall y <- L2.
-   ((partOf(x, y)) => (partOfPlus(x, y))) /\ (((partOfPlus(x, y)) => (partOfStar(x, y))) /\ (forall z <- L2.
-                                                                                              ((partOfPlus(x, y)) /\ (partOfPlus(y, z))) => (partOfPlus(x, z))))
+   (partOf(x, y) => partOfPlus(x, y)) /\ ((partOfPlus(x, y) => partOfStar(x, y)) /\ (forall z <- L2.
+                                                                                      (partOfPlus(x, z) /\ partOfPlus(z, y)) => partOfPlus(x, y)))
 }
-language RefL2 <= RefAny
+sort RefL2 <= RefAny
 function deref : RefL2 # L2 ~> L2
 axiom {
  forall r <- RefL2.
   forall x <- L2.
    forall y <- L2.
-    (deref(r, x) = y) => (partOfStar(y, x))
+    deref(r, x) = y => partOfStar(y, x)
 }
-relation link : RefL1 # RefL2 # L1 # L2
+relation ref : RefL1 # RefL2 # L1 # L2
 axiom {
  forall r1 <- RefL1.
   forall r2 <- RefL2.
@@ -62,5 +62,5 @@ axiom {
     forall a2 <- L2.
      (exists b1 <- L1.
        exists b2 <- L2.
-        (deref(r1, a1) = b1) /\ (deref(r2, a2) = b2)) <=> (link(r1, r2, a1, a2))
+        deref(r1, a1) = b1 /\ deref(r2, a2) = b2) <=> ref(r1, r2, a1, a2)
 }

@@ -1,7 +1,7 @@
-language Any
-language L <= Any
-language DiffAny
-language DiffL <= DiffAny
+sort Any
+sort L <= Any
+sort DiffAny
+sort DiffL <= DiffAny
 function diff : L # L -> DiffL
 function applyDiff : DiffL # L -> L
 function invDiff : DiffL -> DiffL
@@ -10,7 +10,7 @@ axiom apply {
  forall x <- L.
   forall y <- L.
    forall d <- DiffL.
-    (diff(x, y) = d) => (applyDiff(d, x) = y)
+    applyDiff(diff(x, y), x) = y
 }
 axiom inv {
  forall x <- L.

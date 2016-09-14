@@ -14,11 +14,11 @@ bslLanguage(File, Term) :-
 
 % Parser of BSL signatures relying on ESL
 parserOfBsl(Text, Term2) :-
-  FileCfSyn = 'languages/esl/cs.term',
+  FileCfSyn = 'languages/ESL/cs.term',
   require(
     fileNotReadable(FileCfSyn),
     readTermFile(FileCfSyn, CfSyn)),
-  FileLexSyn = 'languages/esl/ls.term',
+  FileLexSyn = 'languages/ESL/ls.term',
   require(
     fileNotReadable(FileLexSyn),
     readTermFile(FileLexSyn, LexSyn)),
