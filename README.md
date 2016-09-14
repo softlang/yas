@@ -76,25 +76,25 @@ paper is summarized here in terms of the involved files.
 ## Ingredients of the transformation
 
 * The initial signature
-** [... in concrete syntax sig1.bsl](languages/BSTL/tests/sig1.bsl)
-** [... in abstract syntax sig1.term](languages/BSTL/tests/sig1.term)
+ * [... in concrete syntax sig1.bsl](languages/BSTL/tests/sig1.bsl)
+ * [... in abstract syntax sig1.term](languages/BSTL/tests/sig1.term)
 * The evolved signature
-** [... in concrete syntax sig2.bsl](languages/BSTL/tests/sig2.bsl)
-** [... in abstract syntax sig2.term](languages/BSTL/tests/sig2.term)
+ * [... in concrete syntax sig2.bsl](languages/BSTL/tests/sig2.bsl)
+ * [... in abstract syntax sig2.term](languages/BSTL/tests/sig2.term)
 * [The initial term term1.term](languages/BSTL/tests/term1.term)
 * [The co-evolved term term2.term](languages/BSTL/tests/term2.term)
 * [The coupled transformation trafo1.term](languages/BSTL/tests/trafo1.term)
 * [The syntax of the transformation language](languages/BSTL/as.esl)
 * [The syntax of signatures](languages/BSL/as.esl)
 * The coupled transformation
-** [Term-level interpretation](languages/BSTL/bstTerm.pro)
-** [Signature-level interpretation](languages/BSTL/bstlSig.pro)
+ * [Term-level interpretation](languages/BSTL/bstTerm.pro)
+ * [Signature-level interpretation](languages/BSTL/bstlSig.pro)
 
 ## Megamodeling ingredients
 
 * LAL megamodel
-** [Before inlining](languages/LAL/lib/cx/cotransformation.lal)
-** [After inlining](languages/LAL/lib/cx/cotransformation.lal2)
+ * [Before inlining](languages/LAL/lib/cx/cotransformation.lal)
+ * [After inlining](languages/LAL/lib/cx/cotransformation.lal2)
 * [Ueber megamodel (test-case description)](languages/BSTL/tests/trafo1.ueber)
 * [Configuration of translation](languages/LAL/lib/cx/cotransformation.lalconfig)
 
