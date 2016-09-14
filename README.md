@@ -12,7 +12,7 @@ A software language repository (SLR) is a software repository for software langu
 
 # Documentation and papers
 
-See http://www.softlang.org/ueber
+See http://www.softlang.org/yas
 
 # Repository
 
