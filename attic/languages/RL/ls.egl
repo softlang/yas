@@ -1,1 +1,0 @@
-rlvar : '$' upper { alpha }* ;

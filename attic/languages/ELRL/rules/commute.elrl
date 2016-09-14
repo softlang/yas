@@ -1,2 +1,0 @@
-expr : $X + $Y -> $Y + $X ;
-expr : $X * $Y -> $Y * $X ;

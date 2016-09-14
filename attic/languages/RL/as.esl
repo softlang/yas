@@ -1,4 +1,0 @@
-type rules = rule* ;
-symbol rlvar : string -> rlvar ;
-symbol n : n # n -> rule ;
-symbol _n : rlvar -> n ;
