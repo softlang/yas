@@ -4,9 +4,9 @@ module Language.BIPL.Algebra.Signature where
 import Language.BIPL.Syntax (UOp, BOp)
 
 -- END ...
--- Alias to shorten store transformers
-type T x = x -> x
-type O x y = x -> y
+-- Aliases to shorten function signatures
+type O x y = x -> y -- Store observation
+type T x = x -> x -- Store transformation
 -- The signature of algebras for interpretation
 data Alg sto v = Alg {
   skip' :: T sto,

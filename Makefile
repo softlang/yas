@@ -1,5 +1,5 @@
 javadirs = languages/ASL/samples/adts/Java languages/BNL/ANTLR languages/BNL/ESL/java languages/BNL/Java languages/BTL/Java languages/EIPL/ANTLR languages/FSML/Java languages/GBL/Java samples/xcoupled
-haskelldirs = languages/BFPL/Haskell languages/BGL/Haskell languages/BIPL/Haskell languages/BNL/ESL/haskell languages/BNL/Haskell languages/BTL/Haskell languages/EGL/Haskell languages/EL/Haskell languages/FSML/Haskell languages/GBL/Haskell lib/Haskell samples/Haskell
+haskelldirs = languages/BFPL/Haskell languages/BGL/Haskell languages/BIPL/Haskell languages/BNL/ESL/haskell languages/BSL/Haskell languages/BNL/Haskell languages/BTL/Haskell languages/EGL/Haskell languages/EL/Haskell languages/FSML/Haskell languages/GBL/Haskell lib/Haskell samples/Haskell
 pythondirs = languages/FSML/Python
 nonprologdirs = ${javadirs} ${haskelldirs} ${pythondirs}
 nonsle16dirs = ${nonprologdirs} attic tools

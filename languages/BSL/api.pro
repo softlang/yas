@@ -1,7 +1,7 @@
 % Conformance for BSL
 bslConformance(Term, Sig) :-
   Sig = [(_, _, Sort)|_],
-  manySortedTerm(Sig, Term, Sort).
+  bslConformance:termOfSort(Sig, Term, Sort).
 
 % Membership test
 bslTerm(File, Term) :-
@@ -10,7 +10,7 @@ bslTerm(File, Term) :-
 bslLanguage(File, Term) :-
   readTermFile(File, Sig),
   Sig = [(_, _, Sort)|_],
-  manySortedTerm(Sig, Term, Sort).
+  bslConformance:termOfSort(Sig, Term, Sort).
 
 % Parser of BSL signatures relying on ESL
 parserOfBsl(Text, Term2) :-

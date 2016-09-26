@@ -7,8 +7,8 @@ import Data.Map ((!), empty, fromList)
 
 -- END ...
 -- Evaluation of a program's main expression
-evaluate :: Program -> Value
-evaluate (fs, e) = f e empty
+eval :: Program -> Value
+eval (fs, e) = f e empty
  where
   -- Evaluation of expressions
   f :: Expr -> Env -> Value

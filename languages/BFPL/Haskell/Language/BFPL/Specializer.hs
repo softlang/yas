@@ -12,47 +12,47 @@ import Data.Maybe
 import Control.Monad.State
 
 -- Return a residual (specialized) program
-pevaluate :: Program -> Program
-pevaluate (fs, e) = swap (runState (pevaluate' e empty) [])
+peval :: Program -> Program
+peval (fs, e) = swap (runState (f e empty) [])
   where
-    pevaluate' :: Expr -> Env -> State [Function] Expr
-    pevaluate' e@(IntConst _) _ = return e
-    pevaluate' e@(BoolConst _) _ = return e
-    pevaluate' e@(Arg x) env =
+    f :: Expr -> Env -> State [Function] Expr
+    f e@(IntConst _) _ = return e
+    f e@(BoolConst _) _ = return e
+    f e@(Arg x) env =
       case Data.Map.lookup x env of
         (Just e') -> return (valueToExpr e')
         Nothing -> return e
-    pevaluate' (If e0 e1 e2) env = do
-      r0 <- pevaluate' e0 env
-      let r1 = pevaluate' e1 env
-      let r2 = pevaluate' e2 env
+    f (If e0 e1 e2) env = do
+      r0 <- f e0 env
+      let r1 = f e1 env
+      let r2 = f e2 env
       case exprToValue r0 of
         Nothing -> r1 >>= \r1' -> r2 >>= \r2' -> return (If r0 r1' r2')
         (Just (Right bv)) -> if bv then r1 else r2
-    pevaluate' (Unary o e) env = do
-      r <- pevaluate' e env
+    f (Unary o e) env = do
+      r <- f e env
       case exprToValue r of
         (Just v) -> return (valueToExpr (uop o v))
         _ -> return (Unary o r)
-    pevaluate' (Binary o e1 e2) env = do
-      r1 <- pevaluate' e1 env
-      r2 <- pevaluate' e2 env
+    f (Binary o e1 e2) env = do
+      r1 <- f e1 env
+      r2 <- f e2 env
       case (exprToValue r1, exprToValue r2) of
         (Just v1, Just v2) -> return (valueToExpr (bop o v1 v2))
         _ -> return (Binary o r1 r2)
 -- END ...
-    pevaluate' (Apply fn es) env = do
+    f (Apply fn es) env = do
       -- Look up function
       let Just ((ts, t), (ns, body)) = Prelude.lookup fn fs
       -- Partially evaluate arguments
-      rs <- mapM (flip pevaluate' env) es
+      rs <- mapM (flip f env) es
       -- Determine static and dynamic arguments
       let trs = zip ts rs
       let ntrs = zip ns trs
       let sas = [ (n, getValue r) | (n, (_, r)) <- ntrs, isValue r ]
       let das = [ (n, (t, r)) | (n, (t, r)) <- ntrs, not (isValue r) ]
       -- Specialize body
-      let body' = pevaluate' body (fromList sas)
+      let body' = f body (fromList sas)
       if null das
       -- Inline
         then body' 
