@@ -19,13 +19,16 @@ symbol binary : bop # expr # expr -> expr ;
 symbol apply : string # expr* -> expr ;
 
 // Unary operators
-symbol negate : -> uop ;
-symbol not : -> uop ;
-
-// Binary operators
-symbol add : -> bop ;
 // ...
 // BEGIN ...
+symbol negate : -> uop ;
+symbol not : -> uop ;
+// END ...
+
+// Binary operators
+// ...
+// BEGIN ...
+symbol add : -> bop ;
 symbol sub : -> bop ;
 symbol mul : -> bop ;
 symbol lt : -> bop ;
@@ -34,5 +37,5 @@ symbol eq : -> bop ;
 symbol geq : -> bop ;
 symbol gt : -> bop ;
 symbol and : -> bop ;
-// END ...
 symbol or : -> bop ;
+// END ...
