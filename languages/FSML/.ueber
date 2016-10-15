@@ -1,6 +1,7 @@
 [
-  % Syntax
+  macro(mmlSyntax(fsml)),
   macro(eglSyntax(fsml)),
   macro(eslSyntax(fsml)),
-  macro(parseSample(fsml))
+  macro(parseSample(fsml)),
+  macro(graphSample(fsml, 'sample')) 
 ].

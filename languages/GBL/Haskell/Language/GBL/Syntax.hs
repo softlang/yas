@@ -2,13 +2,8 @@
 module Language.GBL.Syntax where
 import Data.IORef
 -- END ...
-newtype World = World { getPersons :: [Person] }
--- BEGIN ...
-  deriving Eq
--- END ...
+newtype World = World {
+  getPersons :: [IORef Person] }
 data Person = Person {
   getName :: String,
-  getBuddy :: IORef (Maybe Person) }
--- BEGIN ...
-  deriving Eq
--- END ...
+  getBuddy :: Maybe (IORef Person) }

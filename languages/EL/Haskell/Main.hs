@@ -3,6 +3,7 @@ import qualified Language.EL.Syntax as S1
 import qualified Language.EL.QQ.Syntax as S2
 import Language.EL.Parser
 import qualified Language.EL.Rules as R1
+import Language.EL.Normalizer
 import qualified Language.EL.MoreRules as MR1
 import qualified Language.EL.QQ.Rules as R2
 import qualified Language.EL.QQ.MoreRules as MR2
@@ -28,6 +29,11 @@ tests p mf ms =
       TestLabel (p++"5") $ rewrite mf ms "fullbuSimplify" "needs-fullbu" "a",
       TestLabel (p++"6") $ rewrite mf ms "fullbuAssociate" "left-associated" "mix-associated",
       TestLabel (p++"7") $ rewrite mf ms "innermostAssociate" "left-associated" "right-associated"
+    ]
+
+tests' mf =
+    [
+      TestLabel "normalize" $ (mf!"a") ~=? normalize R1.simplify (mf!"needs-fullbu") 
     ]
 
 -- Build a map of strategies so that they can be applied to different syntaxes
@@ -85,9 +91,10 @@ main = do
   (es2::[S2.Expr]) <- mapM parseFile' files
   let mf1 = fromList (zip files es1)
   let mf2 = fromList (zip files es2)
+  let t0 = tests' mf1
   let t1 = tests "R1." mf1 (mapOfTests R1.simplify MR1.simplify' R1.commute R1.associate)
   let t2 = tests "R2." mf2 (mapOfTests R2.simplify MR2.simplify' R2.commute R2.associate)
-  counts <- runTestTT $ TestList (t1++t2)
+  counts <- runTestTT $ TestList (t0++t1++t2)
   if (errors counts > 0 || failures counts > 0)
     then exitFailure
     else exitSuccess

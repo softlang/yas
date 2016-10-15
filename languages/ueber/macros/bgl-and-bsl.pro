@@ -5,7 +5,7 @@ basicSyntax(L) :-
   % Languages for representation
   TextL =.. [L, text],
   TokensL =.. [L, tokens(term)],
-  TreeL =.. [L, bgstl(term)],
+  TreeL =.. [L, bcl(term)],
   TermL =.. [L, term],
   % Synthesize scanner predicate
   atom_concat(L, 'Scanner', S),
@@ -21,7 +21,7 @@ basicSyntax(L) :-
     % Membership tests for artifacts
     membership(TextL, bglAcceptor(S), ['cs.term']),
     membership(TokensL, bglAcceptor, ['cs.term']),
-    membership(TreeL, bgstlOk:main, ['cs.term']),
+    membership(TreeL, bclOk:main, ['cs.term']),
     membership(TermL, bslTerm, ['as.term']),  
     % Functions for scanning, parsing, unparsing, etc.
     function(scan, [TextL], [TokensL], S, []),

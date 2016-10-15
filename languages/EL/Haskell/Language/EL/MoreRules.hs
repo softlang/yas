@@ -1,7 +1,8 @@
 -- BEGIN ...
 module Language.EL.MoreRules where
 import Language.EL.Syntax
-import Language.EL.Rules
+import Language.EL.Rules.Simplify
+import Language.EL.Rules.Commute
 import Control.Monad
 -- END ...
 -- Cancel double negation on Ints

@@ -1,1 +1,1 @@
-[type(fsm,star(sort(state))),type(state,tuple([sort(initial),sort(id),star(sort(transition))])),type(initial,boolean),type(transition,tuple([sort(event),option(sort(action)),sort(id)])),type(id,string),type(event,string),type(action,string)].
+[type(fsm,star(sort(state))),type(state,tuple([sort(initial),sort(stateid),star(sort(transition))])),type(initial,boolean),type(transition,tuple([sort(event),option(sort(action)),sort(stateid)])),type(stateid,string),type(event,string),type(action,string)].

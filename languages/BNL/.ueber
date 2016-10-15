@@ -16,6 +16,7 @@
 
   % AST-based evaluators
   function(evaluate, [bnl(term)], [bnl(value(term))], bnlTermEvaluator:number, []),
+  function(evaluate, [bnl(term)], [bnl(value(term))], bnlTermSEvaluator:number, []),
   function(convert, [bnl(term)], [bnl(formula(term))], bnlTermConverter:convert, []),
 
   % Solver

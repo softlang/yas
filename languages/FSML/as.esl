@@ -1,7 +1,7 @@
 type fsm = state* ;
-type state = initial # id # transition* ;
+type state = initial # stateid # transition* ;
 type initial = boolean ;
-type transition = event # action? # id ;
-type id = string ;
+type transition = event # action? # stateid ;
+type stateid = string ;
 type event = string ;
 type action = string ;

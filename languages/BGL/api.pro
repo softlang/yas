@@ -1,7 +1,7 @@
 % BGL-based conformance for token sequences
 bglConformance(Input, Grammar) 
  :-
-    once(acceptTopDown:accept(Grammar, Input)).
+    once(bglAcceptTopDown:accept(Grammar, Input)).
     
 % BGL-based top-down acceptor for token sequences
 bglAcceptor(File, Input) :-
@@ -10,7 +10,7 @@ bglAcceptor(File, Input) :-
 bglTopDownAcceptor(File, Input)
  :-
     readTermFile(File, Grammar),
-    once(acceptTopDown:accept(Grammar, Input)).
+    once(bglAcceptTopDown:accept(Grammar, Input)).
 
 % BGL-based top-down acceptor with scanner
 bglAcceptor(Pred, File, Input1) :-
@@ -25,7 +25,7 @@ bglTopDownAcceptor(Pred, File, Input1)
 bglBottomUpAcceptor(File, Input)
  :-
     readTermFile(File, Grammar),
-    once(acceptBottomUp:accept(Grammar, Input)).
+    once(bglAcceptBottomUp:accept(Grammar, Input)).
 
 % BGL-based bottom-up acceptor with scanner
 bglBottomUpAcceptor(Pred, File, Input1)
@@ -51,7 +51,7 @@ bglParser(File, Text, Term) :-
 bglTopDownParser(File, Text, Term)
  :-
     readTermFile(File, Grammar),
-    once(parseTopDown:parse(Grammar, Text, PTree)),
+    once(bglParseTopDown:parse(Grammar, Text, PTree)),
     apply(implode:(=>), [PTree, Term]).
 
 % BGL-based top-down parser with scanner

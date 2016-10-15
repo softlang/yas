@@ -1,0 +1,81 @@
+{
+ class : fsm,
+ states : [
+  1 & {
+   class : state,
+   initial : true,
+   stateid : 'locked',
+   transitions : [
+    {
+     class : transition,
+     event : 'ticket',
+     action : ['collect'],
+     target : #2
+    },
+    % ...
+% BEGIN ...
+    {
+     class : transition,
+     event : 'pass',
+     action : ['alarm'],
+     target : #3
+    }
+% END ...
+   ]
+  },
+  2 & { % ...
+% BEGIN ...
+   class : state,
+   initial : false,
+   stateid : 'unlocked',
+   transitions : [
+    {
+     class : transition,
+     event : 'ticket',
+     action : ['eject'],
+     target : #2
+    },
+    {
+     class : transition,
+     event : 'pass',
+     action : [],
+     target : #1
+    }
+   ]
+% END ...
+  },
+  3 & { % ...
+% BEGIN ...
+   class : state,
+   initial : false,
+   stateid : 'unlocked',
+   transitions : [
+    {
+     class : transition,
+     event : 'ticket',
+     action : ['eject'],
+     target : #3
+    },
+    {
+     class : transition,
+     event : 'pass',
+     action : [],
+     target : #3
+    },
+    {
+     class : transition,
+     event : 'mute',
+     action : [],
+     target : #3
+    },
+    {
+     class : transition,
+     event : 'release',
+     action : [],
+     target : #1
+    }
+   ]
+% END ...
+  }
+ ]
+}.
