@@ -4,7 +4,7 @@ import Control.Monad
 -- END ...
 -- Accept and enforce complete input consumption 
 accept :: String -> Bool
-accept ts = case number ts of
+accept i = case number i of
   Just [] -> True
   _ -> False
 
@@ -12,30 +12,30 @@ accept ts = case number ts of
 number, bits, bit, rest :: String -> Maybe String
 
 -- [number] number : bits rest ;
-number ts = bits ts >>= rest 
+number i = bits i >>= rest 
 
 -- [single] bits : bit ;
 -- [many] bits : bit bits ;
-bits ts = many `mplus` single
+bits i = many `mplus` single
   where
-    single = bit ts
-    many = bit ts >>= bits
+    single = bit i
+    many = bit i >>= bits
 
 -- [zero] bit : '0' ;
 -- [one] bit : '1' ; 
-bit ts = zero `mplus` one
+bit i = zero `mplus` one
   where
-    zero = match '0' ts
-    one = match '1' ts
+    zero = match '0' i
+    one = match '1' i
 
 -- [integer] rest : ;
 -- [rational] rest : '.' bits ;
-rest ts = rational `mplus` integer
+rest i = rational `mplus` integer
   where
-    integer = Just ts
-    rational = match '.' ts >>= bits
+    integer = Just i
+    rational = match '.' i >>= bits
 
 -- Match a terminal (a character)
 match :: Char -> String -> Maybe String
-match t (t':ts) | t == t' = Just ts
+match t (t':i) | t == t' = Just i
 match _ _ = Nothing

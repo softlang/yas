@@ -10,7 +10,7 @@ property totalNoEmployees(c) : Company .
   getEmployees(c) = [] =>
     totalSalaries(c) = zeroSalary
 
--- Property of every employee to count for total
+-- Property of every employee to count towards total
 property totalEmployeeCounts(c, e) : Company x Employee .
   let n = getEmployeeName(e) in
     isEmployed(c, n) =>

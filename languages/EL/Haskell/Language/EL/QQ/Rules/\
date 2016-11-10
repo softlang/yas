@@ -1,0 +1,11 @@
+-- BEGIN ...
+{-# LANGUAGE QuasiQuotes #-}
+module Language.EL.QQ.Rules.Simplify where
+import Language.EL.QQ.Syntax hiding (MetaVar)
+import Language.EL.QuasiQuoter
+-- END ...
+simplify :: Expr -> Maybe Expr
+simplify [el| $x + 0 |] = Just x
+simplify [el| $x * 1 |] = Just x
+simplify [el| $x * 0 |] = Just $ IntConst 0
+simplify _ = Nothing

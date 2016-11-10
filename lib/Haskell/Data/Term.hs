@@ -3,5 +3,5 @@ module Data.Term where
 import Data.TermRep
 -- END ...
 class Term a where
-  explode :: a -> TermRep
-  implode :: TermRep -> a
+  toTermRep :: a -> TermRep
+  fromTermRep :: TermRep -> a

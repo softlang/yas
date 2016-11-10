@@ -15,8 +15,8 @@ import System.Exit (exitSuccess, exitFailure)
 
 tests =
   TestList [
-    TestLabel "explode" $ S2.sampleExpr ~=? explode S1.sampleExpr,
-    TestLabel "implode" $ S1.sampleExpr ~=? implode S2.sampleExpr,
+    TestLabel "toTermRep" $ S2.sampleExpr ~=? toTermRep S1.sampleExpr,
+    TestLabel "fromTermRep" $ S1.sampleExpr ~=? fromTermRep S2.sampleExpr,
     TestLabel "wellTyped" $ True ~=? wellTyped S1.sampleExpr,
     TestLabel "adhoc" $ Left 1 ~=? AdHoc.evaluate S1.sampleExpr,
     TestLabel "bigstep1" $ Just (Succ Zero) ~=? BigStep1.evaluate S1.sampleExpr,
