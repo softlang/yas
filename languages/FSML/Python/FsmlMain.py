@@ -5,7 +5,8 @@ from FsmlLexer import FsmlLexer
 from FsmlParser import FsmlParser
 from FsmlConstraints import ok
 from FsmlSimulator import simulate
-from FsmlCodeGenerator import generateCode
+from FsmlPythonGenerator import generatePython
+from FsmlCGenerator import generateC
 from FsmlVisualizer import draw
 
 def parse(path):
@@ -34,7 +35,8 @@ def main():
         outFile.write(json.dumps(output))
 
         #generate Code
-        generateCode(fsm)
+        generatePython(fsm)
+        generateC(fsm, "Turnstile")
 
         #draw fsm
         draw(fsm).write("dot/sample.dot")

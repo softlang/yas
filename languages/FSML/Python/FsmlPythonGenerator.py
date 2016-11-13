@@ -2,7 +2,7 @@
 import os
 from jinja2 import Environment, FileSystemLoader
 # END ...
-def generateCode(fsm):
+def generatePython(fsm):
         actions = set() # Accumulate actions for handler class
         transitions = [] # Accumulate transitions for stepper class
         # Map model to data structure needed for templates

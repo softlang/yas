@@ -1,0 +1,15 @@
+enum State { {% for s in states %}{{s}}{% if not loop.last %}, {% endif %}{% endfor %} };
+enum Event { {% for e in events %}{{e}}{% if not loop.last %}, {% endif %}{% endfor %} };
+
+{% for a in actions %}void {{a}}() { }
+{% endfor %}
+enum State next(enum State s, enum Event e) {
+  switch(s) { {% for (s, ts) in transitions %}
+  case {{s}}:
+    switch(e) { {% for (e, a, t) in ts %}
+    case {{e}}: {{a}}(); return {{t}};{% endfor %}
+    default: return UNDEFINED;
+    }{% endfor %}
+  default: return UNDEFINED;
+  }
+}
