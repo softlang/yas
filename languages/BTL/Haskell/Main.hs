@@ -4,7 +4,8 @@ import qualified Language.BTL.Universal.Sample as S2
 import qualified Language.BTL.Universal.Term
 import Language.BTL.Interpreter as AdHoc
 import Language.BTL.BigStep as BigStep1
-import Language.BTL.BigStepWithGuards as BigStep2
+import Language.BTL.BigStepMaybe as BigStep2
+import Language.BTL.BigStepWithGuards as BigStep3
 import Language.BTL.SmallStep
 import Language.BTL.Typing
 import Language.BTL.Closure
@@ -19,8 +20,9 @@ tests =
     TestLabel "fromTermRep" $ S1.sampleExpr ~=? fromTermRep S2.sampleExpr,
     TestLabel "wellTyped" $ True ~=? wellTyped S1.sampleExpr,
     TestLabel "adhoc" $ Left 1 ~=? AdHoc.evaluate S1.sampleExpr,
-    TestLabel "bigstep1" $ Just (Succ Zero) ~=? BigStep1.evaluate S1.sampleExpr,
-    TestLabel "bigstep2" $ Just (Succ Zero) ~=? BigStep2.evaluate S1.sampleExpr,
+    TestLabel "bigstep1" $ Succ Zero ~=? BigStep1.evaluate S1.sampleExpr,
+    TestLabel "bigstep1" $ Just (Succ Zero) ~=? BigStep2.evaluate S1.sampleExpr,
+    TestLabel "bigstep2" $ Succ Zero ~=? BigStep3.evaluate S1.sampleExpr,
     TestLabel "smallstep" $ Just (Succ Zero) ~=? steps S1.sampleExpr,
     TestLabel "dynamics" $ True ~=? expr S2.sampleExpr
   ]

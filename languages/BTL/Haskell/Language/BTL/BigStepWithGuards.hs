@@ -4,33 +4,34 @@ module Language.BTL.BigStepWithGuards where
 import Language.BTL.Syntax
 import Language.BTL.Nf
 -- END ...
--- Evaluation of terms
-evaluate :: Expr -> Maybe Expr
-evaluate TRUE = Just TRUE
-evaluate FALSE = Just FALSE
-evaluate Zero = Just Zero
+-- ...
+-- BEGIN ...
+evaluate :: Expr -> Expr
+evaluate TRUE = TRUE
+evaluate FALSE = FALSE
+evaluate Zero = Zero
 evaluate (Succ e)
-  | Just n <- evaluate e
+  | n <- evaluate e
   , isNat n
-  = Just (Succ n)
+  = Succ n
+-- END ...
 evaluate (Pred e)
-  | Just Zero <- evaluate e
-  = Just Zero
+  | Zero <- evaluate e
+  = Zero
 evaluate (Pred e)
-  | Just (Succ n) <- evaluate e
+  | Succ n <- evaluate e
   , isNat n
-  = Just n
+  = n
 evaluate (IsZero e)
-  | Just Zero <- evaluate e
-  = Just TRUE
+  | Zero <- evaluate e
+  = TRUE
 evaluate (IsZero e)
-  | Just (Succ n) <- evaluate e
+  | Succ n <- evaluate e
   , isNat n
-  = Just FALSE
+  = FALSE
 evaluate (If e0 e1 e2)
-  | Just TRUE <- evaluate e0
+  | TRUE <- evaluate e0
   = evaluate e1
 evaluate (If e0 e1 e2)
-  | Just FALSE <- evaluate e0
+  | FALSE <- evaluate e0
   = evaluate e2
-evaluate _ = Nothing

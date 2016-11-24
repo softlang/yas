@@ -5,7 +5,6 @@ import Language.BTL.Syntax
 import Language.BTL.Nf
 import Language.BTL.SmallStep
 -- END ...
--- Reflexive, transitive closure of one-step reduction
 steps :: Expr -> Maybe Expr
 steps e =
   if isValue e

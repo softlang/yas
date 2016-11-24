@@ -11,5 +11,8 @@
 [negate] factor : '-' factor ;
 [not] factor : '!' factor ;
 [intconst] factor : integer ;
+[boolconst] factor : boolconst ;
 [var] factor : identifier ;
 [brackets] factor : '(' expr ')' ;
+[true] boolconst : 'true' ;
+[false] boolconst : 'false' ;

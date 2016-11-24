@@ -4,14 +4,13 @@ import qualified Language.EL.QQ.Syntax as S2
 import Language.EL.Parser
 import qualified Language.EL.Rules as R1
 import Language.EL.Normalizer
+import qualified Language.EL.All
 import qualified Language.EL.MoreRules as MR1
 import qualified Language.EL.QQ.Rules as R2
 import qualified Language.EL.QQ.MoreRules as MR2
 import Language.EL.QuasiQuoter
 import Data.Generics (Data, GenericM, extM, GenericM'(GM), unGM)
-import Data.Generics.StrategyBasics
-import Data.Generics.StrategySchemes
-import qualified Data.Generics.SimpleStrategySchemes as Simple
+import Data.Generics.Strategies
 import Data.Map (fromList, (!))
 import Text.Parsec
 import Control.Exception (throwIO)
@@ -33,7 +32,8 @@ tests p mf ms =
 
 tests' mf =
     [
-      TestLabel "normalize" $ (mf!"a") ~=? normalize R1.simplify (mf!"needs-fullbu") 
+      TestLabel "normalize1" $ (mf!"a-plus-b") ~=? normalize R1.simplify (mf!"deep-unit"),
+      TestLabel "normalize2" $ (mf!"a") ~=? normalize R1.simplify (mf!"needs-fullbu") 
     ]
 
 -- Build a map of strategies so that they can be applied to different syntaxes
@@ -50,7 +50,7 @@ mapOfTests simplify simplify' commute associate =
     $ insert "fulltdSimplify" (GM (fulltd (orSucceed simplify)))
     $ insert "fullbuSimplify" (GM (fullbu (orSucceed simplify)))
     $ insert "fullbuAssociate" (GM (fullbu (orSucceed associate)))
-    $ insert "innermostAssociate" (GM (Simple.innermost associate))
+    $ insert "innermostAssociate" (GM (innermost (orFail associate)))
     $ empty
 
 -- Apply a strategy on argument and check baseline
