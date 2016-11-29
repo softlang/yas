@@ -9,11 +9,16 @@ install-very-specific:
 	sudo pip install --user pygraphviz --install-option="--include-path=/usr/local/include" --install-option="--library-path=/usr/local/lib"
 
 generate:
-	java -cp .:../../../lib/Java/antlr-4.4-complete.jar org.antlr.v4.Tool Fsml.g4
+	java -cp .:../../../lib/Java/antlr-4.5.3-complete.jar org.antlr.v4.Tool Fsml.g4
 	cd generated; make
 
 run:
-	python -B FsmlMain.py
+	python FsmlToJSON.py ../sample.fsml sample.json
+	python FsmlChecker.py sample.json
+	python FsmlSimulator.py sample.json sample.input sample.output
+	python FsmlCGenerator.py sample.json
+	python FsmlPythonGenerator.py sample.json
+	python FsmlToDot.py sample.json dot/sample.dot
 	cd dot; dot -Tpdf sample.dot -o sample.pdf
 
 test:

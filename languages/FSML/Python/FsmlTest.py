@@ -4,7 +4,7 @@ import unittest
 
 sys.path.append('./generated')
 from FsmlConstraints import ok
-from FsmlMain import parse
+from FsmlToJSON import parse
 from FsmlExceptions import *
 from FsmlSimulator import simulate
 from antlr4.error.Errors import *

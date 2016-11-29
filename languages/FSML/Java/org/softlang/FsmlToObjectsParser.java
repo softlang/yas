@@ -1,4 +1,4 @@
-// Generated from org/softlang/FsmlToObjects.g4 by ANTLR 4.4
+// Generated from org/softlang/FsmlToObjects.g4 by ANTLR 4.5.3
  package org.softlang; 
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
@@ -11,17 +11,13 @@ import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class FsmlToObjectsParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.4", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.5.3", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__6=1, T__5=2, T__4=3, T__3=4, T__2=5, T__1=6, T__0=7, NAME=8, WS=9;
-	public static final String[] tokenNames = {
-		"<INVALID>", "'/'", "'->'", "'state'", "'initial'", "';'", "'{'", "'}'", 
-		"NAME", "WS"
-	};
+		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, NAME=8, WS=9;
 	public static final int
 		RULE_fsm = 0, RULE_state = 1, RULE_transition = 2, RULE_stateid = 3, RULE_event = 4, 
 		RULE_action = 5;
@@ -29,11 +25,47 @@ public class FsmlToObjectsParser extends Parser {
 		"fsm", "state", "transition", "stateid", "event", "action"
 	};
 
-	@Override
-	public String getGrammarFileName() { return "FsmlToObjects.g4"; }
+	private static final String[] _LITERAL_NAMES = {
+		null, "'initial'", "'state'", "'{'", "'}'", "'/'", "'->'", "';'"
+	};
+	private static final String[] _SYMBOLIC_NAMES = {
+		null, null, null, null, null, null, null, null, "NAME", "WS"
+	};
+	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
+
+	/**
+	 * @deprecated Use {@link #VOCABULARY} instead.
+	 */
+	@Deprecated
+	public static final String[] tokenNames;
+	static {
+		tokenNames = new String[_SYMBOLIC_NAMES.length];
+		for (int i = 0; i < tokenNames.length; i++) {
+			tokenNames[i] = VOCABULARY.getLiteralName(i);
+			if (tokenNames[i] == null) {
+				tokenNames[i] = VOCABULARY.getSymbolicName(i);
+			}
+
+			if (tokenNames[i] == null) {
+				tokenNames[i] = "<INVALID>";
+			}
+		}
+	}
 
 	@Override
-	public String[] getTokenNames() { return tokenNames; }
+	@Deprecated
+	public String[] getTokenNames() {
+		return tokenNames;
+	}
+
+	@Override
+
+	public Vocabulary getVocabulary() {
+		return VOCABULARY;
+	}
+
+	@Override
+	public String getGrammarFileName() { return "FsmlToObjects.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -50,12 +82,12 @@ public class FsmlToObjectsParser extends Parser {
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 	public static class FsmContext extends ParserRuleContext {
-		public StateContext state(int i) {
-			return getRuleContext(StateContext.class,i);
-		}
 		public TerminalNode EOF() { return getToken(FsmlToObjectsParser.EOF, 0); }
 		public List<StateContext> state() {
 			return getRuleContexts(StateContext.class);
+		}
+		public StateContext state(int i) {
+			return getRuleContext(StateContext.class,i);
 		}
 		public FsmContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -81,17 +113,19 @@ public class FsmlToObjectsParser extends Parser {
 			setState(15);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while (_la==T__4 || _la==T__3) {
+			while (_la==T__0 || _la==T__1) {
 				{
 				{
-				setState(12); state();
+				setState(12);
+				state();
 				}
 				}
 				setState(17);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(18); match(EOF);
+			setState(18);
+			match(EOF);
 			}
 		}
 		catch (RecognitionException re) {
@@ -140,31 +174,37 @@ public class FsmlToObjectsParser extends Parser {
 			boolean initial = false;
 			setState(23);
 			_la = _input.LA(1);
-			if (_la==T__3) {
+			if (_la==T__0) {
 				{
-				setState(21); match(T__3);
+				setState(21);
+				match(T__0);
 				initial = true;
 				}
 			}
 
-			setState(25); match(T__4);
-			setState(26); ((StateContext)_localctx).stateid = stateid();
+			setState(25);
+			match(T__1);
+			setState(26);
+			((StateContext)_localctx).stateid = stateid();
 			fsm.getStates().add(new State((((StateContext)_localctx).stateid!=null?_input.getText(((StateContext)_localctx).stateid.start,((StateContext)_localctx).stateid.stop):null), initial));
-			setState(28); match(T__1);
+			setState(28);
+			match(T__2);
 			setState(32);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==NAME) {
 				{
 				{
-				setState(29); transition();
+				setState(29);
+				transition();
 				}
 				}
 				setState(34);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(35); match(T__0);
+			setState(35);
+			match(T__3);
 			}
 		}
 		catch (RecognitionException re) {
@@ -182,14 +222,14 @@ public class FsmlToObjectsParser extends Parser {
 		public EventContext event;
 		public ActionContext action;
 		public StateidContext stateid;
+		public EventContext event() {
+			return getRuleContext(EventContext.class,0);
+		}
 		public ActionContext action() {
 			return getRuleContext(ActionContext.class,0);
 		}
 		public StateidContext stateid() {
 			return getRuleContext(StateidContext.class,0);
-		}
-		public EventContext event() {
-			return getRuleContext(EventContext.class,0);
 		}
 		public TransitionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -213,14 +253,17 @@ public class FsmlToObjectsParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			String source = fsm.getStates().getLast().getStateid();
-			setState(38); ((TransitionContext)_localctx).event = event();
+			setState(38);
+			((TransitionContext)_localctx).event = event();
 			String action = null;
 			setState(44);
 			_la = _input.LA(1);
-			if (_la==T__6) {
+			if (_la==T__4) {
 				{
-				setState(40); match(T__6);
-				setState(41); ((TransitionContext)_localctx).action = action();
+				setState(40);
+				match(T__4);
+				setState(41);
+				((TransitionContext)_localctx).action = action();
 				action = (((TransitionContext)_localctx).action!=null?_input.getText(((TransitionContext)_localctx).action.start,((TransitionContext)_localctx).action.stop):null);
 				}
 			}
@@ -230,14 +273,17 @@ public class FsmlToObjectsParser extends Parser {
 			_la = _input.LA(1);
 			if (_la==T__5) {
 				{
-				setState(47); match(T__5);
-				setState(48); ((TransitionContext)_localctx).stateid = stateid();
+				setState(47);
+				match(T__5);
+				setState(48);
+				((TransitionContext)_localctx).stateid = stateid();
 				target = (((TransitionContext)_localctx).stateid!=null?_input.getText(((TransitionContext)_localctx).stateid.start,((TransitionContext)_localctx).stateid.stop):null);
 				}
 			}
 
 			fsm.getTransitions().add(new Transition(source, (((TransitionContext)_localctx).event!=null?_input.getText(((TransitionContext)_localctx).event.start,((TransitionContext)_localctx).event.stop):null), action, target));
-			setState(54); match(T__2);
+			setState(54);
+			match(T__6);
 			}
 		}
 		catch (RecognitionException re) {
@@ -273,7 +319,8 @@ public class FsmlToObjectsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(56); match(NAME);
+			setState(56);
+			match(NAME);
 			}
 		}
 		catch (RecognitionException re) {
@@ -309,7 +356,8 @@ public class FsmlToObjectsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(58); match(NAME);
+			setState(58);
+			match(NAME);
 			}
 		}
 		catch (RecognitionException re) {
@@ -345,7 +393,8 @@ public class FsmlToObjectsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(60); match(NAME);
+			setState(60);
+			match(NAME);
 			}
 		}
 		catch (RecognitionException re) {
@@ -368,13 +417,13 @@ public class FsmlToObjectsParser extends Parser {
 		"\2?\2\21\3\2\2\2\4\26\3\2\2\2\6\'\3\2\2\2\b:\3\2\2\2\n<\3\2\2\2\f>\3\2"+
 		"\2\2\16\20\5\4\3\2\17\16\3\2\2\2\20\23\3\2\2\2\21\17\3\2\2\2\21\22\3\2"+
 		"\2\2\22\24\3\2\2\2\23\21\3\2\2\2\24\25\7\2\2\3\25\3\3\2\2\2\26\31\b\3"+
-		"\1\2\27\30\7\6\2\2\30\32\b\3\1\2\31\27\3\2\2\2\31\32\3\2\2\2\32\33\3\2"+
-		"\2\2\33\34\7\5\2\2\34\35\5\b\5\2\35\36\b\3\1\2\36\"\7\b\2\2\37!\5\6\4"+
+		"\1\2\27\30\7\3\2\2\30\32\b\3\1\2\31\27\3\2\2\2\31\32\3\2\2\2\32\33\3\2"+
+		"\2\2\33\34\7\4\2\2\34\35\5\b\5\2\35\36\b\3\1\2\36\"\7\5\2\2\37!\5\6\4"+
 		"\2 \37\3\2\2\2!$\3\2\2\2\" \3\2\2\2\"#\3\2\2\2#%\3\2\2\2$\"\3\2\2\2%&"+
-		"\7\t\2\2&\5\3\2\2\2\'(\b\4\1\2()\5\n\6\2).\b\4\1\2*+\7\3\2\2+,\5\f\7\2"+
+		"\7\6\2\2&\5\3\2\2\2\'(\b\4\1\2()\5\n\6\2).\b\4\1\2*+\7\7\2\2+,\5\f\7\2"+
 		",-\b\4\1\2-/\3\2\2\2.*\3\2\2\2./\3\2\2\2/\60\3\2\2\2\60\65\b\4\1\2\61"+
-		"\62\7\4\2\2\62\63\5\b\5\2\63\64\b\4\1\2\64\66\3\2\2\2\65\61\3\2\2\2\65"+
-		"\66\3\2\2\2\66\67\3\2\2\2\678\b\4\1\289\7\7\2\29\7\3\2\2\2:;\7\n\2\2;"+
+		"\62\7\b\2\2\62\63\5\b\5\2\63\64\b\4\1\2\64\66\3\2\2\2\65\61\3\2\2\2\65"+
+		"\66\3\2\2\2\66\67\3\2\2\2\678\b\4\1\289\7\t\2\29\7\3\2\2\2:;\7\n\2\2;"+
 		"\t\3\2\2\2<=\7\n\2\2=\13\3\2\2\2>?\7\n\2\2?\r\3\2\2\2\7\21\31\".\65";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());

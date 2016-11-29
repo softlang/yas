@@ -1,4 +1,4 @@
-// Generated from org/softlang/FsmlToObjects2.g4 by ANTLR 4.4
+// Generated from org/softlang/FsmlToObjects2.g4 by ANTLR 4.5.3
  package org.softlang; 
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
@@ -11,17 +11,13 @@ import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class FsmlToObjects2Parser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.4", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.5.3", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__6=1, T__5=2, T__4=3, T__3=4, T__2=5, T__1=6, T__0=7, NAME=8, WS=9;
-	public static final String[] tokenNames = {
-		"<INVALID>", "'/'", "'->'", "'state'", "'initial'", "';'", "'{'", "'}'", 
-		"NAME", "WS"
-	};
+		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, NAME=8, WS=9;
 	public static final int
 		RULE_fsm = 0, RULE_state = 1, RULE_transition = 2, RULE_stateid = 3, RULE_event = 4, 
 		RULE_action = 5;
@@ -29,11 +25,47 @@ public class FsmlToObjects2Parser extends Parser {
 		"fsm", "state", "transition", "stateid", "event", "action"
 	};
 
-	@Override
-	public String getGrammarFileName() { return "FsmlToObjects2.g4"; }
+	private static final String[] _LITERAL_NAMES = {
+		null, "'initial'", "'state'", "'{'", "'}'", "'/'", "'->'", "';'"
+	};
+	private static final String[] _SYMBOLIC_NAMES = {
+		null, null, null, null, null, null, null, null, "NAME", "WS"
+	};
+	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
+
+	/**
+	 * @deprecated Use {@link #VOCABULARY} instead.
+	 */
+	@Deprecated
+	public static final String[] tokenNames;
+	static {
+		tokenNames = new String[_SYMBOLIC_NAMES.length];
+		for (int i = 0; i < tokenNames.length; i++) {
+			tokenNames[i] = VOCABULARY.getLiteralName(i);
+			if (tokenNames[i] == null) {
+				tokenNames[i] = VOCABULARY.getSymbolicName(i);
+			}
+
+			if (tokenNames[i] == null) {
+				tokenNames[i] = "<INVALID>";
+			}
+		}
+	}
 
 	@Override
-	public String[] getTokenNames() { return tokenNames; }
+	@Deprecated
+	public String[] getTokenNames() {
+		return tokenNames;
+	}
+
+	@Override
+
+	public Vocabulary getVocabulary() {
+		return VOCABULARY;
+	}
+
+	@Override
+	public String getGrammarFileName() { return "FsmlToObjects2.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -50,12 +82,12 @@ public class FsmlToObjects2Parser extends Parser {
 	}
 	public static class FsmContext extends ParserRuleContext {
 		public Fsm result;
-		public StateContext state(int i) {
-			return getRuleContext(StateContext.class,i);
-		}
 		public TerminalNode EOF() { return getToken(FsmlToObjects2Parser.EOF, 0); }
 		public List<StateContext> state() {
 			return getRuleContexts(StateContext.class);
+		}
+		public StateContext state(int i) {
+			return getRuleContext(StateContext.class,i);
 		}
 		public FsmContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -82,17 +114,19 @@ public class FsmlToObjects2Parser extends Parser {
 			setState(16);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while (_la==T__4 || _la==T__3) {
+			while (_la==T__0 || _la==T__1) {
 				{
 				{
-				setState(13); state(_localctx.result);
+				setState(13);
+				state(_localctx.result);
 				}
 				}
 				setState(18);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(19); match(EOF);
+			setState(19);
+			match(EOF);
 			}
 		}
 		catch (RecognitionException re) {
@@ -144,32 +178,38 @@ public class FsmlToObjects2Parser extends Parser {
 			boolean initial = false;
 			setState(24);
 			_la = _input.LA(1);
-			if (_la==T__3) {
+			if (_la==T__0) {
 				{
-				setState(22); match(T__3);
+				setState(22);
+				match(T__0);
 				initial = true;
 				}
 			}
 
-			setState(26); match(T__4);
-			setState(27); ((StateContext)_localctx).stateid = stateid();
+			setState(26);
+			match(T__1);
+			setState(27);
+			((StateContext)_localctx).stateid = stateid();
 			String source = (((StateContext)_localctx).stateid!=null?_input.getText(((StateContext)_localctx).stateid.start,((StateContext)_localctx).stateid.stop):null);
 			_localctx.result.getStates().add(new State(source, initial));
-			setState(30); match(T__1);
+			setState(30);
+			match(T__2);
 			setState(34);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==NAME) {
 				{
 				{
-				setState(31); transition(_localctx.result, source);
+				setState(31);
+				transition(_localctx.result, source);
 				}
 				}
 				setState(36);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(37); match(T__0);
+			setState(37);
+			match(T__3);
 			}
 		}
 		catch (RecognitionException re) {
@@ -189,14 +229,14 @@ public class FsmlToObjects2Parser extends Parser {
 		public EventContext event;
 		public ActionContext action;
 		public StateidContext stateid;
+		public EventContext event() {
+			return getRuleContext(EventContext.class,0);
+		}
 		public ActionContext action() {
 			return getRuleContext(ActionContext.class,0);
 		}
 		public StateidContext stateid() {
 			return getRuleContext(StateidContext.class,0);
-		}
-		public EventContext event() {
-			return getRuleContext(EventContext.class,0);
 		}
 		public TransitionContext(ParserRuleContext parent, int invokingState) { super(parent, invokingState); }
 		public TransitionContext(ParserRuleContext parent, int invokingState, Fsm result, String source) {
@@ -222,14 +262,17 @@ public class FsmlToObjects2Parser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(39); ((TransitionContext)_localctx).event = event();
+			setState(39);
+			((TransitionContext)_localctx).event = event();
 			String action = null;
 			setState(45);
 			_la = _input.LA(1);
-			if (_la==T__6) {
+			if (_la==T__4) {
 				{
-				setState(41); match(T__6);
-				setState(42); ((TransitionContext)_localctx).action = action();
+				setState(41);
+				match(T__4);
+				setState(42);
+				((TransitionContext)_localctx).action = action();
 				action = (((TransitionContext)_localctx).action!=null?_input.getText(((TransitionContext)_localctx).action.start,((TransitionContext)_localctx).action.stop):null);
 				}
 			}
@@ -239,14 +282,17 @@ public class FsmlToObjects2Parser extends Parser {
 			_la = _input.LA(1);
 			if (_la==T__5) {
 				{
-				setState(48); match(T__5);
-				setState(49); ((TransitionContext)_localctx).stateid = stateid();
+				setState(48);
+				match(T__5);
+				setState(49);
+				((TransitionContext)_localctx).stateid = stateid();
 				target = (((TransitionContext)_localctx).stateid!=null?_input.getText(((TransitionContext)_localctx).stateid.start,((TransitionContext)_localctx).stateid.stop):null);
 				}
 			}
 
 			_localctx.result.getTransitions().add(new Transition(source, (((TransitionContext)_localctx).event!=null?_input.getText(((TransitionContext)_localctx).event.start,((TransitionContext)_localctx).event.stop):null), action, target));
-			setState(55); match(T__2);
+			setState(55);
+			match(T__6);
 			}
 		}
 		catch (RecognitionException re) {
@@ -282,7 +328,8 @@ public class FsmlToObjects2Parser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(57); match(NAME);
+			setState(57);
+			match(NAME);
 			}
 		}
 		catch (RecognitionException re) {
@@ -318,7 +365,8 @@ public class FsmlToObjects2Parser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(59); match(NAME);
+			setState(59);
+			match(NAME);
 			}
 		}
 		catch (RecognitionException re) {
@@ -354,7 +402,8 @@ public class FsmlToObjects2Parser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(61); match(NAME);
+			setState(61);
+			match(NAME);
 			}
 		}
 		catch (RecognitionException re) {
@@ -377,13 +426,13 @@ public class FsmlToObjects2Parser extends Parser {
 		"\f\2\2@\2\16\3\2\2\2\4\27\3\2\2\2\6)\3\2\2\2\b;\3\2\2\2\n=\3\2\2\2\f?"+
 		"\3\2\2\2\16\22\b\2\1\2\17\21\5\4\3\2\20\17\3\2\2\2\21\24\3\2\2\2\22\20"+
 		"\3\2\2\2\22\23\3\2\2\2\23\25\3\2\2\2\24\22\3\2\2\2\25\26\7\2\2\3\26\3"+
-		"\3\2\2\2\27\32\b\3\1\2\30\31\7\6\2\2\31\33\b\3\1\2\32\30\3\2\2\2\32\33"+
-		"\3\2\2\2\33\34\3\2\2\2\34\35\7\5\2\2\35\36\5\b\5\2\36\37\b\3\1\2\37 \b"+
-		"\3\1\2 $\7\b\2\2!#\5\6\4\2\"!\3\2\2\2#&\3\2\2\2$\"\3\2\2\2$%\3\2\2\2%"+
-		"\'\3\2\2\2&$\3\2\2\2\'(\7\t\2\2(\5\3\2\2\2)*\5\n\6\2*/\b\4\1\2+,\7\3\2"+
+		"\3\2\2\2\27\32\b\3\1\2\30\31\7\3\2\2\31\33\b\3\1\2\32\30\3\2\2\2\32\33"+
+		"\3\2\2\2\33\34\3\2\2\2\34\35\7\4\2\2\35\36\5\b\5\2\36\37\b\3\1\2\37 \b"+
+		"\3\1\2 $\7\5\2\2!#\5\6\4\2\"!\3\2\2\2#&\3\2\2\2$\"\3\2\2\2$%\3\2\2\2%"+
+		"\'\3\2\2\2&$\3\2\2\2\'(\7\6\2\2(\5\3\2\2\2)*\5\n\6\2*/\b\4\1\2+,\7\7\2"+
 		"\2,-\5\f\7\2-.\b\4\1\2.\60\3\2\2\2/+\3\2\2\2/\60\3\2\2\2\60\61\3\2\2\2"+
-		"\61\66\b\4\1\2\62\63\7\4\2\2\63\64\5\b\5\2\64\65\b\4\1\2\65\67\3\2\2\2"+
-		"\66\62\3\2\2\2\66\67\3\2\2\2\678\3\2\2\289\b\4\1\29:\7\7\2\2:\7\3\2\2"+
+		"\61\66\b\4\1\2\62\63\7\b\2\2\63\64\5\b\5\2\64\65\b\4\1\2\65\67\3\2\2\2"+
+		"\66\62\3\2\2\2\66\67\3\2\2\2\678\3\2\2\289\b\4\1\29:\7\t\2\2:\7\3\2\2"+
 		"\2;<\7\n\2\2<\t\3\2\2\2=>\7\n\2\2>\13\3\2\2\2?@\7\n\2\2@\r\3\2\2\2\7\22"+
 		"\32$/\66";
 	public static final ATN _ATN =

@@ -5,8 +5,8 @@ digraph  {
 	];
 	exception	 [shape=ellipse];
 	exception -> exception	 [label="ticket/eject"];
-	exception -> exception	 [label="mute/"];
 	exception -> exception	 [label="pass/"];
+	exception -> exception	 [label="mute/"];
 	locked	 [shape=ellipse,
 		style=filled];
 	exception -> locked	 [label="release/"];

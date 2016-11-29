@@ -1,4 +1,4 @@
-cp = -cp .:../../../lib/Java/antlr-4.4-complete.jar
+cp = -cp .:../../../lib/Java/antlr-4.5.3-complete.jar
 antlr = java ${cp} org.antlr.v4.Tool
 fsmlSyntaxChecker = java ${cp} org.softlang.FsmlSyntaxChecker
 

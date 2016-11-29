@@ -17,6 +17,17 @@ readTermFile(File, Term) :-
   ),
   close(Input).
 
+readJSONFile(File, Json) :-
+  require(
+    fileExpected(File),
+    (exists_file(File), open(File, read, Input, []))
+  ),
+  require(
+    fileWithJSONExpected(File),
+    json_read(Input, Json)
+  ),
+  close(Input).
+
 writeTextFile(File, Text) :-
   open(File, write, Output, []),
   format(Output, '~s', [Text]),
@@ -25,4 +36,9 @@ writeTextFile(File, Text) :-
 writeTermFile(File, Term) :-
   open(File, write, Output, []),
   format(Output, '~q.', [Term]),
+  close(Output).
+
+writeJSONFile(File, Json) :-
+  open(File, write, Output, []),
+  json_write(Output, Json),
   close(Output).

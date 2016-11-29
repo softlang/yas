@@ -3,10 +3,7 @@
 % Semantics of function application
 % END ...
 apply(Ds, R, InFs, OutFs, (Pred, Args)) :-
-  % Add extra arguments to predicate
-  Pred =.. [Sym|PredArgs1],
-  append(PredArgs1, Args, PredArgs2),
-  Pred2 =.. [Sym|PredArgs2],
+  Pred =.. [Sym|_],
   % Determine languages of files and read them in
   map(ueberDispatch:declaredLanguage(Ds), InFs, InLs),
   map(ueberDispatch:declaredLanguage(Ds), OutFs, OutLs),
@@ -18,10 +15,14 @@ apply(Ds, R, InFs, OutFs, (Pred, Args)) :-
   length(Expected, Len),
   length(Actual, Len),
   % Apply predicate
-  append(InArgs2, Actual, InOutArgs),
-  assume(
-    once(apply(Pred2, InOutArgs)),
-    'Overload ~w#~w(~w)->(~w): failed.',
-    [R, Pred, InFs, OutFs] ),
-  % Compare expected and actual results 
-  map(ueberEq:compare(Ds), OutFs, OutLs, Expected, Actual).
+  ueberFFI:if(
+    Sym,
+    (
+      assume(
+        once(ueberFFI:invoke(Pred, Args, InLs, OutLs, InArgs2, Actual)),
+        'Overload ~w#~w(~w)->(~w): failed.',
+        [R, Pred, InFs, OutFs] ),
+      % Compare expected and actual results 
+      map(ueberEq:compare(Ds), OutFs, OutLs, Expected, Actual)
+    )
+  ).

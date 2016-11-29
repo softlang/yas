@@ -11,22 +11,22 @@ verify(Ds, elementOf(F, L)) :-
   ueberIO:readFile(F, L, Content1),
   ueberNorm:normalize(Ds, F, L, Content1, Content2),
   \+ (
-     languageTowardsBase(L, L2),
-     member(membership(L2, Pred, Args1), Ds),
-     append(Args1, [Content2], Args2),
-     \+ assume(
-       once(apply(Pred, Args2)),
-       'File ~w element of language ~w: failed.', [F, L2] ) ).
+    languageTowardsBase(L, B),
+    member(membership(B, Pred, Args), Ds),
+    Pred =.. [Sym|_],
+    \+ assume(
+      ueberFFI:if(Sym, once(ueberFFI:invoke(Pred, Args, [L], [], [Content2], []))),
+      'File ~w element of language ~w according to ~w: failed.', [F, B, Pred] ) ).
 
 verify(Ds, notElementOf(F, L)) :- % ...
 % BEGIN ...
   ueberIO:readFile(F, L, Content),
   \+ (
-    member(membership(L, Pred, Args1), Ds),
-    append(Args1, [Content], Args2),
+    member(membership(L, Pred, Args), Ds),
+    Pred =.. [Sym|_],
     \+ assume(
-      \+ once(apply(Pred, Args2)),
-      'File ~w element of language ~w: succeeded.', [F, L] )
+      ueberFFI:if(Sym, \+ once(ueberFFI:invoke(Pred, Args, [L], [], [Content], []))),
+      'File ~w element of language ~w according to ~w: succeeded.', [F, L, Pred] )
   ).
 % END ...  
 

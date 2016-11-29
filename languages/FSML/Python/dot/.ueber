@@ -1,0 +1,4 @@
+[
+  elementOf('sample.dot', dot(text))
+].
+

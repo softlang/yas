@@ -144,7 +144,7 @@ public class EiplCheckerParser extends Parser {
 			}
 			setState(21); stmt();
 			setState(22); match(T__2);
-			 env.enterScope(); 
+			 env.exitScope(); 
 			}
 		}
 		catch (RecognitionException re) {

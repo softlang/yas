@@ -1,5 +1,5 @@
 enum State { EXCEPTION, LOCKED, UNDEFINED, UNLOCKED };
-enum Event { RELEASE, TICKET, PASS, MUTE };
+enum Event { RELEASE, TICKET, MUTE, PASS };
 
 void collect() { }
 void alarm() { }
@@ -12,8 +12,8 @@ enum State next(enum State s, enum Event e) {
     switch(e) { 
     case RELEASE: nop(); return LOCKED;
     case TICKET: eject(); return EXCEPTION;
-    case MUTE: nop(); return EXCEPTION;
     case PASS: nop(); return EXCEPTION;
+    case MUTE: nop(); return EXCEPTION;
     default: return UNDEFINED;
     }
   case LOCKED:

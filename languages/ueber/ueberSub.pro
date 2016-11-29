@@ -2,6 +2,8 @@
 languageToBase(text, text).
 languageToBase(term, term).
 languageToBase(prolog, prolog).
+languageToBase(json, json).
+languageToBase(xml, xml).
 languageToBase(X, Z) :-
   X =.. [_,Y],
   languageToBase(Y, Z).

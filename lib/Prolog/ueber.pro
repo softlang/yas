@@ -185,4 +185,3 @@ assertUDecl(X) :-
 mode(M) :-
   current_prolog_flag(argv, Argv),
   member(M, Argv).
-

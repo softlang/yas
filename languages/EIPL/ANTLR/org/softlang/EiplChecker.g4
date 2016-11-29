@@ -13,7 +13,7 @@ program : scope EOF;
 scope 
     :  { env.enterScope(); }
        'begin' decl* stmt 'end'
-       { env.enterScope(); }
+       { env.exitScope(); }
     ;
 decl
     :

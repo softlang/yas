@@ -1,5 +1,6 @@
 # BEGIN ...
-import os
+import json
+import sys
 from jinja2 import Environment, FileSystemLoader
 # END ...
 def generateC(fsm, file):
@@ -32,3 +33,10 @@ def generateC(fsm, file):
                 transitions = transitions)
         # Persist output
         open("generated/"+file+".c","w").write(fsmFile)
+
+def main():
+    fsm = json.load(open(sys.argv[1], 'r'))
+    generateC(fsm, "Turnstile")
+    
+if __name__ == '__main__':
+    main()

@@ -1,5 +1,6 @@
 # BEGIN ...
-import os
+import json
+import sys
 from jinja2 import Environment, FileSystemLoader
 # END ...
 def generatePython(fsm):
@@ -25,3 +26,10 @@ def generatePython(fsm):
         # Persist output
         open("generated/Handler.py","w").write(handlerClass)
         open("generated/Stepper.py","w").write(stepperClass)
+
+def main():
+    fsm = json.load(open(sys.argv[1], 'r'))
+    generatePython(fsm)
+    
+if __name__ == '__main__':
+    main()

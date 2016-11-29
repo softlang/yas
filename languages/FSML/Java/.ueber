@@ -1,0 +1,3 @@
+[
+  membership(fsml(text), java('org.softlang.FsmlAcceptor'), [.])
+].

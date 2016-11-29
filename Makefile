@@ -39,6 +39,14 @@ override:
 force:
 	@swipl -q -f main.pro -- create override verbose
 
+# run FFI-based code, too
+ffi:
+	@swipl -q -f main.pro -- ffi
+
+# run verbose FFI-based code, too
+verbose-ffi:
+	@swipl -q -f main.pro -- ffi verbose
+
 # Broken, old tests; still some porting needed
 test-old:
 	make prelude.test

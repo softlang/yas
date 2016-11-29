@@ -12,8 +12,8 @@ class Stepper(FsmlStepper):
         self.add("unlocked", "ticket", "eject", "unlocked")
         self.add("locked", "pass", "alarm", "exception")
         self.add("locked", "ticket", "collect", "unlocked")
-        self.add("exception", "pass", "", "exception")
         self.add("exception", "mute", "", "exception")
+        self.add("exception", "pass", "", "exception")
         self.add("exception", "ticket", "eject", "exception")
         self.add("exception", "release", "", "locked")
         
