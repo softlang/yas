@@ -11,11 +11,12 @@ overloads(Ds, R, InFs, OutFs, Overloads2) :-
       member((Pred1, Args1, InLs1, OutLs1), Overloads1),
       \+ (
           member((Pred2, Args2, InLs2, OutLs2), Overloads1),
-	  \+ (InLs1, OutLs1) == (InLs2, OutLs2),
-	  map(languageTowardsBase, InLs2, InLs1),
-	  map(languageTowardsBase, OutLs2, OutLs1) )),
+          \+ (InLs1, OutLs1) == (InLs2, OutLs2),
+          map(languageTowardsBase, InLs2, InLs1),
+          map(languageTowardsBase, OutLs2, OutLs1) )),
     Overloads2 ).
-  
+% ...
+% BEGIN ...  
 % A file's language as declared
 declaredLanguage(Ds, F, L) :-
   member(elementOf(F, L), Ds).
@@ -24,3 +25,4 @@ declaredLanguage(Ds, F, L) :-
 inferredLanguage(Ds, F, L2) :-
   declaredLanguage(Ds, F, L1),
   languageTowardsBase(L1, L2).
+% END ...

@@ -1,3 +1,4 @@
+% ...
 % BEGIN ...
 :- module(ueberOk, []).
 ok(_, language(L)) :-
@@ -10,7 +11,6 @@ ok(Ds, D) :-
   ; D = equivalence(L, _, _)
   ; D = normalization(L, _, _)),
   assumeLanguage(Ds, L).
-% END ...
 
 ok(Ds, elementOf(F, L)) :-
   assumeMembership(Ds, L),
@@ -20,6 +20,7 @@ ok(Ds, function(_, InLs, OutLs, _, _)) :-
   map(ueberOk:assumeLanguage(Ds), InLs),
   map(ueberOk:assumeLanguage(Ds), OutLs).
 
+% END ...
 ok(Ds, mapsTo(R, InFs, OutFs)) :-
   assume(
     member(function(R, _, _, _, _), Ds),

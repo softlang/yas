@@ -1,0 +1,4 @@
+{
+  "bits": ["one", "zero", "one"],
+  "rest": ["zero", "one"]
+}

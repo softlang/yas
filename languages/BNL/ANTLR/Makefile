@@ -2,6 +2,7 @@ cp = -cp .:../../../lib/Java/antlr-4.4-complete.jar
 antlr = java ${cp} org.antlr.v4.Tool
 BnlBnfSyntaxChecker = java ${cp} org.softlang.BnlBnfSyntaxChecker
 BnlEbnfSyntaxChecker = java ${cp} org.softlang.BnlEbnfSyntaxChecker
+BnlEbnfAcceptor = java ${cp} org.softlang.BnlEbnfAcceptor
 BnlBnfConversion = java ${cp} org.softlang.BnlBnfConversion
 BnlEbnfConversion = java ${cp} org.softlang.BnlEbnfConversion
 
@@ -22,6 +23,7 @@ compile:
 test:
 	${BnlBnfSyntaxChecker} ../samples/5comma25.bnl 0
 	${BnlEbnfSyntaxChecker} ../samples/5comma25.bnl 0
+	${BnlEbnfAcceptor} ../samples/5comma25.bnl
 	${BnlBnfConversion} ../samples/5comma25.bnl 5.25
 	${BnlEbnfConversion} ../samples/5comma25.bnl 5.25
 

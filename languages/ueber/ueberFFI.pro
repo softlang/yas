@@ -1,34 +1,43 @@
+% ...
+% BEGIN ...
 % Foreign Function Interface of YAS with support of Java, Python, and Haskell
-
 :- module(ueberFFI, []).
+% END ...
+% Supported FFI languages
+ffi_language(java).
+ffi_language(python).
+ffi_language(haskell).
 
-language(java).
-language(python).
-language(haskell).
-
+% Test a predicate to be foreign
+ffi_call(Pred) :- Pred =.. [Sym|_], ffi_language(Sym).
+% BEGIN ...
 %
 % Conditional execution:
 % a) execute non-FFI code
 % b) execute FFI code, if in FFI mode
 %
 if(F, G) :-
-    ( \+ language(F), call(G)
-    ; language(F), mode(ffi), call(G)
-    ; language(F), \+ mode(ffi)		  
+    ( \+ ffi_language(F), call(G)
+    ; ffi_language(F), mode(ffi), call(G)
+    ; ffi_language(F), \+ mode(ffi)		  
     ).  
+% END ...
 
-%
-% Apply predicate or FFI function T to arguments L
-%
+% Invoke functionality
 invoke(Pred, Args, InLs, OutLs, InArgs, OutArgs) :-
-    Pred =.. [Sym|_],
-    ( member(Sym, [java, python, haskell]) ->
-          apply(Pred, [Args, InLs, OutLs, InArgs, OutArgs])
+    \+ ffi_call(Pred) ->
+        % Apply Prolog predicate right away on content
+        concat([Args, InArgs, OutArgs], AllArgs),
+        apply(Pred, AllArgs)
     ;
-          concat([Args, InArgs, OutArgs], AllArgs),
-          apply(Pred, AllArgs)
-    ).
-
+	% Handle different FFI languages by CLI and temporary files
+        % ...
+% BEGIN ...
+        apply(Pred, [Args, InLs, OutLs, InArgs, OutArgs])
+% END ...
+        .
+% ...
+% BEGIN ...
 
 %
 % FFI for Java
@@ -121,3 +130,4 @@ tmpFilename(L, F) :-
     N2 is N1 + 1,
     nb_setval(tmp, N2),
     atomic_list_concat(['tmp', '/', N1, '.', B], F).
+% END ...
