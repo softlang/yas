@@ -6,8 +6,8 @@
   elementOf('5comma25.formula', bnl(formula(term))),
   elementOf('5comma25.value', bnl(value(term))),
 
-  % Solve symbolic representation
-  mapsTo(solve, ['5comma25.formula'], ['5comma25.value']),
+  % Evaluate symbolic representation
+  mapsTo(evaluate, ['5comma25.formula'], ['5comma25.value']),
   
   % DCG-based evaluators
   mapsTo(evaluate, ['5comma25.tokens'], ['5comma25.value']),

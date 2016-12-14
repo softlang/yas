@@ -10,8 +10,7 @@
 :- ['lib/Prolog/data.pro'].
 :- ['lib/Prolog/assoc.pro'].
 :- ['lib/Prolog/higher-order.pro'].
-:- ['lib/Prolog/strategyBasics.pro'].
-:- ['lib/Prolog/strategySchemes.pro'].
+:- ['lib/Prolog/strategies.pro'].
 :- ['lib/Prolog/logvars.pro'].
 :- ['lib/Prolog/generics.pro'].
 :- ['lib/Prolog/io.pro'].
@@ -22,5 +21,5 @@
 
 % UEBER-based processing of all code
 :- init.
-:- preprocess(languages), ueberRun.
-:- mode(session); halt.
+:- preprocess(languages).
+:- mode(session) -> true; ueberRun, halt.

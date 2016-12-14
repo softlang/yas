@@ -15,7 +15,8 @@
     macro(parseFile('right-associated.el')),
 
     % Rewriting options
-    function(rewrite, [el(term)], [el(term)], elRewrite:rewrite, []),
+    function(simplify, [el(term)], [el(term)], elSimplify:(~>), []),
+    function(simplify, [el(term)], [el(term)], elqqSimplify:(~>), []),
     function(try, [el(term)], [el(term)], elRewrite:try, []),
     function(vtry, [el(term)], [el(term)], elRewrite:vtry, []),
     function(fulltd, [el(term)], [el(term)], elRewrite:fulltd, []),
@@ -23,7 +24,7 @@
     function(innermost, [el(term)], [el(term)], elRewrite:innermost, []),
 
     % Testing rewriting
-    mapsTo(rewrite, ['top-unit.term'], ['a.term']),
+    mapsTo(simplify, ['top-unit.term'], ['a.term']),
     mapsTo(try, ['a.term'], ['a.term']),
     mapsTo(try, ['needs-commute.term'], ['needs-commute.term']),
     mapsTo(vtry, ['needs-commute.term'], ['a.term']),

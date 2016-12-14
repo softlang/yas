@@ -10,7 +10,7 @@ overloads(Ds, R, InFs, OutFs, Overloads2) :-
   findall( (Pred1, Args1), (
       member((Pred1, Args1, InLs1, OutLs1), Overloads1),
       \+ (
-          member((Pred2, Args2, InLs2, OutLs2), Overloads1),
+          member((_, _, InLs2, OutLs2), Overloads1),
           \+ (InLs1, OutLs1) == (InLs2, OutLs2),
           map(languageTowardsBase, InLs2, InLs1),
           map(languageTowardsBase, OutLs2, OutLs1) )),

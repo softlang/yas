@@ -20,7 +20,7 @@ declToName(constant(N, _), constant, N).
 declToName(axiom([N], _), axiom, N).
 
 % Well-formedess of types
-type(Ds, ref(N)).
+type(_, ref(_)).
 type(Ds, star(T)) :- type(Ds, T).
 type(Ds, product(Ts)) :- map(lalOk:type(Ds), Ts).
 
@@ -107,7 +107,7 @@ formula(Ds, M, ifthen(F1, F2)) :-
 bind(Ds, bindv(N), T, M, [(N, T)|M]) :-
     \+ member((N, _), M),
     \+ member(constant(N, _), Ds).
-bind(Ds, bindt([]), product([]), M, M).
+bind(_, bindt([]), product([]), M, M).
 bind(Ds, bindt([V|Vs]), product([T|Ts]), M1, M3) :-
     bind(Ds, V, T, M1, M2),
     bind(Ds, bindt(Vs), product(Ts), M2, M3).

@@ -1,0 +1,10 @@
+// The same rules as before
+// ...
+// BEGIN ...
+metavar : '$' upper { csym }* ;
+identifier : { lower }+ ;
+integer : { digit }+ ;
+layout : { space }+ ;
+// END ...
+metavar : '$' upper { csym }* ;
+metavar : '$' '_' { csym }* ;

@@ -3,7 +3,6 @@ processLal(TextF) :-
   file_name_extension(Base, 'term', TermF),
   file_name_extension(Base, 'deps', TermD),
   file_name_extension(Base, 'term2', TermF2),
-  file_name_extension(Base, 'ppl', PplF),
   file_name_extension(Base, 'lal2', TextF2),
   ueber([
     macro(parseFile(TextF)),

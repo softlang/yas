@@ -1,0 +1,1 @@
+[ (true,closed,[ (ticket,[collect],open), (pass,[alarm],exception)]), (false,open,[ (ticket,[eject],open), (pass,[],closed)]), (false,exception,[ (ticket,[eject],exception), (pass,[],exception), (mute,[],exception), (release,[],closed)])].

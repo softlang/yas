@@ -58,8 +58,13 @@ option(_, []).
 option(P, [X]) :- apply(P, [X]).
 
 % Map a function-like predicate over a list
-map(_, [], []).
-map(P, [H1|T1], [H2|T2]) :- apply(P, [H1, H2]), map(P, T1, T2).
+map(P, L1, L2) :-
+    ( L1 = [H1|T1], L2 = [H2|T2] ) ->
+	apply(P, [H1, H2]),
+	map(P, T1, T2)
+    ;
+        L1 = [],
+        L2 = [].
 
 % More cardinalites for map
 map(_, [], [], []).
@@ -148,7 +153,13 @@ foldl(F, U, [H|T], Z) :-
   foldl(F, Y, T, Z).
 
 % Right-associative list fold
-foldr(_, X, [], X).
-foldr(F, X, [H|T], Z) :- 
-  foldr(F, X, T, Y), 
-  apply(F, [H, Y, Z]).
+foldr(F, X, L, Z) :-
+  L = [H|T] -> 
+    foldr(F, X, T, Y), 
+    apply(F, [H, Y, Z])
+  ;
+    L = [],
+    Z = X.
+
+% Addition as a predicate
+add(X, Y, Z) :- Z is X + Y.

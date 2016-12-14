@@ -1,6 +1,0 @@
-% BEGIN ...
-:- module(btlSmallstep, []).
-:- use_module('smallstep.pro', [step/2]).
-% END ...
-steps(E, E) :- isValue(E).
-steps(E1, E3) :- step(E1, E2), steps(E2, E3).

@@ -15,7 +15,7 @@ scope((Ds, Stm), L1, Ps1, Vs1) :-
 check(skip, _, _, _). 
 
 % An assignment modifies the store
-check(assign(N, E), L, _, Vs) :-
+check(assign(N, E), _, _, Vs) :-
   typeOf(Vs, E, T), 
   lookup1st(N, Vs, (_, T)).
 
@@ -55,7 +55,7 @@ declare(L, [D|Ds], Ps1, Ps3, Vs1, Vs3) :-
 % Declare a variable
 declare(L, var(N, E), Ps, Ps, Vs1, Vs2) :-
   \+ lookup1st(N, Vs1, (L, _)),
-  typeOf(Vs, E, T),
+  typeOf(Vs1, E, T),
   prepend(N, (L, T), Vs1, Vs2).
 
 % Declare a procedure
@@ -78,6 +78,6 @@ typeOf(Vs, binary(O, E1, E2), T0) :-
 
 % Types of binary operators
 binop(add, int, int, int).
-binop(sub, int, int, int.
+binop(sub, int, int, int).
 binop(mul, int, int, int).
 binop(geq, int, int, bool).

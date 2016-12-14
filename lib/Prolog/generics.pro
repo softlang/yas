@@ -1,3 +1,5 @@
+:- ['generics/count.pro'].
+    
 % Generic traversal to collect a list by extraction from each subterm
 collect(Pred, Term, List0) :-
   ( apply(Pred, [Term, List1]) -> true; List1 = [] ),

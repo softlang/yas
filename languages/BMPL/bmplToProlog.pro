@@ -4,7 +4,7 @@ main(Rs, T) :-
     % Retrieve output file's basename for use as module's name
     nb_getval(current, mapsTo(_, _, [F])),
     file_base_name(F, BaseExt),
-    file_name_extension(Base, Ext, BaseExt),
+    file_name_extension(Base, _Ext, BaseExt),
     B = hlist([text(':- module('), text(Base), text(', []).')]),
 
     % Map BRL rules to Prolog clauses

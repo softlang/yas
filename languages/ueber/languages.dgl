@@ -16,10 +16,10 @@ digraph G {
   15 [label="bnl(tokens(term))", shape=ellipse, style=filled]
   16 [label="bnl(bcl(term))", shape=ellipse, style=filled]
   17 [label="bnl(term)", shape=ellipse, style=filled]
-  18 [label="bnl(value(term))", shape=ellipse, style=filled]
-  19 [label="bnl(formula(term))", shape=ellipse, style=filled]
-  20 [label="yabnl(text)", shape=ellipse, style=filled]
-  21 [label="yabnl(term)", shape=ellipse, style=filled]
+  18 [label="yabnl(text)", shape=ellipse, style=filled]
+  19 [label="yabnl(term)", shape=ellipse, style=filled]
+  20 [label="bnl(value(term))", shape=ellipse, style=filled]
+  21 [label="bnl(formula(term))", shape=ellipse, style=filled]
   22 [label="bsl(text)", shape=ellipse, style=filled]
   23 [label="bsl(term)", shape=ellipse, style=filled]
   24 [label="tuple(term)", shape=ellipse, style=filled]
@@ -123,10 +123,10 @@ digraph G {
   15 -> 89
   16 -> 1
   17 -> 53
-  18 -> 90
-  19 -> 91
-  20 -> 96
-  21 -> 53
+  18 -> 96
+  19 -> 53
+  20 -> 90
+  21 -> 91
   22 -> 96
   23 -> 53
   24 -> 53

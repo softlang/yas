@@ -18,4 +18,4 @@ steps(Rules, Stack0, Input) :-
   append(RhsRev, Stack1, Stack0), % Remove a prefix from the stack
   reverse(RhsRev, Rhs),  
   member((_, N, Rhs), Rules), % Find the prefix as the RHS of a rule
-  steps(Rules, [n(N)|Stack], Input). % Proceed with revised stack
+  steps(Rules, [n(N)|Stack1], Input). % Proceed with revised stack

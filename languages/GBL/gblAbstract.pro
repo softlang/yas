@@ -1,8 +1,7 @@
- BEGIN ...
+% BEGIN ...
 :- module(gblAbstract, []).
 
 % END ...
-world:EslPersons => { class : world, persons : Persons } :-
-  map(gblAbstract:(=>), TreePersons, TreePersons).
-
+world:Persons1 => { class : world, persons : Persons2 } :-
+  map(gblAbstract:(=>), Persons1, Persons2).
 

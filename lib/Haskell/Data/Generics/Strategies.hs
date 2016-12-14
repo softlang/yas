@@ -21,6 +21,7 @@ stoptd s = s `choice` all (stoptd s)
 oncetd s = s `choice` one (oncetd s)
 oncebu s = one (oncebu s) `choice` s
 innermost s = repeat (oncebu s)
+
 -- Basic strategy combinators
 s1 `sequ` s2 = \x -> s1 x >>= s2 -- monadic function composition
 s1 `choice` s2 = \x -> s1 x `mplus` s2 x -- monadic choice
@@ -32,10 +33,12 @@ one = -- ...
 -- BEGIN ...
   gmapMo
 -- END ...
+
 -- Helper strategy combinators
 try s = s `choice` return -- recover from failure
-vary v s = s `choice` (v `sequ` s) -- preprocess term, if necessary 
+vary s v = s `choice` (v `sequ` s) -- preprocess term, if necessary 
 repeat s = try (s `sequ` repeat s) -- repeat strategy until failure
+
 -- Strategy builders
 orFail f = const mzero `extM` f -- fail for all other types
 orSucceed f = return `extM` f' -- id for all other types

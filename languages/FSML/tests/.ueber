@@ -10,5 +10,9 @@
   elementOf('illegalSymbol.input', term),
   elementOf('infeasibleSymbol.input', term),
   relatesTo(notAcceptFsm, ['../sample.term', 'illegalSymbol.input']),
-  relatesTo(notAcceptFsm, ['../sample.term', 'infeasibleSymbol.input'])
+  relatesTo(notAcceptFsm, ['../sample.term', 'infeasibleSymbol.input']),
+  function(rename, [term, fsml(term)], [fsml(term)], fsmlRename:rename, []),
+  elementOf('renaming.term', term),
+  macro(well_formed('sampleRenamed.fsml')),
+  mapsTo(rename, ['renaming.term', '../sample.term'], ['sampleRenamed.term'])
 ].

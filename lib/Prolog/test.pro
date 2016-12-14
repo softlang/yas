@@ -16,6 +16,8 @@ initTesting :-
   nb_setval(fail, 0),
   nb_setval(problems, 0).
 
+:- initTesting.
+
 reportTesting :-
   nb_getval(true, Trues),
   nb_getval(fail, Fails),

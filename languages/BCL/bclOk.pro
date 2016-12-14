@@ -13,7 +13,8 @@ conformsTo(fork(R, Ts), G) :-
 % Conformance of a CST to a grammar symbol
 treeVersusSymbol(_, leaf(T), t(T)).
 treeVersusSymbol(G, fork(R, Ts), n(N)) :-
-    member((_, N, Ss), G),
+    member(R, G),
+    R = (_, N, Ss),
     treesVersusSymbols(G, Ts, Ss).
 
 % Conformance of a list of CSTs to a list of grammar symbols

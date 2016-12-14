@@ -1,0 +1,24 @@
+[
+  % DCG-based acceptor
+  membership(bnl(tokens(term)), dcgAcceptor(bnlAcceptor:number), []),
+
+  % Languages for results
+  language(bnl(value(term))),
+  membership(bnl(value(term)), number, []),
+  language(bnl(formula(term))),
+  membership(bnl(formula(term)), bnlFormula:formula, []),
+	  
+  % DCG-based operations
+  function(parse,[bnl(tokens(term))],[bnl(term)],dcgParser(bnlParser:number),[]),
+  function(evaluate, [bnl(tokens(term))], [bnl(value(term))], dcgParser(bnlTextToValue:number), []),
+  function(evaluate, [bnl(tokens(term))], [bnl(value(term))], dcgParser(bnlTextToValueS:number), []),
+  function(convert, [bnl(tokens(term))], [bnl(formula(term))], dcgParser(bnlTextToFormula:number), []),
+
+  % AST-based evaluators
+  function(evaluate, [bnl(term)], [bnl(value(term))], bnlTermToValue:number, []),
+  function(evaluate, [bnl(term)], [bnl(value(term))], bnlTermToValueS:number, []),
+  function(convert, [bnl(term)], [bnl(formula(term))], bnlTermToFormula:number, []),
+
+  % Evaluation of formulae
+  function(evaluate, [bnl(formula(term))], [bnl(value(term))], bnlEvaluator:evaluate, []) 
+].

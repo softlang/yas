@@ -42,3 +42,8 @@ writeJSONFile(File, Json) :-
   open(File, write, Output, []),
   json_write(Output, Json),
   close(Output).
+
+dcgAcceptor(G, X) :- apply(G, [X, []]).
+
+dcgParser(G, X, Y) :- apply(G, [Y, X, []]).
+

@@ -13,7 +13,7 @@ person(Ps, Id&P1, Id&P2) :- person(Ps, P1, P2).
 person(Ps, P1, P2) :-
   lookup(buddy, P1, Buddy),
   ( Buddy = [Name] ->
-      ( member(Id&P3, Ps),
-        lookup(name, P3, Name),
-        update(buddy, [#Id], P1, P2) ) ;
-      P2 = P1 ).
+       ( member(Id&P3, Ps),
+         lookup(name, P3, Name),
+         update(buddy, [#Id], P1, P2) )
+     ; P2 = P1 ).

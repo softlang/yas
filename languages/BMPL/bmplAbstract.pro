@@ -1,7 +1,7 @@
 :- module(bmplAbstract, []).
 
 % Context-free mapping for compound terms
-(_, functor(F, [(E, Es)])) ~> functor(F, [E|Es]).
+(expr, functor(F, [(E, Es)])) ~> functor(F, [E|Es]).
 
 % Lexical mapping for strings
 (string, (_, String, _)) ~> Atom :-
@@ -18,3 +18,6 @@
 % Lexical mapping for variables
 (var, (Char, String)) ~> Atom :-
     name(Atom, [Char|String]).
+(var, String) ~> Atom :-
+    is_list(String),
+    name(Atom, [0'_|String]).

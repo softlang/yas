@@ -1,6 +1,5 @@
 % BEGIN ...
 :- module(fsmlConstraints, []).
-
 % END ...
 % Wellness of FSMs
 ok(Fsm) :-
