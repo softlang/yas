@@ -1,5 +1,4 @@
-// The same rules as before
-// ...
+// ... // The EL rules
 // BEGIN ...
 [or] expr : bexpr { '||' expr }? ;
 [and] bexpr : cexpr { '&&' bexpr }? ;
@@ -17,4 +16,4 @@
 [var] factor : identifier ;
 [brackets] factor : '(' expr ')' ;
 // END ...
-[metavar] factor : metavar ; // An additional choice in parsing
+[metavar] factor : metavar ; // An expression form for meta-variables

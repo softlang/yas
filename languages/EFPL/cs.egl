@@ -1,16 +1,16 @@
 // Program = functions + main expression
 program : { function }* main ;
 function : { funsig }? fundef ;
-funsig : name '::' type ;
+funsig : name '::' texpr ;
 fundef : name { name }* '=' expr ;
 main : 'main' '=' 'print' '$' expr ;
 
-// Types
-[fun] type : typepart { '->' type }? ;
+// Type expressions
+[fun] texpr : typepart { '->' texpr }? ;
 [int] typepart : 'Int' ;
 [bool] typepart : 'Bool' ;
 [typevar] typepart : name ;
-[brackettype] typepart : '(' type ')' ;
+[brackettype] typepart : '(' texpr ')' ;
 
 // Expressions
 [unary] expr : uop subexpr subexpr ;

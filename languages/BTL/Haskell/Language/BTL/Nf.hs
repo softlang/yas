@@ -13,9 +13,9 @@ isBool _ = False
 -- Natural numbers
 isNat :: Expr -> Bool
 isNat Zero = True
-isNat (Succ t) = isNat t
+isNat (Succ e) = isNat e
 isNat _ = False
 
 -- Values
 isValue :: Expr -> Bool
-isValue t = isBool t || isNat t
+isValue e = isBool e || isNat e

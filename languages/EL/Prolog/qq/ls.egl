@@ -1,10 +1,9 @@
-// The same rules as before
-// ...
+// ... // The EL rules
 // BEGIN ...
 metavar : '$' upper { csym }* ;
 identifier : { lower }+ ;
 integer : { digit }+ ;
 layout : { space }+ ;
 // END ...
-metavar : '$' upper { csym }* ;
-metavar : '$' '_' { csym }* ;
+metavar : '$' upper { csym }* ; // Regular metavariables
+metavar : '$' '_' { csym }* ; // Anonymous metavariables

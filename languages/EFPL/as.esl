@@ -1,12 +1,12 @@
 // Program = typed functions + main expression
 type program = function* # expr ;
-type function = string # type? # string* # expr ;
+type function = string # texpr? # string* # expr ;
 
-// Types
-symbol int : -> type ;
-symbol bool : -> type ;
-symbol fun : type # type -> type ;
-symbol typevar : string -> type ;
+// Type expressions
+symbol int : -> texpr ;
+symbol bool : -> texpr ;
+symbol fun : texpr # texpr -> texpr ;
+symbol typevar : string -> texpr ;
 
 // Expressions
 symbol intconst : integer -> expr ;
@@ -17,14 +17,15 @@ symbol unary : uop # expr -> expr ;
 symbol binary : bop # expr # expr -> expr ;
 symbol apply : expr # expr* -> expr ;
 
+// Unary and binary operators
+// ...
+// BEGIN ...
 // Unary operators
 symbol negate : -> uop ;
 symbol not : -> uop ;
 
 // Binary operators
 symbol add : -> bop ;
-// ...
-// BEGIN ...
 symbol sub : -> bop ;
 symbol mul : -> bop ;
 symbol lt : -> bop ;
@@ -33,6 +34,5 @@ symbol eq : -> bop ;
 symbol geq : -> bop ;
 symbol gt : -> bop ;
 symbol and : -> bop ;
-// END ...
 symbol or : -> bop ;
-symbol apply : expr # expr* -> expr ;
+// END ...

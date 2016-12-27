@@ -3,19 +3,19 @@
 
 % END ...
 % Map blocks to sequential composition
-(_, block(Ss)) ~> S :- block(Ss) ~> S.
+(stmt, block(Ss)) ~> S :- block(Ss) ~> S.
 block([]) ~> skip.
 block([S]) ~> S.
 block([S1,S2|Ss]) ~> seq(S1, S3) :- block([S2|Ss]) ~> S3.
 
 % Making optional else part mandatory
-(_, if(E, S, [])) ~> if(E, S, skip).
-(_, if(E, S1, [S2])) ~> if(E, S1, S2).
-
-% Eliminate bracketing
-(_, brackets(E)) ~> E.
+(stmt, if(E, S, [])) ~> if(E, S, skip).
+(stmt, if(E, S1, [S2])) ~> if(E, S1, S2).
 % ...
 % BEGIN ...
+% Eliminate bracketing
+(factor, brackets(E)) ~> E.
+
 % Make unary expressions abstract
 (factor, E1) ~> E2 :-
   member(F, [negate, not]),

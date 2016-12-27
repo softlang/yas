@@ -1,5 +1,5 @@
 [
-  macro(parseFile('sample-with-signatures.efpl')),
-  macro(parseFile('sample-without-signatures.efpl')),
-  macro(parseFile('sample-without-polymorphism.efpl'))
+  macro(parseFile('sample.efpl')),
+  macro(parseFile('sample-past-inference.efpl')),
+  macro(parseFile('sample-past-specialization.efpl'))
 ].

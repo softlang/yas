@@ -1,7 +1,9 @@
 -- The decrement function
+-- dec :: Int -> Int
 dec x = (-) x 1
 
 -- The factorial function
+-- factorial :: Int -> Int
 factorial x =
   if (==) x 0
     then 1

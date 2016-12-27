@@ -2,20 +2,20 @@
 :- module(bglAcceptBottomUp, []).
 
 % END ... 
-accept(Rules, Input) :-
-  steps(Rules, [], Input). % Begin with empty stack
+accept(G, I) :-
+  steps(G, [], I). % Begin with empty stack
 
 % Acceptance completed for start symbol on stack
-steps(Rules, [n(Root)], []) :-
-  Rules = [(_, Root, _)|_]. % Identify start symbol
+steps(G, [n(Root)], []) :-
+  G = [(_, Root, _)|_]. % Identify start symbol
 
 % Shift terminal from input to stack
-steps(Rules, Stack, [T|Input0]) :-
-  steps(Rules, [t(T)|Stack], Input0). % Proceed with revised stack
+steps(G, Z, [T|I0]) :-
+  steps(G, [t(T)|Z], I0). % Proceed with revised stack
 
 % Reduce prefix on stack to nonterminal
-steps(Rules, Stack0, Input) :-
-  append(RhsRev, Stack1, Stack0), % Remove a prefix from the stack
+steps(G, Z0, I) :-
+  append(RhsRev, Z1, Z0), % Remove a prefix from the stack
   reverse(RhsRev, Rhs),  
-  member((_, N, Rhs), Rules), % Find the prefix as the RHS of a rule
-  steps(Rules, [n(N)|Stack1], Input). % Proceed with revised stack
+  member((_, N, Rhs), G), % Find the prefix as the RHS of a rule
+  steps(G, [n(N)|Z1], I). % Proceed with revised stack

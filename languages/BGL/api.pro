@@ -34,15 +34,15 @@ bglBottomUpAcceptor(Pred, File, Input1)
     bglBottomUpAcceptor(File, Input2).
 
 % BGL-based imploder for parse trees
-bglImploder(Input, Output)
+cstToAst(Input, Output)
  :-
-    apply(implode:(=>), [Input, Output]).
+    apply(cstToAst:(~>), [Input, Output]).
 
 % BGL-based exploder for parse trees
-bglExploder(File, Input, Output)
+astToCst(File, Input, Output)
  :-
     readTermFile(File, Grammar),
-    apply(explode:(=>), [(Grammar, Input), Output]).
+    apply(astToCst:(~>), [(Grammar, Input), Output]).
  
 % BGL-based top-down parser for token sequences
 bglParser(File, Text, Term) :-
@@ -52,7 +52,7 @@ bglTopDownParser(File, Text, Term)
  :-
     readTermFile(File, Grammar),
     once(bglParseTopDown:parse(Grammar, Text, PTree)),
-    apply(implode:(=>), [PTree, Term]).
+    apply(cstToAst:(~>), [PTree, Term]).
 
 % BGL-based top-down parser with scanner
 bglParser(Pred, File, Text1, Term) :-

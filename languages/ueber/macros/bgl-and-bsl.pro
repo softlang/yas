@@ -27,7 +27,7 @@ basicSyntax(L) :-
     function(scan, [TextL], [TokensL], S, []),
     function(parse, [TokensL], [TermL], bglParser, ['cs.term']),
     function(parse, [TextL], [TermL], bglParser(S), ['cs.term']),
-    function(implode, [TreeL], [TermL], bglImploder, []),
-    function(explode, [TermL], [TreeL], bglExploder, ['cs.term']),
+    function(cstToAst, [TreeL], [TermL], cstToAst, []),
+    function(astToCst, [TermL], [TreeL], astToCst, ['cs.term']),
     function(unparse, [TreeL], [TokensL], bglTreeToTokens, []),
     function(unparse, [TreeL], [TextL], bglTreeToText, []) ]).

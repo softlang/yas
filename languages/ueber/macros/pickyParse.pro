@@ -16,8 +16,8 @@ parseFilePickily(TextF) :-
     macro(fxy(parse, TextF, TextL, TermF, TermL)),
     macro(fxy(unparse, TreeF, TreeL, TokensF, TokensL)),
     macro(fxy(unparse, TreeF, TreeL, TextF, TextL)),
-    macro(fxy(implode, TreeF, TreeL, TermF, TermL)),
-    macro(fxy(explode, TermF, TermL, TreeF, TreeL))
+    macro(fxy(cstToAst, TreeF, TreeL, TermF, TermL)),
+    macro(fxy(astToCst, TermF, TermL, TreeF, TreeL))
   ]).
 % BEGIN ...
 % Use a default sample file for a language

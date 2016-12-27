@@ -6,6 +6,12 @@ setEq(S1, S2) :-
   subset(S1, S2),
   subset(S2, S1).
 
+% Projection for tuples
+project(1, (X, _), X).
+project(2, (_, X), X).
+project(3, (_, _, X), X).
+project(4, (_, _, _, X), X).
+
 % Convert a list into a tuple
 list2tuple(Empty, [], Empty).
 list2tuple(_, X, Y) :-

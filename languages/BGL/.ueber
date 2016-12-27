@@ -2,7 +2,7 @@
   language(bgl(text)),
   membership(bgl(text), elementOfBgl, []),
   function(parse, [bgl(text)], [bgl(term)], parserOfBgl, []),
-  function(project, [bgl(term)], [bsl(term)], bglToBsl:(=>), []),
+  function(project, [bgl(term)], [bsl(term)], bglToBsl:(~>), []),
   function(acceptBottomUp, [bgl(term), term], [], bglAcceptBottomUp:accept, []),
   function(acceptTopDown, [bgl(term), term], [], bglAcceptTopDown:accept, []),
   function(parseTopDown, [bgl(term), term], [term], bglParseTopDown:parse, []),

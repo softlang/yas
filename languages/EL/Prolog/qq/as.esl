@@ -1,5 +1,4 @@
-// The same syntax as before
-// ...
+// ... // The EL symbols
 // BEGIN ...
 // Expressions
 symbol intconst : integer -> expr ;
@@ -8,7 +7,7 @@ symbol var : string -> expr ;
 symbol unary : uop # expr -> expr ;
 symbol binary : bop # expr # expr -> expr ;
 // END ...
-symbol metavar : string -> expr ; // An additional symbol for the abstract syntax
+symbol metavar : string -> expr ; // An expression form for meta-variables
 // BEGIN ...
 // Unary operators
 symbol negate : -> uop ;

@@ -1,7 +1,6 @@
 % BEGIN ...
 :- module(bnlAcceptor, []).
 % END ...
-accept(X) :- number(X, []).
 number --> bits, rest.
 bits --> bit.  
 bits --> bit, bits.
