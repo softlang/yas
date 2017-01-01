@@ -4,7 +4,7 @@ module Language.BFPL.Specializer where
 import Language.BFPL.Syntax
 import Language.BFPL.Domains
 import Language.BFPL.Interpreter (uop, bop)
-import Language.BFPL.Inliner (exprToValue, valueToExpr, getValue, isValue)
+import Language.BFPL.Inliner (exprToValue, valueToExpr)
 import Data.Map (Map, lookup, empty, fromList)
 import Data.Tuple
 import Data.Maybe
@@ -53,15 +53,14 @@ peval (fs, e) = swap (runState (f e empty) [])
       let das = [ (n, (t, r)) | (n, (t, r)) <- ntrs, not (isValue r) ]
       -- Specialize body
       let body' = f body (fromList sas)
-      if null das
-      -- Inline
-        then body' 
-      -- Specialize
+      -- Inlining as a special case
+      if null das then body' 
+      -- Specialization
         else do
           -- Fabricate function name
           let fn' = fn ++ show sas
-          fs' <- get
           -- Memoize new residual function, if necessary
+          fs' <- get
           when (isNothing (Prelude.lookup fn' fs')) (do
             -- Create placeholder for memoization
             put (fs' ++ [(fn', undefined)])
@@ -73,9 +72,18 @@ peval (fs, e) = swap (runState (f e empty) [])
             modify (update (const r) fn'))
           -- Apply the specialized function
           return (Apply fn' (map (snd . snd) das))
--- BEGIN ...
+
+-- Test for convertibility to value
+isValue :: Expr -> Bool
+isValue = isJust . exprToValue
+
+-- Force extraction of value
+getValue :: Expr -> Value
+getValue = fromJust . exprToValue
 
 -- Update a list that is supposed to be a map/dictionary
 update :: Eq k => (v -> v) -> k -> [(k,v)] -> [(k,v)]
+-- ...
+-- BEGIN ...
 update f k ((k',v):kvs) = if k==k' then (k',f v):kvs else (k',v):update f k kvs
 -- END ...

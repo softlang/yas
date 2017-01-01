@@ -24,8 +24,9 @@ mkLub f (Between x) (Between y) = f x y
 -- Least-upper bound for flat domains
 lubFlat :: Eq a => Perhaps a -> Perhaps a -> Perhaps a
 lubFlat = mkLub (\x y -> if x == y then Between x else Top)
-
--- Perhapsies form a monoid
+-- BEGIN ...
+-- Perhapsies form a monoid for what it matters
 instance POrd a => Monoid (Perhaps a) where
   mempty = Bottom
   mappend = lub
+-- END ...

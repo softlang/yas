@@ -5,6 +5,7 @@
 
 module Language.BIPL.Sign.V1.Analysis where
 
+import Prelude hiding (lookup)
 import Language.BIPL.Algebra.Signature
 import Language.BIPL.Syntax (UOp(..), BOp(..))
 import Language.BIPL.Sign.Domains
@@ -20,7 +21,7 @@ import Data.Perhaps.Map
 analysis :: Alg AStore AValue
 analysis = Alg {
   skip' = id,
-  assign' = \n f sto -> insert' n (f sto) sto,
+  assign' = \n f sto -> insert n (f sto) sto,
   seq' = flip (.),
   if' = \f g h sto ->
     let (Between (Right b)) = f sto in
@@ -33,7 +34,7 @@ analysis = Alg {
     fix' (\x -> if' analysis f (x . g) id) (const Bottom),
   intConst' = \i ->
     const (Between (Left (fromInteger (toInteger i)))),
-  var' = \n sto -> lookup' sto n,
+  var' = \n sto -> lookup sto n,
   unary' = \o f sto ->
     case (o, f sto) of
       (Negate, Between (Left s)) -> Between (Left (negate s))

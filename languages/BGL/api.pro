@@ -74,7 +74,7 @@ parserOfBgl(Text, Term2) :-
     readTermFile(File, Egl)),
   require(
     parserFailed(egl),
-    scannerfull(fail, Egl, Tokens, Term1)),
+    eglScannerfull:parse(Egl, fail, Tokens, Term1)),
   require(
     bglSubset,
     eglToBgl(Term1, Term2)

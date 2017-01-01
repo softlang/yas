@@ -5,6 +5,7 @@
 
 module Language.BIPL.Sign.V2.Analysis where
 
+import Prelude hiding (lookup)
 import Language.BIPL.Algebra.Signature
 import Language.BIPL.Syntax (UOp(..), BOp(..))
 import Language.BIPL.Sign.Domains
@@ -24,7 +25,7 @@ analysis = Alg {
   -- ...
 -- BEGIN ...
   skip' = id,
-  assign' = \n f sto -> insert' n (f sto) sto,
+  assign' = \n f sto -> insert n (f sto) sto,
   seq' = flip (.),
 -- END ...
   if' = \f g h sto ->
@@ -37,7 +38,7 @@ analysis = Alg {
           where
             -- Constrain mapping w.r.t. condition result
             feasible v f sto =
-              mconcat [ sto' | sto' <- maps (keys' sto)
+              mconcat [ sto' | sto' <- maps (keys sto)
                              , sto' `pord` sto
                              , Between (Right (Between v)) `pord` f sto'
                       ],
@@ -47,7 +48,7 @@ analysis = Alg {
 -- BEGIN ...
   intConst' = \i ->
     const (Between (Left (fromInteger (toInteger i)))),
-  var' = \n sto -> lookup' sto n,
+  var' = \n sto -> lookup sto n,
   unary' = \o f sto ->
     case (o, f sto) of
       (Negate, Between (Left s)) -> Between (Left (negate s))

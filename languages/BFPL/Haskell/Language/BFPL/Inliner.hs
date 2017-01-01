@@ -1,17 +1,13 @@
 -- BEGIN ...
 module Language.BFPL.Inliner where
-
 import Language.BFPL.Syntax
 import Language.BFPL.Domains hiding (Env)
 import Language.BFPL.Interpreter (uop, bop)
 import Data.Map (Map, lookup, empty, fromList)
 import Data.Maybe
-
--- Argument names are mapped to expressions as opposed to values
+-- END ...
 type Env = Map String Expr
 
--- Return an expression based on inlining
--- END ...
 peval :: Program -> Expr
 peval (fs, e) = f e empty
   where
@@ -32,26 +28,22 @@ peval (fs, e) = f e empty
          (Just (Right bv)) -> if bv then r1 else r2
          Nothing -> If r0 r1 r2
     f (Unary o e) env =
-      let
-        r = f e env
-      in
-        case exprToValue r of
-          (Just v) -> valueToExpr (uop o v)
-          _ -> Unary o r
-    f (Binary o e1 e2) env =
+      let r = f e env
+      in case exprToValue r of
+           (Just v) -> valueToExpr (uop o v)
+           _ -> Unary o r
+    f (Binary o e1 e2) env = -- ...
       let
         r1 = f e1 env
         r2 = f e2 env
-      in
-        case (exprToValue r1, exprToValue r2) of
-          (Just v1, Just v2) -> valueToExpr (bop o v1 v2)
-          _ -> Binary o r1 r2
+      in case (exprToValue r1, exprToValue r2) of
+           (Just v1, Just v2) -> valueToExpr (bop o v1 v2)
+           _ -> Binary o r1 r2
     f (Apply fn es) env = f body env'
       where
         Just (_, (ns, body)) = Prelude.lookup fn fs
         rs = map (flip f env) es
         env' = fromList (zip ns rs)
--- BEGIN ...
 
 -- Attempt extraction of value from expression
 exprToValue :: Expr -> Maybe Value
@@ -63,12 +55,3 @@ exprToValue _ = Nothing
 valueToExpr :: Value -> Expr
 valueToExpr (Left iv) = IntConst iv
 valueToExpr (Right bv) = BoolConst bv
-
--- Test for convertibility to value
-isValue :: Expr -> Bool
-isValue = isJust . exprToValue
-
--- Force extraction of value
-getValue :: Expr -> Value
-getValue = fromJust . exprToValue
--- END ..

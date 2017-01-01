@@ -30,4 +30,4 @@ factorialV2
           (Assign "x" (Binary Sub (Var "x") (IntConst 1)))))
 
 store :: AStore
-store = insert' "x" (Between (Left (Between Pos))) Bottom
+store = insert "x" (Between (Left (Between Pos))) Bottom

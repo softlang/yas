@@ -21,4 +21,4 @@ instance Finite a => Finite (Perhaps a) where
 maps :: (Ord k, Finite v) => [k] -> [Map' k v]
 maps = foldr f [Bottom]
   where f k ms = concat (map g elems)
-          where g v = map (insert' k v) ms
+          where g v = map (insert k v) ms
