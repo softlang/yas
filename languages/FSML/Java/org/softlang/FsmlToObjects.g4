@@ -1,6 +1,6 @@
 grammar FsmlToObjects;
-@header { package org.softlang; }
-@members { public Fsm fsm = new Fsm(); }
+@header {package org.softlang;}
+@members {public Fsm fsm = new Fsm();}
 
 fsm : state* EOF ;
 state : 

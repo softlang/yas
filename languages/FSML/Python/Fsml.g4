@@ -1,8 +1,6 @@
 grammar Fsml;
 options {language=Python2;}
-@header {
-from FsmlModel import FsmlModel
-}
+@header {from FsmlModel import FsmlModel}
 fsm :
    {self._errHandler = BailErrorStrategy()}
    {self.model = FsmlModel()}

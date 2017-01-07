@@ -13,8 +13,7 @@ public class FsmlImpl implements Fsml {
 	private String initial; // the initial state
 	private String state; // the "current" state
 	// A cascaded map for maintaining states and transitions
-	private HashMap<String, HashMap<String, Edge>> fsm =
-			new HashMap<String, HashMap<String, Edge>>();
+	private HashMap<String, HashMap<String, Edge>> fsm = new HashMap<>();
 	private FsmlImpl() { }
 	// Construct FSM
 	public static Fsml fsm() { return new FsmlImpl(); }

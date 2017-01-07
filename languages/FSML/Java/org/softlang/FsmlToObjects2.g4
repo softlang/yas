@@ -1,5 +1,5 @@
 grammar FsmlToObjects2;
-@header { package org.softlang; }
+@header {package org.softlang;}
 
 fsm returns [Fsm result] :
   {$result = new Fsm();} 

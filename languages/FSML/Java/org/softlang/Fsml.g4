@@ -1,6 +1,6 @@
 // BEGIN ...
 grammar Fsml;
-@header { package org.softlang; }
+@header {package org.softlang;}
 // END ...
 fsm : state* EOF ;
 state : 'initial'? 'state' stateid '{' transition* '}' ;

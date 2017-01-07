@@ -18,16 +18,11 @@ symbol unary : uop # expr -> expr ;
 symbol binary : bop # expr # expr -> expr ;
 symbol apply : string # expr* -> expr ;
 
-// Unary operators
+// Unary and binary operators
 // ...
 // BEGIN ...
 symbol negate : -> uop ;
 symbol not : -> uop ;
-// END ...
-
-// Binary operators
-// ...
-// BEGIN ...
 symbol add : -> bop ;
 symbol sub : -> bop ;
 symbol mul : -> bop ;

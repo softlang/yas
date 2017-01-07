@@ -3,7 +3,7 @@ import json
 import sys
 from jinja2 import Environment, FileSystemLoader
 # END ...
-def generateC(fsm, file):
+def generateC(fsm):
         # Initialize data structures
         states = set()
         states.add("UNDEFINED")
@@ -25,18 +25,17 @@ def generateC(fsm, file):
         # Look up template
         env = Environment(loader=FileSystemLoader('templates'))
         fsmTemplate = env.get_template('Fsm.c-template')
-        # Instantiate templates
-        fsmFile = fsmTemplate.render(\
+        # Instantiate template
+        return fsmTemplate.render(\
                 states = states,\
                 events = events,\
                 actions = actions,\
                 transitions = transitions)
-        # Persist output
-        open("generated/"+file+".c","w").write(fsmFile)
-
+# BEGIN ...
 def main():
     fsm = json.load(open(sys.argv[1], 'r'))
-    generateC(fsm, "Turnstile")
+    open("generated/"+sys.argv[2]+".c","w").write(generateC(fsm))
     
 if __name__ == '__main__':
     main()
+# END ...

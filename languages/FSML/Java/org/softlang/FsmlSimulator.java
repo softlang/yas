@@ -7,7 +7,7 @@ public class FsmlSimulator {
 	private FsmlObservation fsm;
 	public FsmlSimulator(FsmlObservation fsm) { this.fsm = fsm; }
 	public String[] run(String[] input) {
-		ArrayList<String> output = new ArrayList<String>();
+		ArrayList<String> output = new ArrayList<>();
 		String state = fsm.getInitial();
 		for (String event : input) {
 			String action = fsm.getAction(state, event);
