@@ -1,24 +1,56 @@
-# Summary
+# An "artifact repository" for a conference publication
 
-YAS (Yet Another SLR (Software Language Repository))
+* Relevant conference: http://2017.programming-conference.org/
+* Relevant paper at conference: "Relationship Maintenance in Software Language Repositories"
+* Author of paper and artifact: Ralf Lämmel, rlaemmel@gmail.com
+* Nature of artifact: a snapshot of the software language repository YAS
 
-A software language repository (SLR) is a software repository for software languages: sample artifacts, definitions, implementations, and language processors for analysis and transformation. The SLR YAS (Yet Another SLR) is a mainly Prolog-based SLR which targets teaching and research on the foundations and engineering of software languages.
+# Preamble
 
-# Build and test
+* The "artifact" is maintained here: https://github.com/softlang/yas/tree/programming17
+* The artifact is a branch of this repo: https://github.com/softlang/yas/
 
-* Requires SWI-Prolog 7.2.3
-* Tested on Mac OS X 10.11.4
-* See Makefile
+# Download artifact from github
 
-# Documentation and papers
+* Clone softlang/yas repo.
+* Checkout programming17 branch.
 
-See http://www.softlang.org/yas
+# Prerequisites for running
 
-# Repository
+The snapshotted version has been tested with the following prerequisites:
 
-YAS has been moved to https://github.com/softlang/yas in June 2016.
-It has been developed in several locations prior to that over the years 2014-2016.
+* Mac OS 10.11.6
+* SWI-Prolog 7.2.3
+* GNU Make 3.81
 
-# Contact
+Other information:
+* Other nearby enough versions of Mac OS, SWI-Prolog, make can be assumed to work.
+* Linux (such as ubuntu) can be assumed to work.
+* No promises are made for this code to work on Windows.
 
-softlang@uni-koblenz.de
+# Running the code
+
+Strictly speaking, the code does not need to be run because the repo
+holds all primary and derived files. Running the code only means that
+"self-checking" is performed so that all properties of the code,
+e.g., memberships of files in languages, are verified; all derived
+files are checked are re-derived in the sense of regression testing.
+
+* Go to the yas directory.
+* Enter "make"
+
+The make process will run for several seconds and produce all kinds of console output.
+The process should finish successfully and produce this final verdict:
+
+<pre>
+107 languages.
+564 files.
+564 membership tests.
+124 functions.
+395 function applications.
+</pre>
+
+This means that all files and relationships have been checked.
+The Makefile features additional modes of runnning the code.
+This also includes an option for running FFI code (external to Prolog).
+
