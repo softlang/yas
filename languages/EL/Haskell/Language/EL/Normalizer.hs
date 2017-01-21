@@ -3,11 +3,7 @@ module Language.EL.Normalizer where
 import Language.EL.Syntax
 -- END ...
 normalize :: (Expr -> Maybe Expr) -> Expr -> Expr
-normalize f e
-    = let e' = pass e in
-        if e==e'
-          then e
-          else normalize f e'
+normalize f e = let e' = pass e in if e==e' then e else normalize f e'
   where
     -- Apply one pass of normalization
     pass e = sub (maybe e id (f e))

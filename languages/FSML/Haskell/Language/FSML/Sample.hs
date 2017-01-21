@@ -2,8 +2,8 @@
 module Language.FSML.Sample where
 import Language.FSML.Syntax
 -- END ...
-sampleFsm :: Fsm
-sampleFsm = Fsm [
+turnstileFsm :: Fsm
+turnstileFsm = Fsm [
   State True "locked" [
     (Transition "ticket" (Just "collect") "unlocked"),
     (Transition "pass" (Just "alarm") "exception") ],

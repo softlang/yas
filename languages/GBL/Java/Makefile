@@ -1,5 +1,8 @@
+javapath = org/softlang/gbl
+tbl = ../../TBL/Java
+
 compile:
-	javac *.java
+	javac -classpath .:${tbl} ${javapath}/*.java
 
 clean:
-	rm -f *.class
+	rm -f ${javapath}/*.class

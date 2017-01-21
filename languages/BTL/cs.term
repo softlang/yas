@@ -1,1 +1,1 @@
-[ (true,expr,[t(true)]), (false,expr,[t(false)]), (zero,expr,[t(zero)]), (succ,expr,[t(succ),t('('),n(expr),t(')')]), (pred,expr,[t(pred),t('('),n(expr),t(')')]), (iszero,expr,[t(iszero),t('('),n(expr),t(')')]), (if,expr,[t(if),n(expr),t(then),n(expr),t(else),n(expr)])].
+[ (true,expr,[t(true)]), (false,expr,[t(false)]), (zero,expr,[t(zero)]), (succ,expr,[t(succ),n(expr)]), (pred,expr,[t(pred),n(expr)]), (iszero,expr,[t(iszero),n(expr)]), (if,expr,[t(if),n(expr),t(then),n(expr),t(else),n(expr)])].

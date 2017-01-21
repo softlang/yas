@@ -8,10 +8,10 @@ import Language.BFPL.Specializer as S
 import Prelude hiding (exp)
 
 main = do
-  print $ okProgram F.sample
-  print $ eval F.sample
+  print $ okProgram F.factorial
+  print $ evaluate F.factorial
   print $ okProgram ([exp], (Apply "exp" [IntConst 2, IntConst 3]))
-  print $ eval ([exp], (Apply "exp" [IntConst 2, IntConst 3]))
+  print $ evaluate ([exp], (Apply "exp" [IntConst 2, IntConst 3]))
   print $ I.peval ([exp], (Apply "exp" [IntConst 2, IntConst 3]))
   print $ S.peval ([exp], (Apply "exp" [IntConst 2, IntConst 3]))
   print $ I.peval ([exp], (Apply "exp" [Arg "x", IntConst 3]))

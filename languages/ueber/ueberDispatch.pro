@@ -15,8 +15,8 @@ overloads(Ds, R, InFs, OutFs, Overloads2) :-
           map(languageTowardsBase, InLs2, InLs1),
           map(languageTowardsBase, OutLs2, OutLs1) )),
     Overloads2 ).
-% ...
 % BEGIN ...  
+
 % A file's language as declared
 declaredLanguage(Ds, F, L) :-
   member(elementOf(F, L), Ds).

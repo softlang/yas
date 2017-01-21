@@ -2,7 +2,8 @@
 module Language.BIPL.Compiler (compile) where
 import Language.BIPL.Syntax (Stmt(..), Expr(..))
 import qualified Language.BIPL.Syntax as BIPL
-import Language.AL.Syntax
+import qualified Language.BAL.Syntax as BAL
+import Language.BAL.Syntax
 -- END ...
 compile :: Stmt -> [Instr]
 compile s = fst (stmt s 0)
@@ -34,10 +35,10 @@ expr :: Expr -> [Instr]
 expr (IntConst i) = [Const i]
 expr (Var x) = [Load x]
 expr (Unary BIPL.Negate e) = expr (Binary BIPL.Sub (IntConst 0) e)
-expr (Unary BIPL.Not e) = expr e ++ [Not]
+expr (Unary BIPL.Not e) = expr e ++ [BAL.Not]
 expr (Binary o e1 e2) = expr e1 ++ expr e2 ++
   [ case o of
-       BIPL.Add -> Add
+       BIPL.Add -> BAL.Add
        -- ...
 -- BEGIN ...
        BIPL.Sub -> Sub

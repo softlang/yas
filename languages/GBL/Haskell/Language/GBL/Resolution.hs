@@ -1,5 +1,5 @@
 -- BEGIN ...
-module Language.GBL.Resolver where
+module Language.GBL.Resolution where
 import Prelude hiding (lookup)
 import Language.TBL.Syntax as TBL
 import Language.GBL.Syntax as GBL

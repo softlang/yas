@@ -3,36 +3,24 @@ module Language.BTL.Typing where
 
 import Language.BTL.Syntax
 -- END ...
--- Types of terms
+-- Types of expressions
 data Type = Nat | Bool
 -- BEGIN ...
   deriving (Eq, Show)
 -- END ...
 
--- Well-typedness of terms
+-- Well-typedness of expressions
 wellTyped :: Expr -> Bool
-wellTyped e =
-  case typeOf e of
-    Just _ -> True
-    Nothing -> False
+wellTyped e = case typeOf e of { Just _ -> True; Nothing -> False }
 
--- Type inference for terms
+-- Map expressions to types
 typeOf :: Expr -> Maybe Type
 typeOf TRUE = Just Bool
 typeOf FALSE = Just Bool
 typeOf Zero = Just Nat
-typeOf (Succ e) =
-  case typeOf e of
-    (Just Nat) -> Just Nat
-    _ -> Nothing
-typeOf (Pred e) =
-  case typeOf e of
-    (Just Nat) -> Just Nat
-    _ -> Nothing
-typeOf (IsZero e) =
-  case typeOf e of
-    (Just Nat) -> Just Bool
-    _ -> Nothing
+typeOf (Succ e) = case typeOf e of { (Just Nat) -> Just Nat; _ -> Nothing }
+typeOf (Pred e) = case typeOf e of { (Just Nat) -> Just Nat; _ -> Nothing }
+typeOf (IsZero e) = case typeOf e of { (Just Nat) -> Just Bool; _ -> Nothing }
 typeOf (If e0 e1 e2) =
   case typeOf e0 of
     (Just Bool) ->

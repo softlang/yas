@@ -16,8 +16,7 @@ check fsm = and (map ($ fsm) [
 
 distinctStateIds :: Fsm -> Bool
 distinctStateIds (Fsm ss) = sids == nub sids
-  where
-    sids = [ sid | (State _ sid _) <- ss ]
+  where sids = [ sid | (State _ sid _) <- ss ]
 
 singleInitialState :: Fsm -> Bool
 singleInitialState (Fsm ss) = length inis == 1
@@ -25,16 +24,13 @@ singleInitialState (Fsm ss) = length inis == 1
 
 resolvableTargetStates :: Fsm -> Bool
 resolvableTargetStates (Fsm ss) = and (map (\(State _ _ ts) -> and (map f ts)) ss)
-  where
-    f (Transition _ _ target) =
-      not (null [ s | s@(State _ source _) <- ss, source == target ])
+  where f (Transition _ _ target) =
+          not (null [ s | s@(State _ source _) <- ss, source == target ])
 
 deterministicTransitions :: Fsm -> Bool
 deterministicTransitions (Fsm ss) = and (map (\(State _ _ ts) -> f ts) ss)
-  where
-    f ts = events == nub events
-      where 
-        events = [ event | (Transition event _ _) <- ts ]
+  where f ts = events == nub events
+          where events = [ event | (Transition event _ _) <- ts ]
 
 reachableStates :: Fsm -> Bool
 reachableStates (Fsm ss) = -- ...

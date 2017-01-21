@@ -23,14 +23,14 @@ symbol apply : string # expr* -> expr ;
 // BEGIN ...
 symbol negate : -> uop ;
 symbol not : -> uop ;
-symbol add : -> bop ;
-symbol sub : -> bop ;
-symbol mul : -> bop ;
+symbol or : -> bop ;
+symbol and : -> bop ;
 symbol lt : -> bop ;
-symbol le : -> bop ;
+symbol leq : -> bop ;
 symbol eq : -> bop ;
 symbol geq : -> bop ;
 symbol gt : -> bop ;
-symbol and : -> bop ;
-symbol or : -> bop ;
+symbol add : -> bop ;
+symbol sub : -> bop ;
+symbol mul : -> bop ;
 // END ...

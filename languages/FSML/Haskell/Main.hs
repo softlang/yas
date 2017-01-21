@@ -24,17 +24,17 @@ import System.Exit (exitSuccess, exitFailure)
 
 tests pos neg =
   TestList [
-    TestLabel "boolcheck" $ True ~=? C1.check S1.sampleFsm,
-    TestLabel "stringcheck" $ [] ~=? C2.check S1.sampleFsm,
-    TestLabel "simulate" $ sampleOutput ~=? simulate S1.sampleFsm sampleInput,
+    TestLabel "boolcheck" $ True ~=? C1.check S1.turnstileFsm,
+    TestLabel "stringcheck" $ [] ~=? C2.check S1.turnstileFsm,
+    TestLabel "simulate" $ sampleOutput ~=? simulate S1.turnstileFsm sampleInput,
     TestLabel "accept" $ (Right ()) ~=? parse (spaces >> A.fsm >> eof) "" pos,
-    TestLabel "parse1" $ (Right S1.sampleFsm) ~=? parse (spaces *> P1.fsm <* eof) "" pos,
-    TestLabel "parse2" $ (Right S1.sampleFsm) ~=? parse (spaces *> P2.fsm <* eof) "" pos,
-    TestLabel "format1" $ lines pos ~=? lines (show (F1.fsm S1.sampleFsm)),
-    TestLabel "format1" $ lines pos ~=? lines (F2.format S2.sampleFsm),
-    TestLabel "qq" $ S1.sampleFsm ~=? S3.sampleFsm,
-    TestLabel "rename" $ Just S4.baseline ~=? S4.sampleFsm,
-    TestLabel "merge" $ Just S1.sampleFsm ~=? S5.sampleFsm,
+    TestLabel "parse1" $ (Right S1.turnstileFsm) ~=? parse (spaces *> P1.fsm <* eof) "" pos,
+    TestLabel "parse2" $ (Right S1.turnstileFsm) ~=? parse (spaces *> P2.fsm <* eof) "" pos,
+    TestLabel "format1" $ lines pos ~=? lines (show (F1.fsm S1.turnstileFsm)),
+    TestLabel "format1" $ lines pos ~=? lines (F2.format S2.turnstileFsm),
+    TestLabel "qq" $ S1.turnstileFsm ~=? S3.turnstileFsm,
+    TestLabel "rename" $ Just S4.baseline ~=? S4.turnstileFsm,
+    TestLabel "merge" $ Just S1.turnstileFsm ~=? S5.turnstileFsm,
     TestLabel "neg" $ ["Missing state stateC"] ~=? either undefined C2.check (parse (spaces *> P1.fsm <* eof) "" neg)
   ]
 

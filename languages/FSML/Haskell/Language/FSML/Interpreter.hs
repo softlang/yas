@@ -12,14 +12,12 @@ simulate (Fsm ss) xs = snd (foldl makeTransition (getInitial, []) xs)
     -- Look up initial state
     getInitial :: StateId
     getInitial = ini
-      where [State _ ini _] =
-              [ s | s@(State initial _ _) <- ss, initial ]
+      where [State _ ini _] = [ s | s@(State initial _ _) <- ss, initial ]
 
     -- Process event; extent output
     makeTransition :: (StateId, Output) -> Event -> (StateId, Output)
     makeTransition (source, as) x = (target, as ++ maybeToList a)
-      where
-        (Transition _ a target) = getTransition source x
+      where (Transition _ a target) = getTransition source x
 
     -- Look up transition
     getTransition :: StateId -> Event -> Transition

@@ -1,4 +1,6 @@
+import Prelude hiding (succ, pred)
 import Language.BTL.Syntax
+import Language.BTL.SmartSyntax
 import qualified Language.BTL.Sample as S1
 import qualified Language.BTL.Universal.Sample as S2
 import qualified Language.BTL.Universal.Term

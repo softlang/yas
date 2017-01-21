@@ -1,11 +1,11 @@
 -- BEGIN ...
-module Language.FSML.Merge.Sample(sampleFsm) where
+module Language.FSML.Merge.Sample(turnstileFsm) where
 import Language.FSML.Syntax
 import Language.FSML.Merge.Transformation
 -- END ...
 
-sampleFsm :: Maybe Fsm
-sampleFsm = sampleFsmRegular `merge` sampleFsmException
+turnstileFsm :: Maybe Fsm
+turnstileFsm = sampleFsmRegular `merge` sampleFsmException
 
 sampleFsmRegular, sampleFsmException :: Fsm
 sampleFsmRegular = Fsm [

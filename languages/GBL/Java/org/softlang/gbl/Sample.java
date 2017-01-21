@@ -7,6 +7,7 @@ public class Sample {
         World w = new World();
         Person p1 = new Person();
         Person p2 = new Person();
+        w.persons = new Person[] {p1, p2};
         p1.name = "joe";
         p1.buddy = p2;
         p2.name = "bill";

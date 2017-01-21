@@ -4,9 +4,9 @@ import Language.FSML.Syntax
 import qualified Language.FSML.Sample
 import Language.FSML.Rename.Transformation
 -- END ...
-sampleFsm :: Maybe Fsm
-sampleFsm = do
-  let fsm1 = Language.FSML.Sample.sampleFsm
+turnstileFsm :: Maybe Fsm
+turnstileFsm = do
+  let fsm1 = Language.FSML.Sample.turnstileFsm
   fsm2 <- rename "locked" "closed" fsm1
   rename "unlocked" "open" fsm2
   

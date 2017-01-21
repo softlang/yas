@@ -1,8 +1,8 @@
 import qualified Language.BIPL.Sample
 import qualified Language.BIPL.Goto.Sample
 import qualified Language.BIPL.Sign.Sample
-import qualified Language.AL.Sample
-import qualified Language.ML.Sample
+import qualified Language.BAL.Sample
+import qualified Language.BML.Sample
 import Language.BIPL.Checker
 import Language.BIPL.Interpreter as V0
 import Language.BIPL.DS.Interpreter as V1
@@ -14,13 +14,13 @@ import Language.BIPL.Sign.V1.Analysis as V4c1
 import Language.BIPL.Sign.V2.Analysis as V4c2
 import Language.BIPL.Extraction
 import Language.BIPL.Compiler
-import Language.AL.Assembler
-import Language.ML.Machine
+import Language.BAL.Assembler
+import Language.BML.Machine
 import Language.BIPL.Rename.Transformation
 import Data.Map (empty)
 
-s = Language.BIPL.Sample.sampleProgram
-s' = Language.BIPL.Goto.Sample.sampleProgram
+s = Language.BIPL.Sample.euclideanDivision
+s' = Language.BIPL.Goto.Sample.euclideanDivision
 facv1 = Language.BIPL.Sign.Sample.factorialV1
 facv2 = Language.BIPL.Sign.Sample.factorialV2 
 sto'' = Language.BIPL.Sign.Sample.store
@@ -38,8 +38,8 @@ main = do
   print $ V4a.interpret (V4c2.analysis) facv1 sto''
   print $ V4a.interpret (V4c1.analysis) facv2 sto''
   print $ V4a.interpret (V4c2.analysis) facv2 sto''
-  print $ s_al == Language.AL.Sample.sampleProgram
-  print $ s_ml == Language.ML.Sample.sampleProgram
+  print $ s_al == Language.BAL.Sample.euclideanDivision
+  print $ s_ml == Language.BML.Sample.euclideanDivision
   print $ run s_ml
   print $ ops s
 

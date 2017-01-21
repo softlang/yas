@@ -4,7 +4,7 @@ import Language.GBL.Sample
 import Data.IORef
 import qualified Language.GBL.V2.Syntax
 import qualified Language.GBL.V2.Sample
-import Language.GBL.Resolver
+import Language.GBL.Resolution
 
 lookupFirstBuddy :: World -> IO ()
 lookupFirstBuddy w = do

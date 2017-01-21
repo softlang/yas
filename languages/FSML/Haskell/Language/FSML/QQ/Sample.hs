@@ -5,8 +5,8 @@ import Language.FSML.QuasiQuoter
 import Language.FSML.Syntax
 
 -- END ...
-sampleFsm :: Fsm
-sampleFsm = [fsml|
+turnstileFsm :: Fsm
+turnstileFsm = [fsml|
         initial state locked {
               ticket / collect -> unlocked;
               pass / alarm -> exception;

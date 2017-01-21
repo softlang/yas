@@ -3,8 +3,11 @@ module Language.BFPL.Samples.Factorial where
 
 import Language.BFPL.Syntax
 -- END ...
-sample :: Program
-sample = ([(
+-- factorial :: Int -> Int
+-- factorial x = if ((==) x 0) then 1 else ((*) x (factorial ((-) x 1)))
+-- main = print $ factorial 5
+factorial :: Program
+factorial = ([(
   "factorial",
   (([Int], Int),
    (["x"],

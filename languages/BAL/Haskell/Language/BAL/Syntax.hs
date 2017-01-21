@@ -1,5 +1,5 @@
 -- BEGIN ...
-module Language.AL.Syntax where
+module Language.BAL.Syntax where
 -- END ...
 data Instr
   = Const Int -- Push a constant onto the stack

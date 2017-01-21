@@ -2,8 +2,8 @@
 module Language.FSML.StringTemplate.Sample where
 import Language.FSML.StringTemplate.Syntax
 -- END ...
-sampleFsm :: Fsm
-sampleFsm =
+turnstileFsm :: Fsm
+turnstileFsm =
  Fsm [
   State {
    initial=True,

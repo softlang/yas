@@ -18,4 +18,4 @@ sampleInput =
 
 -- Expected output
 sampleOutput :: Output
-sampleOutput = ["collect","eject","alarm","eject"]
+sampleOutput = ["collect", "eject", "alarm", "eject"]

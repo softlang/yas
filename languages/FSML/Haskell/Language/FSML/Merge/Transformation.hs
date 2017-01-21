@@ -7,12 +7,12 @@ import Control.Monad (guard)
 -- END ...
 merge :: Fsm -> Fsm -> Maybe Fsm
 merge x y = do
-    guard $ ok x
-    guard $ ok y
+    guard $ ok x && ok y
     let z = fromMap (unionWith f (toMap x) (toMap y))
     guard $ ok z
     return z
   where
+    -- Per-state composition
     f sx sy = State
         (getInitial sx || getInitial sy)
         (getId sx)

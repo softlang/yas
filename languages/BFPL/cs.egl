@@ -11,7 +11,7 @@ main : 'main' '=' 'print' '$' expr ;
 [bool] simpletype :  'Bool' ;
 
 // Expressions
-[unary] expr : uop subexpr subexpr ;
+[unary] expr : uop subexpr ;
 [binary] expr : '(' bop ')' subexpr subexpr ;
 [subexpr] expr : subexpr ;
 [apply] expr : name { subexpr }+ ;
@@ -20,11 +20,9 @@ main : 'main' '=' 'print' '$' expr ;
 [if] subexpr : 'if' expr 'then' expr 'else' expr ;
 [arg] subexpr : name ;
 
-// Unary operators
+// Unary and binary operators
 [negate] uop : '-' ;
 [not] uop : 'not' ;
-
-// Binary operators
 [add] bop : '+' ;
 // ...
 // BEGIN ...
@@ -36,5 +34,5 @@ main : 'main' '=' 'print' '$' expr ;
 [geq] bop : '>=' ;
 [gt] bop : '>' ;
 [and] bop : '&&' ;
-// END ...
 [or] bop : '||' ;
+// END ...

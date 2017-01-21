@@ -3,16 +3,14 @@ module Language.BIPL.Sample where
 
 import Language.BIPL.Syntax
 -- END ...
-sampleProgram :: Stmt
-sampleProgram =
-  -- Sample operands for Euclidian division
-   Seq (Assign "x" (IntConst 14))
-  (Seq (Assign "y" (IntConst 4))
-
-  -- Compute quotient q=3 and remainder r=2
-  (Seq (Assign "q" (IntConst 0))
-  (Seq (Assign "r" (Var "x"))
+-- x = 14; y = 4; // Divide x by y
+-- q = 0; r = x; // Compute quotient q and remainder r
+-- while (r >= y) { r = r - y; q = q + 1; }
+euclideanDivision :: Stmt
+euclideanDivision =
+   Seq (Assign "x" (IntConst 14)) (Seq (Assign "y" (IntConst 4))
+  (Seq (Assign "q" (IntConst 0)) (Seq (Assign "r" (Var "x"))
        (While
          (Binary Geq (Var "r") (Var "y"))
          (Seq (Assign "r" (Binary Sub (Var "r") (Var "y")))
-                   (Assign "q" (Binary Add (Var "q") (IntConst 1))))))))
+              (Assign "q" (Binary Add (Var "q") (IntConst 1))))))))

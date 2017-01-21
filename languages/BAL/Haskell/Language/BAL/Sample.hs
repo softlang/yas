@@ -1,8 +1,8 @@
 -- BEGIN ...
-module Language.AL.Sample where
-import Language.AL.Syntax
+module Language.BAL.Sample where
+import Language.BAL.Syntax
 -- END ...
-sampleProgram = [
+euclideanDivision = [
    Const 14, Store "x", -- x = 14;
    Const 4, Store "y", -- y = 4;
    Const 0, Store "q", -- q = 0;

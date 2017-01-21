@@ -5,19 +5,14 @@ import Data.Map (Map, fromList)
 import Data.List (nub)
 -- END ...
 inouts :: Fsm -> Map StateId (Int, Int)
-inouts (Fsm ss) = fromList (map perState ss)
+inouts (Fsm ss) = fromList (map f ss)
   where
-    perState s =
-      ( (getId s), -- The stateid
-        ( ins (getId s), -- Number of states transition to s
-          outs s ) ) -- Number of states transitioned to from s
+    -- Per-state fact extraction
+    f (State _ sid ts) = (sid, (ins, outs))
       where
-        ins :: StateId -> Int
-        ins sid = length (filter f ss)
-          where
-            f :: State -> Bool
-            f (State _ sid' ts) =
-              elem sid [ sid'' | Transition _ _ sid'' <- ts, sid'' /= sid' ]
-        outs :: State -> Int
-        outs (State _ sid ts) =
-          length (nub [ sid' | Transition _ _ sid' <- ts, sid /= sid' ])
+        -- Number of states from which sid is reached directly
+        ins = length (filter g ss)
+          where g (State _ sid' ts') =
+                  elem sid [ sid'' | Transition _ _ sid'' <- ts', sid'' /= sid' ]
+        -- Number of states reached directly from sid
+        outs = length (nub [ sid' | Transition _ _ sid' <- ts, sid /= sid' ])

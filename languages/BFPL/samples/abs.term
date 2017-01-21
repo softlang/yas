@@ -1,0 +1,1 @@
+[ (abs, ([int],int),[x],if(binary(lt,arg(x),intconst(0)),unary(negate,arg(x)),arg(x)))],apply(abs,[unary(negate,intconst(42))]).

@@ -20,7 +20,8 @@ distinctStateIds (Fsm ss) = map ("Multiple declarations of state " ++) doubles
   where
     sids = [ sid | (State _ sid _) <- ss ]
     doubles = (\\) sids (nub sids)
-
+-- ...
+-- BEGIN ...
 singleInitialState :: Fsm -> [String]
 singleInitialState (Fsm ss) =
     if length inis == 0 then ["Missing initial state"]
@@ -37,8 +38,7 @@ resolvableTargetStates (Fsm ss) = concatMap (\(State _ _ ts) -> concatMap f ts) 
         else []
 
 deterministicTransitions :: Fsm -> [String]
-deterministicTransitions (Fsm ss) = -- ...
--- BEGIN ...
+deterministicTransitions (Fsm ss) =
     concatMap (\(State _ source ts) -> f source ts) ss
   where
     f source ts =
@@ -48,11 +48,9 @@ deterministicTransitions (Fsm ss) = -- ...
       where 
         events = [ event | (Transition event _ _) <- ts ]
         doubles = (\\) events (nub events)
--- END ...
 
 reachableStates :: Fsm -> [String]
-reachableStates (Fsm ss) = -- ...
--- BEGIN ...
+reachableStates (Fsm ss) =
     map ("Unreachable state " ++) (toList unreachableStates)
   where
     unreachableStates = (S.\\) allStates reachableStates

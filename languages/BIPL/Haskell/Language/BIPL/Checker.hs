@@ -7,24 +7,21 @@ import Data.Map (Map, empty, insert, lookup, intersectionWith)
 import Control.Monad (foldM)
 -- END ...
 -- Types of expressions
-data Type
-  = IntType
-  | BoolType
+data Type = IntType | BoolType
 -- BEGIN ...
   deriving (Eq, Show)
 -- END ...
-
 -- Context for type checking
 type Context = Map String Type
 
--- Type checking for programs
+-- Well-typedness of programs
 okProg :: Stmt -> Bool
 okProg s =
   case okStmt s empty of
     (Just _) -> True
     Nothing -> False
 
--- Type checking for statements
+-- Well-typedness of statements
 okStmt :: Stmt -> Context -> Maybe Context
 okStmt Skip ctx = Just ctx
 okStmt (Assign x e) ctx =
@@ -54,7 +51,7 @@ okStmt (While e s) ctx =
         _ -> Nothing
     _ -> Nothing
 
--- Type analysis of expressions
+-- Types of expressions
 typeOfExpr :: Expr -> Context -> Maybe Type
 typeOfExpr (IntConst i) _ = Just IntType
 typeOfExpr (Var x) ctx = lookup x ctx
