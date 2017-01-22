@@ -1,5 +1,5 @@
-// Generated from org/softlang/Fsml.g4 by ANTLR 4.5.3
- package org.softlang; 
+// Generated from FsmlToObjects.g4 by ANTLR 4.5.3
+package org.softlang.fsml;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -10,7 +10,7 @@ import java.util.Iterator;
 import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
-public class FsmlParser extends Parser {
+public class FsmlToObjectsParser extends Parser {
 	static { RuntimeMetaData.checkVersion("4.5.3", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -65,7 +65,7 @@ public class FsmlParser extends Parser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "Fsml.g4"; }
+	public String getGrammarFileName() { return "FsmlToObjects.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -76,12 +76,13 @@ public class FsmlParser extends Parser {
 	@Override
 	public ATN getATN() { return _ATN; }
 
-	public FsmlParser(TokenStream input) {
+	public Fsm fsm = new Fsm();
+	public FsmlToObjectsParser(TokenStream input) {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 	public static class FsmContext extends ParserRuleContext {
-		public TerminalNode EOF() { return getToken(FsmlParser.EOF, 0); }
+		public TerminalNode EOF() { return getToken(FsmlToObjectsParser.EOF, 0); }
 		public List<StateContext> state() {
 			return getRuleContexts(StateContext.class);
 		}
@@ -94,11 +95,11 @@ public class FsmlParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_fsm; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof FsmlListener ) ((FsmlListener)listener).enterFsm(this);
+			if ( listener instanceof FsmlToObjectsListener ) ((FsmlToObjectsListener)listener).enterFsm(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof FsmlListener ) ((FsmlListener)listener).exitFsm(this);
+			if ( listener instanceof FsmlToObjectsListener ) ((FsmlToObjectsListener)listener).exitFsm(this);
 		}
 	}
 
@@ -139,6 +140,7 @@ public class FsmlParser extends Parser {
 	}
 
 	public static class StateContext extends ParserRuleContext {
+		public StateidContext stateid;
 		public StateidContext stateid() {
 			return getRuleContext(StateidContext.class,0);
 		}
@@ -154,11 +156,11 @@ public class FsmlParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_state; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof FsmlListener ) ((FsmlListener)listener).enterState(this);
+			if ( listener instanceof FsmlToObjectsListener ) ((FsmlToObjectsListener)listener).enterState(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof FsmlListener ) ((FsmlListener)listener).exitState(this);
+			if ( listener instanceof FsmlToObjectsListener ) ((FsmlToObjectsListener)listener).exitState(this);
 		}
 	}
 
@@ -169,36 +171,39 @@ public class FsmlParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(21);
+			boolean initial = false;
+			setState(23);
 			_la = _input.LA(1);
 			if (_la==T__0) {
 				{
-				setState(20);
+				setState(21);
 				match(T__0);
+				initial = true;
 				}
 			}
 
-			setState(23);
-			match(T__1);
-			setState(24);
-			stateid();
 			setState(25);
+			match(T__1);
+			setState(26);
+			((StateContext)_localctx).stateid = stateid();
+			fsm.getStates().add(new State((((StateContext)_localctx).stateid!=null?_input.getText(((StateContext)_localctx).stateid.start,((StateContext)_localctx).stateid.stop):null), initial));
+			setState(28);
 			match(T__2);
-			setState(29);
+			setState(32);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==NAME) {
 				{
 				{
-				setState(26);
+				setState(29);
 				transition();
 				}
 				}
-				setState(31);
+				setState(34);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(32);
+			setState(35);
 			match(T__3);
 			}
 		}
@@ -214,7 +219,9 @@ public class FsmlParser extends Parser {
 	}
 
 	public static class TransitionContext extends ParserRuleContext {
-		public StateidContext target;
+		public EventContext event;
+		public ActionContext action;
+		public StateidContext stateid;
 		public EventContext event() {
 			return getRuleContext(EventContext.class,0);
 		}
@@ -230,11 +237,11 @@ public class FsmlParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_transition; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof FsmlListener ) ((FsmlListener)listener).enterTransition(this);
+			if ( listener instanceof FsmlToObjectsListener ) ((FsmlToObjectsListener)listener).enterTransition(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof FsmlListener ) ((FsmlListener)listener).exitTransition(this);
+			if ( listener instanceof FsmlToObjectsListener ) ((FsmlToObjectsListener)listener).exitTransition(this);
 		}
 	}
 
@@ -245,31 +252,37 @@ public class FsmlParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(34);
-			event();
-			setState(37);
+			String source = fsm.getStates().getLast().getStateid();
+			setState(38);
+			((TransitionContext)_localctx).event = event();
+			String action = null;
+			setState(44);
 			_la = _input.LA(1);
 			if (_la==T__4) {
 				{
-				setState(35);
+				setState(40);
 				match(T__4);
-				setState(36);
-				action();
+				setState(41);
+				((TransitionContext)_localctx).action = action();
+				action = (((TransitionContext)_localctx).action!=null?_input.getText(((TransitionContext)_localctx).action.start,((TransitionContext)_localctx).action.stop):null);
 				}
 			}
 
-			setState(41);
+			String target = source;
+			setState(51);
 			_la = _input.LA(1);
 			if (_la==T__5) {
 				{
-				setState(39);
+				setState(47);
 				match(T__5);
-				setState(40);
-				((TransitionContext)_localctx).target = stateid();
+				setState(48);
+				((TransitionContext)_localctx).stateid = stateid();
+				target = (((TransitionContext)_localctx).stateid!=null?_input.getText(((TransitionContext)_localctx).stateid.start,((TransitionContext)_localctx).stateid.stop):null);
 				}
 			}
 
-			setState(43);
+			fsm.getTransitions().add(new Transition(source, (((TransitionContext)_localctx).event!=null?_input.getText(((TransitionContext)_localctx).event.start,((TransitionContext)_localctx).event.stop):null), action, target));
+			setState(54);
 			match(T__6);
 			}
 		}
@@ -285,18 +298,18 @@ public class FsmlParser extends Parser {
 	}
 
 	public static class StateidContext extends ParserRuleContext {
-		public TerminalNode NAME() { return getToken(FsmlParser.NAME, 0); }
+		public TerminalNode NAME() { return getToken(FsmlToObjectsParser.NAME, 0); }
 		public StateidContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_stateid; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof FsmlListener ) ((FsmlListener)listener).enterStateid(this);
+			if ( listener instanceof FsmlToObjectsListener ) ((FsmlToObjectsListener)listener).enterStateid(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof FsmlListener ) ((FsmlListener)listener).exitStateid(this);
+			if ( listener instanceof FsmlToObjectsListener ) ((FsmlToObjectsListener)listener).exitStateid(this);
 		}
 	}
 
@@ -306,7 +319,7 @@ public class FsmlParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(45);
+			setState(56);
 			match(NAME);
 			}
 		}
@@ -322,18 +335,18 @@ public class FsmlParser extends Parser {
 	}
 
 	public static class EventContext extends ParserRuleContext {
-		public TerminalNode NAME() { return getToken(FsmlParser.NAME, 0); }
+		public TerminalNode NAME() { return getToken(FsmlToObjectsParser.NAME, 0); }
 		public EventContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_event; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof FsmlListener ) ((FsmlListener)listener).enterEvent(this);
+			if ( listener instanceof FsmlToObjectsListener ) ((FsmlToObjectsListener)listener).enterEvent(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof FsmlListener ) ((FsmlListener)listener).exitEvent(this);
+			if ( listener instanceof FsmlToObjectsListener ) ((FsmlToObjectsListener)listener).exitEvent(this);
 		}
 	}
 
@@ -343,7 +356,7 @@ public class FsmlParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(47);
+			setState(58);
 			match(NAME);
 			}
 		}
@@ -359,18 +372,18 @@ public class FsmlParser extends Parser {
 	}
 
 	public static class ActionContext extends ParserRuleContext {
-		public TerminalNode NAME() { return getToken(FsmlParser.NAME, 0); }
+		public TerminalNode NAME() { return getToken(FsmlToObjectsParser.NAME, 0); }
 		public ActionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_action; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof FsmlListener ) ((FsmlListener)listener).enterAction(this);
+			if ( listener instanceof FsmlToObjectsListener ) ((FsmlToObjectsListener)listener).enterAction(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof FsmlListener ) ((FsmlListener)listener).exitAction(this);
+			if ( listener instanceof FsmlToObjectsListener ) ((FsmlToObjectsListener)listener).exitAction(this);
 		}
 	}
 
@@ -380,7 +393,7 @@ public class FsmlParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(49);
+			setState(60);
 			match(NAME);
 			}
 		}
@@ -396,20 +409,22 @@ public class FsmlParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\13\66\4\2\t\2\4\3"+
-		"\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\3\2\7\2\20\n\2\f\2\16\2\23\13\2\3"+
-		"\2\3\2\3\3\5\3\30\n\3\3\3\3\3\3\3\3\3\7\3\36\n\3\f\3\16\3!\13\3\3\3\3"+
-		"\3\3\4\3\4\3\4\5\4(\n\4\3\4\3\4\5\4,\n\4\3\4\3\4\3\5\3\5\3\6\3\6\3\7\3"+
-		"\7\3\7\2\2\b\2\4\6\b\n\f\2\2\64\2\21\3\2\2\2\4\27\3\2\2\2\6$\3\2\2\2\b"+
-		"/\3\2\2\2\n\61\3\2\2\2\f\63\3\2\2\2\16\20\5\4\3\2\17\16\3\2\2\2\20\23"+
-		"\3\2\2\2\21\17\3\2\2\2\21\22\3\2\2\2\22\24\3\2\2\2\23\21\3\2\2\2\24\25"+
-		"\7\2\2\3\25\3\3\2\2\2\26\30\7\3\2\2\27\26\3\2\2\2\27\30\3\2\2\2\30\31"+
-		"\3\2\2\2\31\32\7\4\2\2\32\33\5\b\5\2\33\37\7\5\2\2\34\36\5\6\4\2\35\34"+
-		"\3\2\2\2\36!\3\2\2\2\37\35\3\2\2\2\37 \3\2\2\2 \"\3\2\2\2!\37\3\2\2\2"+
-		"\"#\7\6\2\2#\5\3\2\2\2$\'\5\n\6\2%&\7\7\2\2&(\5\f\7\2\'%\3\2\2\2\'(\3"+
-		"\2\2\2(+\3\2\2\2)*\7\b\2\2*,\5\b\5\2+)\3\2\2\2+,\3\2\2\2,-\3\2\2\2-.\7"+
-		"\t\2\2.\7\3\2\2\2/\60\7\n\2\2\60\t\3\2\2\2\61\62\7\n\2\2\62\13\3\2\2\2"+
-		"\63\64\7\n\2\2\64\r\3\2\2\2\7\21\27\37\'+";
+		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\13A\4\2\t\2\4\3\t"+
+		"\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\3\2\7\2\20\n\2\f\2\16\2\23\13\2\3\2"+
+		"\3\2\3\3\3\3\3\3\5\3\32\n\3\3\3\3\3\3\3\3\3\3\3\7\3!\n\3\f\3\16\3$\13"+
+		"\3\3\3\3\3\3\4\3\4\3\4\3\4\3\4\3\4\3\4\5\4/\n\4\3\4\3\4\3\4\3\4\3\4\5"+
+		"\4\66\n\4\3\4\3\4\3\4\3\5\3\5\3\6\3\6\3\7\3\7\3\7\2\2\b\2\4\6\b\n\f\2"+
+		"\2?\2\21\3\2\2\2\4\26\3\2\2\2\6\'\3\2\2\2\b:\3\2\2\2\n<\3\2\2\2\f>\3\2"+
+		"\2\2\16\20\5\4\3\2\17\16\3\2\2\2\20\23\3\2\2\2\21\17\3\2\2\2\21\22\3\2"+
+		"\2\2\22\24\3\2\2\2\23\21\3\2\2\2\24\25\7\2\2\3\25\3\3\2\2\2\26\31\b\3"+
+		"\1\2\27\30\7\3\2\2\30\32\b\3\1\2\31\27\3\2\2\2\31\32\3\2\2\2\32\33\3\2"+
+		"\2\2\33\34\7\4\2\2\34\35\5\b\5\2\35\36\b\3\1\2\36\"\7\5\2\2\37!\5\6\4"+
+		"\2 \37\3\2\2\2!$\3\2\2\2\" \3\2\2\2\"#\3\2\2\2#%\3\2\2\2$\"\3\2\2\2%&"+
+		"\7\6\2\2&\5\3\2\2\2\'(\b\4\1\2()\5\n\6\2).\b\4\1\2*+\7\7\2\2+,\5\f\7\2"+
+		",-\b\4\1\2-/\3\2\2\2.*\3\2\2\2./\3\2\2\2/\60\3\2\2\2\60\65\b\4\1\2\61"+
+		"\62\7\b\2\2\62\63\5\b\5\2\63\64\b\4\1\2\64\66\3\2\2\2\65\61\3\2\2\2\65"+
+		"\66\3\2\2\2\66\67\3\2\2\2\678\b\4\1\289\7\t\2\29\7\3\2\2\2:;\7\n\2\2;"+
+		"\t\3\2\2\2<=\7\n\2\2=\13\3\2\2\2>?\7\n\2\2?\r\3\2\2\2\7\21\31\".\65";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

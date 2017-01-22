@@ -1,88 +1,88 @@
-// Generated from org/softlang/FsmlToObjects2.g4 by ANTLR 4.5.3
- package org.softlang; 
+// Generated from FsmlToObjects.g4 by ANTLR 4.5.3
+package org.softlang.fsml;
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 /**
- * This class provides an empty implementation of {@link FsmlToObjects2Listener},
+ * This class provides an empty implementation of {@link FsmlToObjectsListener},
  * which can be extended to create a listener which only needs to handle a subset
  * of the available methods.
  */
-public class FsmlToObjects2BaseListener implements FsmlToObjects2Listener {
+public class FsmlToObjectsBaseListener implements FsmlToObjectsListener {
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFsm(FsmlToObjects2Parser.FsmContext ctx) { }
+	@Override public void enterFsm(FsmlToObjectsParser.FsmContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFsm(FsmlToObjects2Parser.FsmContext ctx) { }
+	@Override public void exitFsm(FsmlToObjectsParser.FsmContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterState(FsmlToObjects2Parser.StateContext ctx) { }
+	@Override public void enterState(FsmlToObjectsParser.StateContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitState(FsmlToObjects2Parser.StateContext ctx) { }
+	@Override public void exitState(FsmlToObjectsParser.StateContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTransition(FsmlToObjects2Parser.TransitionContext ctx) { }
+	@Override public void enterTransition(FsmlToObjectsParser.TransitionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTransition(FsmlToObjects2Parser.TransitionContext ctx) { }
+	@Override public void exitTransition(FsmlToObjectsParser.TransitionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterStateid(FsmlToObjects2Parser.StateidContext ctx) { }
+	@Override public void enterStateid(FsmlToObjectsParser.StateidContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitStateid(FsmlToObjects2Parser.StateidContext ctx) { }
+	@Override public void exitStateid(FsmlToObjectsParser.StateidContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEvent(FsmlToObjects2Parser.EventContext ctx) { }
+	@Override public void enterEvent(FsmlToObjectsParser.EventContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEvent(FsmlToObjects2Parser.EventContext ctx) { }
+	@Override public void exitEvent(FsmlToObjectsParser.EventContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAction(FsmlToObjects2Parser.ActionContext ctx) { }
+	@Override public void enterAction(FsmlToObjectsParser.ActionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAction(FsmlToObjects2Parser.ActionContext ctx) { }
+	@Override public void exitAction(FsmlToObjectsParser.ActionContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

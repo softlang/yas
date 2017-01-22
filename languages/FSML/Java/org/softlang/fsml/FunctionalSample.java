@@ -1,4 +1,4 @@
-package org.softlang;
+package org.softlang.fsml;
 
 public class FunctionalSample {
 	

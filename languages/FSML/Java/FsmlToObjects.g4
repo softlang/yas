@@ -1,5 +1,5 @@
 grammar FsmlToObjects;
-@header {package org.softlang;}
+@header {package org.softlang.fsml;}
 @members {public Fsm fsm = new Fsm();}
 
 fsm : state* EOF ;

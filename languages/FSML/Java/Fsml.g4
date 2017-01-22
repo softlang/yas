@@ -1,7 +1,5 @@
-// BEGIN ...
 grammar Fsml;
-@header {package org.softlang;}
-// END ...
+@header {package org.softlang.fsml;}
 fsm : state* EOF ;
 state : 'initial'? 'state' stateid '{' transition* '}' ;
 transition : event ('/' action)? ('->' target=stateid)? ';' ;
@@ -9,6 +7,4 @@ stateid : NAME ;
 event : NAME ;
 action : NAME ;
 NAME : ('a'..'z'|'A'..'Z')+ ;
-// BEGIN ...
 WS : [ \t\n\r]+ -> skip ;
-// END ...

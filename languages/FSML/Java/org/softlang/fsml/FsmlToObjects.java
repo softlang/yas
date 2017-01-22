@@ -1,5 +1,6 @@
-package org.softlang;
-
+// BEGIN ...
+package org.softlang.fsml;
+// END ...
 public class FsmlToObjects extends FsmlBaseListener {
 	private Fsm fsm;
 	private State state;

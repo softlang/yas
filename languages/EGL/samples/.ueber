@@ -1,4 +1,5 @@
 [
-  macro(parseFile('ambiguity.egl'))
+  macro(parseFile('ambiguity.egl')),
+  macro(parseFile('left-recursion.egl'))
 ].
 

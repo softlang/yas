@@ -1,10 +1,11 @@
-package org.softlang;
+// BEGIN ...
+package org.softlang.fsml;
 
 import org.antlr.v4.runtime.ANTLRFileStream;
 import org.antlr.v4.runtime.CommonTokenStream; 
 import java.io.IOException;
-
-public class FsmlAcceptor {
+// END ...
+public class FsmlSyntaxChecker {
 	public static void main(String[] args)
 			throws IOException {
 		FsmlParser parser =
@@ -13,6 +14,7 @@ public class FsmlAcceptor {
 		      new FsmlLexer(
 		    	new ANTLRFileStream(args[0]))));
 		parser.fsm();
-		System.exit(parser.getNumberOfSyntaxErrors());
+		System.exit(
+		  parser.getNumberOfSyntaxErrors() == Integer.parseInt(args[1]) ? 0 : 1);
 	}
 }

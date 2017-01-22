@@ -1,0 +1,2 @@
+[add] expr : expr '+' expr ;
+[const] expr : integer ;

@@ -1,5 +1,5 @@
-// Generated from org/softlang/Fsml.g4 by ANTLR 4.5.3
- package org.softlang; 
+// Generated from Fsml.g4 by ANTLR 4.5.3
+package org.softlang.fsml;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**

@@ -1,5 +1,5 @@
-// Generated from org/softlang/FsmlToObjects2.g4 by ANTLR 4.5.3
- package org.softlang; 
+// Generated from FsmlToObjects2.g4 by ANTLR 4.5.3
+package org.softlang.fsml;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;

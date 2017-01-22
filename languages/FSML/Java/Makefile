@@ -1,6 +1,6 @@
 cp = -cp .:../../../lib/Java/antlr-4.5.3-complete.jar
-antlr = java ${cp} org.antlr.v4.Tool
-fsmlSyntaxChecker = java ${cp} org.softlang.FsmlSyntaxChecker
+antlr = java ${cp} org.antlr.v4.Tool -o org/softlang/fsml
+fsmlSyntaxChecker = java ${cp} org.softlang.fsml.FsmlSyntaxChecker
 
 all:
 	make generate
@@ -8,14 +8,14 @@ all:
 	make test
 
 generate:
-	${antlr} org/softlang/Fsml.g4
+	${antlr} Fsml.g4
 # BEGIN ...
-	${antlr} org/softlang/FsmlToObjects.g4
-	${antlr} org/softlang/FsmlToObjects2.g4
+	${antlr} FsmlToObjects.g4
+	${antlr} FsmlToObjects2.g4
 # END ...
 
 compile:
-	javac ${cp} org/softlang/*.java
+	javac ${cp} org/softlang/fsml/*.java
 
 test:
 	${fsmlSyntaxChecker} ../sample.fsml 0
@@ -23,6 +23,6 @@ test:
 # BEGIN ...
 
 clean:
-	cd org/softlang; \
+	cd org/softlang/fsml; \
 	rm -f *.class Fsml*.tokens Fsml*Lexer.* Fsml*Parser.* Fsml*Listener.* Fsml*BaseListener.*
 # END ...

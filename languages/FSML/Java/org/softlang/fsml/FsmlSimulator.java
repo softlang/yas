@@ -1,5 +1,5 @@
 // BEGIN ...
-package org.softlang;
+package org.softlang.fsml;
 
 import java.util.ArrayList;
 // END ...
