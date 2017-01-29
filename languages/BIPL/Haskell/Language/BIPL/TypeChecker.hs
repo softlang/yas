@@ -1,5 +1,5 @@
 -- BEGIN ...
-module Language.BIPL.Checker where
+module Language.BIPL.TypeChecker where
 
 import Language.BIPL.Syntax
 import Prelude hiding (lookup)
@@ -11,8 +11,8 @@ data Type = IntType | BoolType
 -- BEGIN ...
   deriving (Eq, Show)
 -- END ...
--- Context for type checking
-type Context = Map String Type
+-- Variable-type pairs (maps)
+type VarTypes = Map String Type
 
 -- Well-typedness of programs
 okProg :: Stmt -> Bool
@@ -22,7 +22,7 @@ okProg s =
     Nothing -> False
 
 -- Well-typedness of statements
-okStmt :: Stmt -> Context -> Maybe Context
+okStmt :: Stmt -> VarTypes -> Maybe VarTypes
 okStmt Skip ctx = Just ctx
 okStmt (Assign x e) ctx =
   case typeOfExpr e ctx of
@@ -52,7 +52,7 @@ okStmt (While e s) ctx =
     _ -> Nothing
 
 -- Types of expressions
-typeOfExpr :: Expr -> Context -> Maybe Type
+typeOfExpr :: Expr -> VarTypes -> Maybe Type
 typeOfExpr (IntConst i) _ = Just IntType
 typeOfExpr (Var x) ctx = lookup x ctx
 typeOfExpr (Unary o e) ctx =

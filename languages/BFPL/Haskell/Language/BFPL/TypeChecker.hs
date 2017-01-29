@@ -1,8 +1,8 @@
 -- BEGIN ...
-module Language.BFPL.Typing where
+module Language.BFPL.TypeChecker where
 import Language.BFPL.Syntax
 -- END ...
--- Types for types
+-- Argument-type pairs
 type Context = [(String, SimpleType)]
 
 -- Well-typedness of programs
@@ -20,7 +20,7 @@ okFunction fs (_, ((ts, res), (ns, body))) = okLength && maybe False (==res) okB
     okBody = typeOfExpr fs m body
     m = zip ns ts
 
--- Type analysis of expressions
+-- Types of expressions
 typeOfExpr :: [Function] -> Context -> Expr -> Maybe SimpleType
 typeOfExpr _ _ (IntConst _) = Just Int
 typeOfExpr _ _ (BoolConst _) = Just Bool

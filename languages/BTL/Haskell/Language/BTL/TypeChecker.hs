@@ -1,6 +1,5 @@
 -- BEGIN ...
-module Language.BTL.Typing where
-
+module Language.BTL.TypeChecker where
 import Language.BTL.Syntax
 -- END ...
 -- Types of expressions
@@ -13,7 +12,7 @@ data Type = Nat | Bool
 wellTyped :: Expr -> Bool
 wellTyped e = case typeOf e of { Just _ -> True; Nothing -> False }
 
--- Map expressions to types
+-- Types of expressions
 typeOf :: Expr -> Maybe Type
 typeOf TRUE = Just Bool
 typeOf FALSE = Just Bool

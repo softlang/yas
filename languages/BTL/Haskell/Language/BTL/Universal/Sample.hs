@@ -7,5 +7,5 @@ sampleExpr =
   TermRep "Pred" [
     TermRep "If" [
       TermRep "IsZero" [TermRep "Zero" []],
-      TermRep "Succ" [TermRep "Succ" [TermRep "Zero" []]],
+      TermRep "Succ" [TermRep "Zero" []],
       TermRep "Zero" [] ]]

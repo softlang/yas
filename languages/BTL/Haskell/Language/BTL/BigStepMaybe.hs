@@ -2,7 +2,7 @@
 module Language.BTL.BigStepMaybe where
 
 import Language.BTL.Syntax
-import Language.BTL.Nf
+import Language.BTL.ValueExpr
 -- END ...
 evaluate :: Expr -> Maybe Expr
 evaluate TRUE = Just TRUE

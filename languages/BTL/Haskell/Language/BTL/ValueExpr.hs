@@ -1,6 +1,6 @@
 -- BEGIN ...
--- Normal form in the operational semantics
-module Language.BTL.Nf where
+-- Value forms of expressions
+module Language.BTL.ValueExpr where
 
 import Language.BTL.Syntax
 -- END ...

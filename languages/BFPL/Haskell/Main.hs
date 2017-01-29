@@ -1,7 +1,7 @@
 import Language.BFPL.Samples.Factorial as F
 import Language.BFPL.Samples.Exp as E
 import Language.BFPL.Syntax
-import Language.BFPL.Typing
+import Language.BFPL.TypeChecker
 import Language.BFPL.Interpreter
 import Language.BFPL.Inliner as I 
 import Language.BFPL.Specializer as S

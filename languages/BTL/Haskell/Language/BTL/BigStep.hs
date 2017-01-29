@@ -1,7 +1,7 @@
 -- BEGIN ...
 module Language.BTL.BigStep where
 import Language.BTL.Syntax
-import Language.BTL.Nf
+import Language.BTL.ValueExpr
 -- END ...
 evaluate :: Expr -> Expr
 evaluate TRUE = TRUE

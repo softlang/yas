@@ -2,10 +2,8 @@
 module Language.BTL.BigStepWithGuards where
 
 import Language.BTL.Syntax
-import Language.BTL.Nf
+import Language.BTL.ValueExpr
 -- END ...
--- ...
--- BEGIN ...
 evaluate :: Expr -> Expr
 evaluate TRUE = TRUE
 evaluate FALSE = FALSE
@@ -14,7 +12,6 @@ evaluate (Succ e)
   | n <- evaluate e
   , isNat n
   = Succ n
--- END ...
 evaluate (Pred e)
   | Zero <- evaluate e
   = Zero

@@ -2,7 +2,7 @@
 module Language.BTL.SmallStep where
 
 import Language.BTL.Syntax
-import Language.BTL.Nf
+import Language.BTL.ValueExpr
 -- END ...
 -- One-step reduction of terms
 step :: Expr -> Maybe Expr
