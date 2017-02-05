@@ -11,15 +11,9 @@ data Type = IntType | BoolType
 -- BEGIN ...
   deriving (Eq, Show)
 -- END ...
+
 -- Variable-type pairs (maps)
 type VarTypes = Map String Type
-
--- Well-typedness of programs
-okProg :: Stmt -> Bool
-okProg s =
-  case okStmt s empty of
-    (Just _) -> True
-    Nothing -> False
 
 -- Well-typedness of statements
 okStmt :: Stmt -> VarTypes -> Maybe VarTypes
@@ -57,16 +51,17 @@ typeOfExpr (IntConst i) _ = Just IntType
 typeOfExpr (Var x) ctx = lookup x ctx
 typeOfExpr (Unary o e) ctx =
   case (o, typeOfExpr e ctx) of
-    (Not, Just IntType) -> Just IntType
-    -- ...
+    (Negate, Just IntType) -> Just IntType
+    (Not, Just BoolType) -> Just BoolType
     _ -> Nothing
-typeOfExpr (Binary o e1 e2) ctx =
-  case (o, typeOfExpr e1 ctx, typeOfExpr e2 ctx) of
-    (Add, Just IntType, Just IntType) -> Just IntType
-    -- ...
+typeOfExpr (Binary o e1 e2) ctx = -- ...
 -- BEGIN ...
+  case (o, typeOfExpr e1 ctx, typeOfExpr e2 ctx) of
+    (Or, Just BoolType, Just BoolType) -> Just BoolType
+    (Add, Just IntType, Just IntType) -> Just IntType
     (Sub, Just IntType, Just IntType) -> Just IntType
     (Mul, Just IntType, Just IntType) -> Just IntType
     (Geq, Just IntType, Just IntType) -> Just BoolType
--- END ...
+    -- TODO: Cases missing
     _ -> Nothing
+-- END ...

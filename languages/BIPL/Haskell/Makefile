@@ -1,4 +1,4 @@
-i = -i.:../../BAL/Haskell:../../BML/Haskell
+i = -i.:../../../lib/Haskell:../../BAL/Haskell:../../BML/Haskell
 ghci = ghci Main.hs ${i}
 
 none:

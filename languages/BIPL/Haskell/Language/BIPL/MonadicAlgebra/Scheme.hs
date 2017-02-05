@@ -1,10 +1,10 @@
 -- BEGIN ...
 -- Interpret program in terms of given algebra
-module Language.BIPL.Algebra.Scheme where
+module Language.BIPL.MonadicAlgebra.Scheme where
 import Language.BIPL.Syntax
-import Language.BIPL.Algebra.Signature
+import Language.BIPL.MonadicAlgebra.Signature
 -- END ...
-interpret :: Alg sto val -> Stmt -> sto -> sto
+interpret :: Alg m sto val -> Stmt -> Trafo m sto
 interpret a = execute
   where
     -- Compositional interpretation of statements

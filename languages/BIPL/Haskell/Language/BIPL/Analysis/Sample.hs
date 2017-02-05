@@ -1,12 +1,8 @@
 -- BEGIN ...
-module Language.BIPL.Sign.Sample where
-
+module Language.BIPL.Analysis.Sample where
 import Language.BIPL.Syntax
-import Data.Perhaps
-import Data.Perhaps.Map
-import Data.Perhaps.Sign
-import Language.BIPL.Sign.Domains (AStore)
-
+import Data.CPO.Sign
+import Data.Map
 -- END ...
 factorialV1 :: Stmt
 factorialV1
@@ -29,5 +25,9 @@ factorialV2
           (Assign "y" (Binary Mul (Var "y") (Var "x")))
           (Assign "x" (Binary Sub (Var "x") (IntConst 1)))))
 
-store :: AStore
-store = insert "x" (Between (Left (Between Pos))) Bottom
+store = insert "x" (Left Pos) empty
+
+-- test1 = While (Binary Geq (Var "x") (IntConst 0)) (Assign "x" (Var "x"))
+-- test1 = Assign "x" (Var "x")
+test1 = If (Binary Geq (Var "x") (IntConst 0)) (Assign "x" (Var "x")) (Assign "x" (IntConst (-1)))
+store1 = insert "x" (Left TopSign) empty

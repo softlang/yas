@@ -2,4 +2,4 @@
 module Language.BML.Sample where
 import Language.BML.Syntax
 -- END ...
-euclideanDivision = [Const 14,Store 0,Const 4,Store 1,Const 0,Store 2,Load 0,Store 3,Load 3,Load 1,Geq,Not,CJump 22,Load 3,Load 1,Sub,Store 3,Load 2,Const 1,Add,Store 2,Jump 8]
+euclideanDiv = [Const 14,Store 0,Const 4,Store 1,Const 0,Store 2,Load 0,Store 3,Load 3,Load 1,Geq,Not,CJump 22,Load 3,Load 1,Sub,Store 3,Load 2,Const 1,Add,Store 2,Jump 8]

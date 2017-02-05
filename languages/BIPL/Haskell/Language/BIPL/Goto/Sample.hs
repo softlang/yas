@@ -3,8 +3,8 @@ module Language.BIPL.Goto.Sample where
 import Language.BIPL.Goto.Syntax
 import Language.BIPL.Syntax (Expr(..), UOp(..), BOp(..))
 -- END ...
-euclideanDivision :: Stmt
-euclideanDivision =
+euclideanDiv :: Stmt
+euclideanDiv =
 
   -- Sample operands for Euclidian division
    Seq (Assign "x" (IntConst 14))

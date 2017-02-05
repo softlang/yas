@@ -2,7 +2,7 @@
 module Language.BAL.Sample where
 import Language.BAL.Syntax
 -- END ...
-euclideanDivision = [
+euclideanDiv = [
    Const 14, Store "x", -- x = 14;
    Const 4, Store "y", -- y = 4;
    Const 0, Store "q", -- q = 0;
