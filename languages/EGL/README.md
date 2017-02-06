@@ -12,5 +12,5 @@ The EBNF-like grammar notation used by the softlangbook
 
 # Metametamodel
 
-* [Grammar of grammars](EGL/cs.egl)
-* [Signature of grammars](EGL/as.esl)
+* [Grammar of grammars](cs.egl)
+* [Signature of grammars](as.esl)
