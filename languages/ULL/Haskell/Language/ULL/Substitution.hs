@@ -1,6 +1,6 @@
 -- BEGIN ...
-module Language.BLL.Substitution where
-import Language.BLL.Syntax
+module Language.ULL.Substitution where
+import Language.ULL.Syntax
 -- END ...
 substitute :: Expr -> String -> Expr -> Maybe Expr
 substitute e x (Var y) | x == y = Just e
@@ -9,11 +9,11 @@ substitute e x (Apply e1 e2) = do
   e1' <- substitute e x e1
   e2' <- substitute e x e2
   Just (Apply e1' e2')
-substitute e x (Lambda y t e') | x == y =
-  Just (Lambda y t e')
-substitute e x (Lambda y t e') | x /= y && not (elem y (free e)) = do
+substitute e x (Lambda y e') | x == y =
+  Just (Lambda y e')
+substitute e x (Lambda y e') | x /= y && not (elem y (free e)) = do
   e'' <- substitute e x e'
-  Just (Lambda y t e'')
+  Just (Lambda y e'')
 substitute e x (Fix e') = substitute e x e' >>= Just . Fix
 -- ...
 -- BEGIN ...
@@ -34,7 +34,7 @@ substitute _ _ _ = Nothing
 free :: Expr -> [String]
 free (Var x) = [x]
 free (Apply e1 e2) = free e1 `union` free e2
-free (Lambda x _ e) = [ y | y <- free e, y /= x]
+free (Lambda x e) = [ y | y <- free e, y /= x]
 -- ...
 -- BEGIN ...
 free TRUE = []

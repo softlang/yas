@@ -1,6 +1,6 @@
 -- BEGIN ...
-module Language.BLL.Sample where
-import Language.BLL.Syntax
+module Language.TLL.Sample where
+import Language.TLL.Syntax
 -- END ...
 add = Fix (Lambda "f" (FunType NatType (FunType NatType NatType))
           (Lambda "n" NatType

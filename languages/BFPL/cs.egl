@@ -7,8 +7,8 @@ funtype : simpletype { '->' simpletype }* ;
 main : 'main' '=' 'print' '$' expr ;
 
 // Simple types
-[int] simpletype :  'Int' ;
-[bool] simpletype :  'Bool' ;
+[inttype] simpletype :  'Int' ;
+[booltype] simpletype :  'Bool' ;
 
 // Expressions
 [unary] expr : uop subexpr ;

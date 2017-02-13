@@ -1,12 +1,12 @@
 -- BEGIN ...
-module Language.BLL.Syntax where
+module Language.TLL.Syntax where
 -- END ...
 data Expr
   -- The typed lambda calculus
   = Var String | Lambda String Type Expr | Apply Expr Expr
   -- BTL (Basic TAPL Language)
   | TRUE | FALSE | Zero | Succ Expr | Pred Expr | IsZero Expr | If Expr Expr Expr
-  -- Fixed point combinator
+  -- Fixed-point combinator
   | Fix Expr
 -- BEGIN ...
   deriving (Eq, Show, Read)

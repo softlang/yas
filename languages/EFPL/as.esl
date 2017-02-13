@@ -3,9 +3,9 @@ type program = function* # expr ;
 type function = string # texpr? # string* # expr ;
 
 // Type expressions
-symbol int : -> texpr ;
-symbol bool : -> texpr ;
-symbol fun : texpr # texpr -> texpr ;
+symbol inttype : -> texpr ;
+symbol booltype : -> texpr ;
+symbol funtype : texpr # texpr -> texpr ;
 symbol typevar : string -> texpr ;
 
 // Expressions

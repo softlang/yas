@@ -2,7 +2,7 @@
 :- module(bfplExpr, []).
 % END ...
 % An int constant is of the int type
-ok(_, _, intconst(_), int).
+ok(_, _, intconst(_), inttype).
 
 % The context provides the type of an argument name 
 ok(_, X, arg(N), T) :-
@@ -10,7 +10,7 @@ ok(_, X, arg(N), T) :-
 
 % Condition is of boolean type; others are of the same type 
 ok(P, X, if(E1, E2, E3), T) :-
-  ok(P, X, E1, bool),
+  ok(P, X, E1, booltype),
   ok(P, X, E2, T),
   ok(P, X, E3, T).
  

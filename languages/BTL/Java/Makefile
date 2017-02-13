@@ -1,5 +1,5 @@
 compile:
-	javac *.java
+	javac org/softlang/btl/*.java
 
 clean:
-	rm -f *.class
+	rm -f org/softlang/btl/*.class

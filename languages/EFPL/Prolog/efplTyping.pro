@@ -20,10 +20,10 @@ okFun(P, F1, F2) :-
 
 % Build formal argument context
 formal(T, [], [], T).
-formal(fun(T1, T2), [X|Xs], [(X, T1)|M], T3) :- formal(T2, Xs, M, T3).
+formal(funtype(T1, T2), [X|Xs], [(X, T1)|M], T3) :- formal(T2, Xs, M, T3).
 
 % An int constant is of the int type
-okExpr(_, _, intconst(_), int).
+okExpr(_, _, intconst(_), inttype).
 
 % An argument name is of the type assigned by the context 
 okExpr(_, M, name(X), T) :- member((X, T), M).
@@ -44,7 +44,7 @@ okExpr(P, M, apply(E, Es), T2) :-
 % BEGIN ...
 % Condition is of boolean type; others are of the same type 
 okExpr(P, M, if(E1, E2, E3), T) :-
-  okExpr(P, M, E1, bool),
+  okExpr(P, M, E1, booltype),
   okExpr(P, M, E2, T),
   okExpr(P, M, E3, T).
  
@@ -57,4 +57,4 @@ okExpr(P, M, binary(O, E1, E2), T0) :-
 
 % Matching of formal and actual argument types
 actual(T, [], T).
-actual(fun(T1, T2), [T1|Ts], T3) :- actual(T2, Ts, T3).
+actual(funtype(T1, T2), [T1|Ts], T3) :- actual(T2, Ts, T3).

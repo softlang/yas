@@ -6,9 +6,9 @@ fundef : name { name }* '=' expr ;
 main : 'main' '=' 'print' '$' expr ;
 
 // Type expressions
-[fun] texpr : typepart { '->' texpr }? ;
-[int] typepart : 'Int' ;
-[bool] typepart : 'Bool' ;
+[funtype] texpr : typepart { '->' texpr }? ;
+[inttype] typepart : 'Int' ;
+[booltype] typepart : 'Bool' ;
 [typevar] typepart : name ;
 [brackettype] typepart : '(' texpr ')' ;
 

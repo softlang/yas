@@ -9,7 +9,7 @@ import Language.BFPL.Syntax
 factorial :: Program
 factorial = ([(
   "factorial",
-  (([Int], Int),
+  (([IntType], IntType),
    (["x"],
      If (Binary Eq (Arg "x") (IntConst 0))
         (IntConst 1)

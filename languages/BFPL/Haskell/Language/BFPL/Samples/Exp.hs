@@ -8,7 +8,7 @@ import Prelude hiding (exp)
 exp :: Function
 exp = (
   "exp",
-  (([Int, Int], Int),
+  (([IntType, IntType], IntType),
    (["x", "n"],
      If (Binary Eq (Arg "n") (IntConst 0))
         (IntConst 1)

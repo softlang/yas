@@ -6,8 +6,8 @@
 (function, ([(N, T)], (N, NS, E))) ~> (N, [T], NS, E).
       
 % Mapping for function types
-(texpr, fun(T, [])) ~> T.
-(texpr, fun(T1, [T2])) ~> fun(T1, T2).
+(texpr, funtype(T, [])) ~> T.
+(texpr, funtype(T1, [T2])) ~> funtype(T1, T2).
 
 % Mapping for type parts
 (typepart, brackettype(T)) ~> T.

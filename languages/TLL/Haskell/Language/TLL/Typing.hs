@@ -1,7 +1,7 @@
 -- BEGIN ...
-module Language.BLL.Typing where
+module Language.TLL.Typing where
 import Prelude hiding (lookup)
-import Language.BLL.Syntax
+import Language.TLL.Syntax
 import Data.Map (Map, lookup, insert)
 -- END ...
 -- Context for type checking

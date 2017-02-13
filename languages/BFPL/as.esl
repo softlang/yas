@@ -2,12 +2,12 @@
 type program = functions # expr ;
 type functions = function* ;
 type function = string # funsig # fundef ;
-type funsig = type* # type ;
+type funsig = simpletype* # simpletype ;
 type fundef = string* # expr ;
 
 // Simple types
-symbol int : -> type ;
-symbol bool : -> type ;
+symbol inttype : -> simpletype ;
+symbol booltype : -> simpletype ;
 
 // Expressions
 symbol intconst : integer -> expr ;

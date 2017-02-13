@@ -9,7 +9,7 @@ type FunSig = ([SimpleType], SimpleType)
 type FunDef = ([String], Expr)
 
 -- Simple types
-data SimpleType = Int | Bool
+data SimpleType = IntType | BoolType
 -- BEGIN ...
   deriving (Eq, Show)
 -- END ...

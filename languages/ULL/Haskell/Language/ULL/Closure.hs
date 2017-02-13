@@ -1,9 +1,9 @@
 -- BEGIN ...
-module Language.BLL.Closure where
+module Language.ULL.Closure where
 
-import Language.BLL.Syntax
-import Language.BLL.Nf
-import Language.BLL.SmallStep
+import Language.ULL.Syntax
+import Language.ULL.Value
+import Language.ULL.SmallStep
 -- END ...
 steps :: Expr -> Maybe Expr
 steps e =

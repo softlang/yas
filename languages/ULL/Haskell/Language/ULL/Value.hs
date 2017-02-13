@@ -1,8 +1,6 @@
 -- BEGIN ...
--- Normal form in the operational semantics
-module Language.BLL.Nf where
-
-import Language.BLL.Syntax
+module Language.ULL.Value where
+import Language.ULL.Syntax
 -- END ...
 -- ...
 -- BEGIN ...
@@ -22,7 +20,7 @@ isNat _ = False
 isValue :: Expr -> Bool
 isValue e = isBool e || isNat e || isLambda e
   where
-    isLambda (Lambda _ _ _) = True
+    isLambda (Lambda _ _) = True
     isLambda _ = False
 -- END ...
 -- Convert Haskell Int to expression such that isNat is True
