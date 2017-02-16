@@ -1,12 +1,12 @@
 // BEGIN ...
-package org.softlang.tests;
+package org.softlang.fsml.tests;
 
-import org.softlang.FsmlSimulator;
-import org.softlang.fluent.Sample;
+import org.softlang.fsml.FsmlSimulator;
+import org.softlang.fsml.fluent.Sample;
 import org.junit.Test;
 import static org.junit.Assert.assertArrayEquals;
 // END ...
-public class FsmlFluentTest {
+public class FluentTest {
 		
 	private static final String[] input = 
 		{"ticket", "ticket", "pass", "pass", "ticket", "mute", "release"};

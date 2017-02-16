@@ -1,12 +1,13 @@
 package org.softlang.fsml;
 
+import java.util.List;
 import java.util.LinkedList;
 
 public class Fsm implements FsmlObservation {
-	private LinkedList<State> states = new LinkedList<State>();
-	private LinkedList<Transition> transitions = new LinkedList<Transition>();
+	private LinkedList<State> states = new LinkedList<>();
+	private List<Transition> transitions = new LinkedList<>();
 	public LinkedList<State> getStates() { return states; }
-	public LinkedList<Transition> getTransitions() { return transitions; }
+	public List<Transition> getTransitions() { return transitions; }
 	public String getInitial() {
 		for (State s : states) 
 			if (s.isInitial()) return s.getStateid();

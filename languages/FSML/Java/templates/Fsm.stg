@@ -1,0 +1,25 @@
+main(states, initial, events, actions, tgroups) ::= <<
+enum State { <states; format="upper", separator=", "> };
+enum State initial = <initial; format="upper">;
+enum Event { <events; format="upper", separator=", "> };
+<actions:action(); format="lower", separator="\n">
+enum State next(enum State s, enum Event e) {
+    switch(s) {
+<tgroups:tgroup(); separator="\n">
+        default: return UNDEFINED;
+    }
+}>>
+
+action(a) ::= "void <a>() { }"
+
+tgroup(g) ::= <<
+        case <g.stateid; format="upper">:
+            switch(e) {
+                <g.ts:transition(); separator="\n">
+                default: return UNDEFINED;
+            }>>
+
+transition(t) ::= <%
+case <t.event; format="upper">: 
+<if(t.action)><t.action; format="lower">(); <endif>
+return <t.target; format="upper">;%>

@@ -12,5 +12,5 @@ def draw(fsm):
     # Create edges
     for fromState, [stateDeclaration] in fsm.iteritems():
         for symbol, [(action, toState)] in stateDeclaration["transitions"].iteritems():
-            graph.add_edge(fromState, toState, label=symbol +"/"+action)
+            graph.add_edge(fromState, toState, label=symbol + ("" if action is None else "/"+action))
     return graph

@@ -12,11 +12,11 @@ class FsmlStepper():
         while input:
             symbol = input.pop(0)
             action, targetState = self.step(symbol)
-            if not action == "": output.append(action)
+            if action is not None: output.append(action)
         return output
 
     def step(self, symbol):
         (action, targetState) = self.fsm[self.currentState]["transitions"][symbol]
-        self.handler.handle(action)
+        if action is not None: self.handler.handle(action)
         self.currentState = targetState
         return action, targetState

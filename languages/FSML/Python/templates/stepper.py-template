@@ -8,5 +8,5 @@ class Stepper(FsmlStepper):
         self.fsm = dict()
         self.currentState = "{{ initialState }}"
         self.handler = Handler()
-        {% for transition in transitions %}self.add("{{ transition[0] }}", "{{ transition[1] }}", "{{ transition[2] }}", "{{ transition[3] }}")
+        {% for transition in transitions %}self.add("{{ transition[0] }}", "{{ transition[1] }}", {% if transition[2] %}"{{ transition[2] }}"{% else %}None{% endif %}, "{{ transition[3] }}")
         {% endfor %}

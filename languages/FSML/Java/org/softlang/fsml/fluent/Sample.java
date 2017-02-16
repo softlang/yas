@@ -1,7 +1,7 @@
 // BEGIN ...
-package org.softlang.fluent;
+package org.softlang.fsml.fluent;
 
-import static org.softlang.fluent.FsmlImpl.fsm;
+import static org.softlang.fsml.fluent.FsmlImpl.fsm;
 
 public class Sample {
 	

@@ -1,7 +1,7 @@
 // BEGIN ...
-package org.softlang.fluent;
+package org.softlang.fsml.fluent;
 
-import org.softlang.FsmlException;
+import org.softlang.fsml.FsmlException;
 import java.util.HashMap;
 // END ...
 public class FsmlImpl implements Fsml {

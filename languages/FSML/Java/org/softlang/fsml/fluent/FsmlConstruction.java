@@ -1,4 +1,4 @@
-package org.softlang.fluent;
+package org.softlang.fsml.fluent;
 
 public interface FsmlConstruction {
 	public Fsml state(String state);

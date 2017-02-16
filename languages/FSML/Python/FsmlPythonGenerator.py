@@ -11,7 +11,7 @@ def generatePython(fsm):
             if statedecl["initial"]:
                 initialState = fromState
             for input, [(action, toState)] in statedecl["transitions"].iteritems():
-                actions.add(action)
+                if action is not None: actions.add(action)
                 transitions.insert(0,(fromState, input, action, toState))
         # Look up templates
         env = Environment(loader=FileSystemLoader('templates'))

@@ -2,6 +2,7 @@ all:
 	make clean
 	make generate
 	make run
+	make compile
 	make test
 
 install-very-specific:
@@ -10,7 +11,6 @@ install-very-specific:
 
 generate:
 	java -cp .:../../../lib/Java/antlr-4.5.3-complete.jar org.antlr.v4.Tool Fsml.g4
-	cd generated; make
 
 run:
 	python FsmlToJSON.py ../sample.fsml sample.json
@@ -20,6 +20,9 @@ run:
 	python FsmlPythonGenerator.py sample.json
 	python FsmlToDot.py sample.json dot/sample.dot
 	cd dot; dot -Tpdf sample.dot -o sample.pdf
+
+compile:
+	cd generated; make
 
 test:
 	python -B FsmlTest.py

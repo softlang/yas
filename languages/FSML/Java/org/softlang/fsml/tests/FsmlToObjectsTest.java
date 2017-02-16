@@ -1,8 +1,8 @@
 // BEGIN ...
-package org.softlang.tests;
+package org.softlang.fsml.tests;
 
 import java.io.IOException;
-import org.softlang.*;
+import org.softlang.fsml.*;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.ANTLRFileStream;
 import org.antlr.v4.runtime.tree.ParseTree;

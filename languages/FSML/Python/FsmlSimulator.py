@@ -24,7 +24,7 @@ def simulate(fsm, input):
             raise FsmlInfeasibleEventException
         else:
             [(action, targetState)] = currentState["transitions"][event]
-            if not action == "": output.append(action)
+            if action is not None: output.append(action)
             [currentState] = fsm[targetState]
     return output
 

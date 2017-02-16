@@ -17,5 +17,4 @@ class FsmlModel():
 
     def addTransition(self, inputText, actionText, targetStateText):
         self.stateObject['transitions'][inputText] += \
-          [("" if str(actionText) == "None" else actionText, \
-            self.currentState if str(targetStateText) == "None" else targetStateText)]
+          [(actionText, self.currentState if targetStateText is None else targetStateText)]

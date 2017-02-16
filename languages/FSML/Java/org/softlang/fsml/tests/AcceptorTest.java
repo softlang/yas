@@ -1,15 +1,15 @@
 // BEGIN ...
-package org.softlang.tests;
+package org.softlang.fsml.tests;
 
-import org.softlang.FsmlLexer;
-import org.softlang.FsmlParser;
+import org.softlang.fsml.FsmlLexer;
+import org.softlang.fsml.FsmlParser;
 import org.antlr.v4.runtime.ANTLRFileStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 import java.io.IOException;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
-public class FsmlAcceptorTest {
+public class AcceptorTest {
 // END ....
 	public void tryParser(String filename) throws IOException {
 		FsmlParser parser = new FsmlParser(

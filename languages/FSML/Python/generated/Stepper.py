@@ -8,12 +8,12 @@ class Stepper(FsmlStepper):
         self.fsm = dict()
         self.currentState = "locked"
         self.handler = Handler()
-        self.add("unlocked", "pass", "", "locked")
+        self.add("unlocked", "pass", None, "locked")
         self.add("unlocked", "ticket", "eject", "unlocked")
         self.add("locked", "pass", "alarm", "exception")
         self.add("locked", "ticket", "collect", "unlocked")
-        self.add("exception", "mute", "", "exception")
-        self.add("exception", "pass", "", "exception")
+        self.add("exception", "mute", None, "exception")
+        self.add("exception", "pass", None, "exception")
         self.add("exception", "ticket", "eject", "exception")
-        self.add("exception", "release", "", "locked")
+        self.add("exception", "release", None, "locked")
         

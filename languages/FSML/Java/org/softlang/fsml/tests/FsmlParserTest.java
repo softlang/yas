@@ -1,9 +1,9 @@
-package org.softlang.tests;
+package org.softlang.fsml.tests;
 
-import org.softlang.FsmlToObjectsLexer;
-import org.softlang.FsmlToObjectsParser;
-import org.softlang.Fsm;
-import org.softlang.FsmlSimulator;
+import org.softlang.fsml.FsmlToObjectsLexer;
+import org.softlang.fsml.FsmlToObjectsParser;
+import org.softlang.fsml.Fsm;
+import org.softlang.fsml.FsmlSimulator;
 import org.antlr.v4.runtime.ANTLRFileStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 import java.io.IOException;
