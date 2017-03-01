@@ -1,8 +1,8 @@
 // BEGIN ...
 package org.softlang.fsml.tests;
-
-import org.softlang.fsml.FsmlSimulator;
+import org.softlang.fsml.fluent.FsmlInterpreter;
 import org.softlang.fsml.fluent.Sample;
+import static org.softlang.fsml.fluent.FsmlInterpreter.run;
 import org.junit.Test;
 import static org.junit.Assert.assertArrayEquals;
 // END ...
@@ -15,6 +15,6 @@ public class FluentTest {
 	
 	@Test
 	public void runSample() {
-		assertArrayEquals(output, new FsmlSimulator(Sample.sample).run(input));
+		assertArrayEquals(output, run(Sample.turnstile, input));
 	}
 }

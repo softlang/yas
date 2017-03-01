@@ -3,7 +3,7 @@ grammar FsmlToObjects2;
 
 fsm returns [Fsm result] :
   {$result = new Fsm();} 
-  state[$result]* 
+  state[$result]+ 
   EOF
   ;
 state[Fsm result] : 

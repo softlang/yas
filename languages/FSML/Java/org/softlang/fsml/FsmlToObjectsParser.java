@@ -110,21 +110,21 @@ public class FsmlToObjectsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(15);
+			setState(13); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while (_la==T__0 || _la==T__1) {
+			do {
 				{
 				{
 				setState(12);
 				state();
 				}
 				}
-				setState(17);
+				setState(15); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			}
-			setState(18);
+			} while ( _la==T__0 || _la==T__1 );
+			setState(17);
 			match(EOF);
 			}
 		}
@@ -172,38 +172,38 @@ public class FsmlToObjectsParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			boolean initial = false;
-			setState(23);
+			setState(22);
 			_la = _input.LA(1);
 			if (_la==T__0) {
 				{
-				setState(21);
+				setState(20);
 				match(T__0);
 				initial = true;
 				}
 			}
 
-			setState(25);
+			setState(24);
 			match(T__1);
-			setState(26);
+			setState(25);
 			((StateContext)_localctx).stateid = stateid();
 			fsm.getStates().add(new State((((StateContext)_localctx).stateid!=null?_input.getText(((StateContext)_localctx).stateid.start,((StateContext)_localctx).stateid.stop):null), initial));
-			setState(28);
+			setState(27);
 			match(T__2);
-			setState(32);
+			setState(31);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==NAME) {
 				{
 				{
-				setState(29);
+				setState(28);
 				transition();
 				}
 				}
-				setState(34);
+				setState(33);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(35);
+			setState(34);
 			match(T__3);
 			}
 		}
@@ -252,37 +252,37 @@ public class FsmlToObjectsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			String source = fsm.getStates().getLast().getStateid();
-			setState(38);
+			String source = fsm.getStates().get(fsm.getStates().size()-1).getStateid();
+			setState(37);
 			((TransitionContext)_localctx).event = event();
 			String action = null;
-			setState(44);
+			setState(43);
 			_la = _input.LA(1);
 			if (_la==T__4) {
 				{
-				setState(40);
+				setState(39);
 				match(T__4);
-				setState(41);
+				setState(40);
 				((TransitionContext)_localctx).action = action();
 				action = (((TransitionContext)_localctx).action!=null?_input.getText(((TransitionContext)_localctx).action.start,((TransitionContext)_localctx).action.stop):null);
 				}
 			}
 
 			String target = source;
-			setState(51);
+			setState(50);
 			_la = _input.LA(1);
 			if (_la==T__5) {
 				{
-				setState(47);
+				setState(46);
 				match(T__5);
-				setState(48);
+				setState(47);
 				((TransitionContext)_localctx).stateid = stateid();
 				target = (((TransitionContext)_localctx).stateid!=null?_input.getText(((TransitionContext)_localctx).stateid.start,((TransitionContext)_localctx).stateid.stop):null);
 				}
 			}
 
 			fsm.getTransitions().add(new Transition(source, (((TransitionContext)_localctx).event!=null?_input.getText(((TransitionContext)_localctx).event.start,((TransitionContext)_localctx).event.stop):null), action, target));
-			setState(54);
+			setState(53);
 			match(T__6);
 			}
 		}
@@ -319,7 +319,7 @@ public class FsmlToObjectsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(56);
+			setState(55);
 			match(NAME);
 			}
 		}
@@ -356,7 +356,7 @@ public class FsmlToObjectsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(58);
+			setState(57);
 			match(NAME);
 			}
 		}
@@ -393,7 +393,7 @@ public class FsmlToObjectsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(60);
+			setState(59);
 			match(NAME);
 			}
 		}
@@ -409,22 +409,22 @@ public class FsmlToObjectsParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\13A\4\2\t\2\4\3\t"+
-		"\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\3\2\7\2\20\n\2\f\2\16\2\23\13\2\3\2"+
-		"\3\2\3\3\3\3\3\3\5\3\32\n\3\3\3\3\3\3\3\3\3\3\3\7\3!\n\3\f\3\16\3$\13"+
-		"\3\3\3\3\3\3\4\3\4\3\4\3\4\3\4\3\4\3\4\5\4/\n\4\3\4\3\4\3\4\3\4\3\4\5"+
-		"\4\66\n\4\3\4\3\4\3\4\3\5\3\5\3\6\3\6\3\7\3\7\3\7\2\2\b\2\4\6\b\n\f\2"+
-		"\2?\2\21\3\2\2\2\4\26\3\2\2\2\6\'\3\2\2\2\b:\3\2\2\2\n<\3\2\2\2\f>\3\2"+
-		"\2\2\16\20\5\4\3\2\17\16\3\2\2\2\20\23\3\2\2\2\21\17\3\2\2\2\21\22\3\2"+
-		"\2\2\22\24\3\2\2\2\23\21\3\2\2\2\24\25\7\2\2\3\25\3\3\2\2\2\26\31\b\3"+
-		"\1\2\27\30\7\3\2\2\30\32\b\3\1\2\31\27\3\2\2\2\31\32\3\2\2\2\32\33\3\2"+
-		"\2\2\33\34\7\4\2\2\34\35\5\b\5\2\35\36\b\3\1\2\36\"\7\5\2\2\37!\5\6\4"+
-		"\2 \37\3\2\2\2!$\3\2\2\2\" \3\2\2\2\"#\3\2\2\2#%\3\2\2\2$\"\3\2\2\2%&"+
-		"\7\6\2\2&\5\3\2\2\2\'(\b\4\1\2()\5\n\6\2).\b\4\1\2*+\7\7\2\2+,\5\f\7\2"+
-		",-\b\4\1\2-/\3\2\2\2.*\3\2\2\2./\3\2\2\2/\60\3\2\2\2\60\65\b\4\1\2\61"+
-		"\62\7\b\2\2\62\63\5\b\5\2\63\64\b\4\1\2\64\66\3\2\2\2\65\61\3\2\2\2\65"+
-		"\66\3\2\2\2\66\67\3\2\2\2\678\b\4\1\289\7\t\2\29\7\3\2\2\2:;\7\n\2\2;"+
-		"\t\3\2\2\2<=\7\n\2\2=\13\3\2\2\2>?\7\n\2\2?\r\3\2\2\2\7\21\31\".\65";
+		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\13@\4\2\t\2\4\3\t"+
+		"\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\3\2\6\2\20\n\2\r\2\16\2\21\3\2\3\2"+
+		"\3\3\3\3\3\3\5\3\31\n\3\3\3\3\3\3\3\3\3\3\3\7\3 \n\3\f\3\16\3#\13\3\3"+
+		"\3\3\3\3\4\3\4\3\4\3\4\3\4\3\4\3\4\5\4.\n\4\3\4\3\4\3\4\3\4\3\4\5\4\65"+
+		"\n\4\3\4\3\4\3\4\3\5\3\5\3\6\3\6\3\7\3\7\3\7\2\2\b\2\4\6\b\n\f\2\2>\2"+
+		"\17\3\2\2\2\4\25\3\2\2\2\6&\3\2\2\2\b9\3\2\2\2\n;\3\2\2\2\f=\3\2\2\2\16"+
+		"\20\5\4\3\2\17\16\3\2\2\2\20\21\3\2\2\2\21\17\3\2\2\2\21\22\3\2\2\2\22"+
+		"\23\3\2\2\2\23\24\7\2\2\3\24\3\3\2\2\2\25\30\b\3\1\2\26\27\7\3\2\2\27"+
+		"\31\b\3\1\2\30\26\3\2\2\2\30\31\3\2\2\2\31\32\3\2\2\2\32\33\7\4\2\2\33"+
+		"\34\5\b\5\2\34\35\b\3\1\2\35!\7\5\2\2\36 \5\6\4\2\37\36\3\2\2\2 #\3\2"+
+		"\2\2!\37\3\2\2\2!\"\3\2\2\2\"$\3\2\2\2#!\3\2\2\2$%\7\6\2\2%\5\3\2\2\2"+
+		"&\'\b\4\1\2\'(\5\n\6\2(-\b\4\1\2)*\7\7\2\2*+\5\f\7\2+,\b\4\1\2,.\3\2\2"+
+		"\2-)\3\2\2\2-.\3\2\2\2./\3\2\2\2/\64\b\4\1\2\60\61\7\b\2\2\61\62\5\b\5"+
+		"\2\62\63\b\4\1\2\63\65\3\2\2\2\64\60\3\2\2\2\64\65\3\2\2\2\65\66\3\2\2"+
+		"\2\66\67\b\4\1\2\678\7\t\2\28\7\3\2\2\29:\7\n\2\2:\t\3\2\2\2;<\7\n\2\2"+
+		"<\13\3\2\2\2=>\7\n\2\2>\r\3\2\2\2\7\21\30!-\64";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

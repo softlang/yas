@@ -1,7 +1,7 @@
-[number] number : bits rest ;
-[single] bits : bit ;
-[many] bits : bit bits ;
-[zero] bit : '0' ;
-[one] bit : '1' ; 
-[integer] rest : ; 
-[rational] rest : '.' bits ;
+[number] number : bits rest ; // A binary number 
+[single] bits : bit ; // A single bit
+[many] bits : bit bits ; // More than one bit
+[zero] bit : '0' ; // The zero bit
+[one] bit : '1' ;  // The non-zero bit
+[integer] rest : ; // An integer number
+[rational] rest : '.' bits ; // A rational number

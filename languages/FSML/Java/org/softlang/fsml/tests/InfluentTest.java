@@ -1,6 +1,7 @@
 package org.softlang.fsml.tests;
 
 import org.junit.Test;
+import org.softlang.fsml.FsmlObservationImpl;
 import org.softlang.fsml.FsmlSimulator;
 import org.softlang.fsml.FunctionalSample;
 import org.softlang.fsml.ImperativeSample;
@@ -16,11 +17,11 @@ public class InfluentTest {
 	
 	@Test
 	public void runImperativeSample() {
-		assertArrayEquals(output, new FsmlSimulator(ImperativeSample.sample).run(input));
+		assertArrayEquals(output, new FsmlSimulator(new FsmlObservationImpl(ImperativeSample.turnstile)).run(input));
 	}
 	
 	@Test
 	public void runFunctionalSample() {
-		assertArrayEquals(output, new FsmlSimulator(FunctionalSample.sample).run(input));
+		assertArrayEquals(output, new FsmlSimulator(new FsmlObservationImpl(FunctionalSample.turnstile)).run(input));
 	}	
 }

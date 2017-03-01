@@ -1,7 +1,10 @@
+// BEGIN ...
 package org.softlang.fsml;
 
+import org.softlang.fsml.fluent.ActionStatePair;
+
+// END ...
 public interface FsmlObservation {
-	String getInitial(); // Initial state
-	public String getAction(String state, String event); // Action part of transition
-	public String getTarget(String state, String event);  // Target-state part
+	String getInitial();
+	public ActionStatePair makeTransition(String state, String event);
 }

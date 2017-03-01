@@ -2,7 +2,7 @@ grammar FsmlToObjects;
 @header {package org.softlang.fsml;}
 @members {public Fsm fsm = new Fsm();}
 
-fsm : state* EOF ;
+fsm : state+ EOF ;
 state : 
   {boolean initial = false;} 
   ('initial' {initial = true;})? 
@@ -11,7 +11,7 @@ state :
   '{' transition* '}'
   ;
 transition :
-  {String source = fsm.getStates().getLast().getStateid();}
+  {String source = fsm.getStates().get(fsm.getStates().size()-1).getStateid();}
   event 
   {String action = null;}
   ('/' action {action = $action.text;})? 

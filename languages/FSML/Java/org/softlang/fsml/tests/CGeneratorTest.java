@@ -15,7 +15,7 @@ public class CGeneratorTest {
 
 	@Test
 	public void generateCodeForSample() throws IOException {
-		Fsm f = FunctionalSample.sample;
+		Fsm f = FunctionalSample.turnstile;
 		Path p = Paths.get("org", "softlang", "fsml", "tests", "Turnstile.c");
 		String actual = generateC(f);
 		String expected = new String(Files.readAllBytes(p));

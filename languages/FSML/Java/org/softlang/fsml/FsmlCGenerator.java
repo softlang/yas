@@ -17,6 +17,13 @@ public class FsmlCGenerator {
 		List<String> states = new LinkedList<>();
 		for (State s : fsm.getStates()) states.add(s.getStateid());
 		states.add("UNDEFINED");
+		// Determine inital state
+		String initial = null;
+		for (State s : fsm.getStates())
+			if (s.isInitial()) {
+				initial = s.getStateid();
+				break;
+			}
 		// Build set of events
 		Set<String> events = new HashSet<>();
 		for (Transition t : fsm.getTransitions()) events.add(t.getEvent());
@@ -40,7 +47,7 @@ public class FsmlCGenerator {
         ST main = group.getInstanceOf("main"); 
         // Set template parameters and render
         main.add("states", states);
-        main.add("initial", fsm.getInitial());
+        main.add("initial", initial);
         main.add("events", events);
         main.add("actions", actions);
         main.add("tgroups", tgroups);

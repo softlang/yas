@@ -65,16 +65,27 @@ bglTopDownParser(Pred, File, Text1, Term)
 
 % Parser of BGL grammars relying on EGL
 parserOfBgl(Text, Term2) :-
+/*
   require(
     scannerFailed(egl),
     tokens(eglToken, Text, Tokens)),
-  File = 'languages/EGL/cs.term',
+*/
+  FileCs = 'languages/EGL/cs.term',
   require(
-    fileNotReadable(File),
-    readTermFile(File, Egl)),
+    fileNotReadable(FileCs),
+    readTermFile(FileCs, EglCs)),
+  FileLs = 'languages/EGL/ls.term',
+  require(
+    fileNotReadable(FileLs),
+    readTermFile(FileLs, EglLs)),
+/*
   require(
     parserFailed(egl),
     eglScannerfull:parse(Egl, fail, Tokens, Term1)),
+*/
+  require(
+    parserFailed(egl),
+    eglScannerless:parse(EglCs, EglLs, layout, eglAbstract:(~>), Text, Term1)),
   require(
     bglSubset,
     eglToBgl(Term1, Term2)

@@ -1,7 +1,7 @@
 // BEGIN ...
 package org.softlang.btl;
-public class Syntax {
 // END ...
+public class Syntax {
     public static abstract class Expr { }
     public static class True extends Expr { }
     public static class False extends Expr { }
@@ -26,6 +26,4 @@ public class Syntax {
             this.e0 = e0; this.e1 = e1; this.e2 = e2;
         }
     }
-// BEGIN ...
 }
-// END ...

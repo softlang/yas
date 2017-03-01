@@ -1,14 +1,14 @@
+// BEGIN ...
 package org.softlang.fsml;
-
+// END ...
 public class State {
-	private String stateid;
+	private String id;
 	private boolean initial;
-	public String getStateid() { return stateid; }
-	public void setStateid(String state) { this.stateid = state; }
+	public String getStateid() { return id; }
+	public void setStateid(String state) { this.id = state; }
 	public boolean isInitial() { return initial; }
 	public void setInitial(boolean initial) { this.initial = initial; }
 	public State() { }
-	// Functional constructors
-	public State(String stateid) { this.stateid = stateid; }
-	public State(String stateid, boolean initial) { this.stateid = stateid; this.initial = initial; }
+	public State(String id) { this.id = id; }
+	public State(String id, boolean initial) { this.id = id; this.initial = initial; }
 }

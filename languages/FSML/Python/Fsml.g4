@@ -1,15 +1,15 @@
 grammar Fsml;
 options {language=Python2;}
-@header {from FsmlModel import FsmlModel}
+@header {from FsmlModel import Fsm}
 fsm :
    {self._errHandler = BailErrorStrategy()}
-   {self.model = FsmlModel()}
-   statedecl* EOF
+   {self.model = Fsm()}
+   statedecl+ EOF
    ;
 statedecl :
    {initial=False}
    ('initial' {initial=True})? 'state' stateid
-   {self.model.addState(initial, $stateid.text)}
+   {self.model.addStateNoDefault(initial, $stateid.text)}
    '{' transition* '}'
    ;
 transition :

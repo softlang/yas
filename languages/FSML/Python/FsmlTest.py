@@ -3,6 +3,7 @@ import sys
 import unittest
 
 sys.path.append('./generated')
+from FsmlSample import turnstile
 from FsmlConstraints import ok
 from FsmlToJSON import parse
 from FsmlExceptions import *
@@ -19,7 +20,8 @@ class TestOkConstraints(unittest.TestCase):
         self.initialNotOkFsm1 = parse("../tests/initialNotOk1.fsml")
         self.initialNotOkFsm2 = parse("../tests/initialNotOk2.fsml")
         self.reachabilityNotOkFsm = parse("../tests/reachabilityNotOk.fsml")
-        self.resolutionNotOkFsm = parse("../tests/resolutionNotOk.fsml")
+        self.resolutionNotOkFsm1 = parse("../tests/resolutionNotOk.fsml")
+        self.resolutionNotOkFsm2 = json.load(open("../JSON/tests/resolutionNotOk.json"))
 
     def testDeterminism(self):
         self.assertRaises(FsmlDeterministicException, ok, self.determinismNotOkFsm)
@@ -30,8 +32,10 @@ class TestOkConstraints(unittest.TestCase):
         self.assertRaises(FsmlSingleInitialException, ok, self.initialNotOkFsm2)
     def testReachability(self):
         self.assertRaises(FsmlReachableException, ok, self.reachabilityNotOkFsm)
-    def testResolution(self):
-        self.assertRaises(FsmlResolvableException, ok, self.resolutionNotOkFsm)
+    def testResolution1(self):
+        self.assertRaises(FsmlResolvableException, ok, self.resolutionNotOkFsm1)
+    def testResolution2(self):
+        self.assertRaises(FsmlResolvableException, ok, self.resolutionNotOkFsm2)
 
 # test cases for the other constraints
 
@@ -77,5 +81,17 @@ class TestSimulationOutput(unittest.TestCase):
         self.assertEqual(correctJsonOutput, simulatedJsonOutput)
         self.assertEqual(correctJsonOutput, generatedJsonOutput)
 
+# Test Model and JSON
+
+class TestJSON(unittest.TestCase):
+
+    def setUp(self):
+        self.turnstile = json.load(open("sample.json", 'r'))
+
+    def testJSON(self):
+        print turnstile.fsm
+        print self.turnstile
+        self.assertTrue(json.dumps(turnstile.fsm, sort_keys=True)==json.dumps(self.turnstile, sort_keys=True))
+        
 if __name__ == '__main__':
     unittest.main()

@@ -1,25 +1,25 @@
 // BEGIN ...
 package org.softlang.fsml.fluent;
 
-import static org.softlang.fsml.fluent.FsmlImpl.fsm;
+import static org.softlang.fsml.fluent.FsmImpl.fsm;
 
 public class Sample {
 	
 	public static final
 // END ...
-		Fsml sample =
+		Fsm turnstile =
 			fsm()
-				.state("locked")
-					.transition("ticket", "collect", "unlocked")
-					.transition("pass", "alarm", "exception")
-				.state("unlocked")
-					.transition("ticket", "eject", "unlocked")
-					.transition("pass", null, "locked")
-				.state("exception")
-					.transition("ticket", "eject", "exception")
-					.transition("pass", null, "exception")
-					.transition("mute", null, "exception")
-					.transition("release", null, "locked");
+				.addState("locked")
+					.addTransition("ticket", "collect", "unlocked")
+					.addTransition("pass", "alarm", "exception")
+				.addState("unlocked")
+					.addTransition("ticket", "eject", "unlocked")
+					.addTransition("pass", null, "locked")
+				.addState("exception")
+					.addTransition("ticket", "eject", "exception")
+					.addTransition("pass", null, "exception")
+					.addTransition("mute", null, "exception")
+					.addTransition("release", null, "locked");
 // BEGIN ...
 }
 // END ...

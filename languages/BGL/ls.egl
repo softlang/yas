@@ -1,4 +1,4 @@
 qstring : quote { { quote }~ }+ quote ;
 name : { alpha }+ ;
 layout : { space }+ ;
-
+layout : '//' { { end_of_line }~ }* end_of_line ;

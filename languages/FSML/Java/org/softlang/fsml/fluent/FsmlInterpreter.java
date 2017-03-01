@@ -1,14 +1,9 @@
 // BEGIN ...
-package org.softlang.fsml;
-
+package org.softlang.fsml.fluent;
 import java.util.ArrayList;
-
-import org.softlang.fsml.fluent.ActionStatePair;
 // END ...
-public class FsmlSimulator {
-	private FsmlObservation fsm;
-	public FsmlSimulator(FsmlObservation fsm) { this.fsm = fsm; }
-	public String[] run(String[] input) {
+public class FsmlInterpreter {
+	public static String[] run(Fsm fsm, String[] input) {
 		ArrayList<String> output = new ArrayList<>();
 		String state = fsm.getInitial();
 		for (String event : input) {

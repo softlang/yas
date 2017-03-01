@@ -3,6 +3,7 @@ package org.softlang.fsml.tests;
 import org.softlang.fsml.FsmlToObjectsLexer;
 import org.softlang.fsml.FsmlToObjectsParser;
 import org.softlang.fsml.Fsm;
+import org.softlang.fsml.FsmlObservationImpl;
 import org.softlang.fsml.FsmlSimulator;
 import org.antlr.v4.runtime.ANTLRFileStream;
 import org.antlr.v4.runtime.CommonTokenStream;
@@ -33,6 +34,6 @@ public class FsmlParserTest {
 	@Test
 	public void runSample() throws IOException {
 		Fsm sample = textToObjects("../sample.fsml");
-		assertArrayEquals(output, new FsmlSimulator(sample).run(input));
+		assertArrayEquals(output, new FsmlSimulator(new FsmlObservationImpl(sample)).run(input));
 	}
 }

@@ -1,6 +1,6 @@
 grammar Fsml;
 @header {package org.softlang.fsml;}
-fsm : state* EOF ;
+fsm : state+ EOF ;
 state : 'initial'? 'state' stateid '{' transition* '}' ;
 transition : event ('/' action)? ('->' target=stateid)? ';' ;
 stateid : NAME ;

@@ -1,0 +1,10 @@
+{
+  "stateA": [{
+      "initial": true,
+      "transitions": {
+        "eventI": [["actionI", "stateB"]],
+        "eventII": [["actionII", "stateC"]] }}],
+  "stateB": [{
+      "initial": false,
+      "transitions": { }}]
+}
