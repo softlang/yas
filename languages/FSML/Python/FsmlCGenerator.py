@@ -22,8 +22,8 @@ def generateC(fsm):
                 if action is not None: actions.add(action)
                 ts.append((event, action, target))
         # Look up template
-        env = Environment(loader=FileSystemLoader('templates'))
-        fsmTemplate = env.get_template('Fsm.c-template')
+        env = Environment(loader=FileSystemLoader('templates'), trim_blocks=True)
+        fsmTemplate = env.get_template('Fsm.jinja2')
         # Instantiate template
         return fsmTemplate.render(\
                 states = states,\

@@ -15,7 +15,7 @@ generate:
 run:
 	python FsmlToJSON.py ../sample.fsml sample.json
 	python FsmlChecker.py sample.json
-	python FsmlSimulator.py sample.json sample.input sample.output
+	python FsmlInterpreter.py sample.json sample.input sample.output
 	python FsmlCGenerator.py sample.json Turnstile
 	python FsmlPythonGenerator.py sample.json
 	python FsmlToDot.py sample.json dot/sample.dot

@@ -10,7 +10,7 @@ public class FsmlObservationImpl implements FsmlObservation {
 	public String getInitial() {
 		for (State s : fsm.getStates()) 
 			if (s.isInitial()) return s.getStateid();
-		throw new FsmlException();
+		throw new FsmlSingleInitialException();
 	}
 	public ActionStatePair makeTransition(String state, String event) {
 		for (Transition t : fsm.getTransitions())
@@ -20,6 +20,6 @@ public class FsmlObservationImpl implements FsmlObservation {
 				pair.state = t.getTarget();
 				return pair;
 			}
-		throw new FsmlException();
+		throw new FsmlInfeasibleEventException();
 	}
 }

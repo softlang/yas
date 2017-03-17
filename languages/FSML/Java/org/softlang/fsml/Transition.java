@@ -7,7 +7,7 @@ public class Transition {
 	private String event;
 	private String action;
 	private String target;
-	// ... getters and setters ...
+	// ... // getters and setters omitted
 // BEGIN ...
 	public String getSource() { return source; }
 	public void setSource(String source) { this.source = source; }

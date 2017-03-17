@@ -1,22 +1,23 @@
 # BEGIN ...
 from collections import defaultdict
+from FsmlExceptions import *
 # END ...
 class Fsm():
     def __init__(self):
     	self.fsm = defaultdict(list)
-    	self.stateObject = dict()
-    	self.currentState = ""
-    def addState(self, idText):
-        return self.addStateNoDefault(self.currentState=="", idText)
-    def addStateNoDefault(self, initial, idText):
+    	self.current = None
+    def addState(self, id):
+        return self.addStateNoDefault(self.current is None, id)
+    def addStateNoDefault(self, initial, id):
+        if id in self.fsm[id]: raise FsmlDistinctIdsException;
         self.stateObject = dict()
         self.stateObject['transitions'] = defaultdict(list)
         self.stateObject['initial'] = initial
-        self.fsm[idText] += [self.stateObject]
-        self.currentState = idText
+        self.fsm[id] += [self.stateObject]
+        self.current = id
         return self
-    def addTransition(self, inputText, actionText, targetStateText):
-        self.stateObject['transitions'][inputText] += \
-          [(actionText, \
-            self.currentState if targetStateText is None else targetStateText)]
+    def addTransition(self, event, action, target):
+        if event in self.stateObject['transitions']: raise FsmlDeterminismException;
+        self.stateObject['transitions'][event] += \
+          [(action, self.current if target is None else target)]
         return self

@@ -1,6 +1,6 @@
 // BEGIN ...
 package org.softlang.fsml.fluent;
-import org.softlang.fsml.FsmlException;
+import org.softlang.fsml.*;
 import java.util.HashMap;
 // END ...
 public class FsmImpl implements Fsm {
@@ -13,18 +13,18 @@ public class FsmImpl implements Fsm {
 	// Construct FSM object
 	public static Fsm fsm() { return new FsmImpl(); }
 	// Add state and set it as current state
-	public Fsm addState(String state) {
+	public Fsm addState(String id) {
 		// First state is initial state
-		if (initial == null) initial = state;
+		if (initial == null) initial = id;
 		// Remember state for subsequent transitions
-		this.current = state;
-		if (fsm.containsKey(state))	throw new FsmlException();
-		fsm.put(state, new HashMap<String, ActionStatePair>());
+		this.current = id;
+		if (fsm.containsKey(id))	throw new FsmlDistinctIdsException();
+		fsm.put(id, new HashMap<String, ActionStatePair>());
 		return this;
 	}
 	// Add transition for current state
 	public Fsm addTransition(String event, String action, String target) {
-		if (fsm.get(current).containsKey(event)) throw new FsmlException();
+		if (fsm.get(current).containsKey(event)) throw new FsmlDeterministismException();
 		ActionStatePair pair = new ActionStatePair();
 		pair.action = action;
 		pair.state = target;
@@ -37,6 +37,8 @@ public class FsmImpl implements Fsm {
 	}
 	// Make transition
 	public ActionStatePair makeTransition(String state, String event) {
+		if (!fsm.containsKey(state)) throw new FsmlResolutionException();
+		if (!fsm.get(state).containsKey(event)) throw new FsmlInfeasibleEventException();
 		return fsm.get(state).get(event);
 	}
 }

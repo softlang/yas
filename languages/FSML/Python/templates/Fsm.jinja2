@@ -1,16 +1,19 @@
 enum State { {{states|join(', ')|upper()}} };
 enum State initial = {{initial|upper}};
 enum Event { {{events|join(', ')|upper()}} };
-
 {% for a in actions %}void {{a}}() { }
 {% endfor %}
 enum State next(enum State s, enum Event e) {
-  switch(s) { {% for (s, ts) in transitions %}
+ switch(s) {
+{% for (s, ts) in transitions %}
   case {{s|upper()}}:
-    switch(e) { {% for (e, a, t) in ts %}
-    case {{e|upper()}}: {% if a %}{{a}}(); {%endif%}return {{t|upper()}};{% endfor %}
+   switch(e) {
+{% for (e, a, t) in ts %}
+    case {{e|upper()}}: {% if a %}{{a}}(); {% endif %}return {{t|upper()}};
+{% endfor %}
     default: return UNDEFINED;
-    }{% endfor %}
+   }
+{% endfor %}
   default: return UNDEFINED;
-  }
+ }
 }

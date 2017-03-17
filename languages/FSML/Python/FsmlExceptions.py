@@ -21,11 +21,11 @@ class FsmlDistinctIdsException(FsmlOkException):
 class FsmlSingleInitialException(FsmlOkException):
     pass
 
-class FsmlDeterministicException(FsmlOkException):
+class FsmlDeterminismException(FsmlOkException):
     pass
 
-class FsmlResolvableException(FsmlOkException):
+class FsmlResolutionException(FsmlOkException):
     pass
 
-class FsmlReachableException(FsmlOkException):
+class FsmlReachabilityException(FsmlOkException):
     pass

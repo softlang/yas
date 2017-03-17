@@ -6,7 +6,7 @@ class FsmlStepper():
             self.fsm[fromState]["transitions"] = dict()
         self.fsm[fromState]["transitions"][input] = (action, toState)
 
-    def simulate(self, input):
+    def run(self, input):
         input = list(input)
         output = []
         while input:

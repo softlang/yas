@@ -14,7 +14,6 @@ public class FsmlSyntaxChecker {
 		      new FsmlLexer(
 		    	new ANTLRFileStream(args[0]))));
 		parser.fsm();
-		System.exit(
-		  parser.getNumberOfSyntaxErrors() == Integer.parseInt(args[1]) ? 0 : 1);
+		System.exit(parser.getNumberOfSyntaxErrors()-Integer.parseInt(args[1]));
 	}
 }

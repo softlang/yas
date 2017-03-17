@@ -1,3 +1,4 @@
+// BEGIN ...
 package org.softlang.fsml;
 
 public class FunctionalSample {
@@ -5,17 +6,15 @@ public class FunctionalSample {
 	public static Fsm turnstile;
 	
 	static {
-		// Construct FSM
-		turnstile = new Fsm();
-		
-		// Declare all states
-		turnstile.getStates().add(new State("locked", true));
-		turnstile.getStates().add(new State("unlocked"));
-		turnstile.getStates().add(new State("exception"));
-		
-		// Add all transitions
-		turnstile.getTransitions().add(new Transition("locked", "ticket", "collect", "unlocked"));
-		turnstile.getTransitions().add(new Transition("locked", "pass", "alarm", "exception"));
+// END ...
+turnstile = new Fsm();
+turnstile.getStates().add(new State("locked", true));
+turnstile.getStates().add(new State("unlocked"));
+turnstile.getStates().add(new State("exception"));
+turnstile.getTransitions().add(new Transition("locked", "ticket", "collect", "unlocked"));
+turnstile.getTransitions().add(new Transition("locked", "pass", "alarm", "exception"));
+// ... // add more transitions
+// BEGIN ...
 		turnstile.getTransitions().add(new Transition("unlocked", "ticket", "eject", "unlocked"));
 		turnstile.getTransitions().add(new Transition("unlocked", "pass", null, "locked"));
 		turnstile.getTransitions().add(new Transition("exception", "ticket", "eject", "exception"));
@@ -24,3 +23,4 @@ public class FunctionalSample {
 		turnstile.getTransitions().add(new Transition("exception", "release", null, "locked"));
 	}	
 }
+// END ...
