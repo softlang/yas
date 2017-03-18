@@ -1,6 +1,6 @@
-// Generated from org/softlang/EiplChecker.g4 by ANTLR 4.4
+// Generated from EiplChecker.g4 by ANTLR 4.4
 
-package org.softlang;
+package org.softlang.eipl;
 
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;

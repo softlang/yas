@@ -1,22 +1,23 @@
 // BEGIN ...
-package org.softlang;
+package org.softlang.bnl;
 
 import org.antlr.v4.runtime.ANTLRInputStream; 
 import org.antlr.v4.runtime.CommonTokenStream; 
 import java.io.FileInputStream;
 import java.io.IOException;
 // END ...
-public class EiplChecker {
+public class BnlEbnfConversion {
 	public static void main(String[] args)
 			throws IOException {
-		EiplCheckerParser parser =
-		  new EiplCheckerParser(
+		BnlEbnfConversionParser parser =
+		  new BnlEbnfConversionParser(
 		    new CommonTokenStream(
-		      new EiplCheckerLexer(
+		      new BnlEbnfConversionLexer(
 		        new ANTLRInputStream(
 		          new FileInputStream(args[0])))));
-		parser.program();
-		System.exit((parser.getNumberOfSyntaxErrors() == 0
-			     && parser.ok) ? 0 : 1);
+		Float val = parser.number().val;
+		System.exit(
+			    (parser.getNumberOfSyntaxErrors() == 0 &&
+			     val == Float.parseFloat(args[1])) ? 0 : 1);
 	}
 }

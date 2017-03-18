@@ -1,18 +1,18 @@
 // BEGIN ...
-package org.softlang;
+package org.softlang.bnl;
 
 import org.antlr.v4.runtime.ANTLRInputStream; 
 import org.antlr.v4.runtime.CommonTokenStream; 
 import java.io.FileInputStream;
 import java.io.IOException;
 // END ...
-public class BnlBnfSyntaxChecker {
+public class BnlEbnfSyntaxChecker {
 	public static void main(String[] args)
 			throws IOException {
-		BnlBnfParser parser =
-		  new BnlBnfParser(
+		BnlEbnfParser parser =
+		  new BnlEbnfParser(
 		    new CommonTokenStream(
-		      new BnlBnfLexer(
+		      new BnlEbnfLexer(
 		        new ANTLRInputStream(
 		          new FileInputStream(args[0])))));
 		parser.number();

@@ -1,6 +1,6 @@
 grammar BnlBnfConversion;
 
-@header { package org.softlang; }
+@header { package org.softlang.bnl; }
 
 number returns [float val]
     : bits rest WS? EOF { $val = $bits.val + $rest.val; }

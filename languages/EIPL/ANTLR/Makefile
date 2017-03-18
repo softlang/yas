@@ -1,6 +1,6 @@
 cp = -cp .:../../../lib/Java/antlr-4.4-complete.jar
-antlr = java ${cp} org.antlr.v4.Tool
-EiplChecker = java ${cp} org.softlang.EiplChecker
+antlr = java ${cp} org.antlr.v4.Tool -o org/softlang/eipl
+EiplChecker = java ${cp} org.softlang.eipl.EiplChecker
 
 all:
 	make generate
@@ -8,10 +8,10 @@ all:
 	make test
 
 generate:
-	${antlr} org/softlang/EiplChecker.g4
+	${antlr} EiplChecker.g4
 
 compile:
-	javac ${cp} org/softlang/*.java
+	javac ${cp} org/softlang/eipl/*.java
 
 test:
 	${EiplChecker} ../sample.eipl
@@ -21,6 +21,6 @@ test:
 	! ${EiplChecker} ../tests/proc-clash.eipl
 
 clean:
-	cd org/softlang; \
+	cd org/softlang/eipl; \
 	rm -f *.class; \
 	rm -f *.tokens *Lexer.* *Parser.* *Listener*.*;

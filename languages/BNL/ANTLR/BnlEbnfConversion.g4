@@ -1,6 +1,6 @@
 grammar BnlEbnfConversion;
 @header {
-package org.softlang;
+package org.softlang.bnl;
 }
 number returns [float val] :
  	{ $val = 0; } 

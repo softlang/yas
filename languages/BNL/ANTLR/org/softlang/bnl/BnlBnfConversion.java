@@ -1,18 +1,18 @@
 // BEGIN ...
-package org.softlang;
+package org.softlang.bnl;
 
 import org.antlr.v4.runtime.ANTLRInputStream; 
 import org.antlr.v4.runtime.CommonTokenStream; 
 import java.io.FileInputStream;
 import java.io.IOException;
 // END ...
-public class BnlEbnfConversion {
+public class BnlBnfConversion {
 	public static void main(String[] args)
 			throws IOException {
-		BnlEbnfConversionParser parser =
-		  new BnlEbnfConversionParser(
+		BnlBnfConversionParser parser =
+		  new BnlBnfConversionParser(
 		    new CommonTokenStream(
-		      new BnlEbnfConversionLexer(
+		      new BnlBnfConversionLexer(
 		        new ANTLRInputStream(
 		          new FileInputStream(args[0])))));
 		Float val = parser.number().val;

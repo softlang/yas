@@ -1,7 +1,7 @@
 grammar EiplChecker;
 
 @header {
-package org.softlang;
+package org.softlang.eipl;
 }
 
 @members {

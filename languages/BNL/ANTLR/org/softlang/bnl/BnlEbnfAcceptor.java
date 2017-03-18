@@ -1,4 +1,4 @@
-package org.softlang;
+package org.softlang.bnl;
 
 import org.antlr.v4.runtime.*;
 import java.io.IOException;

@@ -1,10 +1,10 @@
 cp = -cp .:../../../lib/Java/antlr-4.4-complete.jar
-antlr = java ${cp} org.antlr.v4.Tool
-BnlBnfSyntaxChecker = java ${cp} org.softlang.BnlBnfSyntaxChecker
-BnlEbnfSyntaxChecker = java ${cp} org.softlang.BnlEbnfSyntaxChecker
-BnlEbnfAcceptor = java ${cp} org.softlang.BnlEbnfAcceptor
-BnlBnfConversion = java ${cp} org.softlang.BnlBnfConversion
-BnlEbnfConversion = java ${cp} org.softlang.BnlEbnfConversion
+antlr = java ${cp} org.antlr.v4.Tool -o org/softlang/bnl
+BnlBnfSyntaxChecker = java ${cp} org.softlang.bnl.BnlBnfSyntaxChecker
+BnlEbnfSyntaxChecker = java ${cp} org.softlang.bnl.BnlEbnfSyntaxChecker
+BnlEbnfAcceptor = java ${cp} org.softlang.bnl.BnlEbnfAcceptor
+BnlBnfConversion = java ${cp} org.softlang.bnl.BnlBnfConversion
+BnlEbnfConversion = java ${cp} org.softlang.bnl.BnlEbnfConversion
 
 all:
 	make generate
@@ -12,13 +12,13 @@ all:
 	make test
 
 generate:
-	${antlr} org/softlang/BnlBnf.g4
-	${antlr} org/softlang/BnlEbnf.g4
-	${antlr} org/softlang/BnlBnfConversion.g4
-	${antlr} org/softlang/BnlEbnfConversion.g4
+	${antlr} BnlBnf.g4
+	${antlr} BnlEbnf.g4
+	${antlr} BnlBnfConversion.g4
+	${antlr} BnlEbnfConversion.g4
 
 compile:
-	javac ${cp} org/softlang/*.java
+	javac ${cp} org/softlang/bnl/*.java
 
 test:
 	${BnlBnfSyntaxChecker} ../samples/5comma25.bnl 0
@@ -28,6 +28,6 @@ test:
 	${BnlEbnfConversion} ../samples/5comma25.bnl 5.25
 
 clean:
-	cd org/softlang; \
+	cd org/softlang/bnl; \
 	rm -f *.class; \
 	rm -f *.tokens *Lexer.* *Parser.* *Listener*.*;
