@@ -1,7 +1,6 @@
 grammar BnlEbnfConversion;
-@header {
-package org.softlang.bnl;
-}
+@header {package org.softlang.bnl;}
+
 number returns [float val] :
  	{ $val = 0; } 
 	( bit1=bit { $val = $val*2 + $bit1.val; } )+ 

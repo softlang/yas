@@ -4,7 +4,7 @@
   language(ok(bfpl(term))),
   membership(ok(bfpl(term)), bfplProg:ok, []),
   elementOf('../samples/factorial.term', ok(bfpl(term))),
-  elementOf('../samples/exp.term', ok(bfpl(term))),
+  elementOf('../samples/power.term', ok(bfpl(term))),
 
   % Results of interpretation
   language(bfpl(value(term))),
@@ -12,7 +12,7 @@
   membership(bfpl(value(term)), intOrBool:value, []),
   membership(bfpl(normal(term)), bfplNormal:normal, []),
   elementOf('../samples/factorial.value', bfpl(value(term))),
-  elementOf('../samples/exp.value', bfpl(value(term))),
+  elementOf('../samples/power.value', bfpl(value(term))),
   elementOf('../samples/factorial.normal', bfpl(normal(term))),
 
   % Interpreters
@@ -22,7 +22,7 @@
 
   % Application of interpreters
   mapsTo(bigstep, ['../samples/factorial.term'], ['../samples/factorial.value']),
-  mapsTo(bigstep, ['../samples/exp.term'], ['../samples/exp.value']),
+  mapsTo(bigstep, ['../samples/power.term'], ['../samples/power.value']),
   mapsTo(smallstep, ['../samples/factorial.term'], ['../samples/factorial.normal']),
   mapsTo(denotational, ['../samples/factorial.term'], ['../samples/factorial.value'])
 

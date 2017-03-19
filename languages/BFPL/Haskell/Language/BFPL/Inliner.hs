@@ -24,21 +24,23 @@ peval (fs, e) = f e empty
         r1 = f e1 env
         r2 = f e2 env
       in
-       case exprToValue r0 of
+       case toValue r0 of
          (Just (Right bv)) -> if bv then r1 else r2
          Nothing -> If r0 r1 r2
     f (Unary o e) env =
       let r = f e env
-      in case exprToValue r of
-           (Just v) -> valueToExpr (uop o v)
+      in case toValue r of
+           (Just v) -> fromValue (uop o v)
            _ -> Unary o r
     f (Binary o e1 e2) env = -- ...
+-- BEGIN ...
       let
         r1 = f e1 env
         r2 = f e2 env
-      in case (exprToValue r1, exprToValue r2) of
-           (Just v1, Just v2) -> valueToExpr (bop o v1 v2)
+      in case (toValue r1, toValue r2) of
+           (Just v1, Just v2) -> fromValue (bop o v1 v2)
            _ -> Binary o r1 r2
+-- END ...
     f (Apply fn es) env = f body env'
       where
         Just (_, (ns, body)) = Prelude.lookup fn fs
@@ -46,12 +48,12 @@ peval (fs, e) = f e empty
         env' = fromList (zip ns rs)
 
 -- Attempt extraction of value from expression
-exprToValue :: Expr -> Maybe Value
-exprToValue (IntConst iv) = Just (Left iv)
-exprToValue (BoolConst bv) = Just (Right bv)
-exprToValue _ = Nothing
+toValue :: Expr -> Maybe Value
+toValue (IntConst iv) = Just (Left iv)
+toValue (BoolConst bv) = Just (Right bv)
+toValue _ = Nothing
 
 -- Represent value as expression
-valueToExpr :: Value -> Expr
-valueToExpr (Left iv) = IntConst iv
-valueToExpr (Right bv) = BoolConst bv
+fromValue :: Value -> Expr
+fromValue (Left iv) = IntConst iv
+fromValue (Right bv) = BoolConst bv

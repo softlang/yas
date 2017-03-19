@@ -1,7 +1,6 @@
 grammar BnlBnf;
-@header {
-package org.softlang.bnl;
-}
+@header {package org.softlang.bnl;}
+
 number 	: bits rest WS? EOF;
 bits 	: bit | bits bit;
 bit 	: '0' | '1';

@@ -1,5 +1,5 @@
 // Generated from BnlEbnf.g4 by ANTLR 4.4
- package org.softlang.bnl; 
+package org.softlang.bnl;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;

@@ -25,13 +25,13 @@ innermost s = repeat (oncebu s)
 -- Basic strategy combinators
 s1 `sequ` s2 = \x -> s1 x >>= s2 -- monadic function composition
 s1 `choice` s2 = \x -> s1 x `mplus` s2 x -- monadic choice
-all = -- ... -- depends on type class Data
+all s = -- ... -- magically apply s to all immediate subterms
 -- BEGIN ...
-  gmapM
+  gmapM s
 -- END ...
-one = -- ... -- depends on type class Data
+one s = -- ... -- magically find first immediate subterm for which s succeeds
 -- BEGIN ...
-  gmapMo
+  gmapMo s
 -- END ...
 
 -- Helper strategy combinators

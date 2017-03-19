@@ -1,43 +1,24 @@
 grammar EiplChecker;
-
-@header {
-package org.softlang.eipl;
-}
-
+@header {package org.softlang.eipl;}
 @members {
 public boolean ok = true;
-public EiplEnv env = new EiplEnv();
+public Env env = new Env();
 }
 
-program : scope EOF;
-scope 
-    :  { env.enterScope(); }
-       'begin' decl* stmt 'end'
-       { env.exitScope(); }
-    ;
-decl
-    :
+program : scope EOF ;
+scope : { env.enterScope(); } 'begin' decl* stmt 'end' { env.exitScope(); } ;
+decl :
       'var' NAME '=' expr ';'
-      {
-        ok &= env.noClash($NAME.text);
-        env.addVar($NAME.text, $expr.type);
-      }
+      { ok &= env.noClash($NAME.text); env.addVar($NAME.text, $expr.type); }
     |
       'proc' NAME stmt
-      {
-        ok &= env.noClash($NAME.text);
-        env.addProc($NAME.text);
-      }
+      { ok &= env.noClash($NAME.text); env.addProc($NAME.text); }
     ;
-stmt
-    :
+stmt :
       ';'
     |
       NAME '=' expr ';'
-      {
-        ok &= env.isVar($NAME.text)
-           && env.getType($NAME.text) == $expr.type;
-      }
+      { ok &= env.isVar($NAME.text) && env.getType($NAME.text) == $expr.type; }
     |
       'call' NAME ';'
       { ok &= env.isProc($NAME.text); }
@@ -48,32 +29,28 @@ stmt
       // ...
 // BEGIN ...
       'if' '(' expr ')' stmt ('else' stmt)?
-      { ok &= $expr.type == EiplEnv.Type.BoolType; }      
+      { ok &= $expr.type == Env.Type.BoolType; }      
     |
       'while' '(' expr ')' stmt
-      { ok &= $expr.type == EiplEnv.Type.BoolType; }      
+      { ok &= $expr.type == Env.Type.BoolType; }      
     |
       '{' stmt* '}'
     |
       'write' expr ';'
 // END ...
     ;
-expr returns [EiplEnv.Type type]
-    :
+expr returns [Env.Type type] :
       INTEGER
-      { $type = EiplEnv.Type.IntType; }
+      { $type = Env.Type.IntType; }
     |
       NAME
-      {
-        ok &= env.isVar($NAME.text);
-        $type = env.getType($NAME.text);
-      }
+      { ok &= env.isVar($NAME.text); $type = env.getType($NAME.text); }
     |
       expr1=expr '+' expr2=expr
       {
-        ok &= $expr1.type == EiplEnv.Type.IntType
-           && $expr2.type == EiplEnv.Type.IntType;
-        $type = EiplEnv.Type.IntType;
+        ok &= $expr1.type == Env.Type.IntType
+           && $expr2.type == Env.Type.IntType;
+        $type = Env.Type.IntType;
       }
     |
       // Remaining expression forms omitted for brevity
@@ -81,7 +58,7 @@ expr returns [EiplEnv.Type type]
 // BEGIN ...
 // This is a patently incomplete implementation.
       'TODO'
-      { $type = EiplEnv.Type.NoType; }
+      { $type = Env.Type.NoType; }
  // END ...
     ;
 NAME : ('a'..'z'|'A'..'Z')+ ;

@@ -1,6 +1,8 @@
 -- BEGIN ...
 module Language.BTL.TypeChecker where
 import Language.BTL.Syntax
+import Data.Maybe (isJust)
+import Control.Monad (guard)
 -- END ...
 -- Types of expressions
 data Type = NatType | BoolType
@@ -10,19 +12,19 @@ data Type = NatType | BoolType
 
 -- Well-typedness of expressions
 wellTyped :: Expr -> Bool
-wellTyped e = case typeOf e of { Just _ -> True; Nothing -> False }
+wellTyped e = isJust (typeOf e)
 
 -- Types of expressions
 typeOf :: Expr -> Maybe Type
-typeOf TRUE = Just BoolType
-typeOf FALSE = Just BoolType
-typeOf Zero = Just NatType
-typeOf (Succ e) = case typeOf e of { Just NatType -> Just NatType; _ -> Nothing }
-typeOf (Pred e) = case typeOf e of { Just NatType -> Just NatType; _ -> Nothing }
-typeOf (IsZero e) = case typeOf e of { Just NatType -> Just BoolType; _ -> Nothing }
-typeOf (If e0 e1 e2) =
-  case typeOf e0 of
-    (Just BoolType) ->
-      case (typeOf e1, typeOf e2) of
-        (Just t1, Just t2) -> if t1==t2 then Just t1 else Nothing
-        _ -> Nothing
+typeOf TRUE = return BoolType
+typeOf FALSE = return BoolType
+typeOf Zero = return NatType
+typeOf (Succ e) = do { NatType <- typeOf e; return NatType }
+typeOf (Pred e) = do { NatType <- typeOf e; return NatType }
+typeOf (IsZero e) = do { NatType <- typeOf e; return BoolType }
+typeOf (If e0 e1 e2) = do
+  BoolType <- typeOf e0
+  t1 <- typeOf e1
+  t2 <- typeOf e2
+  guard (t1==t2)
+  return t1

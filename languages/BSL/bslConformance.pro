@@ -3,5 +3,5 @@
 % END ...
 termOfSort(Profiles, Term, Sort) :-
   Term =.. [Symbol|Terms],
-  member((Symbol, Arguments, Sort), Profiles),
-  map(bslConformance:termOfSort(Profiles), Terms, Arguments).
+  member((Symbol, Sorts, Sort), Profiles),
+  map(bslConformance:termOfSort(Profiles), Terms, Sorts).

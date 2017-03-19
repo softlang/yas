@@ -3,14 +3,13 @@ package org.softlang.eipl;
 import java.util.Stack;
 import java.util.HashMap;
 
-public class EiplEnv {
+public class Env {
 	public enum Type { NoType, IntType, BoolType }
 	private abstract class Entry { String id; }
 	private class VarEntry extends Entry { Type ty;	}
 	private class ProcEntry extends Entry { }
-	private Stack<HashMap<String, Entry>> stack = 
-			new Stack<HashMap<String, Entry>>();
-	public void enterScope() { stack.push(new HashMap<String, Entry>()); }
+	private Stack<HashMap<String, Entry>> stack = new Stack<>();
+	public void enterScope() { stack.push(new HashMap<>()); }
 	public void exitScope() { stack.pop(); }
 	public boolean noClash(String id) { return !stack.peek().containsKey(id.intern()); }
 	public void addVar(String id, Type ty) {

@@ -1,7 +1,5 @@
 // Generated from BnlBnf.g4 by ANTLR 4.4
-
 package org.softlang.bnl;
-
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.misc.NotNull;

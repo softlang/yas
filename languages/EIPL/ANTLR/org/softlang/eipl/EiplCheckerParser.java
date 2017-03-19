@@ -1,7 +1,5 @@
 // Generated from EiplChecker.g4 by ANTLR 4.4
-
 package org.softlang.eipl;
-
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -50,7 +48,7 @@ public class EiplCheckerParser extends Parser {
 
 
 	public boolean ok = true;
-	public EiplEnv env = new EiplEnv();
+	public Env env = new Env();
 
 	public EiplCheckerParser(TokenStream input) {
 		super(input);
@@ -196,10 +194,7 @@ public class EiplCheckerParser extends Parser {
 				setState(27); match(T__10);
 				setState(28); ((DeclContext)_localctx).expr = expr(0);
 				setState(29); match(T__12);
-
-				        ok &= env.noClash((((DeclContext)_localctx).NAME!=null?((DeclContext)_localctx).NAME.getText():null));
-				        env.addVar((((DeclContext)_localctx).NAME!=null?((DeclContext)_localctx).NAME.getText():null), ((DeclContext)_localctx).expr.type);
-				      
+				 ok &= env.noClash((((DeclContext)_localctx).NAME!=null?((DeclContext)_localctx).NAME.getText():null)); env.addVar((((DeclContext)_localctx).NAME!=null?((DeclContext)_localctx).NAME.getText():null), ((DeclContext)_localctx).expr.type); 
 				}
 				break;
 			case T__3:
@@ -208,10 +203,7 @@ public class EiplCheckerParser extends Parser {
 				setState(32); match(T__3);
 				setState(33); ((DeclContext)_localctx).NAME = match(NAME);
 				setState(34); stmt();
-
-				        ok &= env.noClash((((DeclContext)_localctx).NAME!=null?((DeclContext)_localctx).NAME.getText():null));
-				        env.addProc((((DeclContext)_localctx).NAME!=null?((DeclContext)_localctx).NAME.getText():null));
-				      
+				 ok &= env.noClash((((DeclContext)_localctx).NAME!=null?((DeclContext)_localctx).NAME.getText():null)); env.addProc((((DeclContext)_localctx).NAME!=null?((DeclContext)_localctx).NAME.getText():null)); 
 				}
 				break;
 			default:
@@ -279,10 +271,7 @@ public class EiplCheckerParser extends Parser {
 				setState(41); match(T__10);
 				setState(42); ((StmtContext)_localctx).expr = expr(0);
 				setState(43); match(T__12);
-
-				        ok &= env.isVar((((StmtContext)_localctx).NAME!=null?((StmtContext)_localctx).NAME.getText():null))
-				           && env.getType((((StmtContext)_localctx).NAME!=null?((StmtContext)_localctx).NAME.getText():null)) == ((StmtContext)_localctx).expr.type;
-				      
+				 ok &= env.isVar((((StmtContext)_localctx).NAME!=null?((StmtContext)_localctx).NAME.getText():null)) && env.getType((((StmtContext)_localctx).NAME!=null?((StmtContext)_localctx).NAME.getText():null)) == ((StmtContext)_localctx).expr.type; 
 				}
 				break;
 			case T__8:
@@ -317,7 +306,7 @@ public class EiplCheckerParser extends Parser {
 					}
 					break;
 				}
-				 ok &= ((StmtContext)_localctx).expr.type == EiplEnv.Type.BoolType; 
+				 ok &= ((StmtContext)_localctx).expr.type == Env.Type.BoolType; 
 				}
 				break;
 			case T__13:
@@ -328,7 +317,7 @@ public class EiplCheckerParser extends Parser {
 				setState(64); ((StmtContext)_localctx).expr = expr(0);
 				setState(65); match(T__1);
 				setState(66); stmt();
-				 ok &= ((StmtContext)_localctx).expr.type == EiplEnv.Type.BoolType; 
+				 ok &= ((StmtContext)_localctx).expr.type == Env.Type.BoolType; 
 				}
 				break;
 			case T__14:
@@ -375,7 +364,7 @@ public class EiplCheckerParser extends Parser {
 	}
 
 	public static class ExprContext extends ParserRuleContext {
-		public EiplEnv.Type type;
+		public Env.Type type;
 		public ExprContext expr1;
 		public Token NAME;
 		public ExprContext expr2;
@@ -421,22 +410,19 @@ public class EiplCheckerParser extends Parser {
 			case INTEGER:
 				{
 				setState(84); match(INTEGER);
-				 ((ExprContext)_localctx).type =  EiplEnv.Type.IntType; 
+				 ((ExprContext)_localctx).type =  Env.Type.IntType; 
 				}
 				break;
 			case NAME:
 				{
 				setState(86); ((ExprContext)_localctx).NAME = match(NAME);
-
-				        ok &= env.isVar((((ExprContext)_localctx).NAME!=null?((ExprContext)_localctx).NAME.getText():null));
-				        ((ExprContext)_localctx).type =  env.getType((((ExprContext)_localctx).NAME!=null?((ExprContext)_localctx).NAME.getText():null));
-				      
+				 ok &= env.isVar((((ExprContext)_localctx).NAME!=null?((ExprContext)_localctx).NAME.getText():null)); ((ExprContext)_localctx).type =  env.getType((((ExprContext)_localctx).NAME!=null?((ExprContext)_localctx).NAME.getText():null)); 
 				}
 				break;
 			case T__7:
 				{
 				setState(88); match(T__7);
-				 ((ExprContext)_localctx).type =  EiplEnv.Type.NoType; 
+				 ((ExprContext)_localctx).type =  Env.Type.NoType; 
 				}
 				break;
 			default:
@@ -460,9 +446,9 @@ public class EiplCheckerParser extends Parser {
 					setState(93); match(T__0);
 					setState(94); ((ExprContext)_localctx).expr2 = expr(3);
 
-					                  ok &= ((ExprContext)_localctx).expr1.type == EiplEnv.Type.IntType
-					                     && ((ExprContext)_localctx).expr2.type == EiplEnv.Type.IntType;
-					                  ((ExprContext)_localctx).type =  EiplEnv.Type.IntType;
+					                  ok &= ((ExprContext)_localctx).expr1.type == Env.Type.IntType
+					                     && ((ExprContext)_localctx).expr2.type == Env.Type.IntType;
+					                  ((ExprContext)_localctx).type =  Env.Type.IntType;
 					                
 					}
 					} 

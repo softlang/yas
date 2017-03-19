@@ -4,20 +4,20 @@ grammar FsmlToObjects;
 
 fsm : state+ EOF ;
 state : 
-  {boolean initial = false;} 
-  ('initial' {initial = true;})? 
+  { boolean initial = false; } 
+  ('initial' { initial = true; })? 
   'state' stateid
-  {fsm.getStates().add(new State($stateid.text, initial));}
+  { fsm.getStates().add(new State($stateid.text, initial)); }
   '{' transition* '}'
   ;
 transition :
-  {String source = fsm.getStates().get(fsm.getStates().size()-1).getStateid();}
+  { String source = fsm.getStates().get(fsm.getStates().size()-1).getStateid(); }
   event 
-  {String action = null;}
-  ('/' action {action = $action.text;})? 
-  {String target = source;} 
-  ('->' stateid {target = $stateid.text;})?
-  {fsm.getTransitions().add(new Transition(source, $event.text, action, target));}
+  { String action = null; }
+  ('/' action { action = $action.text; })? 
+  { String target = source; } 
+  ('->' stateid { target = $stateid.text; })?
+  { fsm.getTransitions().add(new Transition(source, $event.text, action, target)); }
   ';'
   ;
 stateid : NAME ;
