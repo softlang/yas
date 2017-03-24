@@ -1,1 +1,1 @@
-fork(fork(leaf(z), leaf(z)), leaf(s(z))).
+fork(fork(leaf(z),leaf(z)),leaf(s(z))).
