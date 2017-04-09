@@ -1,2 +1,2 @@
-+ MMTL (MetaModel Transformation Language)
+# MMTL (MetaModel Transformation Language)
 A trivial transformation language for metamodels.

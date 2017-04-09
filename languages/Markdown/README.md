@@ -1,2 +1,2 @@
-+ Markdown
+# Markdown
 A markup-based documentation language.

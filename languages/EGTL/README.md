@@ -1,2 +1,2 @@
-+ EGTL (Extended Grammar Transformation Language)
+# EGTL (Extended Grammar Transformation Language)
 A trivial transformation language for grammars.

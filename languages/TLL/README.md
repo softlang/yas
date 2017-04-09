@@ -1,2 +1,2 @@
-+ TLL (Typed Lambda Language)
+# TLL (Typed Lambda Language)
 An applied, typed lambda calculus.

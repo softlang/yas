@@ -11,4 +11,4 @@ main((_, L), Text) :-
     member(name(N), L)
   ),
   member(explanation(X), L),
-  with_output_to(codes(Text), format('+ ~w~n~w', [N, X])).
+  with_output_to(codes(Text), format('# ~w~n~w', [N, X])).

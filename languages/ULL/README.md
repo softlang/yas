@@ -1,2 +1,2 @@
-+ ULL (Untyped Lambda Language)
+# ULL (Untyped Lambda Language)
 An applied, untyped lambda calculus.
