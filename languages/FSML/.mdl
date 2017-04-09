@@ -1,0 +1,11 @@
+(fsml,
+[
+  acronym('FSML'),
+  expansion('Finite State Machine Language'),
+  explanation('A simple domain-specific modeling language (DSML) for finite state machines (FSMs).'),
+  filenameExtension('.fsml'),
+  syntax(egl),
+  syntax(esl),
+  syntax(mml)
+]
+).

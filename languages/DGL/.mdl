@@ -1,0 +1,10 @@
+(dgl,
+[
+  acronym('DGL'),
+  expansion('Dot-based Graph Language'),
+  explanation('A trivial specification language for graphs that may be rendered eventually with the Graphviz tool.'),
+  subsetOf(dot),
+  syntax(haskell)
+]
+).
+

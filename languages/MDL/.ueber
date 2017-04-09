@@ -1,0 +1,4 @@
+[
+  macro(eslSyntax(mdl)),
+  function(publish, [mdl(term)], [markdown(text)], mdlToMd:main, []) 
+].

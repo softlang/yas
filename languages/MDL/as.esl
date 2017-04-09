@@ -1,0 +1,24 @@
+type metadata = id # metaitem* ; // collections of metadata items
+type id = string ; // ids used for languages
+type uri = string ; // URIs used for identity links
+
+// Metadata items
+symbol name : string -> metaitem ;
+symbol acronym : string -> metaitem ;
+symbol expansion : string -> metaitem ;
+symbol explanation : string -> metaitem ;
+symbol filenameExtension : string -> metaitem ;
+symbol noBasename : -> metaitem ;
+symbol variationOf : id -> metaitem ;
+symbol extensionOf : id -> metaitem ;
+symbol subsetOf : id -> metaitem ;
+symbol supersetOf : id -> metaitem ;
+symbol dependsOn : id -> metaitem ;
+symbol syntax : sdlid -> metaitem ;
+symbol sameAs : uri -> metaitem ;
+
+// Syntax definition languages in YAS
+symbol egl : -> sdlid ;
+symbol esl : -> sdlid ;
+symbol mml : -> sdlid ; 
+symbol haskell : -> sdlid ;

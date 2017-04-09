@@ -1,4 +1,4 @@
 [
-    macro(eglSyntax(bipl)),
-    macro(eslSyntax(bipl))
+  macro(eglSyntax(bipl)),
+  macro(eslSyntax(bipl))
 ].

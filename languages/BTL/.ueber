@@ -1,10 +1,5 @@
 [
-    % Syntax
-    macro(basicSyntax(btl)),
-
-    % Sample
-    macro(parseSample(btl)),
-
-    % Evaluation result
-    elementOf('value.term', btl(term))
+  macro(basicSyntax(btl)),
+  macro(parseSample(btl)),
+  elementOf('value.term', btl(term))
 ].

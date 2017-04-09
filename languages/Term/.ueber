@@ -1,6 +1,6 @@
 [
   % Abstract sublanguages of term
-  language(deps(term)), % File dependencies for builing
+  language(deps(term)), % File dependencies for building
   membership(deps(term), succeed, []),
   language(ini(term)), % Configuration data
   language(tokens(term)), % Token sequences as input for parsing

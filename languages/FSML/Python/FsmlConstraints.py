@@ -19,7 +19,7 @@ def singleInitialState(fsm):
 
 def deterministicTransitions(fsm):
     for state, [decl] in fsm.iteritems():
-        for input, transitions in decl["transitions"].iteritems():
+        for event, transitions in decl["transitions"].iteritems():
             if not len(transitions) == 1: raise FsmlDeterminismException()
     
 def resolvableTargetStates(fsm):

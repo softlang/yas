@@ -1,0 +1,4 @@
+[
+  language(markdown(text)),
+  membership(markdown(text), succeed, [])
+].

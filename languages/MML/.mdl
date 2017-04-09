@@ -1,0 +1,11 @@
+(mml,
+[
+  acronym('MML'),
+  expansion('MetaModeling Language'),
+  explanation('A basic metamodeling language for graph-based abstract syntax.'),
+  filenameExtension('.mml'),
+  syntax(egl),
+  syntax(esl),
+  syntax(mml)
+]
+).

@@ -1,0 +1,8 @@
+(bnl,
+[
+  acronym('BNL'),
+  expansion('Basic Number Language'),
+  explanation('A trivial language for the representation of binary numbers.'),
+  filenameExtension('.bnl')
+]
+).

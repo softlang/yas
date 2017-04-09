@@ -1,0 +1,10 @@
+(ull,
+[
+  acronym('ULL'),
+  expansion('Untyped Lambda Language'),
+  explanation('An applied, untyped lambda calculus.'),
+  extensionOf(btl),
+  variationOf(tll),
+  syntax(haskell)
+]
+).

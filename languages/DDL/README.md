@@ -1,5 +1,2 @@
-# DDL: Data Definition Language
-
-DDL is essentially a SQL subset for data definition.
-DDL's concrete syntax features CREATE TABLE statements.
-
++ DDL (Data Definition Language)
+A SQL DDL-like data definition language for relational schemas.

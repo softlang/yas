@@ -1,0 +1,9 @@
+(antlr,
+[
+  acronym('ANTLR'),
+  expansion('Another Tool for Language Recognition'),
+  explanation('The ANTLR tool and language for parsing and processing string languages.'),
+  filenameExtension('.g4'),
+  sameAs('http://www.antlr.org/')
+]
+).

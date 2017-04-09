@@ -1,7 +1,4 @@
 [
-  % Syntax of MMTL
   macro(eslSyntax(mmtl)),
-
-  % Interpreter of MMTL
   function(mmTransform, [mmtl(term), mml(term)], [mml(term)], mmTransform:transform, [])
 ].

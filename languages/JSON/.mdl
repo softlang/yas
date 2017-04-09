@@ -1,0 +1,9 @@
+(json,
+[
+  acronym('JSON'),
+  expansion('JavaScript Object Notation'),
+  explanation('A text-based interchange format.'),
+  filenameExtension('.json'),
+  sameAs('https://en.wikipedia.org/wiki/JSON')
+]
+).

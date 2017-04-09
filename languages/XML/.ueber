@@ -1,0 +1,4 @@
+[
+  language(json),
+  membership(json, succeed, [])
+].

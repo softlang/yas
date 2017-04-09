@@ -1,5 +1,2 @@
-# BTL: Basic TAPL Language
-
-TAPL refers to Pierce's textbook "Types and Programming Languages".
-BTL features trivial operations on natural numbers and Boolean values.
-
++ BTL (Basic TAPL Language)
+A trivial expression language with expression forms on Boolean values and natural numbers inspired by a similar language in Pierce's TAPL textbook.

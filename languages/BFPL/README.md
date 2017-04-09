@@ -1,1 +1,2 @@
-The Basic Functional Programming Language of softlangbook
++ BFPL (Basic Functional Programming Language)
+A trivial first-order functional programming language with support for primitive types for Ints and Booleans, but without support for algebraic datatypes.

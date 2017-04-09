@@ -1,4 +1,2 @@
-# MMDL: MetaModel Difference Language
-
-MMDL supports the representation of differences between metamodels.
-
++ MMDL (MetaModel Difference Language)
+A representation format for metamodel-based term differences.

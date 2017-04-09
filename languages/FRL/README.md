@@ -1,6 +1,2 @@
-# FRL: Family by Reference Language
-
-A language for the representation of families.
-The "by reference" part refers to an aspect of the metamodel.
-That is, closest friends are represented by reference rather than by name.
-
++ FRL (Family by Reference Language)
+A trivial data model for representing families as collections of persons with various attributes; persons are identified by reference as opposed to name.

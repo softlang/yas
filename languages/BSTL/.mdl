@@ -1,0 +1,10 @@
+(bstl,
+[
+  acronym('BSTL'),
+  expansion('Basic Signature Transformation Language'),
+  explanation('A trivial transformation language for coupled transformations on BSL signatures and conformant terms.'),
+  filenameExtension('.bstl'),
+  dependsOn(bsl),
+  dependsOn(term)
+]
+).

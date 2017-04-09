@@ -1,3 +1,2 @@
-# ESL: Extended Signature Language
-
-ESL supports a notation for algebraic signatures much in the sense of many-sorted algebras and also in close similarity to Haskell's algebraic data types. ESL feature primitive types, tuples, lists, and maybies. ESL is an extension of BSL: Basic Signature Language.
++ ESL (Extended Signature Language)
+A simple extension of the basic signature language BSL for tree-based abstract syntax definition to support type synonyms, products, lists, maybies, and primitive types.

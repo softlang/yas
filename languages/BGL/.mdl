@@ -1,0 +1,11 @@
+(bgl,
+[
+  acronym('BGL'),
+  expansion('Basic Grammar Language'),
+  explanation('A BNF-like notation for context-free grammars; rules (productions) are labeled.'),
+  filenameExtension('.bgl'),
+  syntax(egl),
+  syntax(esl),
+  syntax(haskell)
+]
+).

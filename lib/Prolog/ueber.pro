@@ -12,7 +12,7 @@
 :- ['languages/ueber/macros/fxy.pro'].
 :- ['languages/ueber/macros/forall.pro'].
 :- ['languages/ueber/macros/lal.pro'].
-:- ['languages/ueber/macros/bmpl.pro'].
+:- ['languages/ueber/macros/mdl.pro'].
 :- nb_setval(ueber_level, 1).
 :- nb_setval(ueber_dir, '.').
 
@@ -29,8 +29,12 @@ preprocess(Dir) :-
   ).
 
 % Preprocess directory and .ueber file
-preprocess(Dir, File) :-
-  readTermFile(File, Term),
+preprocess(Dir, UeberFile) :-
+
+  % Read ueber file
+  readTermFile(UeberFile, UeberTerm),
+
+  % Enter directory
   nb_getval(ueber_level, OldLevel),
   Level is OldLevel + 1,
   nb_setval(ueber_level, Level),
@@ -38,18 +42,37 @@ preprocess(Dir, File) :-
   nb_setval(ueber_dir, Dir),
   ueber_indent,
   format('> enter(~q)~n',[Dir]),
+  
+  % Auto-inject conformance test for ueber file
+  ueber(elementOf('.ueber', ueber(term))),
+
+  % Load local files
   atom_concat(Dir, '/*.pro', ProWildcard),
   atom_concat(Dir, '/*.dcg', DcgWildcard),
   expand_file_name(ProWildcard, ProFiles),
   map(load, ProFiles),
   expand_file_name(DcgWildcard, DcgFiles),
   map(load, DcgFiles),
-%  elementOf('.ueber', ueber(term)),
-  maplist(ueber, Term),
+
+  % Process ueber file
+  maplist(ueber, UeberTerm),
+
+  % Recurse into subdirectories
   atom_concat(Dir, '/*', Wildcard),
   expand_file_name(Wildcard, Files),
   filter(exists_directory, Files, Dirs),
   map(preprocess, Dirs),
+
+  % Check for MDL file
+  atom_concat(Dir, '/.mdl', MdlFile),
+  ( exists_file(MdlFile) ->
+        readTermFile(MdlFile, MdlTerm), 
+        ueber(macro(mdl))
+      ;
+        true
+  ),
+  
+  % Leave directory
   nb_setval(ueber_level, OldLevel),
   nb_setval(ueber_dir, OldDir).
 

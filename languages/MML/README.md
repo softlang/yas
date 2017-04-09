@@ -1,5 +1,2 @@
-# MML: MetaModeling Language
-
-MML supports metamodels with a graph-based semantics.
-MML is inspired by EMF - evem though it is much simpler.
-
++ MML (MetaModeling Language)
+A basic metamodeling language for graph-based abstract syntax.

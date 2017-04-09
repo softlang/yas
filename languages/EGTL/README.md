@@ -1,4 +1,2 @@
-# EGTL: Extended Grammar Transformation Language
-
-Transformations on (EGL-based) grammars are modeled.
-
++ EGTL (Extended Grammar Transformation Language)
+A trivial transformation language for grammars.

@@ -1,4 +1,2 @@
-# TDL: Term Difference Language
-
-TDL supports the representation of differences between terms.
-
++ TDL (Term Difference Language)
+A representation format for term differences.

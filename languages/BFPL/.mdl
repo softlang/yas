@@ -1,0 +1,12 @@
+(bfpl,
+[
+  acronym('BFPL'),
+  expansion('Basic Functional Programming Language'),
+  explanation('A trivial first-order functional programming language with support for primitive types for integer and Boolean values, but without support for algebraic datatypes.'),
+  filenameExtension('.bfpl'),
+  extensionOf(el),
+  syntax(egl),
+  syntax(esl),
+  syntax(haskell)
+]
+).

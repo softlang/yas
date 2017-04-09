@@ -1,0 +1,7 @@
+(tdl,
+[
+  acronym('TDL'),
+  expansion('Term Difference Language'),
+  explanation('A representation format for term differences.')
+]
+).

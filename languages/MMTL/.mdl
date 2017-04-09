@@ -1,0 +1,8 @@
+(mmtl,
+[
+  acronym('MMTL'),
+  expansion('MetaModel Transformation Language'),
+  explanation('A trivial transformation language for metamodels.'),
+  dependsOn(mml)
+]
+).

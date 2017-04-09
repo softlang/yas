@@ -1,0 +1,10 @@
+(tll,
+[
+  acronym('TLL'),
+  expansion('Typed Lambda Language'),
+  explanation('An applied, typed lambda calculus.'),
+  extensionOf(btl),
+  variationOf(ull),
+  syntax(haskell)
+]
+).

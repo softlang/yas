@@ -1,0 +1,9 @@
+(gbl,
+[
+  acronym('GBL'),
+  expansion('Graph-based Buddy Language'),
+  explanation('A trivial ontology-oriented language for representing collections of persons and their buddy relationships with a graph-based abstract syntax.'),
+  filenameExtension('.gbl'),
+  variationOf(gbl)
+]
+).

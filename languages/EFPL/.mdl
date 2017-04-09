@@ -1,0 +1,10 @@
+(efpl,
+[
+  acronym('EFPL'),
+  expansion('Extended Functional Programming Language'),
+  explanation('A small extension of the trivial functional programming language BFPL to provide higher-order functions, polymorphism, and type inference.'),
+  filenameExtension('.eipl'),
+  extensionOf(bipl)
+]
+)
+.

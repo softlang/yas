@@ -1,5 +1,2 @@
-The programming language Java
-
-http://en.wikipedia.org/wiki/Java_%28programming_language%29
-
-Prolog is used throughout softlangbook as for occasional illustrations.
++ Java
+A general-purpose programming language that is concurrent, class-based, object-oriented, and (as of version 8) functional.

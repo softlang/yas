@@ -1,16 +1,2 @@
-# The Extended Grammar Language
-
-The EBNF-like grammar notation used by the softlangbook
-
-# Grammar examples
-
-* [BIPL (Basic Imperative Programming Language)](../BIPL/cs.egl)
-* [BFPL (Basic Functional Programming Language)](../BFPL/cs.egl)
-* [FSML (Finite State Machine Language)](../FSML/cs.egl)
-* [DDL (Data Definition Language)](../DDL/cs.egl)
-* [MML (MetaModeling Language)](../MML/cs.egl)
-
-# Metametamodel
-
-* [Grammar of grammars](cs.egl)
-* [Signature of grammars](as.esl)
++ EGL (Extended Grammar Language)
+A simple extension of the BNF-like grammar notation BGL to support EBNF-like constructs for optional and repeating phrases.

@@ -1,0 +1,9 @@
+(el,
+[
+  acronym('EL'),
+  expansion('Expression Language'),
+  explanation('A trivial expression language with expression forms on integer and Boolean values with arithmetic, relational, and comparison operators.'),
+  filenameExtension('.el'),
+  variationOf(btl)
+]
+).

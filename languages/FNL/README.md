@@ -1,6 +1,2 @@
-# FRL: Family by Name Language
-
-A language for the representation of families.
-The "by name" part refers to an aspect of the metamodel.
-That is, closest friends are represented by name rather than by referemce.
-
++ FNL (Family by Name Language)
+A trivial data model for representing families as collections of persons with various attributes; persons are identified by name as opposed to reference.

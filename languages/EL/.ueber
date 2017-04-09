@@ -1,4 +1,4 @@
 [
-    macro(eglSyntax(el)),
-    macro(eslSyntax(el))
+  macro(eglSyntax(el)),
+  macro(eslSyntax(el))
 ].

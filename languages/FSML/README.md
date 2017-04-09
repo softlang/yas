@@ -1,1 +1,2 @@
-The FSML language, i.e., the Finite State Machine Language, of softlangbook
++ FSML (Finite State Machine Language)
+A simple domain-specific modeling language (DSML) for finite state machines (FSMs).

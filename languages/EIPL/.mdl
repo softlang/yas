@@ -1,0 +1,9 @@
+(eipl,
+[
+  acronym('EIPL'),
+  expansion('Extended Imperative Programming Language'),
+  explanation('A small extension of the trivial imperative programming language BIPL to provide unparameterized procedures in nested scopes.'),
+  filenameExtension('.eipl'),
+  extensionOf(bipl)
+]
+).

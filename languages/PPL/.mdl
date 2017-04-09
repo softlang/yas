@@ -1,0 +1,9 @@
+(ppl,
+[
+  acronym('PPL'),
+  expansion('Pretty Printing Language'),
+  explanation('A target language for pretty printing which provides different composition operators for textboxes.'),
+  filenameExtension('.ppl'),
+  syntax(esl)
+]
+).

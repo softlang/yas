@@ -1,0 +1,5 @@
+[
+    macro(bmpl('elSimplify.bmpl')),
+    macro(bmpl('elAssociate.bmpl')),
+    macro(bmpl('elCommute.bmpl'))
+].
