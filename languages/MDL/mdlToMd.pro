@@ -25,4 +25,4 @@ byFilenameExtension(L) :-
 byFilenameExtension(_).
 
 fnitem(FN) :-
-    format('* ~w~n', [FN]).
+    format('* [~w](../../~w)~n', [FN, FN]).
