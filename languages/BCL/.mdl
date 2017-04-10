@@ -1,8 +1,0 @@
-(bcl,
-[
-  acronym('BCL'),
-  expansion('BGL CST Language'),
-  explanation('A representation format for concrete syntax trees (CSTs) for BNF-like grammar notation as of BGL (Basic Grammar Language).'),
-  syntax(esl)
-]
-).

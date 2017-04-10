@@ -1,3 +1,4 @@
 [
+  language(java(text)),
+  membership(java(text), succeed, [])
 ].
-

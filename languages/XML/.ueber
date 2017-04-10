@@ -1,4 +1,4 @@
 [
-  language(json),
-  membership(json, succeed, [])
+  language(xml),
+  membership(xml, succeed, [])
 ].

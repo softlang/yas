@@ -1,9 +1,0 @@
-(dot,
-[
-  name('DOT'),
-  explanation('The input language of the Graphviz tool for describing and rendering all kinds of graphs.'),
-  filenameExtension('.dot'),
-  sameAs('http://www.graphviz.org/content/dot-language')
-]
-).
-

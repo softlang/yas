@@ -1,8 +1,0 @@
-(asl,
-[
-  acronym('ASL'),
-  expansion('Algebraic Specification Language'),
-  explanation('A simple language for algebraic specification.'),
-  filenameExtension('.asl')
-]
-).

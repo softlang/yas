@@ -1,7 +1,7 @@
 # EGL (Extended Grammar Language)
 A simple extension of the BNF-like grammar notation BGL to support EBNF-like constructs for optional and repeating phrases.
 ## Language elements
-### Language elements by extension '.egl'
+### Language elements by extension
 * [languages/BFPL/cs.egl](../../languages/BFPL/cs.egl)
 * [languages/BFPL/ls.egl](../../languages/BFPL/ls.egl)
 * [languages/BGL/cs.egl](../../languages/BGL/cs.egl)
@@ -20,8 +20,6 @@ A simple extension of the BNF-like grammar notation BGL to support EBNF-like con
 * [languages/EGL/ls.egl](../../languages/EGL/ls.egl)
 * [languages/EGL/samples/ambiguity.egl](../../languages/EGL/samples/ambiguity.egl)
 * [languages/EGL/samples/left-recursion.egl](../../languages/EGL/samples/left-recursion.egl)
-* [languages/EGL/samples/figure/cs.egl](../../languages/EGL/samples/figure/cs.egl)
-* [languages/EGL/samples/figure/ls.egl](../../languages/EGL/samples/figure/ls.egl)
 * [languages/EGTL/cs.egl](../../languages/EGTL/cs.egl)
 * [languages/EGTL/ls.egl](../../languages/EGTL/ls.egl)
 * [languages/EIPL/cs.egl](../../languages/EIPL/cs.egl)
@@ -40,3 +38,5 @@ A simple extension of the BNF-like grammar notation BGL to support EBNF-like con
 * [languages/MML/ls.egl](../../languages/MML/ls.egl)
 * [languages/TBL/cs.egl](../../languages/TBL/cs.egl)
 * [languages/TBL/ls.egl](../../languages/TBL/ls.egl)
+* [samples/obsolete/figure/cs.egl](../../samples/obsolete/figure/cs.egl)
+* [samples/obsolete/figure/ls.egl](../../samples/obsolete/figure/ls.egl)

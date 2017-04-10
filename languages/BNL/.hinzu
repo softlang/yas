@@ -1,0 +1,14 @@
+[
+  l([
+      lid(bnl),
+      acronym('BNL'),
+      expansion('Basic Number Language'),
+      explanation('A trivial language for the representation of binary numbers.'),
+      purpose('Illustration')
+  ]),
+  r([
+      rid(bnl(text)),
+      representationOf(bnl),
+      filenameExtension('.bnl')
+  ])
+].

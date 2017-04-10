@@ -1,9 +1,0 @@
-(bml,
-[
-  acronym('BML'),
-  expansion('Basic Machine Language'),
-  explanation('A trivial stack- and address-based machine language; memory access and jumps use ints rather than symbolic names.'),
-  variationOf(bal),
-  syntax(haskell)
-]
-).

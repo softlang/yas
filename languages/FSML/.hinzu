@@ -1,0 +1,13 @@
+[
+  l([
+      lid(fsml),
+      acronym('FSML'),
+      expansion('Finite State Machine Language'),
+      explanation('A simple domain-specific modeling language (DSML) for finite state machines (FSMs).')
+  ]),
+  r([
+      rid(fsml(text)),
+      representationOf(fsml),
+      filenameExtension('.fsml')
+  ])
+].

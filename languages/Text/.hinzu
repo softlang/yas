@@ -1,0 +1,12 @@
+[
+  l([
+      lid(text),
+      name('Text'),
+      explanation('Text as a basic representation format used by the YAS repository.')
+  ]),
+  r([
+      rid(text),
+      representationOf(text),
+      filenameExtension('.txt')
+  ])
+].

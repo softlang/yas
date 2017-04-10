@@ -1,0 +1,14 @@
+[
+  l([
+      lid(ddl),
+      acronym('DDL'),
+      expansion('Data Definition Language'),
+      explanation('A SQL DDL-like data definition language for relational schemas.'),
+      purpose('Data definition')
+  ]),
+  r([
+      rid(ddl(text)),
+      representationOf(ddl),
+      filenameExtension('.ddl')
+  ])
+].

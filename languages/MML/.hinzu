@@ -1,0 +1,14 @@
+[
+  l([
+      lid(mml),
+      acronym('MML'),
+      expansion('MetaModeling Language'),
+      explanation('A basic metamodeling language for graph-based abstract syntax.'),
+      purpose('Metamodeling')
+  ]),
+  r([
+      rid(mml(text)),
+      representationOf(mml),
+      filenameExtension('.mml')
+  ])
+].

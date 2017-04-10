@@ -1,2 +1,4 @@
 [
+  language(antlr(text)),
+  membership(antlr(text), succeed, [])
 ].

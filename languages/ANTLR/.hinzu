@@ -1,0 +1,15 @@
+[
+  l([
+      lid(antlr),
+      acronym('ANTLR'),
+      expansion('Another Tool for Language Recognition'),
+      explanation('The ANTLR tool and language for parsing and processing string languages.'),
+      sameAs('http://www.antlr.org/'),
+      purpose('Parser description')
+  ]),
+  r([
+      rid(antlr(text)),
+      representationOf(antlr),
+      filenameExtension('.g4')
+  ])
+].

@@ -1,5 +1,5 @@
 # JSON (JavaScript Object Notation)
-A text-based interchange format.
+A dictionary-based interchange format.
 ## Language elements
-### Language elements by extension '.json'
+### Language elements by extension
 * [languages/FSML/Python/sample.json](../../languages/FSML/Python/sample.json)

@@ -1,0 +1,15 @@
+[
+  l([
+      lid(dot),
+      name('DOT'),
+      explanation('The input language of the Graphviz tool for describing and rendering all kinds of graphs.'),
+      sameAs('http://www.graphviz.org/content/dot-language'),
+      purpose('Graph visualization')
+  ]),
+  r([
+      rid(dot(text)),
+      representationOf(dot),
+      filenameExtension('.dot')
+  ])
+].
+

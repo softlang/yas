@@ -1,0 +1,15 @@
+[
+  l([
+      lid(egtl),
+      acronym('EGTL'),
+      expansion('Extended Grammar Transformation Language'),
+      explanation('A trivial transformation language for grammars.'),
+      dependsOn(egl),
+      purpose('Grammar transformation')
+  ]),
+  r([
+      rid(egtl(text)),
+      representationOf(egtl),
+      filenameExtension('.egtl')
+  ])
+].

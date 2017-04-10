@@ -1,0 +1,13 @@
+[
+  l([
+      lid(markdown),
+      name('Markdown'),
+      explanation('A markup-based documentation language.'),
+      sameAs('https://en.wikipedia.org/wiki/Markdown')
+  ]),
+  r([
+      rid(markdown(text)),
+      representationOf(markdown),
+      filenameExtension('.md')
+  ])
+].

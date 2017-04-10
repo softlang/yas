@@ -1,8 +1,0 @@
-(markdown,
-[
-  name('Markdown'),
-  explanation('A markup-based documentation language.'),
-  filenameExtension('.md'),
-  sameAs('https://en.wikipedia.org/wiki/Markdown')
-]
-).

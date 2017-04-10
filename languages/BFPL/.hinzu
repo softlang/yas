@@ -1,0 +1,16 @@
+[
+  l([
+      lid(bfpl),
+      acronym('BFPL'),
+      expansion('Basic Functional Programming Language'),
+  explanation('A trivial first-order functional programming language with support for primitive types for integer and Boolean values, but without support for algebraic datatypes.'),
+      embeds(el),
+      subsetOf(efpl),
+      purpose('Functional programming')
+  ]),
+  r([
+      rid(bfpl(text)),
+      representationOf(bfpl),
+      filenameExtension('.bfpl')
+  ])
+].

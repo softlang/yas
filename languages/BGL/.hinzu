@@ -1,0 +1,15 @@
+[
+  l([
+      lid(bgl),
+      acronym('BGL'),
+      expansion('Basic Grammar Language'),
+      explanation('A BNF-like notation for context-free grammars; rules (productions) are labeled.'),
+      purpose('Language definition'),
+      subsetOf(egl)
+  ]),
+  r([
+      rid(bgl(text)),
+      representationOf(bgl),
+      filenameExtension('.bgl')
+  ])
+].

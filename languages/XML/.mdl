@@ -1,9 +1,0 @@
-(xml,
-[
-  acronym('XML'),
-  expansion('Extensible Markup Language'),
-  explanation('A markup-based interchange format.'),
-  filenameExtension('.xml'),
-  sameAs('https://en.wikipedia.org/wiki/XML')
-]
-).

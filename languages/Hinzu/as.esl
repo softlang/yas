@@ -1,0 +1,28 @@
+// Grouping of metadata items
+type model = decl* ;
+symbol l : litem* -> decl ;
+symbol r : ritem* -> decl ;
+
+// Language-related (representation-unaware) items
+symbol lid : lid -> litem ;
+symbol name : string -> litem ;
+symbol acronym : string -> litem ;
+symbol expansion : string -> litem ;
+symbol explanation : string -> litem ;
+symbol variationOf : lid -> litem ;
+symbol subsetOf : lid -> litem ;
+symbol supersetOf : lid -> litem ;
+symbol embeds : lid -> litem ;
+symbol dependsOn : lid -> litem ;
+symbol sameAs : uri -> litem ;
+symbol purpose : string -> litem ;
+
+// Representation-related items
+symbol rid : rid -> ritem ;
+symbol representationOf : lid -> ritem ;
+symbol filenameExtension : string -> ritem ;
+
+// Some synonyms for clarity's sake
+type lid = string ; // Language ids regardless of representation
+type rid = term ; // Representation-aware languge ids as in ueber
+type uri = string ; // URIs used for identity links

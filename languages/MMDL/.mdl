@@ -1,8 +1,0 @@
-(mmdl,
-[
-  acronym('MMDL'),
-  expansion('MetaModel Difference Language'),
-  explanation('A representation format for metamodel-based term differences.')
-]
-).
-

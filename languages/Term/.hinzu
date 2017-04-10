@@ -1,0 +1,12 @@
+[
+  l([
+      lid(term),
+      name('Term'),
+      explanation('Prolog terms as a basic representation format used by the YAS repository.')
+  ]),
+  r([
+      rid(term),
+      representationOf(term),
+      filenameExtension('.term')
+  ])
+].

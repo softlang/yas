@@ -1,0 +1,15 @@
+[
+  l([
+      lid(bsl),
+      acronym('BSL'),
+      expansion('Basic Signature Language'),
+      explanation('A basic specification language for tree-based abstract syntax on the grounds of many-sorted signatures.'),
+      purpose('Language definition'),
+      subsetOf(esl)
+  ]),
+  r([
+      rid(bsl(text)),
+      representationOf(bsl),
+      filenameExtension('.bsl')
+  ])
+].

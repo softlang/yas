@@ -1,7 +1,7 @@
 # EL (Expression Language)
 A trivial expression language with expression forms on integer and Boolean values with arithmetic, relational, and comparison operators.
 ## Language elements
-### Language elements by extension '.el'
+### Language elements by extension
 * [languages/EL/tests/no-vars.el](../../languages/EL/tests/no-vars.el)
 * [languages/EL/tests/a.el](../../languages/EL/tests/a.el)
 * [languages/EL/tests/top-unit.el](../../languages/EL/tests/top-unit.el)

@@ -1,0 +1,22 @@
+[
+  % Abstract syntax of Ueber
+  macro(eslSyntax(ueber)),
+
+  % Dump Ueber declarations
+  function(dump, [], [ueber(term)], ueberDump:main, []),
+  elementOf('dump.ueber', ueber(term)),
+  mapsTo(dump, [], ['dump.ueber']),
+
+  % Visualize languages as graph
+  elementOf('languages.term', dgl(term)),
+  function(languages, [ueber(term)], [dgl(term)], ueberGraphLanguages:graph, []),
+  mapsTo(languages, ['dump.ueber'], ['languages.term']),
+  macro(ppFile('languages.dgl')),
+
+  % Visualize functions as graph
+  elementOf('functions.term', dgl(term)),
+  function(functions, [ueber(term)], [dgl(term)], ueberGraphFunctions:graph, []),
+  mapsTo(functions, ['dump.ueber'], ['functions.term']),
+  macro(ppFile('functions.dgl'))
+
+].

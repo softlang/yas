@@ -1,8 +1,0 @@
-(haskell,
-[
-  name('Haskell'),
-  explanation('A standardized, general-purpose purely functional programming language, with non-strict semantics and strong static typing.'),
-  filenameExtension('.hs'),
-  sameAs('https://en.wikipedia.org/wiki/Haskell_(programming_language)')
-]
-).

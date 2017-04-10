@@ -1,0 +1,4 @@
+[
+  language(python(text)),
+  membership(python(text), succeed, [])
+].

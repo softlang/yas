@@ -1,7 +1,7 @@
 # Markdown
 A markup-based documentation language.
 ## Language elements
-### Language elements by extension '.md'
+### Language elements by extension
 * [languages/ANTLR/README.md](../../languages/ANTLR/README.md)
 * [languages/ASL/README.md](../../languages/ASL/README.md)
 * [languages/BAL/README.md](../../languages/BAL/README.md)
@@ -28,21 +28,22 @@ A markup-based documentation language.
 * [languages/FSML/README.md](../../languages/FSML/README.md)
 * [languages/GBL/README.md](../../languages/GBL/README.md)
 * [languages/Haskell/README.md](../../languages/Haskell/README.md)
+* [languages/Hinzu/README.md](../../languages/Hinzu/README.md)
 * [languages/JSON/README.md](../../languages/JSON/README.md)
 * [languages/Java/README.md](../../languages/Java/README.md)
 * [languages/LAL/README.md](../../languages/LAL/README.md)
-* [languages/MDL/README.md](../../languages/MDL/README.md)
 * [languages/MMDL/README.md](../../languages/MMDL/README.md)
 * [languages/MML/README.md](../../languages/MML/README.md)
 * [languages/MMTL/README.md](../../languages/MMTL/README.md)
 * [languages/Markdown/README.md](../../languages/Markdown/README.md)
 * [languages/PPL/README.md](../../languages/PPL/README.md)
 * [languages/Prolog/README.md](../../languages/Prolog/README.md)
+* [languages/Python/README.md](../../languages/Python/README.md)
 * [languages/TBL/README.md](../../languages/TBL/README.md)
 * [languages/TDL/README.md](../../languages/TDL/README.md)
 * [languages/TLL/README.md](../../languages/TLL/README.md)
 * [languages/Term/README.md](../../languages/Term/README.md)
 * [languages/Text/README.md](../../languages/Text/README.md)
 * [languages/ULL/README.md](../../languages/ULL/README.md)
+* [languages/Ueber/README.md](../../languages/Ueber/README.md)
 * [languages/XML/README.md](../../languages/XML/README.md)
-* [languages/ueber/README.md](../../languages/ueber/README.md)

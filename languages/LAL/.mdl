@@ -1,9 +1,0 @@
-(lal,
-[
-  acronym('LAL'),
-  expansion('Linguistic Architecture Language'),
-  explanation('A predicate logic-based megamodeling language used for capturing properties of language processors and deriving test cases.'),
-  filenameExtension('.lal'),
-  filenameExtension('.lal2')
-]
-).

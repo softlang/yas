@@ -1,38 +1,31 @@
-:- ['languages/ueber/macros/include.pro'].
-:- ['languages/ueber/macros/bgl-and-bsl.pro'].
-:- ['languages/ueber/macros/egl.pro'].
-:- ['languages/ueber/macros/esl.pro'].
-:- ['languages/ueber/macros/parse.pro'].
-:- ['languages/ueber/macros/pickyParse.pro'].
-:- ['languages/ueber/macros/mml.pro'].
-:- ['languages/ueber/macros/graph.pro'].
-:- ['languages/ueber/macros/ppl.pro'].
-:- ['languages/ueber/macros/test.pro'].
-:- ['languages/ueber/macros/rules.pro'].
-:- ['languages/ueber/macros/fxy.pro'].
-:- ['languages/ueber/macros/forall.pro'].
-:- ['languages/ueber/macros/lal.pro'].
-:- ['languages/ueber/macros/mdl.pro'].
+:- ['languages/Ueber/macros/include.pro'].
+:- ['languages/Ueber/macros/bgl-and-bsl.pro'].
+:- ['languages/Ueber/macros/egl.pro'].
+:- ['languages/Ueber/macros/esl.pro'].
+:- ['languages/Ueber/macros/parse.pro'].
+:- ['languages/Ueber/macros/pickyParse.pro'].
+:- ['languages/Ueber/macros/mml.pro'].
+:- ['languages/Ueber/macros/graph.pro'].
+:- ['languages/Ueber/macros/ppl.pro'].
+:- ['languages/Ueber/macros/test.pro'].
+:- ['languages/Ueber/macros/rules.pro'].
+:- ['languages/Ueber/macros/fxy.pro'].
+:- ['languages/Ueber/macros/forall.pro'].
+:- ['languages/Ueber/macros/lal.pro'].
 :- nb_setval(ueber_level, 1).
 :- nb_setval(ueber_dir, '.').
 
 init :-
   format('Megamodel preprocessing:~n', []).
 
-% Check directory to be ueber-preprocessable
+% Preprocess directory
 preprocess(Dir) :-
-  atom_concat(Dir, '/.ueber', File),
-  ( exists_file(File) ->
-        preprocess(Dir, File)
-      ;
-        true
-  ).
+  atom_concat(Dir, '/.ueber', UeberFile),
 
-% Preprocess directory and .ueber file
-preprocess(Dir, UeberFile) :-
-
-  % Read ueber file
-  readTermFile(UeberFile, UeberTerm),
+  % Read Ueber file, if present
+  ( exists_file(UeberFile) -> 
+        readTermFile(UeberFile, UeberTerm)
+      ; UeberTerm = [] ),
 
   % Enter directory
   nb_getval(ueber_level, OldLevel),
@@ -43,8 +36,10 @@ preprocess(Dir, UeberFile) :-
   ueber_indent,
   format('> enter(~q)~n',[Dir]),
   
-  % Auto-inject conformance test for ueber file
-  ueber(elementOf('.ueber', ueber(term))),
+  % Auto-inject conformance test for Ueber file, if present
+  ( exists_file(UeberFile) -> 
+        ueber(elementOf('.ueber', ueber(term)))
+      ; true ),
 
   % Load local files
   atom_concat(Dir, '/*.pro', ProWildcard),
@@ -54,7 +49,7 @@ preprocess(Dir, UeberFile) :-
   expand_file_name(DcgWildcard, DcgFiles),
   map(load, DcgFiles),
 
-  % Process ueber file
+  % Process Ueber file
   maplist(ueber, UeberTerm),
 
   % Recurse into subdirectories
@@ -63,11 +58,11 @@ preprocess(Dir, UeberFile) :-
   filter(exists_directory, Files, Dirs),
   map(preprocess, Dirs),
 
-  % Check for MDL file
-  atom_concat(Dir, '/.mdl', MdlFile),
-  ( exists_file(MdlFile) ->
-        readTermFile(MdlFile, MdlTerm), 
-        ueber(macro(mdl))
+  % Check for Hinzu file
+  atom_concat(Dir, '/.hinzu', HinzuFile),
+  ( exists_file(HinzuFile) ->
+        readTermFile(HinzuFile, HinzuTerm),
+	hinzu(HinzuTerm)
       ;
         true
   ),
@@ -82,7 +77,7 @@ load(File) :-
   format(' * load(~q)~n',[File]),
   consult(File).
 
-% Pre-process lists of declarations
+% Pre-process lists of Ueber declarations
 ueber(L) :-
   is_list(L),
   map(ueber, L).
@@ -161,9 +156,19 @@ ueber(mapsTo(Func, ArgsRel, RessRel)) :-
 ueber(macro(X)) :-
   call(X).
 
-% Error handling
+% Error handling for Ueber
 ueber(X) :-
-  format('Failing on ~w.~n',[X]),
+  format('Failing on Ueber declaration ~w.~n',[X]),
+  abort.
+
+% Pre-process Hinzu declaration
+hinzu(HinzuTerm) :-
+   maplist(assertHDecl, HinzuTerm),
+   ueber(macro(fxy(publish, '.hinzu', hinzu(term), 'README.md', markdown(text)))).
+
+% Error handling for Hinzu
+hinzu(X) :-
+  format('Failing on Hinzu metadata ~w.~n',[X]),
   abort.
 
 % Make a pseudo-absolute filename
@@ -200,9 +205,13 @@ ueber_indent(L1) :-
   L2 is L1 - 1,
   ueber_indent(L2).
 
-% Assert if needed
+% Assert Ueber declaration, if needed
 assertUDecl(X) :-
-    ( declaration(X) -> true; assertz(declaration(X)) ).
+    ( udeclaration(X) -> true; assertz(udeclaration(X)) ).
+
+% Assert Hinzu declaration
+assertHDecl(X) :-
+    assertz(hdeclaration(X)).
 
 % Test for mode of verification
 mode(M) :-

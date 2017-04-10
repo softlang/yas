@@ -1,0 +1,15 @@
+[
+  l([
+      lid(dgl),
+      acronym('DGL'),
+      expansion('Dot-based Graph Language'),
+      explanation('A trivial specification language for graphs that may be rendered eventually with the Graphviz tool.'),
+      subsetOf(dot),
+      purpose('Graph representation')
+  ]),
+  r([
+      rid(dgl(text)),
+      representationOf(dgl),
+      filenameExtension('.dgl')
+  ])
+].
