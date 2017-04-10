@@ -11,4 +11,18 @@ main((_, L), Text) :-
     member(name(N), L)
   ),
   member(explanation(X), L),
-  with_output_to(codes(Text), format('# ~w~n~w', [N, X])).
+  with_output_to(
+	  codes(Text),
+	  format('# ~w~n~w~n## Language elements~n~@', [N, X, byFilenameExtension(L)])).
+
+byFilenameExtension(L) :-
+    member(filenameExtension(FNExt), L),
+    findall(FN, (declaration(elementOf(FN, _)), atom_concat(_, FNExt, FN)), FNs),
+    \+ FNs == [],
+    format('### Language elements by extension ~q~n', [FNExt]),
+    maplist(fnitem, FNs).
+
+byFilenameExtension(_).
+
+fnitem(FN) :-
+    format('* ~w~n', [FN]).

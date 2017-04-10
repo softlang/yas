@@ -1,2 +1,42 @@
 # EGL (Extended Grammar Language)
 A simple extension of the BNF-like grammar notation BGL to support EBNF-like constructs for optional and repeating phrases.
+## Language elements
+### Language elements by extension '.egl'
+* languages/BFPL/cs.egl
+* languages/BFPL/ls.egl
+* languages/BGL/cs.egl
+* languages/BGL/ls.egl
+* languages/BIPL/cs.egl
+* languages/BIPL/ls.egl
+* languages/BNL/EGL/cs.egl
+* languages/BNL/EGL/ls.egl
+* languages/BSL/cs.egl
+* languages/BSL/ls.egl
+* languages/DDL/cs.egl
+* languages/DDL/ls.egl
+* languages/EFPL/cs.egl
+* languages/EFPL/ls.egl
+* languages/EGL/cs.egl
+* languages/EGL/ls.egl
+* languages/EGL/samples/ambiguity.egl
+* languages/EGL/samples/left-recursion.egl
+* languages/EGL/samples/figure/cs.egl
+* languages/EGL/samples/figure/ls.egl
+* languages/EGTL/cs.egl
+* languages/EGTL/ls.egl
+* languages/EIPL/cs.egl
+* languages/EIPL/ls.egl
+* languages/EL/cs.egl
+* languages/EL/ls.egl
+* languages/EL/Prolog/qq/cs.egl
+* languages/EL/Prolog/qq/ls.egl
+* languages/ESL/cs.egl
+* languages/ESL/ls.egl
+* languages/FSML/cs.egl
+* languages/FSML/ls.egl
+* languages/LAL/cs.egl
+* languages/LAL/ls.egl
+* languages/MML/cs.egl
+* languages/MML/ls.egl
+* languages/TBL/cs.egl
+* languages/TBL/ls.egl
