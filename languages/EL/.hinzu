@@ -9,6 +9,6 @@
   r([
       rid(el(text)),
       representationOf(el),
-      filenameExtension('.el')
+      filenameExtension(el)
   ])
 ].

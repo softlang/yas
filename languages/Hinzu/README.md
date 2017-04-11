@@ -1,7 +1,6 @@
 # Hinzu
 A trivial metadata/annotation language designed to facilitate basic documentation and semantic annotation of languages in the YAS repository.
 ## Language elements
-### Language elements by extension
 * [languages/ANTLR/.hinzu](../../languages/ANTLR/.hinzu)
 * [languages/ASL/.hinzu](../../languages/ASL/.hinzu)
 * [languages/BAL/.hinzu](../../languages/BAL/.hinzu)
@@ -14,6 +13,7 @@ A trivial metadata/annotation language designed to facilitate basic documentatio
 * [languages/BSL/.hinzu](../../languages/BSL/.hinzu)
 * [languages/BSTL/.hinzu](../../languages/BSTL/.hinzu)
 * [languages/BTL/.hinzu](../../languages/BTL/.hinzu)
+* [languages/DCG/.hinzu](../../languages/DCG/.hinzu)
 * [languages/DDL/.hinzu](../../languages/DDL/.hinzu)
 * [languages/DGL/.hinzu](../../languages/DGL/.hinzu)
 * [languages/DOT/.hinzu](../../languages/DOT/.hinzu)

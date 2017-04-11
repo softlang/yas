@@ -10,6 +10,6 @@
   r([
       rid(ueber(term)),
       representationOf(ueber),
-      filenameExtension('.ueber')
+      filenameExtension(ueber)
   ])
 ].

@@ -9,6 +9,6 @@
   r([
       rid(asl(text)),
       representationOf(asl),
-      filenameExtension('.asl')
+      filenameExtension(asl)
   ])
 ].

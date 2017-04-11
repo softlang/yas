@@ -9,6 +9,6 @@
   r([
       rid(mml(text)),
       representationOf(mml),
-      filenameExtension('.mml')
+      filenameExtension(mml)
   ])
 ].

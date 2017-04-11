@@ -1,40 +1,30 @@
-language Any
-language L <= Any
-language QAny
-language QL <= QAny
+sort Any
+sort L <= Any
+sort QAny
+sort QL <= QAny
 relation partOf : L # L
-axiom {
- forall x <- L.
-  forall y <- L.
-   (partOf(x, y)) => (~ (partOf(y, x)))
-}
 relation partOfPlus : L # L
 relation partOfStar : L # L
-axiom {
+axiom partAsym {
  forall x <- L.
   forall y <- L.
-   (partOf(x, y)) => (partOfPlus(x, y))
+   partOf(x, y) => (~ partOf(y, x))
 }
-axiom {
- forall x <- L.
-  forall y <- L.
-   forall z <- L.
-    ((partOfPlus(x, y)) /\ (partOfPlus(y, z))) => (partOfPlus(x, z))
-}
-axiom {
+axiom partReflexive {
  forall x <- L.
   partOfStar(x, x)
 }
-axiom {
+axiom partTransitive {
  forall x <- L.
   forall y <- L.
-   (partOfPlus(x, y)) => (partOfStar(x, y))
+   (partOf(x, y) => partOfPlus(x, y)) /\ ((partOfPlus(x, y) => partOfStar(x, y)) /\ (forall z <- L.
+                                                                                      (partOfPlus(x, z) /\ partOfPlus(z, y)) => partOfPlus(x, y)))
 }
 function select : QL # L ~> L*
 axiom {
  forall q <- QL.
   forall x <- L.
    forall ys <- L*.
-    (select(q, x) = ys) => (foreach y : ys.
-                             partOfStar(y, x))
+    select(q, x) = ys => (foreach y : ys.
+                           partOfStar(y, x))
 }

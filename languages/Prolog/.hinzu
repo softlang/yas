@@ -8,6 +8,7 @@
   r([
       rid(prolog(text)),
       representationOf(prolog),
-      filenameExtension('.pro')
+      filenameExtension(pro),
+      processWith(load)
   ])
 ].

@@ -10,6 +10,6 @@
   r([
       rid(antlr(text)),
       representationOf(antlr),
-      filenameExtension('.g4')
+      filenameExtension(g4)
   ])
 ].

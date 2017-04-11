@@ -8,6 +8,6 @@
   r([
       rid(java(text)),
       representationOf(java),
-      filenameExtension('.java')
+      filenameExtension(java)
   ])
 ].

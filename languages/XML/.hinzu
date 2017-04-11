@@ -9,6 +9,6 @@
   r([
       rid(xml),
       representationOf(xml),
-      filenameExtension('.xml')
+      filenameExtension(xml)
   ])
 ].

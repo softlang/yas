@@ -7,6 +7,6 @@
   r([
       rid(text),
       representationOf(text),
-      filenameExtension('.txt')
+      filenameExtension(txt)
   ])
 ].

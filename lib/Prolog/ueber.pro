@@ -16,13 +16,17 @@
 :- nb_setval(ueber_dir, '.').
 
 init :-
-  format('Megamodel preprocessing:~n', []).
+  format('Megamodel processing:~n', []).
 
-% Preprocess directory
-preprocess(Dir) :-
-  atom_concat(Dir, '/.ueber', UeberFile),
-
+% Process directory
+process_dir(Dir) :-
+  % Read Hinzu dump to be used along the way
+  readTermFile('languages/Hinzu/dump.hinzu', HinzuDump),
+  process_dir(HinzuDump, Dir).  
+    
+process_dir(HinzuDump, Dir) :-
   % Read Ueber file, if present
+  atom_concat(Dir, '/.ueber', UeberFile),
   ( exists_file(UeberFile) -> 
         readTermFile(UeberFile, UeberTerm)
       ; UeberTerm = [] ),
@@ -41,7 +45,13 @@ preprocess(Dir) :-
         ueber(elementOf('.ueber', ueber(term)))
       ; true ),
 
-  % Load local files
+  % Process local files
+  atom_concat(Dir, '/*', Wildcard),
+  expand_file_name(Wildcard, FilesAndDirs),
+  filter(exists_file, FilesAndDirs, Files),
+  filter(exists_directory, FilesAndDirs, Dirs),
+  maplist(process_file(HinzuDump), Files),
+  
   atom_concat(Dir, '/*.pro', ProWildcard),
   atom_concat(Dir, '/*.dcg', DcgWildcard),
   expand_file_name(ProWildcard, ProFiles),
@@ -53,10 +63,7 @@ preprocess(Dir) :-
   maplist(ueber, UeberTerm),
 
   % Recurse into subdirectories
-  atom_concat(Dir, '/*', Wildcard),
-  expand_file_name(Wildcard, Files),
-  filter(exists_directory, Files, Dirs),
-  map(preprocess, Dirs),
+  map(process_dir(HinzuDump), Dirs),
 
   % Check for Hinzu file
   atom_concat(Dir, '/.hinzu', HinzuFile),
@@ -71,80 +78,91 @@ preprocess(Dir) :-
   nb_setval(ueber_level, OldLevel),
   nb_setval(ueber_dir, OldDir).
 
+
+% Process a file
+process_file(HinzuDump, File) :-
+  file_name_extension(_, FNExt, File),
+  ( ( member(r(X), HinzuDump),
+      member(filenameExtension(FNExt), X) ) ->
+          member(rid(I), X),
+          assertElementOf(File, I)
+        ;
+          true ).
+
 % Load a Prolog file
 load(File) :-
   ueber_indent,
   format(' * load(~q)~n',[File]),
   consult(File).
 
-% Pre-process lists of Ueber declarations
+% Process lists of Ueber declarations
 ueber(L) :-
   is_list(L),
   map(ueber, L).
   
-% Pre-process language declaration
+% Process language declaration
 ueber(language(Lang)) :-
   ueber_indent,
   format(' * language(~q)~n',[Lang]),
   assertUDecl(language(Lang)).
 
-% Pre-process language declaration
+% Process language declaration
 ueber(membership(Lang, Pred, ArgsRel)) :-
   ueber_indent,
   format(' * membership(~q, ~q, ~q)~n',[Lang, Pred, ArgsRel]),
   map(ueber_absolute, ArgsRel, ArgsAbs),
   assertUDecl(membership(Lang, Pred, ArgsAbs)).
 
-% Pre-process equivalence declaration
+% Process equivalence declaration
 ueber(equivalence(Lang, Pred, ArgsRel)) :-
   ueber_indent,
   format(' * equivalence(~q, ~q, ~q)~n',[Lang, Pred, ArgsRel]),
   map(ueber_absolute, ArgsRel, ArgsAbs),
   assertUDecl(equivalence(Lang, Pred, ArgsAbs)).
 
-% Pre-process normalization declaration
+% Process normalization declaration
 ueber(normalization(Lang, Pred, ArgsRel)) :-
   ueber_indent,
   format(' * normalization(~q, ~q, ~q)~n',[Lang, Pred, ArgsRel]),
   map(ueber_absolute, ArgsRel, ArgsAbs),
   assertUDecl(normalization(Lang, Pred, ArgsAbs)).
 
-% Pre-process relation declaration
+% Process relation declaration
 ueber(relation(Func, LangsIn, Pred, ArgsRel)) :-
   ueber_indent,
   format(' * relation(~q, ~q, ~q, ~q)~n',[Func, LangsIn, Pred, ArgsRel]),
   map(ueber_absolute, ArgsRel, ArgsAbs),
   assertUDecl(function(Func, LangsIn, [], Pred, ArgsAbs)).
 
-% Pre-process function declaration
+% Process function declaration
 ueber(function(Func, LangsIn, LangsOut, Pred, ArgsRel)) :-
   ueber_indent,
   format(' * function(~q, ~q, ~q, ~q, ~q)~n',[Func, LangsIn, LangsOut, Pred, ArgsRel]),
   map(ueber_absolute, ArgsRel, ArgsAbs),
   assertUDecl(function(Func, LangsIn, LangsOut, Pred, ArgsAbs)).
   
-% Pre-process elementOf/2 relationship
+% Process elementOf/2 relationship
 ueber(elementOf(Rel, Lang)) :-
   ueber_absolute(Rel, Abs),
   ueber_indent,
   format(' * elementOf(~q, ~q)~n',[Rel, Lang]),
-  assertUDecl(elementOf(Abs, Lang)).
+  assertElementOf(Abs, Lang).
 
-% Pre-process negated elementOf/2 relationship
+% Process negated elementOf/2 relationship
 ueber(notElementOf(Rel, Lang)) :-
   ueber_absolute(Rel, Abs),
   ueber_indent,
   format(' * notElementOf(~q, ~q)~n',[Rel, Lang]),
-  assertUDecl(notElementOf(Abs, Lang)).
+  assertNotElementOf(Abs, Lang).
 
-% Pre-process relatesTo relationship
+% Process relatesTo relationship
 ueber(relatesTo(Func, ArgsRel)) :-
   map(ueber_absolute, ArgsRel, ArgsAbs),
   ueber_indent,
   format(' * relatesTo(~q, ~q)~n',[Func, ArgsRel]),
   assertUDecl(mapsTo(Func, ArgsAbs, [])).
 
-% Pre-process mapsTo relationship
+% Process mapsTo relationship
 ueber(mapsTo(Func, ArgsRel, RessRel)) :-
   map(ueber_absolute, ArgsRel, ArgsAbs),
   map(ueber_absolute, RessRel, RessAbs),
@@ -152,7 +170,7 @@ ueber(mapsTo(Func, ArgsRel, RessRel)) :-
   format(' * mapsTo(~q, ~q, ~q)~n',[Func, ArgsRel, RessRel]),
   assertUDecl(mapsTo(Func, ArgsAbs, RessAbs)).
 
-% Pre-process macro applications
+% Process macro applications
 ueber(macro(X)) :-
   call(X).
 
@@ -161,7 +179,16 @@ ueber(X) :-
   format('Failing on Ueber declaration ~w.~n',[X]),
   abort.
 
-% Pre-process Hinzu declaration
+% Make negated membership cancel membership
+assertElementOf(File, L) :-
+    once((  udeclaration(notElementOf(File, L))
+	  ; assertUDecl(elementOf(File, L)))).
+
+assertNotElementOf(File, L) :-
+  retractall(udeclaration(elementOf(File, L))),
+  assertUDecl(notElementOf(File, L)).
+
+% Process Hinzu declaration
 hinzu(HinzuTerm) :-
    maplist(assertHDecl, HinzuTerm),
    ueber(macro(fxy(publish, '.hinzu', hinzu(term), 'README.md', markdown(text)))).

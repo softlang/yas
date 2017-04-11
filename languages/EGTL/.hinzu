@@ -10,6 +10,6 @@
   r([
       rid(egtl(text)),
       representationOf(egtl),
-      filenameExtension('.egtl')
+      filenameExtension(egtl)
   ])
 ].

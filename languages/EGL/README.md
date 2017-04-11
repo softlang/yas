@@ -1,7 +1,6 @@
 # EGL (Extended Grammar Language)
 A simple extension of the BNF-like grammar notation BGL to support EBNF-like constructs for optional and repeating phrases.
 ## Language elements
-### Language elements by extension
 * [languages/BFPL/cs.egl](../../languages/BFPL/cs.egl)
 * [languages/BFPL/ls.egl](../../languages/BFPL/ls.egl)
 * [languages/BGL/cs.egl](../../languages/BGL/cs.egl)
@@ -12,6 +11,7 @@ A simple extension of the BNF-like grammar notation BGL to support EBNF-like con
 * [languages/BNL/EGL/ls.egl](../../languages/BNL/EGL/ls.egl)
 * [languages/BSL/cs.egl](../../languages/BSL/cs.egl)
 * [languages/BSL/ls.egl](../../languages/BSL/ls.egl)
+* [languages/BTL/ls.egl](../../languages/BTL/ls.egl)
 * [languages/DDL/cs.egl](../../languages/DDL/cs.egl)
 * [languages/DDL/ls.egl](../../languages/DDL/ls.egl)
 * [languages/EFPL/cs.egl](../../languages/EFPL/cs.egl)

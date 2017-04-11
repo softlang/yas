@@ -10,6 +10,6 @@
   r([
       rid(btl(text)),
       representationOf(btl),
-      filenameExtension('.btl')
+      filenameExtension(btl)
   ])
 ].

@@ -1,9 +1,10 @@
 # Markdown
 A markup-based documentation language.
 ## Language elements
-### Language elements by extension
 * [languages/ANTLR/README.md](../../languages/ANTLR/README.md)
 * [languages/ASL/README.md](../../languages/ASL/README.md)
+* [languages/ASL/samples/adts/Java/functional/README.md](../../languages/ASL/samples/adts/Java/functional/README.md)
+* [languages/ASL/samples/adts/Java/imperative/README.md](../../languages/ASL/samples/adts/Java/imperative/README.md)
 * [languages/BAL/README.md](../../languages/BAL/README.md)
 * [languages/BCL/README.md](../../languages/BCL/README.md)
 * [languages/BFPL/README.md](../../languages/BFPL/README.md)
@@ -11,9 +12,14 @@ A markup-based documentation language.
 * [languages/BIPL/README.md](../../languages/BIPL/README.md)
 * [languages/BML/README.md](../../languages/BML/README.md)
 * [languages/BNL/README.md](../../languages/BNL/README.md)
+* [languages/BNL/ANTLR/README.md](../../languages/BNL/ANTLR/README.md)
+* [languages/BNL/Haskell/README.md](../../languages/BNL/Haskell/README.md)
 * [languages/BSL/README.md](../../languages/BSL/README.md)
 * [languages/BSTL/README.md](../../languages/BSTL/README.md)
 * [languages/BTL/README.md](../../languages/BTL/README.md)
+* [languages/BTL/JSON/README.md](../../languages/BTL/JSON/README.md)
+* [languages/BTL/XML/README.md](../../languages/BTL/XML/README.md)
+* [languages/DCG/README.md](../../languages/DCG/README.md)
 * [languages/DDL/README.md](../../languages/DDL/README.md)
 * [languages/DGL/README.md](../../languages/DGL/README.md)
 * [languages/DOT/README.md](../../languages/DOT/README.md)
@@ -26,6 +32,8 @@ A markup-based documentation language.
 * [languages/FNL/README.md](../../languages/FNL/README.md)
 * [languages/FRL/README.md](../../languages/FRL/README.md)
 * [languages/FSML/README.md](../../languages/FSML/README.md)
+* [languages/FSML/Python/LICENSE.md](../../languages/FSML/Python/LICENSE.md)
+* [languages/FSML/Python/README.md](../../languages/FSML/Python/README.md)
 * [languages/GBL/README.md](../../languages/GBL/README.md)
 * [languages/Haskell/README.md](../../languages/Haskell/README.md)
 * [languages/Hinzu/README.md](../../languages/Hinzu/README.md)
@@ -46,4 +54,7 @@ A markup-based documentation language.
 * [languages/Text/README.md](../../languages/Text/README.md)
 * [languages/ULL/README.md](../../languages/ULL/README.md)
 * [languages/Ueber/README.md](../../languages/Ueber/README.md)
+* [languages/Ueber/macros/README.md](../../languages/Ueber/macros/README.md)
 * [languages/XML/README.md](../../languages/XML/README.md)
+* [samples/obsolete/figure/parsing/README.md](../../samples/obsolete/figure/parsing/README.md)
+* [samples/xcoupled/README.md](../../samples/xcoupled/README.md)

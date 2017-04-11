@@ -9,6 +9,6 @@
   r([
       rid(json),
       representationOf(json),
-      filenameExtension('.json')
+      filenameExtension(json)
   ])
 ].

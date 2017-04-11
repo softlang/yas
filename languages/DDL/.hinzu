@@ -9,6 +9,6 @@
   r([
       rid(ddl(text)),
       representationOf(ddl),
-      filenameExtension('.ddl')
+      filenameExtension(ddl)
   ])
 ].

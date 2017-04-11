@@ -9,6 +9,7 @@ readFile(F, L, Content) :-
   ( B == text, readTextFile(F, Content)
   ; B == term, readTermFile(F, Content)
   ; B == json, readJSONFile(F, Content)
+  ; B == xml, readXMLFile(F, Content)
   ).
 
 tryReadFile(F, L, Content2) :-

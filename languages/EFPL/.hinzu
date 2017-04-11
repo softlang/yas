@@ -10,7 +10,7 @@
   r([
       rid(efpl(text)),
       representationOf(efpl),
-      filenameExtension('.eipl')
+      filenameExtension(efpl)
   ])
 ].
 

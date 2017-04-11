@@ -21,5 +21,5 @@
 
 % UEBER-based processing of all code
 :- init.
-:- preprocess(languages), preprocess(samples).
+:- process_dir(languages), process_dir(samples).
 :- mode(session) -> true; ueberRun, halt.

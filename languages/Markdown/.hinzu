@@ -8,6 +8,6 @@
   r([
       rid(markdown(text)),
       representationOf(markdown),
-      filenameExtension('.md')
+      filenameExtension(md)
   ])
 ].

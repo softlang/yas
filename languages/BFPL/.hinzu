@@ -11,6 +11,6 @@
   r([
       rid(bfpl(text)),
       representationOf(bfpl),
-      filenameExtension('.bfpl')
+      filenameExtension(bfpl)
   ])
 ].

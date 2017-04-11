@@ -10,6 +10,6 @@
   r([
       rid(bgl(text)),
       representationOf(bgl),
-      filenameExtension('.bgl')
+      filenameExtension(bgl)
   ])
 ].

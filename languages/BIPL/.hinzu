@@ -11,6 +11,6 @@
   r([
       rid(bipl(text)),
       representationOf(bipl),
-      filenameExtension('.bipl')
+      filenameExtension(bipl)
   ])
 ].

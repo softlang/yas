@@ -8,6 +8,6 @@
   r([
       rid(python(text)),
       representationOf(python),
-      filenameExtension('.py')
+      filenameExtension(py)
   ])
 ].

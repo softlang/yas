@@ -10,6 +10,6 @@
   r([
       rid(egl(text)),
       representationOf(egl),
-      filenameExtension('.egl')
+      filenameExtension(egl)
   ])
 ].

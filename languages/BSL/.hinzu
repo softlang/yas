@@ -10,6 +10,6 @@
   r([
       rid(bsl(text)),
       representationOf(bsl),
-      filenameExtension('.bsl')
+      filenameExtension(bsl)
   ])
 ].

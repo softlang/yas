@@ -9,7 +9,7 @@
   r([
       rid(dot(text)),
       representationOf(dot),
-      filenameExtension('.dot')
+      filenameExtension(dot)
   ])
 ].
 

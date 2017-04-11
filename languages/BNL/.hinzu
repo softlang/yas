@@ -9,6 +9,6 @@
   r([
       rid(bnl(text)),
       representationOf(bnl),
-      filenameExtension('.bnl')
+      filenameExtension(bnl)
   ])
 ].

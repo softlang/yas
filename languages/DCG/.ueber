@@ -1,0 +1,4 @@
+[
+  language(dcg(prolog(text))),
+  membership(dcg(prolog(text)), succeed, [])
+].

@@ -8,7 +8,7 @@
   r([
       rid(lal(text)),
       representationOf(lal),
-      filenameExtension('.lal'),
-      filenameExtension('.lal2')
+      filenameExtension(lal),
+      filenameExtension(lal2)
   ])
 ].

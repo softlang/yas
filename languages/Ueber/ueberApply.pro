@@ -23,6 +23,6 @@ apply(Ds, R, InFs, OutFs, (Pred, Args)) :-
         'Overload ~w#~w(~w)->(~w): failed.',
         [R, Pred, InFs, OutFs] ),
       % Compare expected and actual results 
-      map(ueberEq:compare(Ds), OutFs, OutLs, Expected, Actual)
+      map(ueberEq:compare(R, Pred, Ds), OutFs, OutLs, Expected, Actual)
     )
   ).

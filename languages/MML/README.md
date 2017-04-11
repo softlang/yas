@@ -1,7 +1,6 @@
 # MML (MetaModeling Language)
 A basic metamodeling language for graph-based abstract syntax.
 ## Language elements
-### Language elements by extension
 * [languages/FNL/mm.mml](../../languages/FNL/mm.mml)
 * [languages/FRL/mm.mml](../../languages/FRL/mm.mml)
 * [languages/FRL/FRL2/mm.mml](../../languages/FRL/FRL2/mm.mml)

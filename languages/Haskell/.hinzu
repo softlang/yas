@@ -8,6 +8,6 @@
   r([
       rid(haskell(text)),
       representationOf(haskell),
-      filenameExtension('.hs')
+      filenameExtension(hs)
   ])
 ].

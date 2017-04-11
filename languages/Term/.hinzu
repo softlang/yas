@@ -6,7 +6,6 @@
   ]),
   r([
       rid(term),
-      representationOf(term),
-      filenameExtension('.term')
+      representationOf(term)
   ])
 ].

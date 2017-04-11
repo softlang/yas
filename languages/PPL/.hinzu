@@ -8,6 +8,6 @@
   r([
       rid(ppl(term)),
       representationOf(ppl),
-      filenameExtension('.ppl')
+      filenameExtension(ppl)
   ])
 ].

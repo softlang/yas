@@ -8,7 +8,7 @@
   membership(tuple(term), tupleTerm, []),
   membership(prefix(term), prefixTerm, []),
   function(parse, [bsl(text)], [bsl(term)], parserOfBsl, []),
-  elementOf('sample.bsl', bsl(term)),
+  elementOf('sample.term', bsl(term)),
   elementOf('sample.tupleTerm', tuple(term)),
   elementOf('sample.prefixTerm', prefix(term)),
 

@@ -1,3 +1,4 @@
 [
+  language(asl(text)),
+  membership(asl(text), succeed, [])
 ].
-

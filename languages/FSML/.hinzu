@@ -8,6 +8,6 @@
   r([
       rid(fsml(text)),
       representationOf(fsml),
-      filenameExtension('.fsml')
+      filenameExtension(fsml)
   ])
 ].

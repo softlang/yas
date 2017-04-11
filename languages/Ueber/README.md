@@ -1,7 +1,6 @@
 # Ueber
 A megamodeling language used for build management and regression testing in the YAS repository.
 ## Language elements
-### Language elements by extension
 * [languages/.ueber](../../languages/.ueber)
 * [languages/ANTLR/.ueber](../../languages/ANTLR/.ueber)
 * [languages/ASL/.ueber](../../languages/ASL/.ueber)
@@ -36,6 +35,7 @@ A megamodeling language used for build management and regression testing in the 
 * [languages/BSTL/tests/trafo1.ueber](../../languages/BSTL/tests/trafo1.ueber)
 * [languages/BTL/.ueber](../../languages/BTL/.ueber)
 * [languages/BTL/Prolog/.ueber](../../languages/BTL/Prolog/.ueber)
+* [languages/DCG/.ueber](../../languages/DCG/.ueber)
 * [languages/DDL/.ueber](../../languages/DDL/.ueber)
 * [languages/DGL/.ueber](../../languages/DGL/.ueber)
 * [languages/DOT/.ueber](../../languages/DOT/.ueber)

@@ -10,6 +10,6 @@
   r([
       rid(dgl(text)),
       representationOf(dgl),
-      filenameExtension('.dgl')
+      filenameExtension(dgl)
   ])
 ].

@@ -28,6 +28,17 @@ readJSONFile(File, Json) :-
   ),
   close(Input).
 
+readXMLFile(File, Xml) :-
+  require(
+    fileExpected(File),
+    (exists_file(File), open(File, read, Input, []))
+  ),
+  require(
+    fileWithXMLExpected(File),
+    load_xml(File, Xml, [])
+  ),
+  close(Input).
+
 writeTextFile(File, Text) :-
   open(File, write, Output, []),
   format(Output, '~s', [Text]),
@@ -46,4 +57,3 @@ writeJSONFile(File, Json) :-
 dcgAcceptor(G, X) :- apply(G, [X, []]).
 
 dcgParser(G, X, Y) :- apply(G, [Y, X, []]).
-

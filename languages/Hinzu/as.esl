@@ -21,8 +21,10 @@ symbol purpose : string -> litem ;
 symbol rid : rid -> ritem ;
 symbol representationOf : lid -> ritem ;
 symbol filenameExtension : string -> ritem ;
+symbol processWith : goal -> ritem ;
 
 // Some synonyms for clarity's sake
 type lid = string ; // Language ids regardless of representation
-type rid = term ; // Representation-aware languge ids as in ueber
+type rid = term ; // Representation-aware language ids of Ueber
 type uri = string ; // URIs used for identity links
+type goal = term ; // Prolog literals

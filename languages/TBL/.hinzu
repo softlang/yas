@@ -9,6 +9,6 @@
   r([
       rid(tbl(text)),
       representationOf(tbl),
-      filenameExtension('.tbl')
+      filenameExtension(tbl)
   ])
 ].

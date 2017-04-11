@@ -9,6 +9,6 @@
   r([
       rid(hinzu(term)),
       representationOf(hinzu),
-      filenameExtension('.hinzu')
+      filenameExtension(hinzu)
   ])
 ].
