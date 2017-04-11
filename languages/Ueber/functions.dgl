@@ -81,7 +81,7 @@ digraph G {
   80 [label="rename # fsmlRename", shape=box]
   81 [label="mapping # tblToGbl", shape=box]
   82 [label="dump # hinzuDump", shape=box]
-  83 [label="publish # hinzuToMd", shape=box]
+  83 [label="publishLanguage # hinzuLanguage", shape=box]
   84 [label="parse # eglParser(lalAbstract: (~>))", shape=box]
   85 [label="deps # lalDeps", shape=box]
   86 [label="transform # lalReuse", shape=box]
@@ -171,34 +171,35 @@ digraph G {
   170 [label="java(text)", shape=ellipse, style=filled]
   171 [label="ok(fsml(json))", shape=ellipse, style=filled]
   172 [label="gbl(graph(term))", shape=ellipse, style=filled]
-  173 [label="hinzu(term)", shape=ellipse, style=filled]
-  174 [label="json", shape=ellipse, style=filled]
-  175 [label="lal(text)", shape=ellipse, style=filled]
-  176 [label="lal(term)", shape=ellipse, style=filled]
-  177 [label="lal(config(term))", shape=ellipse, style=filled]
-  178 [label="mmdl(term)", shape=ellipse, style=filled]
-  179 [label="mml(text)", shape=ellipse, style=filled]
-  180 [label="mml(term)", shape=ellipse, style=filled]
-  181 [label="mml(graph(term))", shape=ellipse, style=filled]
-  182 [label="ddl(mml(term))", shape=ellipse, style=filled]
-  183 [label="mmtl(term)", shape=ellipse, style=filled]
-  184 [label="markdown(text)", shape=ellipse, style=filled]
-  185 [label="ppl(term)", shape=ellipse, style=filled]
-  186 [label="tbl(text)", shape=ellipse, style=filled]
-  187 [label="tbl(term)", shape=ellipse, style=filled]
-  188 [label="tbl(graph(term))", shape=ellipse, style=filled]
-  189 [label="tdl(term)", shape=ellipse, style=filled]
-  190 [label="deps(term)", shape=ellipse, style=filled]
-  191 [label="tokens(term)", shape=ellipse, style=filled]
-  192 [label="graph(term)", shape=ellipse, style=filled]
-  193 [label="text", shape=ellipse, style=filled]
-  194 [label="ueber(term)", shape=ellipse, style=filled]
-  195 [label="expr(text)", shape=ellipse, style=filled]
-  196 [label="expr(tokens(term))", shape=ellipse, style=filled]
-  197 [label="expr(bcl(term))", shape=ellipse, style=filled]
-  198 [label="expr(term)", shape=ellipse, style=filled]
-  199 [label="figure(text)", shape=ellipse, style=filled]
-  200 [label="figure(term)", shape=ellipse, style=filled]
+  173 [label="html(text)", shape=ellipse, style=filled]
+  174 [label="hinzu(term)", shape=ellipse, style=filled]
+  175 [label="json", shape=ellipse, style=filled]
+  176 [label="lal(text)", shape=ellipse, style=filled]
+  177 [label="lal(term)", shape=ellipse, style=filled]
+  178 [label="lal(config(term))", shape=ellipse, style=filled]
+  179 [label="mmdl(term)", shape=ellipse, style=filled]
+  180 [label="mml(text)", shape=ellipse, style=filled]
+  181 [label="mml(term)", shape=ellipse, style=filled]
+  182 [label="mml(graph(term))", shape=ellipse, style=filled]
+  183 [label="ddl(mml(term))", shape=ellipse, style=filled]
+  184 [label="mmtl(term)", shape=ellipse, style=filled]
+  185 [label="markdown(text)", shape=ellipse, style=filled]
+  186 [label="ppl(term)", shape=ellipse, style=filled]
+  187 [label="tbl(text)", shape=ellipse, style=filled]
+  188 [label="tbl(term)", shape=ellipse, style=filled]
+  189 [label="tbl(graph(term))", shape=ellipse, style=filled]
+  190 [label="tdl(term)", shape=ellipse, style=filled]
+  191 [label="deps(term)", shape=ellipse, style=filled]
+  192 [label="tokens(term)", shape=ellipse, style=filled]
+  193 [label="graph(term)", shape=ellipse, style=filled]
+  194 [label="text", shape=ellipse, style=filled]
+  195 [label="ueber(term)", shape=ellipse, style=filled]
+  196 [label="expr(text)", shape=ellipse, style=filled]
+  197 [label="expr(tokens(term))", shape=ellipse, style=filled]
+  198 [label="expr(bcl(term))", shape=ellipse, style=filled]
+  199 [label="expr(term)", shape=ellipse, style=filled]
+  200 [label="figure(text)", shape=ellipse, style=filled]
+  201 [label="figure(term)", shape=ellipse, style=filled]
   119 -> 1
   121 -> 2
   121 -> 3
@@ -226,7 +227,7 @@ digraph G {
   132 -> 25
   136 -> 26
   125 -> 27
-  191 -> 27
+  192 -> 27
   137 -> 28
   137 -> 29
   138 -> 30
@@ -289,48 +290,48 @@ digraph G {
   171 -> 79
   164 -> 80
   168 -> 80
-  188 -> 81
-  173 -> 83
-  175 -> 84
-  176 -> 85
-  176 -> 86
-  176 -> 87
-  176 -> 88
+  189 -> 81
+  174 -> 83
+  176 -> 84
+  177 -> 85
+  177 -> 86
+  177 -> 87
   177 -> 88
+  178 -> 88
   164 -> 89
-  178 -> 90
-  180 -> 90
-  178 -> 91
+  179 -> 90
+  181 -> 90
+  179 -> 91
   147 -> 92
-  178 -> 92
-  179 -> 93
-  180 -> 94
-  181 -> 95
-  181 -> 96
-  192 -> 96
-  182 -> 97
-  180 -> 98
-  180 -> 99
-  183 -> 99
-  185 -> 100
-  186 -> 101
-  187 -> 102
+  179 -> 92
+  180 -> 93
+  181 -> 94
+  182 -> 95
+  182 -> 96
+  193 -> 96
+  183 -> 97
+  181 -> 98
+  181 -> 99
+  184 -> 99
+  186 -> 100
+  187 -> 101
+  188 -> 102
   164 -> 103
   164 -> 104
-  189 -> 104
-  189 -> 105
-  193 -> 106
-  194 -> 108
-  194 -> 109
-  195 -> 110
-  196 -> 111
-  195 -> 112
-  197 -> 113
-  198 -> 114
-  197 -> 115
-  197 -> 116
-  199 -> 117
-  200 -> 118
+  190 -> 104
+  190 -> 105
+  194 -> 106
+  195 -> 108
+  195 -> 109
+  196 -> 110
+  197 -> 111
+  196 -> 112
+  198 -> 113
+  199 -> 114
+  198 -> 115
+  198 -> 116
+  200 -> 117
+  201 -> 118
   1 -> 120
   2 -> 122
   3 -> 123
@@ -372,7 +373,7 @@ digraph G {
   41 -> 143
   42 -> 143
   43 -> 147
-  44 -> 185
+  44 -> 186
   45 -> 151
   46 -> 152
   47 -> 153
@@ -403,45 +404,46 @@ digraph G {
   75 -> 170
   76 -> 148
   77 -> 170
-  78 -> 174
+  78 -> 175
   79 -> 149
   80 -> 168
   81 -> 172
-  82 -> 173
-  83 -> 184
-  84 -> 176
-  85 -> 190
-  86 -> 176
-  87 -> 175
-  88 -> 194
-  89 -> 178
-  90 -> 180
-  91 -> 178
+  82 -> 174
+  83 -> 173
+  83 -> 185
+  84 -> 177
+  85 -> 191
+  86 -> 177
+  87 -> 176
+  88 -> 195
+  89 -> 179
+  90 -> 181
+  91 -> 179
   92 -> 147
-  93 -> 180
-  94 -> 181
-  95 -> 181
-  96 -> 192
+  93 -> 181
+  94 -> 182
+  95 -> 182
+  96 -> 193
   97 -> 147
   98 -> 164
-  99 -> 180
-  100 -> 193
-  101 -> 187
-  102 -> 188
-  103 -> 189
+  99 -> 181
+  100 -> 194
+  101 -> 188
+  102 -> 189
+  103 -> 190
   104 -> 164
-  105 -> 189
+  105 -> 190
   106 -> 164
-  107 -> 194
+  107 -> 195
   108 -> 148
   109 -> 148
-  110 -> 196
-  111 -> 198
-  112 -> 198
-  113 -> 198
-  114 -> 197
-  115 -> 196
-  116 -> 195
-  117 -> 200
-  118 -> 185
+  110 -> 197
+  111 -> 199
+  112 -> 199
+  113 -> 199
+  114 -> 198
+  115 -> 197
+  116 -> 196
+  117 -> 201
+  118 -> 186
 }

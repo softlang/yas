@@ -1,8 +1,8 @@
 % BEGIN ...
-:- module(hinzuToMd, []).
+:- module(hinzuLanguage, []).
 % END ...
 
-main(Hinzu, Text) :-
+main(Hinzu, Md, Html) :-
   member(l(Is), Hinzu),
   member(lid(L), Is),
   (
@@ -14,8 +14,11 @@ main(Hinzu, Text) :-
   ),
   member(explanation(X), Is),
   with_output_to(
-	  codes(Text),
-	  format('# ~w~n~w~n## Language elements~n~@', [N, X, byMembership(L)])).
+	  codes(Md),
+	  format('# ~w~n~w~n## Language elements~n~@', [N, X, byMembership(L)])),
+ with_output_to(
+	  codes(Html),
+	  format('<HTML>~n <TITLE>~w</TITLE>~n <BODY>~n <H1>~w</H1>~n <P>~w</P>~n </BODY>~n</HTML>', [N, N, X])).
 
 byMembership(L) :-
     findall(R, (

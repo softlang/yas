@@ -8,6 +8,6 @@
   mapsTo(dump, [], ['dump.hinzu']),
 
   % Publish Hinzu in Markdown
-  function(publish, [hinzu(term)], [markdown(text)], hinzuToMd:main, [])
+  function(publishLanguage, [hinzu(term)], [markdown(text), html(text)], hinzuLanguage:main, [])
 	
 ].

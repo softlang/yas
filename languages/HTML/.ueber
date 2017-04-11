@@ -1,0 +1,4 @@
+[
+  language(html(text)),
+  membership(html(text), succeed, [])
+].

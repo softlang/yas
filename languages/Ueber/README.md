@@ -72,6 +72,7 @@ A megamodeling language used for build management and regression testing in the 
 * [languages/FSML/tests/.ueber](../../languages/FSML/tests/.ueber)
 * [languages/GBL/.ueber](../../languages/GBL/.ueber)
 * [languages/GBL/samples/.ueber](../../languages/GBL/samples/.ueber)
+* [languages/HTML/.ueber](../../languages/HTML/.ueber)
 * [languages/Haskell/.ueber](../../languages/Haskell/.ueber)
 * [languages/Hinzu/.ueber](../../languages/Hinzu/.ueber)
 * [languages/JSON/.ueber](../../languages/JSON/.ueber)

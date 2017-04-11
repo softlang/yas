@@ -190,8 +190,16 @@ assertNotElementOf(File, L) :-
 
 % Process Hinzu declaration
 hinzu(HinzuTerm) :-
-   maplist(assertHDecl, HinzuTerm),
-   ueber(macro(fxy(publish, '.hinzu', hinzu(term), 'README.md', markdown(text)))).
+  maplist(assertHDecl, HinzuTerm),
+  member(l(Is), HinzuTerm),  
+  member(lid(L), Is),
+  atomic_list_concat(['../../docs/languages/', L, '.html'], HtmlFile),
+  ueber([
+    elementOf('.hinzu', hinzu(term)),
+    elementOf('README.md', markdown(text)),
+    elementOf(HtmlFile, html(text)),
+    mapsTo(publishLanguage, ['.hinzu'], ['README.md', HtmlFile])
+  ]).
 
 % Error handling for Hinzu
 hinzu(X) :-
@@ -212,9 +220,13 @@ ueber_absolute(Rel, Abs2) :-
 ueber_normalize(Atom1, Atom3) :-
   name(Atom1, Str1),
   ( append(Str2, [0'/, 0'., 0'., 0'/|Str3], Str1) ->
-        append(Str4, [0'/|Str5], Str2),
-        \+ member(0'/, Str5),
-        concat([Str4, [0'/], Str3], Str6),
+        (
+          \+ member(0'/, Str2),
+          Str6 = Str3
+	; append(Str4, [0'/|Str5], Str2),
+          \+ member(0'/, Str5),
+          concat([Str4, [0'/], Str3], Str6)
+        ),
         name(Atom2, Str6),
         ueber_normalize(Atom2, Atom3)
       ;

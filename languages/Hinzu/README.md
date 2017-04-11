@@ -27,6 +27,7 @@ A trivial metadata/annotation language designed to facilitate basic documentatio
 * [languages/FRL/.hinzu](../../languages/FRL/.hinzu)
 * [languages/FSML/.hinzu](../../languages/FSML/.hinzu)
 * [languages/GBL/.hinzu](../../languages/GBL/.hinzu)
+* [languages/HTML/.hinzu](../../languages/HTML/.hinzu)
 * [languages/Haskell/.hinzu](../../languages/Haskell/.hinzu)
 * [languages/Hinzu/dump.hinzu](../../languages/Hinzu/dump.hinzu)
 * [languages/Hinzu/.hinzu](../../languages/Hinzu/.hinzu)

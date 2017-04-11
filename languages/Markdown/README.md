@@ -35,6 +35,7 @@ A markup-based documentation language.
 * [languages/FSML/Python/LICENSE.md](../../languages/FSML/Python/LICENSE.md)
 * [languages/FSML/Python/README.md](../../languages/FSML/Python/README.md)
 * [languages/GBL/README.md](../../languages/GBL/README.md)
+* [languages/HTML/README.md](../../languages/HTML/README.md)
 * [languages/Haskell/README.md](../../languages/Haskell/README.md)
 * [languages/Hinzu/README.md](../../languages/Hinzu/README.md)
 * [languages/JSON/README.md](../../languages/JSON/README.md)

@@ -114,7 +114,7 @@ A general-purpose logic programming language associated with artificial intellig
 * [languages/GBL/gblAbstract.pro](../../languages/GBL/gblAbstract.pro)
 * [languages/GBL/tblToGbl.pro](../../languages/GBL/tblToGbl.pro)
 * [languages/Hinzu/hinzuDump.pro](../../languages/Hinzu/hinzuDump.pro)
-* [languages/Hinzu/hinzuToMd.pro](../../languages/Hinzu/hinzuToMd.pro)
+* [languages/Hinzu/hinzuLanguage.pro](../../languages/Hinzu/hinzuLanguage.pro)
 * [languages/LAL/lalAbstract.pro](../../languages/LAL/lalAbstract.pro)
 * [languages/LAL/lalDeps.pro](../../languages/LAL/lalDeps.pro)
 * [languages/LAL/lalNorm.pro](../../languages/LAL/lalNorm.pro)
