@@ -13,14 +13,15 @@ main(Hinzu, Md1, Md2) :-
     member(name(N), Is)
   ),
   member(explanation(X), Is),
-  with_output_to(
-	  codes(Md1),
-	  format('# ~w~n~w~n## Language elements~n~@', [N, X, byMembership(L)])),
- with_output_to(
-	  codes(Md2),
-	  format('# ~w~n~w~n## Language elements~n', [N, X])).
+  page(L, N, X, inplace, Md1),
+  page(L, N, X, docs, Md2).
 
-byMembership(L) :-
+page(L, N, X, W, Md) :-
+  with_output_to(
+	  codes(Md),
+	  format('# ~w~n~w~n## Language elements~n~@', [N, X, elements(W, L)])).
+
+elements(W, L) :-
     findall(R, (
 		hdeclaration(r(Is)),
 		member(rid(R), Is),
@@ -30,9 +31,7 @@ byMembership(L) :-
 		udeclaration(elementOf(FN, R)),
 		member(R, Rs)),
 	    FNs),
-    maplist(fnitem, FNs).
+    maplist(fnitem(W), FNs).
 
-byMembership(_).
-
-fnitem(FN) :-
+fnitem(_, FN) :-
     format('* [~w](../../~w)~n', [FN, FN]).
