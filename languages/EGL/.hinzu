@@ -5,6 +5,8 @@
       expansion('Extended Grammar Language'),
       explanation('A simple extension of the BNF-like grammar notation BGL to support EBNF-like constructs for optional and repeating phrases.'),
       supersetOf(bgl),
+      purpose('Concrete textual syntax definition'),
+      purpose('Concrete syntax definition'),
       purpose('Language definition')
   ]),
   r([

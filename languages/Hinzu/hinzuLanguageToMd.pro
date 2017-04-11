@@ -4,11 +4,11 @@ main(Hinzu, Md1, Md2) :-
   member(l(Is), Hinzu),
   member(lid(L), Is),
   (
+    member(name(N), Is)
+  ; 
     member(acronym(N1), Is),
     member(expansion(N2), Is),
     atomic_list_concat([N1, ' ', '(', N2, ')'], N)
-  ; 
-    member(name(N), Is)
   ),
   member(explanation(X), Is),
   page(L, N, X, repo, Md1),

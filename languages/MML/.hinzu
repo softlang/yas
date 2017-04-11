@@ -4,7 +4,9 @@
       acronym('MML'),
       expansion('MetaModeling Language'),
       explanation('A basic metamodeling language for graph-based abstract syntax.'),
-      purpose('Metamodeling')
+      purpose('Metamodeling'),
+      purpose('Abstract syntax definition'),
+      purpose('Graph-based abstract syntax definition')
   ]),
   r([
       rid(mml(text)),
