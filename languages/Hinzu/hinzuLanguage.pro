@@ -13,8 +13,8 @@ main(Hinzu, Md1, Md2) :-
     member(name(N), Is)
   ),
   member(explanation(X), Is),
-  page(L, N, X, inplace, Md1),
-  page(L, N, X, docs, Md2).
+  page(L, N, X, repo, Md1),
+  page(L, N, X, pages, Md2).
 
 page(L, N, X, W, Md) :-
   with_output_to(
@@ -33,5 +33,8 @@ elements(W, L) :-
 	    FNs),
     maplist(fnitem(W), FNs).
 
-fnitem(_, FN) :-
+fnitem(repo, FN) :-
     format('* [~w](../../~w)~n', [FN, FN]).
+
+fnitem(pages, FN) :-
+    format('* [~w](https://github.com/softlang/yas/blob/master/~w)~n', [FN, FN]).

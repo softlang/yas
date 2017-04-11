@@ -64,6 +64,9 @@ test-old:
 	@echo Testing package $* ...
 	@swipl -q -f packages/$*.pro -g $*_main
 
+pages:
+	git commit -a -m "GitHub pages update"; git push
+
 remove-nonsle16dirs:
 	for dir in ${nonsle16dirs} ; do \
 		rm -rf $$dir ; \
