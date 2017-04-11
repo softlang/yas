@@ -3,7 +3,7 @@ A trivial expression language with expression forms on integer and Boolean value
 ## Language purposes
 _None_
 ## Language relationships
-* variationOf: [BTL](btl.html)
+* variationOf: [BTL](http://softlang.github.io/yas/languages/btl.html)
 
 ## Language elements
 * [languages/EL/tests/a-plus-b.el](../../languages/EL/tests/a-plus-b.el)

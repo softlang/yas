@@ -4,7 +4,7 @@ A trivial specification language for graphs that may be rendered eventually with
 * Graph representation
 
 ## Language relationships
-* subsetOf: [DOT](dot.html)
+* subsetOf: [DOT](http://softlang.github.io/yas/languages/dot.html)
 
 ## Language elements
 * [languages/DGL/sample.dgl](https://github.com/softlang/yas/blob/master/languages/DGL/sample.dgl)

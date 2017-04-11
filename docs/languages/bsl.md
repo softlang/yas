@@ -6,7 +6,7 @@ A basic specification language for tree-based abstract syntax on the grounds of 
 * Language definition
 
 ## Language relationships
-* subsetOf: [ESL](esl.html)
+* subsetOf: [ESL](http://softlang.github.io/yas/languages/esl.html)
 
 ## Language elements
 * [languages/BNL/as.bsl](https://github.com/softlang/yas/blob/master/languages/BNL/as.bsl)

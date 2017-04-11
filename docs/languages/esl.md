@@ -6,7 +6,7 @@ A simple extension of the basic signature language BSL for tree-based abstract s
 * Language definition
 
 ## Language relationships
-* supersetOf: [BSL](bsl.html)
+* supersetOf: [BSL](http://softlang.github.io/yas/languages/bsl.html)
 
 ## Language elements
 * [languages/BCL/as.esl](https://github.com/softlang/yas/blob/master/languages/BCL/as.esl)

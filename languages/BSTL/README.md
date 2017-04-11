@@ -3,8 +3,8 @@ A trivial transformation language for coupled transformations on BSL signatures 
 ## Language purposes
 _None_
 ## Language relationships
-* dependsOn: [BSL](bsl.html)
-* dependsOn: [Term](term.html)
+* dependsOn: [BSL](http://softlang.github.io/yas/languages/bsl.html)
+* dependsOn: [Term](http://softlang.github.io/yas/languages/term.html)
 
 ## Language elements
 * [languages/BSTL/tests/trafo1.term](../../languages/BSTL/tests/trafo1.term)

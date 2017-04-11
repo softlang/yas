@@ -4,6 +4,6 @@ A trivial stack- and address-based machine language; memory access and jumps use
 * Compilation
 
 ## Language relationships
-* variationOf: [BAL](bal.html)
+* variationOf: [BAL](http://softlang.github.io/yas/languages/bal.html)
 
 ## Language elements

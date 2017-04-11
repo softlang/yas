@@ -6,7 +6,7 @@ A simple extension of the BNF-like grammar notation BGL to support EBNF-like con
 * Language definition
 
 ## Language relationships
-* supersetOf: [BGL](bgl.html)
+* supersetOf: [BGL](http://softlang.github.io/yas/languages/bgl.html)
 * similarTo: [https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form)
 
 ## Language elements

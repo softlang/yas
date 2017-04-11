@@ -4,7 +4,7 @@ A small extension of the trivial functional programming language BFPL to provide
 * Functional programming
 
 ## Language relationships
-* supersetOf: [BFPL](bfpl.html)
+* supersetOf: [BFPL](http://softlang.github.io/yas/languages/bfpl.html)
 
 ## Language elements
 * [languages/EFPL/tests/sample-past-inference.efpl](https://github.com/softlang/yas/blob/master/languages/EFPL/tests/sample-past-inference.efpl)

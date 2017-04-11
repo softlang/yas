@@ -3,7 +3,7 @@ A trivial ontology-oriented language for representing collections of persons and
 ## Language purposes
 _None_
 ## Language relationships
-* variationOf: [TBL](tbl.html)
+* variationOf: [TBL](http://softlang.github.io/yas/languages/tbl.html)
 
 ## Language elements
 * [languages/GBL/samples/empty.graph](https://github.com/softlang/yas/blob/master/languages/GBL/samples/empty.graph)

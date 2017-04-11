@@ -4,8 +4,8 @@ A trivial first-order functional programming language with support for primitive
 * Functional programming
 
 ## Language relationships
-* embeds: [EL](el.html)
-* subsetOf: [EFPL](efpl.html)
+* embeds: [EL](http://softlang.github.io/yas/languages/el.html)
+* subsetOf: [EFPL](http://softlang.github.io/yas/languages/efpl.html)
 * relatesTo: [https://en.wikipedia.org/wiki/Haskell_(programming_language)](https://en.wikipedia.org/wiki/Haskell_(programming_language))
 
 ## Language elements

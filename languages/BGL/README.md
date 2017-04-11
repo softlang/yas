@@ -6,7 +6,7 @@ A BNF-like notation for context-free grammars; rules (productions) are labeled.
 * Language definition
 
 ## Language relationships
-* subsetOf: [EGL](egl.html)
+* subsetOf: [EGL](http://softlang.github.io/yas/languages/egl.html)
 * similarTo: [https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form)
 
 ## Language elements

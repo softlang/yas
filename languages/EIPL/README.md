@@ -4,7 +4,7 @@ A small extension of the trivial imperative programming language BIPL to provide
 * Imperative programming
 
 ## Language relationships
-* supersetOf: [BIPL](bipl.html)
+* supersetOf: [BIPL](http://softlang.github.io/yas/languages/bipl.html)
 
 ## Language elements
 * [languages/EIPL/sample.eipl](../../languages/EIPL/sample.eipl)

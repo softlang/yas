@@ -4,6 +4,6 @@ A trivial stack- and address-based assembly language; memory access and jumps us
 * Compilation
 
 ## Language relationships
-* variationOf: [BML](bml.html)
+* variationOf: [BML](http://softlang.github.io/yas/languages/bml.html)
 
 ## Language elements

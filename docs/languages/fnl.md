@@ -3,7 +3,7 @@ A trivial data model for representing families as collections of persons with va
 ## Language purposes
 _None_
 ## Language relationships
-* variationOf: [FRL](frl.html)
+* variationOf: [FRL](http://softlang.github.io/yas/languages/frl.html)
 
 ## Language elements
 * [languages/FNL/small-family.graph](https://github.com/softlang/yas/blob/master/languages/FNL/small-family.graph)
