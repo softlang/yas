@@ -1,7 +1,9 @@
 # FSML (Finite State Machine Language)
 A simple domain-specific modeling language (DSML) for finite state machines (FSMs).
 ## Language purposes
-_None_## Language relationships
+_None_
+## Language relationships
+
 ## Language elements
 * [languages/FSML/sample.fsml](https://github.com/softlang/yas/blob/master/languages/FSML/sample.fsml)
 * [languages/FSML/tests/determinismNotOk.fsml](https://github.com/softlang/yas/blob/master/languages/FSML/tests/determinismNotOk.fsml)

@@ -1,7 +1,9 @@
 # LAL (Linguistic Architecture Language)
 A predicate logic-based megamodeling language used for capturing properties of language processors and deriving test cases.
 ## Language purposes
-_None_## Language relationships
+_None_
+## Language relationships
+
 ## Language elements
 * [languages/LAL/lib/application.lal](https://github.com/softlang/yas/blob/master/languages/LAL/lib/application.lal)
 * [languages/LAL/lib/application.lal2](https://github.com/softlang/yas/blob/master/languages/LAL/lib/application.lal2)

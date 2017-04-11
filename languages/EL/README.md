@@ -1,8 +1,10 @@
 # EL (Expression Language)
 A trivial expression language with expression forms on integer and Boolean values with arithmetic, relational, and comparison operators.
 ## Language purposes
-_None_## Language relationships
-* variationOf: [BTL](languages/btl.html)
+_None_
+## Language relationships
+* variationOf: [BTL](btl.html)
+
 ## Language elements
 * [languages/EL/tests/a-plus-b.el](../../languages/EL/tests/a-plus-b.el)
 * [languages/EL/tests/a.el](../../languages/EL/tests/a.el)

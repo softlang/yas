@@ -1,8 +1,10 @@
 # XML (Extensible Markup Language)
 A markup-based interchange format.
 ## Language purposes
-_None_## Language relationships
+_None_
+## Language relationships
 * sameAs: [https://en.wikipedia.org/wiki/XML](https://en.wikipedia.org/wiki/XML)
+
 ## Language elements
 * [languages/BNL/XML/sample.xml](https://github.com/softlang/yas/blob/master/languages/BNL/XML/sample.xml)
 * [languages/BTL/XML/sample.xml](https://github.com/softlang/yas/blob/master/languages/BTL/XML/sample.xml)

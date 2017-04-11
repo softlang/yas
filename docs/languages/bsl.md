@@ -4,8 +4,10 @@ A basic specification language for tree-based abstract syntax on the grounds of 
 * Tree-based abstract syntax definition
 * Abstract syntax definition
 * Language definition
+
 ## Language relationships
-* subsetOf: [ESL](languages/esl.html)
+* subsetOf: [ESL](esl.html)
+
 ## Language elements
 * [languages/BNL/as.bsl](https://github.com/softlang/yas/blob/master/languages/BNL/as.bsl)
 * [languages/BSTL/tests/sig1.bsl](https://github.com/softlang/yas/blob/master/languages/BSTL/tests/sig1.bsl)

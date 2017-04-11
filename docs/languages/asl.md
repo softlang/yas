@@ -2,7 +2,9 @@
 A simple language for algebraic specification.
 ## Language purposes
 * Algebraic specification
+
 ## Language relationships
+
 ## Language elements
 * [languages/ASL/samples/sorting.asl](https://github.com/softlang/yas/blob/master/languages/ASL/samples/sorting.asl)
 * [languages/ASL/samples/101/companies.asl](https://github.com/softlang/yas/blob/master/languages/ASL/samples/101/companies.asl)

@@ -16,7 +16,7 @@ symbol embeds : lid -> litem ;
 symbol dependsOn : lid -> litem ;
 symbol sameAs : uri -> litem ;
 symbol similarTo : uri -> litem ;
-symbol relatedTo : uri -> litem ;
+symbol relatesTo : uri -> litem ;
 symbol purpose : string -> litem ;
 
 // Representation-related items

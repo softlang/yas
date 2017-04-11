@@ -3,7 +3,9 @@ A trivial metadata/annotation language designed to facilitate basic documentatio
 ## Language purposes
 * Metadata definition
 * Megamodeling
+
 ## Language relationships
+
 ## Language elements
 * [languages/ANTLR/.hinzu](https://github.com/softlang/yas/blob/master/languages/ANTLR/.hinzu)
 * [languages/ASL/.hinzu](https://github.com/softlang/yas/blob/master/languages/ASL/.hinzu)

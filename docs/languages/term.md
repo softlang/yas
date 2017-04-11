@@ -1,7 +1,9 @@
 # Term
 Prolog terms as a basic representation format used by the YAS repository.
 ## Language purposes
-_None_## Language relationships
+_None_
+## Language relationships
+
 ## Language elements
 * [languages/BSTL/tests/term1.term](https://github.com/softlang/yas/blob/master/languages/BSTL/tests/term1.term)
 * [languages/BSTL/tests/term2.term](https://github.com/softlang/yas/blob/master/languages/BSTL/tests/term2.term)

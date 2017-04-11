@@ -1,7 +1,9 @@
 # Text
 Text as a basic representation format used by the YAS repository.
 ## Language purposes
-_None_## Language relationships
+_None_
+## Language relationships
+
 ## Language elements
 * [languages/FSML/Prolog/generated/baseline.txt](https://github.com/softlang/yas/blob/master/languages/FSML/Prolog/generated/baseline.txt)
 * [languages/FSML/tests/syntaxError.fsml](https://github.com/softlang/yas/blob/master/languages/FSML/tests/syntaxError.fsml)

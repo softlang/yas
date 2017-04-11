@@ -4,7 +4,9 @@ A basic metamodeling language for graph-based abstract syntax.
 * Metamodeling
 * Abstract syntax definition
 * Graph-based abstract syntax definition
+
 ## Language relationships
+
 ## Language elements
 * [languages/FNL/mm.mml](../../languages/FNL/mm.mml)
 * [languages/FRL/mm.mml](../../languages/FRL/mm.mml)

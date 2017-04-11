@@ -1,8 +1,10 @@
 # Prolog
 A general-purpose logic programming language associated with artificial intelligence and computational linguistics.
 ## Language purposes
-_None_## Language relationships
+_None_
+## Language relationships
 * sameAs: [https://en.wikipedia.org/wiki/Prolog](https://en.wikipedia.org/wiki/Prolog)
+
 ## Language elements
 * [languages/BCL/bclOk.pro](https://github.com/softlang/yas/blob/master/languages/BCL/bclOk.pro)
 * [languages/BFPL/as-to-cs.pro](https://github.com/softlang/yas/blob/master/languages/BFPL/as-to-cs.pro)

@@ -17,7 +17,7 @@ main(Hinzu, Md1, Md2) :-
 page(L, N, X, W, Md) :-
   with_output_to(
 	  codes(Md),
-	  format('# ~w~n~w~n## Language purposes~n~@## Language relationships~n~@## Language elements~n~@', [N, X, purposes(L), relationships(L), elements(W, L)])).
+	  format('# ~w~n~w~n## Language purposes~n~@~n## Language relationships~n~@~n## Language elements~n~@', [N, X, purposes(L), relationships(L), elements(W, L)])).
 
 purposes(L) :-
     findall(P, (
@@ -53,7 +53,7 @@ relationship(R) :-
     hdeclaration(l(Is)),
     member(lid(L), Is),
     (member(name(N), Is); member(acronym(N), Is)),
-    format('* ~w: [~w](languages/~w.html)~n', [F, N, L]).
+    format('* ~w: [~w](~w.html)~n', [F, N, L]).
         
 elements(W, L) :-
     findall(R, (

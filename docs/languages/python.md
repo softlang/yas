@@ -1,8 +1,10 @@
 # Python
 An interpreter-based multi-paradigm general purpose programming language with a dynamic type system
 ## Language purposes
-_None_## Language relationships
+_None_
+## Language relationships
 * sameAs: [https://en.wikipedia.org/wiki/Python_(programming_language)](https://en.wikipedia.org/wiki/Python_(programming_language))
+
 ## Language elements
 * [languages/FSML/Python/FsmlAcceptor.py](https://github.com/softlang/yas/blob/master/languages/FSML/Python/FsmlAcceptor.py)
 * [languages/FSML/Python/FsmlCGenerator.py](https://github.com/softlang/yas/blob/master/languages/FSML/Python/FsmlCGenerator.py)
