@@ -193,12 +193,12 @@ hinzu(HinzuTerm) :-
   maplist(assertHDecl, HinzuTerm),
   member(l(Is), HinzuTerm),  
   member(lid(L), Is),
-  atomic_list_concat(['../../docs/languages/', L, '.html'], HtmlFile),
+  atomic_list_concat(['../../docs/languages/', L, '.md'], DocsFile),
   ueber([
     elementOf('.hinzu', hinzu(term)),
     elementOf('README.md', markdown(text)),
-    elementOf(HtmlFile, html(text)),
-    mapsTo(publishLanguage, ['.hinzu'], ['README.md', HtmlFile])
+    elementOf(DocsFile, markdown(text)),
+    mapsTo(publishLanguage, ['.hinzu'], ['README.md', DocsFile])
   ]).
 
 % Error handling for Hinzu
