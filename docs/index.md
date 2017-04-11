@@ -1,4 +1,4 @@
-# Fabricated languages
+## Fabricated languages
 * [ASL](languages/asl.html): A simple language for algebraic specification.
 * [BAL](languages/bal.html): A trivial stack- and address-based assembly language; memory access and jumps use symbolic names rather than ints.
 * [BCL](languages/bcl.html): A representation format for concrete syntax trees (CSTs) for BNF-like grammar notation as of BGL (Basic Grammar Language).
@@ -35,8 +35,7 @@
 * [Text](languages/text.html): Text as a basic representation format used by the YAS repository.
 * [ULL](languages/ull.html): An applied, untyped lambda calculus.
 * [Ueber](languages/ueber.html): A megamodeling language used for build management and regression testing in the YAS repository.
-
-# Established languages
+## Established languages
 * [ANTLR](languages/antlr.html): The ANTLR tool and language for parsing and processing string languages.
 * [DCG](languages/dcg.html): A grammatical notation based on logic programming.
 * [DOT](languages/dot.html): The input language of the Graphviz tool for describing and rendering all kinds of graphs.

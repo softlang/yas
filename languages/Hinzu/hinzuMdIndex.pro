@@ -3,7 +3,7 @@
 main(Hinzu, Md) :-
     with_output_to(
 	    codes(Md),
-	    format('# Fabricated languages~n~@~n# Established languages~n~@', [languages(hinzuMdIndex:fabricated, Hinzu), languages(hinzuMdIndex:established, Hinzu)])).
+	    format('## Fabricated languages~n~@## Established languages~n~@', [languages(hinzuMdIndex:fabricated, Hinzu), languages(hinzuMdIndex:established, Hinzu)])).
 
 languages(Selector, Hinzu) :-
     findall((L, N, X), (
