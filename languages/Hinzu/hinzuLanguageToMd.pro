@@ -53,7 +53,7 @@ relationship(R) :-
     hdeclaration(l(Is)),
     member(lid(L), Is),
     (member(name(N), Is); member(acronym(N), Is)),
-    format('* ~w: [~w](~w.html)~n', [F, N, L]).
+    format('* ~w: [~w](http://softlang.github.io/yas/languages/~w.html)~n', [F, N, L]).
         
 elements(W, L) :-
     findall(R, (
