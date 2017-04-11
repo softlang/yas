@@ -6,7 +6,8 @@
       explanation('A trivial imperative programming language with support for primitive types for integer and Boolean values, but without support for input, output, and procedures.'),
       embeds(el),
       subsetOf(eipl),
-      purpose('Imperative programming')
+      purpose('Imperative programming'),
+      relatesTo('https://en.wikipedia.org/wiki/C_(programming_language)')
   ]),
   r([
       rid(bipl(text)),

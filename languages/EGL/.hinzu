@@ -7,7 +7,8 @@
       supersetOf(bgl),
       purpose('Concrete textual syntax definition'),
       purpose('Concrete syntax definition'),
-      purpose('Language definition')
+      purpose('Language definition'),
+      similarTo('https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form')
   ]),
   r([
       rid(egl(text)),

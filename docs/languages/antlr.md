@@ -1,5 +1,9 @@
 # ANTLR (Another Tool for Language Recognition)
 The ANTLR tool and language for parsing and processing string languages.
+## Language purposes
+* Parser description
+## Language relationships
+* sameAs: [http://www.antlr.org/](http://www.antlr.org/)
 ## Language elements
 * [languages/BNL/ANTLR/BnlBnf.g4](https://github.com/softlang/yas/blob/master/languages/BNL/ANTLR/BnlBnf.g4)
 * [languages/BNL/ANTLR/BnlBnfConversion.g4](https://github.com/softlang/yas/blob/master/languages/BNL/ANTLR/BnlBnfConversion.g4)

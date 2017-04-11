@@ -1,5 +1,12 @@
 # EGL (Extended Grammar Language)
 A simple extension of the BNF-like grammar notation BGL to support EBNF-like constructs for optional and repeating phrases.
+## Language purposes
+* Concrete textual syntax definition
+* Concrete syntax definition
+* Language definition
+## Language relationships
+* supersetOf: [BGL](languages/bgl.html)
+* similarTo: [https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form)
 ## Language elements
 * [languages/BFPL/cs.egl](https://github.com/softlang/yas/blob/master/languages/BFPL/cs.egl)
 * [languages/BFPL/ls.egl](https://github.com/softlang/yas/blob/master/languages/BFPL/ls.egl)

@@ -1,5 +1,8 @@
 # Haskell
 A standardized, general-purpose purely functional programming language, with non-strict semantics and strong static typing.
+## Language purposes
+_None_## Language relationships
+* sameAs: [https://en.wikipedia.org/wiki/Haskell_(programming_language)](https://en.wikipedia.org/wiki/Haskell_(programming_language))
 ## Language elements
 * [languages/BAL/Haskell/Language/BAL/Assembler.hs](../../languages/BAL/Haskell/Language/BAL/Assembler.hs)
 * [languages/BAL/Haskell/Language/BAL/Sample.hs](../../languages/BAL/Haskell/Language/BAL/Sample.hs)

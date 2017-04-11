@@ -1,5 +1,8 @@
 # Markdown
 A markup-based documentation language.
+## Language purposes
+_None_## Language relationships
+* sameAs: [https://en.wikipedia.org/wiki/Markdown](https://en.wikipedia.org/wiki/Markdown)
 ## Language elements
 * [languages/ANTLR/README.md](https://github.com/softlang/yas/blob/master/languages/ANTLR/README.md)
 * [docs/languages/antlr.md](https://github.com/softlang/yas/blob/master/docs/languages/antlr.md)

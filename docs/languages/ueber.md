@@ -1,5 +1,10 @@
 # Ueber
 A megamodeling language used for build management and regression testing in the YAS repository.
+## Language purposes
+* Megamodeling
+* Build management
+* Regression testing
+## Language relationships
 ## Language elements
 * [languages/.ueber](https://github.com/softlang/yas/blob/master/languages/.ueber)
 * [languages/ANTLR/.ueber](https://github.com/softlang/yas/blob/master/languages/ANTLR/.ueber)

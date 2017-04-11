@@ -1,5 +1,8 @@
 # TBL (Tree-based Buddy Language)
 A trivial ontology-oriented language for representing collections of persons and their buddy relationships with a tree-based abstract syntax.
+## Language purposes
+_None_## Language relationships
+* variationOf: [GBL](languages/gbl.html)
 ## Language elements
 * [languages/TBL/samples/empty.tbl](https://github.com/softlang/yas/blob/master/languages/TBL/samples/empty.tbl)
 * [languages/TBL/samples/notOk1.tbl](https://github.com/softlang/yas/blob/master/languages/TBL/samples/notOk1.tbl)

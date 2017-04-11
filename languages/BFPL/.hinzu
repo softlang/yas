@@ -6,7 +6,8 @@
   explanation('A trivial first-order functional programming language with support for primitive types for integer and Boolean values, but without support for algebraic datatypes.'),
       embeds(el),
       subsetOf(efpl),
-      purpose('Functional programming')
+      purpose('Functional programming'),
+      relatesTo('https://en.wikipedia.org/wiki/Haskell_(programming_language)')
   ]),
   r([
       rid(bfpl(text)),

@@ -1,5 +1,9 @@
 # EIPL (Extended Imperative Programming Language)
 A small extension of the trivial imperative programming language BIPL to provide unparameterized procedures in nested scopes.
+## Language purposes
+* Imperative programming
+## Language relationships
+* supersetOf: [BIPL](languages/bipl.html)
 ## Language elements
 * [languages/EIPL/sample.eipl](../../languages/EIPL/sample.eipl)
 * [languages/EIPL/tests/div.eipl](../../languages/EIPL/tests/div.eipl)

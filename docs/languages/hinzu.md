@@ -1,5 +1,9 @@
 # Hinzu
 A trivial metadata/annotation language designed to facilitate basic documentation and semantic annotation of languages in the YAS repository.
+## Language purposes
+* Metadata definition
+* Megamodeling
+## Language relationships
 ## Language elements
 * [languages/ANTLR/.hinzu](https://github.com/softlang/yas/blob/master/languages/ANTLR/.hinzu)
 * [languages/ASL/.hinzu](https://github.com/softlang/yas/blob/master/languages/ASL/.hinzu)

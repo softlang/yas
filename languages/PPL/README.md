@@ -1,5 +1,7 @@
 # PPL (Pretty Printing Language)
 A target language for pretty printing which provides different composition operators for textboxes.
+## Language purposes
+_None_## Language relationships
 ## Language elements
 * [languages/DGL/sample.ppl](../../languages/DGL/sample.ppl)
 * [languages/FSML/Prolog/dot/sample.ppl](../../languages/FSML/Prolog/dot/sample.ppl)
