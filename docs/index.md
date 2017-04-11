@@ -10,6 +10,7 @@
 * [Prolog](languages/prolog.html): A general-purpose logic programming language associated with artificial intelligence and computational linguistics.
 * [Python](languages/python.html): An interpreter-based multi-paradigm general purpose programming language with a dynamic type system
 * [XML](languages/xml.html): A markup-based interchange format.
+
 # Fabricated languages
 * [ASL](languages/asl.html): A simple language for algebraic specification.
 * [BAL](languages/bal.html): A trivial stack- and address-based assembly language; memory access and jumps use symbolic names rather than ints.
