@@ -198,7 +198,7 @@ hinzu(HinzuTerm) :-
     elementOf('.hinzu', hinzu(term)),
     elementOf('README.md', markdown(text)),
     elementOf(DocsFile, markdown(text)),
-    mapsTo(publishLanguage, ['.hinzu'], ['README.md', DocsFile])
+    mapsTo(languageToMd, ['.hinzu'], ['README.md', DocsFile])
   ]).
 
 % Error handling for Hinzu

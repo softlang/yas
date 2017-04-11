@@ -1,6 +1,4 @@
-% BEGIN ...
-:- module(hinzuLanguage, []).
-% END ...
+:- module(hinzuLanguageToMd, []).
 
 main(Hinzu, Md1, Md2) :-
   member(l(Is), Hinzu),
@@ -31,10 +29,10 @@ elements(W, L) :-
 		udeclaration(elementOf(FN, R)),
 		member(R, Rs)),
 	    FNs),
-    maplist(fnitem(W), FNs).
+    maplist(element(W), FNs).
 
-fnitem(repo, FN) :-
+element(repo, FN) :-
     format('* [~w](../../~w)~n', [FN, FN]).
 
-fnitem(pages, FN) :-
+element(pages, FN) :-
     format('* [~w](https://github.com/softlang/yas/blob/master/~w)~n', [FN, FN]).
