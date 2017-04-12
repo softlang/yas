@@ -9,5 +9,5 @@ A SQL DDL-like data definition language for relational schemas.
 ## Language relationships
 
 ## Language elements
-* [../../languages/FRL/dd.ddl](docs/files/languages-FRL-dd.ddl.md)
-* [../../languages/FRL/FRL2/dd.ddl](docs/files/languages-FRL-FRL2-dd.ddl.md)
+* [languages/FRL/dd.ddl](../../docs/files/languages-FRL-dd.ddl.md)
+* [languages/FRL/FRL2/dd.ddl](../../docs/files/languages-FRL-FRL2-dd.ddl.md)

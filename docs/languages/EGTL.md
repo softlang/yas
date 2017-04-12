@@ -10,4 +10,4 @@ A trivial transformation language for grammars.
 * dependsOn: [EGL](http://softlang.github.io/yas/languages/EGL.html)
 
 ## Language elements
-* [../../languages/EGTL/samples/bgl2egl.egtl](docs/files/languages-EGTL-samples-bgl2egl.egtl.md)
+* [languages/EGTL/samples/bgl2egl.egtl](../../docs/files/languages-EGTL-samples-bgl2egl.egtl.md)

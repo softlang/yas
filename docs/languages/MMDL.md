@@ -9,5 +9,5 @@ A representation format for metamodel-based term differences.
 ## Language relationships
 
 ## Language elements
-* [../../languages/FRL/mmdiff.term](docs/files/languages-FRL-mmdiff.term.md)
-* [../../languages/FRL/mminvdiff.term](docs/files/languages-FRL-mminvdiff.term.md)
+* [languages/FRL/mmdiff.term](../../docs/files/languages-FRL-mmdiff.term.md)
+* [languages/FRL/mminvdiff.term](../../docs/files/languages-FRL-mminvdiff.term.md)

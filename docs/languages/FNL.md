@@ -10,4 +10,4 @@ _None_
 * variationOf: [FRL](http://softlang.github.io/yas/languages/FRL.html)
 
 ## Language elements
-* [../../languages/FNL/small-family.graph](docs/files/languages-FNL-small-family.graph.md)
+* [languages/FNL/small-family.graph](../../docs/files/languages-FNL-small-family.graph.md)

@@ -10,6 +10,6 @@ A small extension of the trivial functional programming language BFPL to provide
 * supersetOf: [BFPL](http://softlang.github.io/yas/languages/BFPL.html)
 
 ## Language elements
-* [../../languages/EFPL/tests/sample-past-inference.efpl](docs/files/languages-EFPL-tests-sample-past-inference.efpl.md)
-* [../../languages/EFPL/tests/sample-past-specialization.efpl](docs/files/languages-EFPL-tests-sample-past-specialization.efpl.md)
-* [../../languages/EFPL/tests/sample.efpl](docs/files/languages-EFPL-tests-sample.efpl.md)
+* [languages/EFPL/tests/sample-past-inference.efpl](../../docs/files/languages-EFPL-tests-sample-past-inference.efpl.md)
+* [languages/EFPL/tests/sample-past-specialization.efpl](../../docs/files/languages-EFPL-tests-sample-past-specialization.efpl.md)
+* [languages/EFPL/tests/sample.efpl](../../docs/files/languages-EFPL-tests-sample.efpl.md)

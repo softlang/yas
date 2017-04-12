@@ -6,7 +6,7 @@
 main :-
     index,
     languages,
-    trace,
     files.
+
 ...
 ```

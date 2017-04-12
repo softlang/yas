@@ -10,4 +10,4 @@ _None_
 * dependsOn: [MML](http://softlang.github.io/yas/languages/MML.html)
 
 ## Language elements
-* [../../languages/GBL/tblToGbl.term](docs/files/languages-GBL-tblToGbl.term.md)
+* [languages/GBL/tblToGbl.term](../../docs/files/languages-GBL-tblToGbl.term.md)
