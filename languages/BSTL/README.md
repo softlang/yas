@@ -1,5 +1,6 @@
 # Language _BSTL (Basic Signature Transformation Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/BSTL)**
+**[GitHub](https://github.com/softlang/yas/blob/master/languages/BSTL)**
+
 A trivial transformation language for coupled transformations on BSL signatures and conformant terms.
 
 ## Language purposes

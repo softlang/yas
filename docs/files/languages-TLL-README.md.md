@@ -2,7 +2,8 @@
 **[GitHub](https://github.com/softlang/yas/blob/master/languages/TLL/README.md)**
 ```
 # Language _TLL (Typed Lambda Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/TLL)**
+**[GitHub](https://github.com/softlang/yas/blob/master/languages/TLL)**
+
 An applied, typed lambda calculus.
 
 ## Language purposes

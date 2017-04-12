@@ -1,5 +1,6 @@
 # Language _ASL (Algebraic Specification Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/ASL)**
+**[GitHub](https://github.com/softlang/yas/blob/master/languages/ASL)**
+
 A simple language for algebraic specification.
 
 ## Language purposes

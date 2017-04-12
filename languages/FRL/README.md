@@ -1,5 +1,6 @@
 # Language _FRL (Family by Reference Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/FRL)**
+**[GitHub](https://github.com/softlang/yas/blob/master/languages/FRL)**
+
 A trivial data model for representing families as collections of persons with various attributes; persons are identified by reference as opposed to name.
 
 ## Language purposes

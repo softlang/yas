@@ -1,5 +1,6 @@
 # Language _BGL (Basic Grammar Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/BGL)**
+**[GitHub](https://github.com/softlang/yas/blob/master/languages/BGL)**
+
 A BNF-like notation for context-free grammars; rules (productions) are labeled.
 
 ## Language purposes
@@ -12,6 +13,6 @@ A BNF-like notation for context-free grammars; rules (productions) are labeled.
 * similarTo: [https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form)
 
 ## Language elements
-* [languages/BNL/cs.bgl](docs/files/languages-BNL-cs.bgl.md)
-* [languages/BTL/cs.bgl](docs/files/languages-BTL-cs.bgl.md)
-* [samples/obsolete/expr/cs.bgl](docs/files/samples-obsolete-expr-cs.bgl.md)
+* [../../languages/BNL/cs.bgl](docs/files/languages-BNL-cs.bgl.md)
+* [../../languages/BTL/cs.bgl](docs/files/languages-BTL-cs.bgl.md)
+* [../../samples/obsolete/expr/cs.bgl](docs/files/samples-obsolete-expr-cs.bgl.md)

@@ -1,5 +1,6 @@
 # Language _MML (MetaModeling Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/MML)**
+**[GitHub](https://github.com/softlang/yas/blob/master/languages/MML)**
+
 A basic metamodeling language for graph-based abstract syntax.
 
 ## Language purposes

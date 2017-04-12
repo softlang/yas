@@ -2,7 +2,8 @@
 **[GitHub](https://github.com/softlang/yas/blob/master/languages/MMTL/README.md)**
 ```
 # Language _MMTL (MetaModel Transformation Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/MMTL)**
+**[GitHub](https://github.com/softlang/yas/blob/master/languages/MMTL)**
+
 A trivial transformation language for metamodels.
 
 ## Language purposes

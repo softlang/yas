@@ -1,5 +1,6 @@
 # Language _PPL (Pretty Printing Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/PPL)**
+**[GitHub](https://github.com/softlang/yas/blob/master/languages/PPL)**
+
 A target language for pretty printing which provides different composition operators for textboxes.
 
 ## Language purposes

@@ -2,7 +2,8 @@
 **[GitHub](https://github.com/softlang/yas/blob/master/languages/DOT/README.md)**
 ```
 # Language _DOT_
-**[GitHub](https://github.com/softlang/yas/blob/master/DOT)**
+**[GitHub](https://github.com/softlang/yas/blob/master/languages/DOT)**
+
 The input language of the Graphviz tool for describing and rendering all kinds of graphs.
 
 ## Language purposes

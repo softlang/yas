@@ -1,5 +1,6 @@
 # Language _Text_
-**[GitHub](https://github.com/softlang/yas/blob/master/Text)**
+**[GitHub](https://github.com/softlang/yas/blob/master/languages/Text)**
+
 Text as a basic representation format used by the YAS repository.
 
 ## Language purposes

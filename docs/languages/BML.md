@@ -1,5 +1,6 @@
 # Language _BML (Basic Machine Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/BML)**
+**[GitHub](https://github.com/softlang/yas/blob/master/languages/BML)**
+
 A trivial stack- and address-based machine language; memory access and jumps use ints rather than symbolic names.
 
 ## Language purposes

@@ -1,5 +1,6 @@
 # Language _DCG_
-**[GitHub](https://github.com/softlang/yas/blob/master/DCG)**
+**[GitHub](https://github.com/softlang/yas/blob/master/languages/DCG)**
+
 A grammatical notation based on logic programming.
 
 ## Language purposes

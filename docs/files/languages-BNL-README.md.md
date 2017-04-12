@@ -2,7 +2,8 @@
 **[GitHub](https://github.com/softlang/yas/blob/master/languages/BNL/README.md)**
 ```
 # Language _BNL (Basic Number Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/BNL)**
+**[GitHub](https://github.com/softlang/yas/blob/master/languages/BNL)**
+
 A trivial language for the representation of binary numbers.
 
 ## Language purposes

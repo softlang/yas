@@ -3,7 +3,6 @@
 main :-
     index,
     languages,
-    trace,
     files.
 
 % --------------------------------------------------
@@ -70,7 +69,7 @@ languagePage(L, W, Md) :-
     member(explanation(X), Is),
     with_output_to(
 	    codes(Md),
-	    format('# Language _~w_~n**[GitHub](https://github.com/softlang/yas/blob/master/~w)**~n~w~n~n## Language purposes~n~@~n## Language relationships~n~@~n## Language elements~n~@', [Q, N, X, purposes(L), relationships(L), elements(W, L)])).
+	    format('# Language _~w_~n**[GitHub](https://github.com/softlang/yas/blob/master/languages/~w)**~n~n~w~n~n## Language purposes~n~@~n## Language relationships~n~@~n## Language elements~n~@', [Q, N, X, purposes(L), relationships(L), elements(W, L)])).
 
 purposes(L) :-
     hdeclaration(l(Is)),
@@ -123,7 +122,7 @@ element(repo, FN) :-
 
 element(pages, FN1) :-
     hinzuToMd:filename(FN1, FN2),
-    format('* [~w](~w)~n', [FN1, FN2]).
+    format('* [../../~w](~w)~n', [FN1, FN2]).
 
 % --------------------------------------------------
 

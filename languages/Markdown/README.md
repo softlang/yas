@@ -1,5 +1,6 @@
 # Language _Markdown_
-**[GitHub](https://github.com/softlang/yas/blob/master/Markdown)**
+**[GitHub](https://github.com/softlang/yas/blob/master/languages/Markdown)**
+
 A markup-based documentation language.
 
 ## Language purposes

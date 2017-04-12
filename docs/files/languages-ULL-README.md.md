@@ -2,7 +2,8 @@
 **[GitHub](https://github.com/softlang/yas/blob/master/languages/ULL/README.md)**
 ```
 # Language _ULL (Untyped Lambda Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/ULL)**
+**[GitHub](https://github.com/softlang/yas/blob/master/languages/ULL)**
+
 An applied, untyped lambda calculus.
 
 ## Language purposes

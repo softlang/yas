@@ -2,7 +2,8 @@
 **[GitHub](https://github.com/softlang/yas/blob/master/languages/MMDL/README.md)**
 ```
 # Language _MMDL (MetaModel Difference Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/MMDL)**
+**[GitHub](https://github.com/softlang/yas/blob/master/languages/MMDL)**
+
 A representation format for metamodel-based term differences.
 
 ## Language purposes
