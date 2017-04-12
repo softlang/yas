@@ -10,3 +10,9 @@ ppGraph(G, S) :-
 ppGraph_(Post, (Id & Dict), B) :-
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Term/graph/as-to-cs.pro',prolog(text))

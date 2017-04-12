@@ -3,13 +3,19 @@
 
 A markup-based documentation language.
 
-## Language purposes
+## Purposes
 _None_
 
-## Language relationships
+## Links
 * sameAs: [https://en.wikipedia.org/wiki/Markdown](https://en.wikipedia.org/wiki/Markdown)
 
-## Language elements
+## Representations
+* markdown(text)
+
+## References
+* membership(markdown(text),succeed,[])
+
+## Elements
 * [languages/ANTLR/README.md](../files/languages-ANTLR-README.md.md)
 * [languages/ASL/README.md](../files/languages-ASL-README.md.md)
 * [languages/ASL/samples/adts/Java/functional/README.md](../files/languages-ASL-samples-adts-Java-functional-README.md.md)

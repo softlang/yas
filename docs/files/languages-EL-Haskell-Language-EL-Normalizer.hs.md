@@ -15,3 +15,9 @@ normalize f e = let e' = pass e in if e==e' then e else normalize f e'
     sub (Binary o e1 e2) = Binary o (pass e1) (pass e2)
     sub e = e
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/EL/Haskell/Language/EL/Normalizer.hs',haskell(text))

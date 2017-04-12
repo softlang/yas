@@ -16,3 +16,9 @@ sampleFsm = [fsml|
         }
 |]
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Language/FSML/QQ/Determinism.hs',haskell(text))

@@ -10,3 +10,9 @@ import Language.BTL.Syntax
 -- Boolean values
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BTL/Haskell/Language/BTL/ValueExpr.hs',haskell(text))

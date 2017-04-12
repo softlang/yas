@@ -10,3 +10,9 @@ parseFilePickily(TextF) :-
   file_name_extension(Base, tree, TreeF),
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Ueber/macros/pickyParse.pro',prolog(text))

@@ -3,3 +3,10 @@
 ```
 2.
 ```
+
+## Languages
+* [Term](../languages/Term.md)
+
+## References
+* elementOf('languages/TBL/samples/small-world.loc',term)
+* mapsTo(loc,['languages/TBL/samples/small-world.tbl'],['languages/TBL/samples/small-world.loc'])

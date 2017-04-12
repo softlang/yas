@@ -10,3 +10,9 @@ addObject(MM1, Id, Key, ClassN, Obj1, Obj3) :-
   graphNf(Obj2, Obj3),
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MML/editing/add-object.pro',prolog(text))

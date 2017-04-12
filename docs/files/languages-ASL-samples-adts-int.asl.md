@@ -10,3 +10,9 @@ constructors
   neg : Nat1 -> Int  
 ...
 ```
+
+## Languages
+* [ASL](../languages/ASL.md)
+
+## References
+* elementOf('languages/ASL/samples/adts/int.asl',asl(text))

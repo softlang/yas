@@ -69,7 +69,11 @@ languagePage(L, W, Md) :-
     member(explanation(X), Is),
     with_output_to(
 	    codes(Md),
-	    format('# Language _~w_~n**[GitHub](https://github.com/softlang/yas/blob/master/languages/~w)**~n~n~w~n~n## Language purposes~n~@~n## Language relationships~n~@~n## Language elements~n~@', [Q, N, X, purposes(L), relationships(L), elements(W, L)])).
+	    format('# Language _~w_~n~@~w~n~n## Purposes~n~@~n## Links~n~@~n## Representations~n~@~n## References~n~@~n## Elements~n~@', [Q, linkToLanguage(W, N), X, purposes(L), linksForLanguage(L), representationsOfLanguage(L), referencesToLanguage(L), elementsOfLanguage(W, L)])).
+
+linkToLanguage(repo, _).
+linkToLanguage(pages, N) :-
+    format('**[GitHub](https://github.com/softlang/yas/blob/master/languages/~w)**~n~n', [N]).
 
 purposes(L) :-
     hdeclaration(l(Is)),
@@ -82,7 +86,7 @@ purposes(L) :-
 purpose(P) :-
     format('* ~w~n', [P]).
 
-relationships(L) :-
+linksForLanguage(L) :-
     hdeclaration(l(Is)),
     member(lid(L), Is),
     findall(R, (
@@ -90,22 +94,53 @@ relationships(L) :-
 		member(R, [sameAs(_), similarTo(_), relatesTo(_), variationOf(_), subsetOf(_), supersetOf(_), embeds(_), dependsOn(_)])
 	    ),
 	    Rs),
-    maplist(hinzuToMd:relationship, Rs).
+    maplist(hinzuToMd:linkForLanguage, Rs).
 
-relationship(R) :-
+linkForLanguage(R) :-
     member(F, [sameAs, similarTo, relatesTo]),
     R =.. [F, U],
     format('* ~w: [~w](~w)~n', [F, U, U]).
 
-relationship(R) :-
+linkForLanguage(R) :-
     member(F, [variationOf, subsetOf, supersetOf, embeds, dependsOn]),
     R =.. [F, L],
     hdeclaration(l(Is)),
     member(lid(L), Is),
     (member(name(N), Is); member(acronym(N), Is)),
     format('* ~w: [~w](http://softlang.github.io/yas/languages/~w.html)~n', [F, N, N]).
-        
-elements(W, L) :-
+
+representationsOfLanguage(L) :-
+    findall(R, (
+		hdeclaration(r(Is)),
+		member(rid(R), Is),
+		member(representationOf(L), Is)
+	    ),
+	    Rs),
+    maplist(hinzuToMd:representationOfLanguage, Rs).
+
+representationOfLanguage(R) :-
+    format('* ~q~n', [R]).
+
+referencesToLanguage(L) :-
+    findall(R, (
+		hdeclaration(r(Is)),
+		member(rid(R), Is),
+		member(representationOf(L), Is)
+	    ),
+	    Rs),
+    findall(D, (
+		udeclaration(D),
+		( D = membership(R, _, _), member(R, Rs)
+		; D = function(_, Rs1, Rs2, _, _), member(R, Rs), (member(R, Rs1); member(R, Rs2) )
+                )
+	    ),
+	    Ds),
+    maplist(hinzuToMd:referenceToLanguage, Ds).
+
+referenceToLanguage(D) :-
+    format('* ~q~n', [D]).
+
+elementsOfLanguage(W, L) :-
     findall(R, (
 		hdeclaration(r(Is)),
 		member(rid(R), Is),
@@ -115,12 +150,12 @@ elements(W, L) :-
 		udeclaration(elementOf(FN, R)),
 		member(R, Rs)),
 	    FNs),
-    maplist(hinzuToMd:element(W), FNs).
+    maplist(hinzuToMd:elementOfLanguage(W), FNs).
 
-element(repo, FN) :-
+elementOfLanguage(repo, FN) :-
     format('* [~w](../../~w)~n', [FN, FN]).
 
-element(pages, FN1) :-
+elementOfLanguage(pages, FN1) :-
     hinzuToMd:relative_filename(FN1, FN2),
     format('* [~w](~w)~n', [FN1, FN2]).
 
@@ -135,7 +170,7 @@ file(FN1) :-
     absolute_filename(FN1, FN2),
     with_output_to(
 	  codes(Md),
-	  format('# File _~w_~n**[GitHub](https://github.com/softlang/yas/blob/master/~w)**~n```~n~@```~n', [FN1, FN1, trimLines(Lines)])),
+	  format('# File _~w_~n**[GitHub](https://github.com/softlang/yas/blob/master/~w)**~n```~n~@```~n~n## Languages~n~@~n## References~n~@', [FN1, FN1, trimLines(Lines), languagesOfFile(FN1), referencesToFile(FN1)])),
     writeTextFile(FN2, Md).
 
 trimLines(Lines) :-
@@ -152,6 +187,39 @@ trimLines(Lines) :-
 
 line(Line) :-
     format('~s~n', [Line]).
+
+languagesOfFile(FN) :-
+    findall(L, (
+		udeclaration(elementOf(FN, R)),
+		hdeclaration(r(Is)),
+		member(rid(R), Is),
+		member(representationOf(L), Is)
+	    ),
+	    Ls),
+    maplist(hinzuToMd:languageOfFile, Ls).
+
+languageOfFile(L) :-
+    hdeclaration(l(Is)),
+    member(lid(L), Is),
+    (member(name(N), Is); member(acronym(N), Is)),
+    format('* [~w](../languages/~w.md)~n', [N, N]).
+
+referencesToFile(FN) :-
+    findall(D, (
+		udeclaration(D),
+		( D = elementOf(FN, _)
+		; D = membership(_, _, FNs), member(FN, FNs)
+		; D = mapsTo(_, FNs1, FNs2), ( member(FN, FNs1); member(FN, FNs2) )
+		; D = function(_, _, _, _, FNs), member(FN, FNs)
+                )
+	    ),
+	    Ds),
+    maplist(hinzuToMd:referenceToFile, Ds).
+
+referenceToFile(D) :-
+    format('* ~q~n', [D]).
+
+% --------------------------------------------------
 
 absolute_filename(FN1, FN3) :-
     basename(FN1, FN2),

@@ -10,3 +10,9 @@ btlScanner([C|String], L) :-
 btlScanner(String1, [Token|L]) :-
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BTL/scanner.pro',prolog(text))

@@ -14,3 +14,9 @@ states fsm =
     getId s : map getTarget (getTransitions s))
       (getStates fsm)
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Language/FSML/Rename/Condition.hs',haskell(text))

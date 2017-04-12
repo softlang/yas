@@ -10,3 +10,9 @@ def generateC(fsm):
         # Initialize data structures
 ...
 ```
+
+## Languages
+* [Python](../languages/Python.md)
+
+## References
+* elementOf('languages/FSML/Python/FsmlCGenerator.py',python(text))

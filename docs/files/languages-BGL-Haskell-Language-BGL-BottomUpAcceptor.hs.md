@@ -10,3 +10,9 @@ accept :: [Rule] -> String -> Bool
 accept g = steps g [] -- Begin with empty stack
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BGL/Haskell/Language/BGL/BottomUpAcceptor.hs',haskell(text))

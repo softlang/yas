@@ -10,3 +10,9 @@
   (Rules, Symbols, ITrees) ~> ETrees.
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BGL/astToCst.pro',prolog(text))

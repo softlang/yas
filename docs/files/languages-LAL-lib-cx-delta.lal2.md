@@ -10,3 +10,11 @@ function applyDiff : DiffL # L -> L
 function invDiff : DiffL -> DiffL
 ...
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/cx/delta.lal2',lal(text))
+* mapsTo(pp,['languages/LAL/lib/cx/delta.term2'],['languages/LAL/lib/cx/delta.lal2'])
+* mapsTo(parse,['languages/LAL/lib/cx/delta.lal2'],['languages/LAL/lib/cx/delta.term2'])

@@ -10,3 +10,10 @@ funtype : simpletype { '->' simpletype }* ;
 main : 'main' '=' 'print' '$' expr ;
 ...
 ```
+
+## Languages
+* [EGL](../languages/EGL.md)
+
+## References
+* elementOf('languages/BFPL/cs.egl',egl(text))
+* mapsTo(parse,['languages/BFPL/cs.egl'],['languages/BFPL/cs.term'])

@@ -8,3 +8,10 @@
   r = r * x;
 }
 ```
+
+## Languages
+* [BIPL](../languages/BIPL.md)
+
+## References
+* elementOf('languages/BIPL/samples/exp-sliced.bipl',bipl(text))
+* mapsTo(parse,['languages/BIPL/samples/exp-sliced.bipl'],['languages/BIPL/samples/exp-sliced.term'])

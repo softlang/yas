@@ -14,3 +14,9 @@ eslSyntax(Lang) :-
     membership(TermLang, eslLanguage, ['as.term'])
   ]).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Ueber/macros/esl.pro',prolog(text))

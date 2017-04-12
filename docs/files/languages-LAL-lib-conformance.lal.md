@@ -7,3 +7,10 @@ constant defL : DefL // The language definition
 relation conformsTo : Any # DefL
 axiom { forall x <- Any. x <- L <=> conformsTo(x, defL) }
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/conformance.lal',lal(text))
+* mapsTo(parse,['languages/LAL/lib/conformance.lal'],['languages/LAL/lib/conformance.term'])

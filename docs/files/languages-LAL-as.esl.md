@@ -10,3 +10,10 @@ type mname = name+ ;
 type name = string ;
 ...
 ```
+
+## Languages
+* [ESL](../languages/ESL.md)
+
+## References
+* elementOf('languages/LAL/as.esl',esl(text))
+* mapsTo(parse,['languages/LAL/as.esl'],['languages/LAL/as.term'])

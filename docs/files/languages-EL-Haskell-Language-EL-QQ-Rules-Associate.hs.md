@@ -12,3 +12,9 @@ associate [el| ($x + $y) + $z |] = Just [el| $x + ($y + $z) |]
 associate [el| ($x * $y) * $z |] = Just [el| $x * ($y * $z) |]
 associate _ = Nothing
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/EL/Haskell/Language/EL/QQ/Rules/Associate.hs',haskell(text))

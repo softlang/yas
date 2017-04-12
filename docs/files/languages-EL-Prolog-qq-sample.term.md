@@ -3,3 +3,9 @@
 ```
 binary(add,metavar('X'),intconst(0)).
 ```
+
+## Languages
+
+## References
+* elementOf('languages/EL/Prolog/qq/sample.term',elqq(term))
+* mapsTo(parse,['languages/EL/Prolog/qq/sample.elqq'],['languages/EL/Prolog/qq/sample.term'])

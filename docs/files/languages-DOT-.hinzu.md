@@ -10,3 +10,9 @@
       purpose('Graph visualization')
 ...
 ```
+
+## Languages
+* [Hinzu](../languages/Hinzu.md)
+
+## References
+* elementOf('languages/DOT/.hinzu',hinzu(term))

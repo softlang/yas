@@ -15,3 +15,9 @@
   function(translate, [lal(term), lal(config(term))], [ueber(term)], lalUeber:translate, [])
 ].
 ```
+
+## Languages
+* [Ueber](../languages/Ueber.md)
+
+## References
+* elementOf('languages/LAL/.ueber',ueber(term))

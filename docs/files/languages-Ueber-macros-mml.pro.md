@@ -16,3 +16,9 @@ mmlSyntax(Lang) :-
     membership(GraphLang, mmlChecker, ['mm.graph'])
   ]).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Ueber/macros/mml.pro',prolog(text))

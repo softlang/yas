@@ -10,3 +10,9 @@
       supersetOf(bfpl),
 ...
 ```
+
+## Languages
+* [Hinzu](../languages/Hinzu.md)
+
+## References
+* elementOf('languages/EFPL/.hinzu',hinzu(term))

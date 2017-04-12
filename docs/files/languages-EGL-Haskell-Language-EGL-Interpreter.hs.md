@@ -10,3 +10,9 @@ import Language.EGL.Lexer
 import Text.Parsec
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/EGL/Haskell/Language/EGL/Interpreter.hs',haskell(text))

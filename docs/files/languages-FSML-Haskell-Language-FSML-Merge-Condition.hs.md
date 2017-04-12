@@ -10,3 +10,9 @@ import Data.List (nub)
 ok :: Fsm -> Bool
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Language/FSML/Merge/Condition.hs',haskell(text))

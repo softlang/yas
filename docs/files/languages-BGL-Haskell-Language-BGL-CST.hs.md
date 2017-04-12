@@ -9,3 +9,9 @@ import Data.Tree
 type Info = Either Char Rule
 type CST = Tree Info
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BGL/Haskell/Language/BGL/CST.hs',haskell(text))

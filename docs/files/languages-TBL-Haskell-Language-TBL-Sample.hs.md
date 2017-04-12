@@ -11,3 +11,9 @@ smallWorld = World [
     Person { getName = "bill", getBuddy = Just "joe" }
   ]
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/TBL/Haskell/Language/TBL/Sample.hs',haskell(text))

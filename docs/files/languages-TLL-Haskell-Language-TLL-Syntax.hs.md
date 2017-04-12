@@ -10,3 +10,9 @@ data Expr
   -- BTL (Basic TAPL Language)
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/TLL/Haskell/Language/TLL/Syntax.hs',haskell(text))

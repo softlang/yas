@@ -10,3 +10,10 @@ main : 'main' '=' 'print' '$' expr ;
 
 ...
 ```
+
+## Languages
+* [EGL](../languages/EGL.md)
+
+## References
+* elementOf('languages/EFPL/cs.egl',egl(text))
+* mapsTo(parse,['languages/EFPL/cs.egl'],['languages/EFPL/cs.term'])

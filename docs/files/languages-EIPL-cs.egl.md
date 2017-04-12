@@ -10,3 +10,10 @@ scope : 'begin' { decl }* stmt 'end' ;
 [var] decl : 'var' name '=' expr ';' ;
 ...
 ```
+
+## Languages
+* [EGL](../languages/EGL.md)
+
+## References
+* elementOf('languages/EIPL/cs.egl',egl(text))
+* mapsTo(parse,['languages/EIPL/cs.egl'],['languages/EIPL/cs.term'])

@@ -12,3 +12,9 @@ smallWorld = World [p1, p2]
     p1 = Person { getName = "joe", getBuddy = Just p2 }
     p2 = Person { getName = "bill", getBuddy = Just p1 }
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/GBL/Haskell/Language/GBL/V2/Sample.hs',haskell(text))

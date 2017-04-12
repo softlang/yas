@@ -15,3 +15,10 @@ class transition {
 datatype boolean ;
 datatype string ;
 ```
+
+## Languages
+* [MML](../languages/MML.md)
+
+## References
+* elementOf('languages/FSML/mm.mml',mml(text))
+* mapsTo(parse,['languages/FSML/mm.mml'],['languages/FSML/mm.term'])

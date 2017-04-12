@@ -10,3 +10,9 @@ parse(G, I, T) :- G = [(_, N, _)|_], tree(G, n(N), T, I, []).
 % Consume terminal at top of stack from input
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BGL/bglParseTopDown.pro',prolog(text))

@@ -10,3 +10,9 @@ main(Scope) :- scope(Scope, 0, [], []).
 
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/EIPL/Prolog/typing.pro',prolog(text))

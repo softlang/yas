@@ -3,13 +3,19 @@
 
 An interpreter-based multi-paradigm general purpose programming language with a dynamic type system
 
-## Language purposes
-_None_
+## Purposes
+* Scripting
 
-## Language relationships
+## Links
 * sameAs: [https://en.wikipedia.org/wiki/Python_(programming_language)](https://en.wikipedia.org/wiki/Python_(programming_language))
 
-## Language elements
+## Representations
+* python(text)
+
+## References
+* membership(python(text),succeed,[])
+
+## Elements
 * [languages/FSML/Python/FsmlAcceptor.py](../files/languages-FSML-Python-FsmlAcceptor.py.md)
 * [languages/FSML/Python/FsmlCGenerator.py](../files/languages-FSML-Python-FsmlCGenerator.py.md)
 * [languages/FSML/Python/FsmlChecker.py](../files/languages-FSML-Python-FsmlChecker.py.md)

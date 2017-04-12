@@ -10,3 +10,9 @@ import Data.List (nub)
 pre, post :: String -> String -> Stmt -> Bool
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BIPL/Haskell/Language/BIPL/Rename/Condition.hs',haskell(text))

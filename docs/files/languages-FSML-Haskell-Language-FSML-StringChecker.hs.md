@@ -10,3 +10,9 @@ import Data.Set (fromList, toList, union)
 import qualified Data.Set as S
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Language/FSML/StringChecker.hs',haskell(text))

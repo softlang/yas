@@ -8,3 +8,9 @@
 value(intval(_)).
 value(boolval(_)).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BFPL/Prolog/big-step/value.pro',prolog(text))

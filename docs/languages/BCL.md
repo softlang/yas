@@ -3,9 +3,15 @@
 
 A representation format for concrete syntax trees (CSTs) for BNF-like grammar notation as of BGL (Basic Grammar Language).
 
-## Language purposes
+## Purposes
 * Parse-tree representation
 
-## Language relationships
+## Links
 
-## Language elements
+## Representations
+* bcl(term)
+
+## References
+* membership(bcl(term),eslLanguage,['languages/BCL/as.term'])
+
+## Elements

@@ -10,3 +10,9 @@ okProg(P) :- okProg(P, _).
 okProg((Fs1, E), (Fs2, E)) :-
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/EFPL/Prolog/efplTyping.pro',prolog(text))

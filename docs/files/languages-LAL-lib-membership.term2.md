@@ -3,3 +3,14 @@
 ```
 [sort('Any',[]),sort('L',['Any']),constant(pos,ref('Any')),constant(neg,ref('Any')),axiom([member],element(var(pos),ref('L'))),axiom([notMember],not(element(var(neg),ref('L'))))].
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/membership.term2',lal(term))
+* mapsTo(transform,['languages/LAL/lib/membership.term'],['languages/LAL/lib/membership.term2'])
+* mapsTo(pp,['languages/LAL/lib/membership.term2'],['languages/LAL/lib/membership.lal2'])
+* mapsTo(parse,['languages/LAL/lib/membership.lal2'],['languages/LAL/lib/membership.term2'])
+* elementOf('languages/LAL/lib/membership.term2',ok(lal(term)))

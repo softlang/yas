@@ -10,3 +10,9 @@ add = Fix (Lambda "f" (Lambda "n" (Lambda "m"
                (Var "m")
                (Succ (Apply (Apply (Var "f") (Pred (Var "n"))) (Var "m"))))))) 
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/ULL/Haskell/Language/ULL/Sample.hs',haskell(text))

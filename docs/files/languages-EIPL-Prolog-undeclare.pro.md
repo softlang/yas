@@ -15,3 +15,9 @@ undeclare(var(X, _), Ps, Ps, Sto1, Sto2) :-
 undeclare(proc(X, _), Ps1, Ps2, Sto, Sto) :-
   remove1st(X, Ps1, Ps2).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/EIPL/Prolog/undeclare.pro',prolog(text))

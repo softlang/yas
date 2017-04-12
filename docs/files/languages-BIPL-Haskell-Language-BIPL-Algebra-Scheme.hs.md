@@ -10,3 +10,9 @@ import Language.BIPL.Algebra.Signature
 interpret :: Alg sto val -> Stmt -> sto -> sto
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BIPL/Haskell/Language/BIPL/Algebra/Scheme.hs',haskell(text))

@@ -10,3 +10,10 @@ symbol add : rule -> trafo ;
 symbol remove : rule -> trafo ;
 ...
 ```
+
+## Languages
+* [ESL](../languages/ESL.md)
+
+## References
+* elementOf('languages/EGTL/as.esl',esl(text))
+* mapsTo(parse,['languages/EGTL/as.esl'],['languages/EGTL/as.term'])

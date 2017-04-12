@@ -10,3 +10,9 @@
 % Separator lists for module names
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/LAL/lalAbstract.pro',prolog(text))

@@ -10,3 +10,9 @@ step(P, if(E1a, E2, E3), if(E1b, E2, E3)) :-
   step(P, E1a, E1b).
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BFPL/Prolog/small-step/step.pro',prolog(text))

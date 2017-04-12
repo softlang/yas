@@ -10,3 +10,9 @@ true, false, zero :: Maybe Expr
 true = Just TRUE
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BTL/Haskell/Language/BTL/SmartSyntax.hs',haskell(text))

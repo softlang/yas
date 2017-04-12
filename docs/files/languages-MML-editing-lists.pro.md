@@ -10,3 +10,9 @@ classesOfMetamodel(MM, CNames) :-
       lookup(class, Class, class),
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MML/editing/lists.pro',prolog(text))

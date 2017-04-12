@@ -10,3 +10,9 @@ import qualified Language.BTL.Universal.Term
 import Language.BTL.Interpreter as AdHoc
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BTL/Haskell/Main.hs',haskell(text))

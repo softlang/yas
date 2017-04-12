@@ -12,3 +12,9 @@ public interface FsmlObservation {
 	public ActionStatePair makeTransition(String state, String event);
 }
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/FSML/Java/org/softlang/fsml/FsmlObservation.java',java(text))

@@ -2,3 +2,10 @@
 **[GitHub](https://github.com/softlang/yas/blob/master/languages/BNL/EGL/ls.egl)**
 ```
 ```
+
+## Languages
+* [EGL](../languages/EGL.md)
+
+## References
+* elementOf('languages/BNL/EGL/ls.egl',egl(text))
+* mapsTo(parse,['languages/BNL/EGL/ls.egl'],['languages/BNL/EGL/ls.term'])

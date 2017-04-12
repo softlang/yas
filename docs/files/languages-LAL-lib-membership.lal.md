@@ -6,3 +6,10 @@ constant pos, neg : Any // Candidate elements
 axiom member { pos <- L } // A member
 axiom notMember { ~ (neg <- L) } // A non-member
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/membership.lal',lal(text))
+* mapsTo(parse,['languages/LAL/lib/membership.lal'],['languages/LAL/lib/membership.term'])

@@ -9,3 +9,9 @@
 	<bnl:bit><bnl:zero/></bnl:bit>
 </bnl:number>
 ```
+
+## Languages
+* [XML](../languages/XML.md)
+
+## References
+* elementOf('languages/BNL/XML/sample.xml',xml)

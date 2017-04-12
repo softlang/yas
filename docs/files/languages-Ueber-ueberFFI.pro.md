@@ -10,3 +10,9 @@
 ffi_language(java).
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Ueber/ueberFFI.pro',prolog(text))

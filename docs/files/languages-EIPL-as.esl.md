@@ -10,3 +10,10 @@ symbol proc : string # stmt -> decl ;
 
 ...
 ```
+
+## Languages
+* [ESL](../languages/ESL.md)
+
+## References
+* elementOf('languages/EIPL/as.esl',esl(text))
+* mapsTo(parse,['languages/EIPL/as.esl'],['languages/EIPL/as.term'])

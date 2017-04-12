@@ -16,3 +16,9 @@ evaluate(binary(O, E1, E2), Sto, V0) :-
   evaluate(E2, Sto, V2),
   opVal(O, V1, V2, V0).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BIPL/Prolog/big-step/evaluate.pro',prolog(text))

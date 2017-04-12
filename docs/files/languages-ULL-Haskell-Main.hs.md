@@ -13,3 +13,9 @@ main = do
   print $ r
   print $ maybe undefined toInt r
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/ULL/Haskell/Main.hs',haskell(text))

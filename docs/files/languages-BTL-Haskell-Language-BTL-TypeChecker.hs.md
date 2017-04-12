@@ -10,3 +10,9 @@ import Control.Monad (guard)
 -- Types of expressions
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BTL/Haskell/Language/BTL/TypeChecker.hs',haskell(text))

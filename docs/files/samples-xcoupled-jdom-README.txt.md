@@ -10,3 +10,9 @@ Please see the JDOM web site at http://jdom.org/.
 How to use JDOM
 ...
 ```
+
+## Languages
+* [Text](../languages/Text.md)
+
+## References
+* elementOf('samples/xcoupled/jdom/README.txt',text)

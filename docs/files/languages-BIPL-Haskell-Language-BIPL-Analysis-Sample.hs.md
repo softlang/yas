@@ -10,3 +10,9 @@ import Data.Map
 factorialV1 :: Stmt
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BIPL/Haskell/Language/BIPL/Analysis/Sample.hs',haskell(text))

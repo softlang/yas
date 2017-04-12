@@ -16,3 +16,9 @@ processLal(TextF) :-
     elementOf(TermF2, ok(lal(term)))
   ]).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Ueber/macros/lal.pro',prolog(text))

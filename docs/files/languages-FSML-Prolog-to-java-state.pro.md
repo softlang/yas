@@ -12,3 +12,9 @@ statesOfFsm(Fsm, Text) :-
   % Render enum type
   ppJavaDecl(enum(public, 'State', Ids), Text).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/FSML/Prolog/to-java/state.pro',prolog(text))

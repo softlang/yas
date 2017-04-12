@@ -10,3 +10,10 @@ symbol cons : diff # diffl -> diffl ;
 symbol add : term # diffl -> diffl ;
 symbol sub : term # diffl -> diffl ;
 ```
+
+## Languages
+* [ESL](../languages/ESL.md)
+
+## References
+* elementOf('languages/TDL/as.esl',esl(text))
+* mapsTo(parse,['languages/TDL/as.esl'],['languages/TDL/as.term'])

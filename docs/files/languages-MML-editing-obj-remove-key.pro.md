@@ -16,3 +16,9 @@ removeKey_(P, Key, R, O1, O2) :-
   apply(P, [R, O1]),
   remove(Key, O1, O2).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MML/editing/obj-remove-key.pro',prolog(text))

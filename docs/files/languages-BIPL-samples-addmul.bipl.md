@@ -6,3 +6,10 @@
   x = 1*2+3;
 }
 ```
+
+## Languages
+* [BIPL](../languages/BIPL.md)
+
+## References
+* elementOf('languages/BIPL/samples/addmul.bipl',bipl(text))
+* mapsTo(parse,['languages/BIPL/samples/addmul.bipl'],['languages/BIPL/samples/addmul.term'])

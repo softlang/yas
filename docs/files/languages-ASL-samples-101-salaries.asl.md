@@ -10,3 +10,9 @@ function addSalary : Salary x Salary -> Salary
 
 ...
 ```
+
+## Languages
+* [ASL](../languages/ASL.md)
+
+## References
+* elementOf('languages/ASL/samples/101/salaries.asl',asl(text))

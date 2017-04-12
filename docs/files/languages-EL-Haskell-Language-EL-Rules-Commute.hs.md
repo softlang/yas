@@ -10,3 +10,9 @@ commute (Binary Add x y) = Just $ Binary Add y x
 commute (Binary Mul x y) = Just $ Binary Mul y x
 commute _ = Nothing
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/EL/Haskell/Language/EL/Rules/Commute.hs',haskell(text))

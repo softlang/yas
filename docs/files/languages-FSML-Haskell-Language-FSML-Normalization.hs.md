@@ -13,3 +13,9 @@ normalize =
   . map (\s -> State (getInitial s) (getId s) (sort (getTransitions s)))
   . getStates
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Language/FSML/Normalization.hs',haskell(text))

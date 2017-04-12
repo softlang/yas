@@ -3,3 +3,11 @@
 ```
 zero.
 ```
+
+## Languages
+* [BTL](../languages/BTL.md)
+
+## References
+* elementOf('languages/BTL/value.term',btl(term))
+* mapsTo(bigstep,['languages/BTL/sample.term'],['languages/BTL/value.term'])
+* mapsTo(smallstep,['languages/BTL/sample.term'],['languages/BTL/value.term'])

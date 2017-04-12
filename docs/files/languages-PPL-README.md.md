@@ -2,11 +2,17 @@
 **[GitHub](https://github.com/softlang/yas/blob/master/languages/PPL/README.md)**
 ```
 # Language _PPL (Pretty Printing Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/languages/PPL)**
-
 A target language for pretty printing which provides different composition operators for textboxes.
 
-## Language purposes
+## Purposes
 _None_
+
+## Links
 ...
 ```
+
+## Languages
+* [Markdown](../languages/Markdown.md)
+
+## References
+* elementOf('languages/PPL/README.md',markdown(text))

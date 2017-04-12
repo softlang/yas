@@ -10,3 +10,9 @@ public class Cons implements List {
 		this.e = e;
 ...
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/ASL/samples/adts/Java/functional/v1/Cons.java',java(text))

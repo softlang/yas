@@ -10,3 +10,9 @@ import org.jdom.Element;
 import org.jdom.Attribute;
 ...
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('samples/xcoupled/slbook/xcoupled/xslt/RenameElementNameXSLT.java',java(text))

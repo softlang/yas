@@ -10,3 +10,9 @@ appliedSignature(Decls) :-
 
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/ESL/as.pro',prolog(text))

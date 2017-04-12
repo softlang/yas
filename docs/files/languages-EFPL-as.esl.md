@@ -10,3 +10,10 @@ symbol inttype : -> texpr ;
 symbol booltype : -> texpr ;
 ...
 ```
+
+## Languages
+* [ESL](../languages/ESL.md)
+
+## References
+* elementOf('languages/EFPL/as.esl',esl(text))
+* mapsTo(parse,['languages/EFPL/as.esl'],['languages/EFPL/as.term'])

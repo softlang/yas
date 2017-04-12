@@ -3,3 +3,10 @@
 ```
 [intval(10)].
 ```
+
+## Languages
+* [Term](../languages/Term.md)
+
+## References
+* elementOf('languages/EIPL/Prolog/mixed.output',term)
+* mapsTo(executeMixed,['languages/EIPL/sample.term'],['languages/EIPL/Prolog/mixed.output'])

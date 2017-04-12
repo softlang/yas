@@ -10,3 +10,9 @@ import qualified Language.GBL.V2.Sample
 import Language.GBL.Resolution
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/GBL/Haskell/Main.hs',haskell(text))

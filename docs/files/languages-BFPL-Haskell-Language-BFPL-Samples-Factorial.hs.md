@@ -10,3 +10,9 @@ import Language.BFPL.Syntax
 -- factorial x = if ((==) x 0) then 1 else ((*) x (factorial ((-) x 1)))
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BFPL/Haskell/Language/BFPL/Samples/Factorial.hs',haskell(text))

@@ -1,14 +1,21 @@
 # Language _PPL (Pretty Printing Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/languages/PPL)**
-
 A target language for pretty printing which provides different composition operators for textboxes.
 
-## Language purposes
+## Purposes
 _None_
 
-## Language relationships
+## Links
 
-## Language elements
+## Representations
+* ppl(term)
+
+## References
+* function(pp,[dgl(term)],[ppl(term)],dglPp,[])
+* membership(ppl(term),eslLanguage,['languages/PPL/as.term'])
+* function(pp,[ppl(term)],[text],pplRender:render,[])
+* function(pp,[figure(term)],[ppl(term)],figurePp,[])
+
+## Elements
 * [languages/DGL/sample.ppl](../../languages/DGL/sample.ppl)
 * [languages/FSML/Prolog/dot/sample.ppl](../../languages/FSML/Prolog/dot/sample.ppl)
 * [languages/PPL/tests/hbox.ppl](../../languages/PPL/tests/hbox.ppl)

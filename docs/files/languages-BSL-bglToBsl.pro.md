@@ -10,3 +10,9 @@ Rules ~> Profiles :- map(bglToBsl:(~>), Rules, Profiles).
 
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BSL/bglToBsl.pro',prolog(text))

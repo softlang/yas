@@ -3,3 +3,10 @@
 ```
 hbox(text('a'), hbox(text(' '), text('b'))).
 ```
+
+## Languages
+* [PPL](../languages/PPL.md)
+
+## References
+* elementOf('languages/PPL/tests/hbox.ppl',ppl(term))
+* mapsTo(pp,['languages/PPL/tests/hbox.ppl'],['languages/PPL/tests/hbox.txt'])

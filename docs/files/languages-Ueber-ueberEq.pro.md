@@ -10,3 +10,9 @@ compare(R, Pred, Ds, F, L, Expected1, Actual1) :-
       once((
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Ueber/ueberEq.pro',prolog(text))

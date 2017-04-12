@@ -10,3 +10,9 @@ functions
   not : Bool -> Bool
 ...
 ```
+
+## Languages
+* [ASL](../languages/ASL.md)
+
+## References
+* elementOf('languages/ASL/samples/adts/bool.asl',asl(text))

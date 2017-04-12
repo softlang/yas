@@ -10,3 +10,10 @@ factorial :: Int -> Int
 factorial x =
 ...
 ```
+
+## Languages
+* [EFPL](../languages/EFPL.md)
+
+## References
+* elementOf('languages/EFPL/tests/sample-past-inference.efpl',efpl(text))
+* mapsTo(parse,['languages/EFPL/tests/sample-past-inference.efpl'],['languages/EFPL/tests/sample-past-inference.term'])

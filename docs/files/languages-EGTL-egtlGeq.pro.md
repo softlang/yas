@@ -13,3 +13,9 @@ geq([option(Ss1)|Ss2], Ss3) :-
     geq(Ss2, Ss4).
 % ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/EGTL/egtlGeq.pro',prolog(text))

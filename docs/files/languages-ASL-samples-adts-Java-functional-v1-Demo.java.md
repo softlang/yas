@@ -16,3 +16,9 @@ public class Demo {
 
 }
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/ASL/samples/adts/Java/functional/v1/Demo.java',java(text))

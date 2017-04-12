@@ -10,3 +10,10 @@ symbol r : ritem* -> decl ;
 symbol lid : lid -> litem ;
 ...
 ```
+
+## Languages
+* [ESL](../languages/ESL.md)
+
+## References
+* elementOf('languages/Hinzu/as.esl',esl(text))
+* mapsTo(parse,['languages/Hinzu/as.esl'],['languages/Hinzu/as.term'])

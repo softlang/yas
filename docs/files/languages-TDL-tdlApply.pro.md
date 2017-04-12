@@ -10,3 +10,9 @@ apply(subterms(Ds), X, Y) :-
     map(tdlApply:apply, Ds, Xs, Ys),
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/TDL/tdlApply.pro',prolog(text))

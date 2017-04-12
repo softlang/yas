@@ -10,3 +10,9 @@ import Data.Data
 newtype Fsm = Fsm { states :: [State] }
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Language/FSML/StringTemplate/Syntax.hs',haskell(text))

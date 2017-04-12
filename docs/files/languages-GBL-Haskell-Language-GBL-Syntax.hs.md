@@ -11,3 +11,9 @@ data Person = Person {
   getName :: String,
   getBuddy :: Maybe (IORef Person) }
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/GBL/Haskell/Language/GBL/Syntax.hs',haskell(text))

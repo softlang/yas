@@ -10,3 +10,9 @@ bglConformance(Input, Grammar)
 bglAcceptor(File, Input) :-
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BGL/api.pro',prolog(text))

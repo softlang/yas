@@ -10,3 +10,9 @@ apply(Ds, R, InFs, OutFs, (Pred, Args)) :-
   % Determine languages of files and read them in
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Ueber/ueberApply.pro',prolog(text))

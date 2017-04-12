@@ -12,3 +12,9 @@ transform(partToReference(N1, N2), M1, M2) :-
 transform(valueToReference(N1, N2, N3, N4), M1, M2) :-
   mmValueToReference:transform(N1, N2, N3, N4, M1, M2).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MMTL/mmTransform.pro',prolog(text))

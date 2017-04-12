@@ -9,3 +9,10 @@
 [integer] rest : ; // An integer number
 [rational] rest : '.' bits ; // A rational number
 ```
+
+## Languages
+* [BGL](../languages/BGL.md)
+
+## References
+* elementOf('languages/BNL/cs.bgl',bgl(text))
+* mapsTo(parse,['languages/BNL/cs.bgl'],['languages/BNL/cs.term'])

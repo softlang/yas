@@ -10,3 +10,9 @@ eglToken(qstring(Atom)) -->
 
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/EGL/scanner.pro',prolog(text))

@@ -3,7 +3,9 @@
       lid(java),
       name('Java'),
       explanation('A general-purpose programming language that is concurrent, class-based, object-oriented, and (as of version 8) functional.'),
-      sameAs('https://en.wikipedia.org/wiki/Java_(programming_language)')
+      sameAs('https://en.wikipedia.org/wiki/Java_(programming_language)'),
+      purpose('Object-oriented programming')
+
   ]),
   r([
       rid(java(text)),

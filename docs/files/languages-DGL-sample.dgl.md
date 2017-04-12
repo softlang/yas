@@ -8,3 +8,10 @@ digraph G {
   b -> b
 }
 ```
+
+## Languages
+* [DGL](../languages/DGL.md)
+
+## References
+* elementOf('languages/DGL/sample.dgl',dgl(text))
+* mapsTo(pp,['languages/DGL/sample.ppl'],['languages/DGL/sample.dgl'])

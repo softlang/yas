@@ -8,3 +8,9 @@
 {|el || $X * 1 |} ~> {|el || $X |}.
 {|el || $_ * 0 |} ~> {|el || 0 |}.
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/EL/Prolog/qq/rules/elqqSimplify.pro',prolog(text))

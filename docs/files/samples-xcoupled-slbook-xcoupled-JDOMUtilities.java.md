@@ -10,3 +10,9 @@ import java.io.IOException;
 import org.jdom.Document;
 ...
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('samples/xcoupled/slbook/xcoupled/JDOMUtilities.java',java(text))

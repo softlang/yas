@@ -10,3 +10,9 @@ import Data.List (nub)
 inouts :: Fsm -> Map StateId (Int, Int)
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Language/FSML/Extraction.hs',haskell(text))

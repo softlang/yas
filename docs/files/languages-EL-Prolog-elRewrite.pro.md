@@ -10,3 +10,9 @@ fulltd(E1, E2) :- fulltd(elRewrite:try, E1, E2).
 fullbu(E1, E2) :- fullbu(elRewrite:try, E1, E2).
 innermost(E1, E2) :- innermost(elRewrite:rewrite, E1, E2).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/EL/Prolog/elRewrite.pro',prolog(text))

@@ -10,3 +10,10 @@ typeexpr : factor cardinality ;
 [integer] factor : 'integer' ;
 ...
 ```
+
+## Languages
+* [EGL](../languages/EGL.md)
+
+## References
+* elementOf('languages/ESL/cs.egl',egl(text))
+* mapsTo(parse,['languages/ESL/cs.egl'],['languages/ESL/cs.term'])

@@ -10,3 +10,9 @@ import Language.BIPL.CS.Domains
 import Data.Map (insert)
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BIPL/Haskell/Language/BIPL/CS/Combinators.hs',haskell(text))

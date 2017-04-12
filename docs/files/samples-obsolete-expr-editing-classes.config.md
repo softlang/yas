@@ -3,3 +3,10 @@
 ```
 concreteClassesForMember(add, left).
 ```
+
+## Languages
+* [Term](../languages/Term.md)
+
+## References
+* elementOf('samples/obsolete/expr/editing/classes.config',term)
+* mapsTo(applyIO,['samples/obsolete/expr/editing/classes.config','samples/obsolete/expr/exprRelaxed/mm.graph'],['samples/obsolete/expr/editing/classes.term'])

@@ -10,3 +10,9 @@ evaluate :: Expr -> Expr
 evaluate TRUE = TRUE
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BTL/Haskell/Language/BTL/BigStep.hs',haskell(text))

@@ -8,3 +8,9 @@
   function(loc, [text], [term], textLoc:loc, [])
 ].
 ```
+
+## Languages
+* [Ueber](../languages/Ueber.md)
+
+## References
+* elementOf('languages/Text/.ueber',ueber(term))

@@ -3,3 +3,10 @@
 ```
 [],write(var(x)).
 ```
+
+## Languages
+* [EIPL](../languages/EIPL.md)
+
+## References
+* elementOf('languages/EIPL/tests/missing-var-dec.term',eipl(term))
+* mapsTo(parse,['languages/EIPL/tests/missing-var-dec.eipl'],['languages/EIPL/tests/missing-var-dec.term'])

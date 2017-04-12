@@ -13,3 +13,9 @@ parse(Rules, Mapping, Tokens, Tree) :-
 terminal(T, [T|Ts], Ts).
 external(N, V, [T|Ts], Ts) :- T =.. [N, V].
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/EGL/eglScannerfull.pro',prolog(text))

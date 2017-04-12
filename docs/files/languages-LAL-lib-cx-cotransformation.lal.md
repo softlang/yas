@@ -9,3 +9,10 @@ axiom consistency { forall t <- XL. forall a, c <- L1. forall b, d <- L2.
   /\ interpret(t, a) = c
   /\ interpret(t, b) = d => consistent(c, d) }
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/cx/cotransformation.lal',lal(text))
+* mapsTo(parse,['languages/LAL/lib/cx/cotransformation.lal'],['languages/LAL/lib/cx/cotransformation.term'])

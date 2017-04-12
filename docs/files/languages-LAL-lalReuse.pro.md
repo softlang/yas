@@ -10,3 +10,9 @@ inline(Ds1, Ds2) :-
     concat(Dss, Ds2).
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/LAL/lalReuse.pro',prolog(text))

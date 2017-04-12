@@ -15,3 +15,9 @@ evaluate(iszero(E), false) :- evaluate(E, succ(N)), isNat(N).
 evaluate(if(E0, E1, _E2), V1) :- evaluate(E0, true), evaluate(E1, V1).
 evaluate(if(E0, _E1, E2), V2) :- evaluate(E0, false), evaluate(E2, V2).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BTL/Prolog/btlBigstep.pro',prolog(text))

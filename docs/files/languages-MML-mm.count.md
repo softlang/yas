@@ -3,3 +3,10 @@
 ```
 16.
 ```
+
+## Languages
+* [Term](../languages/Term.md)
+
+## References
+* elementOf('languages/MML/mm.count',term)
+* mapsTo(count,['languages/MML/mm.term'],['languages/MML/mm.count'])

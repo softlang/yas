@@ -10,3 +10,9 @@ public class FunctionalSample {
 	
 ...
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/FSML/Java/org/softlang/fsml/FunctionalSample.java',java(text))

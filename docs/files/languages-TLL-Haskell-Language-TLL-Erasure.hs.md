@@ -10,3 +10,9 @@ erase :: TLL.Expr -> ULL.Expr
 erase (TLL.Var x) = (ULL.Var x)
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/TLL/Haskell/Language/TLL/Erasure.hs',haskell(text))

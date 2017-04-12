@@ -10,3 +10,9 @@ step((assign(X, E), Sto1), (skip, Sto2)) :-
   insupd(X, V, Sto1, Sto2).
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BIPL/Prolog/small-step/step.pro',prolog(text))

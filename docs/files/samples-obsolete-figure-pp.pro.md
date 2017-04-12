@@ -10,3 +10,9 @@ ppElement(E, hbox(B, text(';'))) :-
   ppElement_(E, B).
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('samples/obsolete/figure/pp.pro',prolog(text))

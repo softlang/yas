@@ -16,3 +16,11 @@ state exception {
   release -> locked;
 }
 ```
+
+## Languages
+* [FSML](../languages/FSML.md)
+
+## References
+* elementOf('languages/FSML/sample.fsml',fsml(text))
+* mapsTo(parse,['languages/FSML/sample.fsml'],['languages/FSML/sample.term'])
+* mapsTo(parse,['languages/FSML/sample.fsml'],['languages/FSML/Python/sample.json'])

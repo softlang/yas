@@ -3,12 +3,20 @@
 
 A trivial transformation language for coupled transformations on BSL signatures and conformant terms.
 
-## Language purposes
+## Purposes
 _None_
 
-## Language relationships
+## Links
 * dependsOn: [BSL](http://softlang.github.io/yas/languages/BSL.html)
 * dependsOn: [Term](http://softlang.github.io/yas/languages/Term.html)
 
-## Language elements
+## Representations
+* bstl(term)
+
+## References
+* membership(bstl(term),eslLanguage,['languages/BSTL/as.term'])
+* function(interpret,[bstl(term),bsl(term)],[bsl(term)],bstlSig:interpret,[])
+* function(interpret,[bstl(term),term],[term],bstlTerm:interpret,[])
+
+## Elements
 * [languages/BSTL/tests/trafo1.term](../files/languages-BSTL-tests-trafo1.term.md)

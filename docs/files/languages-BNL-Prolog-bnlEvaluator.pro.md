@@ -6,3 +6,9 @@
 % END ...
 evaluate(F, V) :- V is F.
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BNL/Prolog/bnlEvaluator.pro',prolog(text))

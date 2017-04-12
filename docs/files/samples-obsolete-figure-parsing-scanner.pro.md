@@ -10,3 +10,9 @@ figureToken(integer(Int)) -->
 figureToken(Atom) -->
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('samples/obsolete/figure/parsing/scanner.pro',prolog(text))

@@ -10,3 +10,9 @@ verify(_, equivalence(_, _, _)).
 verify(_, normalization(_, _, _)).
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Ueber/ueberVerify.pro',prolog(text))

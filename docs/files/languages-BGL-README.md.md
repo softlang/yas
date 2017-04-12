@@ -2,11 +2,17 @@
 **[GitHub](https://github.com/softlang/yas/blob/master/languages/BGL/README.md)**
 ```
 # Language _BGL (Basic Grammar Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/languages/BGL)**
-
 A BNF-like notation for context-free grammars; rules (productions) are labeled.
 
-## Language purposes
+## Purposes
 * Concrete textual syntax definition
+* Concrete syntax definition
+* Language definition
 ...
 ```
+
+## Languages
+* [Markdown](../languages/Markdown.md)
+
+## References
+* elementOf('languages/BGL/README.md',markdown(text))

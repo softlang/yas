@@ -15,3 +15,10 @@ digraph G {
   exception -> locked [label=" release "]
 }
 ```
+
+## Languages
+* [DGL](../languages/DGL.md)
+
+## References
+* elementOf('languages/FSML/Prolog/dot/sample.dgl',dgl(text))
+* mapsTo(pp,['languages/FSML/Prolog/dot/sample.ppl'],['languages/FSML/Prolog/dot/sample.dgl'])

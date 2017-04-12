@@ -10,3 +10,9 @@ import Data.Map (Map, lookup, empty, fromList)
 import Data.Maybe
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BFPL/Haskell/Language/BFPL/Inliner.hs',haskell(text))

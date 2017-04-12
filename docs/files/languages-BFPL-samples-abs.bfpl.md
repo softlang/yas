@@ -7,3 +7,10 @@ abs x = if (<) x 0 then - x else x
 -- Apply the function
 main = print $ abs (-42) -- Prints 42
 ```
+
+## Languages
+* [BFPL](../languages/BFPL.md)
+
+## References
+* elementOf('languages/BFPL/samples/abs.bfpl',bfpl(text))
+* mapsTo(parse,['languages/BFPL/samples/abs.bfpl'],['languages/BFPL/samples/abs.term'])

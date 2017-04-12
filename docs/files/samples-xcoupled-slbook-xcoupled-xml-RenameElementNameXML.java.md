@@ -10,3 +10,9 @@ import java.util.Iterator;
 import org.jdom.Document;
 ...
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('samples/xcoupled/slbook/xcoupled/xml/RenameElementNameXML.java',java(text))

@@ -3,3 +3,10 @@
 ```
 assign(x,intconst(42)).
 ```
+
+## Languages
+* [BIPL](../languages/BIPL.md)
+
+## References
+* elementOf('languages/BIPL/samples/bracket.term',bipl(term))
+* mapsTo(parse,['languages/BIPL/samples/bracket.bipl'],['languages/BIPL/samples/bracket.term'])

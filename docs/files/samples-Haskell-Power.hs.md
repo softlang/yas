@@ -7,3 +7,9 @@ power n x =
     then 1
     else x * power (n-1) x
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('samples/Haskell/Power.hs',haskell(text))

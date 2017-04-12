@@ -14,3 +14,11 @@ link BNL to 'https://github.com/softlang/yas/blob/master/languages/BNL'
 link BGL to 'https://github.com/softlang/yas/blob/master/languages/BGL'
 link bnlGrammar to 'https://github.com/softlang/yas/blob/master/languages/BGL/cs.bgl'
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/conformance/bnl.lal2',lal(text))
+* mapsTo(pp,['languages/LAL/lib/conformance/bnl.term2'],['languages/LAL/lib/conformance/bnl.lal2'])
+* mapsTo(parse,['languages/LAL/lib/conformance/bnl.lal2'],['languages/LAL/lib/conformance/bnl.term2'])

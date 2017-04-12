@@ -10,3 +10,11 @@
   ticket, % Tickets are ejected in unlocked state
 ...
 ```
+
+## Languages
+* [Term](../languages/Term.md)
+
+## References
+* elementOf('languages/FSML/Prolog/sample.input',term)
+* mapsTo(simulateFsm,['languages/FSML/sample.term','languages/FSML/Prolog/sample.input'],['languages/FSML/Prolog/sample.output'])
+* mapsTo(acceptFsm,['languages/FSML/sample.term','languages/FSML/Prolog/sample.input'],[])

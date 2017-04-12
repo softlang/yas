@@ -10,3 +10,9 @@ public class List {
 
 ...
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/ASL/samples/adts/Java/imperative/v1/List.java',java(text))

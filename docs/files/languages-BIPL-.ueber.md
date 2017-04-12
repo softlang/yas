@@ -6,3 +6,9 @@
   macro(eslSyntax(bipl))
 ].
 ```
+
+## Languages
+* [Ueber](../languages/Ueber.md)
+
+## References
+* elementOf('languages/BIPL/.ueber',ueber(term))

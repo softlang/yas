@@ -6,3 +6,9 @@ public class Number {
     public Rest rest;
 }
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/BNL/Java/Number.java',java(text))

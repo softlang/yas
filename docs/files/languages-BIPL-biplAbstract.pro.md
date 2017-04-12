@@ -10,3 +10,9 @@
 block([]) ~> skip.
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BIPL/biplAbstract.pro',prolog(text))

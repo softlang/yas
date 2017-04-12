@@ -10,3 +10,9 @@ public class Demo {
 		l1.snoc(1);
 ...
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/ASL/samples/adts/Java/imperative/v1/Demo.java',java(text))

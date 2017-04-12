@@ -15,3 +15,9 @@ power n x =
 mk_power :: Int -> Q Exp
 mk_power n = [| \x -> $(power n [| x |]) |]
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('samples/Haskell/UntypedPower.hs',haskell(text))

@@ -10,3 +10,9 @@ sampleSignature =
   [ ("number", ["bits", "rest"], "number"),
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BSL/Haskell/Language/BSL/Sample.hs',haskell(text))

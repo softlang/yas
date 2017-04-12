@@ -10,3 +10,9 @@ import Data.Map (Map, (!), insert)
 import Control.Monad.Fix (fix)
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BIPL/Haskell/Language/BIPL/Algebra/StandardInterpreter.hs',haskell(text))

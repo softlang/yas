@@ -8,3 +8,9 @@ public class Cons {
 	public Cons init;
 }
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/ASL/samples/adts/Java/imperative/v3/Cons.java',java(text))

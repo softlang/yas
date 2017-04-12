@@ -10,3 +10,9 @@ import Language.FSML.StringChecker
 import Language.Haskell.TH
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Language/FSML/QuasiQuoter.hs',haskell(text))

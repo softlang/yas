@@ -10,3 +10,9 @@ metamodel(MM) :-
       (class, metamodel), 
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MML/as.pro',prolog(text))

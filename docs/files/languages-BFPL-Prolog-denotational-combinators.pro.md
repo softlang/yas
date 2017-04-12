@@ -10,3 +10,9 @@ lazyApply(M, X, V) :-
   apply(M, [F]),
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BFPL/Prolog/denotational/combinators.pro',prolog(text))

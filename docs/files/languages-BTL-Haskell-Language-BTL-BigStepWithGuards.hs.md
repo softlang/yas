@@ -10,3 +10,9 @@ import Language.BTL.ValueExpr
 evaluate :: Expr -> Expr
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BTL/Haskell/Language/BTL/BigStepWithGuards.hs',haskell(text))

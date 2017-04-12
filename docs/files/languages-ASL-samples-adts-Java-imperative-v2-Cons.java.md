@@ -7,3 +7,9 @@ public class Cons {
 	public Cons tail;
 }
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/ASL/samples/adts/Java/imperative/v2/Cons.java',java(text))

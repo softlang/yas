@@ -6,3 +6,9 @@
 % END ...
 (N, T1) ~> T2 :- biplAbstract:'~>'((N, T1), T2).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/EIPL/eiplAbstract.pro',prolog(text))

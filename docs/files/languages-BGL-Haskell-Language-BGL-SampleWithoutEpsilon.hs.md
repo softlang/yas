@@ -15,3 +15,9 @@ bnlGrammar = [
   ("one", "bit", [T '1'])
  ]
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BGL/Haskell/Language/BGL/SampleWithoutEpsilon.hs',haskell(text))

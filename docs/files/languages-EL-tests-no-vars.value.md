@@ -3,3 +3,10 @@
 ```
 boolval(true).
 ```
+
+## Languages
+* [Term](../languages/Term.md)
+
+## References
+* elementOf('languages/EL/tests/no-vars.value',term)
+* mapsTo(evaluate,['languages/EL/tests/no-vars.term'],['languages/EL/tests/no-vars.value'])

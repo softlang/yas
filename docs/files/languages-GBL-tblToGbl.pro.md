@@ -10,3 +10,9 @@ World1 => World2 :-
   lookup(persons, World1, Ps1),
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/GBL/tblToGbl.pro',prolog(text))

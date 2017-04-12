@@ -3,3 +3,10 @@
 ```
 [ (true,stateA,[ (eventI,[actionI],stateB), (eventI,[actionII],stateC)]), (false,stateB,[]), (false,stateC,[])].
 ```
+
+## Languages
+* [FSML](../languages/FSML.md)
+
+## References
+* elementOf('languages/FSML/tests/determinismNotOk.term',fsml(term))
+* mapsTo(parse,['languages/FSML/tests/determinismNotOk.fsml'],['languages/FSML/tests/determinismNotOk.term'])

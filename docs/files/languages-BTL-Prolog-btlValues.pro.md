@@ -13,3 +13,9 @@ isNat(succ(T)) :- isNat(T).
 isValue(T) :- isBool(T).
 isValue(T) :- isNat(T).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BTL/Prolog/btlValues.pro',prolog(text))

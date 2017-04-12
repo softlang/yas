@@ -10,3 +10,9 @@ import Text.StringTemplate.GenericStandard
 -- END ...
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Language/FSML/TemplateFormatter.hs',haskell(text))

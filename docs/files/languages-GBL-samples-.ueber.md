@@ -8,3 +8,9 @@
   mapsTo(mapping, ['../../TBL/samples/small-world.graph'], ['small-world.graph'])
 ].
 ```
+
+## Languages
+* [Ueber](../languages/Ueber.md)
+
+## References
+* elementOf('languages/GBL/samples/.ueber',ueber(term))

@@ -5,3 +5,10 @@
   x = (42);
 }
 ```
+
+## Languages
+* [BIPL](../languages/BIPL.md)
+
+## References
+* elementOf('languages/BIPL/samples/bracket.bipl',bipl(text))
+* mapsTo(parse,['languages/BIPL/samples/bracket.bipl'],['languages/BIPL/samples/bracket.term'])

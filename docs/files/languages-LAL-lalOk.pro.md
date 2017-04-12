@@ -10,3 +10,9 @@ model(Ds) :-
 
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/LAL/lalOk.pro',prolog(text))

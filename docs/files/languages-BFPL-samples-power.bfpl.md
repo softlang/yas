@@ -9,3 +9,10 @@ power n x =
 
 main = print $ power 3 2 -- Prints 8
 ```
+
+## Languages
+* [BFPL](../languages/BFPL.md)
+
+## References
+* elementOf('languages/BFPL/samples/power.bfpl',bfpl(text))
+* mapsTo(parse,['languages/BFPL/samples/power.bfpl'],['languages/BFPL/samples/power.term'])

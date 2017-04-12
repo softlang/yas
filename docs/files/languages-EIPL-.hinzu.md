@@ -10,3 +10,9 @@
       supersetOf(bipl),
 ...
 ```
+
+## Languages
+* [Hinzu](../languages/Hinzu.md)
+
+## References
+* elementOf('languages/EIPL/.hinzu',hinzu(term))

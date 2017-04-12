@@ -10,3 +10,9 @@ number (Number bs r) = val0
   where
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BNL/Haskell/Language/BNL/Conversion.hs',haskell(text))

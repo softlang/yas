@@ -11,3 +11,10 @@
   mapsTo(interpret,['trafo1.term','sig1.term'],['sig2.term']),
   relatesTo(conformsTo,['term2.term','sig2.term']) ].
 ```
+
+## Languages
+* [Ueber](../languages/Ueber.md)
+
+## References
+* elementOf('languages/BSTL/tests/trafo1.ueber',ueber(term))
+* mapsTo(translate,['languages/LAL/lib/cx/cotransformation.term2','languages/LAL/lib/cx/cotransformation.lalconfig'],['languages/BSTL/tests/trafo1.ueber'])

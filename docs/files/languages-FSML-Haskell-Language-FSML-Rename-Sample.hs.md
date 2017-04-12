@@ -10,3 +10,9 @@ import Language.FSML.Rename.Transformation
 turnstileFsm :: Maybe Fsm
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Language/FSML/Rename/Sample.hs',haskell(text))

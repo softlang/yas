@@ -12,3 +12,9 @@ interpret(renameSym(N1, N2), T1, T2) :-
     map(bstlTerm:interpret(renameSym(N1, N2)), Ts1, Ts2),
     T2 =.. [N4|Ts2].
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BSTL/Prolog/bstlTerm.pro',prolog(text))

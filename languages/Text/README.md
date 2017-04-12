@@ -1,14 +1,20 @@
 # Language _Text_
-**[GitHub](https://github.com/softlang/yas/blob/master/languages/Text)**
-
 Text as a basic representation format used by the YAS repository.
 
-## Language purposes
+## Purposes
 _None_
 
-## Language relationships
+## Links
 
-## Language elements
+## Representations
+* text
+
+## References
+* function(pp,[ppl(term)],[text],pplRender:render,[])
+* membership(text,succeed,[])
+* function(loc,[text],[term],textLoc:loc,[])
+
+## Elements
 * [languages/FSML/Prolog/generated/baseline.txt](../../languages/FSML/Prolog/generated/baseline.txt)
 * [languages/FSML/tests/syntaxError.fsml](../../languages/FSML/tests/syntaxError.fsml)
 * [languages/PPL/tests/hbox.txt](../../languages/PPL/tests/hbox.txt)

@@ -10,3 +10,10 @@
 
 ...
 ```
+
+## Languages
+* [EGL](../languages/EGL.md)
+
+## References
+* elementOf('languages/BIPL/cs.egl',egl(text))
+* mapsTo(parse,['languages/BIPL/cs.egl'],['languages/BIPL/cs.term'])

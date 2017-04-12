@@ -10,3 +10,9 @@ apply(sequ([D|Ds]), Mm1, Mm3) :-
 apply(removeClassifier(C), Cs1, Cs2) :-
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MMDL/mmdlApply.pro',prolog(text))

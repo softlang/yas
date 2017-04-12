@@ -10,3 +10,9 @@ number(Val0) -->
   rest(Val2),
 ...
 ```
+
+## Languages
+* [DCG](../languages/DCG.md)
+
+## References
+* elementOf('languages/BNL/Prolog/bnlTextToValueS.dcg',dcg(prolog(text)))

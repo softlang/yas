@@ -10,3 +10,9 @@ graph(O) :-
   set(Defs),
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Term/graph/abssyn.pro',prolog(text))

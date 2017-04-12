@@ -3,3 +3,9 @@
 ```
 [ ([bx,state],'languages/LAL/lib/bx/state.term2'), ([differencing],'languages/LAL/lib/differencing.term2')].
 ```
+
+## Languages
+
+## References
+* elementOf('languages/LAL/lib/bx/delta.deps',deps(term))
+* mapsTo(deps,['languages/LAL/lib/bx/delta.term'],['languages/LAL/lib/bx/delta.deps'])

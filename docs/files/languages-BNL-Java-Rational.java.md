@@ -5,3 +5,9 @@ public class Rational extends Rest {
     public Bits bits
 }
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/BNL/Java/Rational.java',java(text))

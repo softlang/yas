@@ -3,3 +3,10 @@
 ```
 [ ([add],expr,[n(expr),t(+),n(expr)]), ([const],expr,[n(integer)])].
 ```
+
+## Languages
+* [EGL](../languages/EGL.md)
+
+## References
+* elementOf('languages/EGL/samples/left-recursion.term',egl(term))
+* mapsTo(parse,['languages/EGL/samples/left-recursion.egl'],['languages/EGL/samples/left-recursion.term'])

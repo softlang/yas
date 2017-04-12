@@ -10,3 +10,9 @@ import Language.FSML.Merge.Transformation
 turnstileFsm :: Maybe Fsm
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Language/FSML/Merge/Sample.hs',haskell(text))

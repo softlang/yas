@@ -10,3 +10,9 @@ newObject(ClassN, MM1, Obj2) :-
     inconsistentNewObject(ClassN),
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MML/editing/new-object.pro',prolog(text))

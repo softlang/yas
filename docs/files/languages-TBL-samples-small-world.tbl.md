@@ -4,3 +4,11 @@
 joe -> bill
 bill -> joe
 ```
+
+## Languages
+* [TBL](../languages/TBL.md)
+
+## References
+* elementOf('languages/TBL/samples/small-world.tbl',tbl(text))
+* mapsTo(parse,['languages/TBL/samples/small-world.tbl'],['languages/TBL/samples/small-world.term'])
+* mapsTo(loc,['languages/TBL/samples/small-world.tbl'],['languages/TBL/samples/small-world.loc'])

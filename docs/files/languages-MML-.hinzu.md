@@ -10,3 +10,9 @@
       purpose('Metamodeling'),
 ...
 ```
+
+## Languages
+* [Hinzu](../languages/Hinzu.md)
+
+## References
+* elementOf('languages/MML/.hinzu',hinzu(term))

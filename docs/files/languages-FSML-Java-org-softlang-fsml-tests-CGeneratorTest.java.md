@@ -10,3 +10,9 @@ import static org.softlang.fsml.FsmlCGenerator.*;
 import java.io.IOException;
 ...
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/FSML/Java/org/softlang/fsml/tests/CGeneratorTest.java',java(text))

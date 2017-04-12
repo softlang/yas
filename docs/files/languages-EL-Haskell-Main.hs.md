@@ -10,3 +10,9 @@ import Language.EL.Normalizer
 import qualified Language.EL.All
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/EL/Haskell/Main.hs',haskell(text))

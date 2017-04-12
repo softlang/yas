@@ -9,3 +9,10 @@ axiom GetPut { forall s <- L1.
 axiom PutGet { forall s1, s2 <- L1. forall v <- L2.
   put(s1, v) = s2 => get(s2) = v }
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/bx/state.lal',lal(text))
+* mapsTo(parse,['languages/LAL/lib/bx/state.lal'],['languages/LAL/lib/bx/state.term'])

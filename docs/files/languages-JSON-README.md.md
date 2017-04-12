@@ -2,11 +2,17 @@
 **[GitHub](https://github.com/softlang/yas/blob/master/languages/JSON/README.md)**
 ```
 # Language _JSON (JavaScript Object Notation)_
-**[GitHub](https://github.com/softlang/yas/blob/master/languages/JSON)**
-
 A dictionary-based interchange format.
 
-## Language purposes
+## Purposes
 _None_
+
+## Links
 ...
 ```
+
+## Languages
+* [Markdown](../languages/Markdown.md)
+
+## References
+* elementOf('languages/JSON/README.md',markdown(text))

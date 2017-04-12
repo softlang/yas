@@ -10,3 +10,9 @@ accept :: String -> Bool
 accept i = case number i of
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BNL/Haskell/Language/BNL/BacktrackingAcceptor.hs',haskell(text))

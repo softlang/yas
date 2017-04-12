@@ -1,15 +1,19 @@
 # Language _Markdown_
-**[GitHub](https://github.com/softlang/yas/blob/master/languages/Markdown)**
-
 A markup-based documentation language.
 
-## Language purposes
+## Purposes
 _None_
 
-## Language relationships
+## Links
 * sameAs: [https://en.wikipedia.org/wiki/Markdown](https://en.wikipedia.org/wiki/Markdown)
 
-## Language elements
+## Representations
+* markdown(text)
+
+## References
+* membership(markdown(text),succeed,[])
+
+## Elements
 * [languages/ANTLR/README.md](../../languages/ANTLR/README.md)
 * [languages/ASL/README.md](../../languages/ASL/README.md)
 * [languages/ASL/samples/adts/Java/functional/README.md](../../languages/ASL/samples/adts/Java/functional/README.md)

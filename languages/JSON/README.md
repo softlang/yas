@@ -1,15 +1,20 @@
 # Language _JSON (JavaScript Object Notation)_
-**[GitHub](https://github.com/softlang/yas/blob/master/languages/JSON)**
-
 A dictionary-based interchange format.
 
-## Language purposes
+## Purposes
 _None_
 
-## Language relationships
+## Links
 * sameAs: [https://en.wikipedia.org/wiki/JSON](https://en.wikipedia.org/wiki/JSON)
 
-## Language elements
+## Representations
+* json
+
+## References
+* function(parse,[fsml(text)],[json],python('FsmlToJSON'),['languages/FSML/Python/.'])
+* membership(json,succeed,[])
+
+## Elements
 * [languages/BNL/JSON/schema.json](../../languages/BNL/JSON/schema.json)
 * [languages/BNL/samples/10.json](../../languages/BNL/samples/10.json)
 * [languages/BNL/samples/5comma25.json](../../languages/BNL/samples/5comma25.json)

@@ -10,3 +10,9 @@ cardinalityConforms(One, P, V) :-
 cardinalityConforms(Star, P, V) :-
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MML/conformance/cardinality.pro',prolog(text))

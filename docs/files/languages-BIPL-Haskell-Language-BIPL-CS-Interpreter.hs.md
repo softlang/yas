@@ -10,3 +10,9 @@ import Language.BIPL.DS.Domains
 import Language.BIPL.CS.Domains
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BIPL/Haskell/Language/BIPL/CS/Interpreter.hs',haskell(text))

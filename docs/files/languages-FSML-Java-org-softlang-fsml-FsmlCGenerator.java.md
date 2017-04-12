@@ -10,3 +10,9 @@ import org.stringtemplate.v4.StringRenderer;
 import java.io.File;
 ...
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/FSML/Java/org/softlang/fsml/FsmlCGenerator.java',java(text))

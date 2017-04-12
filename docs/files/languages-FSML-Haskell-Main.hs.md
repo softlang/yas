@@ -10,3 +10,9 @@ import Language.FSML.Interpreter
 import Language.FSML.CombinatorFormatter as F1
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Main.hs',haskell(text))

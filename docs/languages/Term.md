@@ -3,12 +3,51 @@
 
 Prolog terms as a basic representation format used by the YAS repository.
 
-## Language purposes
+## Purposes
 _None_
 
-## Language relationships
+## Links
 
-## Language elements
+## Representations
+* term
+
+## References
+* function(acceptBottomUp,[bgl(term),term],[],bglAcceptBottomUp:accept,[])
+* function(acceptTopDown,[bgl(term),term],[],bglAcceptTopDown:accept,[])
+* function(parseTopDown,[bgl(term),term],[term],bglParseTopDown:parse,[])
+* function(parseTopDown,[bgl(term),term],[term],bglParseTopDown:parse,[])
+* function(conformsTo,[term,bsl(term)],[],bslConformance,[])
+* function(interpret,[bstl(term),term],[term],bstlTerm:interpret,[])
+* function(interpret,[bstl(term),term],[term],bstlTerm:interpret,[])
+* function(executeDynamic,[eipl(term)],[term],eiplDynamic:main,[])
+* function(executeMixed,[eipl(term)],[term],eiplMixed:main,[])
+* function(executeStatic,[eipl(term)],[term],eiplStatic:main,[])
+* function(evaluate,[el(term)],[term],elEvaluate:evaluate,[])
+* membership(term,appliedTerm,[])
+* function(conformsTo,[term,esl(term)],[],eslConformance,[])
+* function(atomToRef,[term,term,term],[term,term],atomToRef,[])
+* function(atomToRef,[term,term,term],[term,term],atomToRef,[])
+* function(atomToRef,[term,term,term],[term,term],atomToRef,[])
+* function(atomToRef,[term,term,term],[term,term],atomToRef,[])
+* function(atomToRef,[term,term,term],[term,term],atomToRef,[])
+* function(simulateFsm,[fsml(term),term],[term],simulateFsm,[])
+* function(simulateFsm,[fsml(term),term],[term],simulateFsm,[])
+* function(acceptFsm,[fsml(term),term],[],acceptFsm,[])
+* function(notAcceptFsm,[fsml(term),term],[],notAcceptFsm,[])
+* function(rename,[term,fsml(term)],[fsml(term)],fsmlRename:rename,[])
+* function(diff,[term,term],[mmdl(term)],mmdlDiff:diff,[])
+* function(diff,[term,term],[mmdl(term)],mmdlDiff:diff,[])
+* function(count,[mml(term)],[term],mmlCount:count,[])
+* function(applyIO,[term,term],[term],applyIO,[])
+* function(applyIO,[term,term],[term],applyIO,[])
+* function(applyIO,[term,term],[term],applyIO,[])
+* function(diff,[term,term],[tdl(term)],tdlDiff:diff,[])
+* function(diff,[term,term],[tdl(term)],tdlDiff:diff,[])
+* function(applyDiff,[tdl(term),term],[term],tdlApply:apply,[])
+* function(applyDiff,[tdl(term),term],[term],tdlApply:apply,[])
+* function(loc,[text],[term],textLoc:loc,[])
+
+## Elements
 * [languages/BSTL/tests/term1.term](../files/languages-BSTL-tests-term1.term.md)
 * [languages/BSTL/tests/term2.term](../files/languages-BSTL-tests-term2.term.md)
 * [languages/EIPL/Prolog/dynamic.output](../files/languages-EIPL-Prolog-dynamic.output.md)

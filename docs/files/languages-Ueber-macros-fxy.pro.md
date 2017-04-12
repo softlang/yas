@@ -7,3 +7,9 @@ fxy(Fun,FX,LX,FY,LY) :-
     elementOf(FY, LY),
     mapsTo(Fun, [FX], [FY]) ]).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Ueber/macros/fxy.pro',prolog(text))

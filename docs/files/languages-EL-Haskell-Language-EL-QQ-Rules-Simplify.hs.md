@@ -13,3 +13,9 @@ simplify [el| $x * 1 |] = Just [el| $x |]
 simplify [el| $x * 0 |] = Just [el| 0 |]
 simplify _ = Nothing
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/EL/Haskell/Language/EL/QQ/Rules/Simplify.hs',haskell(text))

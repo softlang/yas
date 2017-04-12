@@ -12,3 +12,9 @@ public class Fsm {
 	public List<Transition> getTransitions() { return transitions; }
 }
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/FSML/Java/org/softlang/fsml/Fsm.java',java(text))

@@ -7,3 +7,9 @@ ok(sequ(Ts)) :- map(egtlExtension:ok, Ts).
 ok(generalize(_, _)).
 ok(add(_)).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/EGTL/egtlExtension.pro',prolog(text))

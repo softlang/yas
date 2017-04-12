@@ -16,3 +16,9 @@ begin
   }
 end
 ```
+
+## Languages
+* [EIPL](../languages/EIPL.md)
+
+## References
+* elementOf('languages/EIPL/tests/div.eipl',eipl(text))

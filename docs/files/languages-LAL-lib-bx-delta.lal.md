@@ -10,3 +10,10 @@ axiom { forall s1, s2 <- L1. forall v1, v2 <- L2. forall delta <- DiffL.
   /\ propagate(s1, delta) = s2 =>
        put(s1, v2) = s2 /\ get(s2) = v2 }
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/bx/delta.lal',lal(text))
+* mapsTo(parse,['languages/LAL/lib/bx/delta.lal'],['languages/LAL/lib/bx/delta.term'])

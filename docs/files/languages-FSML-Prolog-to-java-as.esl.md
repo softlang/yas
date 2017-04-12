@@ -10,3 +10,10 @@ type abstract = boolean ;
 type name = string ;
 ...
 ```
+
+## Languages
+* [ESL](../languages/ESL.md)
+
+## References
+* elementOf('languages/FSML/Prolog/to-java/as.esl',esl(text))
+* mapsTo(parse,['languages/FSML/Prolog/to-java/as.esl'],['languages/FSML/Prolog/to-java/as.term'])

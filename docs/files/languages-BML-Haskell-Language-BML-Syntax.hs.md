@@ -10,3 +10,9 @@ data Instr
   | Load Int -- Push a storage cell's content onto stack
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BML/Haskell/Language/BML/Syntax.hs',haskell(text))

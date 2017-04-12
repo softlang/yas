@@ -14,3 +14,11 @@ axiom castFail {
                         cast(e1) = e2))
 }
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/cast.lal2',lal(text))
+* mapsTo(pp,['languages/LAL/lib/cast.term2'],['languages/LAL/lib/cast.lal2'])
+* mapsTo(parse,['languages/LAL/lib/cast.lal2'],['languages/LAL/lib/cast.term2'])

@@ -10,3 +10,9 @@ associate (Binary Add (Binary Add x y) z) = Just $ Binary Add x (Binary Add y z)
 associate (Binary Mul (Binary Mul x y) z) = Just $ Binary Mul x (Binary Mul y z)
 associate _ = Nothing
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/EL/Haskell/Language/EL/Rules/Associate.hs',haskell(text))

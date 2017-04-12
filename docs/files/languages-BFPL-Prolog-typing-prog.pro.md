@@ -10,3 +10,9 @@ ok((Fs, E)) :-
   set(Ns),
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BFPL/Prolog/typing/prog.pro',prolog(text))

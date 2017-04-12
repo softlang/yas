@@ -12,3 +12,9 @@
 % Lexical mapping for names
 (name, (Char, String)) ~> Atom :- name(Atom, [Char|String]).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/DDL/ddlAbstract.pro',prolog(text))

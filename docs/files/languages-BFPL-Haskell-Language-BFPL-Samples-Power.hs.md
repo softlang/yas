@@ -16,3 +16,9 @@ power = (
             (Arg "x")
             (Apply "power" [Binary Sub (Arg "n") (IntConst 1), Arg "x"])))))
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BFPL/Haskell/Language/BFPL/Samples/Power.hs',haskell(text))

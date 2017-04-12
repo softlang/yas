@@ -10,3 +10,9 @@ eglParser(Mapping, FileCs, FileLs, Text, Term) :-
 eglParser(Layout, Mapping, FileCs, FileLs, Text, Term) :-
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/EGL/api.pro',prolog(text))

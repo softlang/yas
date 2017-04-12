@@ -10,3 +10,9 @@ import Test.HUnit (runTestTT, Test(TestLabel, TestList), errors, failures, (~=?)
 import System.Exit (exitSuccess, exitFailure)
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BNL/Haskell/Main.hs',haskell(text))

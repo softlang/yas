@@ -8,3 +8,9 @@
 (qstring, (_, String, _)) ~> Atom :- atom_codes(Atom, String).
 (name, String) ~> Atom :- name(Atom, String).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/EGTL/egtlAbstract.pro',prolog(text))

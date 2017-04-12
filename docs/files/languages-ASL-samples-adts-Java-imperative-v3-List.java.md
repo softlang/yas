@@ -10,3 +10,9 @@ public class List {
 		return first.head;
 ...
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/ASL/samples/adts/Java/imperative/v3/List.java',java(text))

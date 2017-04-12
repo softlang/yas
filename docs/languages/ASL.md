@@ -3,12 +3,18 @@
 
 A simple language for algebraic specification.
 
-## Language purposes
+## Purposes
 * Algebraic specification
 
-## Language relationships
+## Links
 
-## Language elements
+## Representations
+* asl(text)
+
+## References
+* membership(asl(text),succeed,[])
+
+## Elements
 * [languages/ASL/samples/sorting.asl](../files/languages-ASL-samples-sorting.asl.md)
 * [languages/ASL/samples/101/companies.asl](../files/languages-ASL-samples-101-companies.asl.md)
 * [languages/ASL/samples/101/employees.asl](../files/languages-ASL-samples-101-employees.asl.md)

@@ -10,3 +10,9 @@ number(number(Bits, Rest), Val0) :-
   Val0 is Val1 + Val2.
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BNL/Prolog/bnlTermToValueS.pro',prolog(text))

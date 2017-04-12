@@ -10,3 +10,9 @@ eglSyntax(Lang) :-
   Files = ['cs.term', 'ls.term'],
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Ueber/macros/egl.pro',prolog(text))

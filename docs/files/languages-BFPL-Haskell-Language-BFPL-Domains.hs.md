@@ -11,3 +11,9 @@ type Value = Either Int Bool
 -- Environments as maps from argument names to values
 type Env = Map String Value
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BFPL/Haskell/Language/BFPL/Domains.hs',haskell(text))

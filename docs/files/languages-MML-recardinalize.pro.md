@@ -10,3 +10,9 @@ recardinalize(
 ) :-
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MML/recardinalize.pro',prolog(text))

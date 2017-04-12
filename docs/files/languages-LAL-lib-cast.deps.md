@@ -3,3 +3,9 @@
 ```
 [ ([language],'languages/LAL/lib/language.term2')].
 ```
+
+## Languages
+
+## References
+* elementOf('languages/LAL/lib/cast.deps',deps(term))
+* mapsTo(deps,['languages/LAL/lib/cast.term'],['languages/LAL/lib/cast.deps'])

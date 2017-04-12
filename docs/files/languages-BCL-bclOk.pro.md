@@ -10,3 +10,9 @@ main(F, T) :-
 % END ...
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BCL/bclOk.pro',prolog(text))

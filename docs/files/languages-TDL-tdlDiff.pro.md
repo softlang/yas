@@ -10,3 +10,9 @@ diff(X, Y, replace(X, Y)) :-
     \+ is_list(Y),
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/TDL/tdlDiff.pro',prolog(text))

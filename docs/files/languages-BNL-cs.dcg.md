@@ -9,3 +9,9 @@ bit --> ['1'].
 rest --> [].
 rest --> ['.'], bits.
 ```
+
+## Languages
+* [DCG](../languages/DCG.md)
+
+## References
+* elementOf('languages/BNL/cs.dcg',dcg(prolog(text)))

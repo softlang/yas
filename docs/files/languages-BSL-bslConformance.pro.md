@@ -9,3 +9,9 @@ termOfSort(Profiles, Term, Sort) :-
   member((Symbol, Sorts, Sort), Profiles),
   map(bslConformance:termOfSort(Profiles), Terms, Sorts).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BSL/bslConformance.pro',prolog(text))

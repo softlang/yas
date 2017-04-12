@@ -15,3 +15,9 @@ fork((L, _, _), ETrees) ~> ITree :-
 [leaf(_)|ETrees] ~> ITrees :- ETrees ~> ITrees.
 [ETree|ETrees] ~> [ITree|ITrees] :- ETree ~> ITree, ETrees ~> ITrees.
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BGL/cstToAst.pro',prolog(text))

@@ -3,3 +3,9 @@
 ```
 nat.
 ```
+
+## Languages
+
+## References
+* elementOf('languages/BTL/type.term',btl(type(term)))
+* mapsTo(typeOf,['languages/BTL/sample.term'],['languages/BTL/type.term'])

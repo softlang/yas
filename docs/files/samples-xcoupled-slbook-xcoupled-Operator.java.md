@@ -5,3 +5,9 @@ package slbook.xcoupled;
 
 public interface Operator<T> { }
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('samples/xcoupled/slbook/xcoupled/Operator.java',java(text))

@@ -10,3 +10,9 @@ data Type = NatType | BoolType
 -- BEGIN ...
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BTL/Haskell/Language/BTL/TypeCheckerWithGuards.hs',haskell(text))

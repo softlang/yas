@@ -6,3 +6,10 @@ symbol fork : tree # tree -> tree ; // binary fork in a tree
 symbol zero : -> nat ; // natural number 0
 symbol succ : nat -> nat ; // successor of a natural number
 ```
+
+## Languages
+* [BSL](../languages/BSL.md)
+
+## References
+* elementOf('languages/BSTL/tests/sig1.bsl',bsl(text))
+* mapsTo(parse,['languages/BSTL/tests/sig1.bsl'],['languages/BSTL/tests/sig1.term'])

@@ -3,3 +3,10 @@
 ```
 ((a * b) * c) * d
 ```
+
+## Languages
+* [EL](../languages/EL.md)
+
+## References
+* elementOf('languages/EL/tests/left-associated.el',el(text))
+* mapsTo(parse,['languages/EL/tests/left-associated.el'],['languages/EL/tests/left-associated.term'])

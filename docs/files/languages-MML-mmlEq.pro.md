@@ -15,3 +15,9 @@ sortClassifier(datatype(CN), datatype(CN)).
 sortClassifier(class(A, CN, X, Ms1), class(A, CN, X, Ms2)) :-
     sort(Ms1, Ms2).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MML/mmlEq.pro',prolog(text))

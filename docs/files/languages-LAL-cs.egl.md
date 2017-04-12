@@ -10,3 +10,10 @@ mname : name { '.' name }* ;
 substs : '[' subst { ',' subst }* ']' ;
 ...
 ```
+
+## Languages
+* [EGL](../languages/EGL.md)
+
+## References
+* elementOf('languages/LAL/cs.egl',egl(text))
+* mapsTo(parse,['languages/LAL/cs.egl'],['languages/LAL/cs.term'])

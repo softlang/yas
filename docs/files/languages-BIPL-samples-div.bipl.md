@@ -15,3 +15,10 @@
   }
 }
 ```
+
+## Languages
+* [BIPL](../languages/BIPL.md)
+
+## References
+* elementOf('languages/BIPL/samples/div.bipl',bipl(text))
+* mapsTo(parse,['languages/BIPL/samples/div.bipl'],['languages/BIPL/samples/div.term'])

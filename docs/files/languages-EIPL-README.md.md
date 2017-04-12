@@ -2,11 +2,17 @@
 **[GitHub](https://github.com/softlang/yas/blob/master/languages/EIPL/README.md)**
 ```
 # Language _EIPL (Extended Imperative Programming Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/languages/EIPL)**
-
 A small extension of the trivial imperative programming language BIPL to provide unparameterized procedures in nested scopes.
 
-## Language purposes
+## Purposes
 * Imperative programming
+
+## Links
 ...
 ```
+
+## Languages
+* [Markdown](../languages/Markdown.md)
+
+## References
+* elementOf('languages/EIPL/README.md',markdown(text))

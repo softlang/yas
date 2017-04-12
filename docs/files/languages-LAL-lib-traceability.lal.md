@@ -10,3 +10,10 @@ axiom { forall r1 <- RefL1 . forall r2 <- RefL2 .
       deref(r1, a1) = b1 /\ deref(r2, a2) = b2)
         <=> ref(r1, r2, a1, a2) }
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/traceability.lal',lal(text))
+* mapsTo(parse,['languages/LAL/lib/traceability.lal'],['languages/LAL/lib/traceability.term'])

@@ -10,3 +10,9 @@ import Text.Parsec.String (Parser)
 
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/EL/Haskell/Language/EL/QQ/Parser.hs',haskell(text))

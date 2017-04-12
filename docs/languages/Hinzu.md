@@ -3,13 +3,20 @@
 
 A trivial metadata/annotation language designed to facilitate basic documentation and semantic annotation of languages in the YAS repository.
 
-## Language purposes
+## Purposes
 * Metadata definition
 * Megamodeling
 
-## Language relationships
+## Links
 
-## Language elements
+## Representations
+* hinzu(term)
+
+## References
+* membership(hinzu(term),eslLanguage,['languages/Hinzu/as.term'])
+* function(dump,[],[hinzu(term)],hinzuDump:main,[])
+
+## Elements
 * [languages/ANTLR/.hinzu](../files/languages-ANTLR-.hinzu.md)
 * [languages/ASL/.hinzu](../files/languages-ASL-.hinzu.md)
 * [languages/BAL/.hinzu](../files/languages-BAL-.hinzu.md)

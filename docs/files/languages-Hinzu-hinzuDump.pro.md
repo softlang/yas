@@ -9,3 +9,9 @@ main(Ds) :-
     hdeclaration(D),
     Ds).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Hinzu/hinzuDump.pro',prolog(text))

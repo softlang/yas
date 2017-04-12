@@ -10,3 +10,9 @@ import Data.Generics
 -- Expressions
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/EL/Haskell/Language/EL/QQ/Syntax.hs',haskell(text))

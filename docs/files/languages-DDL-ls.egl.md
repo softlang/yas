@@ -5,3 +5,10 @@ name : lower { csym }* ;
 integer : { digit }+ ;
 layout : { space }+ ;
 ```
+
+## Languages
+* [EGL](../languages/EGL.md)
+
+## References
+* elementOf('languages/DDL/ls.egl',egl(text))
+* mapsTo(parse,['languages/DDL/ls.egl'],['languages/DDL/ls.term'])

@@ -8,3 +8,9 @@ bnlScanner(String1, L2) :-
   map(flip(atom_codes), L1, L2).
 
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BNL/Prolog/scanner.pro',prolog(text))

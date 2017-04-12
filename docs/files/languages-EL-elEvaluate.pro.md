@@ -10,3 +10,9 @@
    See the language BIPL and BFPL with corresponding expressiveness.
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/EL/elEvaluate.pro',prolog(text))

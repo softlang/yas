@@ -2,11 +2,17 @@
 **[GitHub](https://github.com/softlang/yas/blob/master/languages/LAL/README.md)**
 ```
 # Language _LAL (Linguistic Architecture Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/languages/LAL)**
-
 A predicate logic-based megamodeling language used for capturing properties of language processors and deriving test cases.
 
-## Language purposes
+## Purposes
 _None_
+
+## Links
 ...
 ```
+
+## Languages
+* [Markdown](../languages/Markdown.md)
+
+## References
+* elementOf('languages/LAL/README.md',markdown(text))

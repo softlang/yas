@@ -15,3 +15,10 @@ type terminal = string ;
 type nonterminal = string ;
 // END ...
 ```
+
+## Languages
+* [ESL](../languages/ESL.md)
+
+## References
+* elementOf('languages/BCL/as.esl',esl(text))
+* mapsTo(parse,['languages/BCL/as.esl'],['languages/BCL/as.term'])

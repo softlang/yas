@@ -2,11 +2,17 @@
 **[GitHub](https://github.com/softlang/yas/blob/master/languages/Markdown/README.md)**
 ```
 # Language _Markdown_
-**[GitHub](https://github.com/softlang/yas/blob/master/languages/Markdown)**
-
 A markup-based documentation language.
 
-## Language purposes
+## Purposes
 _None_
+
+## Links
 ...
 ```
+
+## Languages
+* [Markdown](../languages/Markdown.md)
+
+## References
+* elementOf('languages/Markdown/README.md',markdown(text))

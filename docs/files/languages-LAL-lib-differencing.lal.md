@@ -14,3 +14,10 @@ axiom empty { forall x <- L. applyDiff(emptyDiff, x) = x }
 axiom invEmpty { invDiff(emptyDiff) = emptyDiff }
 axiom invTwice { forall d <- DiffL. invDiff(invDiff(d)) = d }
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/differencing.lal',lal(text))
+* mapsTo(parse,['languages/LAL/lib/differencing.lal'],['languages/LAL/lib/differencing.term'])

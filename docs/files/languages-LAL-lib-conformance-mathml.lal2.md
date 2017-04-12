@@ -15,3 +15,11 @@ link XSD to 'https://www.w3.org/XML/Schema'
 link MathML to 'https://www.w3.org/TR/MathML3'
 link MathMLSchema to 'https://www.w3.org/Math/XMLSchema'
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/conformance/mathml.lal2',lal(text))
+* mapsTo(pp,['languages/LAL/lib/conformance/mathml.term2'],['languages/LAL/lib/conformance/mathml.lal2'])
+* mapsTo(parse,['languages/LAL/lib/conformance/mathml.lal2'],['languages/LAL/lib/conformance/mathml.term2'])

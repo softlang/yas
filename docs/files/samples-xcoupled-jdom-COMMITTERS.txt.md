@@ -12,3 +12,9 @@ Jason Hunter is code captains for this module.
 Jason Hunter <jhunter_AT_jdom_DOT_org>
 
 ```
+
+## Languages
+* [Text](../languages/Text.md)
+
+## References
+* elementOf('samples/xcoupled/jdom/COMMITTERS.txt',text)

@@ -6,3 +6,10 @@ reuse language [ L |-> L2, Any |-> Any2 ]
 reuse language [ L |-> XL, Any |-> XAny ]
 function interpret : XL # L1 ~> L2
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/interpretation.lal',lal(text))
+* mapsTo(parse,['languages/LAL/lib/interpretation.lal'],['languages/LAL/lib/interpretation.term'])

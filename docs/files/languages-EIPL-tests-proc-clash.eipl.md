@@ -7,3 +7,10 @@ begin
   ;
 end
 ```
+
+## Languages
+* [EIPL](../languages/EIPL.md)
+
+## References
+* elementOf('languages/EIPL/tests/proc-clash.eipl',eipl(text))
+* mapsTo(parse,['languages/EIPL/tests/proc-clash.eipl'],['languages/EIPL/tests/proc-clash.term'])

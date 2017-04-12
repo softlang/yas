@@ -9,3 +9,9 @@ Ds1 => Ds3 :-
 
 sort(L, [L]) => sort(L, []).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/LAL/lalNorm.pro',prolog(text))

@@ -7,6 +7,10 @@
   elementOf('dump.hinzu', hinzu(term)),
   mapsTo(dump, [], ['dump.hinzu']),
 
+  % Infer some more Hinzu
+  function(hinzuInference, [], [], hinzuInference:main, []),
+  mapsTo(hinzuInference, [], []),
+
   % Publish Hinzu in Markdown
   function(hinzuToMd, [], [], hinzuToMd:main, []),
   mapsTo(hinzuToMd, [], [])

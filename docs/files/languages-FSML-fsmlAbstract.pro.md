@@ -10,3 +10,9 @@
   ( I1 == [] -> I2 = false; I2 = true ), % initial or not
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/FSML/fsmlAbstract.pro',prolog(text))

@@ -8,3 +8,10 @@
     ;
 }
 ```
+
+## Languages
+* [BIPL](../languages/BIPL.md)
+
+## References
+* elementOf('languages/BIPL/samples/ifthenelse.bipl',bipl(text))
+* mapsTo(parse,['languages/BIPL/samples/ifthenelse.bipl'],['languages/BIPL/samples/ifthenelse.term'])

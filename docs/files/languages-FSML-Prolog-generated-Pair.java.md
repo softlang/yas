@@ -11,3 +11,9 @@ public class Pair<X,Y> {
     }
 }
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/FSML/Prolog/generated/Pair.java',java(text))

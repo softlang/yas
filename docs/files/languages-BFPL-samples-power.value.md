@@ -3,3 +3,9 @@
 ```
 intval(8).
 ```
+
+## Languages
+
+## References
+* elementOf('languages/BFPL/samples/power.value',bfpl(value(term)))
+* mapsTo(bigstep,['languages/BFPL/samples/power.term'],['languages/BFPL/samples/power.value'])

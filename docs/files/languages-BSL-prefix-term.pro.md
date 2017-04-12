@@ -7,3 +7,9 @@ prefixTerm(Term) :-
   atom(Symbol),
   map(prefixTerm, Terms).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BSL/prefix-term.pro',prolog(text))

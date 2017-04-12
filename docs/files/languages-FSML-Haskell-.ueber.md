@@ -5,3 +5,9 @@
   membership(fsml(text), haskell('FsmlAcceptor'), ['.'])
 ].
 ```
+
+## Languages
+* [Ueber](../languages/Ueber.md)
+
+## References
+* elementOf('languages/FSML/Haskell/.ueber',ueber(term))

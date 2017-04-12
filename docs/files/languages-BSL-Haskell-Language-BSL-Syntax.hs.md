@@ -9,3 +9,9 @@ type Profile = (Sym, [Sort], Sort)
 type Sym = String
 type Sort = String
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BSL/Haskell/Language/BSL/Syntax.hs',haskell(text))

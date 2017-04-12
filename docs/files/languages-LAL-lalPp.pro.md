@@ -10,3 +10,9 @@ pp(Ds, T) :-
 % Lists of declarations
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/LAL/lalPp.pro',prolog(text))

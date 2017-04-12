@@ -9,3 +9,9 @@ import Language.BIPL.DS.Domains
 type Gotos = [(String, StoreT)] -- Goto tables
 type StoreTT' = (StoreT, Gotos) -> (StoreT, Gotos) -- Transformation with gotos
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BIPL/Haskell/Language/BIPL/Goto/Domains.hs',haskell(text))

@@ -10,3 +10,9 @@ evaluate((Fs, E), V) :-
 
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/EFPL/Prolog/big-step/evaluate.pro',prolog(text))

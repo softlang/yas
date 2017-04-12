@@ -6,3 +6,10 @@ figure : {element ';'}* ;
 [circle ] element : 'circle' 'origin' ':' point ',' 'radius' ':' integer ;
 point : '(' integer ',' integer ')' ;
 ```
+
+## Languages
+* [EGL](../languages/EGL.md)
+
+## References
+* elementOf('samples/obsolete/figure/cs.egl',egl(text))
+* mapsTo(parse,['samples/obsolete/figure/cs.egl'],['samples/obsolete/figure/cs.term'])

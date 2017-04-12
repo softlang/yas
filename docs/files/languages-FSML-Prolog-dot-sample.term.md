@@ -10,3 +10,11 @@
   ],
 ...
 ```
+
+## Languages
+* [DGL](../languages/DGL.md)
+
+## References
+* mapsTo(fsmToDgl,['languages/FSML/sample.term'],['languages/FSML/Prolog/dot/sample.term'])
+* elementOf('languages/FSML/Prolog/dot/sample.term',dgl(term))
+* mapsTo(pp,['languages/FSML/Prolog/dot/sample.term'],['languages/FSML/Prolog/dot/sample.ppl'])

@@ -10,3 +10,9 @@
 graph(Ds, (Ns, Es)) :-
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Ueber/ueberGraphLanguages.pro',prolog(text))

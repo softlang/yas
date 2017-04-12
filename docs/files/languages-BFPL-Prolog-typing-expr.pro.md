@@ -10,3 +10,9 @@ ok(_, _, intconst(_), inttype).
 % The context provides the type of an argument name 
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BFPL/Prolog/typing/expr.pro',prolog(text))

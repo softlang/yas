@@ -6,3 +6,9 @@ import Language.TBL.Sample
 
 main = print smallWorld
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/TBL/Haskell/Main.hs',haskell(text))

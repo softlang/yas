@@ -10,3 +10,11 @@ function get : L1 -> L2
 axiom {
 ...
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/bx/state.lal2',lal(text))
+* mapsTo(pp,['languages/LAL/lib/bx/state.term2'],['languages/LAL/lib/bx/state.lal2'])
+* mapsTo(parse,['languages/LAL/lib/bx/state.lal2'],['languages/LAL/lib/bx/state.term2'])

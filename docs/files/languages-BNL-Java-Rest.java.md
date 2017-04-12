@@ -3,3 +3,9 @@
 ```
 public abstract class Rest { }
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/BNL/Java/Rest.java',java(text))

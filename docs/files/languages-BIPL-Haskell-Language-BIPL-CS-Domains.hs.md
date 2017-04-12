@@ -9,3 +9,9 @@ import Language.BIPL.DS.Domains
 -- END ...
 type StoreTT = StoreT -> StoreT
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BIPL/Haskell/Language/BIPL/CS/Domains.hs',haskell(text))

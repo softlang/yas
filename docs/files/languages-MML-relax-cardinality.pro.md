@@ -10,3 +10,9 @@ relaxOne(X, Y) :-
   lookup(class, X, one),
   update(class, option, X, Y).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MML/relax-cardinality.pro',prolog(text))

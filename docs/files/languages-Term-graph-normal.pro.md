@@ -10,3 +10,9 @@ graphEq(D1, D2) :-
 graphNf(D1, D2) :-
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Term/graph/normal.pro',prolog(text))

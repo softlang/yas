@@ -10,3 +10,9 @@ lookup(K, _&D, V) :-
   lookup(K, D, V).
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Term/graph/crud.pro',prolog(text))

@@ -10,3 +10,9 @@ import Data.Maybe (maybeToList)
 -- END ...
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Language/FSML/Interpreter.hs',haskell(text))

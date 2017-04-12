@@ -12,3 +12,9 @@ public class Syntax {
     }
 }
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/TBL/Java/org/softlang/tbl/Syntax.java',java(text))

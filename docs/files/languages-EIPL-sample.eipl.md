@@ -15,3 +15,10 @@ begin
   end
 end
 ```
+
+## Languages
+* [EIPL](../languages/EIPL.md)
+
+## References
+* elementOf('languages/EIPL/sample.eipl',eipl(text))
+* mapsTo(parse,['languages/EIPL/sample.eipl'],['languages/EIPL/sample.term'])

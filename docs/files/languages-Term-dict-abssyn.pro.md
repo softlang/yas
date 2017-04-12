@@ -10,3 +10,9 @@ dict(D) :-
   map(dictValue, VL).
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Term/dict/abssyn.pro',prolog(text))

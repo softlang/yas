@@ -8,3 +8,10 @@ symbol sequ : trafo # trafo -> trafo ;
 type sort = string ;
 type sym = string ;
 ```
+
+## Languages
+* [ESL](../languages/ESL.md)
+
+## References
+* elementOf('languages/BSTL/as.esl',esl(text))
+* mapsTo(parse,['languages/BSTL/as.esl'],['languages/BSTL/as.term'])

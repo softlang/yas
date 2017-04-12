@@ -10,3 +10,9 @@ public class ImperativeSample {
 	
 ...
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/FSML/Java/org/softlang/fsml/ImperativeSample.java',java(text))

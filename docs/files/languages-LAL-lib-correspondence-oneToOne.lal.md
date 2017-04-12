@@ -11,3 +11,10 @@ axiom { forall a1 <- L1. forall a2 <- L2.
           exists! b1 <- L1. partOf(b1, a1) /\ correspondsTo(b1, b2))
   => correspondsTo(a1, a2) }
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/correspondence/oneToOne.lal',lal(text))
+* mapsTo(parse,['languages/LAL/lib/correspondence/oneToOne.lal'],['languages/LAL/lib/correspondence/oneToOne.term'])

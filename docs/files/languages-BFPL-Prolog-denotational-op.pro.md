@@ -10,3 +10,9 @@ meaningOp(sub, F1, F2, X, intval(I0)) :-
   apply(F1, [X, I1]),
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BFPL/Prolog/denotational/op.pro',prolog(text))

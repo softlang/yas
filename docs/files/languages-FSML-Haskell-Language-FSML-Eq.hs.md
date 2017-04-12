@@ -9,3 +9,9 @@ import Language.FSML.Normalization
 instance Eq Fsm where
   x == y = getStates (normalize x) == getStates (normalize y)
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Language/FSML/Eq.hs',haskell(text))

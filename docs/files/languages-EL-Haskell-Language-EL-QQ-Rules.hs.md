@@ -10,3 +10,9 @@ import Language.EL.QQ.Rules.Simplify
 import Language.EL.QQ.Rules.Commute
 import Language.EL.QQ.Rules.Associate
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/EL/Haskell/Language/EL/QQ/Rules.hs',haskell(text))

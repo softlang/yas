@@ -8,3 +8,9 @@
 (name, String) ~> Atom :- name(Atom, String).
 (args, [(X, Y)]) ~> [X|Y].
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BSL/bslAbstract.pro',prolog(text))

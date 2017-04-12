@@ -10,3 +10,9 @@ lookupClass(ClassN, MM, Class) :-
 lookupConcreteClass(ClassN, MM, Class) :-
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MML/crud.pro',prolog(text))

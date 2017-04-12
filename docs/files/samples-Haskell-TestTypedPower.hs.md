@@ -15,3 +15,9 @@ main = do
   print $ power3 3
 -- END ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('samples/Haskell/TestTypedPower.hs',haskell(text))

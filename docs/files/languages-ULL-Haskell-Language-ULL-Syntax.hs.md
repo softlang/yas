@@ -15,3 +15,9 @@ data Expr
   deriving (Eq, Show, Read)
 -- END ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/ULL/Haskell/Language/ULL/Syntax.hs',haskell(text))

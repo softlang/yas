@@ -10,3 +10,9 @@ metamodelOk(Classifiers) :-
 
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MML/ok.pro',prolog(text))

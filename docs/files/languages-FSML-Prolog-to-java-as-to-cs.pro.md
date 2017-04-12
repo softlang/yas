@@ -10,3 +10,9 @@ ppJavaDecl(J, S) :-
 ppJavaDecl_(
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/FSML/Prolog/to-java/as-to-cs.pro',prolog(text))

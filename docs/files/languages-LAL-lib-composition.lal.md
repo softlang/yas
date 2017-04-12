@@ -10,3 +10,10 @@ axiom partTransitive { forall x, y <- L.
   /\ (partOfPlus(x, y) => partOfStar(x, y))
   /\ (forall z <- L. partOfPlus(x, z) /\ partOfPlus(z, y) => partOfPlus(x, y)) }
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/composition.lal',lal(text))
+* mapsTo(parse,['languages/LAL/lib/composition.lal'],['languages/LAL/lib/composition.term'])

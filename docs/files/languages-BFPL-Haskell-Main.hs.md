@@ -10,3 +10,9 @@ import Language.BFPL.Inliner as I
 import Language.BFPL.Specializer as S
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BFPL/Haskell/Main.hs',haskell(text))

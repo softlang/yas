@@ -8,3 +8,9 @@ prog((Fs, E), V) :-
   meaningExpr(Fs, E, F),
   passTo([], F, V).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BFPL/Prolog/denotational/prog.pro',prolog(text))

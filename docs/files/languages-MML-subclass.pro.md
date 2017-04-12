@@ -10,3 +10,9 @@ subclassOf(MM, N1, N2) :-
   lookupClass(N1, MM, C),
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MML/subclass.pro',prolog(text))

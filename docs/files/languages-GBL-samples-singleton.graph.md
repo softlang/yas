@@ -12,3 +12,9 @@
   ]
 }.
 ```
+
+## Languages
+* [GBL](../languages/GBL.md)
+
+## References
+* elementOf('languages/GBL/samples/singleton.graph',gbl(graph(term)))

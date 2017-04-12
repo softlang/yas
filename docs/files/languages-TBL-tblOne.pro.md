@@ -7,3 +7,9 @@
 world(Ps) :- map(tblOne:person, Ps).
 person((_, [_])).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/TBL/tblOne.pro',prolog(text))

@@ -3,3 +3,12 @@
 ```
 binary(mul,binary(mul,binary(mul,var(a),var(b)),var(c)),var(d)).
 ```
+
+## Languages
+* [EL](../languages/EL.md)
+
+## References
+* elementOf('languages/EL/tests/left-associated.term',el(term))
+* mapsTo(parse,['languages/EL/tests/left-associated.el'],['languages/EL/tests/left-associated.term'])
+* mapsTo(fullbu,['languages/EL/tests/left-associated.term'],['languages/EL/tests/mix-associated.term'])
+* mapsTo(innermost,['languages/EL/tests/left-associated.term'],['languages/EL/tests/right-associated.term'])

@@ -10,3 +10,9 @@ translate(Lals, C, Ues) :-
     concat(Uess, Ues).
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/LAL/lalUeber.pro',prolog(text))

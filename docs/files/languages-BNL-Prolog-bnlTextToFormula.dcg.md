@@ -12,3 +12,9 @@ bit(Pos, 2^Pos) --> ['1'].
 rest(0) --> [].
 rest(Val) --> ['.'], bits(-1, _Len, Val).
 ```
+
+## Languages
+* [DCG](../languages/DCG.md)
+
+## References
+* elementOf('languages/BNL/Prolog/bnlTextToFormula.dcg',dcg(prolog(text)))

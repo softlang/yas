@@ -10,3 +10,9 @@ import org.softlang.fsml.FunctionalSample;
 import org.softlang.fsml.ImperativeSample;
 ...
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/FSML/Java/org/softlang/fsml/tests/InfluentTest.java',java(text))

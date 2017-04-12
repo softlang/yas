@@ -3,3 +3,10 @@
 ```
 [ (joe,[bill]), (bill,[john])].
 ```
+
+## Languages
+* [TBL](../languages/TBL.md)
+
+## References
+* elementOf('languages/TBL/samples/notOk2.term',tbl(term))
+* mapsTo(parse,['languages/TBL/samples/notOk2.tbl'],['languages/TBL/samples/notOk2.term'])

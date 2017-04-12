@@ -10,3 +10,10 @@
 [remove] trafo : 'remove' rule ;
 ...
 ```
+
+## Languages
+* [EGL](../languages/EGL.md)
+
+## References
+* elementOf('languages/EGTL/cs.egl',egl(text))
+* mapsTo(parse,['languages/EGTL/cs.egl'],['languages/EGTL/cs.term'])

@@ -10,3 +10,9 @@ interpret(sequ([T|Ts]), G1, G3) :-
     interpret(sequ(Ts), G2, G3).
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/EGTL/egtlInterpret.pro',prolog(text))

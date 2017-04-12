@@ -9,3 +9,9 @@
    </if>
 </pred>
 ```
+
+## Languages
+* [XML](../languages/XML.md)
+
+## References
+* elementOf('languages/BTL/XML/sample.xml',xml)

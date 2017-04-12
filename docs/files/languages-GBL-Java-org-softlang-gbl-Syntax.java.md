@@ -12,3 +12,9 @@ public class Syntax {
     }
 }
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/GBL/Java/org/softlang/gbl/Syntax.java',java(text))

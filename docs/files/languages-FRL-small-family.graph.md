@@ -10,3 +10,10 @@
       class : person,
 ...
 ```
+
+## Languages
+* [FRL](../languages/FRL.md)
+
+## References
+* mapsTo(atomToRef,['languages/FNL/atomToRef.config','languages/FNL/small-family.graph','languages/FNL/mm.graph'],['languages/FRL/small-family.graph','languages/FRL/mm.graph'])
+* elementOf('languages/FRL/small-family.graph',frl(graph(term)))

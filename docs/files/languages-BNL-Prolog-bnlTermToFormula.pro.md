@@ -10,3 +10,9 @@ number(number(Bits, Rest), Val1+Val2) :-
 bits(single(Bit), Pos, 1, Val) :-
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BNL/Prolog/bnlTermToFormula.pro',prolog(text))

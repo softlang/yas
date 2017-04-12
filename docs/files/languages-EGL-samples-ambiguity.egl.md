@@ -6,3 +6,10 @@
 [add] bop : '+' ;
 [mul] bop : '*' ;
 ```
+
+## Languages
+* [EGL](../languages/EGL.md)
+
+## References
+* elementOf('languages/EGL/samples/ambiguity.egl',egl(text))
+* mapsTo(parse,['languages/EGL/samples/ambiguity.egl'],['languages/EGL/samples/ambiguity.term'])

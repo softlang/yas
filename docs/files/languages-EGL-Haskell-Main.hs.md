@@ -10,3 +10,9 @@ import Data.Map (empty, insert)
 import Text.Parsec
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/EGL/Haskell/Main.hs',haskell(text))

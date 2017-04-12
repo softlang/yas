@@ -2,15 +2,23 @@
 **[GitHub](https://github.com/softlang/yas/blob/master/languages/BAL/README.md)**
 ```
 # Language _BAL (Basic Assembly Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/languages/BAL)**
-
 A trivial stack- and address-based assembly language; memory access and jumps use symbolic names rather than ints.
 
-## Language purposes
+## Purposes
 * Compilation
 
-## Language relationships
+## Links
 * variationOf: [BML](http://softlang.github.io/yas/languages/BML.html)
 
-## Language elements
+## Representations
+
+## References
+
+## Elements
 ```
+
+## Languages
+* [Markdown](../languages/Markdown.md)
+
+## References
+* elementOf('languages/BAL/README.md',markdown(text))

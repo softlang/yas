@@ -6,3 +6,10 @@
     ;
 }
 ```
+
+## Languages
+* [BIPL](../languages/BIPL.md)
+
+## References
+* elementOf('languages/BIPL/samples/ifthen.bipl',bipl(text))
+* mapsTo(parse,['languages/BIPL/samples/ifthen.bipl'],['languages/BIPL/samples/ifthen.term'])

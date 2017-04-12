@@ -7,3 +7,9 @@ eq(Lal1, Lal2) :-
     apply(lalNorm:(=>), [Lal1, Lal]),
     apply(lalNorm:(=>), [Lal2, Lal]).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/LAL/lalTermEq.pro',prolog(text))

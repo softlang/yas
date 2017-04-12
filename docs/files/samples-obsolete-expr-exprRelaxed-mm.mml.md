@@ -15,3 +15,10 @@ class add extends expr {
   part right : expr?;    
 }
 ```
+
+## Languages
+* [MML](../languages/MML.md)
+
+## References
+* elementOf('samples/obsolete/expr/exprRelaxed/mm.mml',mml(text))
+* mapsTo(parse,['samples/obsolete/expr/exprRelaxed/mm.mml'],['samples/obsolete/expr/exprRelaxed/mm.term'])

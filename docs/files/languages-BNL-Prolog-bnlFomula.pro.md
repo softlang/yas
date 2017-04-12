@@ -11,3 +11,9 @@ formula(X+Y) :- formula(X), formula(Y).
 formula(X-Y) :- formula(X), formula(Y).
 formula(X^Y) :- formula(X), formula(Y).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BNL/Prolog/bnlFomula.pro',prolog(text))

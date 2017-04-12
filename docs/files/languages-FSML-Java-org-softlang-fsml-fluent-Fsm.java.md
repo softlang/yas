@@ -11,3 +11,9 @@ public interface Fsm {
 	public ActionStatePair makeTransition(String state, String event);
 }
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/FSML/Java/org/softlang/fsml/fluent/Fsm.java',java(text))

@@ -10,3 +10,9 @@ import Text.Parsec.String (Parser)
 -- END ...
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Language/FSML/MonadicParser.hs',haskell(text))

@@ -10,3 +10,9 @@ import qualified Text.Parsec.Token as Token
 
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/EL/Haskell/Language/EL/Lexer.hs',haskell(text))

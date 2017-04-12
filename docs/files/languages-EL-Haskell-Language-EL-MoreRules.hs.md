@@ -10,3 +10,9 @@ import Control.Monad
 -- END ...
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/EL/Haskell/Language/EL/MoreRules.hs',haskell(text))

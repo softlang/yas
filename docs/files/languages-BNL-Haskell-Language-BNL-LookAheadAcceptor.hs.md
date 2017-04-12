@@ -10,3 +10,9 @@ accept i = case number i of
   Just [] -> True
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BNL/Haskell/Language/BNL/LookAheadAcceptor.hs',haskell(text))

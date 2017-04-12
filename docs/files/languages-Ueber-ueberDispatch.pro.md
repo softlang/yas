@@ -10,3 +10,9 @@ overloads(Ds, R, InFs, OutFs, Overloads2) :-
       map(ueberDispatch:inferredLanguage(Ds), InFs, InLs),
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Ueber/ueberDispatch.pro',prolog(text))

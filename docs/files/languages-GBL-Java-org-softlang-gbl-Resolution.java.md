@@ -10,3 +10,9 @@ public class Resolution {
             graph.persons[i] = new Syntax.Person();
 ...
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/GBL/Java/org/softlang/gbl/Resolution.java',java(text))

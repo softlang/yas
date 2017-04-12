@@ -7,3 +7,10 @@ initial state stateA {
 }
 state stateB { }
 ```
+
+## Languages
+* [FSML](../languages/FSML.md)
+
+## References
+* elementOf('languages/FSML/tests/resolutionNotOk.fsml',fsml(text))
+* mapsTo(parse,['languages/FSML/tests/resolutionNotOk.fsml'],['languages/FSML/tests/resolutionNotOk.term'])

@@ -9,3 +9,10 @@
    // ...
 }
 ```
+
+## Languages
+* [BIPL](../languages/BIPL.md)
+
+## References
+* elementOf('languages/BIPL/samples/abs.bipl',bipl(text))
+* mapsTo(parse,['languages/BIPL/samples/abs.bipl'],['languages/BIPL/samples/abs.term'])

@@ -10,3 +10,10 @@ digraph G {
   6 [label="ok(bfpl(term))", shape=ellipse, style=filled]
 ...
 ```
+
+## Languages
+* [DGL](../languages/DGL.md)
+
+## References
+* elementOf('languages/Ueber/languages.dgl',dgl(text))
+* mapsTo(pp,['languages/Ueber/languages.ppl'],['languages/Ueber/languages.dgl'])

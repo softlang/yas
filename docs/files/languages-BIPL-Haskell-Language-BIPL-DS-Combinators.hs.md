@@ -10,3 +10,9 @@ import Language.BIPL.Interpreter (uop, bop)
 import Data.Map ((!), insert)
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BIPL/Haskell/Language/BIPL/DS/Combinators.hs',haskell(text))

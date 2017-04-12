@@ -1,15 +1,19 @@
 # Language _Haskell_
-**[GitHub](https://github.com/softlang/yas/blob/master/languages/Haskell)**
-
 A standardized, general-purpose purely functional programming language, with non-strict semantics and strong static typing.
 
-## Language purposes
-_None_
+## Purposes
+* Functional programming
 
-## Language relationships
+## Links
 * sameAs: [https://en.wikipedia.org/wiki/Haskell_(programming_language)](https://en.wikipedia.org/wiki/Haskell_(programming_language))
 
-## Language elements
+## Representations
+* haskell(text)
+
+## References
+* membership(haskell(text),succeed,[])
+
+## Elements
 * [languages/BAL/Haskell/Language/BAL/Assembler.hs](../../languages/BAL/Haskell/Language/BAL/Assembler.hs)
 * [languages/BAL/Haskell/Language/BAL/Sample.hs](../../languages/BAL/Haskell/Language/BAL/Sample.hs)
 * [languages/BAL/Haskell/Language/BAL/Syntax.hs](../../languages/BAL/Haskell/Language/BAL/Syntax.hs)

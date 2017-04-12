@@ -10,3 +10,9 @@ ppProg(L, S) :-
 ppFun(
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BFPL/as-to-cs.pro',prolog(text))

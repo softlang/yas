@@ -3,10 +3,14 @@
 
 A trivial stack- and address-based machine language; memory access and jumps use ints rather than symbolic names.
 
-## Language purposes
+## Purposes
 * Compilation
 
-## Language relationships
+## Links
 * variationOf: [BAL](http://softlang.github.io/yas/languages/BAL.html)
 
-## Language elements
+## Representations
+
+## References
+
+## Elements

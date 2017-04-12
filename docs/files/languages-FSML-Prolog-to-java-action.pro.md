@@ -10,3 +10,9 @@ actionsOfFsm(Fsm, Text) :-
       member((_, _, Ts), Fsm),
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/FSML/Prolog/to-java/action.pro',prolog(text))

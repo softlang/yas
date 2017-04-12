@@ -16,3 +16,10 @@ type extends = cname ;
 type cname = string ;
 type mname = string ;
 ```
+
+## Languages
+* [ESL](../languages/ESL.md)
+
+## References
+* elementOf('languages/MML/as.esl',esl(text))
+* mapsTo(parse,['languages/MML/as.esl'],['languages/MML/as.term'])

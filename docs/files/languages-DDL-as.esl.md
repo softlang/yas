@@ -12,3 +12,10 @@ symbol foreignKey : tname # cname -> clause ;
 type tname = string ;
 type cname = string ;
 ```
+
+## Languages
+* [ESL](../languages/ESL.md)
+
+## References
+* elementOf('languages/DDL/as.esl',esl(text))
+* mapsTo(parse,['languages/DDL/as.esl'],['languages/DDL/as.term'])

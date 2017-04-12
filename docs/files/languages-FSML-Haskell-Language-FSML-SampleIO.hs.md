@@ -10,3 +10,9 @@ import Language.FSML.Domains
 sampleInput :: Input
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Language/FSML/SampleIO.hs',haskell(text))

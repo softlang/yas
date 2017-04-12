@@ -10,3 +10,9 @@ class FsmlParseException(FsmlException):
 
 ...
 ```
+
+## Languages
+* [Python](../languages/Python.md)
+
+## References
+* elementOf('languages/FSML/Python/FsmlExceptions.py',python(text))

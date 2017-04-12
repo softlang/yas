@@ -9,3 +9,10 @@ symbol pred : expr -> expr ; // Predecessor of a natural number
 symbol iszero : expr -> expr ; // Test for a number to be zero
 symbol if : expr # expr # expr -> expr ; // Conditional
 ```
+
+## Languages
+* [BSL](../languages/BSL.md)
+
+## References
+* elementOf('languages/BTL/as.bsl',bsl(text))
+* mapsTo(parse,['languages/BTL/as.bsl'],['languages/BTL/as.term'])

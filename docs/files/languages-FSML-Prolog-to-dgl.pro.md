@@ -10,3 +10,9 @@ fsmToDgl(Ss, (Ns, Es)) :-
 % Map state of FSM
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/FSML/Prolog/to-dgl.pro',prolog(text))

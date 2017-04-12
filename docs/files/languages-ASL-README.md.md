@@ -2,11 +2,17 @@
 **[GitHub](https://github.com/softlang/yas/blob/master/languages/ASL/README.md)**
 ```
 # Language _ASL (Algebraic Specification Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/languages/ASL)**
-
 A simple language for algebraic specification.
 
-## Language purposes
+## Purposes
 * Algebraic specification
+
+## Links
 ...
 ```
+
+## Languages
+* [Markdown](../languages/Markdown.md)
+
+## References
+* elementOf('languages/ASL/README.md',markdown(text))

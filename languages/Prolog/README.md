@@ -1,15 +1,19 @@
 # Language _Prolog_
-**[GitHub](https://github.com/softlang/yas/blob/master/languages/Prolog)**
-
 A general-purpose logic programming language associated with artificial intelligence and computational linguistics.
 
-## Language purposes
+## Purposes
 _None_
 
-## Language relationships
+## Links
 * sameAs: [https://en.wikipedia.org/wiki/Prolog](https://en.wikipedia.org/wiki/Prolog)
 
-## Language elements
+## Representations
+* prolog(text)
+
+## References
+* membership(prolog(text),succeed,[])
+
+## Elements
 * [languages/BCL/bclOk.pro](../../languages/BCL/bclOk.pro)
 * [languages/BFPL/as-to-cs.pro](../../languages/BFPL/as-to-cs.pro)
 * [languages/BFPL/bfplAbstract.pro](../../languages/BFPL/bfplAbstract.pro)
@@ -123,6 +127,7 @@ _None_
 * [languages/GBL/gblAbstract.pro](../../languages/GBL/gblAbstract.pro)
 * [languages/GBL/tblToGbl.pro](../../languages/GBL/tblToGbl.pro)
 * [languages/Hinzu/hinzuDump.pro](../../languages/Hinzu/hinzuDump.pro)
+* [languages/Hinzu/hinzuInference.pro](../../languages/Hinzu/hinzuInference.pro)
 * [languages/Hinzu/hinzuToMd.pro](../../languages/Hinzu/hinzuToMd.pro)
 * [languages/LAL/lalAbstract.pro](../../languages/LAL/lalAbstract.pro)
 * [languages/LAL/lalDeps.pro](../../languages/LAL/lalDeps.pro)

@@ -10,3 +10,9 @@ specification pqueue
 imports
 ...
 ```
+
+## Languages
+* [ASL](../languages/ASL.md)
+
+## References
+* elementOf('languages/ASL/samples/adts/pqueue.asl',asl(text))

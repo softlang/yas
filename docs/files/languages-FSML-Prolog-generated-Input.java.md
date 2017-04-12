@@ -4,3 +4,10 @@
 // Generated code
 public enum Input {ticket, pass, mute, release}
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* mapsTo(inputsOfFsm,['languages/FSML/sample.term'],['languages/FSML/Prolog/generated/Input.java'])
+* elementOf('languages/FSML/Prolog/generated/Input.java',java(text))

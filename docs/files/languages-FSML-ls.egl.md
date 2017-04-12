@@ -4,3 +4,10 @@
 name : { alpha }+ ;
 layout : { space }+ ;
 ```
+
+## Languages
+* [EGL](../languages/EGL.md)
+
+## References
+* elementOf('languages/FSML/ls.egl',egl(text))
+* mapsTo(parse,['languages/FSML/ls.egl'],['languages/FSML/ls.term'])

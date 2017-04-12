@@ -3,3 +3,10 @@
 ```
 a, b, c
 ```
+
+## Languages
+* [Text](../languages/Text.md)
+
+## References
+* elementOf('languages/PPL/tests/hseplist.txt',text)
+* mapsTo(pp,['languages/PPL/tests/hseplist.ppl'],['languages/PPL/tests/hseplist.txt'])

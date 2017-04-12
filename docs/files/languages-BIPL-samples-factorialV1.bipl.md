@@ -15,3 +15,10 @@
 }
 // END ...
 ```
+
+## Languages
+* [BIPL](../languages/BIPL.md)
+
+## References
+* elementOf('languages/BIPL/samples/factorialV1.bipl',bipl(text))
+* mapsTo(parse,['languages/BIPL/samples/factorialV1.bipl'],['languages/BIPL/samples/factorialV1.term'])

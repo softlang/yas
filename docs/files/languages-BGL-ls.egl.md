@@ -6,3 +6,10 @@ name : { alpha }+ ;
 layout : { space }+ ;
 layout : '//' { { end_of_line }~ }* end_of_line ;
 ```
+
+## Languages
+* [EGL](../languages/EGL.md)
+
+## References
+* elementOf('languages/BGL/ls.egl',egl(text))
+* mapsTo(parse,['languages/BGL/ls.egl'],['languages/BGL/ls.term'])

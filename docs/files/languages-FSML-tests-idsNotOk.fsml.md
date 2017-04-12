@@ -9,3 +9,10 @@ state stateA {
 }
 state stateZ { }
 ```
+
+## Languages
+* [FSML](../languages/FSML.md)
+
+## References
+* elementOf('languages/FSML/tests/idsNotOk.fsml',fsml(text))
+* mapsTo(parse,['languages/FSML/tests/idsNotOk.fsml'],['languages/FSML/tests/idsNotOk.term'])

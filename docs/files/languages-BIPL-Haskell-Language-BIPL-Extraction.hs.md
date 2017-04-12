@@ -15,3 +15,9 @@ ops s = foldr (\o m -> insertWith (+) o 1 m) empty os
     f (Binary o _ _) = [showConstr (toConstr o)]
     f _ = []
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BIPL/Haskell/Language/BIPL/Extraction.hs',haskell(text))

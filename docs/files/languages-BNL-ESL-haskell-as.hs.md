@@ -5,3 +5,9 @@ data Number = Number Bits Bits
 type Bits = [Bit]
 data Bit = Zero | One
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BNL/ESL/haskell/as.hs',haskell(text))

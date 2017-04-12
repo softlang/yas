@@ -9,3 +9,9 @@ module Language.BTL.Value where
 -- Results of evaluation
 type Value = Either Int Bool
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BTL/Haskell/Language/BTL/Value.hs',haskell(text))

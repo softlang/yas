@@ -10,3 +10,9 @@ import Language.FSML.Syntax
 -- END ...
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Language/FSML/QQ/Sample.hs',haskell(text))

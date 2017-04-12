@@ -10,3 +10,9 @@ type GSymbols = [GSymbol]
 data GSymbol
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/EGL/Haskell/Language/EGL/Syntax.hs',haskell(text))

@@ -6,7 +6,8 @@
       lid(haskell), 
       name('Haskell'),
       explanation('A standardized, general-purpose purely functional programming language, with non-strict semantics and strong static typing.'),
-      sameAs('https://en.wikipedia.org/wiki/Haskell_(programming_language)')
+      sameAs('https://en.wikipedia.org/wiki/Haskell_(programming_language)'),
+      purpose('Functional programming')
   ]),
   r([
       rid(haskell(text)),
@@ -15,3 +16,9 @@
   ])
 ].
 ```
+
+## Languages
+* [Hinzu](../languages/Hinzu.md)
+
+## References
+* elementOf('languages/Haskell/.hinzu',hinzu(term))

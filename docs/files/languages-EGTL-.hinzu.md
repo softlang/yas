@@ -10,3 +10,9 @@
       dependsOn(egl),
 ...
 ```
+
+## Languages
+* [Hinzu](../languages/Hinzu.md)
+
+## References
+* elementOf('languages/EGTL/.hinzu',hinzu(term))

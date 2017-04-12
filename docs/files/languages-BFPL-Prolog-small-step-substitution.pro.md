@@ -15,3 +15,9 @@ substitute(S, binary(O, Left1, Right1), binary(O, Left2, Right2)) :-
 substitute(S, apply(F, Es1), apply(F, Es2)) :-
   map(substitute(S), Es1, Es2).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BFPL/Prolog/small-step/substitution.pro',prolog(text))

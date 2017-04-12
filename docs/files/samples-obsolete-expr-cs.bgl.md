@@ -6,3 +6,10 @@
 [zero] nat : 'zero' ;
 [succ] nat : 'succ' '(' nat ')' ;
 ```
+
+## Languages
+* [BGL](../languages/BGL.md)
+
+## References
+* elementOf('samples/obsolete/expr/cs.bgl',bgl(text))
+* mapsTo(parse,['samples/obsolete/expr/cs.bgl'],['samples/obsolete/expr/cs.term'])

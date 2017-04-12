@@ -10,3 +10,9 @@ atomToRefMM(
   MM2 % Output metamodel
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MML/atom-to-ref/mmt.pro',prolog(text))

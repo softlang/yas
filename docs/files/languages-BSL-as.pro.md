@@ -10,3 +10,9 @@ profiles(Profiles) :-
   map(symbolOfProfile, Profiles, Symbols),
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BSL/as.pro',prolog(text))

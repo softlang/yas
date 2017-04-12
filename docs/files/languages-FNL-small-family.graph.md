@@ -10,3 +10,10 @@
       firstName : x,
 ...
 ```
+
+## Languages
+* [FNL](../languages/FNL.md)
+
+## References
+* elementOf('languages/FNL/small-family.graph',fnl(graph(term)))
+* mapsTo(atomToRef,['languages/FNL/atomToRef.config','languages/FNL/small-family.graph','languages/FNL/mm.graph'],['languages/FRL/small-family.graph','languages/FRL/mm.graph'])

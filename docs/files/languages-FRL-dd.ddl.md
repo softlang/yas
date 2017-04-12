@@ -10,3 +10,10 @@ CREATE TABLE person (
   objectId INTEGER NOT NULL PRIMARY KEY,
 ...
 ```
+
+## Languages
+* [DDL](../languages/DDL.md)
+
+## References
+* elementOf('languages/FRL/dd.ddl',ddl(text))
+* mapsTo(parse,['languages/FRL/dd.ddl'],['languages/FRL/dd.term'])

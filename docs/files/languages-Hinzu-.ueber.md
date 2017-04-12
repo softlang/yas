@@ -8,10 +8,11 @@
   % Dump Hinzu metadata
   function(dump, [], [hinzu(term)], hinzuDump:main, []),
   elementOf('dump.hinzu', hinzu(term)),
-  mapsTo(dump, [], ['dump.hinzu']),
-
-  % Publish Hinzu in Markdown
-  function(hinzuToMd, [], [], hinzuToMd:main, []),
-  mapsTo(hinzuToMd, [], [])
-].
+...
 ```
+
+## Languages
+* [Ueber](../languages/Ueber.md)
+
+## References
+* elementOf('languages/Hinzu/.ueber',ueber(term))

@@ -10,3 +10,9 @@ el(Content, _Vars, _Dict, Term) :-
 
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/EL/Prolog/qq/elqqQuasiQuoter.pro',prolog(text))

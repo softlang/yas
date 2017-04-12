@@ -7,3 +7,9 @@
 {|el || ($X + $Y) + $Z |} ~> {|el || $X + ($Y + $Z) |}.
 {|el || ($X * $Y) * $Z |} ~> {|el || $X * ($Y * $Z) |}.
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/EL/Prolog/qq/rules/elqqAssociate.pro',prolog(text))

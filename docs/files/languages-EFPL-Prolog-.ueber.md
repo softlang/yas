@@ -10,3 +10,9 @@
   elementOf('../tests/sample-past-inference.term', ok(efpl(term))),
 ...
 ```
+
+## Languages
+* [Ueber](../languages/Ueber.md)
+
+## References
+* elementOf('languages/EFPL/Prolog/.ueber',ueber(term))

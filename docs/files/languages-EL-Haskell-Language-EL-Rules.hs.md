@@ -10,3 +10,9 @@ import Language.EL.Rules.Simplify
 import Language.EL.Rules.Commute
 import Language.EL.Rules.Associate
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/EL/Haskell/Language/EL/Rules.hs',haskell(text))

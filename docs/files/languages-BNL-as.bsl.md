@@ -9,3 +9,10 @@ symbol one: -> bit ; // The non-zero bit
 symbol integer: -> rest ; // An integer number
 symbol rational: bits -> rest ; // A rational number
 ```
+
+## Languages
+* [BSL](../languages/BSL.md)
+
+## References
+* elementOf('languages/BNL/as.bsl',bsl(text))
+* mapsTo(parse,['languages/BNL/as.bsl'],['languages/BNL/as.term'])

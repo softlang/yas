@@ -12,3 +12,10 @@ symbol bold : -> style ;
 symbol dotted : -> style ;
 symbol filled : -> style ;
 ```
+
+## Languages
+* [ESL](../languages/ESL.md)
+
+## References
+* elementOf('languages/DGL/as.esl',esl(text))
+* mapsTo(parse,['languages/DGL/as.esl'],['languages/DGL/as.term'])

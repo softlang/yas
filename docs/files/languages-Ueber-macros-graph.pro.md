@@ -11,3 +11,9 @@ graphSample(Lang, Sample) :-
 graphSample(Lang) :-
   graphSample(Lang, sample).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Ueber/macros/graph.pro',prolog(text))

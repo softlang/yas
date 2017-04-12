@@ -10,3 +10,9 @@
       purpose('Concrete textual syntax definition'),
 ...
 ```
+
+## Languages
+* [Hinzu](../languages/Hinzu.md)
+
+## References
+* elementOf('languages/BGL/.hinzu',hinzu(term))

@@ -3,13 +3,19 @@
 
 The ANTLR tool and language for parsing and processing string languages.
 
-## Language purposes
+## Purposes
 * Parser description
 
-## Language relationships
+## Links
 * sameAs: [http://www.antlr.org/](http://www.antlr.org/)
 
-## Language elements
+## Representations
+* antlr(text)
+
+## References
+* membership(antlr(text),succeed,[])
+
+## Elements
 * [languages/BNL/ANTLR/BnlBnf.g4](../files/languages-BNL-ANTLR-BnlBnf.g4.md)
 * [languages/BNL/ANTLR/BnlBnfConversion.g4](../files/languages-BNL-ANTLR-BnlBnfConversion.g4.md)
 * [languages/BNL/ANTLR/BnlEbnf.g4](../files/languages-BNL-ANTLR-BnlEbnf.g4.md)

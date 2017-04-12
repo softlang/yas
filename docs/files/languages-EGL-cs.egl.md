@@ -14,3 +14,10 @@ label : name ;
 terminal : qstring ;
 nonterminal : name ;
 ```
+
+## Languages
+* [EGL](../languages/EGL.md)
+
+## References
+* elementOf('languages/EGL/cs.egl',egl(text))
+* mapsTo(parse,['languages/EGL/cs.egl'],['languages/EGL/cs.term'])

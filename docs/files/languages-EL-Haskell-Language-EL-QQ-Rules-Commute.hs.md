@@ -12,3 +12,9 @@ commute [el| $x + $y |] = Just [el| $y + $x |]
 commute [el| $x * $y |] = Just [el| $y * $x |]
 commute _ = Nothing
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/EL/Haskell/Language/EL/QQ/Rules/Commute.hs',haskell(text))

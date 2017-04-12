@@ -10,3 +10,10 @@ initial state stateB {
 state stateC {
 }
 ```
+
+## Languages
+* [FSML](../languages/FSML.md)
+
+## References
+* elementOf('languages/FSML/tests/initialNotOk2.fsml',fsml(text))
+* mapsTo(parse,['languages/FSML/tests/initialNotOk2.fsml'],['languages/FSML/tests/initialNotOk2.term'])

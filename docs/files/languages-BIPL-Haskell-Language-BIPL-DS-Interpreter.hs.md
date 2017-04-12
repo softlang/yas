@@ -10,3 +10,9 @@ import Language.BIPL.DS.Combinators
 -- END ...
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BIPL/Haskell/Language/BIPL/DS/Interpreter.hs',haskell(text))

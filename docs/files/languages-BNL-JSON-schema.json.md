@@ -10,3 +10,9 @@
     "properties": {
 ...
 ```
+
+## Languages
+* [JSON](../languages/JSON.md)
+
+## References
+* elementOf('languages/BNL/JSON/schema.json',json)

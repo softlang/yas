@@ -10,3 +10,9 @@ accept(G, I) :- steps(G, [], I).
 
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BGL/bglAcceptBottomUp.pro',prolog(text))

@@ -10,3 +10,11 @@ relation partOfPlus : L # L
 relation partOfStar : L # L
 ...
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/selection.lal2',lal(text))
+* mapsTo(pp,['languages/LAL/lib/selection.term2'],['languages/LAL/lib/selection.lal2'])
+* mapsTo(parse,['languages/LAL/lib/selection.lal2'],['languages/LAL/lib/selection.term2'])

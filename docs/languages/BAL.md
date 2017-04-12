@@ -3,10 +3,14 @@
 
 A trivial stack- and address-based assembly language; memory access and jumps use symbolic names rather than ints.
 
-## Language purposes
+## Purposes
 * Compilation
 
-## Language relationships
+## Links
 * variationOf: [BML](http://softlang.github.io/yas/languages/BML.html)
 
-## Language elements
+## Representations
+
+## References
+
+## Elements

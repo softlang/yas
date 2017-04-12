@@ -10,3 +10,9 @@ public class FsmImpl implements Fsm {
 	private String initial; // the initial state
 ...
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/FSML/Java/org/softlang/fsml/fluent/FsmImpl.java',java(text))

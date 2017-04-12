@@ -10,3 +10,11 @@ sort XAny
 sort XL <= XAny
 ...
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/cx/cotransformation.lal2',lal(text))
+* mapsTo(pp,['languages/LAL/lib/cx/cotransformation.term2'],['languages/LAL/lib/cx/cotransformation.lal2'])
+* mapsTo(parse,['languages/LAL/lib/cx/cotransformation.lal2'],['languages/LAL/lib/cx/cotransformation.term2'])

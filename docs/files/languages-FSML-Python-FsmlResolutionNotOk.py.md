@@ -11,3 +11,9 @@ resolutionNotOk = \
       .addTransition("eventII", "actionII", "stateC") \
     .addState("stateB")
 ```
+
+## Languages
+* [Python](../languages/Python.md)
+
+## References
+* elementOf('languages/FSML/Python/FsmlResolutionNotOk.py',python(text))

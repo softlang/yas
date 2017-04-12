@@ -10,3 +10,9 @@
       supersetOf(bgl),
 ...
 ```
+
+## Languages
+* [Hinzu](../languages/Hinzu.md)
+
+## References
+* elementOf('languages/EGL/.hinzu',hinzu(term))

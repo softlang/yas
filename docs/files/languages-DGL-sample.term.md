@@ -12,3 +12,10 @@
   ] 
 ).
 ```
+
+## Languages
+* [DGL](../languages/DGL.md)
+
+## References
+* elementOf('languages/DGL/sample.term',dgl(term))
+* mapsTo(pp,['languages/DGL/sample.term'],['languages/DGL/sample.ppl'])

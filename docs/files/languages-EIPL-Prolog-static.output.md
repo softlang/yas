@@ -3,3 +3,10 @@
 ```
 [intval(5)].
 ```
+
+## Languages
+* [Term](../languages/Term.md)
+
+## References
+* elementOf('languages/EIPL/Prolog/static.output',term)
+* mapsTo(executeStatic,['languages/EIPL/sample.term'],['languages/EIPL/Prolog/static.output'])

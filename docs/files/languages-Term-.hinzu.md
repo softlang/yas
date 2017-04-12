@@ -13,3 +13,9 @@
   ])
 ].
 ```
+
+## Languages
+* [Hinzu](../languages/Hinzu.md)
+
+## References
+* elementOf('languages/Term/.hinzu',hinzu(term))

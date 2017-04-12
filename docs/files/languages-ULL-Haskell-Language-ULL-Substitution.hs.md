@@ -10,3 +10,9 @@ substitute e x (Var y) | x == y = Just e
 substitute e x (Var y) | x /= y = Just (Var y)
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/ULL/Haskell/Language/ULL/Substitution.hs',haskell(text))

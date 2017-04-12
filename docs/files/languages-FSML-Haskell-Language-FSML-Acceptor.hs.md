@@ -10,3 +10,9 @@ module Language.FSML.Acceptor
 
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Language/FSML/Acceptor.hs',haskell(text))

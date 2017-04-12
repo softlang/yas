@@ -3,13 +3,19 @@
 
 A grammatical notation based on logic programming.
 
-## Language purposes
+## Purposes
 _None_
 
-## Language relationships
+## Links
 * sameAs: [https://en.wikipedia.org/wiki/Definite_clause_grammar](https://en.wikipedia.org/wiki/Definite_clause_grammar)
 
-## Language elements
+## Representations
+* dcg(prolog(text))
+
+## References
+* membership(dcg(prolog(text)),succeed,[])
+
+## Elements
 * [languages/BNL/cs.dcg](../files/languages-BNL-cs.dcg.md)
 * [languages/BNL/Prolog/bnlAcceptor.dcg](../files/languages-BNL-Prolog-bnlAcceptor.dcg.md)
 * [languages/BNL/Prolog/bnlParser.dcg](../files/languages-BNL-Prolog-bnlParser.dcg.md)

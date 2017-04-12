@@ -10,3 +10,10 @@ dec x = (-) x 1
 factorial x =
 ...
 ```
+
+## Languages
+* [EFPL](../languages/EFPL.md)
+
+## References
+* elementOf('languages/EFPL/tests/sample.efpl',efpl(text))
+* mapsTo(parse,['languages/EFPL/tests/sample.efpl'],['languages/EFPL/tests/sample.term'])

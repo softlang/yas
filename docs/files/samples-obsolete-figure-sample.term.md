@@ -7,3 +7,12 @@
   line((3,5), (0,0))
 ].
 ```
+
+## Languages
+
+## References
+* elementOf('samples/obsolete/figure/sample.term',figure(term))
+* mapsTo(parse,['samples/obsolete/figure/sample.figure'],['samples/obsolete/figure/sample.term'])
+* mapsTo(pp,['samples/obsolete/figure/sample.term'],['samples/obsolete/figure/sample.ppl'])
+* mapsTo(scannerless,['samples/obsolete/figure/sample.figure'],['samples/obsolete/figure/sample.term'])
+* mapsTo(scannerfull,['samples/obsolete/figure/parsing/sample.tokens'],['samples/obsolete/figure/sample.term'])

@@ -10,3 +10,9 @@ dglPp(
     text('}')
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/DGL/pp.pro',prolog(text))

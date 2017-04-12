@@ -11,3 +11,9 @@ type Value = Either Int Bool
 -- Stores as maps from variable names to values
 type Store = Map String Value
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BIPL/Haskell/Language/BIPL/Domains.hs',haskell(text))

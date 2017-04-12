@@ -16,3 +16,9 @@ bnlGrammar = [
   ("rational", "rest", [T '.', N "bits"])
  ]
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BGL/Haskell/Language/BGL/Sample.hs',haskell(text))

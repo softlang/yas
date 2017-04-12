@@ -8,3 +8,10 @@ class person {
 }
 datatype string ;
 ```
+
+## Languages
+* [MML](../languages/MML.md)
+
+## References
+* elementOf('languages/TBL/mm.mml',mml(text))
+* mapsTo(parse,['languages/TBL/mm.mml'],['languages/TBL/mm.term'])

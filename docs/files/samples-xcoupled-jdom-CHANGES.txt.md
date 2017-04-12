@@ -10,3 +10,9 @@ Added output support for Unicode surrogate pairs.
 
 ...
 ```
+
+## Languages
+* [Text](../languages/Text.md)
+
+## References
+* elementOf('samples/xcoupled/jdom/CHANGES.txt',text)

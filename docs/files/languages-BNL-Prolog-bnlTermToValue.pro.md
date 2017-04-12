@@ -10,3 +10,9 @@ number(number(Bits, Rest), Val0) :-
   rest(Rest, Val2),
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BNL/Prolog/bnlTermToValue.pro',prolog(text))

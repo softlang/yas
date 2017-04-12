@@ -12,3 +12,9 @@ public interface List {
 	List init();
 }
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/ASL/samples/adts/Java/functional/v1/List.java',java(text))

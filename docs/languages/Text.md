@@ -3,12 +3,20 @@
 
 Text as a basic representation format used by the YAS repository.
 
-## Language purposes
+## Purposes
 _None_
 
-## Language relationships
+## Links
 
-## Language elements
+## Representations
+* text
+
+## References
+* function(pp,[ppl(term)],[text],pplRender:render,[])
+* membership(text,succeed,[])
+* function(loc,[text],[term],textLoc:loc,[])
+
+## Elements
 * [languages/FSML/Prolog/generated/baseline.txt](../files/languages-FSML-Prolog-generated-baseline.txt.md)
 * [languages/FSML/tests/syntaxError.fsml](../files/languages-FSML-tests-syntaxError.fsml.md)
 * [languages/PPL/tests/hbox.txt](../files/languages-PPL-tests-hbox.txt.md)

@@ -10,3 +10,9 @@ import Language.BGL.BottomUpAcceptor as BU
 import Language.BGL.TopDownParser
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BGL/Haskell/Main.hs',haskell(text))

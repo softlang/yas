@@ -6,3 +6,9 @@
   (succ, [nat], nat)
 ].
 ```
+
+## Languages
+* [BSL](../languages/BSL.md)
+
+## References
+* elementOf('languages/BSL/sample.term',bsl(term))

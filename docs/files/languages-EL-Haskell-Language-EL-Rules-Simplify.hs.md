@@ -11,3 +11,9 @@ simplify (Binary Mul x (IntConst 1)) = Just x
 simplify (Binary Mul x (IntConst 0)) = Just (IntConst 0)
 simplify _ = Nothing
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/EL/Haskell/Language/EL/Rules/Simplify.hs',haskell(text))

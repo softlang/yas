@@ -15,3 +15,9 @@ normalize(Ds, F, L, Content1, Content2) :-
     apply(Pred, Args2),
     'Normalization of file ~w for language ~w: failed.', [F, L] ).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Ueber/ueberNorm.pro',prolog(text))

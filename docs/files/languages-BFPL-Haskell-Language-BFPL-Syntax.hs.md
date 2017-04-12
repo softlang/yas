@@ -10,3 +10,9 @@ type Functions = [Function]
 type Function = (String, (FunSig, FunDef))
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BFPL/Haskell/Language/BFPL/Syntax.hs',haskell(text))

@@ -10,3 +10,9 @@ import Language.FSML.Syntax
 import Language.FSML.Lexer
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Language/FSML/ApplicativeParser.hs',haskell(text))

@@ -13,3 +13,9 @@ getObject(D, Id, O) :- dictToList(D, L), unzip(L, _, LV), getObject(LV, Id, O).
 % Search among elements of a list
 getObject(L, Id, O) :- member(E, L), getObject(E, Id, O).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Term/graph/graphDeref.pro',prolog(text))

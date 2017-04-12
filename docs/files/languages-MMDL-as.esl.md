@@ -10,3 +10,10 @@ symbol addMember : cname # member -> diff ;
 // MML constructs
 ...
 ```
+
+## Languages
+* [ESL](../languages/ESL.md)
+
+## References
+* elementOf('languages/MMDL/as.esl',esl(text))
+* mapsTo(parse,['languages/MMDL/as.esl'],['languages/MMDL/as.term'])

@@ -3,3 +3,9 @@
 ```
 { "bits": ["one", "zero"] }
 ```
+
+## Languages
+* [JSON](../languages/JSON.md)
+
+## References
+* elementOf('languages/BNL/samples/10.json',json)

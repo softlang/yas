@@ -9,3 +9,9 @@
 (abstract, abstract) ~> true.
 (abstract, concrete) ~> false.
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MML/mmlAbstract.pro',prolog(text))

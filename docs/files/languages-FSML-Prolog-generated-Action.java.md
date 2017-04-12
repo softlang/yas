@@ -4,3 +4,10 @@
 // Generated code
 public enum Action {collect, alarm, eject}
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* mapsTo(actionsOfFsm,['languages/FSML/sample.term'],['languages/FSML/Prolog/generated/Action.java'])
+* elementOf('languages/FSML/Prolog/generated/Action.java',java(text))

@@ -10,3 +10,9 @@ parse(Rules1, Rules2, Layout, Mapping, Chars0, Tree) :-
     Config = (Rules1, Terminal, External, Mapping),
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/EGL/eglScannerless.pro',prolog(text))

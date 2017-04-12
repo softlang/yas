@@ -10,3 +10,10 @@ symbol float : -> typeexpr ;
 symbol string : -> typeexpr ; 
 ...
 ```
+
+## Languages
+* [ESL](../languages/ESL.md)
+
+## References
+* elementOf('languages/ESL/as.esl',esl(text))
+* mapsTo(parse,['languages/ESL/as.esl'],['languages/ESL/as.term'])

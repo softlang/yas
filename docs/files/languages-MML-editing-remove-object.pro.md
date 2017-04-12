@@ -10,3 +10,9 @@ removeObject(MM1, Id, Obj1, Obj3) :-
     missingId(Id),
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MML/editing/remove-object.pro',prolog(text))

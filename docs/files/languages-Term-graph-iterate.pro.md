@@ -10,3 +10,9 @@ topdownGraph(P, O1, O3) :-
   apply(Back, [L2, O3]).
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Term/graph/iterate.pro',prolog(text))

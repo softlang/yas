@@ -10,3 +10,9 @@ import Language.BTL.Value
 -- END ...
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BTL/Haskell/Language/BTL/Interpreter.hs',haskell(text))

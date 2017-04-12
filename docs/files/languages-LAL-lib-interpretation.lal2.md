@@ -9,3 +9,11 @@ sort XAny
 sort XL <= XAny
 function interpret : XL # L1 ~> L2
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/interpretation.lal2',lal(text))
+* mapsTo(pp,['languages/LAL/lib/interpretation.term2'],['languages/LAL/lib/interpretation.lal2'])
+* mapsTo(parse,['languages/LAL/lib/interpretation.lal2'],['languages/LAL/lib/interpretation.term2'])

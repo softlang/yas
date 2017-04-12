@@ -10,3 +10,9 @@ imports
 functions
 ...
 ```
+
+## Languages
+* [ASL](../languages/ASL.md)
+
+## References
+* elementOf('languages/ASL/samples/adts/lqueue2.asl',asl(text))

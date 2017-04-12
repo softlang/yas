@@ -10,3 +10,9 @@ data Instr
   | Load String -- Push a storage cell's content onto stack
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BAL/Haskell/Language/BAL/Syntax.hs',haskell(text))

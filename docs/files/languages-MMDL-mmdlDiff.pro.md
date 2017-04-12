@@ -10,3 +10,9 @@ diff(Cs1, Cs2, sequ(Ds)) :-
 classifiers([], [], []).
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MMDL/mmdlDiff.pro',prolog(text))

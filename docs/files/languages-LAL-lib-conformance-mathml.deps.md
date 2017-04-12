@@ -3,3 +3,9 @@
 ```
 [ ([conformance],'languages/LAL/lib/conformance.term2')].
 ```
+
+## Languages
+
+## References
+* elementOf('languages/LAL/lib/conformance/mathml.deps',deps(term))
+* mapsTo(deps,['languages/LAL/lib/conformance/mathml.term'],['languages/LAL/lib/conformance/mathml.deps'])

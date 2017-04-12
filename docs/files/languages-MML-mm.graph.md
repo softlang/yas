@@ -10,3 +10,10 @@
     ( metamodel & { class:class, name:metamodel, % ...
 ...
 ```
+
+## Languages
+
+## References
+* elementOf('languages/MML/mm.graph',mml(graph(term)))
+* mapsTo(resolve,['languages/MML/mm.term'],['languages/MML/mm.graph'])
+* membership(mml(graph(term)),mmlChecker,['languages/MML/mm.graph'])

@@ -10,3 +10,9 @@ memberConforms(_, _, V, value, Type, Times) :-
 
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MML/conformance/member.pro',prolog(text))

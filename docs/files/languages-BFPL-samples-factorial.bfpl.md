@@ -11,3 +11,10 @@ factorial x =
 -- Apply the function to 5
 main = print $ factorial 5 -- Prints 120
 ```
+
+## Languages
+* [BFPL](../languages/BFPL.md)
+
+## References
+* elementOf('languages/BFPL/samples/factorial.bfpl',bfpl(text))
+* mapsTo(parse,['languages/BFPL/samples/factorial.bfpl'],['languages/BFPL/samples/factorial.term'])

@@ -6,3 +6,10 @@ type profile = sym # sort* # sort ;
 type sym = string ;
 type sort = string ;
 ```
+
+## Languages
+* [ESL](../languages/ESL.md)
+
+## References
+* elementOf('languages/BSL/as.esl',esl(text))
+* mapsTo(parse,['languages/BSL/as.esl'],['languages/BSL/as.term'])

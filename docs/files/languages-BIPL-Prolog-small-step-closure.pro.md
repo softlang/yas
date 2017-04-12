@@ -10,3 +10,9 @@ allSteps(S, Sto) :-
 
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BIPL/Prolog/small-step/closure.pro',prolog(text))

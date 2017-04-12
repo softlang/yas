@@ -10,3 +10,9 @@ public class Transition {
 	private String event;
 ...
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/FSML/Java/org/softlang/fsml/Transition.java',java(text))

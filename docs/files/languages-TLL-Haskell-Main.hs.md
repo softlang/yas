@@ -10,3 +10,9 @@ import Language.ULL.Closure
 import Language.TLL.Erasure
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/TLL/Haskell/Main.hs',haskell(text))

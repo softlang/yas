@@ -10,3 +10,9 @@ import qualified Data.Set as S
 
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Language/FSML/BoolChecker.hs',haskell(text))

@@ -6,3 +6,9 @@
   membership(haskell(text), succeed, [])
 ].
 ```
+
+## Languages
+* [Ueber](../languages/Ueber.md)
+
+## References
+* elementOf('languages/Haskell/.ueber',ueber(term))

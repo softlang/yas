@@ -9,3 +9,9 @@
 (integer, Digits) ~> Int :- number_codes(Int, Digits).
 (name, String) ~> Atom :- name(Atom, String).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/TBL/tblAbstract.pro',prolog(text))

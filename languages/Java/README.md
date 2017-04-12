@@ -1,15 +1,27 @@
 # Language _Java_
-**[GitHub](https://github.com/softlang/yas/blob/master/languages/Java)**
-
 A general-purpose programming language that is concurrent, class-based, object-oriented, and (as of version 8) functional.
 
-## Language purposes
-_None_
+## Purposes
+* Object-oriented programming
 
-## Language relationships
+## Links
 * sameAs: [https://en.wikipedia.org/wiki/Java_(programming_language)](https://en.wikipedia.org/wiki/Java_(programming_language))
 
-## Language elements
+## Representations
+* java(text)
+* java(term)
+
+## References
+* function(statesOfFsm,[fsml(term)],[java(text)],statesOfFsm,[])
+* function(inputsOfFsm,[fsml(term)],[java(text)],inputsOfFsm,[])
+* function(actionsOfFsm,[fsml(term)],[java(text)],actionsOfFsm,[])
+* function(stepperOfFsm,[fsml(term)],[java(text)],stepperOfFsm,[])
+* membership(java(term),eslLanguage,['languages/FSML/Prolog/to-java/as.term'])
+* membership(java(text),succeed,[])
+* function(ppJavaDecl,[java(term)],[java(text)],ppJavaDecl,[])
+* function(ppJavaDecl,[java(term)],[java(text)],ppJavaDecl,[])
+
+## Elements
 * [languages/ASL/samples/adts/Java/functional/v1/Cons.java](../../languages/ASL/samples/adts/Java/functional/v1/Cons.java)
 * [languages/ASL/samples/adts/Java/functional/v1/Demo.java](../../languages/ASL/samples/adts/Java/functional/v1/Demo.java)
 * [languages/ASL/samples/adts/Java/functional/v1/List.java](../../languages/ASL/samples/adts/Java/functional/v1/List.java)
@@ -122,6 +134,7 @@ _None_
 * [languages/FSML/Prolog/generated/Stepper.java](../../languages/FSML/Prolog/generated/Stepper.java)
 * [languages/FSML/Prolog/generated/StepperBase.java](../../languages/FSML/Prolog/generated/StepperBase.java)
 * [languages/FSML/Prolog/to-java/sample.java](../../languages/FSML/Prolog/to-java/sample.java)
+* [languages/FSML/Prolog/to-java/sample.term](../../languages/FSML/Prolog/to-java/sample.term)
 * [languages/GBL/Java/org/softlang/gbl/Resolution.java](../../languages/GBL/Java/org/softlang/gbl/Resolution.java)
 * [languages/GBL/Java/org/softlang/gbl/Sample.java](../../languages/GBL/Java/org/softlang/gbl/Sample.java)
 * [languages/GBL/Java/org/softlang/gbl/Syntax.java](../../languages/GBL/Java/org/softlang/gbl/Syntax.java)

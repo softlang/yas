@@ -10,3 +10,9 @@ ok(sub, inttype, inttype, inttype).
 ok(mul, inttype, inttype, inttype).
 ok(eq, inttype, inttype, booltype).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BFPL/Prolog/typing/op.pro',prolog(text))

@@ -15,3 +15,9 @@ type StoreT = Store -> Store
 -- Store observers (semantics of expressions)
 type StoreO = Store -> Value
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BIPL/Haskell/Language/BIPL/DS/Domains.hs',haskell(text))

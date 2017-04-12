@@ -10,3 +10,9 @@ lookup(K, D, V) :- dictToList(D, L), member((K, V), L).
 % Add a key-value pair to a dictionary
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Term/dict/dictCrud.pro',prolog(text))

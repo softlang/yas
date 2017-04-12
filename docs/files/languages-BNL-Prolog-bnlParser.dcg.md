@@ -12,3 +12,9 @@ bit(one) --> ['1'].
 rest(integer) --> [].
 rest(rational(Bs)) --> ['.'], bits(Bs).
 ```
+
+## Languages
+* [DCG](../languages/DCG.md)
+
+## References
+* elementOf('languages/BNL/Prolog/bnlParser.dcg',dcg(prolog(text)))

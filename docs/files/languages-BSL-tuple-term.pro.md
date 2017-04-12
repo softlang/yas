@@ -6,3 +6,9 @@ tupleTerm((Symbol, Terms)) :-
   atom(Symbol),
   map(tupleTerm, Terms).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BSL/tuple-term.pro',prolog(text))

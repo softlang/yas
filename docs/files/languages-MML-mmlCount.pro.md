@@ -6,3 +6,9 @@
 % END ...
 count(Classifiers, Count) :- length(Classifiers, Count).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MML/mmlCount.pro',prolog(text))

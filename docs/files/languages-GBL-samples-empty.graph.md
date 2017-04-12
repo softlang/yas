@@ -6,3 +6,9 @@
   persons : [ ]
 }.
 ```
+
+## Languages
+* [GBL](../languages/GBL.md)
+
+## References
+* elementOf('languages/GBL/samples/empty.graph',gbl(graph(term)))

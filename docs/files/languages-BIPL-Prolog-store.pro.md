@@ -7,3 +7,9 @@ store([]).
 store([(N, V)|Sto]) :- atom(N), intOrBool:value(V), store(Sto).
 
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BIPL/Prolog/store.pro',prolog(text))

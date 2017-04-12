@@ -3,3 +3,9 @@
 ```
 public enum Bit { Zero, One }
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/BNL/ESL/java/Bit.java',java(text))

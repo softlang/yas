@@ -6,3 +6,9 @@
 % END ...
 normal(skip).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BIPL/Prolog/small-step/normal.pro',prolog(text))

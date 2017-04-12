@@ -9,3 +9,9 @@ dictToList({K:V, KVPairs}, [(K, V)|L]) :- dictToList({KVPairs}, L).
 % The conversion is bi-directional
 listToDict(L, D) :- dictToList(D, L).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Term/dict/dictConversion.pro',prolog(text))

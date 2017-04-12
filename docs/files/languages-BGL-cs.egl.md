@@ -10,3 +10,10 @@ label : name ;
 terminal : qstring ;
 nonterminal : name ;
 ```
+
+## Languages
+* [EGL](../languages/EGL.md)
+
+## References
+* elementOf('languages/BGL/cs.egl',egl(text))
+* mapsTo(parse,['languages/BGL/cs.egl'],['languages/BGL/cs.term'])

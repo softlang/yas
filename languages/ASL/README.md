@@ -1,14 +1,18 @@
 # Language _ASL (Algebraic Specification Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/languages/ASL)**
-
 A simple language for algebraic specification.
 
-## Language purposes
+## Purposes
 * Algebraic specification
 
-## Language relationships
+## Links
 
-## Language elements
+## Representations
+* asl(text)
+
+## References
+* membership(asl(text),succeed,[])
+
+## Elements
 * [languages/ASL/samples/sorting.asl](../../languages/ASL/samples/sorting.asl)
 * [languages/ASL/samples/101/companies.asl](../../languages/ASL/samples/101/companies.asl)
 * [languages/ASL/samples/101/employees.asl](../../languages/ASL/samples/101/employees.asl)

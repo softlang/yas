@@ -8,3 +8,10 @@ initial state stateA {
 state stateB { }
 state stateC { }
 ```
+
+## Languages
+* [FSML](../languages/FSML.md)
+
+## References
+* elementOf('languages/FSML/tests/determinismNotOk.fsml',fsml(text))
+* mapsTo(parse,['languages/FSML/tests/determinismNotOk.fsml'],['languages/FSML/tests/determinismNotOk.term'])

@@ -10,3 +10,9 @@ import org.jdom.Namespace;
 public interface RenameElementName<T> extends Operator<T> {
 ...
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('samples/xcoupled/slbook/xcoupled/RenameElementName.java',java(text))

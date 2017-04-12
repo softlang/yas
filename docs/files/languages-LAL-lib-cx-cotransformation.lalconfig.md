@@ -15,3 +15,9 @@
     (c, 'term2.term'),
     (d, 'sig2.term') ])].
 ```
+
+## Languages
+
+## References
+* elementOf('languages/LAL/lib/cx/cotransformation.lalconfig',lal(config(term)))
+* mapsTo(translate,['languages/LAL/lib/cx/cotransformation.term2','languages/LAL/lib/cx/cotransformation.lalconfig'],['languages/BSTL/tests/trafo1.ueber'])

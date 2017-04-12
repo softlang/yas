@@ -5,3 +5,10 @@ begin
   write x;
 end
 ```
+
+## Languages
+* [EIPL](../languages/EIPL.md)
+
+## References
+* elementOf('languages/EIPL/tests/missing-var-dec.eipl',eipl(text))
+* mapsTo(parse,['languages/EIPL/tests/missing-var-dec.eipl'],['languages/EIPL/tests/missing-var-dec.term'])

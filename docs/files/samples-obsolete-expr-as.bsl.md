@@ -6,3 +6,10 @@ symbol add: expr # expr -> expr ;
 symbol zero: -> nat ;
 symbol succ: nat -> nat ;
 ```
+
+## Languages
+* [BSL](../languages/BSL.md)
+
+## References
+* elementOf('samples/obsolete/expr/as.bsl',bsl(text))
+* mapsTo(parse,['samples/obsolete/expr/as.bsl'],['samples/obsolete/expr/as.term'])

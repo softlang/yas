@@ -10,3 +10,9 @@ graphToList(D, L) :-
 % Conversion returning inverse direction
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Term/graph/conversion.pro',prolog(text))

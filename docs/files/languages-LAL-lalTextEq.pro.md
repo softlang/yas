@@ -10,3 +10,9 @@ eq(FileCs, FileLs, Text1, Text2) :-
   Term1 == Term2.
 
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/LAL/lalTextEq.pro',prolog(text))

@@ -15,3 +15,9 @@ all s (Var v) = Var <$> s v
 all s (Unary o e1) = Unary <$> s o <*> s e1
 all s (Binary o e1 e2) = Binary <$> s o <*> s e1 <*> s e2
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/EL/Haskell/Language/EL/All.hs',haskell(text))

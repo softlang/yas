@@ -10,3 +10,9 @@ import Data.Generics
 data Fsm = Fsm { getStates :: [State] }
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Language/FSML/Syntax.hs',haskell(text))

@@ -3,3 +3,10 @@
 ```
 [proc(p,skip),proc(p,skip)],skip.
 ```
+
+## Languages
+* [EIPL](../languages/EIPL.md)
+
+## References
+* elementOf('languages/EIPL/tests/proc-clash.term',eipl(term))
+* mapsTo(parse,['languages/EIPL/tests/proc-clash.eipl'],['languages/EIPL/tests/proc-clash.term'])

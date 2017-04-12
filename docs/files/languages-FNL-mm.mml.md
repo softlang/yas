@@ -12,3 +12,10 @@ class person {
 }
 datatype atom;
 ```
+
+## Languages
+* [MML](../languages/MML.md)
+
+## References
+* elementOf('languages/FNL/mm.mml',mml(text))
+* mapsTo(parse,['languages/FNL/mm.mml'],['languages/FNL/mm.term'])

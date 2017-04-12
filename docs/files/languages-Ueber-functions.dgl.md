@@ -10,3 +10,10 @@ digraph G {
   6 [label="project # bglToBsl", shape=box]
 ...
 ```
+
+## Languages
+* [DGL](../languages/DGL.md)
+
+## References
+* elementOf('languages/Ueber/functions.dgl',dgl(text))
+* mapsTo(pp,['languages/Ueber/functions.ppl'],['languages/Ueber/functions.dgl'])

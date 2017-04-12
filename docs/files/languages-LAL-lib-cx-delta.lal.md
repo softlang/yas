@@ -14,3 +14,10 @@ axiom { forall a, b <- L. forall delta1 <- DiffL.
       interpret(t, a) = c /\ interpret(t, delta1) = delta2 =>
         (exists d <- L. applyDiff(delta2, c) = d /\ compatible(c, d))) }
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/cx/delta.lal',lal(text))
+* mapsTo(parse,['languages/LAL/lib/cx/delta.lal'],['languages/LAL/lib/cx/delta.term'])

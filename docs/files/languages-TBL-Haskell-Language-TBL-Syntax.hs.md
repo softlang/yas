@@ -16,3 +16,9 @@ data Person = Person {
   deriving (Eq, Show)
 -- END ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/TBL/Haskell/Language/TBL/Syntax.hs',haskell(text))

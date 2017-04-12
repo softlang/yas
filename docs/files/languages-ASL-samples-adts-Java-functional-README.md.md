@@ -7,3 +7,9 @@ v1 is a basic version which assumes a very mechanical mapping.
 v2 is a simplified version.
 It assumes some reasoning in terms of the specification or its implementation.
 ```
+
+## Languages
+* [Markdown](../languages/Markdown.md)
+
+## References
+* elementOf('languages/ASL/samples/adts/Java/functional/README.md',markdown(text))

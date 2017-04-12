@@ -6,3 +6,10 @@ integer : { digit }+ ;
 layout : { space }+ ;
 layout : '--' { { end_of_line }~ }* end_of_line ;
 ```
+
+## Languages
+* [EGL](../languages/EGL.md)
+
+## References
+* elementOf('languages/EFPL/ls.egl',egl(text))
+* mapsTo(parse,['languages/EFPL/ls.egl'],['languages/EFPL/ls.term'])

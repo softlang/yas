@@ -5,3 +5,10 @@ reuse composition [ L |-> L1, Any |-> Any1 ]
 reuse composition [ L |-> L2, Any |-> Any2 ] 
 relation correspondsTo : L1 # L2
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/correspondence.lal',lal(text))
+* mapsTo(parse,['languages/LAL/lib/correspondence.lal'],['languages/LAL/lib/correspondence.term'])

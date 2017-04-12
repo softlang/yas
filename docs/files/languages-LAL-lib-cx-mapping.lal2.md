@@ -13,3 +13,11 @@ axiom {
    mapping(a) = b => consistent(a, b)
 }
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/cx/mapping.lal2',lal(text))
+* mapsTo(pp,['languages/LAL/lib/cx/mapping.term2'],['languages/LAL/lib/cx/mapping.lal2'])
+* mapsTo(parse,['languages/LAL/lib/cx/mapping.lal2'],['languages/LAL/lib/cx/mapping.term2'])

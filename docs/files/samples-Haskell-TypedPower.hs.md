@@ -15,3 +15,9 @@ power n x =
 mk_power :: Int -> Q (TExp (Int -> Int))
 mk_power n = [|| \x -> $$(power n [|| x ||]) ||]
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('samples/Haskell/TypedPower.hs',haskell(text))

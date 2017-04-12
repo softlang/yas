@@ -3,3 +3,10 @@
 ```
 [('locked', 'closed'), ('unlocked', 'open')].
 ```
+
+## Languages
+* [Term](../languages/Term.md)
+
+## References
+* elementOf('languages/FSML/tests/renaming.term',term)
+* mapsTo(rename,['languages/FSML/tests/renaming.term','languages/FSML/sample.term'],['languages/FSML/tests/sampleRenamed.term'])

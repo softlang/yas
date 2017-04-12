@@ -10,3 +10,9 @@ bslConformance(Term, Sig) :-
 bslTerm(File, Term) :-
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BSL/api.pro',prolog(text))

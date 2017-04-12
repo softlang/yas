@@ -6,3 +6,9 @@
   "rest": ["zero", "one"]
 }
 ```
+
+## Languages
+* [JSON](../languages/JSON.md)
+
+## References
+* elementOf('languages/BNL/samples/5comma25.json',json)

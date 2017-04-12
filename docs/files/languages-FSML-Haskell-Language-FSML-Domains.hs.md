@@ -10,3 +10,9 @@ type Input = [Event]
 -- Output of FSM simulation
 type Output = [Action]
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Language/FSML/Domains.hs',haskell(text))

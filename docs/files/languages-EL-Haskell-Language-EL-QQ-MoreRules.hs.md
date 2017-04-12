@@ -10,3 +10,9 @@ import Control.Monad
 -- Cancel double negation on Ints
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/EL/Haskell/Language/EL/QQ/MoreRules.hs',haskell(text))

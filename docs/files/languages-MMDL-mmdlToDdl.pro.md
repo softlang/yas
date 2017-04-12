@@ -10,3 +10,9 @@ apply(sequ([D|Ds]), Dd1, Dd3) :-
 
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MMDL/mmdlToDdl.pro',prolog(text))

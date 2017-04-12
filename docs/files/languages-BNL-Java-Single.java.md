@@ -5,3 +5,9 @@ public class Single extends Bits {
     public Bit bit;
 }
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/BNL/Java/Single.java',java(text))

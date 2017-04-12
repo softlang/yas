@@ -10,3 +10,9 @@
       embeds(el),
 ...
 ```
+
+## Languages
+* [Hinzu](../languages/Hinzu.md)
+
+## References
+* elementOf('languages/BIPL/.hinzu',hinzu(term))

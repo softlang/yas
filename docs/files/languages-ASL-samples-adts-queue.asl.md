@@ -10,3 +10,9 @@ sorts
   Queue
 ...
 ```
+
+## Languages
+* [ASL](../languages/ASL.md)
+
+## References
+* elementOf('languages/ASL/samples/adts/queue.asl',asl(text))

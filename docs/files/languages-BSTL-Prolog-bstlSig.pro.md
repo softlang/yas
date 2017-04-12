@@ -13,3 +13,9 @@ renameSort1(N1, N2, (F, Ss1, S1), (F, Ss2, S2)) :-
 renameSort2(N1, N2, N3, N4) :- N3 == N1 -> N4 = N2 ; N4 = N3.
 renameSym(N1, N2, T1, T2) :- T1 = (N1, R) -> T2 = (N2, R) ; T2 = T1.
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BSTL/Prolog/bstlSig.pro',prolog(text))

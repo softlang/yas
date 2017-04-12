@@ -10,3 +10,9 @@
       purpose('Tree-based abstract syntax definition'),
 ...
 ```
+
+## Languages
+* [Hinzu](../languages/Hinzu.md)
+
+## References
+* elementOf('languages/BSL/.hinzu',hinzu(term))

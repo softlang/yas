@@ -10,3 +10,9 @@
 	<department>
 ...
 ```
+
+## Languages
+* [XML](../languages/XML.md)
+
+## References
+* elementOf('samples/xcoupled/input/sampleCompany.xml',xml)

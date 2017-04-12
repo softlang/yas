@@ -10,3 +10,10 @@ symbol var : string -> expr ;
 symbol unary : uop # expr -> expr ;
 ...
 ```
+
+## Languages
+* [ESL](../languages/ESL.md)
+
+## References
+* elementOf('languages/EL/Prolog/qq/as.esl',esl(text))
+* mapsTo(parse,['languages/EL/Prolog/qq/as.esl'],['languages/EL/Prolog/qq/as.term'])

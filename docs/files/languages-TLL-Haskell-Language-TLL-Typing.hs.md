@@ -10,3 +10,9 @@ import Data.Map (Map, lookup, insert)
 -- Context for type checking
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/TLL/Haskell/Language/TLL/Typing.hs',haskell(text))

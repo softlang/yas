@@ -6,3 +6,9 @@ public class Many extends Bits {
     public Bits bits;
 }
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/BNL/Java/Many.java',java(text))

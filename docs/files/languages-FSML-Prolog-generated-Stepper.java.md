@@ -10,3 +10,10 @@ public class Stepper extends StepperBase<State, Input, Action> {
     add(State.locked, Input.pass, Action.alarm, State.exception);
 ...
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* mapsTo(stepperOfFsm,['languages/FSML/sample.term'],['languages/FSML/Prolog/generated/Stepper.java'])
+* elementOf('languages/FSML/Prolog/generated/Stepper.java',java(text))

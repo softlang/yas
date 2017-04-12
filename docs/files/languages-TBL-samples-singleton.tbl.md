@@ -3,3 +3,11 @@
 ```
 joe
 ```
+
+## Languages
+* [TBL](../languages/TBL.md)
+
+## References
+* elementOf('languages/TBL/samples/singleton.tbl',tbl(text))
+* mapsTo(parse,['languages/TBL/samples/singleton.tbl'],['languages/TBL/samples/singleton.term'])
+* mapsTo(loc,['languages/TBL/samples/singleton.tbl'],['languages/TBL/samples/singleton.loc'])

@@ -10,3 +10,9 @@
         "properties": { "true" : { "additionalProperties": false } },
 ...
 ```
+
+## Languages
+* [JSON](../languages/JSON.md)
+
+## References
+* elementOf('languages/BTL/JSON/schema.json',json)

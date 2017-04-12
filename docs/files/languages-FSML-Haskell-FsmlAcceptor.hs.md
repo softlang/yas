@@ -10,3 +10,9 @@ import System.Environment (getArgs)
 import System.IO (readFile)
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/FsmlAcceptor.hs',haskell(text))

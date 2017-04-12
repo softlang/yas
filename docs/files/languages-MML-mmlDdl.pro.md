@@ -10,3 +10,9 @@ metamodel(Classifiers) :-
 % Simplicity of classes
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MML/mmlDdl.pro',prolog(text))

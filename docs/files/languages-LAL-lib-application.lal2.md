@@ -10,3 +10,11 @@ sort XL <= XAny
 function interpretTyped : XL # L1 ~> L2
 ...
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/application.lal2',lal(text))
+* mapsTo(pp,['languages/LAL/lib/application.term2'],['languages/LAL/lib/application.lal2'])
+* mapsTo(parse,['languages/LAL/lib/application.lal2'],['languages/LAL/lib/application.term2'])

@@ -2,15 +2,23 @@
 **[GitHub](https://github.com/softlang/yas/blob/master/languages/BML/README.md)**
 ```
 # Language _BML (Basic Machine Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/languages/BML)**
-
 A trivial stack- and address-based machine language; memory access and jumps use ints rather than symbolic names.
 
-## Language purposes
+## Purposes
 * Compilation
 
-## Language relationships
+## Links
 * variationOf: [BAL](http://softlang.github.io/yas/languages/BAL.html)
 
-## Language elements
+## Representations
+
+## References
+
+## Elements
 ```
+
+## Languages
+* [Markdown](../languages/Markdown.md)
+
+## References
+* elementOf('languages/BML/README.md',markdown(text))

@@ -10,3 +10,9 @@
 		<manager>
 ...
 ```
+
+## Languages
+* [XML](../languages/XML.md)
+
+## References
+* elementOf('samples/xcoupled/output/cut.result.xml',xml)

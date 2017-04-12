@@ -10,3 +10,11 @@ axiom partAsym {
  forall x <- L.
 ...
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/referencing.lal2',lal(text))
+* mapsTo(pp,['languages/LAL/lib/referencing.term2'],['languages/LAL/lib/referencing.lal2'])
+* mapsTo(parse,['languages/LAL/lib/referencing.lal2'],['languages/LAL/lib/referencing.term2'])

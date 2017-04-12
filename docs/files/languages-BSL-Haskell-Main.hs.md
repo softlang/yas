@@ -10,3 +10,9 @@ tests =
   TestList [
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BSL/Haskell/Main.hs',haskell(text))

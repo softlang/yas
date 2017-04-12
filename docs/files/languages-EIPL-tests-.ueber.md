@@ -9,3 +9,9 @@
   macro(ill_formed('missing-proc-dec.eipl'))
 ].
 ```
+
+## Languages
+* [Ueber](../languages/Ueber.md)
+
+## References
+* elementOf('languages/EIPL/tests/.ueber',ueber(term))

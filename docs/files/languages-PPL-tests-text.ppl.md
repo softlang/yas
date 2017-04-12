@@ -4,3 +4,10 @@
 text('text').
 
 ```
+
+## Languages
+* [PPL](../languages/PPL.md)
+
+## References
+* elementOf('languages/PPL/tests/text.ppl',ppl(term))
+* mapsTo(pp,['languages/PPL/tests/text.ppl'],['languages/PPL/tests/text.txt'])

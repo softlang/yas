@@ -1,15 +1,19 @@
 # Language _Python_
-**[GitHub](https://github.com/softlang/yas/blob/master/languages/Python)**
-
 An interpreter-based multi-paradigm general purpose programming language with a dynamic type system
 
-## Language purposes
-_None_
+## Purposes
+* Scripting
 
-## Language relationships
+## Links
 * sameAs: [https://en.wikipedia.org/wiki/Python_(programming_language)](https://en.wikipedia.org/wiki/Python_(programming_language))
 
-## Language elements
+## Representations
+* python(text)
+
+## References
+* membership(python(text),succeed,[])
+
+## Elements
 * [languages/FSML/Python/FsmlAcceptor.py](../../languages/FSML/Python/FsmlAcceptor.py)
 * [languages/FSML/Python/FsmlCGenerator.py](../../languages/FSML/Python/FsmlCGenerator.py)
 * [languages/FSML/Python/FsmlChecker.py](../../languages/FSML/Python/FsmlChecker.py)

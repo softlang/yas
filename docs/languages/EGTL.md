@@ -3,11 +3,23 @@
 
 A trivial transformation language for grammars.
 
-## Language purposes
+## Purposes
 * Grammar transformation
 
-## Language relationships
+## Links
 * dependsOn: [EGL](http://softlang.github.io/yas/languages/EGL.html)
 
-## Language elements
+## Representations
+* egtl(text)
+* egtl(term)
+
+## References
+* membership(egtl(text),eglAcceptor(egtlAbstract: (~>)),['languages/EGTL/cs.term','languages/EGTL/ls.term'])
+* function(parse,[egtl(text)],[egtl(term)],eglParser(egtlAbstract: (~>)),['languages/EGTL/cs.term','languages/EGTL/ls.term'])
+* function(parse,[egtl(text)],[egtl(term)],eglParser(egtlAbstract: (~>)),['languages/EGTL/cs.term','languages/EGTL/ls.term'])
+* membership(egtl(term),eslLanguage,['languages/EGTL/as.term'])
+* function(interpret,[egtl(term),egl(term)],[egl(term)],egtlInterpret:interpret,[])
+
+## Elements
 * [languages/EGTL/samples/bgl2egl.egtl](../files/languages-EGTL-samples-bgl2egl.egtl.md)
+* [languages/EGTL/samples/bgl2egl.term](../files/languages-EGTL-samples-bgl2egl.term.md)

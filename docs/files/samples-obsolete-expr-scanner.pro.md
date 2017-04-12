@@ -9,3 +9,9 @@ exprScanner(Input, Ts) :-
     Ts).
 
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('samples/obsolete/expr/scanner.pro',prolog(text))

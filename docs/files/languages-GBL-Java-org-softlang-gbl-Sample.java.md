@@ -10,3 +10,9 @@ public class Sample {
         World w = new World();
 ...
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/GBL/Java/org/softlang/gbl/Sample.java',java(text))

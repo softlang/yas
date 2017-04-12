@@ -10,3 +10,9 @@ import Data.Typeable
 -- Statements
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BIPL/Haskell/Language/BIPL/Syntax.hs',haskell(text))

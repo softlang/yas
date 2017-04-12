@@ -4,3 +4,10 @@
 // Generated code
 public enum State {locked, unlocked, exception}
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* mapsTo(statesOfFsm,['languages/FSML/sample.term'],['languages/FSML/Prolog/generated/State.java'])
+* elementOf('languages/FSML/Prolog/generated/State.java',java(text))

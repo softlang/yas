@@ -10,3 +10,9 @@ import Text.PrettyPrint.HughesPJ
 fsm :: Fsm -> Doc
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Language/FSML/CombinatorFormatter.hs',haskell(text))

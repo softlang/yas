@@ -10,3 +10,9 @@ notAcceptFsm(Fsm, Input) :-
   not(acceptFsm(Fsm, Input)).
 
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/FSML/Prolog/accept.pro',prolog(text))

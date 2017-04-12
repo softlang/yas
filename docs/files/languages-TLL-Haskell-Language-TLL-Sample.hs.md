@@ -12,3 +12,9 @@ add = Fix (Lambda "f" (FunType NatType (FunType NatType NatType))
                (Var "m")
                (Succ (Apply (Apply (Var "f") (Pred (Var "n"))) (Var "m"))))))) 
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/TLL/Haskell/Language/TLL/Sample.hs',haskell(text))

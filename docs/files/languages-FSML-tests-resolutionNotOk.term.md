@@ -3,3 +3,10 @@
 ```
 [ (true,stateA,[ (eventI,[actionI],stateB), (eventII,[actionII],stateC)]), (false,stateB,[])].
 ```
+
+## Languages
+* [FSML](../languages/FSML.md)
+
+## References
+* elementOf('languages/FSML/tests/resolutionNotOk.term',fsml(term))
+* mapsTo(parse,['languages/FSML/tests/resolutionNotOk.fsml'],['languages/FSML/tests/resolutionNotOk.term'])

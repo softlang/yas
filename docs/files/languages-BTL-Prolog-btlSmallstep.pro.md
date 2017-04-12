@@ -15,3 +15,9 @@ step(if(E0a, E1, E2), if(E0b, E1, E2)) :- step(E0a, E0b).
 step(if(true, E1, _E2), E1).
 step(if(false, _E1, E2), E2).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BTL/Prolog/btlSmallstep.pro',prolog(text))

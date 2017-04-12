@@ -5,3 +5,9 @@ mmlChecker(MmFile, Model) :-
   readTermFile(MmFile, Mm),
   conforms(Model, Mm).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MML/api.pro',prolog(text))

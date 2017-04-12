@@ -2,11 +2,17 @@
 **[GitHub](https://github.com/softlang/yas/blob/master/languages/Text/README.md)**
 ```
 # Language _Text_
-**[GitHub](https://github.com/softlang/yas/blob/master/languages/Text)**
-
 Text as a basic representation format used by the YAS repository.
 
-## Language purposes
+## Purposes
 _None_
+
+## Links
 ...
 ```
+
+## Languages
+* [Markdown](../languages/Markdown.md)
+
+## References
+* elementOf('languages/Text/README.md',markdown(text))

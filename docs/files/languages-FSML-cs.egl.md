@@ -8,3 +8,10 @@ stateid : name ;
 event : name ;
 action : name ;
 ```
+
+## Languages
+* [EGL](../languages/EGL.md)
+
+## References
+* elementOf('languages/FSML/cs.egl',egl(text))
+* mapsTo(parse,['languages/FSML/cs.egl'],['languages/FSML/cs.term'])

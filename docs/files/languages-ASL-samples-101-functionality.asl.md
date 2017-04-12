@@ -10,3 +10,9 @@ function cutSalaries : Company -> Company
 
 ...
 ```
+
+## Languages
+* [ASL](../languages/ASL.md)
+
+## References
+* elementOf('languages/ASL/samples/101/functionality.asl',asl(text))

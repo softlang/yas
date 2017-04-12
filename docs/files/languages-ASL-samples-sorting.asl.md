@@ -10,3 +10,9 @@ predicate leq : Elem x Elem
 % The actual sorting function
 ...
 ```
+
+## Languages
+* [ASL](../languages/ASL.md)
+
+## References
+* elementOf('languages/ASL/samples/sorting.asl',asl(text))

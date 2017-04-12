@@ -10,3 +10,9 @@ type Trafo sto = sto -> sto -- Store transformation
 type Obs sto val = sto -> val -- Store observation
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BIPL/Haskell/Language/BIPL/Algebra/Signature.hs',haskell(text))

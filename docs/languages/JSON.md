@@ -3,13 +3,20 @@
 
 A dictionary-based interchange format.
 
-## Language purposes
+## Purposes
 _None_
 
-## Language relationships
+## Links
 * sameAs: [https://en.wikipedia.org/wiki/JSON](https://en.wikipedia.org/wiki/JSON)
 
-## Language elements
+## Representations
+* json
+
+## References
+* function(parse,[fsml(text)],[json],python('FsmlToJSON'),['languages/FSML/Python/.'])
+* membership(json,succeed,[])
+
+## Elements
 * [languages/BNL/JSON/schema.json](../files/languages-BNL-JSON-schema.json.md)
 * [languages/BNL/samples/10.json](../files/languages-BNL-samples-10.json.md)
 * [languages/BNL/samples/5comma25.json](../files/languages-BNL-samples-5comma25.json.md)

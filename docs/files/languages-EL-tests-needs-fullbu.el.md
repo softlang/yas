@@ -3,3 +3,10 @@
 ```
 a + (b * 0)
 ```
+
+## Languages
+* [EL](../languages/EL.md)
+
+## References
+* elementOf('languages/EL/tests/needs-fullbu.el',el(text))
+* mapsTo(parse,['languages/EL/tests/needs-fullbu.el'],['languages/EL/tests/needs-fullbu.term'])

@@ -3,3 +3,9 @@
 ```
 [ ([correspondence],'languages/LAL/lib/correspondence.term2')].
 ```
+
+## Languages
+
+## References
+* elementOf('languages/LAL/lib/correspondence/oneToOne.deps',deps(term))
+* mapsTo(deps,['languages/LAL/lib/correspondence/oneToOne.term'],['languages/LAL/lib/correspondence/oneToOne.deps'])

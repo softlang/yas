@@ -10,3 +10,9 @@ chaseMembers(Classifiers, [Name], Members3) :-
   chaseMembers(Classifiers, Super, Members2),
   append(Members1, Members2, Members3).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MML/term-chase.pro',prolog(text))

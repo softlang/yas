@@ -3,3 +3,10 @@
 ```
 if(binary(geq,intconst(1),intconst(1)),skip,skip).
 ```
+
+## Languages
+* [BIPL](../languages/BIPL.md)
+
+## References
+* elementOf('languages/BIPL/samples/ifthen.term',bipl(term))
+* mapsTo(parse,['languages/BIPL/samples/ifthen.bipl'],['languages/BIPL/samples/ifthen.term'])

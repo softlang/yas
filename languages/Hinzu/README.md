@@ -1,15 +1,20 @@
 # Language _Hinzu_
-**[GitHub](https://github.com/softlang/yas/blob/master/languages/Hinzu)**
-
 A trivial metadata/annotation language designed to facilitate basic documentation and semantic annotation of languages in the YAS repository.
 
-## Language purposes
+## Purposes
 * Metadata definition
 * Megamodeling
 
-## Language relationships
+## Links
 
-## Language elements
+## Representations
+* hinzu(term)
+
+## References
+* membership(hinzu(term),eslLanguage,['languages/Hinzu/as.term'])
+* function(dump,[],[hinzu(term)],hinzuDump:main,[])
+
+## Elements
 * [languages/ANTLR/.hinzu](../../languages/ANTLR/.hinzu)
 * [languages/ASL/.hinzu](../../languages/ASL/.hinzu)
 * [languages/BAL/.hinzu](../../languages/BAL/.hinzu)

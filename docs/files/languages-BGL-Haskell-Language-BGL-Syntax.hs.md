@@ -14,3 +14,9 @@ type Label = String
 type Terminal = Char
 type Nonterminal = String
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BGL/Haskell/Language/BGL/Syntax.hs',haskell(text))

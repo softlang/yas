@@ -10,3 +10,10 @@ type fundef = string* # expr ;
 
 ...
 ```
+
+## Languages
+* [ESL](../languages/ESL.md)
+
+## References
+* elementOf('languages/BFPL/as.esl',esl(text))
+* mapsTo(parse,['languages/BFPL/as.esl'],['languages/BFPL/as.term'])

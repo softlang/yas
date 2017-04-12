@@ -10,3 +10,9 @@ type Memory = Map Int Int
 type Stack = [Int]
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BML/Haskell/Language/BML/Machine.hs',haskell(text))

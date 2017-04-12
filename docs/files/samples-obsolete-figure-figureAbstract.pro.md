@@ -7,3 +7,9 @@
 % END ...
 (integer, Digits) ~> Int :- number_codes(Int, Digits).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('samples/obsolete/figure/figureAbstract.pro',prolog(text))

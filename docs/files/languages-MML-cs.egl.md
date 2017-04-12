@@ -10,3 +10,10 @@ super : { 'extends' name }? ;
 members : '{' { member }* '}' ;
 ...
 ```
+
+## Languages
+* [EGL](../languages/EGL.md)
+
+## References
+* elementOf('languages/MML/cs.egl',egl(text))
+* mapsTo(parse,['languages/MML/cs.egl'],['languages/MML/cs.term'])

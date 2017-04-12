@@ -3,3 +3,9 @@
 ```
 public class Integer extends Rest { }
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/BNL/Java/Integer.java',java(text))

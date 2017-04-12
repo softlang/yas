@@ -10,3 +10,9 @@ import sys
 
 ...
 ```
+
+## Languages
+* [Python](../languages/Python.md)
+
+## References
+* elementOf('languages/FSML/Python/FsmlAcceptor.py',python(text))

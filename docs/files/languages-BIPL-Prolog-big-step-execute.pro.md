@@ -10,3 +10,9 @@ execute(S, Sto) :- execute(S, [], Sto).
 % A skip statement completes trivially
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BIPL/Prolog/big-step/execute.pro',prolog(text))

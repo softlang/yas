@@ -1,15 +1,19 @@
 # Language _XML (Extensible Markup Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/languages/XML)**
-
 A markup-based interchange format.
 
-## Language purposes
+## Purposes
 _None_
 
-## Language relationships
+## Links
 * sameAs: [https://en.wikipedia.org/wiki/XML](https://en.wikipedia.org/wiki/XML)
 
-## Language elements
+## Representations
+* xml
+
+## References
+* membership(xml,succeed,[])
+
+## Elements
 * [languages/BNL/XML/sample.xml](../../languages/BNL/XML/sample.xml)
 * [languages/BTL/XML/sample.xml](../../languages/BTL/XML/sample.xml)
 * [samples/xcoupled/input/cut.result.xml](../../samples/xcoupled/input/cut.result.xml)

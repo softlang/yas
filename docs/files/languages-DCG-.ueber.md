@@ -6,3 +6,9 @@
   membership(dcg(prolog(text)), succeed, [])
 ].
 ```
+
+## Languages
+* [Ueber](../languages/Ueber.md)
+
+## References
+* elementOf('languages/DCG/.ueber',ueber(term))

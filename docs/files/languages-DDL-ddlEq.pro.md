@@ -14,3 +14,9 @@ eq(Ts1, Ts2) :-
 sortTable((TN, Cs1), (CN, Cs2)) :-
     sort(Cs1, Cs2).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/DDL/ddlEq.pro',prolog(text))

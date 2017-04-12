@@ -3,3 +3,9 @@
 ```
 [ ([language],'languages/LAL/lib/language.term2'), ([language],'languages/LAL/lib/language.term2')].
 ```
+
+## Languages
+
+## References
+* elementOf('languages/LAL/lib/coupling.deps',deps(term))
+* mapsTo(deps,['languages/LAL/lib/coupling.term'],['languages/LAL/lib/coupling.deps'])

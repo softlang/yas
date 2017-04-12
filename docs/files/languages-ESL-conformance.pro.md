@@ -10,3 +10,9 @@ wellTypedTerm(Decls, sort(Result), Term) :-
 
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/ESL/conformance.pro',prolog(text))

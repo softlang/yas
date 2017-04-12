@@ -3,11 +3,15 @@
 
 An applied, typed lambda calculus.
 
-## Language purposes
+## Purposes
 _None_
 
-## Language relationships
+## Links
 * embeds: [BTL](http://softlang.github.io/yas/languages/BTL.html)
 * variationOf: [ULL](http://softlang.github.io/yas/languages/ULL.html)
 
-## Language elements
+## Representations
+
+## References
+
+## Elements

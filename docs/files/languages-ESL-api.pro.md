@@ -10,3 +10,9 @@ eslConformance(Term, Decls) :-
 
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/ESL/api.pro',prolog(text))

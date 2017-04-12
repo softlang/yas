@@ -10,3 +10,9 @@ import Control.Monad
 -- END ...
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BGL/Haskell/Language/BGL/TopDownParser.hs',haskell(text))

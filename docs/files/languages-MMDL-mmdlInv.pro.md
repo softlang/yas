@@ -10,3 +10,9 @@ inv(removeMember(CN, M), addMember(CN, M)).
 inv(addClassifier(C), removeClassifier(C)).
 inv(addMember(CN, M), removeMember(CN, M)).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MMDL/mmdlInv.pro',prolog(text))

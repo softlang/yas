@@ -10,3 +10,9 @@ import Control.Monad (guard)
 -- END ...
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BIPL/Haskell/Language/BIPL/Rename/Transformation.hs',haskell(text))

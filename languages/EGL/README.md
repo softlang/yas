@@ -1,54 +1,102 @@
 # Language _EGL (Extended Grammar Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/languages/EGL)**
-
 A simple extension of the BNF-like grammar notation BGL to support EBNF-like constructs for optional and repeating phrases.
 
-## Language purposes
+## Purposes
 * Concrete textual syntax definition
 * Concrete syntax definition
 * Language definition
 
-## Language relationships
+## Links
 * supersetOf: [BGL](http://softlang.github.io/yas/languages/BGL.html)
 * similarTo: [https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form)
 
-## Language elements
+## Representations
+* egl(text)
+* egl(term)
+
+## References
+* membership(egl(text),eglAcceptor(eglAbstract: (~>)),['languages/EGL/cs.term','languages/EGL/ls.term'])
+* function(parse,[egl(text)],[egl(term)],eglParser(eglAbstract: (~>)),['languages/EGL/cs.term','languages/EGL/ls.term'])
+* function(parse,[egl(text)],[egl(term)],eglParser(eglAbstract: (~>)),['languages/EGL/cs.term','languages/EGL/ls.term'])
+* membership(egl(term),eslLanguage,['languages/EGL/as.term'])
+* function(interpret,[egtl(term),egl(term)],[egl(term)],egtlInterpret:interpret,[])
+* function(interpret,[egtl(term),egl(term)],[egl(term)],egtlInterpret:interpret,[])
+
+## Elements
 * [languages/BFPL/cs.egl](../../languages/BFPL/cs.egl)
 * [languages/BFPL/ls.egl](../../languages/BFPL/ls.egl)
+* [languages/BFPL/cs.term](../../languages/BFPL/cs.term)
+* [languages/BFPL/ls.term](../../languages/BFPL/ls.term)
 * [languages/BGL/cs.egl](../../languages/BGL/cs.egl)
 * [languages/BGL/ls.egl](../../languages/BGL/ls.egl)
+* [languages/BGL/cs.term](../../languages/BGL/cs.term)
+* [languages/BGL/ls.term](../../languages/BGL/ls.term)
 * [languages/BIPL/cs.egl](../../languages/BIPL/cs.egl)
 * [languages/BIPL/ls.egl](../../languages/BIPL/ls.egl)
+* [languages/BIPL/cs.term](../../languages/BIPL/cs.term)
+* [languages/BIPL/ls.term](../../languages/BIPL/ls.term)
 * [languages/BNL/EGL/cs.egl](../../languages/BNL/EGL/cs.egl)
 * [languages/BNL/EGL/ls.egl](../../languages/BNL/EGL/ls.egl)
+* [languages/BNL/EGL/cs.term](../../languages/BNL/EGL/cs.term)
+* [languages/BNL/EGL/ls.term](../../languages/BNL/EGL/ls.term)
 * [languages/BSL/cs.egl](../../languages/BSL/cs.egl)
 * [languages/BSL/ls.egl](../../languages/BSL/ls.egl)
+* [languages/BSL/cs.term](../../languages/BSL/cs.term)
+* [languages/BSL/ls.term](../../languages/BSL/ls.term)
 * [languages/BTL/ls.egl](../../languages/BTL/ls.egl)
 * [languages/DDL/cs.egl](../../languages/DDL/cs.egl)
 * [languages/DDL/ls.egl](../../languages/DDL/ls.egl)
+* [languages/DDL/cs.term](../../languages/DDL/cs.term)
+* [languages/DDL/ls.term](../../languages/DDL/ls.term)
 * [languages/EFPL/cs.egl](../../languages/EFPL/cs.egl)
 * [languages/EFPL/ls.egl](../../languages/EFPL/ls.egl)
+* [languages/EFPL/cs.term](../../languages/EFPL/cs.term)
+* [languages/EFPL/ls.term](../../languages/EFPL/ls.term)
 * [languages/EGL/cs.egl](../../languages/EGL/cs.egl)
 * [languages/EGL/ls.egl](../../languages/EGL/ls.egl)
+* [languages/EGL/cs.term](../../languages/EGL/cs.term)
+* [languages/EGL/ls.term](../../languages/EGL/ls.term)
 * [languages/EGL/samples/ambiguity.egl](../../languages/EGL/samples/ambiguity.egl)
 * [languages/EGL/samples/left-recursion.egl](../../languages/EGL/samples/left-recursion.egl)
+* [languages/EGL/samples/ambiguity.term](../../languages/EGL/samples/ambiguity.term)
+* [languages/EGL/samples/left-recursion.term](../../languages/EGL/samples/left-recursion.term)
 * [languages/EGTL/cs.egl](../../languages/EGTL/cs.egl)
 * [languages/EGTL/ls.egl](../../languages/EGTL/ls.egl)
+* [languages/EGTL/cs.term](../../languages/EGTL/cs.term)
+* [languages/EGTL/ls.term](../../languages/EGTL/ls.term)
 * [languages/EIPL/cs.egl](../../languages/EIPL/cs.egl)
 * [languages/EIPL/ls.egl](../../languages/EIPL/ls.egl)
+* [languages/EIPL/cs.term](../../languages/EIPL/cs.term)
+* [languages/EIPL/ls.term](../../languages/EIPL/ls.term)
 * [languages/EL/cs.egl](../../languages/EL/cs.egl)
 * [languages/EL/ls.egl](../../languages/EL/ls.egl)
+* [languages/EL/cs.term](../../languages/EL/cs.term)
+* [languages/EL/ls.term](../../languages/EL/ls.term)
 * [languages/EL/Prolog/qq/cs.egl](../../languages/EL/Prolog/qq/cs.egl)
 * [languages/EL/Prolog/qq/ls.egl](../../languages/EL/Prolog/qq/ls.egl)
+* [languages/EL/Prolog/qq/cs.term](../../languages/EL/Prolog/qq/cs.term)
+* [languages/EL/Prolog/qq/ls.term](../../languages/EL/Prolog/qq/ls.term)
 * [languages/ESL/cs.egl](../../languages/ESL/cs.egl)
 * [languages/ESL/ls.egl](../../languages/ESL/ls.egl)
+* [languages/ESL/cs.term](../../languages/ESL/cs.term)
+* [languages/ESL/ls.term](../../languages/ESL/ls.term)
 * [languages/FSML/cs.egl](../../languages/FSML/cs.egl)
 * [languages/FSML/ls.egl](../../languages/FSML/ls.egl)
+* [languages/FSML/cs.term](../../languages/FSML/cs.term)
+* [languages/FSML/ls.term](../../languages/FSML/ls.term)
 * [languages/LAL/cs.egl](../../languages/LAL/cs.egl)
 * [languages/LAL/ls.egl](../../languages/LAL/ls.egl)
+* [languages/LAL/cs.term](../../languages/LAL/cs.term)
+* [languages/LAL/ls.term](../../languages/LAL/ls.term)
 * [languages/MML/cs.egl](../../languages/MML/cs.egl)
 * [languages/MML/ls.egl](../../languages/MML/ls.egl)
+* [languages/MML/cs.term](../../languages/MML/cs.term)
+* [languages/MML/ls.term](../../languages/MML/ls.term)
 * [languages/TBL/cs.egl](../../languages/TBL/cs.egl)
 * [languages/TBL/ls.egl](../../languages/TBL/ls.egl)
+* [languages/TBL/cs.term](../../languages/TBL/cs.term)
+* [languages/TBL/ls.term](../../languages/TBL/ls.term)
 * [samples/obsolete/figure/cs.egl](../../samples/obsolete/figure/cs.egl)
 * [samples/obsolete/figure/ls.egl](../../samples/obsolete/figure/ls.egl)
+* [samples/obsolete/figure/cs.term](../../samples/obsolete/figure/cs.term)
+* [samples/obsolete/figure/ls.term](../../samples/obsolete/figure/ls.term)

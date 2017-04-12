@@ -3,13 +3,19 @@
 
 A general-purpose logic programming language associated with artificial intelligence and computational linguistics.
 
-## Language purposes
+## Purposes
 _None_
 
-## Language relationships
+## Links
 * sameAs: [https://en.wikipedia.org/wiki/Prolog](https://en.wikipedia.org/wiki/Prolog)
 
-## Language elements
+## Representations
+* prolog(text)
+
+## References
+* membership(prolog(text),succeed,[])
+
+## Elements
 * [languages/BCL/bclOk.pro](../files/languages-BCL-bclOk.pro.md)
 * [languages/BFPL/as-to-cs.pro](../files/languages-BFPL-as-to-cs.pro.md)
 * [languages/BFPL/bfplAbstract.pro](../files/languages-BFPL-bfplAbstract.pro.md)
@@ -123,6 +129,7 @@ _None_
 * [languages/GBL/gblAbstract.pro](../files/languages-GBL-gblAbstract.pro.md)
 * [languages/GBL/tblToGbl.pro](../files/languages-GBL-tblToGbl.pro.md)
 * [languages/Hinzu/hinzuDump.pro](../files/languages-Hinzu-hinzuDump.pro.md)
+* [languages/Hinzu/hinzuInference.pro](../files/languages-Hinzu-hinzuInference.pro.md)
 * [languages/Hinzu/hinzuToMd.pro](../files/languages-Hinzu-hinzuToMd.pro.md)
 * [languages/LAL/lalAbstract.pro](../files/languages-LAL-lalAbstract.pro.md)
 * [languages/LAL/lalDeps.pro](../files/languages-LAL-lalDeps.pro.md)

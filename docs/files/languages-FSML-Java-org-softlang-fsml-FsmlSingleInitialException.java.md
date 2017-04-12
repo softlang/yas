@@ -7,3 +7,9 @@ public class FsmlSingleInitialException extends FsmlException {
 	private static final long serialVersionUID = -2533003245801322558L;
 }
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/FSML/Java/org/softlang/fsml/FsmlSingleInitialException.java',java(text))

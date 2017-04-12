@@ -12,3 +12,11 @@ axiom notMember {
  ~ (neg <- L)
 }
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/membership.lal2',lal(text))
+* mapsTo(pp,['languages/LAL/lib/membership.term2'],['languages/LAL/lib/membership.lal2'])
+* mapsTo(parse,['languages/LAL/lib/membership.lal2'],['languages/LAL/lib/membership.term2'])

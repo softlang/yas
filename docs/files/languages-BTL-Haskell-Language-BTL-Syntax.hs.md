@@ -10,3 +10,9 @@ data Expr
   | FALSE -- False taken by Haskell Prelude
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BTL/Haskell/Language/BTL/Syntax.hs',haskell(text))

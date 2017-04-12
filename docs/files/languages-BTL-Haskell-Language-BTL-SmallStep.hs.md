@@ -10,3 +10,9 @@ import Language.BTL.ValueExpr
 -- One-step reduction of terms
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BTL/Haskell/Language/BTL/SmallStep.hs',haskell(text))

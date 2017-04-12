@@ -7,3 +7,10 @@ axiom { forall t <- XL. forall a, c <- L1. forall b <- L2.
   consistent(a, b) /\ interpret(t, a) = c
     => consistent(c, b) }
 ```
+
+## Languages
+* [LAL](../languages/LAL.md)
+
+## References
+* elementOf('languages/LAL/lib/cx/invariant.lal',lal(text))
+* mapsTo(parse,['languages/LAL/lib/cx/invariant.lal'],['languages/LAL/lib/cx/invariant.term'])

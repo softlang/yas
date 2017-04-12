@@ -3,3 +3,9 @@
 ```
 public abstract class Bits { }
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/BNL/Java/Bits.java',java(text))

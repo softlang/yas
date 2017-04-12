@@ -2,11 +2,17 @@
 **[GitHub](https://github.com/softlang/yas/blob/master/languages/EL/README.md)**
 ```
 # Language _EL (Expression Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/languages/EL)**
-
 A trivial expression language with expression forms on integer and Boolean values with arithmetic, relational, and comparison operators.
 
-## Language purposes
+## Purposes
 _None_
+
+## Links
 ...
 ```
+
+## Languages
+* [Markdown](../languages/Markdown.md)
+
+## References
+* elementOf('languages/EL/README.md',markdown(text))

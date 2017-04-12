@@ -10,3 +10,9 @@ type Context = [(String, SimpleType)]
 
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BFPL/Haskell/Language/BFPL/TypeChecker.hs',haskell(text))

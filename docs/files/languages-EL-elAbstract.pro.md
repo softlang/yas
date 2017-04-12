@@ -10,3 +10,9 @@
 % Make unary expressions abstract
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/EL/elAbstract.pro',prolog(text))

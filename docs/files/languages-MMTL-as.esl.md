@@ -8,3 +8,10 @@ symbol valueToReference : name # name # name # name -> trafo ;
 // ...
 type name = string ;
 ```
+
+## Languages
+* [ESL](../languages/ESL.md)
+
+## References
+* elementOf('languages/MMTL/as.esl',esl(text))
+* mapsTo(parse,['languages/MMTL/as.esl'],['languages/MMTL/as.term'])

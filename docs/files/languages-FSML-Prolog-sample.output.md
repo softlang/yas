@@ -10,3 +10,10 @@
   ([eject], unlocked),
 ...
 ```
+
+## Languages
+* [Term](../languages/Term.md)
+
+## References
+* elementOf('languages/FSML/Prolog/sample.output',term)
+* mapsTo(simulateFsm,['languages/FSML/sample.term','languages/FSML/Prolog/sample.input'],['languages/FSML/Prolog/sample.output'])

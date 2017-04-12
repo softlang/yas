@@ -9,3 +9,9 @@ X ~> Y :- elAbstract:'~>'(X, Y).
 (metavar, String) ~> Atom :- is_list(String), name(Atom, [0'_|String]).
 
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/EL/Prolog/qq/elqqAbstract.pro',prolog(text))

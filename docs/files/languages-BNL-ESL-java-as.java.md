@@ -10,3 +10,9 @@ public class Number {
 }
 public enum Bit { Zero, One }
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/BNL/ESL/java/as.java',java(text))

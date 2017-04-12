@@ -9,3 +9,9 @@ main(Ds) :-
     udeclaration(D),
     Ds).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Ueber/ueberDump.pro',prolog(text))

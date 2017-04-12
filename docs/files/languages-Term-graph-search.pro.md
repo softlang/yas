@@ -10,3 +10,9 @@ searchObject(S, O1, O2) :-
       O2 = O1
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Term/graph/search.pro',prolog(text))

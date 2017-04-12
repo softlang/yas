@@ -10,3 +10,9 @@ import org.jdom.Document;
 import org.jdom.JDOMException;
 ...
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('samples/xcoupled/slbook/xcoupled/Tests.java',java(text))

@@ -10,3 +10,9 @@ addKey(
     topdownGraph(
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MML/editing/obj-add-key.pro',prolog(text))

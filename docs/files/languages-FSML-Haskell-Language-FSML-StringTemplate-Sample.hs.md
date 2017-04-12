@@ -10,3 +10,9 @@ turnstileFsm =
  Fsm [
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Language/FSML/StringTemplate/Sample.hs',haskell(text))

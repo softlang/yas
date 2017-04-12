@@ -9,3 +9,9 @@ isBit(one).
 isRest(integer).
 isRest(rational(Bits)) :- isBits(Bits).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BNL/Prolog/as.pro',prolog(text))

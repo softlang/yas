@@ -6,3 +6,9 @@
   mapsTo(translate, ['cotransformation.term2', 'cotransformation.lalconfig'], ['../../../BSTL/tests/trafo1.ueber'])
 ].
 ```
+
+## Languages
+* [Ueber](../languages/Ueber.md)
+
+## References
+* elementOf('languages/LAL/lib/cx/.ueber',ueber(term))

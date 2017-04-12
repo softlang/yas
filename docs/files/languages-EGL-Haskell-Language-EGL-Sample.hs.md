@@ -15,3 +15,9 @@ sampleGrammar = [
   (Nothing,"action",[N "name"])
  ]
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/EGL/Haskell/Language/EGL/Sample.hs',haskell(text))

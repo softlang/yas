@@ -10,3 +10,9 @@ atomToRefM(
   M1, % Input model
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MML/atom-to-ref/mt.pro',prolog(text))

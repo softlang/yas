@@ -10,3 +10,9 @@ classesToTables(Classifiers, Tables3) :-
   map(mmlToDdl:multisToTables, Classifiers, Tabless2),
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/MML/mmlToDdl.pro',prolog(text))

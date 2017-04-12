@@ -13,3 +13,9 @@ eq(X,Y) :-
   ; L2 is L1 + 1, append(X, [C], Y) ),
   char_type(C, end_of_line).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Text/textEq.pro',prolog(text))

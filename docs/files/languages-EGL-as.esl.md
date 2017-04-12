@@ -14,3 +14,10 @@ type label = string ;
 type terminal = string ;
 type nonterminal = string ;
 ```
+
+## Languages
+* [ESL](../languages/ESL.md)
+
+## References
+* elementOf('languages/EGL/as.esl',esl(text))
+* mapsTo(parse,['languages/EGL/as.esl'],['languages/EGL/as.term'])

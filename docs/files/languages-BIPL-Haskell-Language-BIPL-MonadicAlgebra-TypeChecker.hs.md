@@ -10,3 +10,9 @@ import Language.BIPL.Syntax (UOp(..), BOp(..))
 import Data.Map (Map, lookup, insert)
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BIPL/Haskell/Language/BIPL/MonadicAlgebra/TypeChecker.hs',haskell(text))

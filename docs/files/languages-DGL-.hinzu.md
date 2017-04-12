@@ -10,3 +10,9 @@
       subsetOf(dot),
 ...
 ```
+
+## Languages
+* [Hinzu](../languages/Hinzu.md)
+
+## References
+* elementOf('languages/DGL/.hinzu',hinzu(term))

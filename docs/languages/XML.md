@@ -3,13 +3,19 @@
 
 A markup-based interchange format.
 
-## Language purposes
+## Purposes
 _None_
 
-## Language relationships
+## Links
 * sameAs: [https://en.wikipedia.org/wiki/XML](https://en.wikipedia.org/wiki/XML)
 
-## Language elements
+## Representations
+* xml
+
+## References
+* membership(xml,succeed,[])
+
+## Elements
 * [languages/BNL/XML/sample.xml](../files/languages-BNL-XML-sample.xml.md)
 * [languages/BTL/XML/sample.xml](../files/languages-BTL-XML-sample.xml.md)
 * [samples/xcoupled/input/cut.result.xml](../files/samples-xcoupled-input-cut.result.xml.md)

@@ -10,3 +10,10 @@
 [gt] cexpr : aexpr { '>' aexpr }? ;
 ...
 ```
+
+## Languages
+* [EGL](../languages/EGL.md)
+
+## References
+* elementOf('languages/EL/cs.egl',egl(text))
+* mapsTo(parse,['languages/EL/cs.egl'],['languages/EL/cs.term'])

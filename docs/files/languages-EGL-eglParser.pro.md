@@ -10,3 +10,9 @@ parse((_, Terminal, _, _), t(T), [], Input0, Input1) :-
 
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/EGL/eglParser.pro',prolog(text))

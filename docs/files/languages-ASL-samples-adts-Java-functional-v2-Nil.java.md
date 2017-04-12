@@ -10,3 +10,9 @@ public class Nil implements List {
 		throw new UnsupportedOperationException();
 ...
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/ASL/samples/adts/Java/functional/v2/Nil.java',java(text))

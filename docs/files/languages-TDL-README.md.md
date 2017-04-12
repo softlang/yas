@@ -2,16 +2,17 @@
 **[GitHub](https://github.com/softlang/yas/blob/master/languages/TDL/README.md)**
 ```
 # Language _TDL (Term Difference Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/languages/TDL)**
-
 A representation format for term differences.
 
-## Language purposes
+## Purposes
 * Model differencing
 
-## Language relationships
-
-## Language elements
-* [languages/FRL/termdiff.term](../../languages/FRL/termdiff.term)
-* [languages/FRL/terminvdiff.term](../../languages/FRL/terminvdiff.term)
+## Links
+...
 ```
+
+## Languages
+* [Markdown](../languages/Markdown.md)
+
+## References
+* elementOf('languages/TDL/README.md',markdown(text))

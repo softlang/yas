@@ -5,3 +5,10 @@ name : { csymf }+ ;
 layout : { space }+ ;
 layout : '//' { { end_of_line }~ }* end_of_line ;
 ```
+
+## Languages
+* [EGL](../languages/EGL.md)
+
+## References
+* elementOf('languages/ESL/ls.egl',egl(text))
+* mapsTo(parse,['languages/ESL/ls.egl'],['languages/ESL/ls.term'])

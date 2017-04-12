@@ -10,3 +10,9 @@ turnstileFsm = Fsm [
   State True "locked" [
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Language/FSML/Sample.hs',haskell(text))

@@ -13,3 +13,9 @@ sampleExpr =
       TermRep "Succ" [TermRep "Zero" []],
       TermRep "Zero" [] ]]
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BTL/Haskell/Language/BTL/Universal/Sample.hs',haskell(text))

@@ -10,3 +10,9 @@ euclideanDiv = [
    Const 4, Store "y", -- y = 4;
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BAL/Haskell/Language/BAL/Sample.hs',haskell(text))

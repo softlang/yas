@@ -16,3 +16,12 @@ list(
   cons(id,
   nil)))).
 ```
+
+## Languages
+* [TDL](../languages/TDL.md)
+
+## References
+* elementOf('languages/FRL/termdiff.term',tdl(term))
+* mapsTo(diff,['languages/FRL/mm.term','languages/FRL/FRL2/mm.term'],['languages/FRL/termdiff.term'])
+* mapsTo(invDiff,['languages/FRL/termdiff.term'],['languages/FRL/terminvdiff.term'])
+* mapsTo(applyDiff,['languages/FRL/termdiff.term','languages/FRL/mm.term'],['languages/FRL/FRL2/mm.term'])

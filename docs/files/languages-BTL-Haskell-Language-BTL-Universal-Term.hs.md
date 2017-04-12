@@ -10,3 +10,9 @@ import Data.Term
 instance Term Expr where
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BTL/Haskell/Language/BTL/Universal/Term.hs',haskell(text))

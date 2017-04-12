@@ -11,3 +11,10 @@
   n = n - 1; 
 }
 ```
+
+## Languages
+* [BIPL](../languages/BIPL.md)
+
+## References
+* elementOf('languages/BIPL/samples/exp-unrolled.bipl',bipl(text))
+* mapsTo(parse,['languages/BIPL/samples/exp-unrolled.bipl'],['languages/BIPL/samples/exp-unrolled.term'])

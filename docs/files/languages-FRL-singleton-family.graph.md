@@ -14,3 +14,9 @@
   ]
 }.
 ```
+
+## Languages
+* [FRL](../languages/FRL.md)
+
+## References
+* elementOf('languages/FRL/singleton-family.graph',frl(graph(term)))

@@ -10,3 +10,9 @@ import Data.Maybe (fromJust)
 -- END ...
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BAL/Haskell/Language/BAL/Assembler.hs',haskell(text))

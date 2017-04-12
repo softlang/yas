@@ -7,3 +7,9 @@
 normal(intconst(_)).
 normal(boolconst(_)).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/BFPL/Prolog/small-step/normal.pro',prolog(text))

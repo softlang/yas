@@ -13,3 +13,9 @@ convert(M1, M3, funtype(T1, T2), funtype(T3, T4)) :-
 convert(M, M, typevar(N), X) :- member((N, X), M).
 convert(M, [(N, X)|M], typevar(N), X) :- \+ member((N, _), M).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/EFPL/Prolog/efplAlpha.pro',prolog(text))

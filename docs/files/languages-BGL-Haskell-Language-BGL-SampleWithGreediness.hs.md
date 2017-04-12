@@ -16,3 +16,9 @@ bnlGrammar = [
   ("integer", "rest", [])
  ]
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BGL/Haskell/Language/BGL/SampleWithGreediness.hs',haskell(text))

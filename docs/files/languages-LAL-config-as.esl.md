@@ -9,3 +9,10 @@ symbol relation : string # string -> entry ;
 symbol axiom : string # map -> entry ;
 type map = (string # string)* ;
 ```
+
+## Languages
+* [ESL](../languages/ESL.md)
+
+## References
+* elementOf('languages/LAL/config/as.esl',esl(text))
+* mapsTo(parse,['languages/LAL/config/as.esl'],['languages/LAL/config/as.term'])

@@ -16,3 +16,10 @@ state exception {
   release -> closed;
 }
 ```
+
+## Languages
+* [FSML](../languages/FSML.md)
+
+## References
+* elementOf('languages/FSML/tests/sampleRenamed.fsml',fsml(text))
+* mapsTo(parse,['languages/FSML/tests/sampleRenamed.fsml'],['languages/FSML/tests/sampleRenamed.term'])

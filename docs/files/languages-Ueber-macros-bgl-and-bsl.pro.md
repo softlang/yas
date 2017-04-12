@@ -10,3 +10,9 @@ basicSyntax(L) :-
   TokensL =.. [L, tokens(term)],
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Ueber/macros/bgl-and-bsl.pro',prolog(text))

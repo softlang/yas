@@ -10,3 +10,9 @@
 
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/ESL/eslAbstract.pro',prolog(text))

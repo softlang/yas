@@ -10,3 +10,9 @@
   % Well-typedness
 ...
 ```
+
+## Languages
+* [Ueber](../languages/Ueber.md)
+
+## References
+* elementOf('languages/EIPL/Prolog/.ueber',ueber(term))

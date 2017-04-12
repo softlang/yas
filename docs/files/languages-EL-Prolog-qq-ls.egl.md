@@ -11,3 +11,10 @@ layout : { space }+ ;
 metavar : '$' upper { csym }* ; // Regular metavariables
 metavar : '$' '_' { csym }* ; // Anonymous metavariables
 ```
+
+## Languages
+* [EGL](../languages/EGL.md)
+
+## References
+* elementOf('languages/EL/Prolog/qq/ls.egl',egl(text))
+* mapsTo(parse,['languages/EL/Prolog/qq/ls.egl'],['languages/EL/Prolog/qq/ls.term'])

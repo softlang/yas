@@ -10,3 +10,9 @@ bop(add, intval(I1), intval(I2), intval(I0)) :- I0 is I1 + I2.
 bop(sub, intval(I1), intval(I2), intval(I0)) :- I0 is I1 - I2.
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/EL/elOps.pro',prolog(text))

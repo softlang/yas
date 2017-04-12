@@ -15,3 +15,9 @@ expr (TermRep "IsZero" [e]) = expr e
 expr (TermRep "If" es@[_,_,_]) = and (map expr es)
 expr _ = False
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BTL/Haskell/Language/BTL/Dynamics.hs',haskell(text))

@@ -10,3 +10,9 @@ simulateFsm(
      member((true, Id, _), Fsm), % Select initial state
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/FSML/Prolog/simulation.pro',prolog(text))

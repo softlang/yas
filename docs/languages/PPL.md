@@ -3,12 +3,21 @@
 
 A target language for pretty printing which provides different composition operators for textboxes.
 
-## Language purposes
+## Purposes
 _None_
 
-## Language relationships
+## Links
 
-## Language elements
+## Representations
+* ppl(term)
+
+## References
+* function(pp,[dgl(term)],[ppl(term)],dglPp,[])
+* membership(ppl(term),eslLanguage,['languages/PPL/as.term'])
+* function(pp,[ppl(term)],[text],pplRender:render,[])
+* function(pp,[figure(term)],[ppl(term)],figurePp,[])
+
+## Elements
 * [languages/DGL/sample.ppl](../files/languages-DGL-sample.ppl.md)
 * [languages/FSML/Prolog/dot/sample.ppl](../files/languages-FSML-Prolog-dot-sample.ppl.md)
 * [languages/PPL/tests/hbox.ppl](../files/languages-PPL-tests-hbox.ppl.md)

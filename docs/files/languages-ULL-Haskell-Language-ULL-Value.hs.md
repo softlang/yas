@@ -10,3 +10,9 @@ import Language.ULL.Syntax
 -- Boolean values
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/ULL/Haskell/Language/ULL/Value.hs',haskell(text))

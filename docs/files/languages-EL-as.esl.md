@@ -10,3 +10,10 @@ symbol binary : bop # expr # expr -> expr ;
 
 ...
 ```
+
+## Languages
+* [ESL](../languages/ESL.md)
+
+## References
+* elementOf('languages/EL/as.esl',esl(text))
+* mapsTo(parse,['languages/EL/as.esl'],['languages/EL/as.term'])

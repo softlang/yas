@@ -10,3 +10,9 @@ import Control.Monad (guard)
 -- END ...
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/FSML/Haskell/Language/FSML/Rename/Transformation.hs',haskell(text))

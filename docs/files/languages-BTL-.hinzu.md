@@ -10,3 +10,9 @@
       variationOf(el),
 ...
 ```
+
+## Languages
+* [Hinzu](../languages/Hinzu.md)
+
+## References
+* elementOf('languages/BTL/.hinzu',hinzu(term))

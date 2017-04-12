@@ -10,3 +10,9 @@ accept g = steps g [N s]
   where
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BGL/Haskell/Language/BGL/TopDownAcceptor.hs',haskell(text))

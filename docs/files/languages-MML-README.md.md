@@ -2,11 +2,17 @@
 **[GitHub](https://github.com/softlang/yas/blob/master/languages/MML/README.md)**
 ```
 # Language _MML (MetaModeling Language)_
-**[GitHub](https://github.com/softlang/yas/blob/master/languages/MML)**
-
 A basic metamodeling language for graph-based abstract syntax.
 
-## Language purposes
+## Purposes
 * Metamodeling
+* Abstract syntax definition
+* Graph-based abstract syntax definition
 ...
 ```
+
+## Languages
+* [Markdown](../languages/Markdown.md)
+
+## References
+* elementOf('languages/MML/README.md',markdown(text))

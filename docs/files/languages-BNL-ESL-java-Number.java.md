@@ -9,3 +9,9 @@ public class Number {
     public List<Bit> rest;
 }
 ```
+
+## Languages
+* [Java](../languages/Java.md)
+
+## References
+* elementOf('languages/BNL/ESL/java/Number.java',java(text))

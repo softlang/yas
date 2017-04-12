@@ -14,3 +14,9 @@ steps f e =
            (Just e') -> steps f e'
            Nothing -> Nothing
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BTL/Haskell/Language/BTL/Closure.hs',haskell(text))

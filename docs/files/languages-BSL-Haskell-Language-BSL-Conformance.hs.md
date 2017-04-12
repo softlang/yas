@@ -12,3 +12,9 @@ termOfSort ps (TermRep c ts) s =
    [ss] -> and (map (uncurry (termOfSort ps)) (zip ts ss))
    _ -> False
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BSL/Haskell/Language/BSL/Conformance.hs',haskell(text))

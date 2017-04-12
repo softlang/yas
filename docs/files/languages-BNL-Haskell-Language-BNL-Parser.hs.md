@@ -10,3 +10,9 @@ import Control.Monad
 type Parser a = String -> Maybe (a, String)
 ...
 ```
+
+## Languages
+* [Haskell](../languages/Haskell.md)
+
+## References
+* elementOf('languages/BNL/Haskell/Language/BNL/Parser.hs',haskell(text))

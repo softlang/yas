@@ -3,3 +3,12 @@
 ```
 binary(add,var(a),binary(mul,var(b),intconst(0))).
 ```
+
+## Languages
+* [EL](../languages/EL.md)
+
+## References
+* elementOf('languages/EL/tests/needs-fullbu.term',el(term))
+* mapsTo(parse,['languages/EL/tests/needs-fullbu.el'],['languages/EL/tests/needs-fullbu.term'])
+* mapsTo(fulltd,['languages/EL/tests/needs-fullbu.term'],['languages/EL/tests/top-unit.term'])
+* mapsTo(fullbu,['languages/EL/tests/needs-fullbu.term'],['languages/EL/tests/a.term'])

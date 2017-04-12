@@ -10,3 +10,9 @@ inv(subterms(Ds1), subterms(Ds2)) :-
 inv(list(Ds1), list(Ds2)) :-
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/TDL/tdlInv.pro',prolog(text))

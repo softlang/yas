@@ -12,3 +12,9 @@ appliedTerm(Term) :-
   atom(Symbol),
   map(appliedTerm, Terms).
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/ESL/applied-term.pro',prolog(text))

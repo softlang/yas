@@ -10,3 +10,9 @@
  
 ...
 ```
+
+## Languages
+* [Text](../languages/Text.md)
+
+## References
+* elementOf('samples/xcoupled/jdom/LICENSE.txt',text)

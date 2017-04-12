@@ -10,3 +10,9 @@ main :-
 
 ...
 ```
+
+## Languages
+* [Prolog](../languages/Prolog.md)
+
+## References
+* elementOf('languages/Hinzu/hinzuToMd.pro',prolog(text))

@@ -10,3 +10,9 @@ constructors
   succ : Nat1 -> Nat1
 ...
 ```
+
+## Languages
+* [ASL](../languages/ASL.md)
+
+## References
+* elementOf('languages/ASL/samples/adts/nat1.asl',asl(text))
