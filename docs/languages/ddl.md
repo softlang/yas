@@ -1,5 +1,6 @@
-# DDL (Data Definition Language)
+# Language _DDL (Data Definition Language)_
 A SQL DDL-like data definition language for relational schemas.
+
 ## Language purposes
 * Data definition
 

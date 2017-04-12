@@ -1,7 +1,9 @@
-# EL (Expression Language)
+# Language _EL (Expression Language)_
 A trivial expression language with expression forms on integer and Boolean values with arithmetic, relational, and comparison operators.
+
 ## Language purposes
 _None_
+
 ## Language relationships
 * variationOf: [BTL](http://softlang.github.io/yas/languages/btl.html)
 

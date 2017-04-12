@@ -1,5 +1,6 @@
-# TDL (Term Difference Language)
+# Language _TDL (Term Difference Language)_
 A representation format for term differences.
+
 ## Language purposes
 * Model differencing
 

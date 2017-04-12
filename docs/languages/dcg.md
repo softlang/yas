@@ -1,7 +1,9 @@
-# DCG
+# Language _DCG_
 A grammatical notation based on logic programming.
+
 ## Language purposes
 _None_
+
 ## Language relationships
 * sameAs: [https://en.wikipedia.org/wiki/Definite_clause_grammar](https://en.wikipedia.org/wiki/Definite_clause_grammar)
 

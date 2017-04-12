@@ -1,7 +1,9 @@
-# XML (Extensible Markup Language)
+# Language _XML (Extensible Markup Language)_
 A markup-based interchange format.
+
 ## Language purposes
 _None_
+
 ## Language relationships
 * sameAs: [https://en.wikipedia.org/wiki/XML](https://en.wikipedia.org/wiki/XML)
 

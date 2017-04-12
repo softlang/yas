@@ -1,5 +1,6 @@
-# EFPL (Extended Functional Programming Language)
+# Language _EFPL (Extended Functional Programming Language)_
 A small extension of the trivial functional programming language BFPL to provide higher-order functions, polymorphism, and type inference.
+
 ## Language purposes
 * Functional programming
 

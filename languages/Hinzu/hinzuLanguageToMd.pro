@@ -17,7 +17,7 @@ main(Hinzu, Md1, Md2) :-
 page(L, N, X, W, Md) :-
   with_output_to(
 	  codes(Md),
-	  format('# ~w~n~w~n## Language purposes~n~@~n## Language relationships~n~@~n## Language elements~n~@', [N, X, purposes(L), relationships(L), elements(W, L)])).
+	  format('# Language _~w_~n~w~n~n## Language purposes~n~@~n## Language relationships~n~@~n## Language elements~n~@', [N, X, purposes(L), relationships(L), elements(W, L)])).
 
 purposes(L) :-
     findall(P, (
@@ -26,7 +26,7 @@ purposes(L) :-
 		member(purpose(P), Is)),
 	    Ps),
     ( Ps == [] ->
-          format('_None_', [])
+          format('_None_~n', [])
         ; maplist(purpose, Ps) ).
 
 purpose(P) :-

@@ -1,5 +1,6 @@
-# ESL (Extended Signature Language)
+# Language _ESL (Extended Signature Language)_
 A simple extension of the basic signature language BSL for tree-based abstract syntax definition to support type synonyms, products, lists, maybies, and primitive types.
+
 ## Language purposes
 * Tree-based abstract syntax definition
 * Abstract syntax definition

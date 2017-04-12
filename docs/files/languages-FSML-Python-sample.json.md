@@ -1,0 +1,5 @@
+# File _languages/FSML/Python/sample.json_
+**[GitHub](https://github.com/softlang/yas/blob/master/languages/FSML/Python/sample.json)**
+```
+{"exception": [{"initial": false, "transitions": {"release": [[null, "locked"]], "ticket": [["eject", "exception"]], "mute": [[null, "exception"]], "pass": [[null, "exception"]]}}], "locked": [{"initial": true, "transitions": {"ticket": [["collect", "unlocked"]], "pass": [["alarm", "exception"]]}}], "unlocked": [{"initial": false, "transitions": {"ticket": [["eject", "unlocked"]], "pass": [[null, "locked"]]}}]}
+```

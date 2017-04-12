@@ -1,5 +1,6 @@
-# DOT
+# Language _DOT_
 The input language of the Graphviz tool for describing and rendering all kinds of graphs.
+
 ## Language purposes
 * Graph visualization
 

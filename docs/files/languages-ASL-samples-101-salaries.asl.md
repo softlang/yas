@@ -1,0 +1,12 @@
+# File _languages/ASL/samples/101/salaries.asl_
+**[GitHub](https://github.com/softlang/yas/blob/master/languages/ASL/samples/101/salaries.asl)**
+```
+-- Salaries as signed numbers
+
+sort Salary
+
+-- Addition for salaries
+function addSalary : Salary x Salary -> Salary
+
+...
+```

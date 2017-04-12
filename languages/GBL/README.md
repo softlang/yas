@@ -1,7 +1,9 @@
-# GBL (Graph-based Buddy Language)
+# Language _GBL (Graph-based Buddy Language)_
 A trivial ontology-oriented language for representing collections of persons and their buddy relationships with a graph-based abstract syntax.
+
 ## Language purposes
 _None_
+
 ## Language relationships
 * variationOf: [TBL](http://softlang.github.io/yas/languages/tbl.html)
 

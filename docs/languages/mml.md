@@ -1,5 +1,6 @@
-# MML (MetaModeling Language)
+# Language _MML (MetaModeling Language)_
 A basic metamodeling language for graph-based abstract syntax.
+
 ## Language purposes
 * Metamodeling
 * Abstract syntax definition

@@ -1,5 +1,6 @@
-# BNL (Basic Number Language)
+# Language _BNL (Basic Number Language)_
 A trivial language for the representation of binary numbers.
+
 ## Language purposes
 * Illustration
 

@@ -1,7 +1,9 @@
-# Python
+# Language _Python_
 An interpreter-based multi-paradigm general purpose programming language with a dynamic type system
+
 ## Language purposes
 _None_
+
 ## Language relationships
 * sameAs: [https://en.wikipedia.org/wiki/Python_(programming_language)](https://en.wikipedia.org/wiki/Python_(programming_language))
 

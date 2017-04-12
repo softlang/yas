@@ -65,7 +65,10 @@ test-old:
 	@swipl -q -f packages/$*.pro -g $*_main
 
 pages:
-	git commit -a -m "GitHub pages update"; git push
+	git add docs/languages/*.md
+	git add docs/files/*.md
+	git commit -a -m "GitHub pages update"
+	git push
 
 remove-nonsle16dirs:
 	for dir in ${nonsle16dirs} ; do \

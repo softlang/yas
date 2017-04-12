@@ -1,7 +1,9 @@
-# PPL (Pretty Printing Language)
+# Language _PPL (Pretty Printing Language)_
 A target language for pretty printing which provides different composition operators for textboxes.
+
 ## Language purposes
 _None_
+
 ## Language relationships
 
 ## Language elements

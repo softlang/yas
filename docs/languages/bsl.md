@@ -1,5 +1,6 @@
-# BSL (Basic Signature Language)
+# Language _BSL (Basic Signature Language)_
 A basic specification language for tree-based abstract syntax on the grounds of many-sorted signatures.
+
 ## Language purposes
 * Tree-based abstract syntax definition
 * Abstract syntax definition

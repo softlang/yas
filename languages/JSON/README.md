@@ -1,7 +1,9 @@
-# JSON (JavaScript Object Notation)
+# Language _JSON (JavaScript Object Notation)_
 A dictionary-based interchange format.
+
 ## Language purposes
 _None_
+
 ## Language relationships
 * sameAs: [https://en.wikipedia.org/wiki/JSON](https://en.wikipedia.org/wiki/JSON)
 

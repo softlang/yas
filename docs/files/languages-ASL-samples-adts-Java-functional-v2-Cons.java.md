@@ -1,0 +1,12 @@
+# File _languages/ASL/samples/adts/Java/functional/v2/Cons.java_
+**[GitHub](https://github.com/softlang/yas/blob/master/languages/ASL/samples/adts/Java/functional/v2/Cons.java)**
+```
+public class Cons implements List {
+
+	private int e;
+	private List l;
+	
+	public Cons(int e, List l) {
+		this.e = e;
+...
+```

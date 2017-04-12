@@ -1,5 +1,6 @@
-# EGTL (Extended Grammar Transformation Language)
+# Language _EGTL (Extended Grammar Transformation Language)_
 A trivial transformation language for grammars.
+
 ## Language purposes
 * Grammar transformation
 

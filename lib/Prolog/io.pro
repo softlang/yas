@@ -6,6 +6,22 @@ readTextFile(File, Text) :-
   read_stream_to_codes(Input, Text),
   close(Input).
 
+readTextFileLines(File, L) :-
+  require(
+    fileExpected(File),
+    (exists_file(File), open(File, read, Input, []))
+  ),
+  getLines(Input, L),
+  close(Input).
+
+getLines(Input, L):-
+  read_line_to_codes(Input, H),
+  (   H == end_of_file
+  ->  L = []
+  ;   L = [H|T],
+      getLines(Input,T)
+  ).
+
 readTermFile(File, Term) :-
   require(
     fileExpected(File),

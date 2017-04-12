@@ -1,5 +1,6 @@
-# ASL (Algebraic Specification Language)
+# Language _ASL (Algebraic Specification Language)_
 A simple language for algebraic specification.
+
 ## Language purposes
 * Algebraic specification
 

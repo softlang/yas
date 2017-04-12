@@ -1,7 +1,9 @@
-# Markdown
+# Language _Markdown_
 A markup-based documentation language.
+
 ## Language purposes
 _None_
+
 ## Language relationships
 * sameAs: [https://en.wikipedia.org/wiki/Markdown](https://en.wikipedia.org/wiki/Markdown)
 

@@ -1,7 +1,9 @@
-# Text
+# Language _Text_
 Text as a basic representation format used by the YAS repository.
+
 ## Language purposes
 _None_
+
 ## Language relationships
 
 ## Language elements

@@ -1,5 +1,6 @@
-# BIPL (Basic Imperative Programming Language)
+# Language _BIPL (Basic Imperative Programming Language)_
 A trivial imperative programming language with support for primitive types for integer and Boolean values, but without support for input, output, and procedures.
+
 ## Language purposes
 * Imperative programming
 
