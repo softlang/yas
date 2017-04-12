@@ -10,6 +10,6 @@ _None_
 * variationOf: [FNL](http://softlang.github.io/yas/languages/FNL.html)
 
 ## Language elements
-* [languages/FRL/empty-family.graph](../../docs/files/languages-FRL-empty-family.graph.md)
-* [languages/FRL/singleton-family.graph](../../docs/files/languages-FRL-singleton-family.graph.md)
-* [languages/FRL/small-family.graph](../../docs/files/languages-FRL-small-family.graph.md)
+* [languages/FRL/empty-family.graph](../files/languages-FRL-empty-family.graph.md)
+* [languages/FRL/singleton-family.graph](../files/languages-FRL-singleton-family.graph.md)
+* [languages/FRL/small-family.graph](../files/languages-FRL-small-family.graph.md)

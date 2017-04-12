@@ -121,8 +121,8 @@ element(repo, FN) :-
     format('* [~w](../../~w)~n', [FN, FN]).
 
 element(pages, FN1) :-
-    hinzuToMd:filename(FN1, FN2),
-    format('* [~w](../../~w)~n', [FN1, FN2]).
+    hinzuToMd:relative_filename(FN1, FN2),
+    format('* [~w](~w)~n', [FN1, FN2]).
 
 % --------------------------------------------------
 
@@ -132,7 +132,7 @@ files :-
 
 file(FN1) :-
     readTextFileLines(FN1, Lines),
-    filename(FN1, FN2),
+    absolute_filename(FN1, FN2),
     with_output_to(
 	  codes(Md),
 	  format('# File _~w_~n**[GitHub](https://github.com/softlang/yas/blob/master/~w)**~n```~n~@```~n', [FN1, FN1, trimLines(Lines)])),
@@ -153,10 +153,17 @@ trimLines(Lines) :-
 line(Line) :-
     format('~s~n', [Line]).
 
-filename(FN1, FN3) :-
+absolute_filename(FN1, FN3) :-
+    basename(FN1, FN2),
+    atomic_list_concat(['docs/files/', FN2, '.md'], FN3).
+
+relative_filename(FN1, FN3) :-
+    basename(FN1, FN2),
+    atomic_list_concat(['../files/', FN2, '.md'], FN3).
+
+basename(FN1, FN2) :-
     name(FN1, L1),
     maplist(slashToHyphen, L1, L2),
-    name(FN2, L2),
-    atomic_list_concat(['docs/files/', FN2, '.md'], FN3).
+    name(FN2, L2).
 
 slashToHyphen(C1, C2) :- C1 == 0'/ -> C2 = 0'-; C2 = C1.

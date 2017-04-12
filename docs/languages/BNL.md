@@ -9,5 +9,5 @@ A trivial language for the representation of binary numbers.
 ## Language relationships
 
 ## Language elements
-* [languages/BNL/samples/10.bnl](../../docs/files/languages-BNL-samples-10.bnl.md)
-* [languages/BNL/samples/5comma25.bnl](../../docs/files/languages-BNL-samples-5comma25.bnl.md)
+* [languages/BNL/samples/10.bnl](../files/languages-BNL-samples-10.bnl.md)
+* [languages/BNL/samples/5comma25.bnl](../files/languages-BNL-samples-5comma25.bnl.md)

@@ -10,4 +10,4 @@ A trivial expression language with expression forms on Boolean values and natura
 * variationOf: [EL](http://softlang.github.io/yas/languages/EL.html)
 
 ## Language elements
-* [languages/BTL/sample.btl](../../docs/files/languages-BTL-sample.btl.md)
+* [languages/BTL/sample.btl](../files/languages-BTL-sample.btl.md)

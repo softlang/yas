@@ -9,12 +9,12 @@ _None_
 ## Language relationships
 
 ## Language elements
-* [languages/FSML/sample.fsml](../../docs/files/languages-FSML-sample.fsml.md)
-* [languages/FSML/tests/determinismNotOk.fsml](../../docs/files/languages-FSML-tests-determinismNotOk.fsml.md)
-* [languages/FSML/tests/idsNotOk.fsml](../../docs/files/languages-FSML-tests-idsNotOk.fsml.md)
-* [languages/FSML/tests/initialNotOk1.fsml](../../docs/files/languages-FSML-tests-initialNotOk1.fsml.md)
-* [languages/FSML/tests/initialNotOk2.fsml](../../docs/files/languages-FSML-tests-initialNotOk2.fsml.md)
-* [languages/FSML/tests/reachabilityNotOk.fsml](../../docs/files/languages-FSML-tests-reachabilityNotOk.fsml.md)
-* [languages/FSML/tests/resolutionNotOk.fsml](../../docs/files/languages-FSML-tests-resolutionNotOk.fsml.md)
-* [languages/FSML/tests/sampleRenamed.fsml](../../docs/files/languages-FSML-tests-sampleRenamed.fsml.md)
-* [languages/FSML/tests/simple.fsml](../../docs/files/languages-FSML-tests-simple.fsml.md)
+* [languages/FSML/sample.fsml](../files/languages-FSML-sample.fsml.md)
+* [languages/FSML/tests/determinismNotOk.fsml](../files/languages-FSML-tests-determinismNotOk.fsml.md)
+* [languages/FSML/tests/idsNotOk.fsml](../files/languages-FSML-tests-idsNotOk.fsml.md)
+* [languages/FSML/tests/initialNotOk1.fsml](../files/languages-FSML-tests-initialNotOk1.fsml.md)
+* [languages/FSML/tests/initialNotOk2.fsml](../files/languages-FSML-tests-initialNotOk2.fsml.md)
+* [languages/FSML/tests/reachabilityNotOk.fsml](../files/languages-FSML-tests-reachabilityNotOk.fsml.md)
+* [languages/FSML/tests/resolutionNotOk.fsml](../files/languages-FSML-tests-resolutionNotOk.fsml.md)
+* [languages/FSML/tests/sampleRenamed.fsml](../files/languages-FSML-tests-sampleRenamed.fsml.md)
+* [languages/FSML/tests/simple.fsml](../files/languages-FSML-tests-simple.fsml.md)

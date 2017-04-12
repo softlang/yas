@@ -12,8 +12,8 @@ A basic specification language for tree-based abstract syntax on the grounds of 
 * subsetOf: [ESL](http://softlang.github.io/yas/languages/ESL.html)
 
 ## Language elements
-* [languages/BNL/as.bsl](../../docs/files/languages-BNL-as.bsl.md)
-* [languages/BSTL/tests/sig1.bsl](../../docs/files/languages-BSTL-tests-sig1.bsl.md)
-* [languages/BSTL/tests/sig2.bsl](../../docs/files/languages-BSTL-tests-sig2.bsl.md)
-* [languages/BTL/as.bsl](../../docs/files/languages-BTL-as.bsl.md)
-* [samples/obsolete/expr/as.bsl](../../docs/files/samples-obsolete-expr-as.bsl.md)
+* [languages/BNL/as.bsl](../files/languages-BNL-as.bsl.md)
+* [languages/BSTL/tests/sig1.bsl](../files/languages-BSTL-tests-sig1.bsl.md)
+* [languages/BSTL/tests/sig2.bsl](../files/languages-BSTL-tests-sig2.bsl.md)
+* [languages/BTL/as.bsl](../files/languages-BTL-as.bsl.md)
+* [samples/obsolete/expr/as.bsl](../files/samples-obsolete-expr-as.bsl.md)
