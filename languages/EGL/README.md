@@ -7,8 +7,8 @@ A simple extension of the BNF-like grammar notation BGL to support EBNF-like con
 * Language definition
 
 ## Links
-* supersetOf: [BGL](http://softlang.github.io/yas/languages/BGL.html)
-* similarTo: [https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form)
+* supersetOf(bgl)
+* similarTo(https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form)
 
 ## Representations
 * egl(text)

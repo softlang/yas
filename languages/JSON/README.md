@@ -5,7 +5,7 @@ A dictionary-based interchange format.
 _None_
 
 ## Links
-* sameAs: [https://en.wikipedia.org/wiki/JSON](https://en.wikipedia.org/wiki/JSON)
+* sameAs(https://en.wikipedia.org/wiki/JSON)
 
 ## Representations
 * json

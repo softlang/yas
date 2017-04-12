@@ -5,7 +5,7 @@ An interpreter-based multi-paradigm general purpose programming language with a 
 * Scripting
 
 ## Links
-* sameAs: [https://en.wikipedia.org/wiki/Python_(programming_language)](https://en.wikipedia.org/wiki/Python_(programming_language))
+* sameAs(https://en.wikipedia.org/wiki/Python_(programming_language))
 
 ## Representations
 * python(text)

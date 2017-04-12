@@ -8,7 +8,7 @@ A trivial stack- and address-based assembly language; memory access and jumps us
 * Compilation
 
 ## Links
-* variationOf: [BML](http://softlang.github.io/yas/languages/BML.html)
+* variationOf(bml)
 
 ## Representations
 

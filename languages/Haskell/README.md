@@ -5,7 +5,7 @@ A standardized, general-purpose purely functional programming language, with non
 * Functional programming
 
 ## Links
-* sameAs: [https://en.wikipedia.org/wiki/Haskell_(programming_language)](https://en.wikipedia.org/wiki/Haskell_(programming_language))
+* sameAs(https://en.wikipedia.org/wiki/Haskell_(programming_language))
 
 ## Representations
 * haskell(text)

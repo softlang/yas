@@ -5,7 +5,7 @@ A trivial ontology-oriented language for representing collections of persons and
 _None_
 
 ## Links
-* variationOf: [GBL](http://softlang.github.io/yas/languages/GBL.html)
+* variationOf(gbl)
 
 ## Representations
 * tbl(text)

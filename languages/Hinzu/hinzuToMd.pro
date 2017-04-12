@@ -69,7 +69,7 @@ languagePage(L, W, Md) :-
     member(explanation(X), Is),
     with_output_to(
 	    codes(Md),
-	    format('# Language _~w_~n~@~w~n~n## Purposes~n~@~n## Links~n~@~n## Representations~n~@~n## References~n~@~n## Elements~n~@', [Q, linkToLanguage(W, N), X, purposes(L), linksForLanguage(L), representationsOfLanguage(L), referencesToLanguage(L), elementsOfLanguage(W, L)])).
+	    format('# Language _~w_~n~@~w~n~n## Purposes~n~@~n## Links~n~@~n## Representations~n~@~n## References~n~@~n## Elements~n~@', [Q, linkToLanguage(W, N), X, purposes(L), linksForLanguage(W, L), representationsOfLanguage(L), referencesToLanguage(L), elementsOfLanguage(W, L)])).
 
 linkToLanguage(repo, _).
 linkToLanguage(pages, N) :-
@@ -86,7 +86,7 @@ purposes(L) :-
 purpose(P) :-
     format('* ~w~n', [P]).
 
-linksForLanguage(L) :-
+linksForLanguage(W, L) :-
     hdeclaration(l(Is)),
     member(lid(L), Is),
     findall(R, (
@@ -94,14 +94,17 @@ linksForLanguage(L) :-
 		member(R, [sameAs(_), similarTo(_), relatesTo(_), variationOf(_), subsetOf(_), supersetOf(_), embeds(_), dependsOn(_)])
 	    ),
 	    Rs),
-    maplist(hinzuToMd:linkForLanguage, Rs).
+    maplist(hinzuToMd:linkForLanguage(W), Rs).
 
-linkForLanguage(R) :-
+linkForLanguage(repo, R) :-
+    format('* ~w~n', [R]).
+
+linkForLanguage(pages, R) :-
     member(F, [sameAs, similarTo, relatesTo]),
     R =.. [F, U],
     format('* ~w: [~w](~w)~n', [F, U, U]).
 
-linkForLanguage(R) :-
+linkForLanguage(pages, R) :-
     member(F, [variationOf, subsetOf, supersetOf, embeds, dependsOn]),
     R =.. [F, L],
     hdeclaration(l(Is)),

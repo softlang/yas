@@ -5,7 +5,7 @@ A trivial data model for representing families as collections of persons with va
 _None_
 
 ## Links
-* variationOf: [FNL](http://softlang.github.io/yas/languages/FNL.html)
+* variationOf(fnl)
 
 ## Representations
 * frl(graph(term))

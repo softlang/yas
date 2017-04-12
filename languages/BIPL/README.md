@@ -5,9 +5,9 @@ A trivial imperative programming language with support for primitive types for i
 * Imperative programming
 
 ## Links
-* embeds: [EL](http://softlang.github.io/yas/languages/EL.html)
-* subsetOf: [EIPL](http://softlang.github.io/yas/languages/EIPL.html)
-* relatesTo: [https://en.wikipedia.org/wiki/C_(programming_language)](https://en.wikipedia.org/wiki/C_(programming_language))
+* embeds(el)
+* subsetOf(eipl)
+* relatesTo(https://en.wikipedia.org/wiki/C_(programming_language))
 
 ## Representations
 * bipl(text)

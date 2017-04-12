@@ -5,7 +5,7 @@ A general-purpose logic programming language associated with artificial intellig
 _None_
 
 ## Links
-* sameAs: [https://en.wikipedia.org/wiki/Prolog](https://en.wikipedia.org/wiki/Prolog)
+* sameAs(https://en.wikipedia.org/wiki/Prolog)
 
 ## Representations
 * prolog(text)

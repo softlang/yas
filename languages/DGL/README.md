@@ -5,7 +5,7 @@ A trivial specification language for graphs that may be rendered eventually with
 * Graph representation
 
 ## Links
-* subsetOf: [DOT](http://softlang.github.io/yas/languages/DOT.html)
+* subsetOf(dot)
 
 ## Representations
 * dgl(text)

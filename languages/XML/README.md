@@ -5,7 +5,7 @@ A markup-based interchange format.
 _None_
 
 ## Links
-* sameAs: [https://en.wikipedia.org/wiki/XML](https://en.wikipedia.org/wiki/XML)
+* sameAs(https://en.wikipedia.org/wiki/XML)
 
 ## Representations
 * xml

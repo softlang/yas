@@ -5,8 +5,8 @@ An applied, untyped lambda calculus.
 _None_
 
 ## Links
-* embeds: [BTL](http://softlang.github.io/yas/languages/BTL.html)
-* variationOf: [TLL](http://softlang.github.io/yas/languages/TLL.html)
+* embeds(btl)
+* variationOf(tll)
 
 ## Representations
 

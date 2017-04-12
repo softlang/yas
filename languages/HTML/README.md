@@ -5,7 +5,7 @@ A standard markup language for web pages and web applications.
 _None_
 
 ## Links
-* sameAs: [https://en.wikipedia.org/wiki/HTML](https://en.wikipedia.org/wiki/HTML)
+* sameAs(https://en.wikipedia.org/wiki/HTML)
 
 ## Representations
 * html(text)

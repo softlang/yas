@@ -5,7 +5,7 @@ A general-purpose programming language that is concurrent, class-based, object-o
 * Object-oriented programming
 
 ## Links
-* sameAs: [https://en.wikipedia.org/wiki/Java_(programming_language)](https://en.wikipedia.org/wiki/Java_(programming_language))
+* sameAs(https://en.wikipedia.org/wiki/Java_(programming_language))
 
 ## Representations
 * java(text)

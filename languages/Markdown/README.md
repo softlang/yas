@@ -5,7 +5,7 @@ A markup-based documentation language.
 _None_
 
 ## Links
-* sameAs: [https://en.wikipedia.org/wiki/Markdown](https://en.wikipedia.org/wiki/Markdown)
+* sameAs(https://en.wikipedia.org/wiki/Markdown)
 
 ## Representations
 * markdown(text)

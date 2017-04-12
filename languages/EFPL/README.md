@@ -5,7 +5,7 @@ A small extension of the trivial functional programming language BFPL to provide
 * Functional programming
 
 ## Links
-* supersetOf: [BFPL](http://softlang.github.io/yas/languages/BFPL.html)
+* supersetOf(bfpl)
 
 ## Representations
 * efpl(text)

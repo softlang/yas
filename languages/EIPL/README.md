@@ -5,7 +5,7 @@ A small extension of the trivial imperative programming language BIPL to provide
 * Imperative programming
 
 ## Links
-* supersetOf: [BIPL](http://softlang.github.io/yas/languages/BIPL.html)
+* supersetOf(bipl)
 
 ## Representations
 * eipl(text)

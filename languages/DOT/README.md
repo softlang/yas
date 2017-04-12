@@ -5,7 +5,7 @@ The input language of the Graphviz tool for describing and rendering all kinds o
 * Graph visualization
 
 ## Links
-* sameAs: [http://www.graphviz.org/content/dot-language](http://www.graphviz.org/content/dot-language)
+* sameAs(http://www.graphviz.org/content/dot-language)
 
 ## Representations
 * dot(text)

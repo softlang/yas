@@ -7,8 +7,8 @@ A BNF-like notation for context-free grammars; rules (productions) are labeled.
 * Language definition
 
 ## Links
-* subsetOf: [EGL](http://softlang.github.io/yas/languages/EGL.html)
-* similarTo: [https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form)
+* subsetOf(egl)
+* similarTo(https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form)
 
 ## Representations
 * bgl(text)

@@ -5,7 +5,7 @@ A trivial transformation language for grammars.
 * Grammar transformation
 
 ## Links
-* dependsOn: [EGL](http://softlang.github.io/yas/languages/EGL.html)
+* dependsOn(egl)
 
 ## Representations
 * egtl(text)

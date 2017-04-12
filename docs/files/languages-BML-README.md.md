@@ -8,7 +8,7 @@ A trivial stack- and address-based machine language; memory access and jumps use
 * Compilation
 
 ## Links
-* variationOf: [BAL](http://softlang.github.io/yas/languages/BAL.html)
+* variationOf(bal)
 
 ## Representations
 

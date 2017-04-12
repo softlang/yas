@@ -5,7 +5,7 @@ The ANTLR tool and language for parsing and processing string languages.
 * Parser description
 
 ## Links
-* sameAs: [http://www.antlr.org/](http://www.antlr.org/)
+* sameAs(http://www.antlr.org/)
 
 ## Representations
 * antlr(text)

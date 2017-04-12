@@ -5,7 +5,7 @@ A trivial expression language with expression forms on integer and Boolean value
 _None_
 
 ## Links
-* variationOf: [BTL](http://softlang.github.io/yas/languages/BTL.html)
+* variationOf(btl)
 
 ## Representations
 * el(text)

@@ -5,8 +5,8 @@ A trivial transformation language for coupled transformations on BSL signatures 
 _None_
 
 ## Links
-* dependsOn: [BSL](http://softlang.github.io/yas/languages/BSL.html)
-* dependsOn: [Term](http://softlang.github.io/yas/languages/Term.html)
+* dependsOn(bsl)
+* dependsOn(term)
 
 ## Representations
 * bstl(term)

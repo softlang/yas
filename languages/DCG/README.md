@@ -5,7 +5,7 @@ A grammatical notation based on logic programming.
 _None_
 
 ## Links
-* sameAs: [https://en.wikipedia.org/wiki/Definite_clause_grammar](https://en.wikipedia.org/wiki/Definite_clause_grammar)
+* sameAs(https://en.wikipedia.org/wiki/Definite_clause_grammar)
 
 ## Representations
 * dcg(prolog(text))

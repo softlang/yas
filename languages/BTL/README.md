@@ -5,7 +5,7 @@ A trivial expression language with expression forms on Boolean values and natura
 * Illustration
 
 ## Links
-* variationOf: [EL](http://softlang.github.io/yas/languages/EL.html)
+* variationOf(el)
 
 ## Representations
 * btl(text)

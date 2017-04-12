@@ -5,7 +5,7 @@ A trivial transformation language for metamodels.
 _None_
 
 ## Links
-* dependsOn: [MML](http://softlang.github.io/yas/languages/MML.html)
+* dependsOn(mml)
 
 ## Representations
 * mmtl(term)
