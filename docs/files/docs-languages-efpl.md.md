@@ -11,7 +11,7 @@ A small extension of the trivial functional programming language BFPL to provide
 * supersetOf: [BFPL](http://softlang.github.io/yas/languages/bfpl.html)
 
 ## Language elements
-* [languages/EFPL/tests/sample-past-inference.efpl](https://github.com/softlang/yas/blob/master/languages/EFPL/tests/sample-past-inference.efpl)
-* [languages/EFPL/tests/sample-past-specialization.efpl](https://github.com/softlang/yas/blob/master/languages/EFPL/tests/sample-past-specialization.efpl)
-* [languages/EFPL/tests/sample.efpl](https://github.com/softlang/yas/blob/master/languages/EFPL/tests/sample.efpl)
+* [languages/EFPL/tests/sample-past-inference.efpl](docs/files/languages-EFPL-tests-sample-past-inference.efpl.md)
+* [languages/EFPL/tests/sample-past-specialization.efpl](docs/files/languages-EFPL-tests-sample-past-specialization.efpl.md)
+* [languages/EFPL/tests/sample.efpl](docs/files/languages-EFPL-tests-sample.efpl.md)
 ```

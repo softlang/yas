@@ -8,10 +8,6 @@
   mapsTo(dump, [], ['dump.hinzu']),
 
   % Publish Hinzu in Markdown
-  function(languageToMd, [hinzu(term)], [markdown(text), markdown(text)], hinzuLanguageToMd:main, []),
-  function(mdIndex, [hinzu(term)], [markdown(text)], hinzuMdIndex:main, []),
-  elementOf('../../docs/index.md', markdown(text)),
-  mapsTo(mdIndex, ['dump.hinzu'], ['../../docs/index.md']),
-  function(mdFiles, [], [], hinzuMdFiles:main, []),
-  mapsTo(mdFiles, [], [])
+  function(hinzuToMd, [], [], hinzuToMd:main, []),
+  mapsTo(hinzuToMd, [], [])
 ].

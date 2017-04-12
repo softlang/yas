@@ -11,5 +11,5 @@ _None_
 * variationOf: [FRL](http://softlang.github.io/yas/languages/frl.html)
 
 ## Language elements
-* [languages/FNL/small-family.graph](https://github.com/softlang/yas/blob/master/languages/FNL/small-family.graph)
+* [languages/FNL/small-family.graph](docs/files/languages-FNL-small-family.graph.md)
 ```

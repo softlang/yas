@@ -11,5 +11,5 @@ A trivial expression language with expression forms on Boolean values and natura
 * variationOf: [EL](http://softlang.github.io/yas/languages/el.html)
 
 ## Language elements
-* [languages/BTL/sample.btl](https://github.com/softlang/yas/blob/master/languages/BTL/sample.btl)
+* [languages/BTL/sample.btl](docs/files/languages-BTL-sample.btl.md)
 ```

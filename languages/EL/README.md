@@ -1,11 +1,12 @@
 # Language _EL (Expression Language)_
+**[GitHub](https://github.com/softlang/yas/blob/master/EL)**
 A trivial expression language with expression forms on integer and Boolean values with arithmetic, relational, and comparison operators.
 
 ## Language purposes
 _None_
 
 ## Language relationships
-* variationOf: [BTL](http://softlang.github.io/yas/languages/btl.html)
+* variationOf: [BTL](http://softlang.github.io/yas/languages/BTL.html)
 
 ## Language elements
 * [languages/EL/tests/a-plus-b.el](../../languages/EL/tests/a-plus-b.el)

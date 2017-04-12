@@ -11,8 +11,8 @@ A trivial specification language for graphs that may be rendered eventually with
 * subsetOf: [DOT](http://softlang.github.io/yas/languages/dot.html)
 
 ## Language elements
-* [languages/DGL/sample.dgl](https://github.com/softlang/yas/blob/master/languages/DGL/sample.dgl)
-* [languages/FSML/Prolog/dot/sample.dgl](https://github.com/softlang/yas/blob/master/languages/FSML/Prolog/dot/sample.dgl)
-* [languages/Ueber/functions.dgl](https://github.com/softlang/yas/blob/master/languages/Ueber/functions.dgl)
-* [languages/Ueber/languages.dgl](https://github.com/softlang/yas/blob/master/languages/Ueber/languages.dgl)
+* [languages/DGL/sample.dgl](docs/files/languages-DGL-sample.dgl.md)
+* [languages/FSML/Prolog/dot/sample.dgl](docs/files/languages-FSML-Prolog-dot-sample.dgl.md)
+* [languages/Ueber/functions.dgl](docs/files/languages-Ueber-functions.dgl.md)
+* [languages/Ueber/languages.dgl](docs/files/languages-Ueber-languages.dgl.md)
 ```

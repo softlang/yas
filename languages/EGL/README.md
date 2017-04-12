@@ -1,4 +1,5 @@
 # Language _EGL (Extended Grammar Language)_
+**[GitHub](https://github.com/softlang/yas/blob/master/EGL)**
 A simple extension of the BNF-like grammar notation BGL to support EBNF-like constructs for optional and repeating phrases.
 
 ## Language purposes
@@ -7,7 +8,7 @@ A simple extension of the BNF-like grammar notation BGL to support EBNF-like con
 * Language definition
 
 ## Language relationships
-* supersetOf: [BGL](http://softlang.github.io/yas/languages/bgl.html)
+* supersetOf: [BGL](http://softlang.github.io/yas/languages/BGL.html)
 * similarTo: [https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form)
 
 ## Language elements

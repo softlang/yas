@@ -12,5 +12,5 @@ _None_
 * dependsOn: [Term](http://softlang.github.io/yas/languages/term.html)
 
 ## Language elements
-* [languages/BSTL/tests/trafo1.term](https://github.com/softlang/yas/blob/master/languages/BSTL/tests/trafo1.term)
+* [languages/BSTL/tests/trafo1.term](docs/files/languages-BSTL-tests-trafo1.term.md)
 ```

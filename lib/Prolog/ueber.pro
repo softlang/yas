@@ -190,21 +190,8 @@ assertNotElementOf(File, L) :-
 
 % Process Hinzu declaration
 hinzu(HinzuTerm) :-
-  maplist(assertHDecl, HinzuTerm),
-  member(l(Is), HinzuTerm),  
-  member(lid(L), Is),
-  atomic_list_concat(['../../docs/languages/', L, '.md'], DocsFile),
-  ueber([
-    elementOf('.hinzu', hinzu(term)),
-    elementOf('README.md', markdown(text)),
-    elementOf(DocsFile, markdown(text)),
-    mapsTo(languageToMd, ['.hinzu'], ['README.md', DocsFile])
-  ]).
-
-% Error handling for Hinzu
-hinzu(X) :-
-  format('Failing on Hinzu metadata ~w.~n',[X]),
-  abort.
+    maplist(assertHDecl, HinzuTerm),
+    ueber(elementOf('.hinzu', hinzu(term))).
 
 % Make a pseudo-absolute filename
 ueber_absolute(Rel, Abs2) :-

@@ -1,4 +1,5 @@
 # Language _ESL (Extended Signature Language)_
+**[GitHub](https://github.com/softlang/yas/blob/master/ESL)**
 A simple extension of the basic signature language BSL for tree-based abstract syntax definition to support type synonyms, products, lists, maybies, and primitive types.
 
 ## Language purposes
@@ -7,7 +8,7 @@ A simple extension of the basic signature language BSL for tree-based abstract s
 * Language definition
 
 ## Language relationships
-* supersetOf: [BSL](http://softlang.github.io/yas/languages/bsl.html)
+* supersetOf: [BSL](http://softlang.github.io/yas/languages/BSL.html)
 
 ## Language elements
 * [languages/BCL/as.esl](../../languages/BCL/as.esl)

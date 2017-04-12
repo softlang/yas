@@ -1,4 +1,5 @@
 # Language _Prolog_
+**[GitHub](https://github.com/softlang/yas/blob/master/Prolog)**
 A general-purpose logic programming language associated with artificial intelligence and computational linguistics.
 
 ## Language purposes
@@ -121,9 +122,7 @@ _None_
 * [languages/GBL/gblAbstract.pro](../../languages/GBL/gblAbstract.pro)
 * [languages/GBL/tblToGbl.pro](../../languages/GBL/tblToGbl.pro)
 * [languages/Hinzu/hinzuDump.pro](../../languages/Hinzu/hinzuDump.pro)
-* [languages/Hinzu/hinzuLanguageToMd.pro](../../languages/Hinzu/hinzuLanguageToMd.pro)
-* [languages/Hinzu/hinzuMdFiles.pro](../../languages/Hinzu/hinzuMdFiles.pro)
-* [languages/Hinzu/hinzuMdIndex.pro](../../languages/Hinzu/hinzuMdIndex.pro)
+* [languages/Hinzu/hinzuToMd.pro](../../languages/Hinzu/hinzuToMd.pro)
 * [languages/LAL/lalAbstract.pro](../../languages/LAL/lalAbstract.pro)
 * [languages/LAL/lalDeps.pro](../../languages/LAL/lalDeps.pro)
 * [languages/LAL/lalNorm.pro](../../languages/LAL/lalNorm.pro)

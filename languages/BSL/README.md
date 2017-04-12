@@ -1,4 +1,5 @@
 # Language _BSL (Basic Signature Language)_
+**[GitHub](https://github.com/softlang/yas/blob/master/BSL)**
 A basic specification language for tree-based abstract syntax on the grounds of many-sorted signatures.
 
 ## Language purposes
@@ -7,7 +8,7 @@ A basic specification language for tree-based abstract syntax on the grounds of 
 * Language definition
 
 ## Language relationships
-* subsetOf: [ESL](http://softlang.github.io/yas/languages/esl.html)
+* subsetOf: [ESL](http://softlang.github.io/yas/languages/ESL.html)
 
 ## Language elements
 * [languages/BNL/as.bsl](../../languages/BNL/as.bsl)

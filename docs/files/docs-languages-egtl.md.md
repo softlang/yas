@@ -11,5 +11,5 @@ A trivial transformation language for grammars.
 * dependsOn: [EGL](http://softlang.github.io/yas/languages/egl.html)
 
 ## Language elements
-* [languages/EGTL/samples/bgl2egl.egtl](https://github.com/softlang/yas/blob/master/languages/EGTL/samples/bgl2egl.egtl)
+* [languages/EGTL/samples/bgl2egl.egtl](docs/files/languages-EGTL-samples-bgl2egl.egtl.md)
 ```

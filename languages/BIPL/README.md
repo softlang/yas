@@ -1,12 +1,13 @@
 # Language _BIPL (Basic Imperative Programming Language)_
+**[GitHub](https://github.com/softlang/yas/blob/master/BIPL)**
 A trivial imperative programming language with support for primitive types for integer and Boolean values, but without support for input, output, and procedures.
 
 ## Language purposes
 * Imperative programming
 
 ## Language relationships
-* embeds: [EL](http://softlang.github.io/yas/languages/el.html)
-* subsetOf: [EIPL](http://softlang.github.io/yas/languages/eipl.html)
+* embeds: [EL](http://softlang.github.io/yas/languages/EL.html)
+* subsetOf: [EIPL](http://softlang.github.io/yas/languages/EIPL.html)
 * relatesTo: [https://en.wikipedia.org/wiki/C_(programming_language)](https://en.wikipedia.org/wiki/C_(programming_language))
 
 ## Language elements

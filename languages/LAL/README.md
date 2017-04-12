@@ -1,4 +1,5 @@
 # Language _LAL (Linguistic Architecture Language)_
+**[GitHub](https://github.com/softlang/yas/blob/master/LAL)**
 A predicate logic-based megamodeling language used for capturing properties of language processors and deriving test cases.
 
 ## Language purposes
