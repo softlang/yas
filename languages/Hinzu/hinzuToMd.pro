@@ -122,7 +122,7 @@ element(repo, FN) :-
 
 element(pages, FN1) :-
     hinzuToMd:filename(FN1, FN2),
-    format('* [../../~w](~w)~n', [FN1, FN2]).
+    format('* [~w](../../~w)~n', [FN1, FN2]).
 
 % --------------------------------------------------
 
