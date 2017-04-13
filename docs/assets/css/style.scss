@@ -1,0 +1,35 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.page-header {
+  background: white;
+  margin-bottom: 0;
+  padding: 0;
+
+  > .project-name {
+    display: none;
+  }
+
+  > .project-tagline::before {
+    background: url('../images/logo.png');
+    background-size: contain;
+    content: '';
+    display: inline-block;
+    height: 100px;
+    margin: auto;
+    width: 100px;
+  }
+
+  .project-tagline {
+    align-items: center;
+    color: #606c71;
+    display: inline-flex;
+    margin: 0;
+  }
+
+  > a {
+    display: none;
+  }
+}
