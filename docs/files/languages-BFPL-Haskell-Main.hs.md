@@ -12,7 +12,7 @@ import Language.BFPL.Specializer as S
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BFPL/Haskell/Main.hs',haskell(text))

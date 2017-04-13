@@ -6,7 +6,7 @@ public enum foo {v1, v2, v3}
 ```
 
 ## Languages
-* [Java](../languages/Java.md)
+* [Java](../languages/Java.md) (java(text))
 
 ## References
 * elementOf('languages/FSML/Prolog/to-java/sample.java',java(text))

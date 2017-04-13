@@ -12,7 +12,7 @@ cardinalityConforms(Star, P, V) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/MML/conformance/cardinality.pro',prolog(text))

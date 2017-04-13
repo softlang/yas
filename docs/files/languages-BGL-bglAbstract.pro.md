@@ -10,7 +10,7 @@
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BGL/bglAbstract.pro',prolog(text))

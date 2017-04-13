@@ -11,7 +11,7 @@
 ```
 
 ## Languages
-* [BIPL](../languages/BIPL.md)
+* [BIPL](../languages/BIPL.md) (bipl(text))
 
 ## References
 * elementOf('languages/BIPL/samples/exp-loop.bipl',bipl(text))

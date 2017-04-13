@@ -12,7 +12,7 @@ allSteps((Fs, E1), E2) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BFPL/Prolog/small-step/closure.pro',prolog(text))

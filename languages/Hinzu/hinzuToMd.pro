@@ -192,20 +192,20 @@ line(Line) :-
     format('~s~n', [Line]).
 
 languagesOfFile(FN) :-
-    findall(L, (
+    findall((L, R), (
 		udeclaration(elementOf(FN, R)),
 		hdeclaration(r(Is)),
 		member(rid(R), Is),
 		member(representationOf(L), Is)
 	    ),
-	    Ls),
-    maplist(hinzuToMd:languageOfFile, Ls).
+	    LRs),
+    maplist(hinzuToMd:languageOfFile, LRs).
 
-languageOfFile(L) :-
+languageOfFile((L, R)) :-
     hdeclaration(l(Is)),
     member(lid(L), Is),
     (member(name(N), Is); member(acronym(N), Is)),
-    format('* [~w](../languages/~w.md)~n', [N, N]).
+    format('* [~w](../languages/~w.md) (~w)~n', [N, N, R]).
 
 referencesToFile(FN) :-
     findall(D, (

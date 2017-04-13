@@ -7,7 +7,7 @@ number(
 ```
 
 ## Languages
-* [BNL](../languages/BNL.md)
+* [BNL](../languages/BNL.md) (bnl(term))
 
 ## References
 * elementOf('languages/BNL/samples/5comma25.term',bnl(term))

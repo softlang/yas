@@ -5,7 +5,7 @@ zero.
 ```
 
 ## Languages
-* [BTL](../languages/BTL.md)
+* [BTL](../languages/BTL.md) (btl(term))
 
 ## References
 * elementOf('languages/BTL/value.term',btl(term))

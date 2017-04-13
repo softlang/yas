@@ -11,7 +11,7 @@ axiom PutGet { forall s1, s2 <- L1. forall v <- L2.
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/bx/state.lal',lal(text))

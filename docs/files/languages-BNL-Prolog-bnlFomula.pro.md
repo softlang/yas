@@ -13,7 +13,7 @@ formula(X^Y) :- formula(X), formula(Y).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BNL/Prolog/bnlFomula.pro',prolog(text))

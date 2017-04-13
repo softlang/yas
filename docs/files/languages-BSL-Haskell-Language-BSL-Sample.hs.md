@@ -12,7 +12,7 @@ sampleSignature =
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BSL/Haskell/Language/BSL/Sample.hs',haskell(text))

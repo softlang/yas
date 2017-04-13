@@ -12,7 +12,7 @@ atomToRefM(
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/MML/atom-to-ref/mt.pro',prolog(text))

@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [Term](../languages/Term.md)
+* [Term](../languages/Term.md) (term)
 
 ## References
 * elementOf('languages/GBL/mm.count',term)

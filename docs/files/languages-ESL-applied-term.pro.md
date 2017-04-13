@@ -14,7 +14,7 @@ appliedTerm(Term) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/ESL/applied-term.pro',prolog(text))

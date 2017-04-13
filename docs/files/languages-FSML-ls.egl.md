@@ -6,7 +6,7 @@ layout : { space }+ ;
 ```
 
 ## Languages
-* [EGL](../languages/EGL.md)
+* [EGL](../languages/EGL.md) (egl(text))
 
 ## References
 * elementOf('languages/FSML/ls.egl',egl(text))

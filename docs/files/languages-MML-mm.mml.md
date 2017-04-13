@@ -12,7 +12,7 @@ class class extends classifier {
 ```
 
 ## Languages
-* [MML](../languages/MML.md)
+* [MML](../languages/MML.md) (mml(text))
 
 ## References
 * elementOf('languages/MML/mm.mml',mml(text))

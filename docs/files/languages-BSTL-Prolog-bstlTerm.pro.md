@@ -14,7 +14,7 @@ interpret(renameSym(N1, N2), T1, T2) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BSTL/Prolog/bstlTerm.pro',prolog(text))

@@ -12,7 +12,7 @@ import Language.BTL.Interpreter as AdHoc
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BTL/Haskell/Main.hs',haskell(text))

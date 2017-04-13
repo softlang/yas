@@ -5,7 +5,7 @@ assign(x,binary(geq,intconst(88),intconst(42))).
 ```
 
 ## Languages
-* [BIPL](../languages/BIPL.md)
+* [BIPL](../languages/BIPL.md) (bipl(term))
 
 ## References
 * elementOf('languages/BIPL/samples/geq.term',bipl(term))

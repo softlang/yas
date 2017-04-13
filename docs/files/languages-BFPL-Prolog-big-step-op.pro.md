@@ -17,7 +17,7 @@ opVal(geq, intval(I1), intval(I2), boolval(false)) :- I1 < I2.
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BFPL/Prolog/big-step/op.pro',prolog(text))

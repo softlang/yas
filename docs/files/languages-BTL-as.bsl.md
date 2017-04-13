@@ -11,7 +11,7 @@ symbol if : expr # expr # expr -> expr ; // Conditional
 ```
 
 ## Languages
-* [BSL](../languages/BSL.md)
+* [BSL](../languages/BSL.md) (bsl(text))
 
 ## References
 * elementOf('languages/BTL/as.bsl',bsl(text))

@@ -12,7 +12,7 @@ inputsOfFsm(Fsm, Text) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/FSML/Prolog/to-java/input.pro',prolog(text))

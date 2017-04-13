@@ -9,7 +9,7 @@ prefixTerm(Term) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BSL/prefix-term.pro',prolog(text))

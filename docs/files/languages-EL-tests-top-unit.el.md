@@ -5,7 +5,7 @@ a + 0
 ```
 
 ## Languages
-* [EL](../languages/EL.md)
+* [EL](../languages/EL.md) (el(text))
 
 ## References
 * elementOf('languages/EL/tests/top-unit.el',el(text))

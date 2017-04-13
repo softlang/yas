@@ -12,7 +12,7 @@ Cs1 => { class : metamodel, classifiers : Cs2 } :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/MML/term-to-graph.pro',prolog(text))

@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [EGL](../languages/EGL.md)
+* [EGL](../languages/EGL.md) (egl(term))
 
 ## References
 * membership(eipl(text),eglAcceptor(eiplAbstract: (~>)),['languages/EIPL/cs.term','languages/EIPL/ls.term'])

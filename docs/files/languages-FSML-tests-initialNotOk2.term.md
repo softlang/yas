@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [FSML](../languages/FSML.md)
+* [FSML](../languages/FSML.md) (fsml(term))
 
 ## References
 * elementOf('languages/FSML/tests/initialNotOk2.term',fsml(term))

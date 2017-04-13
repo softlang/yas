@@ -12,7 +12,7 @@ lookup(K, D, V) :- dictToList(D, L), member((K, V), L).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/Term/dict/dictCrud.pro',prolog(text))

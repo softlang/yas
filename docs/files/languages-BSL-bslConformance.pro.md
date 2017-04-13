@@ -11,7 +11,7 @@ termOfSort(Profiles, Term, Sort) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BSL/bslConformance.pro',prolog(text))

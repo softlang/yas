@@ -12,7 +12,7 @@ data Fsm = Fsm { getStates :: [State] }
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/FSML/Haskell/Language/FSML/Syntax.hs',haskell(text))

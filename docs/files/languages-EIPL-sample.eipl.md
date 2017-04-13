@@ -17,7 +17,7 @@ end
 ```
 
 ## Languages
-* [EIPL](../languages/EIPL.md)
+* [EIPL](../languages/EIPL.md) (eipl(text))
 
 ## References
 * elementOf('languages/EIPL/sample.eipl',eipl(text))

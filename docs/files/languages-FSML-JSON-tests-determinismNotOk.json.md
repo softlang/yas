@@ -18,7 +18,7 @@
 ```
 
 ## Languages
-* [JSON](../languages/JSON.md)
+* [JSON](../languages/JSON.md) (json)
 
 ## References
 * elementOf('languages/FSML/JSON/tests/determinismNotOk.json',json)

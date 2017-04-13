@@ -5,7 +5,7 @@ list(cons(id,cons(subterms([id,id,id,list(cons(id,sub((value,lastName,atom,one),
 ```
 
 ## Languages
-* [TDL](../languages/TDL.md)
+* [TDL](../languages/TDL.md) (tdl(term))
 
 ## References
 * elementOf('languages/FRL/terminvdiff.term',tdl(term))

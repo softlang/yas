@@ -13,7 +13,7 @@ main = print $ factorial 5 -- Prints 120
 ```
 
 ## Languages
-* [BFPL](../languages/BFPL.md)
+* [BFPL](../languages/BFPL.md) (bfpl(text))
 
 ## References
 * elementOf('languages/BFPL/samples/factorial.bfpl',bfpl(text))

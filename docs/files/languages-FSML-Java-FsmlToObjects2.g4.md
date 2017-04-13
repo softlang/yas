@@ -12,7 +12,7 @@ fsm returns [Fsm result] :
 ```
 
 ## Languages
-* [ANTLR](../languages/ANTLR.md)
+* [ANTLR](../languages/ANTLR.md) (antlr(text))
 
 ## References
 * elementOf('languages/FSML/Java/FsmlToObjects2.g4',antlr(text))

@@ -12,7 +12,7 @@ axiom partAsym {
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/traceability/refs.lal2',lal(text))

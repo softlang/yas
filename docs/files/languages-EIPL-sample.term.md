@@ -5,8 +5,8 @@
 ```
 
 ## Languages
-* [EIPL](../languages/EIPL.md)
-* [EIPL](../languages/EIPL.md)
+* [EIPL](../languages/EIPL.md) (eipl(term))
+* [EIPL](../languages/EIPL.md) (ok(eipl(term)))
 
 ## References
 * elementOf('languages/EIPL/sample.term',eipl(term))

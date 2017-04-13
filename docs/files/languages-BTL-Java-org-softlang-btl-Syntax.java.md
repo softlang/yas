@@ -12,7 +12,7 @@ public class Syntax {
 ```
 
 ## Languages
-* [Java](../languages/Java.md)
+* [Java](../languages/Java.md) (java(text))
 
 ## References
 * elementOf('languages/BTL/Java/org/softlang/btl/Syntax.java',java(text))

@@ -18,7 +18,7 @@ steps e =
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/ULL/Haskell/Language/ULL/Closure.hs',haskell(text))

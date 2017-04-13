@@ -8,7 +8,7 @@ sequ( sequ(
 ```
 
 ## Languages
-* [BSTL](../languages/BSTL.md)
+* [BSTL](../languages/BSTL.md) (bstl(term))
 
 ## References
 * elementOf('languages/BSTL/tests/trafo1.term',bstl(term))

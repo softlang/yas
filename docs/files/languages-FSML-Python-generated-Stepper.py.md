@@ -12,7 +12,7 @@ class Stepper(FsmlStepper):
 ```
 
 ## Languages
-* [Python](../languages/Python.md)
+* [Python](../languages/Python.md) (python(text))
 
 ## References
 * elementOf('languages/FSML/Python/generated/Stepper.py',python(text))

@@ -12,7 +12,7 @@ A standardized, general-purpose purely functional programming language, with non
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/Haskell/README.md',markdown(text))

@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [ESL](../languages/ESL.md)
+* [ESL](../languages/ESL.md) (esl(term))
 
 ## References
 * elementOf('languages/LAL/config/as.term',esl(term))

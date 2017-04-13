@@ -5,7 +5,7 @@ vbox(text('a'), vbox(text('b'), text('c'))).
 ```
 
 ## Languages
-* [PPL](../languages/PPL.md)
+* [PPL](../languages/PPL.md) (ppl(term))
 
 ## References
 * elementOf('languages/PPL/tests/vbox.ppl',ppl(term))

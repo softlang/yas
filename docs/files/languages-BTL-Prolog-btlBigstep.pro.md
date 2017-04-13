@@ -17,7 +17,7 @@ evaluate(if(E0, _E1, E2), V2) :- evaluate(E0, false), evaluate(E2, V2).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BTL/Prolog/btlBigstep.pro',prolog(text))

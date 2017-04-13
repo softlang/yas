@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [MML](../languages/MML.md)
+* [MML](../languages/MML.md) (mml(term))
 
 ## References
 * elementOf('languages/FSML/mm.term',mml(term))

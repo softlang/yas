@@ -12,7 +12,7 @@ Python implementation of the Finite State Machine Language
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/FSML/Python/README.md',markdown(text))

@@ -12,7 +12,7 @@
 ```
 
 ## Languages
-* [Ueber](../languages/Ueber.md)
+* [Ueber](../languages/Ueber.md) (ueber(term))
 
 ## References
 * elementOf('samples/obsolete/figure/parsing/.ueber',ueber(term))

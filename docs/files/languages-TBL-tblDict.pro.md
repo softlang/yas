@@ -11,7 +11,7 @@ W1 => {class:world, persons:W2} :- map(tblDict:(=>), W1, W2).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/TBL/tblDict.pro',prolog(text))

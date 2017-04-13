@@ -14,7 +14,7 @@ Jason Hunter <jhunter_AT_jdom_DOT_org>
 ```
 
 ## Languages
-* [Text](../languages/Text.md)
+* [Text](../languages/Text.md) (text)
 
 ## References
 * elementOf('samples/xcoupled/jdom/COMMITTERS.txt',text)

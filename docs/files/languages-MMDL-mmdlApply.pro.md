@@ -12,7 +12,7 @@ apply(removeClassifier(C), Cs1, Cs2) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/MMDL/mmdlApply.pro',prolog(text))

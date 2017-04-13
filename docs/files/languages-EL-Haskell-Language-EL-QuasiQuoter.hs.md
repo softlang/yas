@@ -12,7 +12,7 @@ import Language.Haskell.TH.Quote
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/EL/Haskell/Language/EL/QuasiQuoter.hs',haskell(text))

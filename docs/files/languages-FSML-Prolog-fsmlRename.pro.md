@@ -16,7 +16,7 @@ perTransition(R, (Ev, Ac, Id1), (Ev, Ac, Id2)) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/FSML/Prolog/fsmlRename.pro',prolog(text))

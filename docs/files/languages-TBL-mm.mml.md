@@ -10,7 +10,7 @@ datatype string ;
 ```
 
 ## Languages
-* [MML](../languages/MML.md)
+* [MML](../languages/MML.md) (mml(text))
 
 ## References
 * elementOf('languages/TBL/mm.mml',mml(text))

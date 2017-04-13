@@ -5,7 +5,7 @@ unary(not,binary(eq,intconst(88),intconst(42))).
 ```
 
 ## Languages
-* [EL](../languages/EL.md)
+* [EL](../languages/EL.md) (el(term))
 
 ## References
 * elementOf('languages/EL/tests/no-vars.term',el(term))

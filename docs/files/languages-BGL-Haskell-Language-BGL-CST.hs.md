@@ -11,7 +11,7 @@ type CST = Tree Info
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BGL/Haskell/Language/BGL/CST.hs',haskell(text))

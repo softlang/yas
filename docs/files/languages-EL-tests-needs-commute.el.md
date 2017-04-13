@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [EL](../languages/EL.md)
+* [EL](../languages/EL.md) (el(text))
 
 ## References
 * elementOf('languages/EL/tests/needs-commute.el',el(text))

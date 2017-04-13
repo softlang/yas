@@ -17,7 +17,7 @@ normalize f e = let e' = pass e in if e==e' then e else normalize f e'
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/EL/Haskell/Language/EL/Normalizer.hs',haskell(text))

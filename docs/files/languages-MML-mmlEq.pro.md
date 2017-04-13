@@ -17,7 +17,7 @@ sortClassifier(class(A, CN, X, Ms1), class(A, CN, X, Ms2)) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/MML/mmlEq.pro',prolog(text))

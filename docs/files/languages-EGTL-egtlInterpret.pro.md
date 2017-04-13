@@ -12,7 +12,7 @@ interpret(sequ([T|Ts]), G1, G3) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/EGTL/egtlInterpret.pro',prolog(text))

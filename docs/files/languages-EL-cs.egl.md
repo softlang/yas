@@ -12,7 +12,7 @@
 ```
 
 ## Languages
-* [EGL](../languages/EGL.md)
+* [EGL](../languages/EGL.md) (egl(text))
 
 ## References
 * elementOf('languages/EL/cs.egl',egl(text))

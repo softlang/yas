@@ -10,7 +10,7 @@ person(Ps, (X1, [X2])) :- \+ X1 == X2, member((X2, _), Ps).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/TBL/tblOk.pro',prolog(text))

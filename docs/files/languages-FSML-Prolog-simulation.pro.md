@@ -12,7 +12,7 @@ simulateFsm(
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/FSML/Prolog/simulation.pro',prolog(text))

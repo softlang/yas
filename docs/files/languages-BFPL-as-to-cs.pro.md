@@ -12,7 +12,7 @@ ppFun(
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BFPL/as-to-cs.pro',prolog(text))

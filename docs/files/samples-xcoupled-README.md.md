@@ -12,7 +12,7 @@ This 101contribution demonstrates a coupled software transformation for the 101i
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('samples/xcoupled/README.md',markdown(text))

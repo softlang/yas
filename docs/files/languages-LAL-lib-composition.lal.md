@@ -12,7 +12,7 @@ axiom partTransitive { forall x, y <- L.
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/composition.lal',lal(text))

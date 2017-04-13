@@ -9,7 +9,7 @@ person((_, [_])).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/TBL/tblOne.pro',prolog(text))

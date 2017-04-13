@@ -12,7 +12,7 @@ def generateC(fsm):
 ```
 
 ## Languages
-* [Python](../languages/Python.md)
+* [Python](../languages/Python.md) (python(text))
 
 ## References
 * elementOf('languages/FSML/Python/FsmlCGenerator.py',python(text))

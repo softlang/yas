@@ -5,7 +5,7 @@ a + b
 ```
 
 ## Languages
-* [EL](../languages/EL.md)
+* [EL](../languages/EL.md) (el(text))
 
 ## References
 * elementOf('languages/EL/tests/a-plus-b.el',el(text))

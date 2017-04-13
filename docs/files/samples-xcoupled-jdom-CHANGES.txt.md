@@ -12,7 +12,7 @@ Added output support for Unicode surrogate pairs.
 ```
 
 ## Languages
-* [Text](../languages/Text.md)
+* [Text](../languages/Text.md) (text)
 
 ## References
 * elementOf('samples/xcoupled/jdom/CHANGES.txt',text)

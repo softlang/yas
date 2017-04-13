@@ -9,7 +9,7 @@ main = print $ abs (-42) -- Prints 42
 ```
 
 ## Languages
-* [BFPL](../languages/BFPL.md)
+* [BFPL](../languages/BFPL.md) (bfpl(text))
 
 ## References
 * elementOf('languages/BFPL/samples/abs.bfpl',bfpl(text))

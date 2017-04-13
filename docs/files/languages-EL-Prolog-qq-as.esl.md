@@ -12,7 +12,7 @@ symbol unary : uop # expr -> expr ;
 ```
 
 ## Languages
-* [ESL](../languages/ESL.md)
+* [ESL](../languages/ESL.md) (esl(text))
 
 ## References
 * elementOf('languages/EL/Prolog/qq/as.esl',esl(text))

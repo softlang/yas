@@ -12,7 +12,7 @@ data Number = Number Bits Rest
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BNL/Haskell/Language/BNL/Syntax.hs',haskell(text))

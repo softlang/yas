@@ -12,7 +12,7 @@ interpret :: Alg m sto val -> Stmt -> Trafo m sto
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BIPL/Haskell/Language/BIPL/MonadicAlgebra/Scheme.hs',haskell(text))

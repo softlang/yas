@@ -12,7 +12,7 @@
 ```
 
 ## Languages
-* [JSON](../languages/JSON.md)
+* [JSON](../languages/JSON.md) (json)
 
 ## References
 * elementOf('languages/BTL/JSON/schema.json',json)

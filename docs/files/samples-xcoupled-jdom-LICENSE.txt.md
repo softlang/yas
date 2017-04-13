@@ -12,7 +12,7 @@
 ```
 
 ## Languages
-* [Text](../languages/Text.md)
+* [Text](../languages/Text.md) (text)
 
 ## References
 * elementOf('samples/xcoupled/jdom/LICENSE.txt',text)

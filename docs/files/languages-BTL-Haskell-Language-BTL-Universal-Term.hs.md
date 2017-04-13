@@ -12,7 +12,7 @@ instance Term Expr where
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BTL/Haskell/Language/BTL/Universal/Term.hs',haskell(text))

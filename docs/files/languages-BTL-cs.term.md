@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [BGL](../languages/BGL.md)
+* [BGL](../languages/BGL.md) (bgl(term))
 
 ## References
 * elementOf('languages/BTL/cs.term',bgl(term))

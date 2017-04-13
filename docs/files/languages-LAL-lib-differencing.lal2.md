@@ -12,7 +12,7 @@ function invDiff : DiffL -> DiffL
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/differencing.lal2',lal(text))

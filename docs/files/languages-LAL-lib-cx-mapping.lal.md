@@ -7,7 +7,7 @@ axiom { forall a <- L1. forall b <- L2. mapping(a) = b => consistent(a, b) }
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/cx/mapping.lal',lal(text))

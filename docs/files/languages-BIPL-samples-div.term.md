@@ -5,7 +5,7 @@ seq(assign(x,intconst(14)),seq(assign(y,intconst(4)),seq(assign(q,intconst(0)),s
 ```
 
 ## Languages
-* [BIPL](../languages/BIPL.md)
+* [BIPL](../languages/BIPL.md) (bipl(term))
 
 ## References
 * mapsTo(bigstep,['languages/BIPL/samples/div.term'],['languages/BIPL/Prolog/div.store'])

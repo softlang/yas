@@ -12,7 +12,7 @@ import Text.Parsec hiding (State)
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/FSML/Haskell/Language/FSML/Lexer.hs',haskell(text))

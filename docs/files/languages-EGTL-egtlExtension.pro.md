@@ -9,7 +9,7 @@ ok(add(_)).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/EGTL/egtlExtension.pro',prolog(text))

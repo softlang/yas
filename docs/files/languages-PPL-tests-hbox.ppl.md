@@ -5,7 +5,7 @@ hbox(text('a'), hbox(text(' '), text('b'))).
 ```
 
 ## Languages
-* [PPL](../languages/PPL.md)
+* [PPL](../languages/PPL.md) (ppl(term))
 
 ## References
 * elementOf('languages/PPL/tests/hbox.ppl',ppl(term))

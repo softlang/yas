@@ -12,7 +12,7 @@ parse(Rules1, Rules2, Layout, Mapping, Chars0, Tree) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/EGL/eglScannerless.pro',prolog(text))

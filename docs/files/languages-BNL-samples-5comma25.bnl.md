@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [BNL](../languages/BNL.md)
+* [BNL](../languages/BNL.md) (bnl(text))
 
 ## References
 * elementOf('languages/BNL/samples/5comma25.bnl',bnl(text))

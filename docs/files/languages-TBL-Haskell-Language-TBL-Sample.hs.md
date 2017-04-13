@@ -13,7 +13,7 @@ smallWorld = World [
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/TBL/Haskell/Language/TBL/Sample.hs',haskell(text))

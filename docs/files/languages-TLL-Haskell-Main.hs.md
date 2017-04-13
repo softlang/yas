@@ -12,7 +12,7 @@ import Language.TLL.Erasure
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/TLL/Haskell/Main.hs',haskell(text))

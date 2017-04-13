@@ -14,7 +14,7 @@ termOfSort ps (TermRep c ts) s =
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BSL/Haskell/Language/BSL/Conformance.hs',haskell(text))

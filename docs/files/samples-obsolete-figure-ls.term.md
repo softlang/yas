@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [EGL](../languages/EGL.md)
+* [EGL](../languages/EGL.md) (egl(term))
 
 ## References
 * membership(figure(text),eglAcceptor(figureAbstract: (~>)),['samples/obsolete/figure/cs.term','samples/obsolete/figure/ls.term'])

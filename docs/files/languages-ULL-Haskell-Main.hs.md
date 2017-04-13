@@ -15,7 +15,7 @@ main = do
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/ULL/Haskell/Main.hs',haskell(text))

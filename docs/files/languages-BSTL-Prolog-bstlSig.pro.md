@@ -15,7 +15,7 @@ renameSym(N1, N2, T1, T2) :- T1 = (N1, R) -> T2 = (N2, R) ; T2 = T1.
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BSTL/Prolog/bstlSig.pro',prolog(text))

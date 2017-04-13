@@ -12,7 +12,7 @@ A representation format for term differences.
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/TDL/README.md',markdown(text))

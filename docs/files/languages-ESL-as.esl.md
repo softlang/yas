@@ -12,7 +12,7 @@ symbol string : -> typeexpr ;
 ```
 
 ## Languages
-* [ESL](../languages/ESL.md)
+* [ESL](../languages/ESL.md) (esl(text))
 
 ## References
 * elementOf('languages/ESL/as.esl',esl(text))

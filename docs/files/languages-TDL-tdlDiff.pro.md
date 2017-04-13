@@ -12,7 +12,7 @@ diff(X, Y, replace(X, Y)) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/TDL/tdlDiff.pro',prolog(text))

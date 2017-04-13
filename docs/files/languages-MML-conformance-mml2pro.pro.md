@@ -7,7 +7,7 @@ mml2pro(N1, N2) :- N1 = string -> N2 = atom; N2 = N1.
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/MML/conformance/mml2pro.pro',prolog(text))

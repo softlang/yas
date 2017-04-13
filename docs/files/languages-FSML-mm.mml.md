@@ -17,7 +17,7 @@ datatype string ;
 ```
 
 ## Languages
-* [MML](../languages/MML.md)
+* [MML](../languages/MML.md) (mml(text))
 
 ## References
 * elementOf('languages/FSML/mm.mml',mml(text))

@@ -12,7 +12,7 @@ function eval : expr x state -> val
 ```
 
 ## Languages
-* [ASL](../languages/ASL.md)
+* [ASL](../languages/ASL.md) (asl(text))
 
 ## References
 * elementOf('languages/ASL/samples/attic/BIPL.asl',asl(text))

@@ -7,7 +7,7 @@ This is necessary to have them available while preprocessing.
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/Ueber/macros/README.md',markdown(text))

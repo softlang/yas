@@ -12,7 +12,7 @@ A trivial language for the representation of binary numbers.
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/BNL/README.md',markdown(text))

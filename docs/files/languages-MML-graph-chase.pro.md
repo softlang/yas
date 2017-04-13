@@ -12,7 +12,7 @@ chaseSuper_(_, _, [], []).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/MML/graph-chase.pro',prolog(text))

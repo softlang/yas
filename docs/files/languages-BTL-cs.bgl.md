@@ -11,7 +11,7 @@
 ```
 
 ## Languages
-* [BGL](../languages/BGL.md)
+* [BGL](../languages/BGL.md) (bgl(text))
 
 ## References
 * elementOf('languages/BTL/cs.bgl',bgl(text))

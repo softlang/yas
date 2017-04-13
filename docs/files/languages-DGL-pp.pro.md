@@ -12,7 +12,7 @@ dglPp(
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/DGL/pp.pro',prolog(text))

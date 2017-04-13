@@ -12,7 +12,7 @@ How to use JDOM
 ```
 
 ## Languages
-* [Text](../languages/Text.md)
+* [Text](../languages/Text.md) (text)
 
 ## References
 * elementOf('samples/xcoupled/jdom/README.txt',text)

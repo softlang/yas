@@ -12,7 +12,7 @@ functions
 ```
 
 ## Languages
-* [ASL](../languages/ASL.md)
+* [ASL](../languages/ASL.md) (asl(text))
 
 ## References
 * elementOf('languages/ASL/samples/adts/lqueue1.asl',asl(text))

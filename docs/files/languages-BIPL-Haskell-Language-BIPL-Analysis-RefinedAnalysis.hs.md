@@ -12,7 +12,7 @@ import Data.CPO
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BIPL/Haskell/Language/BIPL/Analysis/RefinedAnalysis.hs',haskell(text))

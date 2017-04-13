@@ -12,7 +12,7 @@ import Data.Map (Map, lookup, insert)
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/TLL/Haskell/Language/TLL/Typing.hs',haskell(text))

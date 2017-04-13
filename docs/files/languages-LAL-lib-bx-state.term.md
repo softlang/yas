@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(term))
 
 ## References
 * elementOf('languages/LAL/lib/bx/state.term',lal(term))

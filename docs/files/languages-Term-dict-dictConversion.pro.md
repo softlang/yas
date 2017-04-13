@@ -11,7 +11,7 @@ listToDict(L, D) :- dictToList(D, L).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/Term/dict/dictConversion.pro',prolog(text))

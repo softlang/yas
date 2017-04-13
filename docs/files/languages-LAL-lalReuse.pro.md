@@ -12,7 +12,7 @@ inline(Ds1, Ds2) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/LAL/lalReuse.pro',prolog(text))

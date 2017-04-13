@@ -12,7 +12,7 @@ report(Ds) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/Ueber/ueberReport.pro',prolog(text))

@@ -11,7 +11,7 @@ instance Eq Fsm where
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/FSML/Haskell/Language/FSML/Eq.hs',haskell(text))

@@ -12,7 +12,7 @@ meaningOp(sub, F1, F2, X, intval(I0)) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BFPL/Prolog/denotational/op.pro',prolog(text))

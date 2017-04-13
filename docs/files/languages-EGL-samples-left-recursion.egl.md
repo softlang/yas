@@ -6,7 +6,7 @@
 ```
 
 ## Languages
-* [EGL](../languages/EGL.md)
+* [EGL](../languages/EGL.md) (egl(text))
 
 ## References
 * elementOf('languages/EGL/samples/left-recursion.egl',egl(text))

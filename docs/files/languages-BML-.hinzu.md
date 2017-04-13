@@ -14,7 +14,7 @@
 ```
 
 ## Languages
-* [Hinzu](../languages/Hinzu.md)
+* [Hinzu](../languages/Hinzu.md) (hinzu(term))
 
 ## References
 * elementOf('languages/BML/.hinzu',hinzu(term))

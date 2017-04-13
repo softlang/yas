@@ -6,7 +6,7 @@ hseplist(text(', '), [text(a), text(b), text(c)]).
 ```
 
 ## Languages
-* [PPL](../languages/PPL.md)
+* [PPL](../languages/PPL.md) (ppl(term))
 
 ## References
 * elementOf('languages/PPL/tests/hseplist.ppl',ppl(term))

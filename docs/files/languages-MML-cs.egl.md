@@ -12,7 +12,7 @@ members : '{' { member }* '}' ;
 ```
 
 ## Languages
-* [EGL](../languages/EGL.md)
+* [EGL](../languages/EGL.md) (egl(text))
 
 ## References
 * elementOf('languages/MML/cs.egl',egl(text))

@@ -12,7 +12,7 @@ A basic specification language for tree-based abstract syntax on the grounds of 
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/BSL/README.md',markdown(text))

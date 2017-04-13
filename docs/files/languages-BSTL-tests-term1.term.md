@@ -5,7 +5,7 @@ fork(fork(leaf(zero), leaf(zero)), leaf(succ(zero))).
 ```
 
 ## Languages
-* [Term](../languages/Term.md)
+* [Term](../languages/Term.md) (term)
 
 ## References
 * elementOf('languages/BSTL/tests/term1.term',term)

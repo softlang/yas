@@ -5,7 +5,7 @@ var(a).
 ```
 
 ## Languages
-* [EL](../languages/EL.md)
+* [EL](../languages/EL.md) (el(term))
 
 ## References
 * elementOf('languages/EL/tests/a.term',el(term))

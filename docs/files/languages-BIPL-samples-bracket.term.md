@@ -5,7 +5,7 @@ assign(x,intconst(42)).
 ```
 
 ## Languages
-* [BIPL](../languages/BIPL.md)
+* [BIPL](../languages/BIPL.md) (bipl(term))
 
 ## References
 * elementOf('languages/BIPL/samples/bracket.term',bipl(term))

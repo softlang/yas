@@ -12,7 +12,7 @@ type Parser a = String -> Maybe (a, String)
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BNL/Haskell/Language/BNL/Parser.hs',haskell(text))

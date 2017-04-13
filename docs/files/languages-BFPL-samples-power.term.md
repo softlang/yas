@@ -5,8 +5,8 @@
 ```
 
 ## Languages
-* [BFPL](../languages/BFPL.md)
-* [BFPL](../languages/BFPL.md)
+* [BFPL](../languages/BFPL.md) (ok(bfpl(term)))
+* [BFPL](../languages/BFPL.md) (bfpl(term))
 
 ## References
 * elementOf('languages/BFPL/samples/power.term',ok(bfpl(term)))

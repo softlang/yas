@@ -16,7 +16,7 @@
 ```
 
 ## Languages
-* [Ueber](../languages/Ueber.md)
+* [Ueber](../languages/Ueber.md) (ueber(term))
 
 ## References
 * elementOf('samples/obsolete/expr/editing/.ueber',ueber(term))

@@ -11,7 +11,7 @@ membership(bnl(text), java('org.softlang.BnlEbnfAcceptor'), [.])
 ```
 
 ## Languages
-* [Ueber](../languages/Ueber.md)
+* [Ueber](../languages/Ueber.md) (ueber(term))
 
 ## References
 * elementOf('languages/BNL/ANTLR/.ueber',ueber(term))

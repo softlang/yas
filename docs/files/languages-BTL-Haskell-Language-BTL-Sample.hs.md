@@ -15,7 +15,7 @@ illtypedSampleExpr = Succ TRUE
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BTL/Haskell/Language/BTL/Sample.hs',haskell(text))

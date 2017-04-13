@@ -5,7 +5,7 @@ seq(assign(y,intconst(1)),seq(assign(i,intconst(1)),while(binary(leq,var(i),var(
 ```
 
 ## Languages
-* [BIPL](../languages/BIPL.md)
+* [BIPL](../languages/BIPL.md) (bipl(term))
 
 ## References
 * elementOf('languages/BIPL/samples/factorialV1.term',bipl(term))

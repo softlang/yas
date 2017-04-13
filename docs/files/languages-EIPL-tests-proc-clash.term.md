@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [EIPL](../languages/EIPL.md)
+* [EIPL](../languages/EIPL.md) (eipl(term))
 
 ## References
 * elementOf('languages/EIPL/tests/proc-clash.term',eipl(term))

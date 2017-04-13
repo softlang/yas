@@ -16,7 +16,7 @@ sortTable((TN, Cs1), (CN, Cs2)) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/DDL/ddlEq.pro',prolog(text))

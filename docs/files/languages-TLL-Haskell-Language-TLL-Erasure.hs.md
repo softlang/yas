@@ -12,7 +12,7 @@ erase (TLL.Var x) = (ULL.Var x)
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/TLL/Haskell/Language/TLL/Erasure.hs',haskell(text))

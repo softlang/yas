@@ -12,7 +12,7 @@ newObject(ClassN, MM1, Obj2) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/MML/editing/new-object.pro',prolog(text))

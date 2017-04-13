@@ -12,7 +12,7 @@ from: locked, input: ticket, to: unlocked
 ```
 
 ## Languages
-* [Text](../languages/Text.md)
+* [Text](../languages/Text.md) (text)
 
 ## References
 * elementOf('languages/FSML/Prolog/generated/baseline.txt',text)

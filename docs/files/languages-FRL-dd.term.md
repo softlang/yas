@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [DDL](../languages/DDL.md)
+* [DDL](../languages/DDL.md) (ddl(term))
 
 ## References
 * elementOf('languages/FRL/dd.term',ddl(term))

@@ -12,7 +12,7 @@ factorial x =
 ```
 
 ## Languages
-* [EFPL](../languages/EFPL.md)
+* [EFPL](../languages/EFPL.md) (efpl(text))
 
 ## References
 * elementOf('languages/EFPL/tests/sample-past-specialization.efpl',efpl(text))

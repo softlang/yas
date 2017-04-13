@@ -7,7 +7,7 @@ end
 ```
 
 ## Languages
-* [EIPL](../languages/EIPL.md)
+* [EIPL](../languages/EIPL.md) (eipl(text))
 
 ## References
 * elementOf('languages/EIPL/tests/missing-var-dec.eipl',eipl(text))

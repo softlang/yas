@@ -13,7 +13,7 @@
 ```
 
 ## Languages
-* [BGL](../languages/BGL.md)
+* [BGL](../languages/BGL.md) (bgl(term))
 
 ## References
 * elementOf('languages/BNL/cs.term',bgl(term))

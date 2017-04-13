@@ -14,7 +14,7 @@ transform(valueToReference(N1, N2, N3, N4), M1, M2) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/MMTL/mmTransform.pro',prolog(text))

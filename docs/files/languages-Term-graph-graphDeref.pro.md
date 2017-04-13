@@ -15,7 +15,7 @@ getObject(L, Id, O) :- member(E, L), getObject(E, Id, O).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/Term/graph/graphDeref.pro',prolog(text))

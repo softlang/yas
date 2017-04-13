@@ -9,7 +9,7 @@ euclideanDiv = [Const 14,Store 0,Const 4,Store 1,Const 0,Store 2,Load 0,Store 3,
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BML/Haskell/Language/BML/Sample.hs',haskell(text))

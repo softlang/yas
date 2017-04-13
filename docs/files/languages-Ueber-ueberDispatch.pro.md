@@ -12,7 +12,7 @@ overloads(Ds, R, InFs, OutFs, Overloads2) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/Ueber/ueberDispatch.pro',prolog(text))

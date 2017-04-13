@@ -12,7 +12,7 @@ bglTreeToText(Tree, Text) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BGL/unparse.pro',prolog(text))

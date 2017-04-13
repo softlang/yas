@@ -8,7 +8,7 @@
 ```
 
 ## Languages
-* [Ueber](../languages/Ueber.md)
+* [Ueber](../languages/Ueber.md) (ueber(term))
 
 ## References
 * elementOf('languages/DCG/.ueber',ueber(term))

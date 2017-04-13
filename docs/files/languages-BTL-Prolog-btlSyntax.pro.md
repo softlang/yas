@@ -14,7 +14,7 @@ isExpr(if(E0, E1, E2)) :- isExpr(E0), isExpr(E1), isExpr(E2).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BTL/Prolog/btlSyntax.pro',prolog(text))

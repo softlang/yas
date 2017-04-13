@@ -12,7 +12,7 @@ A megamodeling language used for build management and regression testing in the 
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/Ueber/README.md',markdown(text))

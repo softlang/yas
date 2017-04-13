@@ -5,7 +5,7 @@ vlist([hbox(hlist([text(line),text(' from: '),hlist([text('('),integer(0),text('
 ```
 
 ## Languages
-* [PPL](../languages/PPL.md)
+* [PPL](../languages/PPL.md) (ppl(term))
 
 ## References
 * elementOf('samples/obsolete/figure/sample.ppl',ppl(term))

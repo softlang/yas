@@ -12,7 +12,7 @@
 ```
 
 ## Languages
-* [Hinzu](../languages/Hinzu.md)
+* [Hinzu](../languages/Hinzu.md) (hinzu(term))
 
 ## References
 * elementOf('languages/BGL/.hinzu',hinzu(term))

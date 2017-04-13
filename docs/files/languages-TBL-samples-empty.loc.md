@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [Term](../languages/Term.md)
+* [Term](../languages/Term.md) (term)
 
 ## References
 * elementOf('languages/TBL/samples/empty.loc',term)

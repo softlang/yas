@@ -12,7 +12,7 @@ fsmToDgl(Ss, (Ns, Es)) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/FSML/Prolog/to-dgl.pro',prolog(text))

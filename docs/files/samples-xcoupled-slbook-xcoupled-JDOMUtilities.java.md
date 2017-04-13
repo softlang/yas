@@ -12,7 +12,7 @@ import org.jdom.Document;
 ```
 
 ## Languages
-* [Java](../languages/Java.md)
+* [Java](../languages/Java.md) (java(text))
 
 ## References
 * elementOf('samples/xcoupled/slbook/xcoupled/JDOMUtilities.java',java(text))

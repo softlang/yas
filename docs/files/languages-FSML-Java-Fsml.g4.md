@@ -14,7 +14,7 @@ WS : [ \t\n\r]+ -> skip ;
 ```
 
 ## Languages
-* [ANTLR](../languages/ANTLR.md)
+* [ANTLR](../languages/ANTLR.md) (antlr(text))
 
 ## References
 * elementOf('languages/FSML/Java/Fsml.g4',antlr(text))

@@ -12,7 +12,7 @@ CREATE TABLE person (
 ```
 
 ## Languages
-* [DDL](../languages/DDL.md)
+* [DDL](../languages/DDL.md) (ddl(text))
 
 ## References
 * elementOf('languages/FRL/FRL2/dd.ddl',ddl(text))

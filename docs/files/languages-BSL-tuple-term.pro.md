@@ -8,7 +8,7 @@ tupleTerm((Symbol, Terms)) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BSL/tuple-term.pro',prolog(text))

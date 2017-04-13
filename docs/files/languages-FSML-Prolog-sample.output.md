@@ -12,7 +12,7 @@
 ```
 
 ## Languages
-* [Term](../languages/Term.md)
+* [Term](../languages/Term.md) (term)
 
 ## References
 * elementOf('languages/FSML/Prolog/sample.output',term)

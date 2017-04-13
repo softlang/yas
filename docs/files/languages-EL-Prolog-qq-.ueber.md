@@ -9,7 +9,7 @@
 ```
 
 ## Languages
-* [Ueber](../languages/Ueber.md)
+* [Ueber](../languages/Ueber.md) (ueber(term))
 
 ## References
 * elementOf('languages/EL/Prolog/qq/.ueber',ueber(term))

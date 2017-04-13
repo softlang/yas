@@ -12,7 +12,7 @@ imports
 ```
 
 ## Languages
-* [ASL](../languages/ASL.md)
+* [ASL](../languages/ASL.md) (asl(text))
 
 ## References
 * elementOf('languages/ASL/samples/adts/pqueue.asl',asl(text))

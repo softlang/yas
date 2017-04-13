@@ -13,7 +13,7 @@ type Env = Map String Value
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BFPL/Haskell/Language/BFPL/Domains.hs',haskell(text))

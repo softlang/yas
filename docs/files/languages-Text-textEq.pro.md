@@ -15,7 +15,7 @@ eq(X,Y) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/Text/textEq.pro',prolog(text))

@@ -12,7 +12,7 @@ import org.jdom.Attribute;
 ```
 
 ## Languages
-* [Java](../languages/Java.md)
+* [Java](../languages/Java.md) (java(text))
 
 ## References
 * elementOf('samples/xcoupled/slbook/xcoupled/xsd/RenameElementNameXSD.java',java(text))

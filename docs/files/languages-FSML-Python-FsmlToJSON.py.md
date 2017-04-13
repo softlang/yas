@@ -12,7 +12,7 @@ from FsmlVisualizer import draw
 ```
 
 ## Languages
-* [Python](../languages/Python.md)
+* [Python](../languages/Python.md) (python(text))
 
 ## References
 * elementOf('languages/FSML/Python/FsmlToJSON.py',python(text))

@@ -13,7 +13,7 @@ symbol indent : box -> box ;
 ```
 
 ## Languages
-* [ESL](../languages/ESL.md)
+* [ESL](../languages/ESL.md) (esl(text))
 
 ## References
 * elementOf('languages/PPL/as.esl',esl(text))

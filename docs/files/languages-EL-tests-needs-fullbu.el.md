@@ -5,7 +5,7 @@ a + (b * 0)
 ```
 
 ## Languages
-* [EL](../languages/EL.md)
+* [EL](../languages/EL.md) (el(text))
 
 ## References
 * elementOf('languages/EL/tests/needs-fullbu.el',el(text))

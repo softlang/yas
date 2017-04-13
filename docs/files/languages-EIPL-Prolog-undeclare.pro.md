@@ -17,7 +17,7 @@ undeclare(proc(X, _), Ps1, Ps2, Sto, Sto) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/EIPL/Prolog/undeclare.pro',prolog(text))

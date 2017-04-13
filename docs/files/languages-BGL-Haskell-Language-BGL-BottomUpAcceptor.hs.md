@@ -12,7 +12,7 @@ accept g = steps g [] -- Begin with empty stack
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BGL/Haskell/Language/BGL/BottomUpAcceptor.hs',haskell(text))

@@ -15,7 +15,7 @@ simplify _ = Nothing
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/EL/Haskell/Language/EL/QQ/Rules/Simplify.hs',haskell(text))

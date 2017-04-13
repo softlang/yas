@@ -4,7 +4,7 @@
 ```
 
 ## Languages
-* [TBL](../languages/TBL.md)
+* [TBL](../languages/TBL.md) (tbl(text))
 
 ## References
 * elementOf('languages/TBL/samples/empty.tbl',tbl(text))

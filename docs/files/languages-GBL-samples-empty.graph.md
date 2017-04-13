@@ -8,7 +8,7 @@
 ```
 
 ## Languages
-* [GBL](../languages/GBL.md)
+* [GBL](../languages/GBL.md) (gbl(graph(term)))
 
 ## References
 * elementOf('languages/GBL/samples/empty.graph',gbl(graph(term)))

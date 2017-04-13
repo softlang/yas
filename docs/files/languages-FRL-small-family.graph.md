@@ -12,7 +12,7 @@
 ```
 
 ## Languages
-* [FRL](../languages/FRL.md)
+* [FRL](../languages/FRL.md) (frl(graph(term)))
 
 ## References
 * mapsTo(atomToRef,['languages/FNL/atomToRef.config','languages/FNL/small-family.graph','languages/FNL/mm.graph'],['languages/FRL/small-family.graph','languages/FRL/mm.graph'])

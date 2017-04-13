@@ -12,7 +12,7 @@ type Stack = [Int]
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BML/Haskell/Language/BML/Machine.hs',haskell(text))

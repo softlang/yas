@@ -12,7 +12,7 @@ ok :: Fsm -> Bool
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/FSML/Haskell/Language/FSML/Merge/Condition.hs',haskell(text))

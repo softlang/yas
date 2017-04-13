@@ -16,7 +16,7 @@ mkSmallWorld = do
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/GBL/Haskell/Language/GBL/Sample.hs',haskell(text))

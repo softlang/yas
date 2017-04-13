@@ -8,7 +8,7 @@ link XML to 'https://www.w3.org/XML'
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/language/mathml.lal2',lal(text))

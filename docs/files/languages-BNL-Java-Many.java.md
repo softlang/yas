@@ -8,7 +8,7 @@ public class Many extends Bits {
 ```
 
 ## Languages
-* [Java](../languages/Java.md)
+* [Java](../languages/Java.md) (java(text))
 
 ## References
 * elementOf('languages/BNL/Java/Many.java',java(text))

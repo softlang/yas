@@ -12,7 +12,7 @@ public class FsmlAcceptor {
 ```
 
 ## Languages
-* [Java](../languages/Java.md)
+* [Java](../languages/Java.md) (java(text))
 
 ## References
 * elementOf('languages/FSML/Java/org/softlang/fsml/FsmlAcceptor.java',java(text))

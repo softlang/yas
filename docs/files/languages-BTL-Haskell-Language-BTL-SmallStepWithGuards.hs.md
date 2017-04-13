@@ -12,7 +12,7 @@ step :: Expr -> Maybe Expr
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BTL/Haskell/Language/BTL/SmallStepWithGuards.hs',haskell(text))

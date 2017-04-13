@@ -5,7 +5,7 @@ sequ([generalize(([],rule,[t('['),n(label),t(']'),n(nonterminal),t(:),n(gsymbols
 ```
 
 ## Languages
-* [EGTL](../languages/EGTL.md)
+* [EGTL](../languages/EGTL.md) (egtl(term))
 
 ## References
 * elementOf('languages/EGTL/samples/bgl2egl.term',egtl(term))

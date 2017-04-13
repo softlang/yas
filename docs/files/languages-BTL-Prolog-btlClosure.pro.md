@@ -9,7 +9,7 @@ steps(E1, E3) :- step(E1, E2), steps(E2, E3).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BTL/Prolog/btlClosure.pro',prolog(text))

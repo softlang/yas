@@ -5,8 +5,8 @@
 ```
 
 ## Languages
-* [JSON](../languages/JSON.md)
-* [FSML](../languages/FSML.md)
+* [JSON](../languages/JSON.md) (json)
+* [FSML](../languages/FSML.md) (ok(fsml(json)))
 
 ## References
 * elementOf('languages/FSML/Python/sample.json',json)

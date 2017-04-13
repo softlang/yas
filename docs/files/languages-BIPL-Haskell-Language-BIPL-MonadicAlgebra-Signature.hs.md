@@ -12,7 +12,7 @@ type Obs m sto val = sto -> m val -- Store observation
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BIPL/Haskell/Language/BIPL/MonadicAlgebra/Signature.hs',haskell(text))

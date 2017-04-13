@@ -10,7 +10,7 @@ state stateB {
 ```
 
 ## Languages
-* [FSML](../languages/FSML.md)
+* [FSML](../languages/FSML.md) (fsml(text))
 
 ## References
 * elementOf('languages/FSML/tests/initialNotOk1.fsml',fsml(text))

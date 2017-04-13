@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [MML](../languages/MML.md)
+* [MML](../languages/MML.md) (mml(term))
 
 ## References
 * mapsTo(diff,['languages/FRL/mm.term','languages/FRL/FRL2/mm.term'],['languages/FRL/termdiff.term'])

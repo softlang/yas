@@ -5,7 +5,7 @@ newObject(add).
 ```
 
 ## Languages
-* [Term](../languages/Term.md)
+* [Term](../languages/Term.md) (term)
 
 ## References
 * elementOf('samples/obsolete/expr/editing/new-expr.config',term)

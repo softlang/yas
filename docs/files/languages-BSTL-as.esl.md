@@ -10,7 +10,7 @@ type sym = string ;
 ```
 
 ## Languages
-* [ESL](../languages/ESL.md)
+* [ESL](../languages/ESL.md) (esl(text))
 
 ## References
 * elementOf('languages/BSTL/as.esl',esl(text))

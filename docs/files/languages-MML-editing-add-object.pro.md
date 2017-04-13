@@ -12,7 +12,7 @@ addObject(MM1, Id, Key, ClassN, Obj1, Obj3) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/MML/editing/add-object.pro',prolog(text))

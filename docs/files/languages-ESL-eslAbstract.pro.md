@@ -12,7 +12,7 @@
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/ESL/eslAbstract.pro',prolog(text))

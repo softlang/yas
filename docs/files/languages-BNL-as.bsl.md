@@ -11,7 +11,7 @@ symbol rational: bits -> rest ; // A rational number
 ```
 
 ## Languages
-* [BSL](../languages/BSL.md)
+* [BSL](../languages/BSL.md) (bsl(text))
 
 ## References
 * elementOf('languages/BNL/as.bsl',bsl(text))

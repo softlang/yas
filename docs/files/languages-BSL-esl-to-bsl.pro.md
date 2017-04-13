@@ -12,7 +12,7 @@ eslToBsl(Ss1, Ss2) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BSL/esl-to-bsl.pro',prolog(text))

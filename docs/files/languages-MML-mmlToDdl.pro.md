@@ -12,7 +12,7 @@ classesToTables(Classifiers, Tables3) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/MML/mmlToDdl.pro',prolog(text))

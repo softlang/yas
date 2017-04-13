@@ -18,7 +18,7 @@ A trivial stack- and address-based assembly language; memory access and jumps us
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/BAL/README.md',markdown(text))

@@ -12,7 +12,7 @@ inv(addMember(CN, M), removeMember(CN, M)).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/MMDL/mmdlInv.pro',prolog(text))

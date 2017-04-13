@@ -10,7 +10,7 @@ bnlScanner(String1, L2) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BNL/Prolog/scanner.pro',prolog(text))

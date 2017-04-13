@@ -12,7 +12,7 @@ innermost(E1, E2) :- innermost(elRewrite:rewrite, E1, E2).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/EL/Prolog/elRewrite.pro',prolog(text))

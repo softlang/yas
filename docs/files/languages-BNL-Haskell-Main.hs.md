@@ -12,7 +12,7 @@ import System.Exit (exitSuccess, exitFailure)
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BNL/Haskell/Main.hs',haskell(text))

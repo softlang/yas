@@ -14,7 +14,7 @@ rest(rational(Bs)) --> ['.'], bits(Bs).
 ```
 
 ## Languages
-* [DCG](../languages/DCG.md)
+* [DCG](../languages/DCG.md) (dcg(prolog(text)))
 
 ## References
 * elementOf('languages/BNL/Prolog/bnlParser.dcg',dcg(prolog(text)))

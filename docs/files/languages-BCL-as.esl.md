@@ -17,7 +17,7 @@ type nonterminal = string ;
 ```
 
 ## Languages
-* [ESL](../languages/ESL.md)
+* [ESL](../languages/ESL.md) (esl(text))
 
 ## References
 * elementOf('languages/BCL/as.esl',esl(text))

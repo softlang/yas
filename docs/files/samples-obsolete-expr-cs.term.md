@@ -10,7 +10,7 @@
 ```
 
 ## Languages
-* [BGL](../languages/BGL.md)
+* [BGL](../languages/BGL.md) (bgl(term))
 
 ## References
 * elementOf('samples/obsolete/expr/cs.term',bgl(term))

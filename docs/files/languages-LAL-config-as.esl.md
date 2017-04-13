@@ -11,7 +11,7 @@ type map = (string # string)* ;
 ```
 
 ## Languages
-* [ESL](../languages/ESL.md)
+* [ESL](../languages/ESL.md) (esl(text))
 
 ## References
 * elementOf('languages/LAL/config/as.esl',esl(text))

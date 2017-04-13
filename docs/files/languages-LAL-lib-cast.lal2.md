@@ -16,7 +16,7 @@ axiom castFail {
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/cast.lal2',lal(text))

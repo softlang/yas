@@ -12,7 +12,7 @@ import Text.StringTemplate.GenericStandard
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/FSML/Haskell/Language/FSML/TemplateFormatter.hs',haskell(text))

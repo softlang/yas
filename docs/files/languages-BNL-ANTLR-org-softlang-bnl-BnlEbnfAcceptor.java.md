@@ -12,7 +12,7 @@ public class BnlEbnfAcceptor {
 ```
 
 ## Languages
-* [Java](../languages/Java.md)
+* [Java](../languages/Java.md) (java(text))
 
 ## References
 * elementOf('languages/BNL/ANTLR/org/softlang/bnl/BnlEbnfAcceptor.java',java(text))

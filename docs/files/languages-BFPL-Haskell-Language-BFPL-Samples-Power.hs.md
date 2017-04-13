@@ -18,7 +18,7 @@ power = (
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BFPL/Haskell/Language/BFPL/Samples/Power.hs',haskell(text))

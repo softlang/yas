@@ -12,7 +12,7 @@ function addSalary : Salary x Salary -> Salary
 ```
 
 ## Languages
-* [ASL](../languages/ASL.md)
+* [ASL](../languages/ASL.md) (asl(text))
 
 ## References
 * elementOf('languages/ASL/samples/101/salaries.asl',asl(text))

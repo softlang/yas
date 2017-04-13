@@ -14,7 +14,7 @@ smallWorld = World [p1, p2]
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/GBL/Haskell/Language/GBL/V2/Sample.hs',haskell(text))

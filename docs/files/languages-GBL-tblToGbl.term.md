@@ -5,7 +5,7 @@ valueToReference(person, buddy, person, name).
 ```
 
 ## Languages
-* [MMTL](../languages/MMTL.md)
+* [MMTL](../languages/MMTL.md) (mmtl(term))
 
 ## References
 * elementOf('languages/GBL/tblToGbl.term',mmtl(term))

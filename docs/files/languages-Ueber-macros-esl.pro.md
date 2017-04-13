@@ -16,7 +16,7 @@ eslSyntax(Lang) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/Ueber/macros/esl.pro',prolog(text))

@@ -12,7 +12,7 @@ column : name type { clause }* ;
 ```
 
 ## Languages
-* [EGL](../languages/EGL.md)
+* [EGL](../languages/EGL.md) (egl(text))
 
 ## References
 * elementOf('languages/DDL/cs.egl',egl(text))

@@ -12,7 +12,7 @@ data Expr
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/TLL/Haskell/Language/TLL/Syntax.hs',haskell(text))

@@ -8,7 +8,7 @@ public interface HandlerBase<A> {
 ```
 
 ## Languages
-* [Java](../languages/Java.md)
+* [Java](../languages/Java.md) (java(text))
 
 ## References
 * elementOf('languages/FSML/Prolog/generated/HandlerBase.java',java(text))

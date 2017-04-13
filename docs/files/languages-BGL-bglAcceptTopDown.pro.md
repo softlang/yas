@@ -18,7 +18,7 @@ steps(G, [n(N)|Z0], I) :- member((_, N, Rhs), G), append(Rhs, Z0, Z1), steps(G, 
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BGL/bglAcceptTopDown.pro',prolog(text))

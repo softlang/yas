@@ -9,7 +9,7 @@ state stateC { }
 ```
 
 ## Languages
-* [FSML](../languages/FSML.md)
+* [FSML](../languages/FSML.md) (fsml(text))
 
 ## References
 * elementOf('languages/FSML/tests/reachabilityNotOk.fsml',fsml(text))

@@ -12,7 +12,7 @@ eglParser(Layout, Mapping, FileCs, FileLs, Text, Term) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/EGL/api.pro',prolog(text))

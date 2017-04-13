@@ -11,7 +11,7 @@ main = print $ power 3 2 -- Prints 8
 ```
 
 ## Languages
-* [BFPL](../languages/BFPL.md)
+* [BFPL](../languages/BFPL.md) (bfpl(text))
 
 ## References
 * elementOf('languages/BFPL/samples/power.bfpl',bfpl(text))

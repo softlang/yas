@@ -14,7 +14,7 @@ axiom notMember {
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/membership.lal2',lal(text))

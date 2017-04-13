@@ -9,7 +9,7 @@ It assumes some reasoning in terms of the specification or its implementation.
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/ASL/samples/adts/Java/functional/README.md',markdown(text))

@@ -11,7 +11,7 @@ X ~> Y :- elAbstract:'~>'(X, Y).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/EL/Prolog/qq/elqqAbstract.pro',prolog(text))

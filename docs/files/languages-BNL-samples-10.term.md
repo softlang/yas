@@ -10,7 +10,7 @@ number(
 ```
 
 ## Languages
-* [BNL](../languages/BNL.md)
+* [BNL](../languages/BNL.md) (bnl(term))
 
 ## References
 * elementOf('languages/BNL/samples/10.term',bnl(term))

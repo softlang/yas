@@ -8,7 +8,7 @@ point : '(' integer ',' integer ')' ;
 ```
 
 ## Languages
-* [EGL](../languages/EGL.md)
+* [EGL](../languages/EGL.md) (egl(text))
 
 ## References
 * elementOf('samples/obsolete/figure/cs.egl',egl(text))

@@ -12,7 +12,7 @@ euclideanDiv =
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BIPL/Haskell/Language/BIPL/Goto/Sample.hs',haskell(text))

@@ -9,7 +9,7 @@ public class Cons {
 ```
 
 ## Languages
-* [Java](../languages/Java.md)
+* [Java](../languages/Java.md) (java(text))
 
 ## References
 * elementOf('languages/ASL/samples/adts/Java/imperative/v2/Cons.java',java(text))

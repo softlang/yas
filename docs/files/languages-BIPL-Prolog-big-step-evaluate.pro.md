@@ -18,7 +18,7 @@ evaluate(binary(O, E1, E2), Sto, V0) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BIPL/Prolog/big-step/evaluate.pro',prolog(text))

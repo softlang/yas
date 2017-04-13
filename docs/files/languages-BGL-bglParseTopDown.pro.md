@@ -12,7 +12,7 @@ parse(G, I, T) :- G = [(_, N, _)|_], tree(G, n(N), T, I, []).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BGL/bglParseTopDown.pro',prolog(text))

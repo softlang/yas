@@ -12,7 +12,7 @@ data Instr
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BAL/Haskell/Language/BAL/Syntax.hs',haskell(text))

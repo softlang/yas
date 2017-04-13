@@ -12,7 +12,7 @@ number (Number bs r) = val0
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BNL/Haskell/Language/BNL/Conversion.hs',haskell(text))

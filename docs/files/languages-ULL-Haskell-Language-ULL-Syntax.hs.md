@@ -17,7 +17,7 @@ data Expr
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/ULL/Haskell/Language/ULL/Syntax.hs',haskell(text))

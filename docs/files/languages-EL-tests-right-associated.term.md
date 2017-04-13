@@ -5,7 +5,7 @@ binary(mul,var(a),binary(mul,var(b),binary(mul,var(c),var(d)))).
 ```
 
 ## Languages
-* [EL](../languages/EL.md)
+* [EL](../languages/EL.md) (el(term))
 
 ## References
 * elementOf('languages/EL/tests/right-associated.term',el(term))

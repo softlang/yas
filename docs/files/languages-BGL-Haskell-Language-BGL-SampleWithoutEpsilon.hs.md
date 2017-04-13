@@ -17,7 +17,7 @@ bnlGrammar = [
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BGL/Haskell/Language/BGL/SampleWithoutEpsilon.hs',haskell(text))

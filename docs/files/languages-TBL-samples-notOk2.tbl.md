@@ -6,7 +6,7 @@ bill -> john
 ```
 
 ## Languages
-* [TBL](../languages/TBL.md)
+* [TBL](../languages/TBL.md) (tbl(text))
 
 ## References
 * elementOf('languages/TBL/samples/notOk2.tbl',tbl(text))

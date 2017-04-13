@@ -17,7 +17,7 @@ substitute(S, apply(F, Es1), apply(F, Es2)) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BFPL/Prolog/small-step/substitution.pro',prolog(text))

@@ -12,7 +12,7 @@ type fundef = string* # expr ;
 ```
 
 ## Languages
-* [ESL](../languages/ESL.md)
+* [ESL](../languages/ESL.md) (esl(text))
 
 ## References
 * elementOf('languages/BFPL/as.esl',esl(text))

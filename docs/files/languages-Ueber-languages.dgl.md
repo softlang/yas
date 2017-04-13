@@ -12,7 +12,7 @@ digraph G {
 ```
 
 ## Languages
-* [DGL](../languages/DGL.md)
+* [DGL](../languages/DGL.md) (dgl(text))
 
 ## References
 * elementOf('languages/Ueber/languages.dgl',dgl(text))

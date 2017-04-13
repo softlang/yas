@@ -12,7 +12,7 @@ import Language.ULL.Syntax
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/ULL/Haskell/Language/ULL/Value.hs',haskell(text))

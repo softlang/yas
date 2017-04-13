@@ -12,7 +12,7 @@ symbol remove : rule -> trafo ;
 ```
 
 ## Languages
-* [ESL](../languages/ESL.md)
+* [ESL](../languages/ESL.md) (esl(text))
 
 ## References
 * elementOf('languages/EGTL/as.esl',esl(text))

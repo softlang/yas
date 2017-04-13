@@ -17,7 +17,7 @@ data Person = Person {
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/GBL/Haskell/Language/GBL/V2/Syntax.hs',haskell(text))

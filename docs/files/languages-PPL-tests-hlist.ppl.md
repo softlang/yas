@@ -5,7 +5,7 @@ hlist([text('a'), text(' '), text('b')]).
 ```
 
 ## Languages
-* [PPL](../languages/PPL.md)
+* [PPL](../languages/PPL.md) (ppl(term))
 
 ## References
 * elementOf('languages/PPL/tests/hlist.ppl',ppl(term))

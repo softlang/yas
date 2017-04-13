@@ -16,7 +16,7 @@ axiom invTwice { forall d <- DiffL. invDiff(invDiff(d)) = d }
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/differencing.lal',lal(text))

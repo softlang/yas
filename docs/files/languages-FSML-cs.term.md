@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [EGL](../languages/EGL.md)
+* [EGL](../languages/EGL.md) (egl(term))
 
 ## References
 * membership(fsml(text),eglAcceptor(fsmlAbstract: (~>)),['languages/FSML/cs.term','languages/FSML/ls.term'])

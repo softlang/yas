@@ -7,7 +7,7 @@ args : { name { '#' name }* }? ;
 ```
 
 ## Languages
-* [EGL](../languages/EGL.md)
+* [EGL](../languages/EGL.md) (egl(text))
 
 ## References
 * elementOf('languages/BSL/cs.egl',egl(text))

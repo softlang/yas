@@ -12,7 +12,7 @@ public enum Bit { Zero, One }
 ```
 
 ## Languages
-* [Java](../languages/Java.md)
+* [Java](../languages/Java.md) (java(text))
 
 ## References
 * elementOf('languages/BNL/ESL/java/as.java',java(text))

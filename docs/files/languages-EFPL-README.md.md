@@ -12,7 +12,7 @@ A small extension of the trivial functional programming language BFPL to provide
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/EFPL/README.md',markdown(text))

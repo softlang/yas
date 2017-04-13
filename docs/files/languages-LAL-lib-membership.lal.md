@@ -8,7 +8,7 @@ axiom notMember { ~ (neg <- L) } // A non-member
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/membership.lal',lal(text))

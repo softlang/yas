@@ -5,7 +5,7 @@ binary(add,var(a),binary(mul,var(b),intconst(0))).
 ```
 
 ## Languages
-* [EL](../languages/EL.md)
+* [EL](../languages/EL.md) (el(term))
 
 ## References
 * elementOf('languages/EL/tests/needs-fullbu.term',el(term))

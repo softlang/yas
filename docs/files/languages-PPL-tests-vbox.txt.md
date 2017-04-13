@@ -7,7 +7,7 @@ c
 ```
 
 ## Languages
-* [Text](../languages/Text.md)
+* [Text](../languages/Text.md) (text)
 
 ## References
 * elementOf('languages/PPL/tests/vbox.txt',text)

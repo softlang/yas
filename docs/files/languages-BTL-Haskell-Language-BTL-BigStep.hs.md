@@ -12,7 +12,7 @@ evaluate TRUE = TRUE
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BTL/Haskell/Language/BTL/BigStep.hs',haskell(text))

@@ -12,7 +12,7 @@ symbol booltype : -> texpr ;
 ```
 
 ## Languages
-* [ESL](../languages/ESL.md)
+* [ESL](../languages/ESL.md) (esl(text))
 
 ## References
 * elementOf('languages/EFPL/as.esl',esl(text))

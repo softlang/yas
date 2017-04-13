@@ -5,8 +5,8 @@
 ```
 
 ## Languages
-* [EFPL](../languages/EFPL.md)
-* [EFPL](../languages/EFPL.md)
+* [EFPL](../languages/EFPL.md) (ok(efpl(term)))
+* [EFPL](../languages/EFPL.md) (efpl(term))
 
 ## References
 * elementOf('languages/EFPL/tests/sample.term',ok(efpl(term)))

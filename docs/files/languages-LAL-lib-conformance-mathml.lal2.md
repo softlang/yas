@@ -17,7 +17,7 @@ link MathMLSchema to 'https://www.w3.org/Math/XMLSchema'
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/conformance/mathml.lal2',lal(text))

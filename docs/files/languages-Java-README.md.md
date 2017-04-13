@@ -12,7 +12,7 @@ A general-purpose programming language that is concurrent, class-based, object-o
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/Java/README.md',markdown(text))

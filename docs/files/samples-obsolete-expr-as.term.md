@@ -10,7 +10,7 @@
 ```
 
 ## Languages
-* [BSL](../languages/BSL.md)
+* [BSL](../languages/BSL.md) (bsl(term))
 
 ## References
 * elementOf('samples/obsolete/expr/as.term',bsl(term))

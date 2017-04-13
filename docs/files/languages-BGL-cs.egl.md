@@ -12,7 +12,7 @@ nonterminal : name ;
 ```
 
 ## Languages
-* [EGL](../languages/EGL.md)
+* [EGL](../languages/EGL.md) (egl(text))
 
 ## References
 * elementOf('languages/BGL/cs.egl',egl(text))

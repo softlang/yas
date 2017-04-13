@@ -12,7 +12,7 @@ An interpreter-based multi-paradigm general purpose programming language with a 
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/Python/README.md',markdown(text))

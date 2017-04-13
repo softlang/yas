@@ -12,7 +12,7 @@ figureToken(Atom) -->
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('samples/obsolete/figure/parsing/scanner.pro',prolog(text))

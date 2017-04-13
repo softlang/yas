@@ -12,7 +12,7 @@ import Language.FSML.Lexer
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/FSML/Haskell/Language/FSML/ApplicativeParser.hs',haskell(text))

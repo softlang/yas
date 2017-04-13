@@ -12,7 +12,7 @@ axiom { forall r1 <- RefL1 . forall r2 <- RefL2 .
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/traceability.lal',lal(text))

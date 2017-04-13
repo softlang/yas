@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [EL](../languages/EL.md)
+* [EL](../languages/EL.md) (el(text))
 
 ## References
 * elementOf('languages/EL/tests/left-associated.el',el(text))

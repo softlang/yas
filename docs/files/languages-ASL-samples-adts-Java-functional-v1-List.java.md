@@ -14,7 +14,7 @@ public interface List {
 ```
 
 ## Languages
-* [Java](../languages/Java.md)
+* [Java](../languages/Java.md) (java(text))
 
 ## References
 * elementOf('languages/ASL/samples/adts/Java/functional/v1/List.java',java(text))

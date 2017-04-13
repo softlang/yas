@@ -12,7 +12,7 @@ newtype Fsm = Fsm { states :: [State] }
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/FSML/Haskell/Language/FSML/StringTemplate/Syntax.hs',haskell(text))

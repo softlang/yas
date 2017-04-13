@@ -12,7 +12,7 @@ memberConforms(_, _, V, value, Type, Times) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/MML/conformance/member.pro',prolog(text))

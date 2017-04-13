@@ -5,7 +5,7 @@ concreteClassesForMember(add, left).
 ```
 
 ## Languages
-* [Term](../languages/Term.md)
+* [Term](../languages/Term.md) (term)
 
 ## References
 * elementOf('samples/obsolete/expr/editing/classes.config',term)

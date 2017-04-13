@@ -12,7 +12,7 @@ graphToList(D, L) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/Term/graph/conversion.pro',prolog(text))

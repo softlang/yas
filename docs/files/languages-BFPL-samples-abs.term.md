@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [BFPL](../languages/BFPL.md)
+* [BFPL](../languages/BFPL.md) (bfpl(term))
 
 ## References
 * elementOf('languages/BFPL/samples/abs.term',bfpl(term))

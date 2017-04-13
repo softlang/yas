@@ -14,7 +14,7 @@
 ```
 
 ## Languages
-* [DGL](../languages/DGL.md)
+* [DGL](../languages/DGL.md) (dgl(term))
 
 ## References
 * elementOf('languages/DGL/sample.term',dgl(term))

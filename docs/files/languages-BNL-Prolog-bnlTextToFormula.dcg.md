@@ -14,7 +14,7 @@ rest(Val) --> ['.'], bits(-1, _Len, Val).
 ```
 
 ## Languages
-* [DCG](../languages/DCG.md)
+* [DCG](../languages/DCG.md) (dcg(prolog(text)))
 
 ## References
 * elementOf('languages/BNL/Prolog/bnlTextToFormula.dcg',dcg(prolog(text)))

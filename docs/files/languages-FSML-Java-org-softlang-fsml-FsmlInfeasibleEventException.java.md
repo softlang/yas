@@ -9,7 +9,7 @@ public class FsmlInfeasibleEventException extends FsmlException {
 ```
 
 ## Languages
-* [Java](../languages/Java.md)
+* [Java](../languages/Java.md) (java(text))
 
 ## References
 * elementOf('languages/FSML/Java/org/softlang/fsml/FsmlInfeasibleEventException.java',java(text))

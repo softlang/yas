@@ -11,7 +11,7 @@ exprScanner(Input, Ts) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('samples/obsolete/expr/scanner.pro',prolog(text))

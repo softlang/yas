@@ -12,7 +12,7 @@ step(P, if(E1a, E2, E3), if(E1b, E2, E3)) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BFPL/Prolog/small-step/step.pro',prolog(text))

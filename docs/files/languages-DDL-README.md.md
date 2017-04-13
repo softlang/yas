@@ -12,7 +12,7 @@ A SQL DDL-like data definition language for relational schemas.
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/DDL/README.md',markdown(text))

@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [EGL](../languages/EGL.md)
+* [EGL](../languages/EGL.md) (egl(term))
 
 ## References
 * membership(mml(text),eglAcceptor(mmlAbstract: (~>)),['languages/MML/cs.term','languages/MML/ls.term'])

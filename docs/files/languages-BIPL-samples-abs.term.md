@@ -5,7 +5,7 @@ seq(assign(y,binary(add,binary(mul,var(x),var(x)),intconst(42))),if(binary(lt,va
 ```
 
 ## Languages
-* [BIPL](../languages/BIPL.md)
+* [BIPL](../languages/BIPL.md) (bipl(term))
 
 ## References
 * elementOf('languages/BIPL/samples/abs.term',bipl(term))

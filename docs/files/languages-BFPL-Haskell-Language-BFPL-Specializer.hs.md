@@ -12,7 +12,7 @@ import Language.BFPL.Inliner (toValue, fromValue)
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BFPL/Haskell/Language/BFPL/Specializer.hs',haskell(text))

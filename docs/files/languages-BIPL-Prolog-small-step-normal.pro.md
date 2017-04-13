@@ -8,7 +8,7 @@ normal(skip).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BIPL/Prolog/small-step/normal.pro',prolog(text))

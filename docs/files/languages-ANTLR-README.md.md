@@ -12,7 +12,7 @@ The ANTLR tool and language for parsing and processing string languages.
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/ANTLR/README.md',markdown(text))

@@ -12,7 +12,7 @@ bits(single(Bit), Pos, 1, Val) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BNL/Prolog/bnlTermToFormula.pro',prolog(text))

@@ -12,7 +12,7 @@ ppElement(E, hbox(B, text(';'))) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('samples/obsolete/figure/pp.pro',prolog(text))

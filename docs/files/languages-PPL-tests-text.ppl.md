@@ -6,7 +6,7 @@ text('text').
 ```
 
 ## Languages
-* [PPL](../languages/PPL.md)
+* [PPL](../languages/PPL.md) (ppl(term))
 
 ## References
 * elementOf('languages/PPL/tests/text.ppl',ppl(term))

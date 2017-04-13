@@ -9,7 +9,7 @@ fxy(Fun,FX,LX,FY,LY) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/Ueber/macros/fxy.pro',prolog(text))

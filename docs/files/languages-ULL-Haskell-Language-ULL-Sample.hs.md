@@ -12,7 +12,7 @@ add = Fix (Lambda "f" (Lambda "n" (Lambda "m"
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/ULL/Haskell/Language/ULL/Sample.hs',haskell(text))

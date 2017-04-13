@@ -5,7 +5,7 @@ boolval(true).
 ```
 
 ## Languages
-* [Term](../languages/Term.md)
+* [Term](../languages/Term.md) (term)
 
 ## References
 * elementOf('languages/EL/tests/no-vars.value',term)

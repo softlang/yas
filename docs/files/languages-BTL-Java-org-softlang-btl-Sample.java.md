@@ -18,7 +18,7 @@ public class Sample {
 ```
 
 ## Languages
-* [Java](../languages/Java.md)
+* [Java](../languages/Java.md) (java(text))
 
 ## References
 * elementOf('languages/BTL/Java/org/softlang/btl/Sample.java',java(text))

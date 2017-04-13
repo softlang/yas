@@ -5,7 +5,7 @@ a, b, c
 ```
 
 ## Languages
-* [Text](../languages/Text.md)
+* [Text](../languages/Text.md) (text)
 
 ## References
 * elementOf('languages/PPL/tests/hseplist.txt',text)

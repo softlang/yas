@@ -12,7 +12,7 @@ eq(FileCs, FileLs, Text1, Text2) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/LAL/lalTextEq.pro',prolog(text))

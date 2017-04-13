@@ -10,7 +10,7 @@ binary(mul, _, intconst(0)) ~> intconst(0).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/EL/Prolog/rules/elSimplify.pro',prolog(text))

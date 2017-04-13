@@ -8,7 +8,7 @@ symbol s : nat -> nat ;
 ```
 
 ## Languages
-* [BSL](../languages/BSL.md)
+* [BSL](../languages/BSL.md) (bsl(text))
 
 ## References
 * elementOf('languages/BSTL/tests/sig2.bsl',bsl(text))

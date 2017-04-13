@@ -13,7 +13,7 @@ axiom { forall a1 <- L1. forall a2 <- L2.
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/correspondence/oneToOne.lal',lal(text))

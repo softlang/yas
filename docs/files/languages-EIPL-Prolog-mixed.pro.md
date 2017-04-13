@@ -12,7 +12,7 @@ main(Scope, Out) :- scope(Scope, [], [], _, Out).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/EIPL/Prolog/mixed.pro',prolog(text))

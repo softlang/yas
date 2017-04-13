@@ -12,7 +12,7 @@ step((assign(X, E), Sto1), (skip, Sto2)) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BIPL/Prolog/small-step/step.pro',prolog(text))

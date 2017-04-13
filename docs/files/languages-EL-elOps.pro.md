@@ -12,7 +12,7 @@ bop(sub, intval(I1), intval(I2), intval(I0)) :- I0 is I1 - I2.
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/EL/elOps.pro',prolog(text))

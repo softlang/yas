@@ -12,7 +12,7 @@ import Data.Map ((!), empty, fromList)
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BFPL/Haskell/Language/BFPL/Interpreter.hs',haskell(text))

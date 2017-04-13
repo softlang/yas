@@ -12,7 +12,7 @@ symbol proc : string # stmt -> decl ;
 ```
 
 ## Languages
-* [ESL](../languages/ESL.md)
+* [ESL](../languages/ESL.md) (esl(text))
 
 ## References
 * elementOf('languages/EIPL/as.esl',esl(text))

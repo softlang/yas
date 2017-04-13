@@ -12,7 +12,7 @@ A trivial imperative programming language with support for primitive types for i
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/BIPL/README.md',markdown(text))

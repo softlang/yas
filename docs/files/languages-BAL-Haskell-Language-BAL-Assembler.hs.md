@@ -12,7 +12,7 @@ import Data.Maybe (fromJust)
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BAL/Haskell/Language/BAL/Assembler.hs',haskell(text))

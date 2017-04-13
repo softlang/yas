@@ -12,7 +12,7 @@ notAcceptFsm(Fsm, Input) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/FSML/Prolog/accept.pro',prolog(text))

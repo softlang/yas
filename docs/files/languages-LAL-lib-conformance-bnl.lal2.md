@@ -16,7 +16,7 @@ link bnlGrammar to 'https://github.com/softlang/yas/blob/master/languages/BGL/cs
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/conformance/bnl.lal2',lal(text))

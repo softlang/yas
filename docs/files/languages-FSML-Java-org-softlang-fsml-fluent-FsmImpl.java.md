@@ -12,7 +12,7 @@ public class FsmImpl implements Fsm {
 ```
 
 ## Languages
-* [Java](../languages/Java.md)
+* [Java](../languages/Java.md) (java(text))
 
 ## References
 * elementOf('languages/FSML/Java/org/softlang/fsml/fluent/FsmImpl.java',java(text))

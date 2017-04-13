@@ -12,7 +12,7 @@ bits returns [float val, int len]
 ```
 
 ## Languages
-* [ANTLR](../languages/ANTLR.md)
+* [ANTLR](../languages/ANTLR.md) (antlr(text))
 
 ## References
 * elementOf('languages/BNL/ANTLR/BnlBnfConversion.g4',antlr(text))

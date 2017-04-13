@@ -12,7 +12,7 @@ public class Stepper extends StepperBase<State, Input, Action> {
 ```
 
 ## Languages
-* [Java](../languages/Java.md)
+* [Java](../languages/Java.md) (java(text))
 
 ## References
 * mapsTo(stepperOfFsm,['languages/FSML/sample.term'],['languages/FSML/Prolog/generated/Stepper.java'])

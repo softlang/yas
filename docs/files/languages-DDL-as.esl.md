@@ -14,7 +14,7 @@ type cname = string ;
 ```
 
 ## Languages
-* [ESL](../languages/ESL.md)
+* [ESL](../languages/ESL.md) (esl(text))
 
 ## References
 * elementOf('languages/DDL/as.esl',esl(text))

@@ -7,7 +7,7 @@ data Bit = Zero | One
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BNL/ESL/haskell/as.hs',haskell(text))

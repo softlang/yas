@@ -12,7 +12,7 @@ A binary-to-decimal number conversion has to deal with ANTLR's limitations:
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/BNL/ANTLR/README.md',markdown(text))

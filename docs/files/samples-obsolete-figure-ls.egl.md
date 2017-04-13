@@ -6,7 +6,7 @@ layout : { space }+ ;
 ```
 
 ## Languages
-* [EGL](../languages/EGL.md)
+* [EGL](../languages/EGL.md) (egl(text))
 
 ## References
 * elementOf('samples/obsolete/figure/ls.egl',egl(text))

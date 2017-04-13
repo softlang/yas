@@ -15,7 +15,7 @@ filename(MN, F2) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/LAL/lalDeps.pro',prolog(text))

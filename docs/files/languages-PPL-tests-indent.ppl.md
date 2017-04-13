@@ -5,7 +5,7 @@ indent(indent(text('42'))).
 ```
 
 ## Languages
-* [PPL](../languages/PPL.md)
+* [PPL](../languages/PPL.md) (ppl(term))
 
 ## References
 * elementOf('languages/PPL/tests/indent.ppl',ppl(term))

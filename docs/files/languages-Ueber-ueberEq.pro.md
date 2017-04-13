@@ -12,7 +12,7 @@ compare(R, Pred, Ds, F, L, Expected1, Actual1) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/Ueber/ueberEq.pro',prolog(text))

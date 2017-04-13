@@ -12,7 +12,7 @@ import Text.Parsec
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/EGL/Haskell/Language/EGL/Interpreter.hs',haskell(text))

@@ -12,7 +12,7 @@ subclassOf(MM, N1, N2) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/MML/subclass.pro',prolog(text))

@@ -7,7 +7,7 @@ forall(L1, P) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/Ueber/macros/forall.pro',prolog(text))

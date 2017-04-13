@@ -15,7 +15,7 @@ sampleExpr =
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BTL/Haskell/Language/BTL/Universal/Sample.hs',haskell(text))

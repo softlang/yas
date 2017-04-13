@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [TBL](../languages/TBL.md)
+* [TBL](../languages/TBL.md) (tbl(term))
 
 ## References
 * elementOf('languages/TBL/samples/notOk1.term',tbl(term))

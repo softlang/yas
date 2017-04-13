@@ -12,7 +12,7 @@ execute(S, Sto) :- execute(S, [], Sto).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BIPL/Prolog/big-step/execute.pro',prolog(text))

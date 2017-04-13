@@ -11,7 +11,7 @@ sort(L, [L]) => sort(L, []).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/LAL/lalNorm.pro',prolog(text))

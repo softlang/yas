@@ -12,7 +12,7 @@ eglToBgl(Rs1, Rs2) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BGL/egl-to-bgl.pro',prolog(text))

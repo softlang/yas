@@ -12,7 +12,7 @@ A trivial specification language for graphs that may be rendered eventually with
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/DGL/README.md',markdown(text))

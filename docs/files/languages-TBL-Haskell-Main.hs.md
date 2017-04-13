@@ -8,7 +8,7 @@ main = print smallWorld
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/TBL/Haskell/Main.hs',haskell(text))

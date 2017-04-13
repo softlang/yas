@@ -7,7 +7,7 @@ expr(mul(E1, E2)) :- expr(E1), expr(E2).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/Prolog/expr.pro',prolog(text))

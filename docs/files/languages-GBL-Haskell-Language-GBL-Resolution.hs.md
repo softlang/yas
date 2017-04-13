@@ -12,7 +12,7 @@ import Data.Map (Map, empty, lookup, insert)
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/GBL/Haskell/Language/GBL/Resolution.hs',haskell(text))

@@ -8,7 +8,7 @@
 ```
 
 ## Languages
-* [BSL](../languages/BSL.md)
+* [BSL](../languages/BSL.md) (bsl(term))
 
 ## References
 * elementOf('languages/BSTL/tests/sig1.term',bsl(term))

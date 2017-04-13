@@ -12,7 +12,7 @@ graphNf(D1, D2) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/Term/graph/normal.pro',prolog(text))

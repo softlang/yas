@@ -12,7 +12,7 @@ bglAcceptor(File, Input) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BGL/api.pro',prolog(text))

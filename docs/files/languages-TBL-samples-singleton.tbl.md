@@ -5,7 +5,7 @@ joe
 ```
 
 ## Languages
-* [TBL](../languages/TBL.md)
+* [TBL](../languages/TBL.md) (tbl(text))
 
 ## References
 * elementOf('languages/TBL/samples/singleton.tbl',tbl(text))

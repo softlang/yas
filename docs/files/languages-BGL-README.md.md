@@ -12,7 +12,7 @@ A BNF-like notation for context-free grammars; rules (productions) are labeled.
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/BGL/README.md',markdown(text))

@@ -14,7 +14,7 @@ public class Syntax {
 ```
 
 ## Languages
-* [Java](../languages/Java.md)
+* [Java](../languages/Java.md) (java(text))
 
 ## References
 * elementOf('languages/GBL/Java/org/softlang/gbl/Syntax.java',java(text))

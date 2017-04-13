@@ -15,7 +15,7 @@ isValue(T) :- isNat(T).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BTL/Prolog/btlValues.pro',prolog(text))

@@ -13,7 +13,7 @@ public interface Fsm {
 ```
 
 ## Languages
-* [Java](../languages/Java.md)
+* [Java](../languages/Java.md) (java(text))
 
 ## References
 * elementOf('languages/FSML/Java/org/softlang/fsml/fluent/Fsm.java',java(text))

@@ -13,7 +13,7 @@ metavar : '$' '_' { csym }* ; // Anonymous metavariables
 ```
 
 ## Languages
-* [EGL](../languages/EGL.md)
+* [EGL](../languages/EGL.md) (egl(text))
 
 ## References
 * elementOf('languages/EL/Prolog/qq/ls.egl',egl(text))

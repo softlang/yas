@@ -9,7 +9,7 @@ public abstract class FsmlException extends RuntimeException {
 ```
 
 ## Languages
-* [Java](../languages/Java.md)
+* [Java](../languages/Java.md) (java(text))
 
 ## References
 * elementOf('languages/FSML/Java/org/softlang/fsml/FsmlException.java',java(text))

@@ -12,7 +12,7 @@ import Language.BIPL.DS.Combinators
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BIPL/Haskell/Language/BIPL/DS/Interpreter.hs',haskell(text))

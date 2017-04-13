@@ -12,7 +12,7 @@ interpret :: Alg sto val -> Stmt -> sto -> sto
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BIPL/Haskell/Language/BIPL/Algebra/Scheme.hs',haskell(text))

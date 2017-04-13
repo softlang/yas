@@ -12,7 +12,7 @@ eglSyntax(Lang) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/Ueber/macros/egl.pro',prolog(text))

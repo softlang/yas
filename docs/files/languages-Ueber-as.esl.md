@@ -12,7 +12,7 @@ symbol relatesTo : rela # file* -> decl ;
 ```
 
 ## Languages
-* [ESL](../languages/ESL.md)
+* [ESL](../languages/ESL.md) (esl(text))
 
 ## References
 * elementOf('languages/Ueber/as.esl',esl(text))

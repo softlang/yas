@@ -12,7 +12,7 @@ import Data.Maybe (maybeToList)
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/FSML/Haskell/Language/FSML/Interpreter.hs',haskell(text))

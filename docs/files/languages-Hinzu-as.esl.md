@@ -12,7 +12,7 @@ symbol lid : lid -> litem ;
 ```
 
 ## Languages
-* [ESL](../languages/ESL.md)
+* [ESL](../languages/ESL.md) (esl(text))
 
 ## References
 * elementOf('languages/Hinzu/as.esl',esl(text))

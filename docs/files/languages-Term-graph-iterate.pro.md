@@ -12,7 +12,7 @@ topdownGraph(P, O1, O3) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/Term/graph/iterate.pro',prolog(text))

@@ -12,7 +12,7 @@ inv(list(Ds1), list(Ds2)) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/TDL/tdlInv.pro',prolog(text))

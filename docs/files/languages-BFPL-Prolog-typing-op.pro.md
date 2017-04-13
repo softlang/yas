@@ -12,7 +12,7 @@ ok(eq, inttype, inttype, booltype).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BFPL/Prolog/typing/op.pro',prolog(text))

@@ -7,7 +7,7 @@ layout : '//' { { end_of_line }~ }* end_of_line ;
 ```
 
 ## Languages
-* [EGL](../languages/EGL.md)
+* [EGL](../languages/EGL.md) (egl(text))
 
 ## References
 * elementOf('languages/ESL/ls.egl',egl(text))

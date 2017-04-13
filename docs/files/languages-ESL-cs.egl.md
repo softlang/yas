@@ -12,7 +12,7 @@ typeexpr : factor cardinality ;
 ```
 
 ## Languages
-* [EGL](../languages/EGL.md)
+* [EGL](../languages/EGL.md) (egl(text))
 
 ## References
 * elementOf('languages/ESL/cs.egl',egl(text))

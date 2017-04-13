@@ -9,7 +9,7 @@ state stateB { }
 ```
 
 ## Languages
-* [FSML](../languages/FSML.md)
+* [FSML](../languages/FSML.md) (fsml(text))
 
 ## References
 * elementOf('languages/FSML/tests/resolutionNotOk.fsml',fsml(text))

@@ -18,7 +18,7 @@ list(
 ```
 
 ## Languages
-* [TDL](../languages/TDL.md)
+* [TDL](../languages/TDL.md) (tdl(term))
 
 ## References
 * elementOf('languages/FRL/termdiff.term',tdl(term))

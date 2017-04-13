@@ -12,7 +12,7 @@ import Data.Generics
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/EL/Haskell/Language/EL/Syntax.hs',haskell(text))

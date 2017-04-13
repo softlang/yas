@@ -12,7 +12,7 @@ pre, post :: String -> String -> Stmt -> Bool
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BIPL/Haskell/Language/BIPL/Rename/Condition.hs',haskell(text))

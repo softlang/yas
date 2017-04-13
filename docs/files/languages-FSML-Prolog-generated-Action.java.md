@@ -6,7 +6,7 @@ public enum Action {collect, alarm, eject}
 ```
 
 ## Languages
-* [Java](../languages/Java.md)
+* [Java](../languages/Java.md) (java(text))
 
 ## References
 * mapsTo(actionsOfFsm,['languages/FSML/sample.term'],['languages/FSML/Prolog/generated/Action.java'])

@@ -12,7 +12,7 @@ chaseMembers(Classifiers, [Name], Members3) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/MML/term-chase.pro',prolog(text))

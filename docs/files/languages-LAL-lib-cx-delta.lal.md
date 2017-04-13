@@ -16,7 +16,7 @@ axiom { forall a, b <- L. forall delta1 <- DiffL.
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/cx/delta.lal',lal(text))

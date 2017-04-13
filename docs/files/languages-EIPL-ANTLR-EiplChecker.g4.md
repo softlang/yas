@@ -12,7 +12,7 @@ public Env env = new Env();
 ```
 
 ## Languages
-* [ANTLR](../languages/ANTLR.md)
+* [ANTLR](../languages/ANTLR.md) (antlr(text))
 
 ## References
 * elementOf('languages/EIPL/ANTLR/EiplChecker.g4',antlr(text))

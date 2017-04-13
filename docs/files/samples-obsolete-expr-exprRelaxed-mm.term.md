@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [MML](../languages/MML.md)
+* [MML](../languages/MML.md) (mml(term))
 
 ## References
 * elementOf('samples/obsolete/expr/exprRelaxed/mm.term',mml(term))

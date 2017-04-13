@@ -5,7 +5,7 @@ initial state stateA {
 ```
 
 ## Languages
-* [Text](../languages/Text.md)
+* [Text](../languages/Text.md) (text)
 
 ## References
 * elementOf('languages/FSML/tests/syntaxError.fsml',text)

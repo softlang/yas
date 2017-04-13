@@ -12,7 +12,7 @@ A basic metamodeling language for graph-based abstract syntax.
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/MML/README.md',markdown(text))

@@ -12,7 +12,7 @@ A simple extension of the BNF-like grammar notation BGL to support EBNF-like con
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/EGL/README.md',markdown(text))

@@ -12,7 +12,7 @@ import Language.BTL.Syntax
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BTL/Haskell/Language/BTL/ValueExpr.hs',haskell(text))

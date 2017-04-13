@@ -12,7 +12,7 @@ The input language of the Graphviz tool for describing and rendering all kinds o
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/DOT/README.md',markdown(text))

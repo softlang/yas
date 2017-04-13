@@ -6,7 +6,7 @@ sort L <= Any // A language as a subset of the universe
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/language.lal',lal(text))

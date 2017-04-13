@@ -12,7 +12,7 @@ A trivial transformation language for grammars.
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/EGTL/README.md',markdown(text))

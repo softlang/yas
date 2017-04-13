@@ -17,7 +17,7 @@ all s (Binary o e1 e2) = Binary <$> s o <*> s e1 <*> s e2
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/EL/Haskell/Language/EL/All.hs',haskell(text))

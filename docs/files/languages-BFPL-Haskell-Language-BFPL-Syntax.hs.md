@@ -12,7 +12,7 @@ type Function = (String, (FunSig, FunDef))
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BFPL/Haskell/Language/BFPL/Syntax.hs',haskell(text))

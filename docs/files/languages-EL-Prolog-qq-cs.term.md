@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [EGL](../languages/EGL.md)
+* [EGL](../languages/EGL.md) (egl(term))
 
 ## References
 * membership(elqq(text),eglAcceptor(elqqAbstract: (~>)),['languages/EL/Prolog/qq/cs.term','languages/EL/Prolog/qq/ls.term'])

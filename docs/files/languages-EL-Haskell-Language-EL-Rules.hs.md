@@ -12,7 +12,7 @@ import Language.EL.Rules.Associate
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/EL/Haskell/Language/EL/Rules.hs',haskell(text))

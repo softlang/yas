@@ -5,8 +5,8 @@ pred(if(iszero(zero),succ(zero),zero)).
 ```
 
 ## Languages
-* [BTL](../languages/BTL.md)
-* [BTL](../languages/BTL.md)
+* [BTL](../languages/BTL.md) (btl(term))
+* [BTL](../languages/BTL.md) (ok(btl(term)))
 
 ## References
 * elementOf('languages/BTL/sample.term',btl(term))

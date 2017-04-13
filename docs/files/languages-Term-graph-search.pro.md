@@ -12,7 +12,7 @@ searchObject(S, O1, O2) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/Term/graph/search.pro',prolog(text))

@@ -7,7 +7,7 @@
 ```
 
 ## Languages
-* [BIPL](../languages/BIPL.md)
+* [BIPL](../languages/BIPL.md) (bipl(text))
 
 ## References
 * elementOf('languages/BIPL/samples/bracket.bipl',bipl(text))

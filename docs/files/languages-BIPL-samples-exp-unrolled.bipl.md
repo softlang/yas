@@ -13,7 +13,7 @@
 ```
 
 ## Languages
-* [BIPL](../languages/BIPL.md)
+* [BIPL](../languages/BIPL.md) (bipl(text))
 
 ## References
 * elementOf('languages/BIPL/samples/exp-unrolled.bipl',bipl(text))

@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [MML](../languages/MML.md)
+* [MML](../languages/MML.md) (mml(term))
 
 ## References
 * mapsTo(mmTransform,['languages/GBL/tblToGbl.term','languages/TBL/mm.term'],['languages/GBL/mm.term'])

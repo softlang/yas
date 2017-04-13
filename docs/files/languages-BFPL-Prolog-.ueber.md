@@ -12,7 +12,7 @@
 ```
 
 ## Languages
-* [Ueber](../languages/Ueber.md)
+* [Ueber](../languages/Ueber.md) (ueber(term))
 
 ## References
 * elementOf('languages/BFPL/Prolog/.ueber',ueber(term))

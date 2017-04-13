@@ -18,7 +18,7 @@ processLal(TextF) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/Ueber/macros/lal.pro',prolog(text))

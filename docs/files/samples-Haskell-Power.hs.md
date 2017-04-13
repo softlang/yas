@@ -9,7 +9,7 @@ power n x =
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('samples/Haskell/Power.hs',haskell(text))

@@ -12,7 +12,7 @@ import Language.BGL.TopDownParser
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BGL/Haskell/Main.hs',haskell(text))

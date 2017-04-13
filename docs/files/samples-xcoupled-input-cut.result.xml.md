@@ -12,7 +12,7 @@
 ```
 
 ## Languages
-* [XML](../languages/XML.md)
+* [XML](../languages/XML.md) (xml)
 
 ## References
 * elementOf('samples/xcoupled/input/cut.result.xml',xml)

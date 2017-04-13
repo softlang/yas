@@ -9,7 +9,7 @@ function transform : L1 ~> L2
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/transformation.lal2',lal(text))

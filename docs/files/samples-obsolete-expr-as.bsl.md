@@ -8,7 +8,7 @@ symbol succ: nat -> nat ;
 ```
 
 ## Languages
-* [BSL](../languages/BSL.md)
+* [BSL](../languages/BSL.md) (bsl(text))
 
 ## References
 * elementOf('samples/obsolete/expr/as.bsl',bsl(text))

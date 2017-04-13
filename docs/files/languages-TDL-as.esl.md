@@ -12,7 +12,7 @@ symbol sub : term # diffl -> diffl ;
 ```
 
 ## Languages
-* [ESL](../languages/ESL.md)
+* [ESL](../languages/ESL.md) (esl(text))
 
 ## References
 * elementOf('languages/TDL/as.esl',esl(text))

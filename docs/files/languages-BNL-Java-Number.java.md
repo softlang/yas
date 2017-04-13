@@ -8,7 +8,7 @@ public class Number {
 ```
 
 ## Languages
-* [Java](../languages/Java.md)
+* [Java](../languages/Java.md) (java(text))
 
 ## References
 * elementOf('languages/BNL/Java/Number.java',java(text))

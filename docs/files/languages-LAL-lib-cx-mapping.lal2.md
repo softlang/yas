@@ -15,7 +15,7 @@ axiom {
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/cx/mapping.lal2',lal(text))

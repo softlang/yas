@@ -14,7 +14,7 @@
 ```
 
 ## Languages
-* [Ueber](../languages/Ueber.md)
+* [Ueber](../languages/Ueber.md) (ueber(term))
 
 ## References
 * elementOf('languages/FSML/Prolog/to-java/.ueber',ueber(term))

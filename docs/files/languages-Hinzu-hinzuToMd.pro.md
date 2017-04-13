@@ -12,7 +12,7 @@ main :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/Hinzu/hinzuToMd.pro',prolog(text))

@@ -17,7 +17,7 @@ ops s = foldr (\o m -> insertWith (+) o 1 m) empty os
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BIPL/Haskell/Language/BIPL/Extraction.hs',haskell(text))

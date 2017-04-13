@@ -12,7 +12,7 @@ public class Demo {
 ```
 
 ## Languages
-* [Java](../languages/Java.md)
+* [Java](../languages/Java.md) (java(text))
 
 ## References
 * elementOf('languages/FSML/Prolog/generated/Demo.java',java(text))

@@ -12,7 +12,7 @@ import Control.Monad (guard)
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BIPL/Haskell/Language/BIPL/Rename/Transformation.hs',haskell(text))

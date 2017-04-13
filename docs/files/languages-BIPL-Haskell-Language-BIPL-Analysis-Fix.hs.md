@@ -10,7 +10,7 @@ fix' h i x = limit (iterate h i)
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BIPL/Haskell/Language/BIPL/Analysis/Fix.hs',haskell(text))

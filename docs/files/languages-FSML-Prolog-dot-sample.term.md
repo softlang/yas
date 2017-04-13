@@ -12,7 +12,7 @@
 ```
 
 ## Languages
-* [DGL](../languages/DGL.md)
+* [DGL](../languages/DGL.md) (dgl(term))
 
 ## References
 * mapsTo(fsmToDgl,['languages/FSML/sample.term'],['languages/FSML/Prolog/dot/sample.term'])

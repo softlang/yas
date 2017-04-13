@@ -12,7 +12,7 @@ import System.IO (readFile)
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/FSML/Haskell/FsmlAcceptor.hs',haskell(text))

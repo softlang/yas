@@ -12,7 +12,7 @@ digraph  {
 ```
 
 ## Languages
-* [DOT](../languages/DOT.md)
+* [DOT](../languages/DOT.md) (dot(text))
 
 ## References
 * mapsTo(visualize,['languages/FSML/Python/sample.json'],['languages/FSML/Python/dot/sample.dot'])

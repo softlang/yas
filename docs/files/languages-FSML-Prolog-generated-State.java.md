@@ -6,7 +6,7 @@ public enum State {locked, unlocked, exception}
 ```
 
 ## Languages
-* [Java](../languages/Java.md)
+* [Java](../languages/Java.md) (java(text))
 
 ## References
 * mapsTo(statesOfFsm,['languages/FSML/sample.term'],['languages/FSML/Prolog/generated/State.java'])

@@ -12,7 +12,7 @@ type name = string ;
 ```
 
 ## Languages
-* [ESL](../languages/ESL.md)
+* [ESL](../languages/ESL.md) (esl(text))
 
 ## References
 * elementOf('languages/FSML/Prolog/to-java/as.esl',esl(text))

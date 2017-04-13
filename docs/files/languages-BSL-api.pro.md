@@ -12,7 +12,7 @@ bslTerm(File, Term) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BSL/api.pro',prolog(text))

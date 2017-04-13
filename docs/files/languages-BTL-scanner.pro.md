@@ -12,7 +12,7 @@ btlScanner(String1, [Token|L]) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BTL/scanner.pro',prolog(text))

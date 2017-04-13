@@ -7,7 +7,7 @@
 ```
 
 ## Languages
-* [Term](../languages/Term.md)
+* [Term](../languages/Term.md) (term)
 
 ## References
 * elementOf('languages/FSML/tests/illegalSymbol.input',term)

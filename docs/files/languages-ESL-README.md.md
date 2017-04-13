@@ -12,7 +12,7 @@ A simple extension of the basic signature language BSL for tree-based abstract s
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/ESL/README.md',markdown(text))

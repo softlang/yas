@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [ESL](../languages/ESL.md)
+* [ESL](../languages/ESL.md) (esl(term))
 
 ## References
 * elementOf('samples/obsolete/figure/as.term',esl(term))

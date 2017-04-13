@@ -11,7 +11,7 @@ rest --> ['.'], bits.
 ```
 
 ## Languages
-* [DCG](../languages/DCG.md)
+* [DCG](../languages/DCG.md) (dcg(prolog(text)))
 
 ## References
 * elementOf('languages/BNL/cs.dcg',dcg(prolog(text)))

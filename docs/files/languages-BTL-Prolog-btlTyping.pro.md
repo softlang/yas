@@ -12,7 +12,7 @@ isType(bool).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BTL/Prolog/btlTyping.pro',prolog(text))

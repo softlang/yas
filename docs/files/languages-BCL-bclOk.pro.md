@@ -12,7 +12,7 @@ main(F, T) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BCL/bclOk.pro',prolog(text))

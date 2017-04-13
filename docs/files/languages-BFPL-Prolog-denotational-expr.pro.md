@@ -12,7 +12,7 @@ meaningExpr(
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BFPL/Prolog/denotational/expr.pro',prolog(text))

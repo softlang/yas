@@ -12,7 +12,7 @@ lookup(K, _&D, V) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/Term/graph/crud.pro',prolog(text))

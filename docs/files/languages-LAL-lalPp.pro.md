@@ -12,7 +12,7 @@ pp(Ds, T) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/LAL/lalPp.pro',prolog(text))

@@ -7,7 +7,7 @@ mmlChecker(MmFile, Model) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/MML/api.pro',prolog(text))

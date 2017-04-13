@@ -15,7 +15,7 @@ datatype atom;
 ```
 
 ## Languages
-* [MML](../languages/MML.md)
+* [MML](../languages/MML.md) (mml(text))
 
 ## References
 * elementOf('languages/FRL/FRL2/mm.mml',mml(text))

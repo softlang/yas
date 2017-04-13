@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [DGL](../languages/DGL.md)
+* [DGL](../languages/DGL.md) (dgl(term))
 
 ## References
 * elementOf('languages/Ueber/languages.term',dgl(term))

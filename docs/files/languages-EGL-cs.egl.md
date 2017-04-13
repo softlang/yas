@@ -16,7 +16,7 @@ nonterminal : name ;
 ```
 
 ## Languages
-* [EGL](../languages/EGL.md)
+* [EGL](../languages/EGL.md) (egl(text))
 
 ## References
 * elementOf('languages/EGL/cs.egl',egl(text))

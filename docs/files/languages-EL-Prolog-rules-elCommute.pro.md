@@ -9,7 +9,7 @@ binary(mul, X, Y) ~> binary(mul, Y, X).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/EL/Prolog/rules/elCommute.pro',prolog(text))

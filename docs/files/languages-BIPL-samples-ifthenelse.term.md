@@ -5,7 +5,7 @@ if(binary(geq,intconst(1),intconst(1)),skip,skip).
 ```
 
 ## Languages
-* [BIPL](../languages/BIPL.md)
+* [BIPL](../languages/BIPL.md) (bipl(term))
 
 ## References
 * elementOf('languages/BIPL/samples/ifthenelse.term',bipl(term))

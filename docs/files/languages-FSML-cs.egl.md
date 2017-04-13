@@ -10,7 +10,7 @@ action : name ;
 ```
 
 ## Languages
-* [EGL](../languages/EGL.md)
+* [EGL](../languages/EGL.md) (egl(text))
 
 ## References
 * elementOf('languages/FSML/cs.egl',egl(text))

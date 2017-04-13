@@ -12,7 +12,7 @@ ppGraph_(Post, (Id & Dict), B) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/Term/graph/as-to-cs.pro',prolog(text))

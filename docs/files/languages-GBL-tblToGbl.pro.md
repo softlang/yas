@@ -12,7 +12,7 @@ World1 => World2 :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/GBL/tblToGbl.pro',prolog(text))

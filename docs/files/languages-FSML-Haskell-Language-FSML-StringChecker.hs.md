@@ -12,7 +12,7 @@ import qualified Data.Set as S
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/FSML/Haskell/Language/FSML/StringChecker.hs',haskell(text))

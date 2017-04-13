@@ -17,7 +17,7 @@ step(if(false, _E1, E2), E2).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BTL/Prolog/btlSmallstep.pro',prolog(text))

@@ -12,7 +12,7 @@ symbol addMember : cname # member -> diff ;
 ```
 
 ## Languages
-* [ESL](../languages/ESL.md)
+* [ESL](../languages/ESL.md) (esl(text))
 
 ## References
 * elementOf('languages/MMDL/as.esl',esl(text))

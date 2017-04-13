@@ -6,7 +6,7 @@ bill -> joe
 ```
 
 ## Languages
-* [TBL](../languages/TBL.md)
+* [TBL](../languages/TBL.md) (tbl(text))
 
 ## References
 * elementOf('languages/TBL/samples/small-world.tbl',tbl(text))

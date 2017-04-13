@@ -8,7 +8,7 @@
 ```
 
 ## Languages
-* [JSON](../languages/JSON.md)
+* [JSON](../languages/JSON.md) (json)
 
 ## References
 * elementOf('languages/BNL/samples/5comma25.json',json)

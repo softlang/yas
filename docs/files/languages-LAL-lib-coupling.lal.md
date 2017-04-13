@@ -7,7 +7,7 @@ relation consistent : L1 # L2 // The consistency relationship
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/coupling.lal',lal(text))

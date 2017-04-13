@@ -12,7 +12,7 @@ apply(subterms(Ds), X, Y) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/TDL/tdlApply.pro',prolog(text))

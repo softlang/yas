@@ -10,7 +10,7 @@
 ```
 
 ## Languages
-* [Term](../languages/Term.md)
+* [Term](../languages/Term.md) (term)
 
 ## References
 * elementOf('languages/FNL/atomToRef.config',term)

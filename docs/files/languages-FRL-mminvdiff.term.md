@@ -5,7 +5,7 @@ sequ([removeMember(person, (value,lastName,atom,one))]).
 ```
 
 ## Languages
-* [MMDL](../languages/MMDL.md)
+* [MMDL](../languages/MMDL.md) (mmdl(term))
 
 ## References
 * elementOf('languages/FRL/mminvdiff.term',mmdl(term))

@@ -12,7 +12,7 @@ import Language.GBL.Resolution
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/GBL/Haskell/Main.hs',haskell(text))

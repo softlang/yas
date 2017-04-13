@@ -17,7 +17,7 @@ normalize(Ds, F, L, Content1, Content2) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/Ueber/ueberNorm.pro',prolog(text))

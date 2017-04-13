@@ -10,7 +10,7 @@
 ```
 
 ## Languages
-* [FRL](../languages/FRL.md)
+* [FRL](../languages/FRL.md) (frl(graph(term)))
 
 ## References
 * elementOf('languages/FRL/empty-family.graph',frl(graph(term)))

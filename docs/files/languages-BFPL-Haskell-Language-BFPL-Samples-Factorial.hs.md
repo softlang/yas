@@ -12,7 +12,7 @@ import Language.BFPL.Syntax
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BFPL/Haskell/Language/BFPL/Samples/Factorial.hs',haskell(text))

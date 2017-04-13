@@ -7,7 +7,7 @@ initial state x {
 ```
 
 ## Languages
-* [FSML](../languages/FSML.md)
+* [FSML](../languages/FSML.md) (fsml(text))
 
 ## References
 * elementOf('languages/FSML/tests/simple.fsml',fsml(text))

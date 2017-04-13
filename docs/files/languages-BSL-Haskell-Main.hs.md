@@ -12,7 +12,7 @@ tests =
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BSL/Haskell/Main.hs',haskell(text))

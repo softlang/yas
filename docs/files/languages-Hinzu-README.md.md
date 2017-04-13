@@ -12,7 +12,7 @@ A trivial metadata/annotation language designed to facilitate basic documentatio
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/Hinzu/README.md',markdown(text))

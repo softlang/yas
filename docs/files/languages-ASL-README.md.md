@@ -12,7 +12,7 @@ A simple language for algebraic specification.
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/ASL/README.md',markdown(text))

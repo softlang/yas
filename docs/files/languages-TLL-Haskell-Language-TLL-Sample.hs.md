@@ -14,7 +14,7 @@ add = Fix (Lambda "f" (FunType NatType (FunType NatType NatType))
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/TLL/Haskell/Language/TLL/Sample.hs',haskell(text))

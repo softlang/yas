@@ -9,7 +9,7 @@ end
 ```
 
 ## Languages
-* [EIPL](../languages/EIPL.md)
+* [EIPL](../languages/EIPL.md) (eipl(text))
 
 ## References
 * elementOf('languages/EIPL/tests/var-clash.eipl',eipl(text))

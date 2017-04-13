@@ -17,7 +17,7 @@ fork((L, _, _), ETrees) ~> ITree :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BGL/cstToAst.pro',prolog(text))

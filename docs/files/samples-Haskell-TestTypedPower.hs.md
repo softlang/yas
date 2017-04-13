@@ -17,7 +17,7 @@ main = do
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('samples/Haskell/TestTypedPower.hs',haskell(text))

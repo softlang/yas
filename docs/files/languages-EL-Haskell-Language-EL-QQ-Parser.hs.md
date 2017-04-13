@@ -12,7 +12,7 @@ import Text.Parsec.String (Parser)
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/EL/Haskell/Language/EL/QQ/Parser.hs',haskell(text))

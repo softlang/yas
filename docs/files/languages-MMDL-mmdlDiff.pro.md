@@ -12,7 +12,7 @@ classifiers([], [], []).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/MMDL/mmdlDiff.pro',prolog(text))

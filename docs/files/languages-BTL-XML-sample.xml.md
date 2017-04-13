@@ -11,7 +11,7 @@
 ```
 
 ## Languages
-* [XML](../languages/XML.md)
+* [XML](../languages/XML.md) (xml)
 
 ## References
 * elementOf('languages/BTL/XML/sample.xml',xml)

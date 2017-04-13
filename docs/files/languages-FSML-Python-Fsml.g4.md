@@ -12,7 +12,7 @@ fsm :
 ```
 
 ## Languages
-* [ANTLR](../languages/ANTLR.md)
+* [ANTLR](../languages/ANTLR.md) (antlr(text))
 
 ## References
 * elementOf('languages/FSML/Python/Fsml.g4',antlr(text))

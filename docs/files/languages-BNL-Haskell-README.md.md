@@ -9,7 +9,7 @@ Laziness is essential for this implementation as the synthesized attribute for l
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/BNL/Haskell/README.md',markdown(text))

@@ -14,7 +14,7 @@
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/DDL/ddlAbstract.pro',prolog(text))

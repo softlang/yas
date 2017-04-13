@@ -17,7 +17,7 @@ mk_power n = [|| \x -> $$(power n [|| x ||]) ||]
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('samples/Haskell/TypedPower.hs',haskell(text))

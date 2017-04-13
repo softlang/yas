@@ -15,7 +15,7 @@ add [not] gsymbol : '{' gsymbols '}' '~' ;
 ```
 
 ## Languages
-* [EGTL](../languages/EGTL.md)
+* [EGTL](../languages/EGTL.md) (egtl(text))
 
 ## References
 * elementOf('languages/EGTL/samples/bgl2egl.egtl',egtl(text))

@@ -10,7 +10,7 @@ state stateC { }
 ```
 
 ## Languages
-* [FSML](../languages/FSML.md)
+* [FSML](../languages/FSML.md) (fsml(text))
 
 ## References
 * elementOf('languages/FSML/tests/determinismNotOk.fsml',fsml(text))

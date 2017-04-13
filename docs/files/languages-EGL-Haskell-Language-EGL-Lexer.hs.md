@@ -12,7 +12,7 @@ import qualified Text.Parsec.Token as Token
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/EGL/Haskell/Language/EGL/Lexer.hs',haskell(text))

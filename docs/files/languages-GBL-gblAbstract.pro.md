@@ -11,7 +11,7 @@ world:Persons1 => { class : world, persons : Persons2 } :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/GBL/gblAbstract.pro',prolog(text))

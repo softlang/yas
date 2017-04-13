@@ -11,7 +11,7 @@ axiom consistency { forall t <- XL. forall a, c <- L1. forall b, d <- L2.
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/cx/cotransformation.lal',lal(text))

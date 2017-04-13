@@ -12,7 +12,7 @@ A trivial expression language with expression forms on Boolean values and natura
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/BTL/README.md',markdown(text))

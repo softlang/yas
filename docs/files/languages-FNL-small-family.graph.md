@@ -12,7 +12,7 @@
 ```
 
 ## Languages
-* [FNL](../languages/FNL.md)
+* [FNL](../languages/FNL.md) (fnl(graph(term)))
 
 ## References
 * elementOf('languages/FNL/small-family.graph',fnl(graph(term)))

@@ -12,7 +12,7 @@ import Text.Parsec.String (Parser)
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/FSML/Haskell/Language/FSML/MonadicParser.hs',haskell(text))

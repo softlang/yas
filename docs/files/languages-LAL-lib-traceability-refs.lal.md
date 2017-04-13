@@ -9,7 +9,7 @@ axiom {
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/traceability/refs.lal',lal(text))

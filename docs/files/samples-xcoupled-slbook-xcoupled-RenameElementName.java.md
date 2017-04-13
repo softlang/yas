@@ -12,7 +12,7 @@ public interface RenameElementName<T> extends Operator<T> {
 ```
 
 ## Languages
-* [Java](../languages/Java.md)
+* [Java](../languages/Java.md) (java(text))
 
 ## References
 * elementOf('samples/xcoupled/slbook/xcoupled/RenameElementName.java',java(text))

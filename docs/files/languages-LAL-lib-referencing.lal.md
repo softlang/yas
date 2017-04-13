@@ -8,7 +8,7 @@ axiom { forall r <- RefL. forall x, y <- L. deref(r, x) = y => partOfStar(y, x) 
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/referencing.lal',lal(text))

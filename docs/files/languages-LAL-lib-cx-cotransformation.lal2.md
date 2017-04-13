@@ -12,7 +12,7 @@ sort XL <= XAny
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/cx/cotransformation.lal2',lal(text))

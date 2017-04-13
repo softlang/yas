@@ -8,7 +8,7 @@ type point = integer # integer ;
 ```
 
 ## Languages
-* [ESL](../languages/ESL.md)
+* [ESL](../languages/ESL.md) (esl(text))
 
 ## References
 * elementOf('samples/obsolete/figure/as.esl',esl(text))

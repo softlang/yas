@@ -12,7 +12,7 @@ A small extension of the trivial imperative programming language BIPL to provide
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/EIPL/README.md',markdown(text))

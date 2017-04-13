@@ -12,7 +12,7 @@ A representation format for concrete syntax trees (CSTs) for BNF-like grammar no
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/BCL/README.md',markdown(text))

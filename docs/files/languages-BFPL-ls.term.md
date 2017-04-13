@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [EGL](../languages/EGL.md)
+* [EGL](../languages/EGL.md) (egl(term))
 
 ## References
 * membership(bfpl(text),eglAcceptor(bfplAbstract: (~>)),['languages/BFPL/cs.term','languages/BFPL/ls.term'])

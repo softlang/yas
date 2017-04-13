@@ -12,7 +12,7 @@ removeObject(MM1, Id, Obj1, Obj3) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/MML/editing/remove-object.pro',prolog(text))

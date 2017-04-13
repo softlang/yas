@@ -12,7 +12,7 @@ render(Box, S) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/PPL/pplRender.pro',prolog(text))

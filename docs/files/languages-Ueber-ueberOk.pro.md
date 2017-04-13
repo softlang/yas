@@ -12,7 +12,7 @@ ok(_, language(L)) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/Ueber/ueberOk.pro',prolog(text))

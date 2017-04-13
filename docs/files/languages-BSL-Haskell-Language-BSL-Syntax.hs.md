@@ -11,7 +11,7 @@ type Sort = String
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BSL/Haskell/Language/BSL/Syntax.hs',haskell(text))

@@ -12,7 +12,7 @@ from FsmlModel import Fsm
 ```
 
 ## Languages
-* [Python](../languages/Python.md)
+* [Python](../languages/Python.md) (python(text))
 
 ## References
 * elementOf('languages/FSML/Python/FsmlLexer.py',python(text))

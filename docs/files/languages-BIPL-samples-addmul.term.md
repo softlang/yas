@@ -5,7 +5,7 @@ seq(assign(x,binary(add,intconst(1),binary(mul,intconst(2),intconst(3)))),assign
 ```
 
 ## Languages
-* [BIPL](../languages/BIPL.md)
+* [BIPL](../languages/BIPL.md) (bipl(term))
 
 ## References
 * elementOf('languages/BIPL/samples/addmul.term',bipl(term))

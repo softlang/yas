@@ -12,7 +12,7 @@ import qualified Language.EL.All
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/EL/Haskell/Main.hs',haskell(text))

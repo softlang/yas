@@ -12,7 +12,7 @@ A representation format for metamodel-based term differences.
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/MMDL/README.md',markdown(text))

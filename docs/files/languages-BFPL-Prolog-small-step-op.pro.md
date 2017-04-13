@@ -17,7 +17,7 @@ opConst(geq, intconst(I1), intconst(I2), boolconst(false)) :- I1 < I2.
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BFPL/Prolog/small-step/op.pro',prolog(text))

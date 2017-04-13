@@ -8,7 +8,7 @@ axiom castFail { forall e1 <- Any . ~ (e1 <- L) => ~ (exists e2 <- L . cast(e1) 
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/cast.lal',lal(text))

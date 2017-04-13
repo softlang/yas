@@ -5,7 +5,7 @@ seq(assign(r,intconst(1)),seq(assign(r,binary(mul,var(r),var(x))),seq(assign(n,b
 ```
 
 ## Languages
-* [BIPL](../languages/BIPL.md)
+* [BIPL](../languages/BIPL.md) (bipl(term))
 
 ## References
 * elementOf('languages/BIPL/samples/exp-unrolled.term',bipl(term))

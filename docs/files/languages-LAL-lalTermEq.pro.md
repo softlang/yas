@@ -9,7 +9,7 @@ eq(Lal1, Lal2) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/LAL/lalTermEq.pro',prolog(text))

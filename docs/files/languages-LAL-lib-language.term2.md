@@ -5,8 +5,8 @@
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(term))
+* [LAL](../languages/LAL.md) (ok(lal(term)))
 
 ## References
 * elementOf('languages/LAL/lib/language.term2',lal(term))

@@ -12,7 +12,7 @@ substs : '[' subst { ',' subst }* ']' ;
 ```
 
 ## Languages
-* [EGL](../languages/EGL.md)
+* [EGL](../languages/EGL.md) (egl(text))
 
 ## References
 * elementOf('languages/LAL/cs.egl',egl(text))

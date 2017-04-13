@@ -5,7 +5,7 @@ vlist([hlist([text(digraph),indent(text('G')),indent(text('{'))]),indent(indent(
 ```
 
 ## Languages
-* [PPL](../languages/PPL.md)
+* [PPL](../languages/PPL.md) (ppl(term))
 
 ## References
 * elementOf('languages/FSML/Prolog/dot/sample.ppl',ppl(term))

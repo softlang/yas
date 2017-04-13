@@ -11,7 +11,7 @@ isRest(rational(Bits)) :- isBits(Bits).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BNL/Prolog/as.pro',prolog(text))

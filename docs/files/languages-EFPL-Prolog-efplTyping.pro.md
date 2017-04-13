@@ -12,7 +12,7 @@ okProg((Fs1, E), (Fs2, E)) :-
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/EFPL/Prolog/efplTyping.pro',prolog(text))

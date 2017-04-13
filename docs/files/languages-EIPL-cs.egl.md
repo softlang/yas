@@ -12,7 +12,7 @@ scope : 'begin' { decl }* stmt 'end' ;
 ```
 
 ## Languages
-* [EGL](../languages/EGL.md)
+* [EGL](../languages/EGL.md) (egl(text))
 
 ## References
 * elementOf('languages/EIPL/cs.egl',egl(text))

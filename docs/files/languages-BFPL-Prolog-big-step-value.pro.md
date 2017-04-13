@@ -10,7 +10,7 @@ value(boolval(_)).
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/BFPL/Prolog/big-step/value.pro',prolog(text))

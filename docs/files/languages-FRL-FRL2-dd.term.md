@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [DDL](../languages/DDL.md)
+* [DDL](../languages/DDL.md) (ddl(term))
 
 ## References
 * mapsTo(applyDiff,['languages/FRL/mmdiff.term','languages/FRL/dd.term'],['languages/FRL/FRL2/dd.term'])

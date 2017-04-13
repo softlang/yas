@@ -12,7 +12,7 @@ A trivial first-order functional programming language with support for primitive
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/BFPL/README.md',markdown(text))

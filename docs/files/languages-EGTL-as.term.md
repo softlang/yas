@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [ESL](../languages/ESL.md)
+* [ESL](../languages/ESL.md) (esl(term))
 
 ## References
 * elementOf('languages/EGTL/as.term',esl(term))

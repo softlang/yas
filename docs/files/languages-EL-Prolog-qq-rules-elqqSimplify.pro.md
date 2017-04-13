@@ -10,7 +10,7 @@
 ```
 
 ## Languages
-* [Prolog](../languages/Prolog.md)
+* [Prolog](../languages/Prolog.md) (prolog(text))
 
 ## References
 * elementOf('languages/EL/Prolog/qq/rules/elqqSimplify.pro',prolog(text))

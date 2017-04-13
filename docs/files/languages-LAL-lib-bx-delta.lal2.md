@@ -12,7 +12,7 @@ axiom {
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/bx/delta.lal2',lal(text))

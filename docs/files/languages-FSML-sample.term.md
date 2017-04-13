@@ -12,8 +12,8 @@
 ```
 
 ## Languages
-* [FSML](../languages/FSML.md)
-* [FSML](../languages/FSML.md)
+* [FSML](../languages/FSML.md) (fsml(term))
+* [FSML](../languages/FSML.md) (ok(fsml(term)))
 
 ## References
 * elementOf('languages/FSML/sample.term',fsml(term))

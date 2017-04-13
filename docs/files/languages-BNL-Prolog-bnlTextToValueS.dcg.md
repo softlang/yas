@@ -12,7 +12,7 @@ number(Val0) -->
 ```
 
 ## Languages
-* [DCG](../languages/DCG.md)
+* [DCG](../languages/DCG.md) (dcg(prolog(text)))
 
 ## References
 * elementOf('languages/BNL/Prolog/bnlTextToValueS.dcg',dcg(prolog(text)))

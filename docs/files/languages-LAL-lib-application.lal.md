@@ -13,7 +13,7 @@ axiom welltyped {
 ```
 
 ## Languages
-* [LAL](../languages/LAL.md)
+* [LAL](../languages/LAL.md) (lal(text))
 
 ## References
 * elementOf('languages/LAL/lib/application.lal',lal(text))

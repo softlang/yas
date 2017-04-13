@@ -11,7 +11,7 @@ type StoreTT = StoreT -> StoreT
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BIPL/Haskell/Language/BIPL/CS/Domains.hs',haskell(text))

@@ -8,7 +8,7 @@ type sort = string ;
 ```
 
 ## Languages
-* [ESL](../languages/ESL.md)
+* [ESL](../languages/ESL.md) (esl(text))
 
 ## References
 * elementOf('languages/BSL/as.esl',esl(text))

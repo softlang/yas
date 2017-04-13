@@ -12,7 +12,7 @@ import Data.Map (insert)
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BIPL/Haskell/Language/BIPL/Goto/Combinators.hs',haskell(text))

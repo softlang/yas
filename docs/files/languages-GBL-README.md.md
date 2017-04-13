@@ -12,7 +12,7 @@ _None_
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/GBL/README.md',markdown(text))

@@ -6,7 +6,7 @@ public enum Input {ticket, pass, mute, release}
 ```
 
 ## Languages
-* [Java](../languages/Java.md)
+* [Java](../languages/Java.md) (java(text))
 
 ## References
 * mapsTo(inputsOfFsm,['languages/FSML/sample.term'],['languages/FSML/Prolog/generated/Input.java'])

@@ -5,7 +5,7 @@
 ```
 
 ## Languages
-* [EGL](../languages/EGL.md)
+* [EGL](../languages/EGL.md) (egl(term))
 
 ## References
 * membership(tbl(text),eglAcceptor(tblAbstract: (~>)),['languages/TBL/cs.term','languages/TBL/ls.term'])

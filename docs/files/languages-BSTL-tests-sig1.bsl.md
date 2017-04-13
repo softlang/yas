@@ -8,7 +8,7 @@ symbol succ : nat -> nat ; // successor of a natural number
 ```
 
 ## Languages
-* [BSL](../languages/BSL.md)
+* [BSL](../languages/BSL.md) (bsl(text))
 
 ## References
 * elementOf('languages/BSTL/tests/sig1.bsl',bsl(text))

@@ -12,7 +12,7 @@ accept i = case number i of
 ```
 
 ## Languages
-* [Haskell](../languages/Haskell.md)
+* [Haskell](../languages/Haskell.md) (haskell(text))
 
 ## References
 * elementOf('languages/BNL/Haskell/Language/BNL/LookAheadAcceptor.hs',haskell(text))

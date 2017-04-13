@@ -18,7 +18,7 @@ A trivial stack- and address-based machine language; memory access and jumps use
 ```
 
 ## Languages
-* [Markdown](../languages/Markdown.md)
+* [Markdown](../languages/Markdown.md) (markdown(text))
 
 ## References
 * elementOf('languages/BML/README.md',markdown(text))
