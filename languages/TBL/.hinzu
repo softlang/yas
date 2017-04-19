@@ -1,14 +1,14 @@
 [
   l([
-      lid(tbl),
-      acronym('TBL'),
+      id(tbl),
+      name('TBL'),
       expansion('Tree-based Buddy Language'),
-      explanation('A trivial ontology-oriented language for representing collections of persons and their buddy relationships with a tree-based abstract syntax.'),
-      variationOf(gbl)
+      description('A trivial ontology-oriented language for representing collections of persons and their buddy relationships with a tree-based abstract syntax.'),
+      relatesTo(sameAs, id(gbl))
   ]),
   r([
-      rid(tbl(text)),
-      representationOf(tbl),
-      filenameExtension(tbl)
+      id(tbl(text)),
+      extension(tbl),
+      relatesTo(representationOf, id(tbl))
   ])
 ].

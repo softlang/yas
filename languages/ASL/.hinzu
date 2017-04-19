@@ -1,14 +1,14 @@
 [
   l([
-      lid(asl),
-      acronym('ASL'),
+      id(asl),
+      name('ASL'),
       expansion('Algebraic Specification Language'),
-      explanation('A simple language for algebraic specification.'),
-      purpose('Algebraic specification')
+      description('A simple language for algebraic specification.'),
+      relatesTo(hasPurpose, id(algspec))
   ]),
   r([
-      rid(asl(text)),
-      representationOf(asl),
-      filenameExtension(asl)
+      id(asl(text)),
+      extension(asl),
+      relatesTo(representationOf, id(asl))
   ])
 ].

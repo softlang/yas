@@ -20,9 +20,10 @@ init :-
 
 % Process directory
 process_dir(Dir) :-
-  % Read Hinzu dump to be used along the way
-  readTermFile('languages/Hinzu/dump.hinzu', HinzuDump),
-  process_dir(HinzuDump, Dir).  
+    % Read Hinzu dump to be used along the way
+    readTermFile('languages/Hinzu/dump.term', HinzuDump1),
+    maplist(fst, HinzuDump1, HinzuDump2),
+    process_dir(HinzuDump2, Dir).  
     
 process_dir(HinzuDump, Dir) :-
   % Read Ueber file, if present
@@ -83,9 +84,9 @@ process_dir(HinzuDump, Dir) :-
 process_file(HinzuDump, File) :-
   file_name_extension(_, FNExt, File),
   ( ( member(r(X), HinzuDump),
-      member(filenameExtension(FNExt), X) ) ->
-          member(rid(I), X),
-          assertElementOf(File, I)
+      member(extension(FNExt), X) ) ->
+          member(id(I), X),
+          assertUDecl(elementOf(File, I))
         ;
           true ).
 
@@ -146,14 +147,14 @@ ueber(elementOf(Rel, Lang)) :-
   ueber_absolute(Rel, Abs),
   ueber_indent,
   format(' * elementOf(~q, ~q)~n',[Rel, Lang]),
-  assertElementOf(Abs, Lang).
+  assertUDecl(elementOf(Abs, Lang)).
 
 % Process negated elementOf/2 relationship
 ueber(notElementOf(Rel, Lang)) :-
   ueber_absolute(Rel, Abs),
   ueber_indent,
   format(' * notElementOf(~q, ~q)~n',[Rel, Lang]),
-  assertNotElementOf(Abs, Lang).
+  assertUDecl(notElementOf(Abs, Lang)).
 
 % Process relatesTo relationship
 ueber(relatesTo(Func, ArgsRel)) :-
@@ -178,15 +179,6 @@ ueber(macro(X)) :-
 ueber(X) :-
   format('Failing on Ueber declaration ~w.~n',[X]),
   abort.
-
-% Make negated membership cancel membership
-assertElementOf(File, L) :-
-    once((  udeclaration(notElementOf(File, L))
-	  ; assertUDecl(elementOf(File, L)))).
-
-assertNotElementOf(File, L) :-
-  retractall(udeclaration(elementOf(File, L))),
-  assertUDecl(notElementOf(File, L)).
 
 % Process Hinzu declaration
 hinzu(HinzuTerm) :-
@@ -233,11 +225,13 @@ ueber_indent(L1) :-
 
 % Assert Ueber declaration, if needed
 assertUDecl(X) :-
-    ( udeclaration(X) -> true; assertz(udeclaration(X)) ).
+    nb_getval(ueber_dir, Dir),
+    assertz(udeclaration(X, Dir)).
 
 % Assert Hinzu declaration
 assertHDecl(X) :-
-    assertz(hdeclaration(X)).
+    nb_getval(ueber_dir, Dir),
+    assertz(hdeclaration(X, Dir)).
 
 % Test for mode of verification
 mode(M) :-

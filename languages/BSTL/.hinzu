@@ -1,14 +1,14 @@
 [
   l([
-      lid(bstl),
-      acronym('BSTL'),
+      id(bstl),
+      name('BSTL'),
       expansion('Basic Signature Transformation Language'),
-      explanation('A trivial transformation language for coupled transformations on BSL signatures and conformant terms.'),
-      dependsOn(bsl),
-      dependsOn(term)
+      description('A trivial transformation language for coupled transformations on BSL signatures and conformant terms.'),
+      relatesTo(dependsOn, id(bsl)),
+      relatesTo(dependsOn, id(term))
   ]),
   r([
-      rid(bstl(term)),
-      representationOf(bstl)
+      id(bstl(term)),
+      relatesTo(representationOf, id(bstl))
   ])
 ].

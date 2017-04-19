@@ -1,14 +1,14 @@
 [
   l([
-      lid(bnl),
-      acronym('BNL'),
+      id(bnl),
+      name('BNL'),
       expansion('Basic Number Language'),
-      explanation('A trivial language for the representation of binary numbers.'),
-      purpose('Illustration')
+      description('A trivial language for the representation of binary numbers.'),
+      relatesTo(hasPurpose, id(toy))
   ]),
   r([
-      rid(bnl(text)),
-      representationOf(bnl),
-      filenameExtension(bnl)
+      id(bnl(text)),
+      extension(bnl),
+      relatesTo(representationOf, id(bnl))
   ])
 ].

@@ -1,11 +1,11 @@
 [
   l([
-      lid(term),
+      id(term),
       name('Term'),
-      explanation('Prolog terms as a basic representation format used by the YAS repository.')
+      description('Prolog terms as a basic representation format used by the YAS repository.')
   ]),
   r([
-      rid(term),
-      representationOf(term)
+      id(term),
+      relatesTo(representationOf, id(term))
   ])
 ].

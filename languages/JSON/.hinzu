@@ -1,14 +1,17 @@
 [
   l([
-      lid(json),
-      acronym('JSON'),
+      id(json),
+      name('JSON'),
       expansion('JavaScript Object Notation'),
-      explanation('A dictionary-based interchange format.'),
-      sameAs('https://en.wikipedia.org/wiki/JSON')
+      description('A dictionary-based interchange format.'),
+      relatesTo(sameAs, uri('https://en.wikipedia.org/wiki/JSON')),
+      relatesTo(sameAs, uri('http://json.org/')),
+      relatesTo(hasPurpose, id(dataexchange)),
+      relatesTo(hasPurpose, id(serialization))
   ]),
   r([
-      rid(json),
-      representationOf(json),
-      filenameExtension(json)
+      id(json),
+      extension(json),
+      relatesTo(representationOf, id(json))
   ])
 ].

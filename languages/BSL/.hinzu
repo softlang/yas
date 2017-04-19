@@ -1,17 +1,17 @@
 [
   l([
-      lid(bsl),
-      acronym('BSL'),
+      id(bsl),
+      name('BSL'),
       expansion('Basic Signature Language'),
-      explanation('A basic specification language for tree-based abstract syntax on the grounds of many-sorted signatures.'),
-      purpose('Tree-based abstract syntax definition'),
-      purpose('Abstract syntax definition'),
-      purpose('Language definition'),
-      subsetOf(esl)
+      description('A basic specification language for tree-based abstract syntax on the grounds of many-sorted signatures.'),
+      relatesTo(subsetOf, id(esl)),
+      relatesTo(hasPurpose, id(abssyn)),
+      relatesTo(hasPurpose, id(treerepr)),
+      relatesTo(hasPurpose, id(langdef))
   ]),
   r([
-      rid(bsl(text)),
-      representationOf(bsl),
-      filenameExtension(bsl)
+      id(bsl(text)),
+      extension(bsl),
+      relatesTo(representationOf, id(bsl))
   ])
 ].

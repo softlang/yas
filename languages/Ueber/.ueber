@@ -3,20 +3,20 @@
   macro(eslSyntax(ueber)),
 
   % Dump Ueber declarations
-  function(dump, [], [ueber(term)], ueberDump:main, []),
-  elementOf('dump.ueber', ueber(term)),
-  mapsTo(dump, [], ['dump.ueber']),
+  function(ueberDump, [], [term], ueberDump:main, []),
+  elementOf('dump.term', term),
+  mapsTo(ueberDump, [], ['dump.term']),
 
   % Visualize languages as graph
   elementOf('languages.term', dgl(term)),
-  function(languages, [ueber(term)], [dgl(term)], ueberGraphLanguages:graph, []),
-  mapsTo(languages, ['dump.ueber'], ['languages.term']),
+  function(languages, [term], [dgl(term)], ueberGraphLanguages:graph, []),
+  mapsTo(languages, ['dump.term'], ['languages.term']),
   macro(ppFile('languages.dgl')),
 
   % Visualize functions as graph
   elementOf('functions.term', dgl(term)),
-  function(functions, [ueber(term)], [dgl(term)], ueberGraphFunctions:graph, []),
-  mapsTo(functions, ['dump.ueber'], ['functions.term']),
+  function(functions, [term], [dgl(term)], ueberGraphFunctions:graph, []),
+  mapsTo(functions, ['dump.term'], ['functions.term']),
   macro(ppFile('functions.dgl'))
 
 ].

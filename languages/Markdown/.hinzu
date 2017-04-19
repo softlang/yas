@@ -1,13 +1,13 @@
 [
   l([
-      lid(markdown),
+      id(markdown),
       name('Markdown'),
-      explanation('A markup-based documentation language.'),
-      sameAs('https://en.wikipedia.org/wiki/Markdown')
+      description('A markup-based documentation language.'),
+      relatesTo(sameAs, uri('https://en.wikipedia.org/wiki/Markdown'))
   ]),
   r([
-      rid(markdown(text)),
-      representationOf(markdown),
-      filenameExtension(md)
+      id(markdown(text)),
+      extension(md),
+      relatesTo(representationOf, id(markdown))
   ])
 ].

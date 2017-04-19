@@ -1,0 +1,9 @@
+[
+  l([
+      id(bol),
+      name('BOL'),
+      expansion('Basic OCL-like Language'),
+      description('An OCL-like constraint language.'),
+      relatesTo(similarTo, uri('https://en.wikipedia.org/wiki/Object_Constraint_Language'))
+  ])
+].

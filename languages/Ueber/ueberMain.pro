@@ -1,6 +1,6 @@
 % Run the megamodel
 ueberRun :-
-  findall(D, udeclaration(D), Ds),
+  findall(D, udeclaration(D, _), Ds),
   initTesting,
   ueberReport:report(Ds),
   ( mode(verbose) ->

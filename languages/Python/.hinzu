@@ -1,14 +1,14 @@
 [
   l([
-      lid(python),
+      id(python),
       name('Python'),
-      explanation('An interpreter-based multi-paradigm general purpose programming language with a dynamic type system'),
-      sameAs('https://en.wikipedia.org/wiki/Python_(programming_language)'),
-      purpose('Scripting')
+      description('An interpreter-based multi-paradigm general purpose programming language with a dynamic type system'),
+      relatesTo(sameAs, uri('https://en.wikipedia.org/wiki/Python_(programming_language)')),
+      relatesTo(hasPurpose, id(scripting))
   ]),
   r([
-      rid(python(text)),
-      representationOf(python),
-      filenameExtension(py)
+      id(python(text)),
+      extension(py),
+      relatesTo(representationOf, id(python))
   ])
 ].

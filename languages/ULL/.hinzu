@@ -1,10 +1,10 @@
 [
   l([
-      lid(ull),
-      acronym('ULL'),
+      id(ull),
+      name('ULL'),
       expansion('Untyped Lambda Language'),
-      explanation('An applied, untyped lambda calculus.'),
-      embeds(btl),
-      variationOf(tll)
+      description('An applied, untyped lambda calculus.'),
+      relatesTo(embeds, id(btl)),
+      relatesTo(similarTo, id(tll))
   ])
 ].

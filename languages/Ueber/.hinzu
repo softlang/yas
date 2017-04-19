@@ -1,15 +1,15 @@
 [
   l([
-      lid(ueber),
+      id(ueber),
       name('Ueber'),
-      explanation('A megamodeling language used for build management and regression testing in the YAS repository.'),
-      purpose('Megamodeling'),
-      purpose('Build management'),
-      purpose('Regression testing')
+      description('A megamodeling language used for build management and regression testing in the YAS repository.'),
+      relatesTo(hasPurpose, id(mega)),
+      relatesTo(hasPurpose, id(build)),
+      relatesTo(hasPurpose, id(regress))
   ]),
   r([
-      rid(ueber(term)),
-      representationOf(ueber),
-      filenameExtension(ueber)
+      id(ueber(term)),
+      extension(ueber),
+      relatesTo(representationOf, id(ueber))
   ])
 ].

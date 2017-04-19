@@ -1,15 +1,17 @@
 [
   l([
-      lid(antlr),
-      acronym('ANTLR'),
+      id(antlr),
+      name('ANTLR'),
       expansion('Another Tool for Language Recognition'),
-      explanation('The ANTLR tool and language for parsing and processing string languages.'),
-      sameAs('http://www.antlr.org/'),
-      purpose('Parser description')
+      description('The ANTLR tool and language for parsing and processing string languages.'),
+      relatesTo(sameAs, uri('http://www.antlr.org/')),
+      relatesTo(hasPurpose, id(parsing)),
+      relatesTo(hasPurpose, id(parsegen))
   ]),
   r([
-      rid(antlr(text)),
-      representationOf(antlr),
-      filenameExtension(g4)
+      id(antlr(text)),
+      extension(g),
+      extension(g4),
+      relatesTo(representationOf, id(antlr))
   ])
 ].

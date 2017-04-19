@@ -1,14 +1,15 @@
 [
   l([
-      lid(haskell), 
+      id(haskell), 
       name('Haskell'),
-      explanation('A standardized, general-purpose purely functional programming language, with non-strict semantics and strong static typing.'),
-      sameAs('https://en.wikipedia.org/wiki/Haskell_(programming_language)'),
-      purpose('Functional programming')
+      description('A standardized, general-purpose purely functional programming language, with non-strict semantics and strong static typing.'),
+      relatesTo(sameAs, uri('https://en.wikipedia.org/wiki/Haskell_(programming_language)')),
+      relatesTo(sameAs, uri('https://www.haskell.org/')),
+      relatesTo(hasPurpose, id(fp))
   ]),
   r([
-      rid(haskell(text)),
-      representationOf(haskell),
-      filenameExtension(hs)
+      id(haskell(text)),
+      extension(hs),
+      relatesTo(representationOf, id(haskell))
   ])
 ].

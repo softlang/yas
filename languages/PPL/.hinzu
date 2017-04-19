@@ -1,13 +1,13 @@
 [
   l([
-      lid(ppl),
-      acronym('PPL'),
+      id(ppl),
+      name('PPL'),
       expansion('Pretty Printing Language'),
-      explanation('A target language for pretty printing which provides different composition operators for textboxes.')
+      description('A target language for pretty printing which provides different composition operators for textboxes.')
   ]),
   r([
-      rid(ppl(term)),
-      representationOf(ppl),
-      filenameExtension(ppl)
+      id(ppl(term)),
+      extension(ppl),
+      relatesTo(representationOf, id(ppl))
   ])
 ].

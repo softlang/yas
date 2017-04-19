@@ -1,32 +1,37 @@
 // Grouping of metadata items
 type model = decl* ;
-symbol l : litem* -> decl ;
-symbol r : ritem* -> decl ;
+symbol l : item* -> decl ; // Languages
+symbol r : item* -> decl ; // Language representations
+symbol f : item* -> decl ; // Files in the repository
+symbol d : item* -> decl ; // Directories in the repository
+symbol p : item* -> decl ; // Purposes of languages and possibly files
+symbol q : item* -> decl ; // Qualifiers used relationships
 
-// Language-related (representation-unaware) items
-symbol lid : lid -> litem ;
-symbol name : string -> litem ;
-symbol acronym : string -> litem ;
-symbol expansion : string -> litem ;
-symbol explanation : string -> litem ;
-symbol variationOf : lid -> litem ;
-symbol subsetOf : lid -> litem ;
-symbol supersetOf : lid -> litem ;
-symbol embeds : lid -> litem ;
-symbol dependsOn : lid -> litem ;
-symbol sameAs : uri -> litem ;
-symbol similarTo : uri -> litem ;
-symbol relatesTo : uri -> litem ;
-symbol purpose : string -> litem ;
+// Metadata items
+symbol id : id -> item ; // Every decl needs an id; an atom for all but r/1.
+symbol name : string -> item ; // Name of a language, a file, a purpose.
+symbol expansion : string -> item ; // Expanded name of a language when name is acronym.
+symbol description : string -> item ; // One liner starting in upper case, ending with ".".
+symbol extension : string -> item ; // Filename extension for a representation.
+symbol processor : goal -> item ; // Processor for a representation.
+symbol relatesTo : q # link -> item ; // Qualified links between entities.
 
-// Representation-related items
-symbol rid : rid -> ritem ;
-symbol representationOf : lid -> ritem ;
-symbol filenameExtension : string -> ritem ;
-symbol processWith : goal -> ritem ;
+// Links
+symbol id : id -> link ; // Internal references
+symbol uri : uri -> link ; // External references
+
+// Qualifiers (relationship symbols) for links
+symbol sameAs : -> q ; // The entities are ontologically the same.
+symbol similarTo : -> q ; // The entities are conceptually similar.
+symbol linksTo : -> q ; // The relationship is unclear.
+symbol hasPurpose : -> q ; // An entity having a purpose.
+symbol representationOf : -> q ; // A representation of a language.
+symbol subsetOf : -> q ; // A language as a subset of another language.
+symbol supersetOf : -> q ; // A language as a superset of another language.
+symbol embeds : -> q ; // A language embeds another language.
+symbol dependsOn : -> q ; // A language that somehow depends on another language.
 
 // Some synonyms for clarity's sake
-type lid = string ; // Language ids regardless of representation
-type rid = term ; // Representation-aware language ids of Ueber
-type uri = string ; // URIs used for identity links
+type id = term ; // Must be string except for representations
 type goal = term ; // Prolog literals
+type uri = string ; // URIs

@@ -22,4 +22,10 @@
 % UEBER-based processing of all code
 :- init.
 :- process_dir(languages), process_dir(samples).
-:- mode(session) -> true; ueberRun, halt.
+:-
+    (
+       mode(session), !
+     ; mode(dump), !, hinzuDump:main, halt
+     ; mode(pages), !, halt
+     ; ueberRun, halt
+    ).

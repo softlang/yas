@@ -1,11 +1,13 @@
+%
 % Create a graph with
 % languages as nodes and
 % subset relationships as edges
+%
 
 :- module(ueberGraphLanguages, []).
 
 graph(Ds, (Ns, Es)) :-
-  findall(L, member(language(L), Ds), Ls),
+  findall(L, member((language(L), _), Ds), Ls),
   addId(1, Ls, IdLs),
   map(ueberGraphLanguages:node(Ds), IdLs, Ns),
   map(ueberGraphLanguages:edge(IdLs), IdLs, Ess),
@@ -15,7 +17,7 @@ graph(Ds, (Ns, Es)) :-
 node(Ds, (Id, L), (IdAtom, Label, ellipse, Style)) :-
   format(atom(IdAtom), '~w', [Id]),
   format(atom(Label), '~w', [L]),
-  ( member(membership(L, _, _), Ds) ->
+  ( member((membership(L, _, _), _), Ds) ->
         Style = [filled]
       ; Style = [] ).
 

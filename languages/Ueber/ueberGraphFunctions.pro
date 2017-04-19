@@ -1,3 +1,4 @@
+%
 % Create a graph with
 % functions and languages as nodes and
 % domain and range relationships as edges
@@ -46,7 +47,7 @@ blacklisted(normalize5).
 functions(Ds, Fs) :-
   findall(
 	  (F,D,R,P),
-	  ( member(function(F,D,R,P,_), Ds),
+	  ( member((function(F,D,R,P,_), _), Ds),
 	    \+ blacklisted(F) ),
 	  Fs).
 
@@ -54,7 +55,7 @@ functions(Ds, Fs) :-
 languages(Ds, Fs, Ls) :-
   findall(
 	  L,
-	  ( member(language(L), Ds),
+	  ( member((language(L), _), Ds),
 	    once( (
               member((_, Dl, Rl, _), Fs),
 	      ( member(L, Dl); member(L, Rl) ) ) ) ),

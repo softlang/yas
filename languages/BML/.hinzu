@@ -1,10 +1,11 @@
 [
   l([
-      lid(bml),      
-      acronym('BML'),
+      id(bml),      
+      name('BML'),
       expansion('Basic Machine Language'),
-      explanation('A trivial stack- and address-based machine language; memory access and jumps use ints rather than symbolic names.'),
-      variationOf(bal),
-      purpose('Compilation')
+      description('A trivial stack- and address-based machine language; memory access and jumps use ints rather than symbolic names.'),
+      relatesTo(hasPurpose, id(compilation)),
+      relatesTo(hasPurpose, id(toy)),
+      relatesTo(similarTo, id(bal))
   ])
 ].

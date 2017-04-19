@@ -1,0 +1,1 @@
+Haskell-based implementation of an OCL subset including evaluation, translation to first-order logic, and partial evaluation by Ralf Lämmel, Friedrich Steimann, and Bastian Ulke is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.

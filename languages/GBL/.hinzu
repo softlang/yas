@@ -1,13 +1,13 @@
 [
   l([
-      lid(gbl),
-      acronym('GBL'),
+      id(gbl),
+      name('GBL'),
       expansion('Graph-based Buddy Language'),
-      explanation('A trivial ontology-oriented language for representing collections of persons and their buddy relationships with a graph-based abstract syntax.'),
-      variationOf(tbl)
+      description('A trivial ontology-oriented language for representing collections of persons and their buddy relationships with a graph-based abstract syntax.'),
+      relatesTo(sameAs, id(tbl))
   ]),
   r([
-      rid(gbl(graph(term))),
-      representationOf(gbl)
+      id(gbl(graph(term))),
+      relatesTo(representationOf, id(gbl))
   ])
 ].

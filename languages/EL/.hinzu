@@ -1,14 +1,14 @@
 [
   l([
-      lid(el),
-      acronym('EL'),
+      id(el),
+      name('EL'),
       expansion('Expression Language'),
-      explanation('A trivial expression language with expression forms on integer and Boolean values with arithmetic, relational, and comparison operators.'),
-      variationOf(btl)
+      description('A trivial expression language with expression forms on integer and Boolean values with arithmetic, relational, and comparison operators.'),
+      relatesTo(similarTo, id(btl))
   ]),
   r([
-      rid(el(text)),
-      representationOf(el),
-      filenameExtension(el)
+      id(el(text)),
+      extension(el),
+      relatesTo(representationOf, id(el))
   ])
 ].

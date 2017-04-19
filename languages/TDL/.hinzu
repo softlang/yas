@@ -1,13 +1,13 @@
 [
   l([
-      lid(tdl),
-      acronym('TDL'),
+      id(tdl),
+      name('TDL'),
       expansion('Term Difference Language'),
-      explanation('A representation format for term differences.'),
-      purpose('Model differencing')
+      description('A representation format for term differences.'),
+      relatesTo(hasPurpose, id(modeldiff))
   ]),
   r([
-      rid(tdl(term)),
-      representationOf(tdl)
+      id(tdl(term)),
+      relatesTo(representationOf, id(tdl))
   ])
 ].

@@ -1,14 +1,14 @@
 [
   l([
-      lid(ddl),
-      acronym('DDL'),
+      id(ddl),
+      name('DDL'),
       expansion('Data Definition Language'),
-      explanation('A SQL DDL-like data definition language for relational schemas.'),
-      purpose('Data definition')
+      description('A SQL DDL-like data definition language for relational schemas.'),
+      relatesTo(hasPurpose, id(datadef))
   ]),
   r([
-      rid(ddl(text)),
-      representationOf(ddl),
-      filenameExtension(ddl)
+      id(ddl(text)),
+      extension(ddl),
+      relatesTo(representationOf, id(ddl))
   ])
 ].

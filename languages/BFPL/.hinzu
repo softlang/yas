@@ -1,17 +1,17 @@
 [
   l([
-      lid(bfpl),
-      acronym('BFPL'),
+      id(bfpl),
+      name('BFPL'),
       expansion('Basic Functional Programming Language'),
-  explanation('A trivial first-order functional programming language with support for primitive types for integer and Boolean values, but without support for algebraic datatypes.'),
-      embeds(el),
-      subsetOf(efpl),
-      purpose('Functional programming'),
-      relatesTo('https://en.wikipedia.org/wiki/Haskell_(programming_language)')
+      description('A trivial first-order functional programming language with support for primitive types for integer and Boolean values, but without support for algebraic datatypes. BFPL can be viewed as a small fragment of Haskell (but with an attached eager semantics).'),
+      relatesTo(linksTo, uri('https://en.wikipedia.org/wiki/Haskell_(programming_language)')),
+      relatesTo(hasPurpose, id(fp)),
+      relatesTo(embeds, id(el)),
+      relatesTo(subsetOf, id(efpl))
   ]),
   r([
-      rid(bfpl(text)),
-      representationOf(bfpl),
-      filenameExtension(bfpl)
+      id(bfpl(text)),
+      extension(bfpl),
+      relatesTo(representationOf, id(bfpl))
   ])
 ].

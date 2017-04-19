@@ -1,14 +1,15 @@
 [
   l([
-      lid(lal),
-      acronym('LAL'),
+      id(lal),
+      name('LAL'),
       expansion('Linguistic Architecture Language'),
-      explanation('A predicate logic-based megamodeling language used for capturing properties of language processors and deriving test cases.')
+      description('A predicate logic-based megamodeling language used for capturing properties of language processors and deriving test cases.'),
+      relatesTo(hasPurpose, id(megamodeling))
   ]),
   r([
-      rid(lal(text)),
-      representationOf(lal),
-      filenameExtension(lal),
-      filenameExtension(lal2)
+      id(lal(text)),
+      extension(lal),
+      extension(lal2),
+      relatesTo(representationOf, id(lal))
   ])
 ].

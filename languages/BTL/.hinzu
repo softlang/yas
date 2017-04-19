@@ -1,15 +1,15 @@
 [
   l([
-      lid(btl),
-      acronym('BTL'),
+      id(btl),
+      name('BTL'),
       expansion('Basic TAPL Language'),
-      explanation('A trivial expression language with expression forms on Boolean values and natural numbers inspired by a similar language in Pierce\'s TAPL textbook.'),
-      variationOf(el),
-      purpose('Illustration')
+      description('A trivial expression language with expression forms on Boolean values and natural numbers inspired by a similar language in Pierce\'s TAPL textbook.'),
+      relatesTo(hasPurpose, id(toy)),
+      relatesTo(similarTo, id(el))
   ]),
   r([
-      rid(btl(text)),
-      representationOf(btl),
-      filenameExtension(btl)
+      id(btl(text)),
+      extension(btl),
+      relatesTo(representationOf, id(btl))
   ])
 ].

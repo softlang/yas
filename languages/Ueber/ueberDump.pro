@@ -1,7 +1,7 @@
 :- module(ueberDump, []).
 
-main(Ds) :-
+main(Dump) :-
   findall(
-    D,
-    udeclaration(D),
-    Ds).
+    (Decl, Dir),
+    udeclaration(Decl, Dir),
+    Dump).

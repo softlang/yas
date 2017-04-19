@@ -1,10 +1,10 @@
 [
   l([
-      lid(tll),
-      acronym('TLL'),
+      id(tll),
+      name('TLL'),
       expansion('Typed Lambda Language'),
-      explanation('An applied, typed lambda calculus.'),
-      embeds(btl),
-      variationOf(ull)
+      description('An applied, typed lambda calculus.'),
+      relatesTo(embeds, id(btl)),
+      relatesTo(similarTo, id(ull))
   ])
 ].

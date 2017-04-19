@@ -11,7 +11,6 @@ test:
 view:
 	cd languages/ueber; make
 
-# 
 elide:
 	cd tools; make elide
 
@@ -47,30 +46,14 @@ ffi:
 verbose-ffi:
 	@swipl -q -f main.pro -- ffi verbose
 
-# Broken, old tests; still some porting needed
-test-old:
-	make prelude.test
-	make term.test
-	make cfg.test
-	make dict.test
-	make graph.test
-	make mm.test
-	make mt.test
-	make plt.test
-	make dgl.test
-	make java.test
-
-%.test:
-	@echo Testing package $* ...
-	@swipl -q -f packages/$*.pro -g $*_main
+dump:
+	@swipl -q -f main.pro -- dump
 
 pages:
+	@swipl -q -f main.pro -- pages
+
+publish:
 	git add docs/languages/*.md
 	git add docs/files/*.md
 	git commit -a -m "GitHub pages update"
 	git push
-
-remove-nonsle16dirs:
-	for dir in ${nonsle16dirs} ; do \
-		rm -rf $$dir ; \
-	done

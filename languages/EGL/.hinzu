@@ -1,18 +1,18 @@
 [
   l([
-      lid(egl),
-      acronym('EGL'),
+      id(egl),
+      name('EGL'),
       expansion('Extended Grammar Language'),
-      explanation('A simple extension of the BNF-like grammar notation BGL to support EBNF-like constructs for optional and repeating phrases.'),
-      supersetOf(bgl),
-      purpose('Concrete textual syntax definition'),
-      purpose('Concrete syntax definition'),
-      purpose('Language definition'),
-      similarTo('https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form')
+      description('A simple extension of the BNF-like grammar notation BGL to support EBNF-like constructs for optional and repeating phrases.'),
+      relatesTo(similarTo, uri('https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form')),
+      relatesTo(supersetOf, id(bgl)),
+      relatesTo(hasPurpose, id(textsyn)),
+      relatesTo(hasPurpose, id(concsyn)),
+      relatesTo(hasPurpose, id(langdef))
   ]),
   r([
-      rid(egl(text)),
-      representationOf(egl),
-      filenameExtension(egl)
+      id(egl(text)),
+      extension(egl),
+      relatesTo(representationOf, id(egl))
   ])
 ].

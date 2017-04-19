@@ -1,15 +1,15 @@
 [
   l([
-      lid(eipl),
-      acronym('EIPL'),
+      id(eipl),
+      name('EIPL'),
       expansion('Extended Imperative Programming Language'),
-      explanation('A small extension of the trivial imperative programming language BIPL to provide unparameterized procedures in nested scopes.'),
-      supersetOf(bipl),
-      purpose('Imperative programming')
+      description('A small extension of the trivial imperative programming language BIPL to provide unparameterized procedures in nested scopes.'),
+      relatesTo(hasPurpose, id(ip)),
+      relatesTo(supersetOf, id(bipl))
   ]),
   r([
-      rid(eipl(text)),
-      representationOf(eipl),
-      filenameExtension(eipl)
+      id(eipl(text)),
+      extension(eipl),
+      relatesTo(representationOf, id(eipl))
   ])
 ].

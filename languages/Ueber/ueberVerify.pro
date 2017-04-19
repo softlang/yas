@@ -8,7 +8,8 @@ verify(_, normalization(_, _, _)).
 
 % END ...
 verify(Ds, elementOf(F, L)) :-
-  ueberIO:readFile(F, L, Content1),
+  member(notElementOf(F, L), Ds)  
+; ueberIO:readFile(F, L, Content1),
   ueberNorm:normalize(Ds, F, L, Content1, Content2),
   \+ (
     languageTowardsBase(L, B),

@@ -1,16 +1,17 @@
 [
   l([
-      lid(mml),
-      acronym('MML'),
+      id(mml),
+      name('MML'),
       expansion('MetaModeling Language'),
-      explanation('A basic metamodeling language for graph-based abstract syntax.'),
-      purpose('Metamodeling'),
-      purpose('Abstract syntax definition'),
-      purpose('Graph-based abstract syntax definition')
+      description('A basic metamodeling language for graph-based abstract syntax.'),
+      relatesTo(hasPurpose, id(metamodeling)),
+      relatesTo(hasPurpose, id(abssyn)),
+      relatesTo(hasPurpose, id(graphrepr)),
+      relatesTo(hasPurpose, id(langdef))
   ]),
   r([
-      rid(mml(text)),
-      representationOf(mml),
-      filenameExtension(mml)
+      id(mml(text)),
+      extension(mml),
+      relatesTo(representationOf, id(mml))
   ])
 ].

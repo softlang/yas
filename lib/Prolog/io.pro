@@ -40,7 +40,7 @@ readJSONFile(File, Json) :-
   ),
   require(
     fileWithJSONExpected(File),
-    json_read(Input, Json)
+    json_read(Input, Json, [])
   ),
   close(Input).
 
@@ -67,7 +67,7 @@ writeTermFile(File, Term) :-
 
 writeJSONFile(File, Json) :-
   open(File, write, Output, []),
-  json_write(Output, Json),
+  json_write(Output, Json, [width(1)]),
   close(Output).
 
 dcgAcceptor(G, X) :- apply(G, [X, []]).

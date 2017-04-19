@@ -1,12 +1,12 @@
 [
   l([
-      lid(text),
+      id(text),
       name('Text'),
-      explanation('Text as a basic representation format used by the YAS repository.')
+      description('Text as a basic representation format used by the YAS repository.')
   ]),
   r([
-      rid(text),
-      representationOf(text),
-      filenameExtension(txt)
+      id(text),
+      extension(txt),
+      relatesTo(representationOf, id(text))
   ])
 ].

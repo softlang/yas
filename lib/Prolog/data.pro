@@ -1,3 +1,6 @@
+fst((X, _), X).
+snd((_, Y), Y).
+
 % Construct a singleton set
 singleton(X, [X]).
 

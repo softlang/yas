@@ -1,14 +1,14 @@
 [
   l([
-      lid(mmdl),
-      acronym('MMDL'),
+      id(mmdl),
+      name('MMDL'),
       expansion('MetaModel Difference Language'),
-      explanation('A representation format for metamodel-based term differences.'),
-      purpose('Model differencing')
+      description('A representation format for metamodel-based term differences.'),
+      relatesTo(hasPurpose, id(modeldiff))
   ]),
   r([
-      rid(mmdl(term)),
-      representationOf(mmdl)
+      id(mmdl(term)),
+      relatesTo(representationOf, id(mmdl))
   ])
 ].
 

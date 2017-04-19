@@ -1,15 +1,15 @@
 [
   l([
-      lid(egtl),
-      acronym('EGTL'),
+      id(egtl),
+      name('EGTL'),
       expansion('Extended Grammar Transformation Language'),
-      explanation('A trivial transformation language for grammars.'),
-      dependsOn(egl),
-      purpose('Grammar transformation')
+      description('A trivial transformation language for grammars.'),
+      relatesTo(hasPurpose, id(grammartrafo)),
+      relatesTo(dependsOn, id(egl))
   ]),
   r([
-      rid(egtl(text)),
-      representationOf(egtl),
-      filenameExtension(egtl)
+      id(egtl(text)),
+      extension(egtl),
+      relatesTo(representationOf, id(egtl))
   ])
 ].

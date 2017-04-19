@@ -1,14 +1,14 @@
 [
   l([
-      lid(html),
-      acronym('HTML'),
+      id(html),
+      name('HTML'),
       expansion('HyperText Markup Language'),
-      explanation('A standard markup language for web pages and web applications.'),
-      sameAs('https://en.wikipedia.org/wiki/HTML')
+      description('A standard markup language for web pages and web applications.'),
+      relatesTo(sameAs, id('https://en.wikipedia.org/wiki/HTML'))
   ]),
   r([
-      rid(html(text)),
-      representationOf(html),
-      filenameExtension(html)
+      id(html(text)),
+      extension(html),
+      relatesTo(representationOf, id(html))
   ])
 ].

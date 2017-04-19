@@ -1,3 +1,3 @@
-:- dynamic udeclaration/1.
-:- dynamic hdeclaration/1.
+:- dynamic udeclaration/2.
+:- dynamic hdeclaration/2.
 :- nb_setval(tmp, 1).

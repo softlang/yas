@@ -1,17 +1,17 @@
 [
   l([
-      lid(esl),
-      acronym('ESL'),
+      id(esl),
+      name('ESL'),
       expansion('Extended Signature Language'),
-      explanation('A simple extension of the basic signature language BSL for tree-based abstract syntax definition to support type synonyms, products, lists, maybies, and primitive types.'),
-      purpose('Tree-based abstract syntax definition'),
-      purpose('Abstract syntax definition'),
-      purpose('Language definition'),
-      supersetOf(bsl)
+      description('A simple extension of the basic signature language BSL for tree-based abstract syntax definition to support type synonyms, products, lists, maybies, and primitive types.'),
+      relatesTo(supersetOf, id(bsl)),
+      relatesTo(hasPurpose, id(abssyn)),
+      relatesTo(hasPurpose, id(treerepr)),
+      relatesTo(hasPurpose, id(langdef))
   ]),
   r([
-      rid(esl(text)),
-      representationOf(esl),
-      filenameExtension(esl)
+      id(esl(text)),
+      extension(esl),
+      relatesTo(representationOf, id(esl))
   ])
 ].

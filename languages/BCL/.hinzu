@@ -1,13 +1,13 @@
 [
   l([
-      lid(bcl),
-      acronym('BCL'),
+      id(bcl),
+      name('BCL'),
       expansion('BGL CST Language'),
-      explanation('A representation format for concrete syntax trees (CSTs) for BNF-like grammar notation as of BGL (Basic Grammar Language).'),
-      purpose('Parse-tree representation')
+      description('A representation format for concrete syntax trees (CSTs) for BNF-like grammar notation as of BGL (Basic Grammar Language).'),
+      relatesTo(hasPurpose, id(parsetree))
   ]),
   r([
-      rid(bcl(term)),
-      representationOf(bcl)
+      id(bcl(term)),
+      relatesTo(representationOf, id(bcl))
   ])
 ].

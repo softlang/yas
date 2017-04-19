@@ -1,14 +1,17 @@
 [
   l([
-      lid(xml),
-      acronym('XML'),
+      id(xml),
+      name('XML'),
       expansion('Extensible Markup Language'),
-      explanation('A markup-based interchange format.'),
-      sameAs('https://en.wikipedia.org/wiki/XML')
+      description('A markup-based interchange format.'),
+      relatesTo(sameAs, uri('https://en.wikipedia.org/wiki/XML')),
+      relatesTo(sameAs, uri('https://www.w3.org/XML/')),
+      relatesTo(hasPurpose, id(dataexchange)),
+      relatesTo(hasPurpose, id(serialization))
   ]),
   r([
-      rid(xml),
-      representationOf(xml),
-      filenameExtension(xml)
+      id(xml),
+      extension(xml),
+      relatesTo(representationOf, id(xml))
   ])
 ].

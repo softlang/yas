@@ -1,13 +1,13 @@
 [
   l([
-      lid(mmtl),
-      acronym('MMTL'),
+      id(mmtl),
+      name('MMTL'),
       expansion('MetaModel Transformation Language'),
-      explanation('A trivial transformation language for metamodels.'),
-      dependsOn(mml)
+      description('A trivial transformation language for metamodels.'),
+      relatesTo(dependsOn, id(mml))
   ]),
   r([
-      rid(mmtl(term)),
-      representationOf(mmtl)
+      id(mmtl(term)),
+      relatesTo(representationOf, id(mmtl))
   ])  
 ].

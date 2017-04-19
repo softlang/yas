@@ -1,13 +1,13 @@
 [
   l([
-      lid(fnl),
-      acronym('FNL'),
+      id(fnl),
+      name('FNL'),
       expansion('Family by Name Language'),
-      explanation('A trivial data model for representing families as collections of persons with various attributes; persons are identified by name as opposed to reference.'),
-      variationOf(frl)
+      description('A trivial data model for representing families as collections of persons with various attributes; persons are identified by name as opposed to reference.'),
+      relatesTo(sameAs, id(frl))
   ]),
   r([
-      rid(fnl(graph(term))),
-      representationOf(fnl)
+      id(fnl(graph(term))),
+      relatesTo(representationOf, id(fnl))
   ])
 ].
