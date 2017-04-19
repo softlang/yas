@@ -2,7 +2,7 @@
 
 This is a Haskell-based implementation of an OCL subset including evaluation, translation to first-order logic, and partial evaluation.
 
-% Usage
+# Usage
 
 This code has been tested with these components:
 - ghc 8.0.1
