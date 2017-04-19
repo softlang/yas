@@ -1,10 +1,11 @@
 {-# LANGUAGE TypeSynonymInstances, FlexibleInstances #-}
+-- (The domains of) operations on which OCL is evaluated
 module Language.BOL.Operations where
 import Prelude hiding (and, or)
 import Language.BOL.Syntax (Class)
 import Language.BOL.Evaluator (OId)
 
--- Variable = identity + bounded type
+-- Variables (identity + bounded type)
 type Var = (Int, BoundedType)
 data BoundedType
  = BoundedIntType [Int] -- e.g., [0, 1, 2, 3, 5, 6]
@@ -13,10 +14,11 @@ data BoundedType
  | BoundedPowerType [OId] -- powerset over given identities as domain
  deriving (Eq)
 
+-- Facilitate more concise output representation of variables
 instance {-# OVERLAPPING #-} Show Var where
  show = show . fst
 
--- BFL formulae
+-- Formulae
 data Form
  = Bool Bool
  | Conj Form Form
@@ -26,7 +28,7 @@ data Form
  | ElOf OId Var
  deriving (Show, Eq)
 
--- BFL terms
+-- Terms
 data Term
  = Int Int
  | OId OId
@@ -56,7 +58,7 @@ lt :: Term -> Term -> Form
 lt (Int i1) (Int i2) = Bool (i1 < i2)
 lt t1 t2 = Lt t1 t2
 
--- List-typed versions on conj and disj
+-- List-typed versions of conj and disj
 and, or :: [Form] -> Form
 and = foldr conj true
 or = foldr disj false
