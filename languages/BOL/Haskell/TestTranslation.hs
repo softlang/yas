@@ -12,16 +12,16 @@ repoA, repoB :: [OId]
 repoA = ["a1", "a2"]
 repoB = ["b1", "b2", "b3"]
 
-v1 = (1, BoundedPowerType repoA)
-v2 = (2, BoundedPowerType repoB)
+v1 = (1, BoundedSetType repoA)
+v2 = (2, BoundedSetType repoB)
 
 ei :: EnvI
 ei = insert "A" v1
    $ insert "B" v2
    $ empty
 
-v3 = (3, BoundedListType "B")
-v4 = (4, BoundedListType "B")
+v3 = (3, BoundedSetType repoB)
+v4 = (4, BoundedSetType repoB)
 
 ints = [0, 1, 2, 3, 5]
 

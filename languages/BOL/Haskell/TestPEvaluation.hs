@@ -18,8 +18,8 @@ repoB = ["b1", "b2", "b3"]
 
 -- All instances are known.
 
-v1 = (1, BoundedPowerType [])
-v2 = (2, BoundedPowerType [])
+v1 = (1, BoundedSetType [])
+v2 = (2, BoundedSetType [])
 
 ei :: EnvI
 ei = insert "A" (repoA, v1)

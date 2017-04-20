@@ -15,7 +15,7 @@ type EnvP = Map OId (Map BOL.Prop ICL.Var) -- Map properties of instances to var
 
 -- The repo as encoded in the range of EnvI
 repo :: ICL.Var -> [OId]
-repo v = let (ICL.BoundedPowerType os) = snd v in os
+repo v = let (ICL.BoundedSetType os) = snd v in os
 
 -- Consider all objects from repo.
 -- Construct formula for conjunction.
@@ -31,9 +31,8 @@ transForm :: BOL.Form -> Env -> ICL.Form
 -- Construct formula for disjunction.
 -- Guard each element by membership test on list-typed variable.
 transForm (BOL.Exists e x f) env@(ei, ep, ev)
- | ICL.Var v@(_, ICL.BoundedListType c) <- transExpr e env
- = let os = repo (ei!c) in
-     ICL.or [ ICL.and [ICL.ElOf o v, transForm f (env' o)] | o <- os ] 
+ | ICL.Var v@(_, ICL.BoundedSetType os) <- transExpr e env
+ = ICL.or [ ICL.and [ICL.ElOf o v, transForm f (env' o)] | o <- os ] 
  where
   env' o = (ei, ep, (fst ev, insert x o (snd ev)))
 -- "<": construct formula for comparison

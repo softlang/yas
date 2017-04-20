@@ -9,9 +9,7 @@ import Language.BOL.Evaluator (OId)
 type Var = (Int, BoundedType)
 data BoundedType
  = BoundedIntType [Int] -- e.g., [0, 1, 2, 3, 5, 6]
- | BoundedRefType Class [OId] -- all conceivable identities
- | BoundedListType Class -- number of unique elements bounded by class' repo
- | BoundedPowerType [OId] -- powerset over given identities as domain
+ | BoundedSetType [OId] -- domain is powerset of the given identities
  deriving (Eq)
 
 -- Facilitate more concise output representation of variables

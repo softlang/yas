@@ -16,7 +16,7 @@ type ValVar = Either Val ICL.Var -- Union of values and variables
 
 -- The repo as encoded in the range of EnvI
 repo :: ([OId], ICL.Var) -> [OId]
-repo (os, v) = os ++ let (ICL.BoundedPowerType os') = snd v in os'
+repo (os, v) = os ++ let (ICL.BoundedSetType os') = snd v in os'
 
 -- Partial projection of ValVars to Language.BOL.Operations' terms
 valVarToTerm :: ValVar -> ICL.Term
@@ -44,9 +44,8 @@ pevalForm (BOL.Exists e x f) env@(ei, ep, ev) =
    (Left (ListVal os)) ->
      ICL.or [ pevalForm f (env' o) | o <- os ]
    -- Quantification over a (bounded) variable as in the case of translation
-   (Right v@(_, ICL.BoundedListType c)) ->
-     let os = repo (ei!c) in
-       ICL.or [ ICL.and [ICL.ElOf o v, pevalForm f (env' o)] | o <- os ]
+   (Right v@(_, ICL.BoundedSetType os)) ->
+     ICL.or [ ICL.and [ICL.ElOf o v, pevalForm f (env' o)] | o <- os ]
  where
   env' o = (ei, ep, (fst ev, insert x o (snd ev)))
 -- "<": translation adopted modulo projection and injection
