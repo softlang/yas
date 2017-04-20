@@ -2,7 +2,7 @@ module TestPEvaluation where
 import TestTranslation (v3, v4, ints, v5, v6, v7)
 import Language.BOL.Evaluator (Val(..))
 import Language.BOL.PEvaluator
-import Language.BOL.Operations
+import Language.BOL.ICL
 import Language.BOL.Sample
 import Data.Map
 import Test.HUnit (Test(TestLabel), (~=?))

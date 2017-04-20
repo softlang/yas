@@ -1,6 +1,6 @@
 {-# LANGUAGE TypeSynonymInstances, FlexibleInstances #-}
--- (The domains of) operations on which OCL is evaluated
-module Language.BOL.Operations where
+-- ICL (Intermediate Constraint Language) needed for symbolic evaluation
+module Language.BOL.ICL where
 import Prelude hiding (and, or)
 import Language.BOL.Syntax (Class)
 import Language.BOL.Evaluator (OId)

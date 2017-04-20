@@ -1,6 +1,6 @@
 module TestTranslation where
 import Language.BOL.Translator
-import Language.BOL.Operations
+import Language.BOL.ICL
 import Language.BOL.Sample
 import Data.Map
 import Test.HUnit (Test(TestLabel), (~=?))
