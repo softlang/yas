@@ -31,8 +31,8 @@ transForm :: BOL.Form -> Env -> ICL.Form
 -- Construct formula for disjunction.
 -- Guard each element by membership test on list-typed variable.
 transForm (BOL.Exists e x f) env@(ei, ep, ev)
- | ICL.Var v@(_, ICL.BoundedSetType os) <- transExpr e env
- = ICL.or [ ICL.and [ICL.ElOf o v, transForm f (env' o)] | o <- os ] 
+ | ICL.Var v <- transExpr e env
+ = ICL.or [ ICL.and [ICL.ElOf o v, transForm f (env' o)] | o <- repo v ] 
  where
   env' o = (ei, ep, (fst ev, insert x o (snd ev)))
 -- "<": construct formula for comparison
