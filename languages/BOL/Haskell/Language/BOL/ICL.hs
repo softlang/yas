@@ -3,12 +3,13 @@
 module Language.BOL.ICL where
 import Prelude hiding (and, or)
 import Language.BOL.Syntax (Class)
-import Language.BOL.Evaluator (OId)
+import Language.BOL.Evaluator (OId, Val(..))
 
 -- Variables (identity + bounded type)
 type Var = (Int, BoundedType)
 data BoundedType
  = BoundedIntType [Int] -- e.g., [0, 1, 2, 3, 5, 6]
+ | BoundedRefType [OId] -- domain is set of the given identities
  | BoundedSetType [OId] -- domain is powerset of the given identities
  deriving (Eq)
 
@@ -23,14 +24,14 @@ data Form
  | Disj Form Form
  | Impl Form Form
  | Lt Term Term
- | ElOf OId Var
+ | ElOf Val Var
+ | EqTo Var Val
  deriving (Show, Eq)
 
 -- Terms
 data Term
- = Int Int
- | OId OId
- | Var Var
+ = ValTerm Val
+ | VarTerm Var
  deriving (Show, Eq)
 
 -- Smart constructors
@@ -53,7 +54,7 @@ impl _ (Bool True) = Bool True
 impl (Bool True) f = f
 impl f1 f2 = Impl f1 f2
 lt :: Term -> Term -> Form
-lt (Int i1) (Int i2) = Bool (i1 < i2)
+lt (ValTerm (IntVal i1)) (ValTerm (IntVal i2)) = Bool (i1 < i2)
 lt t1 t2 = Lt t1 t2
 
 -- List-typed versions of conj and disj

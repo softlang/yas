@@ -1,7 +1,9 @@
 module TestTranslation where
+import TestEvaluation (ev)
 import Language.BOL.Translator
+import Language.BOL.Evaluator (Val(..))
 import Language.BOL.ICL
-import Language.BOL.Sample
+import Language.BOL.Samples.Lt5
 import Data.Map
 import Test.HUnit (Test(TestLabel), (~=?))
 
@@ -30,27 +32,24 @@ v6 = (6, BoundedIntType ints)
 v7 = (7, BoundedIntType ints)
 
 ep :: EnvP
-ep = insert "a1" ((insert "bs" v3) $ empty)
-   $ insert "a2" ((insert "bs" v4) $ empty)
-   $ insert "b1" ((insert "c" v5) $ empty)
-   $ insert "b2" ((insert "c" v6) $ empty)
-   $ insert "b3" ((insert "c" v7) $ empty)
+ep = insert "a1" (insert "bs" v3 empty)
+   $ insert "a2" (insert "bs" v4 empty)
+   $ insert "b1" (insert "c" v5 empty)
+   $ insert "b2" (insert "c" v6 empty)
+   $ insert "b3" (insert "c" v7 empty)
    $ empty
-
-ev :: EnvV
-ev = (Nothing, empty)
 
 expected :: Form
 expected
  = Conj
-    (Impl (ElOf "a1" v1) (Disj
-      (Conj (ElOf "b1" v3) (Lt (Var v5) (Int 5))) (Disj
-      (Conj (ElOf "b2" v3) (Lt (Var v6) (Int 5)))
-      (Conj (ElOf "b3" v3) (Lt (Var v7) (Int 5))))))
-    (Impl (ElOf "a2" v1) (Disj
-      (Conj (ElOf "b1" v4) (Lt (Var v5) (Int 5))) (Disj
-      (Conj (ElOf "b2" v4) (Lt (Var v6) (Int 5)))
-      (Conj (ElOf "b3" v4) (Lt (Var v7) (Int 5))))))
+    (Impl (ElOf (ObjectVal "a1") v1) (Disj
+      (Conj (ElOf (ObjectVal "b1") v3) (Lt (VarTerm v5) (ValTerm (IntVal 5)))) (Disj
+      (Conj (ElOf (ObjectVal "b2") v3) (Lt (VarTerm v6) (ValTerm (IntVal 5))))
+      (Conj (ElOf (ObjectVal "b3") v3) (Lt (VarTerm v7) (ValTerm (IntVal 5)))))))
+    (Impl (ElOf (ObjectVal "a2") v1) (Disj
+      (Conj (ElOf (ObjectVal "b1") v4) (Lt (VarTerm v5) (ValTerm (IntVal 5)))) (Disj
+      (Conj (ElOf (ObjectVal "b2") v4) (Lt (VarTerm v6) (ValTerm (IntVal 5))))
+      (Conj (ElOf (ObjectVal "b3") v4) (Lt (VarTerm v7) (ValTerm (IntVal 5)))))))
 
 tests =
   [

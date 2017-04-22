@@ -1,7 +1,8 @@
-module Language.BOL.Sample where
+module Language.BOL.Samples.Lt5 where
 import Language.BOL.Syntax
 
 -- Two classes with some properties
+-- TODO: implement type checking
 mm :: MM
 mm = [a, b]
  where

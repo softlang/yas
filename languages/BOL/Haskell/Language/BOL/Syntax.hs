@@ -11,7 +11,9 @@ data Type = IntType | RefType Class | ListType Type
 type Inv = (Class, Form) -- Context times formula
 
 data Form
- = Exists Expr Var Form
+ = Conj Form Form
+ | Disj Form Form
+ | Exists Expr Var Form
  | Lt Expr Expr
 
 data Expr

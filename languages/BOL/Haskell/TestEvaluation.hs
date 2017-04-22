@@ -1,6 +1,6 @@
 module TestEvaluation where
 import Language.BOL.Syntax
-import Language.BOL.Sample
+import Language.BOL.Samples.Lt5
 import Language.BOL.Evaluator
 import Data.Map
 import Test.HUnit (Test(TestLabel), (~=?))
