@@ -37,6 +37,11 @@ transForm (BOL.Exists e x phi) env@(ei, ep, ev)
  = ICL.or [ ICL.and [ICL.ElOf (ObjectVal o) v, transForm phi (env' o)] | o <- repo v ] 
  where
   env' o = (ei, ep, (fst ev, insert x o (snd ev)))
+transForm (BOL.ForAll e x phi) env@(ei, ep, ev)
+ | ICL.VarTerm v <- transExpr e env
+ = ICL.and [ ICL.impl (ICL.ElOf (ObjectVal o) v) (transForm phi (env' o)) | o <- repo v ] 
+ where
+  env' o = (ei, ep, (fst ev, insert x o (snd ev)))
 -- "<": construct formula for comparison
 transForm (BOL.Lt e1 e2) env = ICL.lt (transExpr e1 env) (transExpr e2 env)
 

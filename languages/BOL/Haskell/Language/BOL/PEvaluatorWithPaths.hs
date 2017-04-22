@@ -40,6 +40,14 @@ pevalForm (BOL.Exists e x phi) env@(ei, ep, ev) = liftUnaryPredicate f (pevalExp
    (ICL.VarTerm v@(_, ICL.BoundedSetType os)) ->
      ICL.or [ ICL.and [ICL.ElOf (ObjectVal o) v, pevalForm phi (env' o)] | o <- os ]
   env' o = (ei, ep, (fst ev, insert x o (snd ev)))
+pevalForm (BOL.ForAll e x phi) env@(ei, ep, ev) = liftUnaryPredicate f (pevalExpr e env)
+ where
+  f t = case t of
+   (ICL.ValTerm (ListVal os)) ->
+     ICL.and [ pevalForm phi (env' o) | o <- os ]
+   (ICL.VarTerm v@(_, ICL.BoundedSetType os)) ->
+     ICL.and [ ICL.impl (ICL.ElOf (ObjectVal o) v) (pevalForm phi (env' o)) | o <- os ]
+  env' o = (ei, ep, (fst ev, insert x o (snd ev)))
 pevalForm (BOL.Lt e1 e2) env
  = liftBinaryPredicate ICL.lt (pevalExpr e1 env) (pevalExpr e2 env)
 

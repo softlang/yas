@@ -25,6 +25,11 @@ evalForm (Exists e x phi) env@(ei, ep, ev)
  = or [ evalForm phi (ei, ep, env' o) | o <- os ]
  where
   env' o = (fst ev, insert x o (snd ev))
+evalForm (ForAll e x phi) env@(ei, ep, ev)
+ | ListVal os <- evalExpr e env
+ = and [ evalForm phi (ei, ep, env' o) | o <- os ]
+ where
+  env' o = (fst ev, insert x o (snd ev))
 evalForm (Lt e1 e2) env
  | IntVal i1 <- evalExpr e1 env
  , IntVal i2 <- evalExpr e2 env

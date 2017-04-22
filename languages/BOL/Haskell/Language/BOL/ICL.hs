@@ -1,7 +1,8 @@
 {-# LANGUAGE TypeSynonymInstances, FlexibleInstances #-}
 -- ICL (Intermediate Constraint Language) needed for symbolic evaluation
 module Language.BOL.ICL where
-import Prelude hiding (and, or)
+import Prelude hiding (and, or, not)
+import qualified Prelude (not)
 import Language.BOL.Syntax (Class)
 import Language.BOL.Evaluator (OId, Val(..))
 
@@ -20,6 +21,7 @@ instance {-# OVERLAPPING #-} Show Var where
 -- Formulae
 data Form
  = Bool Bool
+ | Not Form
  | Conj Form Form
  | Disj Form Form
  | Impl Form Form
@@ -38,21 +40,25 @@ data Term
 true, false :: Form
 true = Bool True
 false = Bool False
+not :: Form -> Form
+not (Bool b) = Bool (Prelude.not b)
+not phi = Not phi
 conj, disj, impl :: Form -> Form -> Form
 disj (Bool True) _ = Bool True
-disj (Bool False) f = f
+disj (Bool False) phi = phi
 disj _ (Bool True) = Bool True
-disj f (Bool False) = f
-disj f1 f2 = Disj f1 f2
+disj phi (Bool False) = phi
+disj phi1 phi2 = Disj phi1 phi2
 conj (Bool False) _ = Bool False
-conj (Bool True) f = f
+conj (Bool True) phi = phi
 conj _ (Bool False) = Bool False
-conj f (Bool True) = f
-conj f1 f2 = Conj f1 f2
+conj phi (Bool True) = phi
+conj phi1 phi2 = Conj phi1 phi2
 impl (Bool False) _ = Bool True
 impl _ (Bool True) = Bool True
-impl (Bool True) f = f
-impl f1 f2 = Impl f1 f2
+impl (Bool True) phi = phi
+impl phi (Bool False) = not phi
+impl phi1 phi2 = Impl phi1 phi2
 lt :: Term -> Term -> Form
 lt (ValTerm (IntVal i1)) (ValTerm (IntVal i2)) = Bool (i1 < i2)
 lt t1 t2 = Lt t1 t2

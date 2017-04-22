@@ -29,6 +29,6 @@ ev = (Nothing, empty)
 
 tests =
   [
-    TestLabel "invTrue" $ True ~=? evalInv inv env1,
-    TestLabel "invFalse" $ False ~=? evalInv inv env2
+    TestLabel "invTrue" $ True ~=? evalInv invI env1,
+    TestLabel "invFalse" $ False ~=? evalInv invI env2
   ]

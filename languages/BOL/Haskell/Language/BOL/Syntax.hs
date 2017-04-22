@@ -14,6 +14,7 @@ data Form
  = Conj Form Form
  | Disj Form Form
  | Exists Expr Var Form
+ | ForAll Expr Var Form
  | Lt Expr Expr
 
 data Expr

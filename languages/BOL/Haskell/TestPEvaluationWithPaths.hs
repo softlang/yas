@@ -1,6 +1,6 @@
 module TestPEvaluationWithPaths where
 import TestEvaluation (ev)
-import TestPEvaluation (expected1, expected2, env1, env2)
+import TestPEvaluation (expected1, expected2, expected3, expected4, env1, env2)
 import Language.BOL.ICL
 import Language.BOL.Evaluator (Val(..))
 import Language.BOL.PEvaluator (Env, EnvI, EnvP)
@@ -28,7 +28,7 @@ ei = insert "A" (repoA, v1)
 -- Repo variables: all instances are known
 v1 = (1, BoundedSetType [])
 v2 = (2, BoundedSetType [])
-v3 = (2, BoundedSetType [])
+v3 = (3, BoundedSetType [])
 
 -- All properties are unknown
 ep :: EnvP
@@ -61,8 +61,8 @@ v13 = (13, BoundedIntType ints)
     and ((v5 = "b2" and v11 = "c1") => v4 < v12)
     and ((v5 = "b2" and v11 = "c2") => v4 < v13)
 -}
-expected3 :: Form
-expected3
+expected5 :: Form
+expected5
  = Conj
      (Conj
        (Impl (EqTo v5 (ObjectVal "b1"))
@@ -81,7 +81,9 @@ expected3
 
 tests =
   [
-    TestLabel "PEcUnknownWithPaths" $ expected1 ~=? pevalInv S1.inv env1,
-    TestLabel "PEbsUnknownWithPaths" $ expected2 ~=? pevalInv S1.inv env2,
-    TestLabel "PathExpr" $ expected3 ~=? pevalInv S2.inv env3
+    TestLabel "PEcUnknownWithPaths" $ expected1 ~=? pevalInv S1.invI env1,
+    TestLabel "PEbsUnknownWithPaths" $ expected2 ~=? pevalInv S1.invI env2,
+    TestLabel "invJwithPaths" $ expected3 ~=? pevalInv S1.invJ env2,
+    TestLabel "invKwithPaths" $ expected4 ~=? pevalInv S1.invK env2,
+    TestLabel "PathExpr" $ expected5 ~=? pevalInv S2.inv env3
   ]

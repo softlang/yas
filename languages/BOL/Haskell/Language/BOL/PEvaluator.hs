@@ -43,6 +43,14 @@ pevalForm (BOL.Exists e x phi) env@(ei, ep, ev) =
      ICL.or [ ICL.and [ICL.ElOf (ObjectVal o) v, pevalForm phi (env' o)] | o <- os ]
  where
   env' o = (ei, ep, (fst ev, insert x o (snd ev)))
+pevalForm (BOL.ForAll e x phi) env@(ei, ep, ev) =
+ case pevalExpr e env of
+   (ICL.ValTerm (ListVal os)) ->
+     ICL.and [ pevalForm phi (env' o) | o <- os ]
+   (ICL.VarTerm v@(_, ICL.BoundedSetType os)) ->
+     ICL.and [ ICL.impl (ICL.ElOf (ObjectVal o) v) (pevalForm phi (env' o)) | o <- os ]
+ where
+  env' o = (ei, ep, (fst ev, insert x o (snd ev)))
 -- "<": translation adopted modulo projection and injection
 pevalForm (BOL.Lt e1 e2) env
  = ICL.lt (pevalExpr e1 env) (pevalExpr e2 env)

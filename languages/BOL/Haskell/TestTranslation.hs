@@ -53,5 +53,5 @@ expected
 
 tests =
   [
-    TestLabel "transInv" $ expected ~=? transInv inv env
+    TestLabel "transInv" $ expected ~=? transInv invI env
   ]

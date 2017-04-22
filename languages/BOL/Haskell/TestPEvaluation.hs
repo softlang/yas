@@ -45,12 +45,34 @@ ep2 = insert "a1" (insert "bs" (VarTerm v3) empty)
     $ insert "b3" (insert "c" (ValTerm (IntVal 3)) empty)
     $ empty
 
-expected1, expected2 :: Form
-expected1 = Conj (Disj (Lt (VarTerm v5) (ValTerm (IntVal 5))) (Lt (VarTerm v6) (ValTerm (IntVal 5)))) (Lt (VarTerm v7) (ValTerm (IntVal 5)))
-expected2 = Conj (Disj (ElOf (ObjectVal "b1") v3) (ElOf (ObjectVal "b3") v3)) (Disj (ElOf (ObjectVal "b1") v4) (ElOf (ObjectVal "b3") v4))
+expected1, expected2, expected3, expected4 :: Form
+
+expected1
+ = Conj
+     (Disj
+       (Lt (VarTerm v5) (ValTerm (IntVal 5)))
+       (Lt (VarTerm v6) (ValTerm (IntVal 5))))
+     (Lt (VarTerm v7) (ValTerm (IntVal 5)))
+
+expected2
+ = Conj
+     (Disj (ElOf (ObjectVal "b1") v3) (ElOf (ObjectVal "b3") v3))
+     (Disj (ElOf (ObjectVal "b1") v4) (ElOf (ObjectVal "b3") v4))
+
+expected3
+ = Conj
+     (Not (ElOf (ObjectVal "b2") v3))
+     (Not (ElOf (ObjectVal "b2") v4))
+
+expected4
+ = Conj
+     (Disj (ElOf (ObjectVal "b2") v3) (ElOf (ObjectVal "b3") v3))
+     (Disj (ElOf (ObjectVal "b2") v4) (ElOf (ObjectVal "b3") v4))
 
 tests =
   [
-    TestLabel "PEcUnknown" $ expected1 ~=? pevalInv inv env1,
-    TestLabel "PEbsUnknown" $ expected2 ~=? pevalInv inv env2
+    TestLabel "PEcUnknown" $ expected1 ~=? pevalInv invI env1,
+    TestLabel "PEbsUnknown" $ expected2 ~=? pevalInv invI env2,
+    TestLabel "InvJ" $ expected3 ~=? pevalInv invJ env2,
+    TestLabel "InvK" $ expected4 ~=? pevalInv invK env2
   ]
