@@ -65,10 +65,10 @@ pevalExpr (BOL.Int i) env = single (ICL.ValTerm (IntVal i))
 pevalExpr (BOL.Var x) (_, _, (_, m)) = single (ICL.ValTerm (ObjectVal (m!x)))
 pevalExpr BOL.Self (_, _, (Just v, _)) = single (ICL.ValTerm (ObjectVal v))
 pevalExpr (BOL.Dot e p) env@(_, ep, _)
- = concat (map (\(phi, t) -> conjoin phi (f t)) (pevalExpr e env))
+ = concat (map (\(phi, t) -> (f phi t)) (pevalExpr e env))
  where
-  f (ICL.ValTerm (ObjectVal o)) = single (ep!o!p)
-  f (ICL.VarTerm v) = map (\(phi, (ICL.ValTerm (ObjectVal o))) -> (phi, ep!o!p)) (unroll v)
+  f phi (ICL.ValTerm (ObjectVal o)) = [(phi, (ep!o!p))]
+  f phi (ICL.VarTerm v) = map (\(phi', (ICL.ValTerm (ObjectVal o))) -> (ICL.conj phi phi', ep!o!p)) (unroll v)
 
 -- Unroll a variable into cases for its domains
 unroll :: ICL.Var -> Terms
@@ -79,7 +79,3 @@ unroll v
     -- TODO: a case for collections
  where
   f l = (ICL.EqTo v l, ICL.ValTerm l)
-
--- Conjoin given cases with a given constraint
-conjoin :: ICL.Form -> Terms -> Terms
-conjoin phi = map (\(phi', t) -> (ICL.conj phi phi', t))
