@@ -2,12 +2,12 @@
   l([
       id(markdown),
       name('Markdown'),
-      description('A markup-based documentation language.'),
-      relatesTo(sameAs, uri('https://en.wikipedia.org/wiki/Markdown'))
+      headline('A markup-based documentation language'),
+      sameAs(extern('Language:Markdown'))
   ]),
   r([
       id(markdown(text)),
       extension(md),
-      relatesTo(representationOf, id(markdown))
+      representationOf(markdown)
   ])
 ].

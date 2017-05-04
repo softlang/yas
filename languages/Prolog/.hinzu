@@ -2,13 +2,13 @@
   l([
       id(prolog),
       name('Prolog'),
-      description('A general-purpose logic programming language associated with artificial intelligence and computational linguistics.'),
-      relatesTo(sameAs, uri('https://en.wikipedia.org/wiki/Prolog'))
+      headline('A logic programming language'),
+      sameAs(extern('Language:Prolog'))
   ]),
   r([
       id(prolog(text)),
       extension(pro),
       processor(load),
-      relatesTo(representationOf, id(prolog))
+      representationOf(prolog)
   ])
 ].

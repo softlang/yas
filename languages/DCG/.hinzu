@@ -3,13 +3,13 @@
       id(dcg),
       name('DCG'),
       expansion('Definite Clause Grammar'),
-      description('A grammatical notation based on logic programming.'), 
-      relatesTo(sameAs, uri('https://en.wikipedia.org/wiki/Definite_clause_grammar'))
+      headline('A grammar notation based on logic programming'), 
+      sameAs(extern('Language:DCG'))
   ]),
   r([
       id(dcg(prolog(text))),
       extension(dcg),
       processor(load),
-      relatesTo(representationOf, id(dcg))
+      representationOf(dcg)
   ])
 ].

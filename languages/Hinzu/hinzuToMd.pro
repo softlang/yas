@@ -1,9 +1,117 @@
 :- module(hinzuToMd, []).
 
 main :-
-    index,
-    languages,
-    files.
+    readJSONFile('dump.json', json(X)),
+    member(languages=Langs, X),
+    member(externals=Exts, X),
+    member(files=Files, X),
+    languageIndex(Langs),
+    maplist(hinzuToMd:languagePage, Langs),
+    externalIndex(Exts),
+    maplist(hinzuToMd:filePage, Files).
+
+%    languages,
+%    files.
+
+languageIndex(Langs) :-
+    with_output_to(
+	    codes(Md),
+	    format('---~nlayout: yas~ntitle: YAS languages~n---~n# Index of languages in YAS~n~@', [maplist(hinzuToMd:languageItem, Langs)])),
+    writeTextFile('../www/jekyll/yas/languages.md', Md).
+
+languageItem(json(X)) :-
+    member(name=Name, X),
+    member(uri=Uri, X),
+    format('* [~w](~w)~n', [Name, Uri]).
+
+externalIndex(Exts) :-
+    with_output_to(
+	    codes(Md),
+	    format('---~nlayout: yas~ntitle: YAS externals~n---~n# Index of external references in YAS~n~@', [maplist(hinzuToMd:externalItem, Exts)])),
+    writeTextFile('../www/jekyll/yas/externals.md', Md).
+
+externalItem(json(X)) :-
+    member(reluri=Rel, X),
+    member(absuri=Abs, X),
+    format('* [~w](~w)~n', [Rel, Abs]).
+
+languagePage(json(X)) :-
+    member(id=Lang, X),
+    member(name=Name, X),    
+    member(github=GitHub, X),    
+    member(expansion=Expansion, X),
+    member(headline=Headline, X),
+    member(details=Details, X),
+    member(properties=Props, X),
+    member(components=Comps, X),
+    atomic_list_concat(['../www/jekyll/yas/languages/', Lang, '.md'], File),    
+    with_output_to(
+	    codes(Md),
+	    format('---~nlayout: yas~ntitle: Language:~w~n---~n# Language *~w*~n~@~@~@~@~@~@', [
+		       Name,
+		       Name,
+		       hinzuToMd:uriSection('GitHub', GitHub),
+		       hinzuToMd:paragraphSection('Expansion', Expansion),
+		       hinzuToMd:paragraphSection('Headline', Headline),
+		       hinzuToMd:paragraphSection('Details', Details),
+		       hinzuToMd:itemizedSection('Properties', hinzuToMd:propertyItem, Props),
+		       hinzuToMd:itemizedSection('Components', hinzuToMd:componentItem, Comps)
+		   ])),
+    writeTextFile(File, Md).
+
+% Represent property as item
+propertyItem(json(X)) :-
+    member(property=json(Prop), X),
+    member(name=PropName, Prop),
+    member(uri=PropUri, Prop),
+    member(object=json(Obj), X),
+    member(name=ObjName, Obj),
+    member(uri=ObjUri, Obj),
+    format('* **this** *[~w](~w)* [~w](~w)~n', [PropName, PropUri, ObjName, ObjUri]).
+
+% Represent component as item
+componentItem(json(X)) :-
+    member(subject=json(Subj), X),
+    member(property=json(Prop), X),
+    member(object=json(Obj), X),
+    member(name=SubjName, Subj),
+    member(uri=SubjUri, Subj),    
+    member(name=instanceOf, Prop),
+    member(name=ObjName, Obj),
+    member(uri=ObjUri, Obj),    
+    format('* [~w](~w) (*[~w](~w)*)~n', [SubjName, SubjUri, ObjName, ObjUri]).
+    
+% Simple section where content is just a link
+uriSection(Caption, Content) :- 
+    Content = '@'(null) -> true;
+    format('## ~w~n<~w>~n~n---~n', [Caption, Content]).
+
+% Simple section where content is just paragraph
+paragraphSection(Caption, Content) :- 
+    Content = '@'(null) -> true;
+    format('## ~w~n~w~n~n---~n', [Caption, Content]).
+
+% Section with itemized content subject to a per-item goal
+itemizedSection(Caption, Goal, Content) :-
+    format('## ~w~n~@~n~n---~n', [Caption, maplist(Goal, Content)]).
+
+filePage(json(X)) :-
+    member(id=Escaped, X),
+    member(name=Name, X),
+    member(github=GitHub, X),
+    member(properties=Props, X),
+    atomic_list_concat(['../www/jekyll/yas/files/', Escaped, '.md'], File),    
+    with_output_to(
+	    codes(Md),
+	    format('---~nlayout: yas~ntitle: File:~w~n---~n# File *~w*~n~@~@', [
+		       Name,
+		       Name,
+		       hinzuToMd:uriSection('GitHub', GitHub),
+		       hinzuToMd:itemizedSection('Properties', hinzuToMd:propertyItem, Props)
+		   ])),
+    writeTextFile(File, Md).
+
+/*
 
 % --------------------------------------------------
 
@@ -238,3 +346,5 @@ basename(FN1, FN2) :-
     name(FN2, L2).
 
 slashToHyphen(C1, C2) :- C1 == 0'/ -> C2 = 0'-; C2 = C1.
+
+*/

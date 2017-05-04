@@ -3,11 +3,12 @@
       id(fnl),
       name('FNL'),
       expansion('Family by Name Language'),
-      description('A trivial data model for representing families as collections of persons with various attributes; persons are identified by name as opposed to reference.'),
-      relatesTo(sameAs, id(frl))
+      headline('A trivial data model for representing families as collections of persons'),
+      details('Persons are identified by name as opposed to reference.'),
+      sameAs(intern(frl))
   ]),
   r([
       id(fnl(graph(term))),
-      relatesTo(representationOf, id(fnl))
+      representationOf(fnl)
   ])
 ].

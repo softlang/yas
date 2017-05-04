@@ -3,12 +3,12 @@
       id(bstl),
       name('BSTL'),
       expansion('Basic Signature Transformation Language'),
-      description('A trivial transformation language for coupled transformations on BSL signatures and conformant terms.'),
-      relatesTo(dependsOn, id(bsl)),
-      relatesTo(dependsOn, id(term))
+      headline('A transformation language for coupled transformations on signatures and conformant terms'),
+      dependsOn(intern(bsl)),
+      dependsOn(intern(term))
   ]),
   r([
       id(bstl(term)),
-      relatesTo(representationOf, id(bstl))
+      representationOf(bstl)
   ])
 ].

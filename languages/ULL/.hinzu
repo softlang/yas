@@ -3,8 +3,10 @@
       id(ull),
       name('ULL'),
       expansion('Untyped Lambda Language'),
-      description('An applied, untyped lambda calculus.'),
-      relatesTo(embeds, id(btl)),
-      relatesTo(similarTo, id(tll))
+      headline('An applied, untyped lambda calculus'),
+      relatesTo(extern('Language:Lambda calculus')),
+      embeds(intern(btl)),
+      similarTo(intern(tll)),
+      facilitates(extern('Functional programming'))
   ])
 ].

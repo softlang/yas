@@ -3,15 +3,19 @@
       id(bsl),
       name('BSL'),
       expansion('Basic Signature Language'),
-      description('A basic specification language for tree-based abstract syntax on the grounds of many-sorted signatures.'),
-      relatesTo(subsetOf, id(esl)),
-      relatesTo(hasPurpose, id(abssyn)),
-      relatesTo(hasPurpose, id(treerepr)),
-      relatesTo(hasPurpose, id(langdef))
+      headline('A language for abstract syntax definition'),
+      details('BSL leverages many-sorted signatures for tree-based abstract syntax.'),
+      subsetOf(intern(esl)),
+      facilitates(extern('Syntax definition')),
+      facilitates(extern('Object-program representation'))
   ]),
   r([
       id(bsl(text)),
       extension(bsl),
-      relatesTo(representationOf, id(bsl))
+      representationOf(bsl),
+      reason(succeed, [
+        instanceOf(extern('Algebraic signature')),
+	defines(extern('Tree-based abstract syntax'))
+      ])
   ])
 ].

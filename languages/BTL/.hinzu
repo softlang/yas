@@ -3,13 +3,13 @@
       id(btl),
       name('BTL'),
       expansion('Basic TAPL Language'),
-      description('A trivial expression language with expression forms on Boolean values and natural numbers inspired by a similar language in Pierce\'s TAPL textbook.'),
-      relatesTo(hasPurpose, id(toy)),
-      relatesTo(similarTo, id(el))
+      headline('A trivial expression language'),
+      details('There are expression forms on Boolean values and natural numbers inspired by a similar language in Pierce\'s TAPL textbook.'),
+      similarTo(intern(el))
   ]),
   r([
       id(btl(text)),
       extension(btl),
-      relatesTo(representationOf, id(btl))
+      representationOf(btl)
   ])
 ].

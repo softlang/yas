@@ -3,11 +3,13 @@
       id(ppl),
       name('PPL'),
       expansion('Pretty Printing Language'),
-      description('A target language for pretty printing which provides different composition operators for textboxes.')
+      headline('A language for pretty printing'),
+      details('PPL provides different operators for pretty printing based on the composition of boxes. For instance, there are operators for horizontal and vertical composition and indentation.'),
+      facilitates(extern('Pretty printing'))
   ]),
   r([
       id(ppl(term)),
       extension(ppl),
-      relatesTo(representationOf, id(ppl))
+      representationOf(ppl)
   ])
 ].

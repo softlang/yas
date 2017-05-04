@@ -23,9 +23,8 @@
 :- init.
 :- process_dir(languages), process_dir(samples).
 :-
-    (
-       mode(session), !
-     ; mode(dump), !, hinzuDump:main, halt
-     ; mode(pages), !, halt
-     ; ueberRun, halt
+    ( mode(session), !
+    ; mode(dump), !, hinzuDump:main, halt
+    ; mode(md), !, hinzuToMd:main, halt
+    ; ueberRun, halt
     ).

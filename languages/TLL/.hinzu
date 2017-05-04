@@ -3,8 +3,10 @@
       id(tll),
       name('TLL'),
       expansion('Typed Lambda Language'),
-      description('An applied, typed lambda calculus.'),
-      relatesTo(embeds, id(btl)),
-      relatesTo(similarTo, id(ull))
+      headline('An applied, typed lambda calculus'),
+      relatesTo(extern('Language:Lambda calculus')),
+      embeds(intern(btl)),
+      similarTo(intern(ull)),
+      facilitates(extern('Functional programming'))
   ])
 ].

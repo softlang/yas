@@ -3,13 +3,15 @@
       id(lal),
       name('LAL'),
       expansion('Linguistic Architecture Language'),
-      description('A predicate logic-based megamodeling language used for capturing properties of language processors and deriving test cases.'),
-      relatesTo(hasPurpose, id(megamodeling))
+      headline('A megamodeling language used in the YAS repository'),
+      details('LAL is a predicate logic-based megamodeling language used for capturing properties of language processors and deriving test cases.'),
+      facilitates(extern('Megamodeling')),
+      facilitates(extern('Testing'))
   ]),
   r([
       id(lal(text)),
       extension(lal),
       extension(lal2),
-      relatesTo(representationOf, id(lal))
+      representationOf(lal)
   ])
 ].

@@ -3,13 +3,15 @@
       id(dgl),
       name('DGL'),
       expansion('Dot-based Graph Language'),
-      description('A trivial specification language for graphs that may be rendered eventually with the Graphviz tool.'),
-      relatesTo(hasPurpose, id(graphrepr)),
-      relatesTo(subsetOf, id(dot))
+      headline('A language for describing graphs to be rendered eventually'),
+      details('DGL graphs are eventually translated to DOT and processed with the GraphViz tool.'),
+      subsetOf(intern(dot)),
+      facilitates(extern('Graph visualization')),
+      relatesTo(extern('Technology:Graphviz'))
   ]),
   r([
       id(dgl(text)),
       extension(dgl),
-      relatesTo(representationOf, id(dgl))
+      representationOf(dgl)
   ])
 ].

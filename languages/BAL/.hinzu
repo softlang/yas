@@ -3,10 +3,10 @@
       id(bal),      
       name('BAL'),
       expansion('Basic Assembly Language'),
-      description('A trivial stack- and address-based assembly language; memory access and jumps use symbolic names rather than ints.'),
-      relatesTo(linksTo, uri('https://en.wikipedia.org/wiki/Java_bytecode')),
-      relatesTo(hasPurpose, id(compilation)),
-      relatesTo(hasPurpose, id(toy)),
-      relatesTo(similarTo, id(bml))
+      headline('A trivial assembly language'),
+      details('BAL is stack- and address-based. Memory access and jumps use symbolic names rather than ints.'),
+      relatesTo(extern('Language:Java bytecode')),
+      facilitates(extern('Compilation')),
+      similarTo(intern(bml))
   ])
 ].

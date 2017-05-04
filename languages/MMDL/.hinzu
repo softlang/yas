@@ -3,12 +3,13 @@
       id(mmdl),
       name('MMDL'),
       expansion('MetaModel Difference Language'),
-      description('A representation format for metamodel-based term differences.'),
-      relatesTo(hasPurpose, id(modeldiff))
+      headline('A representation format for metamodel-based term differences'),
+      facilitates(extern('Model differencing')),
+      relatesTo(extern('Metamodeling'))
   ]),
   r([
       id(mmdl(term)),
-      relatesTo(representationOf, id(mmdl))
+      representationOf(mmdl)
   ])
 ].
 

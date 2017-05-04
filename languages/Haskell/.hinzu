@@ -2,14 +2,13 @@
   l([
       id(haskell), 
       name('Haskell'),
-      description('A standardized, general-purpose purely functional programming language, with non-strict semantics and strong static typing.'),
-      relatesTo(sameAs, uri('https://en.wikipedia.org/wiki/Haskell_(programming_language)')),
-      relatesTo(sameAs, uri('https://www.haskell.org/')),
-      relatesTo(hasPurpose, id(fp))
+      headline('The functional programming language Haskell'),
+      sameAs(extern('Language:Haskell')),
+      facilitates(extern('Functional programming'))
   ]),
   r([
       id(haskell(text)),
       extension(hs),
-      relatesTo(representationOf, id(haskell))
+      representationOf(haskell)
   ])
 ].

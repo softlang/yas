@@ -3,13 +3,13 @@
       id(egtl),
       name('EGTL'),
       expansion('Extended Grammar Transformation Language'),
-      description('A trivial transformation language for grammars.'),
-      relatesTo(hasPurpose, id(grammartrafo)),
-      relatesTo(dependsOn, id(egl))
+      headline('A transformation language for grammars'),
+      facilitates(extern('Grammar transformation')),
+      dependsOn(intern(egl))
   ]),
   r([
       id(egtl(text)),
       extension(egtl),
-      relatesTo(representationOf, id(egtl))
+      representationOf(egtl)
   ])
 ].

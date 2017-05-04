@@ -3,15 +3,15 @@
       id(json),
       name('JSON'),
       expansion('JavaScript Object Notation'),
-      description('A dictionary-based interchange format.'),
-      relatesTo(sameAs, uri('https://en.wikipedia.org/wiki/JSON')),
-      relatesTo(sameAs, uri('http://json.org/')),
-      relatesTo(hasPurpose, id(dataexchange)),
-      relatesTo(hasPurpose, id(serialization))
+      headline('The well-known JSON format for data exchange'),
+      sameAs(extern('Language:JSON')),
+      relatesTo(extern('Language:JavaScript')),
+      facilitates(extern('Data exchange')),
+      facilitates(extern('Serialization'))
   ]),
   r([
       id(json),
       extension(json),
-      relatesTo(representationOf, id(json))
+      representationOf(json)
   ])
 ].

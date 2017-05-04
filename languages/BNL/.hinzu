@@ -3,12 +3,11 @@
       id(bnl),
       name('BNL'),
       expansion('Basic Number Language'),
-      description('A trivial language for the representation of binary numbers.'),
-      relatesTo(hasPurpose, id(toy))
+      headline('A trivial language for the representation of binary numbers')
   ]),
   r([
       id(bnl(text)),
       extension(bnl),
-      relatesTo(representationOf, id(bnl))
+      representationOf(bnl)
   ])
 ].

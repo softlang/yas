@@ -3,12 +3,13 @@
       id(html),
       name('HTML'),
       expansion('HyperText Markup Language'),
-      description('A standard markup language for web pages and web applications.'),
-      relatesTo(sameAs, id('https://en.wikipedia.org/wiki/HTML'))
+      headline('The standard markup language HTML for web pages and applications'),
+      sameAs(extern('Language:HTML')),
+      facilitates(extern('Web publishing'))
   ]),
   r([
       id(html(text)),
       extension(html),
-      relatesTo(representationOf, id(html))
+      representationOf(html)
   ])
 ].

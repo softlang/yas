@@ -3,12 +3,13 @@
       id(tbl),
       name('TBL'),
       expansion('Tree-based Buddy Language'),
-      description('A trivial ontology-oriented language for representing collections of persons and their buddy relationships with a tree-based abstract syntax.'),
-      relatesTo(sameAs, id(gbl))
+      headline('A trivial ontology-oriented language'),
+      details('TBL is concerned with the representation of collections of persons and their buddy relationships. A textual concrete and a tree-based abstract syntax are leveraged.'),
+      sameAs(intern(gbl))
   ]),
   r([
       id(tbl(text)),
       extension(tbl),
-      relatesTo(representationOf, id(tbl))
+      representationOf(tbl)
   ])
 ].

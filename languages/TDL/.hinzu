@@ -3,11 +3,11 @@
       id(tdl),
       name('TDL'),
       expansion('Term Difference Language'),
-      description('A representation format for term differences.'),
-      relatesTo(hasPurpose, id(modeldiff))
+      headline('A representation format for term differences'),
+      facilitates(extern('Model differencing'))
   ]),
   r([
       id(tdl(term)),
-      relatesTo(representationOf, id(tdl))
+      representationOf(tdl)
   ])
 ].

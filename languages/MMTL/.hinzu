@@ -3,11 +3,12 @@
       id(mmtl),
       name('MMTL'),
       expansion('MetaModel Transformation Language'),
-      description('A trivial transformation language for metamodels.'),
-      relatesTo(dependsOn, id(mml))
+      headline('A trivial transformation language for metamodels'),
+      facilitates(extern('Model transformation')),
+      dependsOn(intern(mml))
   ]),
   r([
       id(mmtl(term)),
-      relatesTo(representationOf, id(mmtl))
+      representationOf(mmtl)
   ])  
 ].

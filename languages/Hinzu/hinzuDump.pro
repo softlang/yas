@@ -13,42 +13,73 @@ main(Ds) :-
 
 % The complete dump
 main :-
+    hinzuReasoning:main,
     languages(Langs),
-    representations(Reprs),
-    purposes(Purps),
-    qualifiers(Quals),
-    directories(Dirs),
+    externals(Exts),
+%    representations(Reprs),
+%    purposes(Purps),
+%    qualifiers(Quals),
+%    directories(Dirs),
     files(Files),
     writeJSONFile('dump.json', json([
 					   languages=Langs,
-					   representations=Reprs,
-					   purposes=Purps,
-					   qualifiers=Quals,
-					   directories=Dirs,
-					   files=Files])).
+					   externals=Exts,
+					   files=Files
+				       ])).
+%					   representations=Reprs,
+%					   purposes=Purps,
+%					   qualifiers=Quals,
+%					   directories=Dirs,
+%					   files=Files])).
 
 % The dump for languages
 languages(Langs) :-
+    master(Master),
     findall(json([
 			id=Lang,
+			uri=Uri,
 			github=Github,
 			name=Name,
-			expansion=Expa,
-			description=Desc,
-			link=Links,
-			representation=Reprs]),
+			expansion=Expansion,
+			headline=Headline,
+			details=Details,
+			properties=Props,
+			representation=Reprs,
+			components=Comps
+		    ]),
 	    (
-		hdeclaration(l(Items), _),
+		hdeclaration(l(Items), Dir),
 		member(id(Lang), Items),
 		member(name(Name), Items),
-		master(Master),
+		atomic_list_concat(['/yas/languages/', Lang, '.html'], Uri),
 		atomic_list_concat([Master, '/languages/', Name], Github),
-		once((member(expansion(Expa), Items); Expa='@'(null))),
-		member(description(Desc), Items),
-		linksFrom(l, Items, Links),
-		representations(Items, Reprs)
+		once((member(expansion(Expansion), Items); Expansion='@'(null))),
+		member(headline(Headline), Items),
+		once((member(details(Details), Items); Details='@'(null))),
+		properties(hinzuDump:languageObject, Items, Props),
+		representations(Items, Reprs),
+		components(Lang, Dir, Comps)
 	    ),
 	    Langs).
+
+% The dump for externals
+externals(Exts2) :-
+    wiki(Wiki),
+    psymbols(PSyms),
+    setof(Rel,
+	    Items^Dir^F^T^(
+		hdeclaration(l(Items), Dir),
+		member(F, PSyms),
+		T =.. [F,extern(Rel)],
+		member(T, Items)
+	    ),
+	    Exts1),
+    findall(json([reluri=Rel, absuri=Abs]),
+	    (
+		member(Rel, Exts1),
+		atomic_list_concat([Wiki, Rel], Abs)
+	    ),
+	    Exts2).
 
 % Dump fragment for representations for a given language
 representations(Items, Rs) :-
@@ -57,15 +88,79 @@ representations(Items, Rs) :-
 	    (
 		(
 		  member(U, [text, term, xml, json]),
-		  R =.. [L, U],
-	 	  udeclaration(language(R), _)
+		  R =.. [L, U]
 	        ;
 		  U = term,
 		  X =.. [L, U],
 		  R =.. [ok, X]
-		)
+		),
+                udeclaration(language(R), _)
 	    ),	
 	    Rs).
+
+% Components for a language representation
+components(Lang, Dir, Comps) :-
+    wiki(Wiki),
+    findall(json([
+			subject=json([name='#'(File), uri='#'(FileUri)]),
+			property=json([name=instanceOf, uri=PropUri]),
+			object=json([name=ObjName, uri='#'(ObjUri)])
+		]),
+	    (
+		hdeclaration(f(Items), Dir),
+		member(id(File), Items),
+		filenameToUri(File, FileUri),
+		member(instanceOf(extern(ObjName)), Items),
+		atomic_list_concat([Wiki, ObjName], ObjUri),
+		atomic_list_concat([Wiki, 'Property:instanceOf'], PropUri)
+	    ),
+	    Comps).
+
+files(Files) :-
+    master(Master),
+    findall(json([
+			id='#'(Escaped),
+			name='#'(File),
+			github='#'(Github),
+			properties=Props
+		    ]),
+	    (
+		hdeclaration(f(Items), Dir),
+		member(id(File), Items),
+                escapeFilename(File, Escaped),
+		atomic_list_concat([Master, '/', File], Github),
+		properties(fail, Items, Props)
+	    ),
+	    Files).
+
+% The properties for an entity
+properties(Resolver, Items, Props) :-
+    wiki(Wiki),
+    psymbols(PSyms),
+    findall(json([property=json([name=PropName, uri=PropUri]), object=json([name=ObjName, uri=ObjUri])]),
+	    (
+		member(PropName, PSyms),
+		T =.. [PropName, Link],
+		member(T, Items),
+		( Link = extern(ObjName),
+  		  atomic_list_concat([Wiki, ObjName], ObjUri)
+		; Link = intern(ObjId),
+		  apply(Resolver, [ObjId, ObjName, ObjUri])
+		),
+		atomic_list_concat([Wiki, 'Property:', PropName], PropUri)
+	    ),
+	    Props).
+
+% Interpret an internal link (an ID) as a language id and resolve it to name and URI
+languageObject(ObjId, ObjName, ObjUri) :-
+    hdeclaration(l(ObjItems), _),
+    member(id(ObjId), ObjItems),
+    member(name(LangName), ObjItems),
+    atomic_list_concat(['Language:', LangName], ObjName),
+    atomic_list_concat(['/yas/languages/', ObjId, '.html'], ObjUri).
+
+
+/*
 
 % The dump for representations
 representations(Reprs) :-
@@ -341,16 +436,36 @@ subsetOf(Sub, Super) :-
     member(id(Super), Items),
     member(supersetOf(L), Items),
     (Sub = L; subsetOf(Sub, L)).
+*/
 
 % --------------------------------------------------
 
-% Conversion utilities
+% Utilities
 
 % The master URI into the GitHub repo
 master('https://github.com/softlang/yas/tree/master').
 
+% The baseuri for the 101wiki
+wiki('https://101wiki.softlang.org/').
+
+% All property symbols
+psymbols([instanceOf, sameAs, similarTo, relatesTo, facilitates, defines, subsetOf, supersetOf, embeds, dependsOn, linksTo]).
+
 % Tell Prolog to convert term to string
 show(X, '#'(X)).
+
+% Convert file name to URI
+filenameToUri(File, Uri) :-
+    escapeFilename(File, Escaped),
+    atomic_list_concat(['/yas/files/', Escaped, '.html'], Uri).
+
+% Escape file name
+escapeFilename(File, Escaped) :-
+    name(File, L1),
+    maplist(hinzuDump:slashToHyphen, L1, L2),
+    name(Escaped, L2).
+    
+slashToHyphen(C1, C2) :- C1 == 0'/ -> C2 = 0'-; C2 = C1.
 
 % To relate singular and plural -- not yet used
 plural(language, languages).

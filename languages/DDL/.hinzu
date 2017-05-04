@@ -3,12 +3,13 @@
       id(ddl),
       name('DDL'),
       expansion('Data Definition Language'),
-      description('A SQL DDL-like data definition language for relational schemas.'),
-      relatesTo(hasPurpose, id(datadef))
+      headline('A SQL DDL-like data definition language'),
+      facilitates(extern('Data definition')),
+      relatesTo(extern('Language:SQL'))
   ]),
   r([
       id(ddl(text)),
       extension(ddl),
-      relatesTo(representationOf, id(ddl))
+      representationOf(ddl)
   ])
 ].

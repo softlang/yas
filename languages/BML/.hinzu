@@ -3,9 +3,10 @@
       id(bml),      
       name('BML'),
       expansion('Basic Machine Language'),
-      description('A trivial stack- and address-based machine language; memory access and jumps use ints rather than symbolic names.'),
-      relatesTo(hasPurpose, id(compilation)),
-      relatesTo(hasPurpose, id(toy)),
-      relatesTo(similarTo, id(bal))
+      headline('A trivial machine language'),
+      details('BML is stack- and address-based. Memory access and jumps use ints rather than symbolic names.'),
+      relatesTo(extern('Language:Java bytecode')),
+      facilitates(extern('Compilation')),
+      similarTo(intern(bal))
   ])
 ].

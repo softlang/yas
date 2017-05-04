@@ -49,11 +49,12 @@ verbose-ffi:
 dump:
 	@swipl -q -f main.pro -- dump
 
-pages:
-	@swipl -q -f main.pro -- pages
+md:
+	@swipl -q -f main.pro -- md
 
 publish:
-	git add docs/languages/*.md
-	git add docs/files/*.md
-	git commit -a -m "GitHub pages update"
-	git push
+#	git add docs/languages/*.md
+#	git add docs/files/*.md
+#	git commit -a -m "GitHub pages update"
+#	git push
+#

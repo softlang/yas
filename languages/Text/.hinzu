@@ -2,11 +2,11 @@
   l([
       id(text),
       name('Text'),
-      description('Text as a basic representation format used by the YAS repository.')
+      headline('Text as a basic representation format used by the YAS repository')
   ]),
   r([
       id(text),
       extension(txt),
-      relatesTo(representationOf, id(text))
+      representationOf(text)
   ])
 ].

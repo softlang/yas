@@ -2,14 +2,12 @@
   l([
       id(java),
       name('Java'),
-      description('A general-purpose programming language that is concurrent, class-based, object-oriented, and (as of version 8) functional.'),
-      relatesTo(sameAs, uri('https://en.wikipedia.org/wiki/Java_(programming_language)')),
-      relatesTo(similarTo, uri('https://java.com')),
-      relatesTo(hasPurpose, id(oop))
+      headline('The well-known OO programming language Java'),
+      facilitates(extern('Object-oriented programming'))
   ]),
   r([
       id(java(text)),
       extension(java),
-      relatesTo(representationOf, id(java))
+      representationOf(java)
   ])
 ].

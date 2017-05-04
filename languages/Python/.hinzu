@@ -2,13 +2,13 @@
   l([
       id(python),
       name('Python'),
-      description('An interpreter-based multi-paradigm general purpose programming language with a dynamic type system'),
-      relatesTo(sameAs, uri('https://en.wikipedia.org/wiki/Python_(programming_language)')),
-      relatesTo(hasPurpose, id(scripting))
+      headline('A multi-paradigm programming language'),
+      sameAs(extern('Language:Python')),
+      facilitates(extern('Scripting'))
   ]),
   r([
       id(python(text)),
       extension(py),
-      relatesTo(representationOf, id(python))
+      representationOf(python)
   ])
 ].

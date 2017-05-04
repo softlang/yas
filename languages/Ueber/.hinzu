@@ -2,14 +2,20 @@
   l([
       id(ueber),
       name('Ueber'),
-      description('A megamodeling language used for build management and regression testing in the YAS repository.'),
-      relatesTo(hasPurpose, id(mega)),
-      relatesTo(hasPurpose, id(build)),
-      relatesTo(hasPurpose, id(regress))
+      headline('A megamodeling language used in the YAS repository'),
+      details('Ueber is used for build management and regression testing in the YAS repository.'),
+      facilitates(extern('Megamodeling')),
+      facilitates(extern('Build management')),
+      facilitates(extern('Regression testing'))
   ]),
   r([
       id(ueber(term)),
       extension(ueber),
-      relatesTo(representationOf, id(ueber))
+      representationOf(ueber),
+      reason(succeed, [
+        instanceOf(extern('Megamodel')),
+	supports(extern('Build management')),
+        supports(extern('Regression testing'))
+      ])
   ])
 ].

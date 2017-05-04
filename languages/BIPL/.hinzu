@@ -3,15 +3,16 @@
       id(bipl),
       name('BIPL'),
       expansion('Basic Imperative Programming Language'),
-      description('A trivial imperative programming language with support for primitive types for integer and Boolean values, but without support for input, output, and procedures. BIPL may be viewed as small fragment of C.'),
-      relatesTo(linksTo, uri('https://en.wikipedia.org/wiki/C_(programming_language)')),
-      relatesTo(hasPurpose, id(ip)),
-      relatesTo(embeds, id(el)),
-      relatesTo(subsetOf, id(eipl))
+      headline('A trivial imperative programming language'),
+      details('BIPL supports primitive types for integer and Boolean values; it does not support input, output, and procedures. BIPL may be viewed as small fragment of C.'),
+      relatesTo(extern('Language:C')),
+      facilitates(extern('Imperative programming')),
+      embeds(intern(el)),
+      subsetOf(intern(eipl))
   ]),
   r([
       id(bipl(text)),
       extension(bipl),
-      relatesTo(representationOf, id(bipl))
+      representationOf(bipl)
   ])
 ].

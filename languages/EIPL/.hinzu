@@ -3,13 +3,16 @@
       id(eipl),
       name('EIPL'),
       expansion('Extended Imperative Programming Language'),
-      description('A small extension of the trivial imperative programming language BIPL to provide unparameterized procedures in nested scopes.'),
-      relatesTo(hasPurpose, id(ip)),
-      relatesTo(supersetOf, id(bipl))
+      headline('A trivial imperative programming language'),
+      details('EIPL is a small extension of BIPL to support unparameterized procedures in nested scopes.'),
+      relatesTo(extern('Language:C')),
+      facilitates(extern('Imperative programming')),
+      embeds(intern(el)),
+      supersetOf(intern(bipl))
   ]),
   r([
       id(eipl(text)),
       extension(eipl),
-      relatesTo(representationOf, id(eipl))
+      representationOf(eipl)
   ])
 ].

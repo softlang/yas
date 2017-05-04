@@ -3,15 +3,14 @@
       id(xml),
       name('XML'),
       expansion('Extensible Markup Language'),
-      description('A markup-based interchange format.'),
-      relatesTo(sameAs, uri('https://en.wikipedia.org/wiki/XML')),
-      relatesTo(sameAs, uri('https://www.w3.org/XML/')),
-      relatesTo(hasPurpose, id(dataexchange)),
-      relatesTo(hasPurpose, id(serialization))
+      headline('The well-known markup-based interchange format XML'),
+      sameAs(extern('Language:XML')),
+      facilitates(extern('Data exchange')),
+      facilitates(extern('Serialization'))
   ]),
   r([
       id(xml),
       extension(xml),
-      relatesTo(representationOf, id(xml))
+      representationOf(xml)
   ])
 ].

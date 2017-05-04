@@ -3,14 +3,16 @@
       id(efpl),
       name('EFPL'),
       expansion('Extended Functional Programming Language'),
-      description('A small extension of the trivial functional programming language BFPL to provide higher-order functions, polymorphism, and type inference.'),
-      relatesTo(supersetOf, id(bfpl)),
-      relatesTo(hasPurpose, id(fp))
+      headline('A trivial first-order functional programming language'),
+      details('EFPL is an extension of BFPL to support higher-order functions, polymorphism, and type inference.'),
+      relatesTo(extern('Language:Haskell')),
+      facilitates(extern('Functional programming')),
+      embeds(intern(el)),
+      supersetOf(intern(bfpl))
   ]),
   r([
       id(efpl(text)),
       extension(efpl),
-      relatesTo(representationOf, id(efpl))
+      representationOf(efpl)
   ])
 ].
-

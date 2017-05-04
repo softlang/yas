@@ -2,14 +2,15 @@
   l([
       id(dot),
       name('DOT'),
-      description('The input language of the Graphviz tool for describing and rendering all kinds of graphs.'),
-      relatesTo(sameAs, uri('http://www.graphviz.org/content/dot-language')),
-      relatesTo(hasPurpose, id(graphviz))
+      headline('The input language of the Graphviz tool for describing and rendering graphs'),
+      sameAs(extern('Language:DOT')),
+      facilitates(extern('Graph visualization')),
+      relatesTo(extern('Technology:Graphviz'))
   ]),
   r([
       id(dot(text)),
       extension(dot),
-      relatesTo(representationOf, id(dot))
+      representationOf(dot)
   ])
 ].
 

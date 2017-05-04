@@ -3,12 +3,12 @@
       id(fsml),
       name('FSML'),
       expansion('Finite State Machine Language'),
-      description('A simple domain-specific modeling language (DSML) for finite state machines (FSMs).'),
-      relatesTo(hasPurpose, id(behavior))
+      headline('A simple domain-specific language for finite state machines'),
+      facilitates(extern('Behavioral modeling'))
   ]),
   r([
       id(fsml(text)),
       extension(fsml),
-      relatesTo(representationOf, id(fsml))
+      representationOf(fsml)
   ])
 ].

@@ -3,17 +3,20 @@
       id(bgl),
       name('BGL'),
       expansion('Basic Grammar Language'),
-      description('A BNF-like notation for context-free grammars; rules (productions) are labeled.'),
-      relatesTo(similarTo, uri('https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form')),
-      relatesTo(subsetOf, id(egl)),
-      relatesTo(hasPurpose, id(textsyn)),
-      relatesTo(hasPurpose, id(concsyn)),
-      relatesTo(hasPurpose, id(langdef))
-
+      headline('A BNF-like notation for context-free grammars'),
+      details('Rules (productions) are labeled.'),
+      similarTo(extern('Language:BNF')),
+      subsetOf(intern(egl)),
+      facilitates(extern('Syntax definition')),
+      facilitates(extern('Parsing'))
   ]),
   r([
       id(bgl(text)),
       extension(bgl),
-      relatesTo(representationOf, id(bgl))
+      representationOf(bgl),
+      reason(succeed, [
+        instanceOf(extern('Context-free grammar')),
+	defines(extern('Context-free syntax'))
+      ])
   ])
 ].

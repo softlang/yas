@@ -3,12 +3,12 @@
       id(asl),
       name('ASL'),
       expansion('Algebraic Specification Language'),
-      description('A simple language for algebraic specification.'),
-      relatesTo(hasPurpose, id(algspec))
+      headline('A simple language for algebraic specification'),
+      facilitates(extern('Algebraic specification'))
   ]),
   r([
       id(asl(text)),
       extension(asl),
-      relatesTo(representationOf, id(asl))
+      representationOf(asl)
   ])
 ].

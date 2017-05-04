@@ -3,16 +3,24 @@
       id(egl),
       name('EGL'),
       expansion('Extended Grammar Language'),
-      description('A simple extension of the BNF-like grammar notation BGL to support EBNF-like constructs for optional and repeating phrases.'),
-      relatesTo(similarTo, uri('https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form')),
-      relatesTo(supersetOf, id(bgl)),
-      relatesTo(hasPurpose, id(textsyn)),
-      relatesTo(hasPurpose, id(concsyn)),
-      relatesTo(hasPurpose, id(langdef))
+      headline('A EBNF-like notation for context-free grammars'),
+      similarTo(extern('Language:EBNF')),
+      supersetOf(intern(bgl)),
+      facilitates(extern('Syntax definition')),
+      facilitates(extern('Parsing'))
   ]),
   r([
       id(egl(text)),
       extension(egl),
-      relatesTo(representationOf, id(egl))
+      representationOf(egl),
+      reason(succeed, [
+        instanceOf(extern('Context-free grammar'))
+      ]),
+      reason(hinzuReasoning:testLexical, [
+        defines(extern('Lexical syntax'))
+      ]),
+      reason(hinzuReasoning:testContextFree, [
+        defines(extern('Context-free syntax'))
+      ])
   ])
 ].

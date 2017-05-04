@@ -3,12 +3,13 @@
       id(el),
       name('EL'),
       expansion('Expression Language'),
-      description('A trivial expression language with expression forms on integer and Boolean values with arithmetic, relational, and comparison operators.'),
-      relatesTo(similarTo, id(btl))
+      headline('A trivial expression language'),
+      details('There are arithmetic, relational, and comparison operators on integer and Boolean literals.'),
+      similarTo(intern(btl))
   ]),
   r([
       id(el(text)),
       extension(el),
-      relatesTo(representationOf, id(el))
+      representationOf(el)
   ])
 ].

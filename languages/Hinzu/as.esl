@@ -4,34 +4,39 @@ symbol l : item* -> decl ; // Languages
 symbol r : item* -> decl ; // Language representations
 symbol f : item* -> decl ; // Files in the repository
 symbol d : item* -> decl ; // Directories in the repository
-symbol p : item* -> decl ; // Purposes of languages and possibly files
-symbol q : item* -> decl ; // Qualifiers used relationships
 
-// Metadata items
-symbol id : id -> item ; // Every decl needs an id; an atom for all but r/1.
-symbol name : string -> item ; // Name of a language, a file, a purpose.
-symbol expansion : string -> item ; // Expanded name of a language when name is acronym.
-symbol description : string -> item ; // One liner starting in upper case, ending with ".".
-symbol extension : string -> item ; // Filename extension for a representation.
-symbol processor : goal -> item ; // Processor for a representation.
-symbol relatesTo : q # link -> item ; // Qualified links between entities.
+// General metadata items
+symbol id : id -> item ; // Every decl needs an id
+symbol name : string -> item ; // Name of a language
+symbol expansion : string -> item ; // Expanded name of a language when name is acronym
+symbol headline : string -> item ; // One liner explanation of a language
+symbol details : string -> item ; // An optional paragraph for explanation of a language
+
+// Semantic links
+symbol instanceOf : link -> item ; // An entity being an instance of a classifier
+symbol sameAs : link -> item ; // Identity link
+symbol similarTo : link -> item ; // Weak identity link
+symbol relatesTo : link -> item ; // Degenerated identity link
+symbol facilitates : link -> item ; // A language facilitates some concept
+symbol defines : link -> item ; // A file defines some concept
+symbol supports : link -> item ; // An entity supports some entity
+symbol subsetOf : link -> item ; // A language is a subset of another language
+symbol supersetOf : link -> item ; // A language is a subset of another language
+symbol embeds : link -> item ; // A language embeds another language
+symbol dependsOn : link -> item ; // A language depends on another language
+symbol linksTo : link -> item ; // Non-semantical link
+
+// Representation-specific items
+symbol extension : string -> item ; // Identify filename extension for a representation
+symbol processor : goal -> item ; // Identify processor for a representation
+symbol representationOf : id -> item ; // Associate representation with language
+symbol reason : goal # item+ -> item ; // Guarded items for elements of representation 
 
 // Links
-symbol id : id -> link ; // Internal references
-symbol uri : uri -> link ; // External references
-
-// Qualifiers (relationship symbols) for links
-symbol sameAs : -> q ; // The entities are ontologically the same.
-symbol similarTo : -> q ; // The entities are conceptually similar.
-symbol linksTo : -> q ; // The relationship is unclear.
-symbol hasPurpose : -> q ; // An entity having a purpose.
-symbol representationOf : -> q ; // A representation of a language.
-symbol subsetOf : -> q ; // A language as a subset of another language.
-symbol supersetOf : -> q ; // A language as a superset of another language.
-symbol embeds : -> q ; // A language embeds another language.
-symbol dependsOn : -> q ; // A language that somehow depends on another language.
+symbol intern : id -> link ; // Internal references
+symbol extern : reluri -> link ; // External references
 
 // Some synonyms for clarity's sake
 type id = term ; // Must be string except for representations
 type goal = term ; // Prolog literals
-type uri = string ; // URIs
+type reluri = string ; // Relative URIs (relative to 101wiki)

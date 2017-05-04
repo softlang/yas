@@ -3,15 +3,17 @@
       id(mml),
       name('MML'),
       expansion('MetaModeling Language'),
-      description('A basic metamodeling language for graph-based abstract syntax.'),
-      relatesTo(hasPurpose, id(metamodeling)),
-      relatesTo(hasPurpose, id(abssyn)),
-      relatesTo(hasPurpose, id(graphrepr)),
-      relatesTo(hasPurpose, id(langdef))
+      headline('A basic metamodeling language for graph-based abstract syntax'),
+      facilitates(extern('Syntax definition')),
+      facilitates(extern('Metamodeling'))
   ]),
   r([
       id(mml(text)),
       extension(mml),
-      relatesTo(representationOf, id(mml))
+      representationOf(mml),
+      reason(succeed, [
+        instanceOf(extern('Metamodel')),
+	defines(extern('Graph-based abstract syntax'))
+      ])
   ])
 ].

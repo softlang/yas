@@ -3,15 +3,19 @@
       id(esl),
       name('ESL'),
       expansion('Extended Signature Language'),
-      description('A simple extension of the basic signature language BSL for tree-based abstract syntax definition to support type synonyms, products, lists, maybies, and primitive types.'),
-      relatesTo(supersetOf, id(bsl)),
-      relatesTo(hasPurpose, id(abssyn)),
-      relatesTo(hasPurpose, id(treerepr)),
-      relatesTo(hasPurpose, id(langdef))
+      headline('A language for abstract syntax definition'),
+      details('ESL leverages many-sorted signatures extended with tuples, lists, and primitive types for tree-based abstract syntax.'),
+      supersetOf(intern(bsl)),
+      facilitates(extern('Syntax definition')),
+      facilitates(extern('Object-program representation'))
   ]),
   r([
       id(esl(text)),
       extension(esl),
-      relatesTo(representationOf, id(esl))
+      representationOf(esl),
+      reason(succeed, [
+        instanceOf(extern('Algebraic signature')),
+	defines(extern('Tree-based abstract syntax'))
+      ])
   ])
 ].
