@@ -1,0 +1,42 @@
+[
+
+  % Parsing
+  macro(parseFile('empty.bl')),
+  macro(parseFile('singleton.bl')),
+  macro(parseFile('small-world.bl')),
+  macro(parseFile('notOk1.bl')),
+  macro(parseFile('notOk2.bl')),
+
+  % Well-formedness
+  elementOf('empty.term', ok(bl(term))),
+  elementOf('singleton.term', ok(bl(term))),
+  elementOf('small-world.term', ok(bl(term))),
+  notElementOf('notOk1.term', ok(bl(term))),
+  notElementOf('notOk2.term', ok(bl(term))),
+
+  % A world with one buddy for everyone
+  elementOf('empty.term', one(bl(term))),
+  notElementOf('singleton.term', one(bl(term))),
+  elementOf('small-world.term', one(bl(term))),
+
+  % Graph-based representations
+  macro(graphSample(gbl, 'empty')),
+  macro(graphSample(gbl, 'singleton')),
+  macro(graphSample(gbl, 'small-world')),
+  
+  % LOC metric
+  elementOf('empty.loc', term),
+  elementOf('singleton.loc', term),
+  elementOf('small-world.loc', term),
+  mapsTo(loc, ['empty.bl'], ['empty.loc']),
+  mapsTo(loc, ['singleton.bl'], ['singleton.loc']),
+  mapsTo(loc, ['small-world.bl'], ['small-world.loc']),
+
+  % Mapping terms to graphs that are trees
+  elementOf('small-world.tree', tbl(graph(term))),
+  mapsTo(mapping, ['small-world.term'], ['small-world.tree']),
+
+  % Mapping tree to graphs
+  mapsTo(mapping, ['small-world.tree'], ['small-world.graph'])
+	
+].

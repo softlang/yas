@@ -3,37 +3,41 @@
 main :-
     readJSONFile('dump.json', json(X)),
     member(languages=Langs, X),
+    member(representations=Reprs, X),
+    member(functions=Funcs, X),
     member(externals=Exts, X),
+    member(directories=Dirs, X),
     member(files=Files, X),
     languageIndex(Langs),
+    maplist(hinzuToMd:readme, Langs),
     maplist(hinzuToMd:languagePage, Langs),
+    representationIndex(Reprs),
+    maplist(hinzuToMd:representationPage, Reprs),
+    functionIndex(Funcs),
+    maplist(hinzuToMd:functionPage, Funcs),
     externalIndex(Exts),
+    directoryIndex(Dirs),
+    maplist(hinzuToMd:directoryPage, Dirs),
+    fileIndex(Files),
     maplist(hinzuToMd:filePage, Files).
-
-%    languages,
-%    files.
 
 languageIndex(Langs) :-
     with_output_to(
 	    codes(Md),
-	    format('---~nlayout: yas~ntitle: YAS languages~n---~n# Index of languages in YAS~n~@', [maplist(hinzuToMd:languageItem, Langs)])),
+	    format('---~nlayout: yas~ntitle: YAS languages~n---~n# Index of YAS languages~n~n&nbsp; | YAS-specific?~n--- | ---~n~@', [maplist(hinzuToMd:languageItem, Langs)])),
     writeTextFile('../www/jekyll/yas/languages.md', Md).
 
 languageItem(json(X)) :-
     member(name=Name, X),
     member(uri=Uri, X),
-    format('* [~w](~w)~n', [Name, Uri]).
-
-externalIndex(Exts) :-
-    with_output_to(
-	    codes(Md),
-	    format('---~nlayout: yas~ntitle: YAS externals~n---~n# Index of external references in YAS~n~@', [maplist(hinzuToMd:externalItem, Exts)])),
-    writeTextFile('../www/jekyll/yas/externals.md', Md).
-
-externalItem(json(X)) :-
-    member(reluri=Rel, X),
-    member(absuri=Abs, X),
-    format('* [~w](~w)~n', [Rel, Abs]).
+    member(yas=Bool, X),
+    (
+	Bool == '@'(true) ->
+	    Checkmark = '&#10004;'
+     ;
+	    Checkmark = ''
+    ),
+    format('[~w](~w) | ~w~n', [Name, Uri, Checkmark]).
 
 languagePage(json(X)) :-
     member(id=Lang, X),
@@ -43,21 +47,110 @@ languagePage(json(X)) :-
     member(headline=Headline, X),
     member(details=Details, X),
     member(properties=Props, X),
+    member(representations=Reprs, X),
     member(components=Comps, X),
     atomic_list_concat(['../www/jekyll/yas/languages/', Lang, '.md'], File),    
     with_output_to(
 	    codes(Md),
-	    format('---~nlayout: yas~ntitle: Language:~w~n---~n# Language *~w*~n~@~@~@~@~@~@', [
+	    format('---~nlayout: yas~ntitle: YAS language ~w~n---~n# Language *~w*~n~@', [
 		       Name,
 		       Name,
-		       hinzuToMd:uriSection('GitHub', GitHub),
-		       hinzuToMd:paragraphSection('Expansion', Expansion),
-		       hinzuToMd:paragraphSection('Headline', Headline),
-		       hinzuToMd:paragraphSection('Details', Details),
-		       hinzuToMd:itemizedSection('Properties', hinzuToMd:propertyItem, Props),
-		       hinzuToMd:itemizedSection('Components', hinzuToMd:componentItem, Comps)
+		       and([
+				  hinzuToMd:uriSection('GitHub', GitHub),
+				  hinzuToMd:paragraphSection(true, 'Expansion', Expansion),
+				  hinzuToMd:paragraphSection(true, 'Headline', Headline),
+				  hinzuToMd:paragraphSection(true, 'Details', Details),
+				  hinzuToMd:itemizedSection('Properties', hinzuToMd:propertyItem, Props),
+				  hinzuToMd:itemizedSection('Representations', hinzuToMd:representationItem, Reprs),
+				  hinzuToMd:itemizedSection('Components', hinzuToMd:componentItem, Comps)
+			      ])
 		   ])),
     writeTextFile(File, Md).
+
+readme(json(X)) :-
+    member(id=Lang, X),
+    member(name=Name, X),    
+    member(expansion=Expansion, X),
+    member(headline=Headline, X),
+    member(details=Details, X),
+    atomic_list_concat(['languages/', Lang, '/README.md'], File),    
+    with_output_to(
+	    codes(Md),
+	    format('# Language *~w*~n~@', [
+		       Name,
+		       and([
+				  hinzuToMd:paragraphSection(false, 'Expansion', Expansion),
+				  hinzuToMd:paragraphSection(false, 'Headline', Headline),
+				  hinzuToMd:paragraphSection(false, 'Details', Details)
+			      ])
+		   ])),
+    writeTextFile(File, Md).
+
+representationIndex(Reprs) :-
+    with_output_to(
+	    codes(Md),
+	    format('---~nlayout: yas~ntitle: YAS representations~n---~n# Index of YAS language representations~n~@', [maplist(hinzuToMd:representationItem, Reprs)])),
+    writeTextFile('../www/jekyll/yas/representations.md', Md).
+
+representationItem(json(X)) :-
+    member(name=Name, X),
+    member(uri=Uri, X),
+    format('* [~w](~w)~n', [Name, Uri]).
+
+representationPage(json(X)) :-
+    member(id=Escaped, X),
+    member(name=Name, X),    
+    member(language=json(Lang), X),    
+    member(dependencies=Deps, X),
+    member(files=Files, X),
+    atomic_list_concat(['../www/jekyll/yas/representations/', Escaped, '.md'], File),    
+    with_output_to(
+	    codes(Md),
+	    format('---~nlayout: yas~ntitle: YAS representation ~w~n---~n# YAS representation *~w*~n~@', [
+		       Name,
+		       Name,
+		       and([
+				  hinzuToMd:linkSection('Language', Lang),
+				  hinzuToMd:itemizedSection('Dependencies', hinzuToMd:dependencyItem, Deps),
+				  hinzuToMd:itemizedSection('Files', hinzuToMd:fileItem, Files)
+			      ])
+		   ])),
+    writeTextFile(File, Md).
+
+functionIndex(Funcs) :-
+    with_output_to(
+	    codes(Md),
+	    format('---~nlayout: yas~ntitle: YAS functions~n---~n# Index of YAS functions~n~@', [maplist(hinzuToMd:functionItem, Funcs)])),
+    writeTextFile('../www/jekyll/yas/functions.md', Md).
+
+functionItem(json(X)) :-
+    member(id=Name, X),
+    member(uri=Uri, X),
+    format('* [~w](~w)~n', [Name, Uri]).
+
+functionPage(json(X)) :-
+    member(id=Name, X),
+    member(dependencies=Deps, X),
+    atomic_list_concat(['../www/jekyll/yas/functions/', Name, '.md'], File),    
+    with_output_to(
+	    codes(Md),
+	    format('---~nlayout: yas~ntitle: YAS function ~w~n---~n# YAS function *~w*~n~@', [
+		       Name,
+		       Name,
+		       hinzuToMd:itemizedSection('Dependencies', hinzuToMd:dependencyItem, Deps)
+		   ])),
+    writeTextFile(File, Md).
+
+externalIndex(Exts) :-
+    with_output_to(
+	    codes(Md),
+	    format('---~nlayout: yas~ntitle: YAS externals~n---~n# Index of YAS external references~n~@', [maplist(hinzuToMd:externalItem, Exts)])),
+    writeTextFile('../www/jekyll/yas/externals.md', Md).
+
+externalItem(json(X)) :-
+    member(reluri=Rel, X),
+    member(absuri=Abs, X),
+    format('* [~w](~w)~n', [Rel, Abs]).
 
 % Represent property as item
 propertyItem(json(X)) :-
@@ -84,267 +177,126 @@ componentItem(json(X)) :-
 % Simple section where content is just a link
 uriSection(Caption, Content) :- 
     Content = '@'(null) -> true;
-    format('## ~w~n<~w>~n~n---~n', [Caption, Content]).
+    format('## [~w](/yas/captions/~w.html)~n<~w>~n~n---~n', [Caption, Caption, Content]).
+
+% A section with a linked name
+linkSection(Caption, Json) :- 
+    member(name=Name, Json),
+    member(uri=Uri, Json),
+    format('## [~w](/yas/captions/~w.html)~n[~w](~w)~n~n---~n', [Caption, Caption, Name, Uri]).
 
 % Simple section where content is just paragraph
-paragraphSection(Caption, Content) :- 
+paragraphSection(Bool, Caption, Content) :-
     Content = '@'(null) -> true;
-    format('## ~w~n~w~n~n---~n', [Caption, Content]).
+    ( Bool ->
+	  format('## [~w](/yas/captions/~w.html)~n~w~n~n---~n', [Caption, Caption, Content])
+        ; format('## ~w~n~w~n~n---~n', [Caption, Content]) ).
 
 % Section with itemized content subject to a per-item goal
-itemizedSection(Caption, Goal, Content) :-
-    format('## ~w~n~@~n~n---~n', [Caption, maplist(Goal, Content)]).
+itemizedSection(Caption, Goal1, Content) :-
+    ( Content == [] ->
+	  Goal2 = format('*None*~n', []) 
+     ;
+	  Goal2 = maplist(Goal1, Content)
+    ),
+    format('## [~w](/yas/captions/~w.html)~n~@~n~n---~n', [Caption, Caption, Goal2]).
+
+fileIndex(Files) :-
+    with_output_to(
+	    codes(Md),
+	    format('---~nlayout: yas~ntitle: YAS files~n---~n# Index of YAS files~n~@', [maplist(hinzuToMd:fileItem, Files)])),
+    writeTextFile('../www/jekyll/yas/files.md', Md).
+
+fileItem(json(X)) :-
+    member(name=Name, X),
+    member(uri=Uri, X),
+    format('* [~w](~w)~n', [Name, Uri]).
 
 filePage(json(X)) :-
     member(id=Escaped, X),
     member(name=Name, X),
     member(github=GitHub, X),
+    member(representations=Reprs, X),
     member(properties=Props, X),
+    member(dependencies=Deps, X),
     atomic_list_concat(['../www/jekyll/yas/files/', Escaped, '.md'], File),    
     with_output_to(
 	    codes(Md),
-	    format('---~nlayout: yas~ntitle: File:~w~n---~n# File *~w*~n~@~@', [
+	    format('---~nlayout: yas~ntitle: YAS file ~w~n---~n# YAS file *~w*~n~@', [
 		       Name,
 		       Name,
-		       hinzuToMd:uriSection('GitHub', GitHub),
-		       hinzuToMd:itemizedSection('Properties', hinzuToMd:propertyItem, Props)
+		       and([
+				  hinzuToMd:uriSection('GitHub', GitHub),
+				  hinzuToMd:itemizedSection('Representations', hinzuToMd:representationItem, Reprs),
+				  hinzuToMd:itemizedSection('Properties', hinzuToMd:propertyItem, Props),
+				  hinzuToMd:itemizedSection('Dependencies', hinzuToMd:dependencyItem, Deps)
+			      ])				   
 		   ])),
     writeTextFile(File, Md).
 
-/*
+dependencyItem(json(X)) :-
+    member(sym=Sym, X),
+    member(directory=json(Y), X),
+    member(name=Dir, Y),
+    member(uri=Uri, Y),
+    member(arguments=Args, X),
+    format('* [~w](~w): **~w**~n~@', [Dir, Uri, Sym, maplist(hinzuToMd:ueber(1), Args)]).
 
-% --------------------------------------------------
+ueber(C, json(X)) :-
+    member(caption=Caption, X),
+    member(name=Name, X),
+    member(uri=Uri, X),
+    format('~@* ~w *[~w](~w)*~n', [hinzuToMd:indent(C), Caption, Name, Uri]).
 
-index :-
+ueber(C, json(X)) :-
+    member(caption=Caption, X),
+    member(name=Name, X),
+    \+ member(uri=_, X),
+    format('~@* ~w *~w*~n', [hinzuToMd:indent(C), Caption, Name]).
+
+ueber(C0, json(X)) :-
+    member(caption=Caption, X),
+    member(list=[], X),
+    format('~@* ~w: *None*~n', [hinzuToMd:indent(C0), Caption]).
+
+ueber(C0, json(X)) :-
+    member(caption=Caption, X),
+    member(list=[E], X),
+    hinzuToMd:ueber(C0, E).
+
+ueber(C0, json(X)) :-
+    member(caption=Caption, X),
+    length(L, Len), Len > 1,
+    member(list=L, X),
+    format('~@* ~w~n', [hinzuToMd:indent(C0), Caption]),
+    C1 is C0 + 1,
+    maplist(hinzuToMd:ueber(C1), L).
+
+indent(C0) :-
+    C0 =< 0 -> true; write('    '), C1 is C0 - 1, indent(C1).
+
+directoryIndex(Dirs) :-
     with_output_to(
 	    codes(Md),
-	    format('# Languages~n**[GitHub](https://github.com/softlang/yas/blob/master/languages)**~n~n## Fabricated languages~n~@~n## Established languages~n~@~n', [languageIndex(hinzuToMd:fabricated), languageIndex(hinzuToMd:established)])),
-    writeTextFile('docs/index.md', Md).
+	    format('---~nlayout: yas~ntitle: YAS directories~n---~n# Index of YAS directories~n~@', [maplist(hinzuToMd:fileItem, Dirs)])),
+    writeTextFile('../www/jekyll/yas/directories.md', Md).
 
-languageIndex(Selector) :-
-    getLanguages(Selector, Ls),
-    maplist(hinzuToMd:languageInIndex, Ls).
-
-getLanguages(Selector, Ls) :-
-    findall(L, (
-		hdeclaration(l(Is)),
-		apply(Selector, [Is]),
-		member(lid(L), Is)
-	    ),
-	    Ls).
-
-languageInIndex(L) :-
-    hdeclaration(l(Is)),
-    member(lid(L), Is),
-    (member(name(N), Is); member(acronym(N), Is)),
-    member(explanation(X), Is),
-    format('* [~w](languages/~w.html): ~w~n', [N, N, X]).
-
-established(Is) :-
-    member(sameAs(_), Is).
-
-fabricated(Is) :-
-    \+ established(Is).
-	
-% --------------------------------------------------
-
-languages :-
-    getLanguages(succeed, Ls),
-    maplist(hinzuToMd:languagePage, Ls).
-
-languagePage(L) :-
-    hdeclaration(l(Is)),
-    member(lid(L), Is),
-    (member(name(N), Is); member(acronym(N), Is)),
-    languagePage(L, repo, RepoMd),
-    languagePage(L, pages, PagesMd),
-    atomic_list_concat(['languages/', N, '/README.md'], RepoFN),
-    atomic_list_concat(['docs/languages/', N, '.md'], PagesFN),
-    writeTextFile(RepoFN, RepoMd),
-    writeTextFile(PagesFN, PagesMd).
-
-languagePage(L, W, Md) :-
-    hdeclaration(l(Is)),
-    member(lid(L), Is),
-    (
-	member(name(N), Is),
-	Q = N
-    ; 
-        member(acronym(N), Is),
-        member(expansion(M), Is),
-        atomic_list_concat([N, ' ', '(', M, ')'], Q)
-    ),
-    member(explanation(X), Is),
+directoryPage(json(X)) :-
+    member(id=Escaped, X),
+    member(name=Name, X),
+    member(github=GitHub, X),
+    member(properties=Props, X),
+    member(components=Comps, X),
+    atomic_list_concat(['../www/jekyll/yas/directories/', Escaped, '.md'], File),    
     with_output_to(
 	    codes(Md),
-	    format('# Language _~w_~n~@~w~n~n## Purposes~n~@~n## Links~n~@~n## Representations~n~@~n## References~n~@~n## Elements~n~@', [Q, linkToLanguage(W, N), X, purposes(L), linksForLanguage(W, L), representationsOfLanguage(L), referencesToLanguage(L), elementsOfLanguage(W, L)])).
-
-linkToLanguage(repo, _).
-linkToLanguage(pages, N) :-
-    format('**[GitHub](https://github.com/softlang/yas/blob/master/languages/~w)**~n~n', [N]).
-
-purposes(L) :-
-    hdeclaration(l(Is)),
-    member(lid(L), Is),
-    findall(P, member(purpose(P), Is), Ps),
-    ( Ps == [] ->
-          format('_None_~n', [])
-        ; maplist(hinzuToMd:purpose, Ps) ).
-
-purpose(P) :-
-    format('* ~w~n', [P]).
-
-linksForLanguage(W, L) :-
-    hdeclaration(l(Is)),
-    member(lid(L), Is),
-    findall(R, (
-		member(R, Is),
-		member(R, [sameAs(_), similarTo(_), relatesTo(_), variationOf(_), subsetOf(_), supersetOf(_), embeds(_), dependsOn(_)])
-	    ),
-	    Rs),
-    maplist(hinzuToMd:linkForLanguage(W), Rs).
-
-linkForLanguage(repo, R) :-
-    format('* ~w~n', [R]).
-
-linkForLanguage(pages, R) :-
-    member(F, [sameAs, similarTo, relatesTo]),
-    R =.. [F, U],
-    format('* ~w: [~w](~w)~n', [F, U, U]).
-
-linkForLanguage(pages, R) :-
-    member(F, [variationOf, subsetOf, supersetOf, embeds, dependsOn]),
-    R =.. [F, L],
-    hdeclaration(l(Is)),
-    member(lid(L), Is),
-    (member(name(N), Is); member(acronym(N), Is)),
-    format('* ~w: [~w](http://softlang.github.io/yas/languages/~w.html)~n', [F, N, N]).
-
-representationsOfLanguage(L) :-
-    findall(R, (
-		hdeclaration(r(Is)),
-		member(rid(R), Is),
-		member(representationOf(L), Is)
-	    ),
-	    Rs),
-    maplist(hinzuToMd:representationOfLanguage, Rs).
-
-representationOfLanguage(R) :-
-    format('* ~q~n', [R]).
-
-referencesToLanguage(L) :-
-    findall(R, (
-		hdeclaration(r(Is)),
-		member(rid(R), Is),
-		member(representationOf(L), Is)
-	    ),
-	    Rs),
-    findall(D, (
-		udeclaration(D),
-		( D = membership(R, _, _), member(R, Rs)
-		; D = function(_, Rs1, Rs2, _, _), member(R, Rs), (member(R, Rs1); member(R, Rs2) )
-                )
-	    ),
-	    Ds),
-    maplist(hinzuToMd:referenceToLanguage, Ds).
-
-referenceToLanguage(D) :-
-    format('* ~q~n', [D]).
-
-elementsOfLanguage(W, L) :-
-    findall(R, (
-		hdeclaration(r(Is)),
-		member(rid(R), Is),
-		member(representationOf(L), Is)),
-	    Rs),
-    findall(FN, (
-		udeclaration(elementOf(FN, R)),
-		member(R, Rs)),
-	    FNs),
-    maplist(hinzuToMd:elementOfLanguage(W), FNs).
-
-elementOfLanguage(repo, FN) :-
-    format('* [~w](../../~w)~n', [FN, FN]).
-
-elementOfLanguage(pages, FN1) :-
-    hinzuToMd:relative_filename(FN1, FN2),
-    format('* [~w](~w)~n', [FN1, FN2]).
-
-% --------------------------------------------------
-
-files :-    
-    setof(FN, L^udeclaration(elementOf(FN, L)), FNs),
-    maplist(hinzuToMd:file, FNs).
-
-file(FN1) :-
-    readTextFileLines(FN1, Lines),
-    absolute_filename(FN1, FN2),
-    with_output_to(
-	  codes(Md),
-	  format('# File _~w_~n**[GitHub](https://github.com/softlang/yas/blob/master/~w)**~n```~n~@```~n~n## Languages~n~@~n## References~n~@', [FN1, FN1, trimLines(Lines), languagesOfFile(FN1), referencesToFile(FN1)])),
-    writeTextFile(FN2, Md).
-
-trimLines(Lines) :-
-    length(Lines, Len),
-    (
-      Len < 15 ->
-        maplist(hinzuToMd:line, Lines)
-     ;
-        append(Lines1, _, Lines),
-        length(Lines1, 7),
-        append(Lines1, [[0'., 0'., 0'.]], Lines2),
-        maplist(hinzuToMd:line, Lines2)
-    ).
-
-line(Line) :-
-    format('~s~n', [Line]).
-
-languagesOfFile(FN) :-
-    findall((L, R), (
-		udeclaration(elementOf(FN, R)),
-		hdeclaration(r(Is)),
-		member(rid(R), Is),
-		member(representationOf(L), Is)
-	    ),
-	    LRs),
-    maplist(hinzuToMd:languageOfFile, LRs).
-
-languageOfFile((L, R)) :-
-    hdeclaration(l(Is)),
-    member(lid(L), Is),
-    (member(name(N), Is); member(acronym(N), Is)),
-    format('* [~w](../languages/~w.md) (~w)~n', [N, N, R]).
-
-referencesToFile(FN) :-
-    findall(D, (
-		udeclaration(D),
-		( D = elementOf(FN, _)
-		; D = membership(_, _, FNs), member(FN, FNs)
-		; D = mapsTo(_, FNs1, FNs2), ( member(FN, FNs1); member(FN, FNs2) )
-		; D = function(_, _, _, _, FNs), member(FN, FNs)
-                )
-	    ),
-	    Ds),
-    maplist(hinzuToMd:referenceToFile, Ds).
-
-referenceToFile(D) :-
-    format('* ~q~n', [D]).
-
-% --------------------------------------------------
-
-absolute_filename(FN1, FN3) :-
-    basename(FN1, FN2),
-    atomic_list_concat(['docs/files/', FN2, '.md'], FN3).
-
-relative_filename(FN1, FN3) :-
-    basename(FN1, FN2),
-    atomic_list_concat(['../files/', FN2, '.md'], FN3).
-
-basename(FN1, FN2) :-
-    name(FN1, L1),
-    maplist(slashToHyphen, L1, L2),
-    name(FN2, L2).
-
-slashToHyphen(C1, C2) :- C1 == 0'/ -> C2 = 0'-; C2 = C1.
-
-*/
+	    format('---~nlayout: yas~ntitle: YAS directory ~w~n---~n# YAS directory *~w*~n~@', [
+		       Name,
+		       Name,
+		       and([
+				  hinzuToMd:uriSection('GitHub', GitHub),
+				  hinzuToMd:itemizedSection('Properties', hinzuToMd:propertyItem, Props),
+				  hinzuToMd:itemizedSection('Components', hinzuToMd:componentItem, Comps)
+			      ]) 
+		   ])),
+    writeTextFile(File, Md).

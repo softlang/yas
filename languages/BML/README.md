@@ -1,14 +1,13 @@
-# Language _BML (Basic Machine Language)_
-A trivial stack- and address-based machine language; memory access and jumps use ints rather than symbolic names.
+# Language *BML*
+## Expansion
+Basic Machine Language
 
-## Purposes
-* Compilation
+---
+## Headline
+A trivial machine language
 
-## Links
-* variationOf(bal)
+---
+## Details
+BML is stack- and address-based. Memory access and jumps use ints rather than symbolic names.
 
-## Representations
-
-## References
-
-## Elements
+---

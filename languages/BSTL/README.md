@@ -1,20 +1,9 @@
-# Language _BSTL (Basic Signature Transformation Language)_
-A trivial transformation language for coupled transformations on BSL signatures and conformant terms.
+# Language *BSTL*
+## Expansion
+Basic Signature Transformation Language
 
-## Purposes
-_None_
+---
+## Headline
+A transformation language for coupled transformations on signatures and conformant terms
 
-## Links
-* dependsOn(bsl)
-* dependsOn(term)
-
-## Representations
-* bstl(term)
-
-## References
-* membership(bstl(term),eslLanguage,['languages/BSTL/as.term'])
-* function(interpret,[bstl(term),bsl(term)],[bsl(term)],bstlSig:interpret,[])
-* function(interpret,[bstl(term),term],[term],bstlTerm:interpret,[])
-
-## Elements
-* [languages/BSTL/tests/trafo1.term](../../languages/BSTL/tests/trafo1.term)
+---

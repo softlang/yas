@@ -16,21 +16,18 @@ main :-
     hinzuReasoning:main,
     languages(Langs),
     externals(Exts),
-%    representations(Reprs),
-%    purposes(Purps),
-%    qualifiers(Quals),
-%    directories(Dirs),
+    representations(Reprs),
+    functions(Funcs),
     files(Files),
+    directories(Dirs),
     writeJSONFile('dump.json', json([
 					   languages=Langs,
 					   externals=Exts,
-					   files=Files
+					   representations=Reprs,
+					   functions=Funcs,
+					   files=Files,
+					   directories=Dirs
 				       ])).
-%					   representations=Reprs,
-%					   purposes=Purps,
-%					   qualifiers=Quals,
-%					   directories=Dirs,
-%					   files=Files])).
 
 % The dump for languages
 languages(Langs) :-
@@ -40,27 +37,51 @@ languages(Langs) :-
 			uri=Uri,
 			github=Github,
 			name=Name,
+			yas=Bool,
 			expansion=Expansion,
 			headline=Headline,
 			details=Details,
 			properties=Props,
-			representation=Reprs,
+			representations=Reprs,
 			components=Comps
 		    ]),
 	    (
 		hdeclaration(l(Items), Dir),
 		member(id(Lang), Items),
 		member(name(Name), Items),
+		isYasLanguage(Items, Bool),
 		atomic_list_concat(['/yas/languages/', Lang, '.html'], Uri),
 		atomic_list_concat([Master, '/languages/', Name], Github),
 		once((member(expansion(Expansion), Items); Expansion='@'(null))),
 		member(headline(Headline), Items),
 		once((member(details(Details), Items); Details='@'(null))),
 		properties(hinzuDump:languageObject, Items, Props),
-		representations(Items, Reprs),
-		components(Lang, Dir, Comps)
+		representations(Lang, Reprs),
+		components(Dir, Comps)
 	    ),
 	    Langs).
+
+isYasLanguage(Items, Bool) :-
+    member(sameAs(extern(_)), Items) ->
+	Bool = '@'(false); Bool = '@'(true).
+
+% The dump for functions
+functions(FuncsJson) :-
+    setof(Func,
+	  LangsIn^LangsOut^Goal^Files^Dir^udeclaration(
+		function(Func, LangsIn, LangsOut, Goal, Files), Dir),
+	  Funcs),
+    findall(json([
+			id=Func,
+			uri=Uri,
+			dependencies=Deps
+		    ]),
+	    (
+		member(Func, Funcs),
+		atomic_list_concat(['/yas/functions/', Func, '.html'], Uri),
+		funcDependencies(Func, Deps)
+	    ),
+	    FuncsJson).
 
 % The dump for externals
 externals(Exts2) :-
@@ -81,25 +102,52 @@ externals(Exts2) :-
 	    ),
 	    Exts2).
 
-% Dump fragment for representations for a given language
-representations(Items, Rs) :-
-    member(id(L), Items),
-    findall(json([id='#'(R), language=U]),
+representations(ReprsJson) :-
+    setof(Repr, File^Dir^udeclaration(elementOf(File, Repr), Dir), Reprs),
+    master(Master),
+    findall(json([
+			id='#'(Escaped),
+			name='#'(Repr),
+			uri='#'(ReprUri),
+			language=json([id=Lang, name=LangName, uri=LangUri]),
+			dependencies=Deps,
+			files=FilesJson
+		    ]),
 	    (
-		(
-		  member(U, [text, term, xml, json]),
-		  R =.. [L, U]
-	        ;
-		  U = term,
-		  X =.. [L, U],
-		  R =.. [ok, X]
-		),
-                udeclaration(language(R), _)
+		member(Repr, Reprs),
+		hdeclaration(r(ItemsR), _),
+		member(id(Repr), ItemsR),
+		member(representationOf(Lang), ItemsR),
+                escapeRepr(Repr, Escaped),
+		representationToUri(Repr, ReprUri),
+		hdeclaration(l(ItemsL), _),
+		member(id(Lang), ItemsL),
+		member(name(LangName), ItemsL),
+		atomic_list_concat(['/yas/languages/', Lang, '.html'], LangUri),
+		reprDependencies(Repr, Deps),
+		setof(File, Dir^udeclaration(elementOf(File, Repr), Dir), Files),
+		findall(json([name='#'(File), uri='#'(FileUri)]),
+			(
+			    member(File, Files),
+			    filenameToUri(File, FileUri)
+			),
+			FilesJson)
+	    ),
+	    ReprsJson).
+    
+% Dump fragment for representations of a given language
+representations(Lang, Reprs) :-
+    findall(json([name='#'(Repr), uri='#'(Uri)]),
+	    (
+		hdeclaration(r(Items), _),
+		member(representationOf(Lang), Items),
+		member(id(Repr), Items),
+		representationToUri(Repr, Uri)
 	    ),	
-	    Rs).
+	    Reprs).
 
-% Components for a language representation
-components(Lang, Dir, Comps) :-
+% Components for a directory
+components(Dir, Comps) :-
     wiki(Wiki),
     findall(json([
 			subject=json([name='#'(File), uri='#'(FileUri)]),
@@ -116,22 +164,206 @@ components(Lang, Dir, Comps) :-
 	    ),
 	    Comps).
 
-files(Files) :-
+files(FilesJson) :-
+    setof(File, Repr^Dir^udeclaration(elementOf(File, Repr), Dir), Files),
+    master(Master),
+    findall(json([
+			id='#'(FileEscaped),
+			name='#'(File),
+			uri='#'(Uri),
+			github='#'(Github),
+			representations=ReprsJson,
+			properties=Props,
+			dependencies=Deps
+		    ]),
+	    (
+		member(File, Files),
+		once((
+		    hdeclaration(f(Items), _),
+		    member(id(File), Items)
+		  ; Items=[])),
+                escapeFilename(File, FileEscaped),
+		filenameToUri(File, Uri),
+		atomic_list_concat([Master, '/', File], Github),
+		setof(Repr, Dir^udeclaration(elementOf(File, Repr), Dir), Reprs),
+		findall(json([
+				    id='#'(ReprEscaped),
+				    name='#'(Repr),
+				    uri='#'(ReprUri)
+				]),
+			(
+			    member(Repr, Reprs),
+			    escapeRepr(Repr, ReprEscaped),
+			    representationToUri(Repr, ReprUri)
+			),
+			ReprsJson),
+		fileDependencies(File, Deps),
+		properties(fail, Items, Props)
+	    ),
+	    FilesJson).
+
+% Dependencies of a file
+fileDependencies(File, Deps) :-
+    findall(json([
+			sym=Sym,
+			directory=json([name='#'(Dir), uri='#'(Uri)]),
+			arguments=Ueber
+		    ]),
+	    (
+		udeclaration(Decl, Dir),
+		Decl =.. [Sym|Args],
+		(
+		    Decl = mapsTo(Goal, FilesIn, FilesOut),
+		    once((member(File, FilesIn); member(File, FilesOut)))
+		;
+		    Decl = membership(_, _, Files),
+		    once(member(File, Files))
+		;
+		    Decl = equivalence(_, _, Files),
+		    once(member(File, Files))
+		;
+		    Decl = normalization(_, _, Files),
+		    once(member(File, Files))
+		;
+		    Decl = function(_, _, _, _, Files),
+		    once(member(File, Files))
+		),
+		udecl(Sym, Args, Ueber),
+		dirnameToUri(Dir, Uri)
+	    ),
+	    Deps).
+
+% Dependencies of a representation
+reprDependencies(Repr, Deps) :-
+    findall(json([
+			sym=Sym,
+			directory=json([name='#'(Dir), uri='#'(Uri)]),
+			arguments=Ueber
+		    ]),
+	    (
+		udeclaration(Decl, Dir),
+		Decl =.. [Sym|Args],
+		(
+		    Decl = membership(Repr, _, _)
+		;
+		    Decl = equivalence(Repr, _, _)
+		;
+		    Decl = normalization(Repr, _, _)
+		;
+		    Decl = function(_, ReprsIn, ReprsOut, _, _),
+		    once((member(Repr, ReprsIn); member(Repr, ReprsOut)))
+		),
+		udecl(Sym, Args, Ueber),
+		dirnameToUri(Dir, Uri)
+	    ),
+	    Deps).
+
+% Dependencies of a function
+funcDependencies(Func, Deps) :-
+    findall(json([
+			sym=Sym,
+			directory=json([name='#'(Dir), uri='#'(Uri)]),
+			arguments=Ueber
+		    ]),
+	    (
+		( Decl = function(Func, _, _, _, _)
+		; Decl = mapsTo(Func, _, _)
+		),
+		udeclaration(Decl, Dir),
+		Decl =.. [Sym|Args],
+		udecl(Sym, Args, Ueber),
+		dirnameToUri(Dir, Uri)
+	    ),
+	    Deps).
+
+% Dump Ueber declarations
+udecl(Sym, Args, Ueber) :-
+    (
+	Sym = mapsTo,
+	Types = [
+	    sort(func),
+	    star(sort(file)),
+	    star(sort(file))
+	];
+	member(Sym, [membership, equivalence, normalization]),
+	Types = [
+	    sort(lang),
+	    sort(goal),
+	    star(sort(file))
+	];
+	Sym = function,
+	Types = [
+	    sort(func),
+	    star(sort(lang)),
+	    star(sort(lang)),
+	    sort(goal),
+	    star(sort(file))
+	]
+    ),
+    map(hinzuDump:udeclarg, Types, Args, Ueber).
+
+% Dump arguments of Ueber declarations
+udeclarg(
+	sort(lang),
+	Repr,
+	json([caption='Representation', name='#'(Repr), uri='#'(Uri)])
+    ) :-
+    representationToUri(Repr, Uri).
+    
+udeclarg(
+	sort(func),
+	Func,
+	json([caption='Function', name='#'(Func), uri='#'(Uri)])
+    ) :-
+    functionToUri(Func, Uri).
+    
+udeclarg(
+	sort(goal),
+	Goal,
+	json([caption='Goal', name='#'(Goal)])).
+
+udeclarg(
+	sort(file),
+	File,
+	json([caption='File', name='#'(File), uri='#'(Uri)])
+    ) :-
+    filenameToUri(File, Uri).
+    
+udeclarg(star(X), Y, json([caption=C, list=Z])) :-
+    ( X = sort(file), C = 'Files'
+    ; X = sort(lang), C = 'Languages'
+    ),
+    maplist(hinzuDump:udeclarg(X), Y, Z).
+
+directories(Dirs) :-
+    findall(Dir,
+	    ( udeclaration(_, Dir)
+	    ; hdeclaration(_, Dir)
+	    ),
+	    UnsortedDirBag),
+    list_to_set(UnsortedDirBag, SortedDirSet),
     master(Master),
     findall(json([
 			id='#'(Escaped),
-			name='#'(File),
+			name='#'(Dir),
+			uri='#'(Uri),
 			github='#'(Github),
-			properties=Props
+			properties=Props,
+			components=Comps
 		    ]),
 	    (
-		hdeclaration(f(Items), Dir),
-		member(id(File), Items),
-                escapeFilename(File, Escaped),
-		atomic_list_concat([Master, '/', File], Github),
-		properties(fail, Items, Props)
+		member(Dir, SortedDirSet),
+		once((
+		    hdeclaration(d(Items), _),
+		    member(id(Dir), Items)
+		  ; Items=[])),
+                escapeFilename(Dir, Escaped),
+		dirnameToUri(Dir, Uri),
+		atomic_list_concat([Master, '/', Dir], Github),
+		properties(fail, Items, Props),
+		components(Dir, Comps)
 	    ),
-	    Files).
+	    Dirs).
 
 % The properties for an entity
 properties(Resolver, Items, Props) :-
@@ -159,285 +391,6 @@ languageObject(ObjId, ObjName, ObjUri) :-
     atomic_list_concat(['Language:', LangName], ObjName),
     atomic_list_concat(['/yas/languages/', ObjId, '.html'], ObjUri).
 
-
-/*
-
-% The dump for representations
-representations(Reprs) :-
-    findall(json([id='#'(Repr), language=Langs, occurrence=Occus, file=Files2]),
-	    (
-		udeclaration(language(Repr), _),
-		representationToLanguages(Repr, Langs),
-		findall(json([text='#'(D), exposition=X, ueber=Dir]),
-			(
-			    udeclaration(D, Dir),
-			    ( D = membership(Repr, _, _)
-			    ; D = equivalence(Repr, _, _)
-			    ; D = normalization(Repr, _, _)
-			    ; D = relation(_, Reprs, _, _), member(Repr, Reprs)
-			    ; D = function(_, Reprs1, Reprs2, _, _), (member(Repr, Reprs1); member(Repr, Reprs2))
-			    ),
-			    exposition(D, X)
-			),
-			Occus),
-		findall(File, udeclaration(elementOf(File, Repr), _), Files1),
-		list_to_set(Files1, Files2)
-	    ),
-	    Reprs).	
-
-% Abstract a representation to languages
-representationToLanguages(Repr, Langs) :-
-    findall(Lang,
-	    (
-		(Repr1 = Repr; ok(Repr1) = Repr),
-		Repr1 =.. [X,Y],
-		member(Y, [text, term, xml, json]),
-		(Lang=X; Lang=Y)
-	    ),
-	    Langs1),
-    languageToBase(Repr, Base),
-    list_to_set([Base|Langs1], Langs).
-
-% Expose Ueber declaration
-exposition(
-	membership(Repr, Goal, Files),
-	json([
-		    functor=membership,
-		    args=json([
-				     representation='#'(Repr),
-				     goal='#'(Goal),
-				     file=Files])])).
-
-exposition(
-	equivalence(Repr, Goal, Files),
-	json([
-		    functor=equivalence,
-		    args=json([
-				     representation='#'(Repr),
-				     goal='#'(Goal),
-				     file=Files])])).
-
-exposition(
-	normalization(Repr, Goal, Files),
-	json([
-		    functor=normalization,
-		    args=json([
-				     representation='#'(Repr),
-				     goal='#'(Goal),
-				     file=Files])])).
-
-exposition(
-	relation(Name, R1, Goal, Files),
-	json([
-		    functor=relation,
-		    args=json([
-				     name=Name,
-				     representation=R2,
-				     goal='#'(Goal),
-				     file=Files])])) :-
-    maplist(hinzuDump:show, R1, R2).
-
-exposition(
-	function(Name, D1, R1, Goal, Files),
-	json([
-		    functor=function,
-		    args=json([
-				     name=Name,
-				     domain=json([representation=D2]),
-				     range=json([representation=R2]),
-				     goal='#'(Goal),
-				     file=Files])])) :-
-    maplist(hinzuDump:show, D1, D2),
-    maplist(hinzuDump:show, R1, R2).
-
-exposition(
-	relatesTo(Name, Files),
-	json([
-		    functor=relatesTo,
-		    args=json([
-				     name=Name,
-				     file=Files])])).
-
-exposition(
-	mapsTo(Name, Files1, File2),
-	json([
-		    functor=mapsTo,
-		    args=json([
-				     name=Name,
-				     argument=json([file=Files1]),
-				     result=json([file=Files2])
-				 ])])).
-
-exposition(
-	elementOf(File, Repr),
-	json([
-		    functor=elementOf,
-		    args=json([
-				     file=File,
-				     representation='#'(Repr)
-				 ])])).
-
-exposition(
-	notElementOf(File, Repr),
-	json([
-		    functor=notElementOf,
-		    args=json([
-				     file=File,
-				     representation='#'(Repr)
-				 ])])).
-
-% The dump for purposes
-purposes(Purps2) :-
-    findall((Purp, Name, Links),
-	    (
-		hdeclaration(p(Items), _),
-		member(id(Purp), Items),
-		member(name(Name), Items),
-		linksFrom(p, Items, Links)
-	    ),
-	    Purps1),
-    findall(json([id=Purp, name=Name, language=Langs, link=Links]),
-	    (
-		member((Purp, Name, Links), Purps1),
-		findall(Lang,
-			(
-			    hdeclaration(l(Items), _),
-			    member(id(Lang), Items),
-			    member(relatesTo(hasPurpose, id(Purp)), Items)
-			),
-			Langs)
-	    ),
-	    Purps2).
-
-% Dummp fragment for Links from an entity
-linksFrom(NsFrom, Items, Links) :-
-    findall(json([qualifier=Q, K=V]),
-	    (
-		member(relatesTo(Q, Link), Items),
-		( Link =.. [uri, V], K = uri
-		; Link =.. [id, V], member((Q, NsFrom, NsTo), [
-                    (sameAs, NsFrom, NsFrom),
-                    (similarTo, NsFrom, NsFrom),
-                    (linksTo, NsFrom, NsFrom),
-                    (hasPurpose, NsFrom, p),
-                    (representationOf, l, r),
-                    (subsetOf, l, l),
-                    (supersetOf, l, l),
-                    (embeds, l, l),
-                    (dependsOn, l, l) ]),
-		  namespace(NsTo, K)
-		)
-	    ),
-	    Links).
-
-% Map namespaces of Hinzu to JSON keys
-namespace(l, language).
-namespace(r, representation).
-namespace(p, purpose).
-namespace(q, qualifier).
-namespace(f, file).
-
-% The dump for qualifiers
-qualifiers(Qs) :-
-    findall(json([id=Id, description=Desc, link=Links]),
-		 (
-		     hdeclaration(q(Items), _),
-		     member(id(Id), Items),
-		     member(description(Desc), Items),
-		     linksFrom(q, Items, Links)		     
-		 ),
-		 Qs).
-
-% The dump for directories
-directories(Dirs) :-
-    findall(Dir,
-	    (
-		( udeclaration(elementOf(File, ueber(term)), _)
-		; udeclaration(elementOf(File, hinzu(term)), _)
-		),
-		name(File, String),
-		append(DirString, [0'/|BaseNameString], String),
-		\+ member(0'/, BaseNameString),
-		name(Dir, DirString)
-	    ),
-	    Dirs1),
-    list_to_set(Dirs1, Dirs2),
-    findall(json([id=Dir, directory=SubDirs, file=Files2]),
-	    (
-		member(Dir, Dirs2),
-		findall(SubDir,
-			(
-			    member(SubDir, Dirs2),
-			    atom_concat(Dir, _, SubDir),
-			    \+ Dir == SubDir
-			),
-			SubDirs),
-		findall(File,
-			(
-			    name(Dir, DirString),
-			    ( udeclaration(elementOf(File, _), _)
-			    ; udeclaration(notElementOf(File, _), _)
-			    ),
-			    name(File, FileString),
-			    append(DirString, [0'/|BaseNameString], FileString),
-			    \+ member(0'/, BaseNameString)
-			),
-			Files1),
-		list_to_set(Files1, Files2)
-	    ),
-	    Dirs).
-
-% The dump for files
-files(Files) :-
-    findall(FileName, udeclaration(elementOf(FileName, _), _), FileNames1),
-    list_to_set(FileNames1, FileNames2),
-    findall(json([id='#'(File), representation=Reprs3, language=Langs, occurrence=Occus]),
-	    (
-		member(File, FileNames2),
-		findall(Repr, udeclaration(elementOf(File, Repr), _), Reprs1),
-		list_to_set(Reprs1, Reprs2),
-		maplist(hinzuDump:show, Reprs2, Reprs3),
-		maplist(hinzuDump:representationToLanguages, Reprs2, Langss),
-		concat(Langss, Langs),
-		findall(json([text='#'(D), exposition=X, ueber=Dir]),
-			(
-			    udeclaration(D, Dir),
-			    ( D = elementOf(File, Repr)
-			    ; D = notElementOf(File, Repr)
-			    ; D = equivalence(Repr, _, ArgFiles), member(File, ArgFiles)
-			    ; D = normalization(Repr, _, ArgFiles), member(File, ArgFiles)
-			    ; D = relation(_, _, _, ArgFiles), member(File, ArgFiles)
-			    ; D = function(_, _, _, _, ArgFiles), member(File, ArgFiles)
-			    ),
-			    exposition(D, X)
-			),
-			Occus)
-	    ),
-	    Files).
-
-% --------------------------------------------------
-
-% Infer data -- not used at this point
-
-%
-% subsetsOf(-Subs, +Super): infer subsets Subs of Super
-%
-subsetsOf(Subs, Super) :-
-    setof(Sub, Super^subsetOf(Sub, Super), Subs).
-
-subsetOf(Sub, Super) :-
-    hdeclaration(l(Items), _),
-    member(subsetOf(Super), Items),
-    member(id(L), Items),
-    (Sub = L; subsetOf(Sub, L)).
-
-subsetOf(Sub, Super) :-
-    hdeclaration(l(Items), _),
-    member(id(Super), Items),
-    member(supersetOf(L), Items),
-    (Sub = L; subsetOf(Sub, L)).
-*/
-
 % --------------------------------------------------
 
 % Utilities
@@ -448,7 +401,7 @@ master('https://github.com/softlang/yas/tree/master').
 % The baseuri for the 101wiki
 wiki('https://101wiki.softlang.org/').
 
-% All property symbols
+% All of 101wiki's property symbols
 psymbols([instanceOf, sameAs, similarTo, relatesTo, facilitates, defines, subsetOf, supersetOf, embeds, dependsOn, linksTo]).
 
 % Tell Prolog to convert term to string
@@ -459,6 +412,20 @@ filenameToUri(File, Uri) :-
     escapeFilename(File, Escaped),
     atomic_list_concat(['/yas/files/', Escaped, '.html'], Uri).
 
+% Convert file name to URI
+dirnameToUri(Dir, Uri) :-
+    escapeFilename(Dir, Escaped),
+    atomic_list_concat(['/yas/directories/', Escaped, '.html'], Uri).
+
+% Convert representation to URI
+representationToUri(Repr, Uri) :-
+    escapeRepr(Repr, Escaped),
+    atomic_list_concat(['/yas/representations/', Escaped, '.html'], Uri).
+
+% Convert function to URI
+functionToUri(Func, Uri) :-
+    atomic_list_concat(['/yas/functions/', Func, '.html'], Uri).
+
 % Escape file name
 escapeFilename(File, Escaped) :-
     name(File, L1),
@@ -467,10 +434,10 @@ escapeFilename(File, Escaped) :-
     
 slashToHyphen(C1, C2) :- C1 == 0'/ -> C2 = 0'-; C2 = C1.
 
-% To relate singular and plural -- not yet used
-plural(language, languages).
-plural(representation, representations).
-plural(purpose, purposes).
-plural(qualifier, qualifiers).
-plural(directory, directories).
-plural(file, files).
+% Escape representation
+escapeRepr(Repr, Escaped) :-
+    with_output_to(codes(L1), write(Repr)),
+    maplist(hinzuDump:parenToHyphen, L1, L2),
+    name(Escaped, L2).
+    
+parenToHyphen(C1, C2) :- C1 == 0'( -> C2 = 0'-; C1 == 0') -> C2 = 0'-; C2 = C1.

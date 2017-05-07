@@ -1,15 +1,9 @@
-# Language _BCL (BGL CST Language)_
-A representation format for concrete syntax trees (CSTs) for BNF-like grammar notation as of BGL (Basic Grammar Language).
+# Language *BCL*
+## Expansion
+BGL CST Language
 
-## Purposes
-* Parse-tree representation
+---
+## Headline
+A format for CSTs for parsing with BGL grammars
 
-## Links
-
-## Representations
-* bcl(term)
-
-## References
-* membership(bcl(term),eslLanguage,['languages/BCL/as.term'])
-
-## Elements
+---

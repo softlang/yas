@@ -49,6 +49,10 @@ not(P, X) :- \+ apply(P, [X]).
 toBoolean(G, B) :-
   G -> B = true; B = false.
 
+% Check that all goals succeed
+and([]).
+and([H|T]) :- H, and(T).
+
 % All list elements must meet a certain predicate.
 map(_, []).
 map(G, [H|T]) :- apply(G, [H]), map(G, T).

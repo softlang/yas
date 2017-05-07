@@ -1,0 +1,33 @@
+[
+
+  % Syntax definitions
+  macro(eglSyntax(bl)),
+  macro(eslSyntax(bl)),
+  macro(mmlSyntax(tbl, tbl)),
+  macro(mmlSyntax(gbl, gbl)),
+
+  % Well-formedness
+  language(ok(bl(term))),
+  membership(ok(bl(term)), blOk:world, []),
+
+  % A world with one buddy for everyone
+  language(one(bl(term))),
+  membership(one(bl(term)), blOne:world, []),
+
+  % Mapping terms to graphs that are trees
+  function(mapping, [bl(term)], [tbl(graph(term))], blToTbl:(=>), []),
+  elementOf('tbl.term', tree(mml(term))),
+
+  % Mapping tree to graphs
+  function(mapping, [tbl(graph(term))], [gbl(graph(term))], tblToGbl:(=>), []),
+  notElementOf('gbl.term', tree(mml(term))),
+
+  % Count metrics
+  elementOf('gbl.count', term),
+  mapsTo(count, ['gbl.term'], ['gbl.count']),
+
+  % MMTL demo
+  elementOf('tblToGbl.term', mmtl(term)),
+  mapsTo(mmTransform, ['tblToGbl.term', 'tbl.term'], ['gbl.term'])
+  	      
+].

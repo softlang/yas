@@ -1,5 +1,5 @@
 % BEGIN ...
-:- module(tblAbstract, []).
+:- module(blAbstract, []).
 
 % END ...
 % Map strings to better primitive types

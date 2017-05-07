@@ -1,6 +1,6 @@
 % BEGIN ...
-:- module(tblOk, []).
+:- module(blOk, []).
 % END ...
-world(Ps) :- map(tblOk:person(Ps), Ps).
+world(Ps) :- map(blOk:person(Ps), Ps).
 person(_, (_, [])).
 person(Ps, (X1, [X2])) :- \+ X1 == X2, member((X2, _), Ps).

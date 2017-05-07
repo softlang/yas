@@ -2,6 +2,7 @@
 :- use_module(library(pure_input)).
 :- use_module(library(dcg/basics)).
 :- use_module(library(quasi_quotations)).
+:- use_module(library(ordsets)).
 
 % Load the prelude of SLEPRO
 :- ['lib/Prolog/syntax.pro'].

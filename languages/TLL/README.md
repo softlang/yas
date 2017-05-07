@@ -1,15 +1,9 @@
-# Language _TLL (Typed Lambda Language)_
-An applied, typed lambda calculus.
+# Language *TLL*
+## Expansion
+Typed Lambda Language
 
-## Purposes
-_None_
+---
+## Headline
+An applied, typed lambda calculus
 
-## Links
-* embeds(btl)
-* variationOf(ull)
-
-## Representations
-
-## References
-
-## Elements
+---

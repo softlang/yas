@@ -1,0 +1,23 @@
+[
+  l([
+      id(bl),
+      name('BL'),
+      expansion('Buddy Language'),
+      headline('A trivial ontology-oriented language'),
+      details('BL is concerned with the representation of collections of persons and their buddy relationships.'),
+      similarTo(extern('Language:FOAF'))
+  ]),
+  r([
+      id(bl(text)),
+      extension(bl),
+      representationOf(bl)
+  ]),
+  r([
+      id(tbl(graph(term))),
+      representationOf(bl)
+  ]),
+  r([
+      id(gbl(graph(term))),
+      representationOf(bl)
+  ])
+].

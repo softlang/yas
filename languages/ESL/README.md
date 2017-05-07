@@ -1,81 +1,13 @@
-# Language _ESL (Extended Signature Language)_
-A simple extension of the basic signature language BSL for tree-based abstract syntax definition to support type synonyms, products, lists, maybies, and primitive types.
+# Language *ESL*
+## Expansion
+Extended Signature Language
 
-## Purposes
-* Tree-based abstract syntax definition
-* Abstract syntax definition
-* Language definition
+---
+## Headline
+A language for abstract syntax definition
 
-## Links
-* supersetOf(bsl)
+---
+## Details
+ESL leverages many-sorted signatures extended with tuples, lists, and primitive types for tree-based abstract syntax.
 
-## Representations
-* esl(text)
-* esl(term)
-
-## References
-* membership(esl(text),eglAcceptor(eslAbstract: (~>)),['languages/ESL/cs.term','languages/ESL/ls.term'])
-* function(parse,[esl(text)],[esl(term)],eglParser(eslAbstract: (~>)),['languages/ESL/cs.term','languages/ESL/ls.term'])
-* function(parse,[esl(text)],[esl(term)],eglParser(eslAbstract: (~>)),['languages/ESL/cs.term','languages/ESL/ls.term'])
-* membership(esl(term),eslLanguage,['languages/ESL/as.term'])
-* function(conformsTo,[term,esl(term)],[],eslConformance,[])
-
-## Elements
-* [languages/BCL/as.esl](../../languages/BCL/as.esl)
-* [languages/BCL/as.term](../../languages/BCL/as.term)
-* [languages/BFPL/as.esl](../../languages/BFPL/as.esl)
-* [languages/BFPL/as.term](../../languages/BFPL/as.term)
-* [languages/BGL/as.esl](../../languages/BGL/as.esl)
-* [languages/BGL/as.term](../../languages/BGL/as.term)
-* [languages/BIPL/as.esl](../../languages/BIPL/as.esl)
-* [languages/BIPL/as.term](../../languages/BIPL/as.term)
-* [languages/BNL/ESL/as.esl](../../languages/BNL/ESL/as.esl)
-* [languages/BNL/ESL/as.term](../../languages/BNL/ESL/as.term)
-* [languages/BSL/as.esl](../../languages/BSL/as.esl)
-* [languages/BSL/as.term](../../languages/BSL/as.term)
-* [languages/BSTL/as.esl](../../languages/BSTL/as.esl)
-* [languages/BSTL/as.term](../../languages/BSTL/as.term)
-* [languages/DDL/as.esl](../../languages/DDL/as.esl)
-* [languages/DDL/as.term](../../languages/DDL/as.term)
-* [languages/DGL/as.esl](../../languages/DGL/as.esl)
-* [languages/DGL/as.term](../../languages/DGL/as.term)
-* [languages/EFPL/as.esl](../../languages/EFPL/as.esl)
-* [languages/EFPL/as.term](../../languages/EFPL/as.term)
-* [languages/EGL/as.esl](../../languages/EGL/as.esl)
-* [languages/EGL/as.term](../../languages/EGL/as.term)
-* [languages/EGTL/as.esl](../../languages/EGTL/as.esl)
-* [languages/EGTL/as.term](../../languages/EGTL/as.term)
-* [languages/EIPL/as.esl](../../languages/EIPL/as.esl)
-* [languages/EIPL/as.term](../../languages/EIPL/as.term)
-* [languages/EL/as.esl](../../languages/EL/as.esl)
-* [languages/EL/as.term](../../languages/EL/as.term)
-* [languages/EL/Prolog/qq/as.esl](../../languages/EL/Prolog/qq/as.esl)
-* [languages/EL/Prolog/qq/as.term](../../languages/EL/Prolog/qq/as.term)
-* [languages/ESL/as.esl](../../languages/ESL/as.esl)
-* [languages/ESL/as.term](../../languages/ESL/as.term)
-* [languages/FSML/as.esl](../../languages/FSML/as.esl)
-* [languages/FSML/as.term](../../languages/FSML/as.term)
-* [languages/FSML/Prolog/to-java/as.esl](../../languages/FSML/Prolog/to-java/as.esl)
-* [languages/FSML/Prolog/to-java/as.term](../../languages/FSML/Prolog/to-java/as.term)
-* [languages/Hinzu/as.esl](../../languages/Hinzu/as.esl)
-* [languages/Hinzu/as.term](../../languages/Hinzu/as.term)
-* [languages/LAL/as.esl](../../languages/LAL/as.esl)
-* [languages/LAL/as.term](../../languages/LAL/as.term)
-* [languages/LAL/config/as.esl](../../languages/LAL/config/as.esl)
-* [languages/LAL/config/as.term](../../languages/LAL/config/as.term)
-* [languages/MMDL/as.esl](../../languages/MMDL/as.esl)
-* [languages/MMDL/as.term](../../languages/MMDL/as.term)
-* [languages/MML/as.esl](../../languages/MML/as.esl)
-* [languages/MML/as.term](../../languages/MML/as.term)
-* [languages/MMTL/as.esl](../../languages/MMTL/as.esl)
-* [languages/MMTL/as.term](../../languages/MMTL/as.term)
-* [languages/PPL/as.esl](../../languages/PPL/as.esl)
-* [languages/PPL/as.term](../../languages/PPL/as.term)
-* [languages/TBL/as.esl](../../languages/TBL/as.esl)
-* [languages/TBL/as.term](../../languages/TBL/as.term)
-* [languages/TDL/as.esl](../../languages/TDL/as.esl)
-* [languages/TDL/as.term](../../languages/TDL/as.term)
-* [languages/Ueber/as.esl](../../languages/Ueber/as.esl)
-* [languages/Ueber/as.term](../../languages/Ueber/as.term)
-* [samples/obsolete/figure/as.esl](../../samples/obsolete/figure/as.esl)
-* [samples/obsolete/figure/as.term](../../samples/obsolete/figure/as.term)
+---

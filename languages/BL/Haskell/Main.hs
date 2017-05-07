@@ -16,6 +16,7 @@ lookupFirstBuddy w = do
   print $ getName p2
 
 main = do
+  print $ TBL.smallWorld
   w1 <- mkSmallWorld
   lookupFirstBuddy w1
   w2 <- resolve TBL.smallWorld

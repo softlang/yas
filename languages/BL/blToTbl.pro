@@ -1,7 +1,7 @@
 % BEGIN ...
 % Map terms to dictionaries
-:- module(tblDict, []).
+:- module(blToTbl, []).
 
 % END ...
-W1 => {class:world, persons:W2} :- map(tblDict:(=>), W1, W2).
+W1 => {class:world, persons:W2} :- map(blToTbl:(=>), W1, W2).
 (N, B) => {class:person, name:N, buddy:B}.

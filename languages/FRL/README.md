@@ -1,19 +1,13 @@
-# Language _FRL (Family by Reference Language)_
-A trivial data model for representing families as collections of persons with various attributes; persons are identified by reference as opposed to name.
+# Language *FRL*
+## Expansion
+Family by Reference Language
 
-## Purposes
-_None_
+---
+## Headline
+A trivial data model for representing families as collections of persons
 
-## Links
-* variationOf(fnl)
+---
+## Details
+Persons are identified by reference as opposed to name.
 
-## Representations
-* frl(graph(term))
-
-## References
-* membership(frl(graph(term)),mmlChecker,['languages/FRL/mm.graph'])
-
-## Elements
-* [languages/FRL/empty-family.graph](../../languages/FRL/empty-family.graph)
-* [languages/FRL/singleton-family.graph](../../languages/FRL/singleton-family.graph)
-* [languages/FRL/small-family.graph](../../languages/FRL/small-family.graph)
+---

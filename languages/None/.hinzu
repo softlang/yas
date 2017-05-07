@@ -1,0 +1,7 @@
+[
+  l([
+      id(none),
+      name('None'),
+      headline('A proxy for the lack of a (specified) language')
+  ])
+].

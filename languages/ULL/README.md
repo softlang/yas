@@ -1,15 +1,9 @@
-# Language _ULL (Untyped Lambda Language)_
-An applied, untyped lambda calculus.
+# Language *ULL*
+## Expansion
+Untyped Lambda Language
 
-## Purposes
-_None_
+---
+## Headline
+An applied, untyped lambda calculus
 
-## Links
-* embeds(btl)
-* variationOf(tll)
-
-## Representations
-
-## References
-
-## Elements
+---

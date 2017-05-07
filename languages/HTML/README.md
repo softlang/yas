@@ -1,16 +1,9 @@
-# Language _HTML (HyperText Markup Language)_
-A standard markup language for web pages and web applications.
+# Language *HTML*
+## Expansion
+HyperText Markup Language
 
-## Purposes
-_None_
+---
+## Headline
+The standard markup language HTML for web pages and applications
 
-## Links
-* sameAs(https://en.wikipedia.org/wiki/HTML)
-
-## Representations
-* html(text)
-
-## References
-* membership(html(text),succeed,[])
-
-## Elements
+---

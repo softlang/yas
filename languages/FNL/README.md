@@ -1,17 +1,13 @@
-# Language _FNL (Family by Name Language)_
-A trivial data model for representing families as collections of persons with various attributes; persons are identified by name as opposed to reference.
+# Language *FNL*
+## Expansion
+Family by Name Language
 
-## Purposes
-_None_
+---
+## Headline
+A trivial data model for representing families as collections of persons
 
-## Links
-* variationOf(frl)
+---
+## Details
+Persons are identified by name as opposed to reference.
 
-## Representations
-* fnl(graph(term))
-
-## References
-* membership(fnl(graph(term)),mmlChecker,['languages/FNL/mm.graph'])
-
-## Elements
-* [languages/FNL/small-family.graph](../../languages/FNL/small-family.graph)
+---
