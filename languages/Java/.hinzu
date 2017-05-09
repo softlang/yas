@@ -8,6 +8,9 @@
   r([
       id(java(text)),
       extension(java),
-      representationOf(java)
+      representationOf(java),
+      reason(succeed, [
+        instanceOf(extern('OO program'))
+      ])
   ])
 ].

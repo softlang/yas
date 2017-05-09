@@ -2,7 +2,7 @@
   l([
       id(ueber),
       name('Ueber'),
-      headline('A megamodeling language used in the YAS repository'),
+      headline('A declarative megamodeling language used in YAS'),
       details('Ueber is used for build management and regression testing in the YAS repository.'),
       facilitates(extern('Megamodeling')),
       facilitates(extern('Build management')),

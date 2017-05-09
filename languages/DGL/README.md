@@ -4,7 +4,7 @@ Dot-based Graph Language
 
 ---
 ## Headline
-A language for describing graphs to be rendered eventually
+A language for describing graphs
 
 ---
 ## Details

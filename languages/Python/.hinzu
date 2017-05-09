@@ -9,6 +9,9 @@
   r([
       id(python(text)),
       extension(py),
-      representationOf(python)
+      representationOf(python),
+      reason(succeed, [
+        instanceOf(extern('Script'))
+      ])
   ])
 ].

@@ -3,7 +3,7 @@
       id(dgl),
       name('DGL'),
       expansion('Dot-based Graph Language'),
-      headline('A language for describing graphs to be rendered eventually'),
+      headline('A language for describing graphs'),
       details('DGL graphs are eventually translated to DOT and processed with the GraphViz tool.'),
       subsetOf(intern(dot)),
       facilitates(extern('Graph visualization')),
@@ -12,6 +12,9 @@
   r([
       id(dgl(text)),
       extension(dgl),
-      representationOf(dgl)
+      representationOf(dgl),
+      reason(succeed, [
+        instanceOf(extern('Graph representation'))
+      ])
   ])
 ].

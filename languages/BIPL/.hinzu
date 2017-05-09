@@ -13,6 +13,9 @@
   r([
       id(bipl(text)),
       extension(bipl),
-      representationOf(bipl)
+      representationOf(bipl),
+      reason(succeed, [
+        instanceOf(extern('Imperative program'))
+      ])
   ])
 ].

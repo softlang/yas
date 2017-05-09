@@ -9,6 +9,9 @@
   r([
       id(asl(text)),
       extension(asl),
-      representationOf(asl)
+      representationOf(asl),
+      reason(succeed, [
+        instanceOf(extern('Algebraic specification'))
+      ])
   ])
 ].

@@ -2,7 +2,7 @@
   l([
       id(dot),
       name('DOT'),
-      headline('The input language of the Graphviz tool for describing and rendering graphs'),
+      headline('The input language of the Graphviz tool'),
       sameAs(extern('Language:DOT')),
       facilitates(extern('Graph visualization')),
       relatesTo(extern('Technology:Graphviz'))
@@ -10,7 +10,10 @@
   r([
       id(dot(text)),
       extension(dot),
-      representationOf(dot)
+      representationOf(dot),
+      reason(succeed, [
+        instanceOf(extern('Graph representation'))
+      ])
   ])
 ].
 

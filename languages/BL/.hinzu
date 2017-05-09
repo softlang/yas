@@ -3,8 +3,8 @@
       id(bl),
       name('BL'),
       expansion('Buddy Language'),
-      headline('A trivial ontology-oriented language'),
-      details('BL is concerned with the representation of collections of persons and their buddy relationships.'),
+      headline('A trivial language for buddy relationships'),
+      details('BL is an ontology-like language concerned with the representation of collections of persons and their buddy relationships.'),
       similarTo(extern('Language:FOAF'))
   ]),
   r([

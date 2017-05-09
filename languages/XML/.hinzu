@@ -3,7 +3,7 @@
       id(xml),
       name('XML'),
       expansion('Extensible Markup Language'),
-      headline('The well-known markup-based interchange format XML'),
+      headline('The markup-based interchange format XML'),
       sameAs(extern('Language:XML')),
       facilitates(extern('Data exchange')),
       facilitates(extern('Serialization'))
@@ -11,6 +11,9 @@
   r([
       id(xml),
       extension(xml),
-      representationOf(xml)
+      representationOf(xml),
+      reason(succeed, [
+        instanceOf(extern('Markup'))
+      ])
   ])
 ].

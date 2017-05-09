@@ -13,6 +13,9 @@
   r([
       id(bfpl(text)),
       extension(bfpl),
-      representationOf(bfpl)
+      representationOf(bfpl),
+      reason(succeed, [
+        instanceOf(extern('Functional program'))
+      ])
   ])
 ].

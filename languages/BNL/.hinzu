@@ -3,7 +3,7 @@
       id(bnl),
       name('BNL'),
       expansion('Basic Number Language'),
-      headline('A trivial language for the representation of binary numbers')
+      headline('A trivial language for binary numbers')
   ]),
   r([
       id(bnl(text)),

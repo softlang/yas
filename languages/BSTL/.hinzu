@@ -3,7 +3,7 @@
       id(bstl),
       name('BSTL'),
       expansion('Basic Signature Transformation Language'),
-      headline('A transformation language for coupled transformations on signatures and conformant terms'),
+      headline('A trivial language for coupled transformations'),
       dependsOn(intern(bsl)),
       dependsOn(intern(term))
   ]),

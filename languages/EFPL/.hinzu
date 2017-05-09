@@ -13,6 +13,9 @@
   r([
       id(efpl(text)),
       extension(efpl),
-      representationOf(efpl)
+      representationOf(efpl),
+      reason(succeed, [
+        instanceOf(extern('Functional program'))
+      ])
   ])
 ].

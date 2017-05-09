@@ -4,6 +4,6 @@ Extensible Markup Language
 
 ---
 ## Headline
-The well-known markup-based interchange format XML
+The markup-based interchange format XML
 
 ---

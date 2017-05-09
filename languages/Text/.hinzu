@@ -2,7 +2,7 @@
   l([
       id(text),
       name('Text'),
-      headline('Text as a basic representation format used by the YAS repository')
+      headline('Text as a representation format used in YAS')
   ]),
   r([
       id(text),

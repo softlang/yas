@@ -4,6 +4,6 @@ Basic Number Language
 
 ---
 ## Headline
-A trivial language for the representation of binary numbers
+A trivial language for binary numbers
 
 ---

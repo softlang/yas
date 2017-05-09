@@ -4,6 +4,6 @@ Basic Signature Transformation Language
 
 ---
 ## Headline
-A transformation language for coupled transformations on signatures and conformant terms
+A trivial language for coupled transformations
 
 ---

@@ -4,6 +4,6 @@ HyperText Markup Language
 
 ---
 ## Headline
-The standard markup language HTML for web pages and applications
+The standard markup language HTML
 
 ---

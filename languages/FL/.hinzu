@@ -1,0 +1,20 @@
+[
+  l([
+      id(fl),
+      name('FL'),
+      expansion('Family Language'),
+      headline('A trivial language for family modeling')
+  ]),
+  r([
+      id(nfl(graph(term))),
+      representationOf(fl)
+  ]),
+  r([
+      id(rfl1(graph(term))),
+      representationOf(fl)
+  ]),
+  r([
+      id(rfl2(graph(term))),
+      representationOf(fl)
+  ])
+].

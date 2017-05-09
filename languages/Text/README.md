@@ -1,5 +1,5 @@
 # Language *Text*
 ## Headline
-Text as a basic representation format used by the YAS repository
+Text as a representation format used in YAS
 
 ---

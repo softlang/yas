@@ -10,6 +10,9 @@
   r([
       id(ddl(text)),
       extension(ddl),
-      representationOf(ddl)
+      representationOf(ddl),
+      reason(succeed, [
+        instanceOf(extern('Data model'))
+      ])
   ])
 ].

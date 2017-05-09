@@ -50,6 +50,7 @@ dump:
 	@swipl -q -f main.pro -- dump
 
 md:
+	cd ../www/jekyll; make clean
 	@swipl -q -f main.pro -- md
 
 publish:

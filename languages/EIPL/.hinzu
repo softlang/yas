@@ -13,6 +13,9 @@
   r([
       id(eipl(text)),
       extension(eipl),
-      representationOf(eipl)
+      representationOf(eipl),
+      reason(succeed, [
+        instanceOf(extern('Imperative program'))
+      ])
   ])
 ].

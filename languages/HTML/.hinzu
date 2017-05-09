@@ -3,13 +3,16 @@
       id(html),
       name('HTML'),
       expansion('HyperText Markup Language'),
-      headline('The standard markup language HTML for web pages and applications'),
+      headline('The standard markup language HTML'),
       sameAs(extern('Language:HTML')),
       facilitates(extern('Web publishing'))
   ]),
   r([
       id(html(text)),
       extension(html),
-      representationOf(html)
+      representationOf(html),
+      reason(succeed, [
+        instanceOf(extern('Markup'))
+      ])
   ])
 ].

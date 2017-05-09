@@ -9,6 +9,9 @@
       id(prolog(text)),
       extension(pro),
       processor(load),
-      representationOf(prolog)
+      representationOf(prolog),
+      reason(succeed, [
+        instanceOf(extern('Logic program'))
+      ])
   ])
 ].

@@ -1,6 +1,6 @@
 # Language *Ueber*
 ## Headline
-A megamodeling language used in the YAS repository
+A declarative megamodeling language used in YAS
 
 ---
 ## Details

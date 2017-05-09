@@ -4,7 +4,7 @@ Linguistic Architecture Language
 
 ---
 ## Headline
-A megamodeling language used in the YAS repository
+A logic-based megamodeling language used in YAS
 
 ---
 ## Details

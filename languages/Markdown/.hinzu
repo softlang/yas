@@ -8,6 +8,9 @@
   r([
       id(markdown(text)),
       extension(md),
-      representationOf(markdown)
+      representationOf(markdown),
+      reason(succeed, [
+        instanceOf(extern('Markup'))
+      ])
   ])
 ].

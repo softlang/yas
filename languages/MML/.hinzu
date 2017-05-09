@@ -3,7 +3,7 @@
       id(mml),
       name('MML'),
       expansion('MetaModeling Language'),
-      headline('A basic metamodeling language for graph-based abstract syntax'),
+      headline('A basic metamodeling language'),
       facilitates(extern('Syntax definition')),
       facilitates(extern('Metamodeling'))
   ]),

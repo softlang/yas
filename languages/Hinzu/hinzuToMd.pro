@@ -24,7 +24,7 @@ main :-
 languageIndex(Langs) :-
     with_output_to(
 	    codes(Md),
-	    format('---~nlayout: yas~ntitle: YAS languages~n---~n# Index of YAS languages~n~n&nbsp; | YAS-specific?~n--- | ---~n~@', [maplist(hinzuToMd:languageItem, Langs)])),
+	    format('---~nlayout: yas~ntitle: YAS languages~n---~n# ~@: YAS index~n~nLanguage&nbsp;&nbsp; | YAS-specific? | Headline~n--- | ---~n~@', [hinzuToMd:caption('Languages'), maplist(hinzuToMd:languageItem, Langs)])),
     writeTextFile('../www/jekyll/yas/languages.md', Md).
 
 languageItem(json(X)) :-
@@ -37,7 +37,8 @@ languageItem(json(X)) :-
      ;
 	    Checkmark = ''
     ),
-    format('[~w](~w) | ~w~n', [Name, Uri, Checkmark]).
+    member(headline=Headline, X),
+    format('[~w](~w) | ~w | ~w~n', [Name, Uri, Checkmark, Headline]).
 
 languagePage(json(X)) :-
     member(id=Lang, X),
@@ -89,7 +90,7 @@ readme(json(X)) :-
 representationIndex(Reprs) :-
     with_output_to(
 	    codes(Md),
-	    format('---~nlayout: yas~ntitle: YAS representations~n---~n# Index of YAS language representations~n~@', [maplist(hinzuToMd:representationItem, Reprs)])),
+	    format('---~nlayout: yas~ntitle: YAS representations~n---~n# ~@: YAS index~n~@', [hinzuToMd:caption('Representations'), maplist(hinzuToMd:representationItem, Reprs)])),
     writeTextFile('../www/jekyll/yas/representations.md', Md).
 
 representationItem(json(X)) :-
@@ -120,7 +121,7 @@ representationPage(json(X)) :-
 functionIndex(Funcs) :-
     with_output_to(
 	    codes(Md),
-	    format('---~nlayout: yas~ntitle: YAS functions~n---~n# Index of YAS functions~n~@', [maplist(hinzuToMd:functionItem, Funcs)])),
+	    format('---~nlayout: yas~ntitle: YAS functions~n---~n# ~@: YAS index~n~@', [hinzuToMd:caption('Functions'), maplist(hinzuToMd:functionItem, Funcs)])),
     writeTextFile('../www/jekyll/yas/functions.md', Md).
 
 functionItem(json(X)) :-
@@ -144,7 +145,7 @@ functionPage(json(X)) :-
 externalIndex(Exts) :-
     with_output_to(
 	    codes(Md),
-	    format('---~nlayout: yas~ntitle: YAS externals~n---~n# Index of YAS external references~n~@', [maplist(hinzuToMd:externalItem, Exts)])),
+	    format('---~nlayout: yas~ntitle: YAS externals~n---~n# ~@: YAS index~n~@', [hinzuToMd:caption('Externals'), maplist(hinzuToMd:externalItem, Exts)])),
     writeTextFile('../www/jekyll/yas/externals.md', Md).
 
 externalItem(json(X)) :-
@@ -177,19 +178,19 @@ componentItem(json(X)) :-
 % Simple section where content is just a link
 uriSection(Caption, Content) :- 
     Content = '@'(null) -> true;
-    format('## [~w](/yas/captions/~w.html)~n<~w>~n~n---~n', [Caption, Caption, Content]).
+    format('## ~@~n<~w>~n~n---~n', [hinzuToMd:caption(Caption), Content]).
 
 % A section with a linked name
 linkSection(Caption, Json) :- 
     member(name=Name, Json),
     member(uri=Uri, Json),
-    format('## [~w](/yas/captions/~w.html)~n[~w](~w)~n~n---~n', [Caption, Caption, Name, Uri]).
+    format('## ~@~n[~w](~w)~n~n---~n', [hinzuToMd:caption(Caption), Name, Uri]).
 
 % Simple section where content is just paragraph
 paragraphSection(Bool, Caption, Content) :-
     Content = '@'(null) -> true;
     ( Bool ->
-	  format('## [~w](/yas/captions/~w.html)~n~w~n~n---~n', [Caption, Caption, Content])
+	  format('## ~@~n~w~n~n---~n', [hinzuToMd:caption(Caption), Content])
         ; format('## ~w~n~w~n~n---~n', [Caption, Content]) ).
 
 % Section with itemized content subject to a per-item goal
@@ -199,12 +200,12 @@ itemizedSection(Caption, Goal1, Content) :-
      ;
 	  Goal2 = maplist(Goal1, Content)
     ),
-    format('## [~w](/yas/captions/~w.html)~n~@~n~n---~n', [Caption, Caption, Goal2]).
+    format('## ~@~n~@~n~n---~n', [hinzuToMd:caption(Caption), Goal2]).
 
 fileIndex(Files) :-
     with_output_to(
 	    codes(Md),
-	    format('---~nlayout: yas~ntitle: YAS files~n---~n# Index of YAS files~n~@', [maplist(hinzuToMd:fileItem, Files)])),
+	    format('---~nlayout: yas~ntitle: YAS files~n---~n# ~@: YAS index~n~@', [hinzuToMd:caption('Files'), maplist(hinzuToMd:fileItem, Files)])),
     writeTextFile('../www/jekyll/yas/files.md', Md).
 
 fileItem(json(X)) :-
@@ -246,18 +247,18 @@ ueber(C, json(X)) :-
     member(caption=Caption, X),
     member(name=Name, X),
     member(uri=Uri, X),
-    format('~@* ~w *[~w](~w)*~n', [hinzuToMd:indent(C), Caption, Name, Uri]).
+    format('~@* ~@ *[~w](~w)*~n', [hinzuToMd:indent(C), hinzuToMd:caption(Caption), Name, Uri]).
 
 ueber(C, json(X)) :-
     member(caption=Caption, X),
     member(name=Name, X),
     \+ member(uri=_, X),
-    format('~@* ~w *~w*~n', [hinzuToMd:indent(C), Caption, Name]).
+    format('~@* ~@ *~w*~n', [hinzuToMd:indent(C), hinzuToMd:caption(Caption), Name]).
 
 ueber(C0, json(X)) :-
     member(caption=Caption, X),
     member(list=[], X),
-    format('~@* ~w: *None*~n', [hinzuToMd:indent(C0), Caption]).
+    format('~@* ~@: *None*~n', [hinzuToMd:indent(C0), hinzuToMd:caption(Caption)]).
 
 ueber(C0, json(X)) :-
     member(caption=Caption, X),
@@ -268,7 +269,7 @@ ueber(C0, json(X)) :-
     member(caption=Caption, X),
     length(L, Len), Len > 1,
     member(list=L, X),
-    format('~@* ~w~n', [hinzuToMd:indent(C0), Caption]),
+    format('~@* ~@~n', [hinzuToMd:indent(C0), hinzuToMd:caption(Caption)]),
     C1 is C0 + 1,
     maplist(hinzuToMd:ueber(C1), L).
 
@@ -278,7 +279,7 @@ indent(C0) :-
 directoryIndex(Dirs) :-
     with_output_to(
 	    codes(Md),
-	    format('---~nlayout: yas~ntitle: YAS directories~n---~n# Index of YAS directories~n~@', [maplist(hinzuToMd:fileItem, Dirs)])),
+	    format('---~nlayout: yas~ntitle: YAS directories~n---~n# ~@: YAS index~n~@', [hinzuToMd:caption('Directories'), maplist(hinzuToMd:fileItem, Dirs)])),
     writeTextFile('../www/jekyll/yas/directories.md', Md).
 
 directoryPage(json(X)) :-
@@ -300,3 +301,18 @@ directoryPage(json(X)) :-
 			      ]) 
 		   ])),
     writeTextFile(File, Md).
+
+% Output a caption and link to glossary including plural-to-singular normalization
+caption(Term) :-
+    (
+     Term = 'Components' -> Singular = 'Component';
+     Term = 'Dependencies' -> Singular = 'Dependency';
+     Term = 'Directories' -> Singular = 'Directory';
+     Term = 'Externals' -> Singular = 'External';
+     Term = 'Files' -> Singular = 'File';
+     Term = 'Languages' -> Singular = 'Language';
+     Term = 'Properties' -> Singular = 'Property';
+     Term = 'Representations' -> Singular = 'Representation';
+     Singular = Term
+    ),
+    format('[~w](/yas/glossary/~w.html)', [Term, Singular]).

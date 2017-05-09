@@ -9,6 +9,9 @@
   r([
       id(haskell(text)),
       extension(hs),
-      representationOf(haskell)
+      representationOf(haskell),
+      reason(succeed, [
+        instanceOf(extern('Functional program'))
+      ])
   ])
 ].

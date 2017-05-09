@@ -103,8 +103,7 @@ externals(Exts2) :-
 	    Exts2).
 
 representations(ReprsJson) :-
-    setof(Repr, File^Dir^udeclaration(elementOf(File, Repr), Dir), Reprs),
-    master(Master),
+    setof(Repr, Dir^udeclaration(language(Repr), Dir), Reprs),
     findall(json([
 			id='#'(Escaped),
 			name='#'(Repr),
@@ -125,7 +124,9 @@ representations(ReprsJson) :-
 		member(name(LangName), ItemsL),
 		atomic_list_concat(['/yas/languages/', Lang, '.html'], LangUri),
 		reprDependencies(Repr, Deps),
-		setof(File, Dir^udeclaration(elementOf(File, Repr), Dir), Files),
+		once((
+		    setof(File, Dir^udeclaration(elementOf(File, Repr), Dir), Files)
+		  ; Files = [])),
 		findall(json([name='#'(File), uri='#'(FileUri)]),
 			(
 			    member(File, Files),

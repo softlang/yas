@@ -1,8 +1,8 @@
 [
 
   % Metamodel and sample
-  macro(mmlSyntax(fnl)),
-  macro(graphSample(fnl, 'small-family')),
+  macro(mmlSyntax(nfl)),
+  macro(graphSample(nfl, 'small-family')),
 
   % Apply the atomToRef transformation
   elementOf('atomToRef.config', term),
@@ -15,8 +15,8 @@
 	'mm.graph'
     ],
     [ 
-	'../FRL/small-family.graph',
-	'../FRL/mm.graph'
+	'../RFL1/small-family.graph',
+	'../RFL1/mm.graph'
     ])
 
 ].

@@ -3,7 +3,7 @@
       id(lal),
       name('LAL'),
       expansion('Linguistic Architecture Language'),
-      headline('A megamodeling language used in the YAS repository'),
+      headline('A logic-based megamodeling language used in YAS'),
       details('LAL is a predicate logic-based megamodeling language used for capturing properties of language processors and deriving test cases.'),
       facilitates(extern('Megamodeling')),
       facilitates(extern('Testing'))

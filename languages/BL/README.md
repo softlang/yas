@@ -4,10 +4,10 @@ Buddy Language
 
 ---
 ## Headline
-A trivial ontology-oriented language
+A trivial language for buddy relationships
 
 ---
 ## Details
-BL is concerned with the representation of collections of persons and their buddy relationships.
+BL is an ontology-like language concerned with the representation of collections of persons and their buddy relationships.
 
 ---

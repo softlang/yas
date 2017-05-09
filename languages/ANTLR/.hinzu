@@ -13,6 +13,12 @@
       id(antlr(text)),
       extension(g),
       extension(g4),
-      representationOf(antlr)
+      representationOf(antlr),
+      reason(succeed, [
+        instanceOf(extern('Context-free grammar'))
+      ]),
+      reason(hinzuReasoning:testContextFree, [
+        defines(extern('Context-free syntax'))
+      ])      
   ])
 ].

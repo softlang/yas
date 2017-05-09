@@ -3,7 +3,7 @@
       id(fsml),
       name('FSML'),
       expansion('Finite State Machine Language'),
-      headline('A simple domain-specific language for finite state machines'),
+      headline('A domain-specific language for finite state machines'),
       facilitates(extern('Behavioral modeling'))
   ]),
   r([

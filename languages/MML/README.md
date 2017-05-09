@@ -4,6 +4,6 @@ MetaModeling Language
 
 ---
 ## Headline
-A basic metamodeling language for graph-based abstract syntax
+A basic metamodeling language
 
 ---

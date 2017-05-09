@@ -9,6 +9,9 @@
   ]),
   r([
       id(bcl(term)),
-      representationOf(bcl)
+      representationOf(bcl),
+      reason(succeed, [
+        instanceOf(extern('Parse tree'))
+      ])
   ])
 ].

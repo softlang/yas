@@ -1,5 +1,5 @@
 [
-    macro(mmlSyntax(frl2)),
+    macro(mmlSyntax(rfl2)),
 
     % Parse DDL-based representation
     macro(parseFile('dd.ddl')),

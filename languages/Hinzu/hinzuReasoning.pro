@@ -64,7 +64,7 @@ testContextFree(File) :- file_base_name(File, 'cs.egl').
 
 annotateReprs :-
     setof(Repr,
-	  File^Dir^udeclaration(elementOf(File, Repr), Dir),
+	  Dir^udeclaration(language(Repr), Dir),
 	  ReprsUsed),
     setof(Repr,
 	    Items^Dir^(

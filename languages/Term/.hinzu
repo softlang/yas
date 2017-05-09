@@ -2,7 +2,7 @@
   l([
       id(term),
       name('Term'),
-      headline('Prolog terms as a basic representation format used by the YAS repository')
+      headline('Prolog terms as a representation format used in YAS')
   ]),
   r([
       id(term),

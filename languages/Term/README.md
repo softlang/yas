@@ -1,5 +1,5 @@
 # Language *Term*
 ## Headline
-Prolog terms as a basic representation format used by the YAS repository
+Prolog terms as a representation format used in YAS
 
 ---
