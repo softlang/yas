@@ -1,7 +1,8 @@
 % Graphs are equal if they have the same normal form
 graphEq(D1, D2) :-
-  graphNf(D1, D),
-  graphNf(D2, D).
+  once(graphNf(D1, D3)),
+  once(graphNf(D2, D4)),
+  D3 = D4.
 
 % Start normalization with empty mapping
 graphNf(D1, D2) :-

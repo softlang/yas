@@ -1,0 +1,63 @@
+// Documentation of contributions
+class contribution {
+  value name : string; // The name of the contribution
+  value headline : string; // A one-liner explanation
+  part sections : section+; // Sections of the documentation
+}
+
+// Sections in a documentation
+class section {
+  value features : string+; // Features addressed by section
+  value headline : string?; // Optional one-liner explanation
+  part projection : projection; // Link to evidence such as code  
+  part perspective : perspective; // Perspective of section
+}
+
+// Projections of contributions
+abstract class projection {
+  value link : string; // A URI (or part thereof)
+}
+// Implementation of contribution
+class implementation extends projection {
+  value languages : string*; // Languages used, if not implicit
+  value technologies : string*; // Technologies used
+  value concepts : string*; // Concepts used or addressed
+  part selection : selection?; // Lines, if any, to show
+}
+// Illustration of contribution
+class illustration extends projection { }
+
+// Selection of artifacts' lines, if any, to show
+abstract class selection { }
+// Nothing to show
+class nothing extends selection { }
+// All to show
+class all extends selection { }
+// An excerpt to show
+class excerpt extends selection {
+  part folded : range;
+  part unfolded : range?;
+}
+
+// A lines range
+class range {
+  value from : integer;
+  value to : integer;
+}
+
+// Perspectives of documentation
+abstract class perspective { }
+// Metaprogram
+class meta extends perspective { }
+// Object program
+class object extends perspective { }
+// Metaprogram data other than object programs
+class data extends perspective { }
+// Application of metaprogram
+class application extends perspective { }
+
+// BEGIN ...
+// Trivia: datatypes used
+datatype string;
+datatype integer;
+// END ...

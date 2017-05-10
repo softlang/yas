@@ -72,4 +72,4 @@ memberType(MM, Kind, Id) :-
 % Extension of cardinality type
 cardinality(O) :-
   permute(O, [(class, Class)]),
-  member(Class, [one, star, option]).
+  member(Class, [one, option, star, plus]).

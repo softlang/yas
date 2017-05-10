@@ -13,8 +13,8 @@ class part extends member { reference type : class; }
 class reference extends member { reference type : class; }
 abstract class cardinality { }
 class one extends cardinality { }
+class option extends cardinality { }
 class star extends cardinality { }
 class plus extends cardinality { }
-class option extends cardinality { }
 datatype string;
 datatype boolean;

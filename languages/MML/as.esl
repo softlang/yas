@@ -8,6 +8,7 @@ symbol reference : -> kind ;
 symbol one : -> cardinality ;
 symbol option : -> cardinality ;
 symbol star : -> cardinality ;
+symbol plus : -> cardinality ;
 type abstract = boolean ;
 type extends = cname ;
 type cname = string ;

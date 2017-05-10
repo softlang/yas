@@ -1,0 +1,16 @@
+[
+  l([
+      id(mldf),
+      name('MLDF'),
+      expansion('MetaLib Documentation Format'),
+      headline('A domain-specific documentation format'),
+      facilitates(extern('Documentation'))
+  ]),
+  r([
+      id(mldf(text)),
+      representationOf(mldf),
+      reason(succeed, [
+        instanceOf(extern('Documentation'))
+      ])
+  ])
+].

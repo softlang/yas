@@ -27,9 +27,9 @@
     (reference&{class:class,name:reference,abstract:false,super:[#member],members:[{class:reference,name:type,type: #class,cardinality:{class:one}}]}),
     (cardinality&{class:class,name:cardinality,abstract:true,super:[],members:[]}),
     (one&{class:class,name:one,abstract:false,super:[#cardinality],members:[]}),
+    (option&{class:class,name:option,abstract:false,super:[#cardinality],members:[]}),
     (star&{class:class,name:star,abstract:false,super:[#cardinality],members:[]}),
     (plus&{class:class,name:plus,abstract:false,super:[#cardinality],members:[]}),
-    (option&{class:class,name:option,abstract:false,super:[#cardinality],members:[]}),
     (string&{class:datatype,name:string}),
     (boolean&{class:datatype,name:boolean})
 % END ...
