@@ -1,5 +1,5 @@
 // Documentation of contributions
-class contribution {
+class document {
   value name : string; // The name of the contribution
   value headline : string; // A one-liner explanation
   part sections : section+; // Sections of the documentation
@@ -9,52 +9,48 @@ class contribution {
 class section {
   value features : string+; // Features addressed by section
   value headline : string?; // Optional one-liner explanation
-  part projection : projection; // Link to evidence such as code  
   part perspective : perspective; // Perspective of section
-}
-
-// Projections of contributions
-abstract class projection {
-  value link : string; // A URI (or part thereof)
-}
-// Implementation of contribution
-class implementation extends projection {
-  value languages : string*; // Languages used, if not implicit
-  value technologies : string*; // Technologies used
-  value concepts : string*; // Concepts used or addressed
-  part selection : selection?; // Lines, if any, to show
-}
-// Illustration of contribution
-class illustration extends projection { }
-
-// Selection of artifacts' lines, if any, to show
-abstract class selection { }
-// Nothing to show
-class nothing extends selection { }
-// All to show
-class all extends selection { }
-// An excerpt to show
-class excerpt extends selection {
-  part folded : range;
-  part unfolded : range?;
-}
-
-// A lines range
-class range {
-  value from : integer;
-  value to : integer;
+  part projection : projection; // Link to evidence such as code  
 }
 
 // Perspectives of documentation
 abstract class perspective { }
-// Metaprogram
+// Metaprogram, e.g., grammar or interpreter
 class meta extends perspective { }
-// Object program
+// Object program in different representations
 class object extends perspective { }
-// Metaprogram data other than object programs
+// Data other than object programs, e.g., input
 class data extends perspective { }
-// Application of metaprogram
-class application extends perspective { }
+// Test for functionality
+class test extends perspective { }
+// Build-step for functionality
+class build extends perspective { }
+
+// Projections of contributions
+abstract class projection {
+  value link : string; // A relative or absolute URI
+  value format : string; // MIME-like format type
+  value languages : string*; // Languages used
+  value technologies : string*; // Technologies used
+  value concepts : string*; // Concepts used
+  part selection : selection?; // Lines, if any, to show
+}
+// Component of contribution
+class component extends projection { }
+// Extra artifact captured for illustration 
+class capture extends projection { }
+
+// Selection of artifacts' lines, if any, to show
+abstract class selection { }
+// Nothing to show
+class none extends selection { }
+// All to show
+class all extends selection { }
+// A specific line range to show
+class some extends selection {
+  value from : integer;
+  value to : integer;
+}
 
 // BEGIN ...
 // Trivia: datatypes used
