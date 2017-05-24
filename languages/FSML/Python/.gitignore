@@ -1,6 +1,1 @@
-Fsml.tokens
-FsmlLexer.tokens
-FsmlLexer.py
-FsmlParser.py
-FsmlListener.py
 *.pyc
