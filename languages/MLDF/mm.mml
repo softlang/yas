@@ -28,26 +28,27 @@ class build extends perspective { }
 
 // Projections of contributions
 abstract class projection {
-  value link : string; // A relative or absolute URI
-  value format : string; // MIME-like format type
+  part artifacts : artifact+; // Artifacts to be shown
   value languages : string*; // Languages used
   value technologies : string*; // Technologies used
   value concepts : string*; // Concepts used
-  part selection : selection?; // Lines, if any, to show
 }
 // Component of contribution
 class component extends projection { }
 // Extra artifact captured for illustration 
 class capture extends projection { }
 
-// Selection of artifacts' lines, if any, to show
-abstract class selection { }
+// Artifacts for projection
+abstract class artifact {
+  value link : string; // A relative or absolute URI
+  value format : string; // MIME-like format type
+}
 // Nothing to show
-class none extends selection { }
+class none extends artifact { }
 // All to show
-class all extends selection { }
+class all extends artifact { }
 // A specific line range to show
-class some extends selection {
+class some extends artifact {
   value from : integer;
   value to : integer;
 }
