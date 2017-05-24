@@ -32,7 +32,7 @@ public class FsmlParserTest2 {
 	@Test
 	public void runSample() throws IOException {
 		Fsm sample = textToObjects("../sample.fsml");
-		assertArrayEquals(output, new FsmlSimulator(new FsmlObservationImpl(sample)).run(input));
+		assertArrayEquals(output, new FsmlInterpreter(new FsmlObservationImpl(sample)).run(input));
 	}
 }
 // END ...

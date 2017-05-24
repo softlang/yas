@@ -5,9 +5,9 @@ import java.util.ArrayList;
 
 import org.softlang.fsml.fluent.ActionStatePair;
 // END ...
-public class FsmlSimulator {
+public class FsmlInterpreter {
 	private FsmlObservation fsm;
-	public FsmlSimulator(FsmlObservation fsm) { this.fsm = fsm; }
+	public FsmlInterpreter(FsmlObservation fsm) { this.fsm = fsm; }
 	public String[] run(String[] input) {
 		ArrayList<String> output = new ArrayList<>();
 		String state = fsm.getInitial();
