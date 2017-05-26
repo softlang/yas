@@ -2,7 +2,14 @@
 class document {
   value name : string; // The name of the contribution
   value headline : string; // A one-liner explanation
+  part namespaces : namespace+; // Namespaces for links
   part sections : section+; // Sections of the documentation
+}
+
+// Prefix/URL pairs
+class namespace {
+  value prefix : string;
+  value url : string;
 }
 
 // Sections in a documentation
@@ -10,7 +17,7 @@ class section {
   value features : string+; // Features addressed by section
   value headline : string?; // Optional one-liner explanation
   part perspective : perspective; // Perspective of section
-  part projection : projection; // Link to evidence such as code  
+  part projection : projection; // Evidence such as code  
 }
 
 // Perspectives of documentation
@@ -40,7 +47,7 @@ class capture extends projection { }
 
 // Artifacts for projection
 abstract class artifact {
-  value link : string; // A relative or absolute URI
+  part link : link; // A structured link
   value format : string; // MIME-like format type
 }
 // Nothing to show
@@ -51,6 +58,12 @@ class all extends artifact { }
 class some extends artifact {
   value from : integer;
   value to : integer;
+}
+
+// Links in a namespace
+class link {
+  value prefix : string; // Prefix of namespace
+  value relative : string; // Relative URL
 }
 
 // BEGIN ...
