@@ -1,0 +1,8 @@
+[
+  d([
+      implements(intern(bipl)),
+      instanceOf(extern('Program analysis')),
+      uses(extern('Language:Haskell')),
+      headline('Abstract interpretation (sign analysis) for BIPL implemented in Haskell')
+  ])
+].

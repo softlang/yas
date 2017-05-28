@@ -1,0 +1,8 @@
+[
+  d([
+      implements(intern(bipl)),
+      instanceOf(extern('Language implementation')),
+      uses(extern('Language:Haskell')),
+      headline('Monadic algebra-based interpretation of BIPL implemented in Haskell')
+  ])
+].

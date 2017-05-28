@@ -1,0 +1,8 @@
+[
+  d([
+      implements(intern(bipl)),
+      instanceOf(extern('Language implementation')),
+      uses(extern('Language:Haskell')),
+      headline('BIPL-related functionality implemented in Haskell')
+  ])
+].

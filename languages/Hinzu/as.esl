@@ -6,19 +6,21 @@ symbol f : item* -> decl ; // Files in the repository
 symbol d : item* -> decl ; // Directories in the repository
 
 // General metadata items
-symbol id : id -> item ; // Every decl needs an id
-symbol name : string -> item ; // Name of a language
-symbol expansion : string -> item ; // Expanded name of a language when name is acronym
-symbol headline : string -> item ; // One liner explanation of a language
-symbol details : string -> item ; // An optional paragraph for explanation of a language
+symbol id : id -> item ; // Some decls need an id
+symbol name : string -> item ; // Name of an entity such as a language
+symbol expansion : string -> item ; // Expansion in case the name is an acronym
+symbol headline : string -> item ; // One liner explanation of the entity
+symbol details : string -> item ; // An optional paragraph for explanation of the entity
 
 // Semantic links
 symbol instanceOf : link -> item ; // An entity being an instance of a classifier
 symbol sameAs : link -> item ; // Identity link
 symbol similarTo : link -> item ; // Weak identity link
 symbol relatesTo : link -> item ; // Degenerated identity link
-symbol facilitates : link -> item ; // A language facilitates some concept
-symbol defines : link -> item ; // A file defines some concept
+symbol uses : link -> item ; // An entity uses another entity
+symbol facilitates : link -> item ; // A language facilitates a concept
+symbol defines : link -> item ; // A file or directory defines a concept
+symbol implements : link -> item ; // A file or directory implements a language
 symbol supports : link -> item ; // An entity supports some entity
 symbol subsetOf : link -> item ; // A language is a subset of another language
 symbol supersetOf : link -> item ; // A language is a subset of another language

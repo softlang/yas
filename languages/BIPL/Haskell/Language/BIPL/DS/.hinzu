@@ -1,0 +1,8 @@
+[
+  d([
+      implements(intern(bipl)),
+      instanceOf(extern('Interpreter')),
+      uses(extern('Language:Haskell')),
+      headline('Direct style denotational semantics of BIPL implemented in Haskell')
+  ])
+].

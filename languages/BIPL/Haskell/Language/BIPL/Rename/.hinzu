@@ -1,0 +1,8 @@
+[
+  d([
+      implements(intern(bipl)),
+      instanceOf(extern('Transformation')),
+      uses(extern('Language:Haskell')),
+      headline('Implementation of renaming BIPL variables in Haskell')
+  ])
+].

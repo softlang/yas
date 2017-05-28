@@ -151,14 +151,21 @@ representations(Lang, Reprs) :-
 components(Dir, Comps) :-
     wiki(Wiki),
     findall(json([
-			subject=json([name='#'(File), uri='#'(FileUri)]),
+			subject=json([name='#'(FileOrDir), uri='#'(FileOrDirUri)]),
 			property=json([name=instanceOf, uri=PropUri]),
 			object=json([name=ObjName, uri='#'(ObjUri)])
 		]),
 	    (
-		hdeclaration(f(Items), Dir),
-		member(id(File), Items),
-		filenameToUri(File, FileUri),
+		(
+		  hdeclaration(f(Items), Dir),
+		  member(id(FileOrDir), Items),
+		  filenameToUri(FileOrDir, FileOrDirUri)
+		;
+		  hdeclaration(d(Items), FileOrDir),
+		  atom_concat(Dir, _, FileOrDir),
+		  \+ Dir == FileOrDir,
+		  dirnameToUri(FileOrDir, FileOrDirUri)
+		),
 		member(instanceOf(extern(ObjName)), Items),
 		atomic_list_concat([Wiki, ObjName], ObjUri),
 		atomic_list_concat([Wiki, 'Property:instanceOf'], PropUri)
@@ -354,10 +361,7 @@ directories(Dirs) :-
 		    ]),
 	    (
 		member(Dir, SortedDirSet),
-		once((
-		    hdeclaration(d(Items), _),
-		    member(id(Dir), Items)
-		  ; Items=[])),
+		once((hdeclaration(d(Items), Dir); Items=[])),
                 escapeFilename(Dir, Escaped),
 		dirnameToUri(Dir, Uri),
 		atomic_list_concat([Master, '/', Dir], Github),
@@ -403,7 +407,7 @@ master('https://github.com/softlang/yas/tree/master').
 wiki('https://101wiki.softlang.org/').
 
 % All of 101wiki's property symbols
-psymbols([instanceOf, sameAs, similarTo, relatesTo, facilitates, defines, subsetOf, supersetOf, embeds, dependsOn, linksTo]).
+psymbols([instanceOf, sameAs, similarTo, relatesTo, uses, facilitates, defines, subsetOf, supersetOf, embeds, dependsOn, linksTo]).
 
 % Tell Prolog to convert term to string
 show(X, '#'(X)).

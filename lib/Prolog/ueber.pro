@@ -63,9 +63,6 @@ process_dir(HinzuDump, Dir) :-
   % Process Ueber file
   maplist(ueber, UeberTerm),
 
-  % Recurse into subdirectories
-  map(process_dir(HinzuDump), Dirs),
-
   % Check for Hinzu file
   atom_concat(Dir, '/.hinzu', HinzuFile),
   ( exists_file(HinzuFile) ->
@@ -74,6 +71,9 @@ process_dir(HinzuDump, Dir) :-
       ;
         true
   ),
+  
+  % Recurse into subdirectories
+  map(process_dir(HinzuDump), Dirs),
   
   % Leave directory
   nb_setval(ueber_level, OldLevel),
