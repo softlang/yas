@@ -22,10 +22,6 @@ class section {
   value concepts : string*; // Concepts used
   part artifacts : artifact+; // Artifacts to be shown
 }
-// Component of contribution
-class component extends section { }
-// Extra artifact captured for illustration 
-class capture extends section { }
 
 // Perspectives of documentation
 abstract class perspective { }
@@ -35,10 +31,12 @@ class meta extends perspective { }
 class object extends perspective { }
 // Data other than object programs, e.g., input
 class data extends perspective { }
-// Test for functionality
-class test extends perspective { }
 // Build-step for functionality
 class build extends perspective { }
+// Test for functionality
+class test extends perspective { }
+// Capture of behavior or appearance
+class capture extends perspective { }
 
 // Artifacts for projection
 abstract class artifact {
