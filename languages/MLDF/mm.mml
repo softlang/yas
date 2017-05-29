@@ -2,7 +2,7 @@
 class document {
   value name : string; // The name of the contribution
   value headline : string; // A one-liner explanation
-  part baseuri : string?; // Base URI for links
+  value baseuri : string; // Base URI for links
   part sections : section+; // Sections of the documentation
 }
 
@@ -34,7 +34,7 @@ class capture extends perspective { }
 
 // Artifacts for projection
 abstract class artifact {
-  part link : string; // A relative or absolute URI
+  value link : string; // A relative URI
   value format : string; // MIME-like format type
 }
 // Nothing to show
