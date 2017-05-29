@@ -15,7 +15,7 @@ class namespace {
 // Sections in a documentation
 class section {
   value headline : string?; // Optional one-liner explanation
-  part perspective : perspective; // Perspective of section
+  part perspectives : perspective+; // Perspective of section
   value features : string+; // Features addressed by section
   value languages : string*; // Languages used
   value technologies : string*; // Technologies used
