@@ -17,8 +17,15 @@ class section {
   value features : string+; // Features addressed by section
   value headline : string?; // Optional one-liner explanation
   part perspective : perspective; // Perspective of section
-  part projection : projection; // Evidence such as code  
+  part artifacts : artifact+; // Artifacts to be shown
+  value languages : string*; // Languages used
+  value technologies : string*; // Technologies used
+  value concepts : string*; // Concepts used
 }
+// Component of contribution
+class component extends section { }
+// Extra artifact captured for illustration 
+class capture extends section { }
 
 // Perspectives of documentation
 abstract class perspective { }
@@ -32,18 +39,6 @@ class data extends perspective { }
 class test extends perspective { }
 // Build-step for functionality
 class build extends perspective { }
-
-// Projections of contributions
-abstract class projection {
-  part artifacts : artifact+; // Artifacts to be shown
-  value languages : string*; // Languages used
-  value technologies : string*; // Technologies used
-  value concepts : string*; // Concepts used
-}
-// Component of contribution
-class component extends projection { }
-// Extra artifact captured for illustration 
-class capture extends projection { }
 
 // Artifacts for projection
 abstract class artifact {
