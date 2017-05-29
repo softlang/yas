@@ -14,13 +14,13 @@ class namespace {
 
 // Sections in a documentation
 class section {
-  value features : string+; // Features addressed by section
   value headline : string?; // Optional one-liner explanation
   part perspective : perspective; // Perspective of section
-  part artifacts : artifact+; // Artifacts to be shown
+  value features : string+; // Features addressed by section
   value languages : string*; // Languages used
   value technologies : string*; // Technologies used
   value concepts : string*; // Concepts used
+  part artifacts : artifact+; // Artifacts to be shown
 }
 // Component of contribution
 class component extends section { }
