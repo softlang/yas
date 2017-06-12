@@ -18,21 +18,15 @@ class section {
 }
 
 // Perspectives of documentation
-abstract class perspective { }
-// Metaprogram, e.g., grammar or interpreter
-class meta extends perspective { }
-// Object program in different representations
-class object extends perspective { }
-// Data other than object programs, e.g., input
-class data extends perspective { }
-// Build-step for functionality
-class build extends perspective { }
-// Test for functionality
-class test extends perspective { }
-// Capture of behavior or appearance
-class capture extends perspective { }
+enum perspective {
+  implementation, // i.e., feature implementation
+  data, // e.g., instance of grammar or metamodel
+  test, //  i.e., application of implementation
+  build, // e.g., code generator application
+  capture // e.g., screenshot or session log
+}
 
-// Artifacts for projection
+// Artifacts for projected by section
 abstract class artifact {
   value link : string; // A relative URI
   value format : string; // MIME-like format type

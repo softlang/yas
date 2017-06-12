@@ -1,5 +1,6 @@
 metamodel : { classifier }* ;
 [datatype] classifier : 'datatype' name ';' ;
+[enum] classifier : 'enum' name '{' name {',' name}* '}' ;
 [class] classifier : abstract 'class' name super members ;
 super : { 'extends' name }? ;
 [abstract] abstract : 'abstract' ;
