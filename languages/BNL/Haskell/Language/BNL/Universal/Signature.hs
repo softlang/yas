@@ -1,23 +1,12 @@
 -- BEGIN ...
-module Language.BSL.Sample where
+module Language.BNL.Universal.Signature where
 import Language.BSL.Syntax
-import Data.TermRep
 -- END ...
-sampleSignature = 
+bnlSignature :: Signature
+bnlSignature =
   [ ("number", ["bits", "rest"], "number"),
     ("single", ["bit"], "bits"),
     ("many", ["bit", "bits"], "bits"),
     ("zero", [], "bit"), ("one", [], "bit"),
     ("integer", [], "rest"),
     ("rational", ["bits"], "rest") ]
-
-sampleTermRep =
-  TermRep "number" [
-    TermRep "many" [
-      TermRep "one" [],
-      TermRep "single" [
-        TermRep "zero" []
-      ]
-    ],
-    TermRep "integer" []
-  ]

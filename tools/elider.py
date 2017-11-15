@@ -33,6 +33,7 @@ exts["dot"] = None
 exts["pro"] = ("% BEGIN ...", "% END ...", "% ...")
 exts["ueber"] = ("% BEGIN ...", "% END ...", "% ...")
 exts["term"] = exts["pro"]
+exts["dcg"] = exts["pro"]
 exts["lalconfig"] = exts["pro"]
 exts["graph"] = exts["pro"]
 exts["tree"] = exts["pro"]

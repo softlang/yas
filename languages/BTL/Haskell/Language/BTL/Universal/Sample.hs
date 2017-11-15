@@ -4,8 +4,8 @@ import Data.TermRep
 -- END ...
 sampleExpr :: TermRep
 sampleExpr =
-  TermRep "Pred" [
-    TermRep "If" [
-      TermRep "IsZero" [TermRep "Zero" []],
-      TermRep "Succ" [TermRep "Zero" []],
-      TermRep "Zero" [] ]]
+  TermRep "pred" [
+    TermRep "if" [
+      TermRep "iszero" [TermRep "zero" []],
+      TermRep "succ" [TermRep "succ" [TermRep "zero" []]],
+      TermRep "zero" [] ]]

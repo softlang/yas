@@ -18,8 +18,8 @@ check fsm = concatMap ($ fsm) [
 distinctStateIds :: Fsm -> [String]
 distinctStateIds (Fsm ss) = map ("Multiple declarations of state " ++) doubles
   where
-    sids = [ sid | (State _ sid _) <- ss ]
     doubles = (\\) sids (nub sids)
+    sids = [ sid | (State _ sid _) <- ss ]
 -- ...
 -- BEGIN ...
 singleInitialState :: Fsm -> [String]

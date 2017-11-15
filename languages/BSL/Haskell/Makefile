@@ -1,4 +1,4 @@
-ghci = ghci Main.hs -i.:../../../lib/Haskell
+ghci = ghci Main.hs -i.:../../BNL/Haskell:../../BTL/Haskell:../../../lib/Haskell
 
 test:
 	@echo main | ${ghci}

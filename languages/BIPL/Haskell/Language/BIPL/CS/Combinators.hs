@@ -16,4 +16,4 @@ seq' = (.)
 if' :: StoreO -> StoreTT -> StoreTT -> StoreTT
 if' f g h c = DS.if' f (g c) (h c)
 while' :: StoreO -> StoreTT -> StoreTT
-while' f g c = fix h c where h t = if' f (seq' g t) skip'
+while' f g = fix h where h t = if' f (seq' g t) skip'

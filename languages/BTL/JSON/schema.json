@@ -31,9 +31,9 @@
         "properties": {
           "if": {
             "properties": {
-              "x": { "$ref": "" },
-              "y": { "$ref": "" },
-              "z": { "$ref": "" }
+              "cond": { "$ref": "" },
+              "then": { "$ref": "" },
+              "else": { "$ref": "" }
             },
             "required": [ "x", "y", "z" ],
             "additionalProperties": false 

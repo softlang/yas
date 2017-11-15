@@ -8,5 +8,5 @@ steps f e =
   if isValue e
     then Just e
     else case f e of
-           (Just e') -> steps f e'
+           Just e' -> steps f e'
            Nothing -> Nothing

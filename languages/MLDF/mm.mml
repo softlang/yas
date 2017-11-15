@@ -31,12 +31,9 @@ abstract class artifact {
   value link : string; // A relative URI
   value format : string; // MIME-like format type
 }
-// Nothing to show
-class none extends artifact { }
-// All to show
-class all extends artifact { }
-// A specific line range to show
-class some extends artifact {
+class none extends artifact { } // Nothing to show
+class all extends artifact { } // All to show
+class some extends artifact { // A specific line range to show
   value from : integer;
   value to : integer;
 }

@@ -5,25 +5,25 @@ import Data.TermRep
 import Data.Term
 -- END ...
 instance Term Expr where
-  toTermRep TRUE = TermRep "TRUE" []
-  toTermRep FALSE = TermRep "FALSE" []
-  toTermRep Zero = TermRep "Zero" []
-  toTermRep (Succ e) = TermRep "Succ" [toTermRep e]
+  toTermRep TRUE = TermRep "true" []
+  toTermRep FALSE = TermRep "false" []
+  toTermRep Zero = TermRep "zero" []
+  toTermRep (Succ e) = TermRep "succ" [toTermRep e]
   -- ...
 -- BEGIN ...
-  toTermRep (Pred e) = TermRep "Pred" [toTermRep e]
-  toTermRep (IsZero e) = TermRep "IsZero" [toTermRep e]
-  toTermRep (If e0 e1 e2) = TermRep "If" (map toTermRep [e0, e1, e2])
+  toTermRep (Pred e) = TermRep "pred" [toTermRep e]
+  toTermRep (IsZero e) = TermRep "iszero" [toTermRep e]
+  toTermRep (If e0 e1 e2) = TermRep "if" (map toTermRep [e0, e1, e2])
 -- END ...
-  fromTermRep (TermRep "TRUE" []) = TRUE
-  fromTermRep (TermRep "FALSE" []) = FALSE
-  fromTermRep (TermRep "Zero" []) = Zero
-  fromTermRep (TermRep "Succ" [t]) = Succ (fromTermRep t)
+  fromTermRep (TermRep "true" []) = TRUE
+  fromTermRep (TermRep "false" []) = FALSE
+  fromTermRep (TermRep "zero" []) = Zero
+  fromTermRep (TermRep "succ" [t]) = Succ (fromTermRep t)
   -- ...
 -- BEGIN ...
-  fromTermRep (TermRep "Pred" [t]) = Pred (fromTermRep t)
-  fromTermRep (TermRep "IsZero" [t]) = IsZero (fromTermRep t)
-  fromTermRep (TermRep "If" [t0, t1, t2]) = If e0 e1 e2
+  fromTermRep (TermRep "pred" [t]) = Pred (fromTermRep t)
+  fromTermRep (TermRep "iszero" [t]) = IsZero (fromTermRep t)
+  fromTermRep (TermRep "if" [t0, t1, t2]) = If e0 e1 e2
     where
       e0 = fromTermRep t0
       e1 = fromTermRep t1

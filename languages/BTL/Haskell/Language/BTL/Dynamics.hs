@@ -3,11 +3,11 @@ module Language.BTL.Dynamics where
 import Data.TermRep
 -- END ...
 expr :: TermRep -> Bool
-expr (TermRep "TRUE" []) = True
-expr (TermRep "FALSE" []) = True
-expr (TermRep "Zero" []) = True
-expr (TermRep "Succ" [e]) = expr e
-expr (TermRep "Pred" [e]) = expr e
-expr (TermRep "IsZero" [e]) = expr e
-expr (TermRep "If" es@[_,_,_]) = and (map expr es)
+expr (TermRep "true" []) = True
+expr (TermRep "false" []) = True
+expr (TermRep "zero" []) = True
+expr (TermRep "succ" [e]) = expr e
+expr (TermRep "pred" [e]) = expr e
+expr (TermRep "iszero" [e]) = expr e
+expr (TermRep "if" es@[_,_,_]) = and (map expr es)
 expr _ = False

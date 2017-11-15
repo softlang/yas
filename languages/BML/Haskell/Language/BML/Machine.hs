@@ -1,7 +1,7 @@
 -- BEGIN ...
 module Language.BML.Machine (run) where
 import Language.BML.Syntax
-import Data.Map
+import Data.Map (Map, empty, insert, (!))
 -- END ...
 type Memory = Map Int Int
 type Stack = [Int]
