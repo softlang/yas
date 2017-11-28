@@ -14,5 +14,4 @@ turnstileFsm = Fsm [
     (Transition "ticket" (Just "eject") "exception"),
     (Transition "pass" Nothing "exception"),
     (Transition "mute" Nothing "exception"),
-    (Transition "release" Nothing "locked") ]
- ]
+    (Transition "release" Nothing "locked") ] ]

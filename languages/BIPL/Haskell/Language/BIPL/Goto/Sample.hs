@@ -6,7 +6,7 @@ import Language.BIPL.Syntax (Expr(..), UOp(..), BOp(..))
 euclideanDiv :: Stmt
 euclideanDiv =
 
-  -- Sample operands for Euclidian division
+  -- Sample operands for Euclidean division
    Seq (Assign "x" (IntConst 14))
   (Seq (Assign "y" (IntConst 4))
 
