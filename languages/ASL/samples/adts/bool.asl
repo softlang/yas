@@ -10,10 +10,10 @@ functions
 equations
   not(true) = false
   not(false) = true
-  add(false, false) = false
-  add(false, true) = false
-  add(true, false) = false
-  add(true, true) = true
+  and(false, false) = false
+  and(false, true) = false
+  and(true, false) = false
+  and(true, true) = true
   or(false, false) = false
   or(false, true) = true
   or(true, false) = true
