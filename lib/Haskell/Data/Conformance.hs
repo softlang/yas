@@ -1,0 +1,6 @@
+-- BEGIN ...
+{-# LANGUAGE MultiParamTypeClasses #-}
+module Data.Conformance where
+-- END ...
+class Conformance a b where
+  conformsTo :: a -> b -> Bool

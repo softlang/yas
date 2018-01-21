@@ -1,0 +1,14 @@
+# URAL: URA Language
+
+URA: Unified Resource Accessor
+
+# Haskell spec
+
+* [Syntax of URAs](Language/URAL/Syntax.hs)
+* [Syntax of representations](Language/URAL/Repr/Syntax.hs) on which to define semantics
+* [Semantics of URAs](Language/URAL/Semantics.hs)
+* [Completion of representations](Language/URAL/Completion.hs) to define next URA axes
+* [Metamodel syntax](Language/URAL/Meta/Syntax.hs) for representations
+* [Well-formedness of metamodels](Language/URAL/Meta/Wf.hs)
+* [Conformance of representations to metamodels](Language/URAL/Repr/Conformance.hs)
+* [Conformance of URAs to metamodels](Language/URAL/Conformance.hs)
