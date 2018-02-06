@@ -15,7 +15,7 @@ functions
   isNil : List -> Bool // Test for nil list
   length : List -> Nat // Number of elements in the list
   append : List x List -> List // Append two lists
-  snoc : Elem x List -> List // Friend of cons
+  snoc : List x Elem -> List // Friend of cons
   last : List -> Elem? // Last element
   init : List -> List? // List without last
 variables
@@ -32,6 +32,6 @@ equations
   length(cons(e, l)) = succ(length(l))
   append(nil, l) = l
   append(cons(e, l1), l2) = cons(e, append(l1, l2))
-  snoc(e, l) = append(cons(e, nil), l)
+  snoc(l, e) = append(l, cons(e, nil))
   last(l) = if isNil(tail(l)) then head(l) else last(tail(l))
   init(l) = if isNil(tail(l)) then nil else cons(head(l), init(tail(l)))

@@ -8,7 +8,7 @@ sorts
   Bag
 constructors
   empty : -> Bag
-  add : Elem x Bag -> Set
+  add : Elem x Bag -> Bag
 functions
   member : Elem x Bag -> Bool
   count : Elem x Bag -> Nat
