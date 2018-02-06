@@ -18,7 +18,7 @@ variables
   q : Queue
 equations
   empty = nil
-  enqueue(e, q) = snoc(e, q) // enqueue appends
+  enqueue(e, q) = snoc(q, e) // enqueue appends
   front(q) = head(q) // front returns head
   dequeue(q) = tail(q) // dequeue returns tail
   isEmpty(q) = isNil(q)
