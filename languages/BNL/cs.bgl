@@ -2,6 +2,6 @@
 [single] bits : bit ; // A single bit
 [many] bits : bit bits ; // More than one bit
 [zero] bit : '0' ; // The zero bit
-[one] bit : '1' ;  // The non-zero bit
+[one] bit : '1' ;  // The nonzero bit
 [integer] rest : ; // An integer number
 [rational] rest : '.' bits ; // A rational number

@@ -14,7 +14,7 @@ termsToRefs f z ts = termsToRefs' z ts
       rs <- termsToRefs' z' ts
       return (r:rs)
 
--- Map key to ref, use map for house keeping
+-- Map key to ref, use map for housekeeping
 keyToRef :: Ord a => a -> Map a (IORef b) -> IO (IORef b, Map a (IORef b))
 keyToRef k m =
   case lookup k m of
