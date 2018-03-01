@@ -33,9 +33,7 @@ bit i = if lookahead 1 ((==) '0') i
 
 -- [integer] rest : ;
 -- [rational] rest : '.' bits ;
-rest i = if lookahead 1 ((==) '.') i
-           then rational
-           else integer
+rest i = if lookahead 1 ((==) '.') i then rational else integer
   where
     integer = Just i
     rational = match '.' i >>= bits
