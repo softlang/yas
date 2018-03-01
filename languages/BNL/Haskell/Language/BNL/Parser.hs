@@ -6,12 +6,13 @@ import Control.Monad
 -- The parser type constructor
 type Parser a = String -> Maybe (a, String)
 -- END ...
+-- BEGIN ...
 -- Parse and enforce complete input consumption 
 parse :: String -> Maybe Number
 parse i = case number i of
   Just (n, []) -> Just n
   _ -> Nothing
-
+-- END ...
 -- [number] number : bits rest ;
 number :: Parser Number
 number i = do
