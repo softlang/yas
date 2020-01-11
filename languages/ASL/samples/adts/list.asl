@@ -33,5 +33,5 @@ equations
   append(nil, l) = l
   append(cons(e, l1), l2) = cons(e, append(l1, l2))
   snoc(l, e) = append(l, cons(e, nil))
-  last(l) = if isNil(tail(l)) then head(l) else last(tail(l))
-  init(l) = if isNil(tail(l)) then nil else cons(head(l), init(tail(l)))
+  last(cons(e,l)) = if isNil(l) then e else last(l)
+  init(cons(e,l)) = if isNil(l) then nil else cons(e, init(l))
