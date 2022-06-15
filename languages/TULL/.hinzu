@@ -1,0 +1,12 @@
+[
+  l([
+      id(tull),
+      name('TULL'),
+      expansion('Tiny Untyped Lambda Language'),
+      headline('An applied, untyped lambda calculus'),
+      relatesTo(extern('Language:Lambda calculus')),
+      embeds(intern(btl)),
+      similarTo(intern(tll)),
+      facilitates(extern('Functional programming'))
+  ])
+].
