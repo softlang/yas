@@ -1,3 +1,7 @@
+# PSA
+
+This repo will undergo some evolution soon for V2 of SoftLang Book.
+
 # Summary
 
 YAS (Yet Another SLR (Software Language Repository))
