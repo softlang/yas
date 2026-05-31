@@ -1,0 +1,8 @@
+{
+  "scopeName": "source.fsml",
+  "patterns": [
+    { "name": "keyword.control.fsml", "match": "\\b(initial|state)\\b" },
+    { "name": "keyword.operator.arrow.fsml", "match": "->" },
+    { "name": "punctuation.terminator.fsml", "match": ";" }
+  ]
+}

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling>=1.18"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fsml-lsp"
+version = "0.1.0"
+description = "A small Language Server Protocol demo for the FSML language in softlang/yas."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "pygls>=1.3,<2",
+  "lsprotocol>=2023.0.1",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+fsml-lsp = "fsml_lsp.server:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

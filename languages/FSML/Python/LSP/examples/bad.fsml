@@ -1,0 +1,13 @@
+initial state locked {
+  ticket / collect -> unloked;
+  ticket / again -> unlocked;
+  pass / alarm -> exception
+}
+
+state unlocked {
+  pass -> locked;
+}
+
+state unreachable {
+  tick;
+}

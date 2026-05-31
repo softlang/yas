@@ -1,0 +1,42 @@
+{
+  "name": "fsml-lsp-vscode",
+  "displayName": "FSML LSP Demo",
+  "description": "Minimal VS Code client for the FSML language server demo.",
+  "version": "0.1.0",
+  "publisher": "softlang",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": ["Programming Languages"],
+  "activationEvents": ["onLanguage:fsml"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "fsml",
+        "aliases": ["FSML", "fsml"],
+        "extensions": [".fsml"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "fsml",
+        "scopeName": "source.fsml",
+        "path": "./syntaxes/fsml.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "@types/vscode": "^1.84.0"
+  }
+}
