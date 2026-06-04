@@ -1,0 +1,3 @@
+all:
+	lean Main.lean
+
