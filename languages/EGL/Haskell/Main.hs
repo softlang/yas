@@ -2,7 +2,8 @@ import Language.EGL.Syntax
 import Language.EGL.Parser
 import Language.EGL.Lexer
 import Language.EGL.Sample
-import Language.EGL.Interpreter
+import Language.EGL.Interpreter as Ia
+import Language.EGL.DS.Interpreter as Ib
 import Data.Map (empty, insert)
 import Text.Parsec
 import Text.Parsec.Utilities
@@ -12,7 +13,8 @@ import System.Exit (exitSuccess, exitFailure)
 tests grammarText fsmText =
   TestList [
     TestLabel "grammar" $ Right sampleGrammar ~=? parse (completeParser grammar) "" grammarText,
-    TestLabel "fsml" $ Right () ~=? accept sampleGrammar fsmlMap fsmText
+    TestLabel "fsmlA" $ Right () ~=? Ia.accept sampleGrammar fsmlMap fsmText,
+    TestLabel "fsmlB" $ Right () ~=? Ib.accept sampleGrammar fsmlMap fsmText
   ]
 
 fsmlMap = insert "name" (identifier >> return ()) empty
