@@ -4,17 +4,9 @@ BTL in Lean 4
 Run with:
 
   lean Main.lean
-
-No Mathlib required.
 -/
 
 namespace BTL
-
-/-- BTL types. -/
-inductive Ty where
-  | bool
-  | nat
-  deriving DecidableEq, Repr
 
 /-- BTL syntax. -/
 inductive Term where
@@ -80,6 +72,12 @@ inductive Step : Term → Term → Prop where
   | ite_false {t1 t2 : Term} :
       Step (Term.ite Term.fls t1 t2) t2
 
+/-- BTL types. -/
+inductive Ty where
+  | bool
+  | nat
+  deriving DecidableEq, Repr
+
 /-- Typing relation. -/
 inductive HasType : Term → Ty → Prop where
   | tTrue :
@@ -109,9 +107,10 @@ inductive HasType : Term → Ty → Prop where
       HasType t2 T →
       HasType (Term.ite t0 t1 t2) T
 
-/--
-Canonical form for natural numbers.
+/-- Canonical form for natural numbers. -/
+/-
 Theorem: A value of type Nat must be a numeric value.
+Proof: 
 Since t is a value, it is either a boolean value or a numeric value.
 If it is a boolean value, then t is either true or false.
 Neither true nor false can have type Nat, contradicting the assumption that t has type Nat.
@@ -122,7 +121,10 @@ theorem canonical_nat {t : Term} :
   intro ht hv
   cases hv with
   | bool hb =>
-      /- shorter like this: cases hb <;> cases ht -/
+      /- shorter like this: cases hb <;> cases ht
+      That is, all cases t for Boolean values have
+      no cases where HasType t Ty.nat would hold.
+      -/
       cases hb with
       | tru =>
           cases ht
@@ -147,7 +149,6 @@ theorem canonical_bool {t : Term} :
 
 /--
 Preservation:
-
 If `t` has type `T` and `t` steps to `t'`,
 then `t'` also has type `T`.
 -/
@@ -155,6 +156,12 @@ theorem preservation {t t' : Term} {T : Ty} :
     HasType t T → Step t t' → HasType t' T := by
   intro ht hs
   induction hs generalizing T with
+  /- The proof case for Step.succ:
+  hs : Step t t' -- for the step under Term.Succ
+  ih : HasType t Ty.nat → HasType t' Ty.nat -- induction hypothesis
+  There is only one case for HasType so that Term.Succ ... is well-typed.
+  It's premise can be met via the ih.
+  -/
   | succ hs ih =>
       cases ht with
       | tSucc ht1 =>
@@ -211,7 +218,6 @@ theorem preservation {t t' : Term} {T : Ty} :
 
 /--
 Progress:
-
 A well-typed BTL term is either already a value,
 or it can take a small step.
 -/
@@ -278,9 +284,17 @@ theorem progress {t : Term} {T : Ty} :
 
 /--
 One-step type soundness:
-
 A well-typed term is either a value,
 or it can step to another term of the same type.
+-/
+/-
+Proof:
+Assume t has type T.
+By progress, either t is a value or it can step.
+If t is a value, we are done.
+Otherwise, there exists a term t' such that t steps to t'.
+By preservation, since t has type T and t steps to t', the term t' also has type T.
+Therefore, either t is a value, or it steps to a well-typed term.
 -/
 theorem soundness_one_step {t : Term} {T : Ty} :
     HasType t T → Value t ∨ ∃ t', Step t t' ∧ HasType t' T := by
@@ -292,10 +306,7 @@ theorem soundness_one_step {t : Term} {T : Ty} :
       rcases hstep with ⟨t', hs⟩
       exact Or.inr ⟨t', hs, preservation ht hs⟩
 
-/-
-Executable type checker.
--/
-
+/-- Executable type checker.-/
 def typeOf? : Term → Option Ty
   | Term.tru =>
       some Ty.bool
@@ -328,9 +339,7 @@ def typeOf? : Term → Option Ty
       | _, _, _ =>
           none
 
-/-
-Executable one-step evaluator.
--/
+/-- Executable one-step evaluator. -/
 
 def isNatVal : Term → Bool
   | Term.zero =>
@@ -407,8 +416,7 @@ def evalFuel : Nat → Term → Term
       | none => t
 
 /--
-Fuel-bounded trace.
-
+Fuel-bounded trace:
 This returns the whole reduction sequence up to the fuel limit.
 -/
 def traceFuel : Nat → Term → List Term
@@ -419,10 +427,7 @@ def traceFuel : Nat → Term → List Term
       | some t' => t :: traceFuel fuel t'
       | none => [t]
 
-/-
-Logical reflexive/transitive closure.
--/
-
+/-- Logical reflexive/transitive closure. -/
 inductive MultiStep : Term → Term → Prop where
   | refl {t : Term} :
       MultiStep t t
@@ -432,7 +437,7 @@ inductive MultiStep : Term → Term → Prop where
       MultiStep t v
 
 /-
-Sample terms, matching the Haskell samples.
+Sample terms.
 -/
 
 def sampleExpr : Term :=
