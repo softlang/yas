@@ -13,7 +13,9 @@ accept g m s = parse top "" s
   where
     top = trim (gsymbol (N stsy)) >> eof
       where ((_, stsy, _):_) = g
-    gsymbols gss = mapM gsymbol gss
+    gsymbols :: GSymbols -> Acceptor
+    gsymbols gss = mapM_ gsymbol gss
+    gsymbol :: GSymbol  -> Acceptor
     gsymbol (T t) = trim $ symbol t
     gsymbol (N n) = trim $ maybe n' id (lookup n m)
        where n' = choice (map gsymbols gsss) >> return ()
