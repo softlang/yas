@@ -12,11 +12,10 @@ main = do
 
   test "doubleAll" doubleAll input
   test "evens" evens input
-  test "odds" odds input
   test "doubleEvens" doubleEvens input
   test "squareOdds" squareOdds input
   test "firstFiveDoubled" firstFiveDoubled input
-  test "dropThenFilter" dropThenFilter input
+  test "dropThenFilterGreaterThan3" dropThenFilterGreaterThan3 input
   test "leftOfSplit" leftOfSplit input
   test "rightOfSplit" rightOfSplit input
   test "mergeEvenOdd" mergeEvenOdd input

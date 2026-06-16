@@ -37,21 +37,8 @@ seq t1 t2 =
 
 -- Fan-out / fan-in
 
-par :: Transducer -> Transducer -> Stream -> (Stream, Stream)
-par t1 t2 xs =
-  (t1 xs, t2 xs)
-
-fst :: (Stream -> (Stream, Stream)) -> Transducer
-fst t xs =
-  P.fst (t xs)
-
-snd :: (Stream -> (Stream, Stream)) -> Transducer
-snd t xs =
-  P.snd (t xs)
-
-merge :: Transducer -> Transducer -> Transducer
-merge t1 t2 xs =
-  interleave (t1 xs) (t2 xs)
+par :: Binary -> Transducer -> Transducer -> Transducer
+par f t1 t2 xs = binary f (t1 xs) (t2 xs)
 
 -- Built-in meanings
 
@@ -90,15 +77,20 @@ pred (GreaterThan n) =
 pred (LessThan n) =
   (< n)
 
+
+binary :: Binary -> Stream -> Stream -> Stream
+
+binary Interleave =
+  interleave
+
+binary Fst =
+  curry fst
+
+binary Snd =
+  curry snd
+
 -- Stream-level helper
-
 interleave :: Stream -> Stream -> Stream
-interleave [] ys =
-  ys
-
-interleave xs [] =
-  xs
-
-interleave (x:xs) (y:ys) =
-  x : y : interleave xs ys
-
+interleave [] ys = ys
+interleave xs [] = xs
+interleave (x:xs) (y:ys) = x:y:interleave xs ys

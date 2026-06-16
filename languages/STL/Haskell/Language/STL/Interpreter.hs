@@ -29,31 +29,10 @@ interpret (Drop n) =
 interpret (Seq s1 s2) =
   seq (interpret s1) (interpret s2)
 
-interpret (Fst s) =
-  fst (interpretPair s)
-
-interpret (Snd s) =
-  snd (interpretPair s)
-
-interpret (Merge s1 s2) =
-  merge (interpret s1) (interpret s2)
-
--- | Pair-valued interpretation for fan-out.
---
--- This keeps the ordinary interpretation first-order:
---
---   interpret :: STL -> Stream -> Stream
---
--- while still allowing Par to represent stream-level branching.
-interpretPair :: STL -> Stream -> (Stream, Stream)
-interpretPair (Par s1 s2) =
-  par (interpret s1) (interpret s2)
-
-interpretPair s =
-  par (interpret s) (interpret s)
+interpret (Par f s1 s2) =
+  par f (interpret s1) (interpret s2)
 
 -- | Run an STL program on an input stream.
 run :: STL -> Stream -> Stream
 run =
   interpret
-

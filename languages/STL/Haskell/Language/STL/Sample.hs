@@ -12,11 +12,6 @@ evens :: STL
 evens =
   Filter Even
 
--- | filter odd
-odds :: STL
-odds =
-  Filter Odd
-
 -- | filter even >>> map (*2)
 doubleEvens :: STL
 doubleEvens =
@@ -39,40 +34,38 @@ firstFiveDoubled =
     (Take 5)
 
 -- | Drop the first two values, then keep values greater than 3.
-dropThenFilter :: STL
-dropThenFilter =
+dropThenFilterGreaterThan3 :: STL
+dropThenFilterGreaterThan3 =
   Seq
     (Drop 2)
     (Filter (GreaterThan 3))
 
--- | Fan-out example:
---
 -- The same input is processed in two branches.
 --
 -- Left branch:  even numbers doubled.
 -- Right branch: odd numbers squared.
-splitEvenOdd :: STL
-splitEvenOdd =
+splitEvenOdd :: Binary -> STL
+splitEvenOdd b =
   Par
+    b
     doubleEvens
     squareOdds
 
+-- | Fan-out examples:
+--
 -- | First projection from a parallel computation.
 leftOfSplit :: STL
 leftOfSplit =
-  Fst splitEvenOdd
+  splitEvenOdd Fst
 
 -- | Second projection from a parallel computation.
 rightOfSplit :: STL
 rightOfSplit =
-  Snd splitEvenOdd
+  splitEvenOdd Snd
 
 -- | Fan-in example:
 --
 -- Merge the two independently computed streams by interleaving them.
 mergeEvenOdd :: STL
 mergeEvenOdd =
-  Merge
-    doubleEvens
-    squareOdds
-
+  splitEvenOdd Interleave

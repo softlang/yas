@@ -10,27 +10,21 @@ import Language.REL.Combinators
 --
 -- The interpreter is syntax-directed, but all semantic work is delegated
 -- to the meaning-level combinators.
-interpret :: REL -> Language
-interpret Empty =
+accepts :: REL -> Language
+accepts Empty =
   empty
 
-interpret Eps =
+accepts Eps =
   eps
 
-interpret (Lit c) =
+accepts (Lit c) =
   lit c
 
-interpret (Alt r1 r2) =
-  alt (interpret r1) (interpret r2)
+accepts (Alt r1 r2) =
+  alt (accepts r1) (accepts r2)
 
-interpret (Seq r1 r2) =
-  seq (interpret r1) (interpret r2)
+accepts (Seq r1 r2) =
+  seq (accepts r1) (accepts r2)
 
-interpret (Star r) =
-  star (interpret r)
-
--- | Membership test.
-accepts :: REL -> String -> Bool
-accepts r =
-  interpret r
-
+accepts (Star r) =
+  star (accepts r)
