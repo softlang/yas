@@ -1,8 +1,10 @@
 import qualified Language.BIPL.Sample
 import qualified Language.BIPL.Goto.Sample
 import qualified Language.BIPL.Analysis.Sign.Sample
+import qualified Language.BIPL.Analysis.TypeState.Sample
 import qualified Language.BAL.Sample
 import qualified Language.BML.Sample
+
 import Language.BIPL.TypeChecker as Typing1
 import Language.BIPL.MonadicAlgebra.TypeChecker as Typing2
 import Language.BIPL.Interpreter as V0
@@ -13,22 +15,26 @@ import Language.BIPL.Algebra.Scheme as V4a
 import Language.BIPL.Algebra.StandardInterpreter as V4b
 import Language.BIPL.Analysis.Sign.BasicAnalysis as V4c1
 import Language.BIPL.Analysis.Sign.RefinedAnalysis as V4c2
+import Language.BIPL.Analysis.TypeState.BasicAnalysis as TypeState
 import Language.BIPL.MonadicAlgebra.Scheme as V5a
 import Language.BIPL.MonadicAlgebra.Interpretation as V5b
-import Language.BIPL.Extraction                    
+import Language.BIPL.Extraction
 import Language.BIPL.Compiler
 import Language.BAL.Assembler
 import Language.BML.Machine
 import Language.BIPL.Rename.Transformation
+
 import Data.Map (empty, keys, fromList)
 
 s = Language.BIPL.Sample.euclideanDiv
 s' = Language.BIPL.Goto.Sample.euclideanDiv
+
 facv1 = Language.BIPL.Analysis.Sign.Sample.factorialV1
-facv2 = Language.BIPL.Analysis.Sign.Sample.factorialV2 
+facv2 = Language.BIPL.Analysis.Sign.Sample.factorialV2
 sto'' = Language.BIPL.Analysis.Sign.Sample.store
-test1 = Language.BIPL.Analysis.Sign.Sample.test1 
+test1 = Language.BIPL.Analysis.Sign.Sample.test1
 test1sto = Language.BIPL.Analysis.Sign.Sample.store1
+
 s_al = compile (Language.BIPL.Sample.addArguments s)
 s_ml = assemble s_al
 
@@ -41,10 +47,13 @@ main = do
   print $ maybe undefined id (V5a.interpret (V5b.interpretation) s (fromList [("x", Left 13), ("y", Left 4)]))
   print $ Typing1.okStmt s (fromList [("x", Typing1.IntType), ("y", Typing1.IntType)])
   print $ V5a.interpret Typing2.algebra s (fromList [("x", Typing2.IntType), ("y", Typing2.IntType)])
+
+  -- Sign-analysis as abstract interpretation
   print $ V4a.interpret (V4c1.algebra) facv1 sto''
   print $ V4a.interpret (V4c2.algebra) facv1 sto''
   print $ V4a.interpret (V4c1.algebra) facv2 sto''
   print $ V4a.interpret (V4c2.algebra) facv2 sto''
+
   print $ s_al == Language.BAL.Sample.euclideanDiv
   print $ s_ml == Language.BML.Sample.euclideanDiv
   print $ run s_ml
@@ -52,3 +61,20 @@ main = do
   print $ bottoms test1sto
   print $ maps (keys test1sto)
   print $ V4a.interpret (V4c2.algebra) test1 test1sto
+
+  -- Type-state analysis as abstract interpretation
+  print $ V4a.interpret TypeState.algebra
+                      Language.BIPL.Analysis.TypeState.Sample.sameTypeOk
+                      Language.BIPL.Analysis.TypeState.Sample.sameTypeOkStore
+  print $ V4a.interpret TypeState.algebra
+                      Language.BIPL.Analysis.TypeState.Sample.reassignmentError
+                      Language.BIPL.Analysis.TypeState.Sample.reassignmentErrorStore
+  print $ V4a.interpret TypeState.algebra
+                      Language.BIPL.Analysis.TypeState.Sample.branchError
+                      Language.BIPL.Analysis.TypeState.Sample.branchErrorStore
+  print $ V4a.interpret TypeState.algebra
+                      Language.BIPL.Analysis.TypeState.Sample.guardError
+                      Language.BIPL.Analysis.TypeState.Sample.guardErrorStore
+  print $ V4a.interpret TypeState.algebra
+                      Language.BIPL.Analysis.TypeState.Sample.loopOk
+                      Language.BIPL.Analysis.TypeState.Sample.loopOkStore
