@@ -10,10 +10,7 @@ data STL
   | Take Int
   | Drop Int
   | Seq STL STL
-  | Par STL STL
-  | Fst STL
-  | Snd STL
-  | Merge STL STL
+  | Par Binary STL STL
   deriving (Eq, Show)
 
 -- | Built-in unary integer functions.
@@ -35,3 +32,9 @@ data Pred
   | LessThan Int
   deriving (Eq, Show)
 
+-- | Built-in binary merger functions.
+data Binary
+  = Interleave
+  | Fst
+  | Snd
+  deriving (Eq, Show)
