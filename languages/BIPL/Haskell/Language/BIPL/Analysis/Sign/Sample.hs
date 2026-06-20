@@ -1,5 +1,5 @@
 -- BEGIN ...
-module Language.BIPL.Analysis.Sample where
+module Language.BIPL.Analysis.Sign.Sample where
 import Language.BIPL.Syntax
 import Data.CPO.Sign
 import Data.Map

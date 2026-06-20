@@ -1,9 +1,9 @@
 -- BEGIN ...
 {-# LANGUAGE FlexibleContexts #-}
-module Language.BIPL.Analysis.BasicAnalysis where
+module Language.BIPL.Analysis.Sign.BasicAnalysis where
 import Language.BIPL.Algebra.Signature
 import Language.BIPL.Syntax (UOp(..), BOp(..))
-import Language.BIPL.Analysis.Fix
+import Language.BIPL.Analysis.Sign.Fix
 import Data.CPO
 import Data.CPO.Bool
 import Data.CPO.Sign

@@ -1,5 +1,5 @@
 -- BEGIN ...
-module Language.BIPL.Analysis.Fix where
+module Language.BIPL.Analysis.Sign.Fix where
 -- END ...
 fix' :: Eq a => ((a -> a) -> a -> a) -> (a -> a) -> a -> a
 fix' h i x = limit (iterate h i)

@@ -1,6 +1,6 @@
 import qualified Language.BIPL.Sample
 import qualified Language.BIPL.Goto.Sample
-import qualified Language.BIPL.Analysis.Sample
+import qualified Language.BIPL.Analysis.Sign.Sample
 import qualified Language.BAL.Sample
 import qualified Language.BML.Sample
 import Language.BIPL.TypeChecker as Typing1
@@ -11,8 +11,8 @@ import Language.BIPL.CS.Interpreter as V2
 import Language.BIPL.Goto.Interpreter as V3
 import Language.BIPL.Algebra.Scheme as V4a
 import Language.BIPL.Algebra.StandardInterpreter as V4b
-import Language.BIPL.Analysis.BasicAnalysis as V4c1
-import Language.BIPL.Analysis.RefinedAnalysis as V4c2
+import Language.BIPL.Analysis.Sign.BasicAnalysis as V4c1
+import Language.BIPL.Analysis.Sign.RefinedAnalysis as V4c2
 import Language.BIPL.MonadicAlgebra.Scheme as V5a
 import Language.BIPL.MonadicAlgebra.Interpretation as V5b
 import Language.BIPL.Extraction                    
@@ -24,11 +24,11 @@ import Data.Map (empty, keys, fromList)
 
 s = Language.BIPL.Sample.euclideanDiv
 s' = Language.BIPL.Goto.Sample.euclideanDiv
-facv1 = Language.BIPL.Analysis.Sample.factorialV1
-facv2 = Language.BIPL.Analysis.Sample.factorialV2 
-sto'' = Language.BIPL.Analysis.Sample.store
-test1 = Language.BIPL.Analysis.Sample.test1 
-test1sto = Language.BIPL.Analysis.Sample.store1
+facv1 = Language.BIPL.Analysis.Sign.Sample.factorialV1
+facv2 = Language.BIPL.Analysis.Sign.Sample.factorialV2 
+sto'' = Language.BIPL.Analysis.Sign.Sample.store
+test1 = Language.BIPL.Analysis.Sign.Sample.test1 
+test1sto = Language.BIPL.Analysis.Sign.Sample.store1
 s_al = compile (Language.BIPL.Sample.addArguments s)
 s_ml = assemble s_al
 
