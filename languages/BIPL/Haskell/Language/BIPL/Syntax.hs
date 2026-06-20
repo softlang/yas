@@ -12,7 +12,7 @@ data Stmt
   | If Expr Stmt Stmt
   | While Expr Stmt
 -- BEGIN ...
-  deriving (Eq, Show, Data, Typeable)
+  deriving (Eq, Ord, Show, Data, Typeable)
 -- END ...
 
 -- Expressions
@@ -22,15 +22,15 @@ data Expr
   | Unary UOp Expr
   | Binary BOp Expr Expr
 -- BEGIN ...
-  deriving (Eq, Show, Data, Typeable)
+  deriving (Eq, Ord, Show, Data, Typeable)
 -- END ...
 
 -- Unary and binary operators
 data UOp = Negate | Not
 -- BEGIN ...
-  deriving (Eq, Show, Data, Typeable)
+  deriving (Eq, Ord, Show, Data, Typeable)
 -- END ...
 data BOp = Add | Sub | Mul | Lt | Leq | Eq | Geq | Gt | And | Or
 -- BEGIN ...
-  deriving (Eq, Show, Data, Typeable)
+  deriving (Eq, Ord, Show, Data, Typeable)
 -- END ...

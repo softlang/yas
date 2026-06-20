@@ -6,6 +6,7 @@ import qualified Language.BIPL.Analysis.DeadCode.Sample
 import qualified Language.BIPL.Analysis.Interval.Sample
 import qualified Language.BIPL.Analysis.Termination.Sample
 import qualified Language.BIPL.Analysis.Slicing.Sample
+import qualified Language.BIPL.Analysis.InformationFlow.Sample
 import qualified Language.BAL.Sample
 import qualified Language.BML.Sample
 import Language.BIPL.TypeChecker as Typing1
@@ -19,10 +20,11 @@ import Language.BIPL.Algebra.StandardInterpreter as V4b
 import Language.BIPL.Analysis.Sign.BasicAnalysis as V4c1
 import Language.BIPL.Analysis.Sign.RefinedAnalysis as V4c2
 import Language.BIPL.Analysis.TypeState.BasicAnalysis as TypeState
-import qualified Language.BIPL.Analysis.DeadCode.BasicAnalysis as DeadCode
+import Language.BIPL.Analysis.DeadCode.BasicAnalysis as DeadCode
 import Language.BIPL.Analysis.Interval.BasicAnalysis as Interval
-import qualified Language.BIPL.Analysis.Termination.BasicAnalysis as Termination
-import qualified Language.BIPL.Analysis.Slicing.BasicAnalysis as Slicing
+import Language.BIPL.Analysis.Termination.BasicAnalysis as Termination
+import Language.BIPL.Analysis.Slicing.BasicAnalysis as Slicing
+import Language.BIPL.Analysis.InformationFlow.BasicAnalysis as InformationFlow
 import Language.BIPL.MonadicAlgebra.Scheme as V5a
 import Language.BIPL.MonadicAlgebra.Interpretation as V5b
 import Language.BIPL.Extraction
@@ -100,3 +102,11 @@ main = do
   print $ Slicing.analyze Language.BIPL.Analysis.Slicing.Sample.combinedDependency Language.BIPL.Analysis.Slicing.Sample.combinedDependencyStore
   print $ Slicing.analyze Language.BIPL.Analysis.Slicing.Sample.loopDependency Language.BIPL.Analysis.Slicing.Sample.loopDependencyStore
   print $ Slicing.analyze Language.BIPL.Analysis.Slicing.Sample.preSeededDependency Language.BIPL.Analysis.Slicing.Sample.preSeededDependencyStore
+
+  -- Information-flow / taint analysis
+  print $ InformationFlow.analyzeWithPublicSinks Language.BIPL.Analysis.InformationFlow.Sample.explicitLeak Language.BIPL.Analysis.InformationFlow.Sample.explicitLeakStore Language.BIPL.Analysis.InformationFlow.Sample.explicitLeakSinks
+  print $ InformationFlow.analyzeWithPublicSinks Language.BIPL.Analysis.InformationFlow.Sample.implicitLeak Language.BIPL.Analysis.InformationFlow.Sample.implicitLeakStore Language.BIPL.Analysis.InformationFlow.Sample.implicitLeakSinks
+  print $ InformationFlow.analyzeWithPublicSinks Language.BIPL.Analysis.InformationFlow.Sample.safePublicComputation Language.BIPL.Analysis.InformationFlow.Sample.safePublicComputationStore Language.BIPL.Analysis.InformationFlow.Sample.safePublicComputationSinks
+  print $ InformationFlow.analyzeWithPublicSinks Language.BIPL.Analysis.InformationFlow.Sample.highIntermediate Language.BIPL.Analysis.InformationFlow.Sample.highIntermediateStore Language.BIPL.Analysis.InformationFlow.Sample.highIntermediateSinks
+  print $ InformationFlow.analyzeWithPublicSinks Language.BIPL.Analysis.InformationFlow.Sample.loopLeak Language.BIPL.Analysis.InformationFlow.Sample.loopLeakStore Language.BIPL.Analysis.InformationFlow.Sample.loopLeakSinks
+  print $ InformationFlow.analyzeWithPublicSinks Language.BIPL.Analysis.InformationFlow.Sample.privateComputation Language.BIPL.Analysis.InformationFlow.Sample.privateComputationStore Language.BIPL.Analysis.InformationFlow.Sample.privateComputationSinks
