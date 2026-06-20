@@ -4,6 +4,7 @@ import qualified Language.BIPL.Analysis.Sign.Sample
 import qualified Language.BIPL.Analysis.TypeState.Sample
 import qualified Language.BIPL.Analysis.DeadCode.Sample
 import qualified Language.BIPL.Analysis.Interval.Sample
+import qualified Language.BIPL.Analysis.Termination.Sample
 import qualified Language.BAL.Sample
 import qualified Language.BML.Sample
 
@@ -20,6 +21,7 @@ import Language.BIPL.Analysis.Sign.RefinedAnalysis as V4c2
 import Language.BIPL.Analysis.TypeState.BasicAnalysis as TypeState
 import Language.BIPL.Analysis.DeadCode.BasicAnalysis as DeadCode
 import Language.BIPL.Analysis.Interval.BasicAnalysis as Interval
+import Language.BIPL.Analysis.Termination.BasicAnalysis as Termination
 import Language.BIPL.MonadicAlgebra.Scheme as V5a
 import Language.BIPL.MonadicAlgebra.Interpretation as V5b
 import Language.BIPL.Extraction
@@ -116,3 +118,17 @@ main = do
   print $ V4a.interpret Interval.algebra
                       Language.BIPL.Analysis.Interval.Sample.rangedLoop
                       Language.BIPL.Analysis.Interval.Sample.rangedLoopStore
+
+  -- Termination-ish / loop-variant analysis
+  print $ Termination.analyze
+                      Language.BIPL.Analysis.Termination.Sample.decrementToZero
+  print $ Termination.analyze
+                      Language.BIPL.Analysis.Termination.Sample.incrementToLimit
+  print $ Termination.analyze
+                      Language.BIPL.Analysis.Termination.Sample.movesAwayFromBound
+  print $ Termination.analyze
+                      Language.BIPL.Analysis.Termination.Sample.guardVariableUnchanged
+  print $ Termination.analyze
+                      Language.BIPL.Analysis.Termination.Sample.unknownBooleanGuard
+  print $ Termination.analyze
+                      Language.BIPL.Analysis.Termination.Sample.unknownConditionalUpdate
