@@ -3,6 +3,7 @@ import qualified Language.BIPL.Goto.Sample
 import qualified Language.BIPL.Analysis.Sign.Sample
 import qualified Language.BIPL.Analysis.TypeState.Sample
 import qualified Language.BIPL.Analysis.DeadCode.Sample
+import qualified Language.BIPL.Analysis.Interval.Sample
 import qualified Language.BAL.Sample
 import qualified Language.BML.Sample
 
@@ -18,6 +19,7 @@ import Language.BIPL.Analysis.Sign.BasicAnalysis as V4c1
 import Language.BIPL.Analysis.Sign.RefinedAnalysis as V4c2
 import Language.BIPL.Analysis.TypeState.BasicAnalysis as TypeState
 import Language.BIPL.Analysis.DeadCode.BasicAnalysis as DeadCode
+import Language.BIPL.Analysis.Interval.BasicAnalysis as Interval
 import Language.BIPL.MonadicAlgebra.Scheme as V5a
 import Language.BIPL.MonadicAlgebra.Interpretation as V5b
 import Language.BIPL.Extraction
@@ -97,3 +99,20 @@ main = do
   print $ DeadCode.analyze
                       Language.BIPL.Analysis.DeadCode.Sample.nestedDeadBranch
                       Language.BIPL.Analysis.DeadCode.Sample.nestedDeadBranchStore
+
+  -- Interval analysis as abstract interpretation
+  print $ V4a.interpret Interval.algebra
+                      Language.BIPL.Analysis.Interval.Sample.boundedArithmetic
+                      Language.BIPL.Analysis.Interval.Sample.boundedArithmeticStore
+  print $ V4a.interpret Interval.algebra
+                      Language.BIPL.Analysis.Interval.Sample.counterLoop
+                      Language.BIPL.Analysis.Interval.Sample.counterLoopStore
+  print $ V4a.interpret Interval.algebra
+                      Language.BIPL.Analysis.Interval.Sample.finiteProduct
+                      Language.BIPL.Analysis.Interval.Sample.finiteProductStore
+  print $ V4a.interpret Interval.algebra
+                      Language.BIPL.Analysis.Interval.Sample.unknownBranch
+                      Language.BIPL.Analysis.Interval.Sample.unknownBranchStore
+  print $ V4a.interpret Interval.algebra
+                      Language.BIPL.Analysis.Interval.Sample.rangedLoop
+                      Language.BIPL.Analysis.Interval.Sample.rangedLoopStore
