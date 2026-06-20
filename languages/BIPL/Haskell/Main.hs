@@ -2,6 +2,7 @@ import qualified Language.BIPL.Sample
 import qualified Language.BIPL.Goto.Sample
 import qualified Language.BIPL.Analysis.Sign.Sample
 import qualified Language.BIPL.Analysis.TypeState.Sample
+import qualified Language.BIPL.Analysis.DeadCode.Sample
 import qualified Language.BAL.Sample
 import qualified Language.BML.Sample
 
@@ -16,6 +17,7 @@ import Language.BIPL.Algebra.StandardInterpreter as V4b
 import Language.BIPL.Analysis.Sign.BasicAnalysis as V4c1
 import Language.BIPL.Analysis.Sign.RefinedAnalysis as V4c2
 import Language.BIPL.Analysis.TypeState.BasicAnalysis as TypeState
+import Language.BIPL.Analysis.DeadCode.BasicAnalysis as DeadCode
 import Language.BIPL.MonadicAlgebra.Scheme as V5a
 import Language.BIPL.MonadicAlgebra.Interpretation as V5b
 import Language.BIPL.Extraction
@@ -48,7 +50,7 @@ main = do
   print $ Typing1.okStmt s (fromList [("x", Typing1.IntType), ("y", Typing1.IntType)])
   print $ V5a.interpret Typing2.algebra s (fromList [("x", Typing2.IntType), ("y", Typing2.IntType)])
 
-  -- Sign-analysis as abstract interpretation
+  -- Existing sign-analysis examples
   print $ V4a.interpret (V4c1.algebra) facv1 sto''
   print $ V4a.interpret (V4c2.algebra) facv1 sto''
   print $ V4a.interpret (V4c1.algebra) facv2 sto''
@@ -78,3 +80,20 @@ main = do
   print $ V4a.interpret TypeState.algebra
                       Language.BIPL.Analysis.TypeState.Sample.loopOk
                       Language.BIPL.Analysis.TypeState.Sample.loopOkStore
+
+  -- Dead-branch / unreachable-code analysis
+  print $ DeadCode.analyze
+                      Language.BIPL.Analysis.DeadCode.Sample.deadElse
+                      Language.BIPL.Analysis.DeadCode.Sample.deadElseStore
+  print $ DeadCode.analyze
+                      Language.BIPL.Analysis.DeadCode.Sample.deadThen
+                      Language.BIPL.Analysis.DeadCode.Sample.deadThenStore
+  print $ DeadCode.analyze
+                      Language.BIPL.Analysis.DeadCode.Sample.unknownBranch
+                      Language.BIPL.Analysis.DeadCode.Sample.unknownBranchStore
+  print $ DeadCode.analyze
+                      Language.BIPL.Analysis.DeadCode.Sample.deadLoopBody
+                      Language.BIPL.Analysis.DeadCode.Sample.deadLoopBodyStore
+  print $ DeadCode.analyze
+                      Language.BIPL.Analysis.DeadCode.Sample.nestedDeadBranch
+                      Language.BIPL.Analysis.DeadCode.Sample.nestedDeadBranchStore
