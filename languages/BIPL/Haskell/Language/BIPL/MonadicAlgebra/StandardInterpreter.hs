@@ -1,6 +1,6 @@
 -- BEGIN ...
 -- A monadic algebra for standard interpretation
-module Language.BIPL.MonadicAlgebra.Interpretation where
+module Language.BIPL.MonadicAlgebra.StandardInterpreter where
 import Prelude hiding (lookup)
 import Language.BIPL.MonadicAlgebra.Signature
 import Language.BIPL.Syntax (UOp(..), BOp(..))
@@ -10,8 +10,8 @@ import Control.Monad.Fix (fix)
 -- END ...
 type Value = Either Int Bool
 type Store = Map String Value
-interpretation :: MonadPlus m => Alg m Store Value
-interpretation = Alg {
+algebra :: MonadPlus m => Alg m Store Value
+algebra = Alg {
   skip' = return,
   assign' = \n f sto -> f sto >>= \v -> return (insert n v sto),
   seq' = flip (<=<),
@@ -19,9 +19,9 @@ interpretation = Alg {
   if' = \f g h sto -> f sto >>= \v ->
     case v of { (Right b) -> if b then g sto else h sto; _ -> mzero },
   while' = \f g ->
-    fix (\x -> if' interpretation f
-                  (seq' interpretation g x)
-                  (skip' interpretation)),
+    fix (\x -> if' algebra f
+                  (seq' algebra g x)
+                  (skip' algebra)),
   intconst' = \i -> const (return (Left i)),
   var' = \n sto -> maybe mzero return (lookup n sto),
   unary' = \o f sto -> f sto >>= \v ->
