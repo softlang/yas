@@ -1,54 +1,121 @@
 module Language.BIPL.Analysis.Termination.BasicAnalysis where
 
+import Language.BIPL.Algebra.Signature
+import qualified Language.BIPL.Algebra.Scheme as Algebra
 import Language.BIPL.Syntax
 import Language.BIPL.Analysis.Termination.Domain
 
+type Property = Expr
+type Store = AnalysisState
+
 -- | Analyze all syntactic while loops in a statement.
 --
---   This is intentionally a "termination-ish" analysis: it recognizes common
---   counter-loop variants of the form
---
---     while x < c  do x := x + k
---     while x <= c do x := x + k
---     while x > c  do x := x - k
---     while x >= c do x := x - k
---
---   for positive k. It reports suspicious loops when the guard variable is not
---   updated or is moved away from the bound, and otherwise reports unknown.
+-- This convenience function now delegates traversal to the generic BIPL
+-- algebraic interpretation scheme. Use 'algebra', 'initialState', and 'finish'
+-- directly when you want to see the analysis as an algebra instance.
 analyze :: Stmt -> AnalysisResult
-analyze = AnalysisResult . analyzeStmt
+analyze stmt = finish (Algebra.interpret algebra stmt initialState)
 
-analyzeStmt :: Stmt -> [Finding]
-analyzeStmt Skip = []
-analyzeStmt (Assign _ _) = []
-analyzeStmt (Seq s1 s2) = analyzeStmt s1 ++ analyzeStmt s2
-analyzeStmt (If _ s1 s2) = analyzeStmt s1 ++ analyzeStmt s2
-analyzeStmt (While e body) = classifyLoop e body : analyzeStmt body
+-- | Termination-ish analysis as an algebra.
+--
+-- The expression part reconstructs BIPL expressions. This gives 'while'' the
+-- syntactic guard expression it needs for the loop-variant heuristic.
+--
+-- The statement part has two modes:
+--
+-- * ordinary analysis mode: collect one finding per while loop, recursively;
+-- * tracking mode: summarize how a selected variable changes in a loop body.
+algebra :: Alg Store Property
+algebra = a
+  where
+    a = Alg
+      { skip' = id
 
-classifyLoop :: Expr -> Stmt -> Finding
+      , assign' = \x f st ->
+          case trackedVariable st of
+            Nothing -> st
+            Just y
+              | x == y ->
+                  st { trackedDelta =
+                         combineDelta (trackedDelta st) (exprDelta y (f st)) }
+              | otherwise -> st
+
+      , seq' = flip (.)
+
+      , if' = \_ g h st ->
+          case trackedVariable st of
+            Nothing ->
+              -- For this structural analysis, both branches may contain loops
+              -- that should be reported. We therefore traverse both branches.
+              h (g st)
+            Just _ ->
+              let before = trackedDelta st
+                  gDelta = trackedDelta (g (st { trackedDelta = NoChange }))
+                  hDelta = trackedDelta (h (st { trackedDelta = NoChange }))
+              in st { trackedDelta = combineDelta before (branchDelta gDelta hDelta) }
+
+      , while' = \f body st ->
+          case trackedVariable st of
+            Nothing ->
+              -- Report this loop and then traverse the body once to find
+              -- syntactically nested loops. This is not concrete execution.
+              body (addFinding (classifyLoop (f st) body) st)
+            Just _ ->
+              -- A nested loop inside a loop body makes the selected variable's
+              -- net syntactic delta unknown, matching the previous direct
+              -- syntax traversal.
+              st { trackedDelta = UnknownDelta }
+
+      , intconst' = \i _ -> IntConst i
+      , var' = \x _ -> Var x
+      , unary' = \o f st -> Unary o (f st)
+      , binary' = \o f g st -> Binary o (f st) (g st)
+      }
+
+classifyLoop :: Expr -> (Store -> Store) -> Finding
 classifyLoop e body =
   Finding e $
     case guardBound e of
-      Just (UpperBound x n) -> classifyDelta x ("upper bound " ++ show n) NeedsIncrease (netDelta x body)
-      Just (LowerBound x n) -> classifyDelta x ("lower bound " ++ show n) NeedsDecrease (netDelta x body)
-      Nothing -> UnknownVariant "guard is not a recognized variable/bound comparison"
+      Just (UpperBound x n) ->
+        classifyDelta x ("upper bound " ++ show n) NeedsIncrease
+          (netDeltaByAlgebra x body)
+      Just (LowerBound x n) ->
+        classifyDelta x ("lower bound " ++ show n) NeedsDecrease
+          (netDeltaByAlgebra x body)
+      Nothing ->
+        UnknownVariant "guard is not a recognized variable/bound comparison"
 
-data Need = NeedsIncrease | NeedsDecrease
+netDeltaByAlgebra :: String -> (Store -> Store) -> Delta
+netDeltaByAlgebra x body =
+  trackedDelta (body (trackingState x))
+
+data Need
+  = NeedsIncrease
+  | NeedsDecrease
 
 classifyDelta :: String -> String -> Need -> Delta -> Verdict
 classifyDelta x bound need delta =
   case delta of
     KnownDelta k
       | movesToward need k ->
-          ProvenVariant x ("body changes " ++ x ++ " by " ++ show k ++ ", moving it toward the " ++ bound)
+          ProvenVariant x
+            ("body changes " ++ x ++ " by " ++ show k
+              ++ ", moving it toward the " ++ bound)
       | k == 0 ->
-          SuspectVariant x ("body leaves " ++ x ++ " unchanged, so the loop variant does not decrease")
+          SuspectVariant x
+            ("body leaves " ++ x
+              ++ " unchanged, so the loop variant does not decrease")
       | otherwise ->
-          SuspectVariant x ("body changes " ++ x ++ " by " ++ show k ++ ", moving it away from the " ++ bound)
+          SuspectVariant x
+            ("body changes " ++ x ++ " by " ++ show k
+              ++ ", moving it away from the " ++ bound)
     NoChange ->
-      SuspectVariant x ("body does not assign to guard variable " ++ x)
+      SuspectVariant x
+        ("body does not assign to guard variable " ++ x)
     UnknownDelta ->
-      UnknownVariant ("body changes guard variable " ++ x ++ " in a way this analysis cannot classify")
+      UnknownVariant
+        ("body changes guard variable " ++ x
+          ++ " in a way this analysis cannot classify")
 
 movesToward :: Need -> Int -> Bool
 movesToward NeedsIncrease k = k > 0
@@ -64,17 +131,7 @@ guardBound (Binary Gt  (IntConst n) (Var x))      = Just (UpperBound x n)
 guardBound (Binary Geq (IntConst n) (Var x))      = Just (UpperBound x n)
 guardBound (Binary Lt  (IntConst n) (Var x))      = Just (LowerBound x n)
 guardBound (Binary Leq (IntConst n) (Var x))      = Just (LowerBound x n)
-guardBound _ = Nothing
-
--- | Compute the syntactic net change of a variable over a statement.
-netDelta :: String -> Stmt -> Delta
-netDelta _ Skip = NoChange
-netDelta x (Assign y e)
-  | x == y = exprDelta x e
-  | otherwise = NoChange
-netDelta x (Seq s1 s2) = combineDelta (netDelta x s1) (netDelta x s2)
-netDelta x (If _ s1 s2) = branchDelta (netDelta x s1) (netDelta x s2)
-netDelta _ (While _ _) = UnknownDelta
+guardBound _                                      = Nothing
 
 combineDelta :: Delta -> Delta -> Delta
 combineDelta UnknownDelta _ = UnknownDelta
@@ -103,3 +160,23 @@ exprDelta x (Binary Sub (Var y) (IntConst k))
   | x == y = KnownDelta (-k)
   | otherwise = UnknownDelta
 exprDelta _ _ = UnknownDelta
+
+initialState :: AnalysisState
+initialState = AnalysisState
+  { stateFindings = []
+  , trackedVariable = Nothing
+  , trackedDelta = NoChange
+  }
+
+trackingState :: String -> AnalysisState
+trackingState x = AnalysisState
+  { stateFindings = []
+  , trackedVariable = Just x
+  , trackedDelta = NoChange
+  }
+
+finish :: AnalysisState -> AnalysisResult
+finish = AnalysisResult . stateFindings
+
+addFinding :: Finding -> AnalysisState -> AnalysisState
+addFinding finding st = st { stateFindings = stateFindings st ++ [finding] }

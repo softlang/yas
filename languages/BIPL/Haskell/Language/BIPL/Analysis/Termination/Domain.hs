@@ -3,9 +3,10 @@ module Language.BIPL.Analysis.Termination.Domain where
 import Language.BIPL.Syntax
 
 -- | What kind of numeric bound the loop guard imposes on the loop variable.
---   UpperBound means the loop continues while x is below a bound, so x should
---   increase. LowerBound means the loop continues while x is above a bound, so
---   x should decrease.
+--
+-- UpperBound means the loop continues while x is below a bound, so x should
+-- increase. LowerBound means the loop continues while x is above a bound, so
+-- x should decrease.
 data GuardBound
   = UpperBound String Int
   | LowerBound String Int
@@ -29,8 +30,23 @@ data Verdict
 data Finding = Finding
   { guardExpression :: Expr
   , verdict :: Verdict
-  } deriving (Eq, Show)
+  }
+  deriving (Eq, Show)
 
 newtype AnalysisResult = AnalysisResult
   { findings :: [Finding]
-  } deriving (Eq, Show)
+  }
+  deriving (Eq, Show)
+
+-- | Internal state used by the algebraic interpretation.
+--
+-- In ordinary analysis mode, 'trackedVariable' is 'Nothing' and the state
+-- accumulates findings. In loop-body-summary mode, 'trackedVariable' is
+-- 'Just x' and the same statement algebra computes the syntactic net change
+-- of x in the body.
+data AnalysisState = AnalysisState
+  { stateFindings :: [Finding]
+  , trackedVariable :: Maybe String
+  , trackedDelta :: Delta
+  }
+  deriving (Eq, Show)

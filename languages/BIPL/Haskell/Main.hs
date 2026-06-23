@@ -40,7 +40,7 @@ import Language.BIPL.Analysis.Termination.BasicAnalysis as Termination
 import Language.BIPL.Analysis.Slicing.BasicAnalysis as Slicing
 import Language.BIPL.Analysis.InformationFlow.BasicAnalysis as InformationFlow
 
--- Other language processorsn -- to be tested
+-- Other language processors to be tested
 import Language.BIPL.Extraction
 import Language.BIPL.Compiler
 import Language.BAL.Assembler
@@ -49,11 +49,14 @@ import Language.BIPL.Rename.Transformation
 
 s = Language.BIPL.Sample.euclideanDiv
 s' = Language.BIPL.Goto.Sample.euclideanDiv
+
 facv1 = Language.BIPL.Analysis.Sign.Sample.factorialV1
 facv2 = Language.BIPL.Analysis.Sign.Sample.factorialV2
 sto'' = Language.BIPL.Analysis.Sign.Sample.store
+
 test1 = Language.BIPL.Analysis.Sign.Sample.test1
 test1sto = Language.BIPL.Analysis.Sign.Sample.store1
+
 s_al = compile (Language.BIPL.Sample.addArguments s)
 s_ml = assemble s_al
 
@@ -64,7 +67,6 @@ main_interpretation = do
   print $ InterpreterGoto.execute s' (fromList [("x", Left 13), ("y", Left 4)])
   print $ Algebra.interpret InterpreterAlgebra.algebra s (fromList [("x", Left 13), ("y", Left 4)])
   print $ maybe undefined id (MonadicAlgebra.interpret (InterpreterMonadicAlgebra.algebra) s (fromList [("x", Left 13), ("y", Left 4)]))
-
 
 main_typechecking = do
   print $ Typing1.okStmt s (fromList [("x", Typing1.IntType), ("y", Typing1.IntType)])
@@ -120,12 +122,12 @@ main_information_flow_analysis = do
   print $ InformationFlow.analyzeWithPublicSinks Language.BIPL.Analysis.InformationFlow.Sample.privateComputation Language.BIPL.Analysis.InformationFlow.Sample.privateComputationStore Language.BIPL.Analysis.InformationFlow.Sample.privateComputationSinks
 
 main_termination_analysis = do
-  print $ Termination.analyze Language.BIPL.Analysis.Termination.Sample.decrementToZero
-  print $ Termination.analyze Language.BIPL.Analysis.Termination.Sample.incrementToLimit
-  print $ Termination.analyze Language.BIPL.Analysis.Termination.Sample.movesAwayFromBound
-  print $ Termination.analyze Language.BIPL.Analysis.Termination.Sample.guardVariableUnchanged
-  print $ Termination.analyze Language.BIPL.Analysis.Termination.Sample.unknownBooleanGuard
-  print $ Termination.analyze Language.BIPL.Analysis.Termination.Sample.unknownConditionalUpdate
+  print $ Termination.finish $ Algebra.interpret Termination.algebra Language.BIPL.Analysis.Termination.Sample.decrementToZero Termination.initialState
+  print $ Termination.finish $ Algebra.interpret Termination.algebra Language.BIPL.Analysis.Termination.Sample.incrementToLimit Termination.initialState
+  print $ Termination.finish $ Algebra.interpret Termination.algebra Language.BIPL.Analysis.Termination.Sample.movesAwayFromBound Termination.initialState
+  print $ Termination.finish $ Algebra.interpret Termination.algebra Language.BIPL.Analysis.Termination.Sample.guardVariableUnchanged Termination.initialState
+  print $ Termination.finish $ Algebra.interpret Termination.algebra Language.BIPL.Analysis.Termination.Sample.unknownBooleanGuard Termination.initialState
+  print $ Termination.finish $ Algebra.interpret Termination.algebra Language.BIPL.Analysis.Termination.Sample.unknownConditionalUpdate Termination.initialState
 
 main_analysis = do
   main_type_state_analysis
