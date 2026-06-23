@@ -1,139 +1,136 @@
 module Language.BIPL.Analysis.DeadCode.BasicAnalysis where
 
+import Data.Map (insert)
+import qualified Data.Map as Map
+import Language.BIPL.Algebra.Signature
+import qualified Language.BIPL.Algebra.Scheme as Algebra
 import Language.BIPL.Syntax
 import Language.BIPL.Analysis.DeadCode.Domain
-import Data.List (nub)
-import Data.Map ((!))
-import qualified Data.Map as Map
 
--- | Analyze a statement from an abstract environment.
---   Diagnostics identify syntactically present branches whose guard is
---   definitely true or definitely false in the current abstract environment.
-analyze :: Stmt -> Env -> AnalysisResult
-analyze = analyzeStmt
+type Store = AnalysisState
 
-analyzeStmt :: Stmt -> Env -> AnalysisResult
-analyzeStmt Skip env = AnalysisResult env []
-analyzeStmt (Assign x e) env = AnalysisResult (Map.insert x (evalExpr env e) env) []
-analyzeStmt (Seq s1 s2) env =
-  let r1 = analyzeStmt s1 env
-      r2 = analyzeStmt s2 (environment r1)
-  in AnalysisResult (environment r2) (diagnostics r1 ++ diagnostics r2)
-analyzeStmt (If e s1 s2) env =
-  case truth (evalExpr env e) of
-    BoolKnown True ->
-      let r = analyzeStmt s1 env
-      in AnalysisResult (environment r) (UnreachableElse e : diagnostics r)
-    BoolKnown False ->
-      let r = analyzeStmt s2 env
-      in AnalysisResult (environment r) (UnreachableThen e : diagnostics r)
-    _ ->
-      let r1 = analyzeStmt s1 env
-          r2 = analyzeStmt s2 env
-      in AnalysisResult
-           (joinEnv (environment r1) (environment r2))
-           (diagnostics r1 ++ diagnostics r2)
-analyzeStmt (While e s) env =
-  case truth (evalExpr env e) of
-    BoolKnown False -> AnalysisResult env [UnreachableLoopBody e]
-    _ -> analyzeLoop e s env
+-- | Analyze unreachable branches and loop bodies.
+--
+-- The implementation is algebraic: this wrapper is kept for backwards
+-- compatibility with earlier examples.
+analyze :: Stmt -> VarEnv -> AnalysisResult
+analyze stmt env =
+  finish (Algebra.interpret algebra stmt (initialState env))
 
--- | Compute a small post-loop approximation. The domain reaches a fixed point
---   quickly for these examples because differing constants are widened to Top
---   by joinValue.
-analyzeLoop :: Expr -> Stmt -> Env -> AnalysisResult
-analyzeLoop _ body entry = go 20 entry []
-  where
-    go 0 headEnv ds = AnalysisResult headEnv (nub ds)
-    go n headEnv ds =
-      let r = analyzeStmt body headEnv
-          next = joinEnv entry (environment r)
-          ds' = ds ++ diagnostics r
-      in if next == headEnv
-           then AnalysisResult headEnv (nub ds')
-           else go (n - 1) next ds'
+-- | Dead-branch analysis as an algebra.
+--
+-- Expressions compute a small constant-propagation-like abstract value and
+-- reconstruct the expression. Statements update the abstract environment and
+-- collect diagnostics. Loops are traversed once for nested diagnostics; this is
+-- a static traversal, not concrete loop execution.
+algebra :: Alg Store Property
+algebra = Alg
+  { skip' = id
 
-truth :: AbsValue -> AbsBool
-truth (ValBool b) = b
-truth ValBot = BoolBot
-truth _ = BoolTop
+  , assign' = \x e st ->
+      let p = e st
+      in st { facts = insert x (abstractValue p) (facts st) }
 
-evalExpr :: Env -> Expr -> AbsValue
-evalExpr _ (IntConst i) = ValInt (IntKnown i)
-evalExpr env (Var x) = Map.findWithDefault ValTop x env
-evalExpr env (Unary op e) = evalUnary op (evalExpr env e)
-evalExpr env (Binary op e1 e2) = evalBinary op (evalExpr env e1) (evalExpr env e2)
+  , seq' = \f g st -> g (f st)
 
-evalUnary :: UOp -> AbsValue -> AbsValue
-evalUnary Negate (ValInt i) = ValInt (negInt i)
-evalUnary Not (ValBool b) = ValBool (notBool b)
-evalUnary _ ValBot = ValBot
-evalUnary _ _ = ValTop
+  , if' = \c t e st ->
+      let p = c st
+      in case asBool p of
+           Just True ->
+             t (report (UnreachableElse (propertyExpr p)) st)
+           Just False ->
+             e (report (UnreachableThen (propertyExpr p)) st)
+           Nothing ->
+             let left = t st
+                 right = e st
+             in joinStates st left right
 
-evalBinary :: BOp -> AbsValue -> AbsValue -> AbsValue
-evalBinary Add (ValInt x) (ValInt y) = ValInt (arithInt (+) x y)
-evalBinary Sub (ValInt x) (ValInt y) = ValInt (arithInt (-) x y)
-evalBinary Mul (ValInt x) (ValInt y) = ValInt (arithInt (*) x y)
-evalBinary Lt  (ValInt x) (ValInt y) = ValBool (cmpInt (<)  x y)
-evalBinary Leq (ValInt x) (ValInt y) = ValBool (cmpInt (<=) x y)
-evalBinary Eq  (ValInt x) (ValInt y) = ValBool (eqInt x y)
-evalBinary Eq  (ValBool x) (ValBool y) = ValBool (eqBool x y)
-evalBinary Geq (ValInt x) (ValInt y) = ValBool (cmpInt (>=) x y)
-evalBinary Gt  (ValInt x) (ValInt y) = ValBool (cmpInt (>)  x y)
-evalBinary And (ValBool x) (ValBool y) = ValBool (andBool x y)
-evalBinary Or  (ValBool x) (ValBool y) = ValBool (orBool x y)
-evalBinary _ ValBot _ = ValBot
-evalBinary _ _ ValBot = ValBot
-evalBinary _ _ _ = ValTop
+  , while' = \c body st ->
+      let p = c st
+      in case asBool p of
+           Just False ->
+             report (UnreachableLoopBody (propertyExpr p)) st
+           _ ->
+             -- The loop body may contain dead branches. Traverse it once to
+             -- collect them, then join its facts with the incoming facts to
+             -- account for zero or more iterations.
+             let afterBody = body st
+             in afterBody { facts = joinFacts (facts st) (facts afterBody) }
 
-negInt :: AbsInt -> AbsInt
-negInt IntBot = IntBot
-negInt (IntKnown i) = IntKnown (-i)
-negInt IntTop = IntTop
+  , intconst' = \i _ -> intProperty (IntConst i) (Just i)
 
-arithInt :: (Int -> Int -> Int) -> AbsInt -> AbsInt -> AbsInt
-arithInt _ IntBot _ = IntBot
-arithInt _ _ IntBot = IntBot
-arithInt f (IntKnown x) (IntKnown y) = IntKnown (f x y)
-arithInt _ _ _ = IntTop
+  , var' = \x st ->
+      Property
+        (Map.findWithDefault AbsUnknown x (facts st))
+        (Var x)
 
-cmpInt :: (Int -> Int -> Bool) -> AbsInt -> AbsInt -> AbsBool
-cmpInt _ IntBot _ = BoolBot
-cmpInt _ _ IntBot = BoolBot
-cmpInt p (IntKnown x) (IntKnown y) = BoolKnown (p x y)
-cmpInt _ _ _ = BoolTop
+  , unary' = \op e st ->
+      let p = e st
+          expr = Unary op (propertyExpr p)
+      in case op of
+           Negate ->
+             intProperty expr (fmap negate (knownInt p))
+           Not ->
+             boolProperty expr (fmap not (knownBool p))
 
-eqInt :: AbsInt -> AbsInt -> AbsBool
-eqInt IntBot _ = BoolBot
-eqInt _ IntBot = BoolBot
-eqInt (IntKnown x) (IntKnown y) = BoolKnown (x == y)
-eqInt _ _ = BoolTop
+  , binary' = \op e1 e2 st ->
+      let p1 = e1 st
+          p2 = e2 st
+          expr = Binary op (propertyExpr p1) (propertyExpr p2)
+      in evalBinary op expr p1 p2
+  }
 
-eqBool :: AbsBool -> AbsBool -> AbsBool
-eqBool BoolBot _ = BoolBot
-eqBool _ BoolBot = BoolBot
-eqBool (BoolKnown x) (BoolKnown y) = BoolKnown (x == y)
-eqBool _ _ = BoolTop
+evalBinary :: BOp -> Expr -> Property -> Property -> Property
+evalBinary Add expr p1 p2 =
+  intProperty expr ((+) <$> knownInt p1 <*> knownInt p2)
+evalBinary Sub expr p1 p2 =
+  intProperty expr ((-) <$> knownInt p1 <*> knownInt p2)
+evalBinary Mul expr p1 p2 =
+  intProperty expr ((*) <$> knownInt p1 <*> knownInt p2)
 
-notBool :: AbsBool -> AbsBool
-notBool BoolBot = BoolBot
-notBool (BoolKnown b) = BoolKnown (not b)
-notBool BoolTop = BoolTop
+evalBinary Lt expr p1 p2 =
+  boolProperty expr ((<) <$> knownInt p1 <*> knownInt p2)
+evalBinary Leq expr p1 p2 =
+  boolProperty expr ((<=) <$> knownInt p1 <*> knownInt p2)
+evalBinary Geq expr p1 p2 =
+  boolProperty expr ((>=) <$> knownInt p1 <*> knownInt p2)
+evalBinary Gt expr p1 p2 =
+  boolProperty expr ((>) <$> knownInt p1 <*> knownInt p2)
 
-andBool :: AbsBool -> AbsBool -> AbsBool
-andBool BoolBot _ = BoolBot
-andBool _ BoolBot = BoolBot
-andBool (BoolKnown False) _ = BoolKnown False
-andBool _ (BoolKnown False) = BoolKnown False
-andBool (BoolKnown True) b = b
-andBool b (BoolKnown True) = b
-andBool BoolTop BoolTop = BoolTop
+evalBinary Eq expr p1 p2 =
+  case (knownInt p1, knownInt p2, knownBool p1, knownBool p2) of
+    (Just x, Just y, _, _) -> boolProperty expr (Just (x == y))
+    (_, _, Just x, Just y) -> boolProperty expr (Just (x == y))
+    _ -> boolProperty expr Nothing
 
-orBool :: AbsBool -> AbsBool -> AbsBool
-orBool BoolBot _ = BoolBot
-orBool _ BoolBot = BoolBot
-orBool (BoolKnown True) _ = BoolKnown True
-orBool _ (BoolKnown True) = BoolKnown True
-orBool (BoolKnown False) b = b
-orBool b (BoolKnown False) = b
-orBool BoolTop BoolTop = BoolTop
+evalBinary And expr p1 p2 =
+  boolProperty expr (andBool (knownBool p1) (knownBool p2))
+evalBinary Or expr p1 p2 =
+  boolProperty expr (orBool (knownBool p1) (knownBool p2))
+
+andBool :: Maybe Bool -> Maybe Bool -> Maybe Bool
+andBool (Just False) _ = Just False
+andBool _ (Just False) = Just False
+andBool (Just True) (Just True) = Just True
+andBool _ _ = Nothing
+
+orBool :: Maybe Bool -> Maybe Bool -> Maybe Bool
+orBool (Just True) _ = Just True
+orBool _ (Just True) = Just True
+orBool (Just False) (Just False) = Just False
+orBool _ _ = Nothing
+
+initialState :: VarEnv -> AnalysisState
+initialState env = AnalysisState
+  { facts = env
+  , diagnostics = []
+  }
+
+finish :: AnalysisState -> AnalysisResult
+finish st = AnalysisResult
+  { finalFacts = facts st
+  , findings = diagnostics st
+  }
+
+report :: Diagnostic -> AnalysisState -> AnalysisState
+report d st = st { diagnostics = diagnostics st ++ [d] }

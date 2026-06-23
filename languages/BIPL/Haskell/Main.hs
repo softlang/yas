@@ -100,11 +100,11 @@ main_interval_analysis = do
   print $ Algebra.interpret Interval.algebra Language.BIPL.Analysis.Interval.Sample.rangedLoop Language.BIPL.Analysis.Interval.Sample.rangedLoopStore
 
 main_dead_code_analysis = do
-  print $ DeadCode.analyze Language.BIPL.Analysis.DeadCode.Sample.deadElse Language.BIPL.Analysis.DeadCode.Sample.deadElseStore
-  print $ DeadCode.analyze Language.BIPL.Analysis.DeadCode.Sample.deadThen Language.BIPL.Analysis.DeadCode.Sample.deadThenStore
-  print $ DeadCode.analyze Language.BIPL.Analysis.DeadCode.Sample.unknownBranch Language.BIPL.Analysis.DeadCode.Sample.unknownBranchStore
-  print $ DeadCode.analyze Language.BIPL.Analysis.DeadCode.Sample.deadLoopBody Language.BIPL.Analysis.DeadCode.Sample.deadLoopBodyStore
-  print $ DeadCode.analyze Language.BIPL.Analysis.DeadCode.Sample.nestedDeadBranch Language.BIPL.Analysis.DeadCode.Sample.nestedDeadBranchStore
+  print $ DeadCode.finish $ Algebra.interpret DeadCode.algebra Language.BIPL.Analysis.DeadCode.Sample.deadElse (DeadCode.initialState Language.BIPL.Analysis.DeadCode.Sample.deadElseStore)
+  print $ DeadCode.finish $ Algebra.interpret DeadCode.algebra Language.BIPL.Analysis.DeadCode.Sample.deadThen (DeadCode.initialState Language.BIPL.Analysis.DeadCode.Sample.deadThenStore)
+  print $ DeadCode.finish $ Algebra.interpret DeadCode.algebra Language.BIPL.Analysis.DeadCode.Sample.unknownBranch (DeadCode.initialState Language.BIPL.Analysis.DeadCode.Sample.unknownBranchStore)
+  print $ DeadCode.finish $ Algebra.interpret DeadCode.algebra Language.BIPL.Analysis.DeadCode.Sample.deadLoopBody (DeadCode.initialState Language.BIPL.Analysis.DeadCode.Sample.deadLoopBodyStore)
+  print $ DeadCode.finish $ Algebra.interpret DeadCode.algebra Language.BIPL.Analysis.DeadCode.Sample.nestedDeadBranch (DeadCode.initialState Language.BIPL.Analysis.DeadCode.Sample.nestedDeadBranchStore)
 
 main_slicing_analysis = do
   print $ Slicing.analyze Language.BIPL.Analysis.Slicing.Sample.straightLine Language.BIPL.Analysis.Slicing.Sample.straightLineStore
