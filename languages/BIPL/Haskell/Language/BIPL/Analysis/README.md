@@ -1,8 +1,16 @@
 # Summary of BIPL Analyses
 
-These analyses obey compositionality in the sense of denotational semantics; they leverage different abstract domains -- in the sense of abstract interpretation -- for different properties of interest. Typically, the coverage of while-loops is the most interesting, as different types of fixed-point computation are required.
+All these analyses obey compositionality in the sense of denotational semantics; they leverage different abstract domains -- in the sense of abstract interpretation -- for different properties of interest. Typically, the coverage of while-loops is the most interesting, as different types of fixed-point computation are required.
 
-## Type-state analysis: abstract interpretation as lightweight type checking
+Each analysis is structured like this:
+* BIPL/Haskell/Language/BIPL/Analysis/.../Sample.hs -- Illustrative examples in abstract syntax
+* BIPL/Haskell/Language/BIPL/Analysis/.../Domain.hs -- (Abstract) domains for analysis
+* BIPL/Haskell/Language/BIPL/Analysis/.../...Analysis.hs -- An algebra and helpers for the analysis
+* Main.hs -- Test invocations of the analysis
+
+## 1. Type-state analysis: abstract interpretation as lightweight type checking
+
+https://github.com/softlang/yas/tree/master/languages/BIPL/Haskell/Language/BIPL/Analysis/TypeState
 
 **Purpose.**  
 Type-state analysis detects type inconsistencies in a language whose syntax does not enforce a static type discipline (such as by means of variable declarations). It interprets expressions and assignments over a small type lattice rather than over concrete values.
@@ -27,7 +35,9 @@ Diagnostics are encoded in the resulting abstract environment rather than emitte
 
 ---
 
-## Sign analysis: first abstract interpretation example
+## 2. Sign analysis: first abstract interpretation example
+
+https://github.com/softlang/yas/tree/master/languages/BIPL/Haskell/Language/BIPL/Analysis/Sign
 
 **Purpose.**  
 Sign analysis infers coarse numeric facts: whether integer expressions are definitely positive, definitely negative, or definitely zero. It is a small and clear example of abstract interpretation in the BIPL analysis suite: instead of executing the program over concrete integers and booleans, the semantics is reused over an abstract domain of signs and abstract booleans.
@@ -55,7 +65,9 @@ The output is mainly a final abstract store, not a list of warnings. The analysi
 
 ---
 
-## Interval analysis: more informative numeric abstraction
+## 3. Interval analysis: more informative numeric abstraction
+
+https://github.com/softlang/yas/tree/master/languages/BIPL/Haskell/Language/BIPL/Analysis/Interval
 
 **Purpose.**  
 Interval analysis refines sign analysis by tracking numeric ranges instead of only signs. This makes it possible to reason about bounds, counters, and simple guard conditions more precisely.
@@ -81,7 +93,9 @@ The output is a final interval environment. The result should be read as a safe 
 
 ---
 
-## Dead-code analysis: value abstraction plus diagnostics
+## 4. Dead-code analysis: value abstraction plus diagnostics
+
+https://github.com/softlang/yas/tree/master/languages/BIPL/Haskell/Language/BIPL/Analysis/DeadCode
 
 **Purpose.**  
 Dead-code analysis reports branches or loop bodies that are definitely unreachable because a guard can be evaluated statically in the abstract domain.
@@ -111,7 +125,9 @@ This is a diagnostic-first analysis. The final abstract environment exists, but 
 
 ---
 
-## Slicing/dependency analysis: provenance abstraction
+## 5. Slicing/dependency analysis: provenance abstraction
+
+https://github.com/softlang/yas/tree/master/languages/BIPL/Haskell/Language/BIPL/Analysis/Slicing
 
 **Purpose.**  
 Slicing analysis computes which source variables may influence each variable. Instead of asking “what value can this expression have?”, it asks “where could this value have come from?”
@@ -149,7 +165,9 @@ The result is a dependency environment, useful for answering slicing questions s
 
 ---
 
-## Information-flow analysis: security lattice plus diagnostics
+## 6. Information-flow analysis: security lattice plus diagnostics
+
+https://github.com/softlang/yas/tree/master/languages/BIPL/Haskell/Language/BIPL/Analysis/InformationFlow
 
 **Purpose.**  
 Information-flow analysis tracks confidentiality and reports possible leaks from high-security data to low-security/public sinks. It builds on the same dependency intuition as slicing, but interprets dependencies through a security lattice.
@@ -178,7 +196,9 @@ This analysis produces both a final security environment and diagnostics. It dis
 
 ---
 
-## Termination analysis: syntactic variant recognizer
+## 7. Termination analysis: syntactic variant recognizer
+
+https://github.com/softlang/yas/tree/master/languages/BIPL/Haskell/Language/BIPL/Analysis/DeadCode
 
 **Purpose.**  
 Termination analysis looks for common counter-loop patterns that appear to move toward a loop bound. It is not a general termination prover. Instead, it is a lightweight syntactic recognizer for simple variants.
