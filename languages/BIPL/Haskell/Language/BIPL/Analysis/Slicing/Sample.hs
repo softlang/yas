@@ -53,7 +53,8 @@ preSeededDependency =
   Assign "report" (Binary Add (Var "total") (Var "tax"))
 
 preSeededDependencyStore :: Env
-preSeededDependencyStore = fromListEnv
-  [ ("total", ["price", "discount"])
-  , ("tax", ["region"])
-  ]
+preSeededDependencyStore =
+  fromListEnv
+    [ ("total", ["price", "discount"])
+    , ("tax", ["region"])
+    ]

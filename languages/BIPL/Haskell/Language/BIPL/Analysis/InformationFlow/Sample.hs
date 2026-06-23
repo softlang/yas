@@ -11,7 +11,8 @@ explicitLeak =
   Assign "public" (Binary Add (Var "secret") (IntConst 1))
 
 explicitLeakStore :: Env
-explicitLeakStore = fromList [("secret", High), ("public", Low)]
+explicitLeakStore =
+  fromList [("secret", High), ("public", Low)]
 
 explicitLeakSinks :: PublicSinks
 explicitLeakSinks = ["public"]
@@ -20,12 +21,14 @@ explicitLeakSinks = ["public"]
 -- The assigned values are Low, but the control decision is High.
 implicitLeak :: Stmt
 implicitLeak =
-  If (Var "secret")
-     (Assign "public" (IntConst 1))
-     (Assign "public" (IntConst 0))
+  If
+    (Var "secret")
+    (Assign "public" (IntConst 1))
+    (Assign "public" (IntConst 0))
 
 implicitLeakStore :: Env
-implicitLeakStore = fromList [("secret", High), ("public", Low)]
+implicitLeakStore =
+  fromList [("secret", High), ("public", Low)]
 
 implicitLeakSinks :: PublicSinks
 implicitLeakSinks = ["public"]
@@ -37,7 +40,8 @@ safePublicComputation =
   Assign "public" (Binary Add (Var "lowInput") (IntConst 1))
 
 safePublicComputationStore :: Env
-safePublicComputationStore = fromList [("lowInput", Low), ("public", Low)]
+safePublicComputationStore =
+  fromList [("lowInput", Low), ("public", Low)]
 
 safePublicComputationSinks :: PublicSinks
 safePublicComputationSinks = ["public"]
@@ -46,11 +50,13 @@ safePublicComputationSinks = ["public"]
 -- Taint propagates through intermediate variables.
 highIntermediate :: Stmt
 highIntermediate =
-  Seq (Assign "tmp" (Var "secret"))
-      (Assign "public" (Var "tmp"))
+  Seq
+    (Assign "tmp" (Var "secret"))
+    (Assign "public" (Var "tmp"))
 
 highIntermediateStore :: Env
-highIntermediateStore = fromList [("secret", High), ("tmp", Low), ("public", Low)]
+highIntermediateStore =
+  fromList [("secret", High), ("tmp", Low), ("public", Low)]
 
 highIntermediateSinks :: PublicSinks
 highIntermediateSinks = ["public"]
@@ -59,11 +65,13 @@ highIntermediateSinks = ["public"]
 -- The loop guard creates an implicit flow to the public sink.
 loopLeak :: Stmt
 loopLeak =
-  While (Var "secret")
-        (Assign "public" (IntConst 1))
+  While
+    (Var "secret")
+    (Assign "public" (IntConst 1))
 
 loopLeakStore :: Env
-loopLeakStore = fromList [("secret", High), ("public", Low)]
+loopLeakStore =
+  fromList [("secret", High), ("public", Low)]
 
 loopLeakSinks :: PublicSinks
 loopLeakSinks = ["public"]
@@ -75,7 +83,8 @@ privateComputation =
   Assign "secretOut" (Binary Add (Var "secret") (IntConst 1))
 
 privateComputationStore :: Env
-privateComputationStore = fromList [("secret", High), ("secretOut", High)]
+privateComputationStore =
+  fromList [("secret", High), ("secretOut", High)]
 
 privateComputationSinks :: PublicSinks
 privateComputationSinks = ["public"]

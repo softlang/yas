@@ -107,19 +107,19 @@ main_dead_code_analysis = do
   print $ DeadCode.finish $ Algebra.interpret DeadCode.algebra Language.BIPL.Analysis.DeadCode.Sample.nestedDeadBranch (DeadCode.initialState Language.BIPL.Analysis.DeadCode.Sample.nestedDeadBranchStore)
 
 main_slicing_analysis = do
-  print $ Slicing.analyze Language.BIPL.Analysis.Slicing.Sample.straightLine Language.BIPL.Analysis.Slicing.Sample.straightLineStore
-  print $ Slicing.analyze Language.BIPL.Analysis.Slicing.Sample.controlDependency Language.BIPL.Analysis.Slicing.Sample.controlDependencyStore
-  print $ Slicing.analyze Language.BIPL.Analysis.Slicing.Sample.combinedDependency Language.BIPL.Analysis.Slicing.Sample.combinedDependencyStore
-  print $ Slicing.analyze Language.BIPL.Analysis.Slicing.Sample.loopDependency Language.BIPL.Analysis.Slicing.Sample.loopDependencyStore
-  print $ Slicing.analyze Language.BIPL.Analysis.Slicing.Sample.preSeededDependency Language.BIPL.Analysis.Slicing.Sample.preSeededDependencyStore
+  print $ Slicing.finish $ Algebra.interpret Slicing.algebra Language.BIPL.Analysis.Slicing.Sample.straightLine (Slicing.initialState Language.BIPL.Analysis.Slicing.Sample.straightLineStore)
+  print $ Slicing.finish $ Algebra.interpret Slicing.algebra Language.BIPL.Analysis.Slicing.Sample.controlDependency (Slicing.initialState Language.BIPL.Analysis.Slicing.Sample.controlDependencyStore)
+  print $ Slicing.finish $ Algebra.interpret Slicing.algebra Language.BIPL.Analysis.Slicing.Sample.combinedDependency (Slicing.initialState Language.BIPL.Analysis.Slicing.Sample.combinedDependencyStore)
+  print $ Slicing.finish $ Algebra.interpret Slicing.algebra Language.BIPL.Analysis.Slicing.Sample.loopDependency (Slicing.initialState Language.BIPL.Analysis.Slicing.Sample.loopDependencyStore)
+  print $ Slicing.finish $ Algebra.interpret Slicing.algebra Language.BIPL.Analysis.Slicing.Sample.preSeededDependency (Slicing.initialState Language.BIPL.Analysis.Slicing.Sample.preSeededDependencyStore)
 
 main_information_flow_analysis = do
-  print $ InformationFlow.analyzeWithPublicSinks Language.BIPL.Analysis.InformationFlow.Sample.explicitLeak Language.BIPL.Analysis.InformationFlow.Sample.explicitLeakStore Language.BIPL.Analysis.InformationFlow.Sample.explicitLeakSinks
-  print $ InformationFlow.analyzeWithPublicSinks Language.BIPL.Analysis.InformationFlow.Sample.implicitLeak Language.BIPL.Analysis.InformationFlow.Sample.implicitLeakStore Language.BIPL.Analysis.InformationFlow.Sample.implicitLeakSinks
-  print $ InformationFlow.analyzeWithPublicSinks Language.BIPL.Analysis.InformationFlow.Sample.safePublicComputation Language.BIPL.Analysis.InformationFlow.Sample.safePublicComputationStore Language.BIPL.Analysis.InformationFlow.Sample.safePublicComputationSinks
-  print $ InformationFlow.analyzeWithPublicSinks Language.BIPL.Analysis.InformationFlow.Sample.highIntermediate Language.BIPL.Analysis.InformationFlow.Sample.highIntermediateStore Language.BIPL.Analysis.InformationFlow.Sample.highIntermediateSinks
-  print $ InformationFlow.analyzeWithPublicSinks Language.BIPL.Analysis.InformationFlow.Sample.loopLeak Language.BIPL.Analysis.InformationFlow.Sample.loopLeakStore Language.BIPL.Analysis.InformationFlow.Sample.loopLeakSinks
-  print $ InformationFlow.analyzeWithPublicSinks Language.BIPL.Analysis.InformationFlow.Sample.privateComputation Language.BIPL.Analysis.InformationFlow.Sample.privateComputationStore Language.BIPL.Analysis.InformationFlow.Sample.privateComputationSinks
+  print $ InformationFlow.finish $ Algebra.interpret InformationFlow.algebra Language.BIPL.Analysis.InformationFlow.Sample.explicitLeak (InformationFlow.initialState Language.BIPL.Analysis.InformationFlow.Sample.explicitLeakStore Language.BIPL.Analysis.InformationFlow.Sample.explicitLeakSinks)
+  print $ InformationFlow.finish $ Algebra.interpret InformationFlow.algebra Language.BIPL.Analysis.InformationFlow.Sample.implicitLeak (InformationFlow.initialState Language.BIPL.Analysis.InformationFlow.Sample.implicitLeakStore Language.BIPL.Analysis.InformationFlow.Sample.implicitLeakSinks)
+  print $ InformationFlow.finish $ Algebra.interpret InformationFlow.algebra Language.BIPL.Analysis.InformationFlow.Sample.safePublicComputation (InformationFlow.initialState Language.BIPL.Analysis.InformationFlow.Sample.safePublicComputationStore Language.BIPL.Analysis.InformationFlow.Sample.safePublicComputationSinks)
+  print $ InformationFlow.finish $ Algebra.interpret InformationFlow.algebra Language.BIPL.Analysis.InformationFlow.Sample.highIntermediate (InformationFlow.initialState Language.BIPL.Analysis.InformationFlow.Sample.highIntermediateStore Language.BIPL.Analysis.InformationFlow.Sample.highIntermediateSinks)
+  print $ InformationFlow.finish $ Algebra.interpret InformationFlow.algebra Language.BIPL.Analysis.InformationFlow.Sample.loopLeak (InformationFlow.initialState Language.BIPL.Analysis.InformationFlow.Sample.loopLeakStore Language.BIPL.Analysis.InformationFlow.Sample.loopLeakSinks)
+  print $ InformationFlow.finish $ Algebra.interpret InformationFlow.algebra Language.BIPL.Analysis.InformationFlow.Sample.privateComputation (InformationFlow.initialState Language.BIPL.Analysis.InformationFlow.Sample.privateComputationStore Language.BIPL.Analysis.InformationFlow.Sample.privateComputationSinks)
 
 main_termination_analysis = do
   print $ Termination.finish $ Algebra.interpret Termination.algebra Language.BIPL.Analysis.Termination.Sample.decrementToZero Termination.initialState

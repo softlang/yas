@@ -7,12 +7,11 @@ import Language.BIPL.Syntax
 
 -- | A tiny two-point confidentiality lattice.
 --
--- Low  <= High
+-- Low <= High
 --
--- Low values may flow to public sinks.  High values represent secret/tainted
+-- Low values may flow to public sinks. High values represent secret/tainted
 -- data and must not flow to public sinks.
-data Sec = Low | High
-  deriving (Eq, Ord)
+data Sec = Low | High deriving (Eq, Ord)
 
 instance Show Sec where
   show Low = "Low"
@@ -31,7 +30,7 @@ data Diagnostic
   | ImplicitFlowToPublic String Sec Expr
     -- ^ A public sink was assigned under a High program-counter level.
   | HighControl Expr
-    -- ^ A branch/loop guard depends on High data.  This is not necessarily a
+    -- ^ A branch/loop guard depends on High data. This is not necessarily a
     -- leak by itself, but assignments in the guarded command are control-tainted.
   | FinalPublicLeak String Sec
     -- ^ A public sink is High in the final abstract environment.
@@ -39,30 +38,49 @@ data Diagnostic
 
 instance Show Diagnostic where
   show (ExplicitFlowToPublic v s e) =
-    "explicit flow to public sink " ++ show v ++
-    ": expression " ++ show e ++ " has level " ++ show s
+    "explicit flow to public sink " ++ show v
+      ++ ": expression " ++ show e ++ " has level " ++ show s
   show (ImplicitFlowToPublic v s e) =
-    "implicit flow to public sink " ++ show v ++
-    ": program counter from guard " ++ show e ++ " has level " ++ show s
+    "implicit flow to public sink " ++ show v
+      ++ ": program counter from guard " ++ show e ++ " has level " ++ show s
   show (HighControl e) =
     "high control dependency from guard " ++ show e
   show (FinalPublicLeak v s) =
     "final public sink " ++ show v ++ " has level " ++ show s
 
+-- | Internal algebra state.
+data AnalysisState = AnalysisState
+  { stateEnv :: Env
+  , stateSinks :: PublicSinks
+  , statePc :: Sec
+  , stateDiagnostics :: [Diagnostic]
+  }
+  deriving (Eq, Show)
+
+-- | Expression property: its security level and reconstructed syntax.
+data Property = Property
+  { propertySec :: Sec
+  , propertyExpr :: Expr
+  }
+  deriving (Eq, Ord, Show)
+
 -- | Analysis result: final abstract environment plus diagnostics.
 data AnalysisResult = AnalysisResult
   { finalEnv :: Env
   , diagnostics :: [Diagnostic]
-  } deriving (Eq)
+  }
+  deriving (Eq)
 
 instance Show AnalysisResult where
   show (AnalysisResult env ds) =
-    "AnalysisResult { finalEnv = " ++ showEnv env ++
-    ", diagnostics = " ++ show ds ++ " }"
+    "AnalysisResult { finalEnv = " ++ showEnv env
+      ++ ", diagnostics = " ++ show ds ++ " }"
 
-showEnv :: Env -> String
 showEnv env =
-  "fromList [" ++ intercalate ", " [show k ++ " -> " ++ show v | (k, v) <- Map.toList env] ++ "]"
+  "fromList ["
+    ++ intercalate ", "
+         [show k ++ " -> " ++ show v | (k, v) <- Map.toList env]
+    ++ "]"
 
 joinSec :: Sec -> Sec -> Sec
 joinSec Low Low = Low
