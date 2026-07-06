@@ -15,8 +15,7 @@ Well-formedness of DIL MLMs:
 * Each structure name is declared not more than once in a given DIL MLM.
 * Instantiation chains are acyclic.
 * Each field is defined (introduced) not more than once in any instantiation chain.
-* Each field is set (assigned) in a manner aligned durability-wise and type-wise
-  with its definition (introduction).
+* Each field is set (assigned) in a manner aligned durability-wise and type-wise with its definition (introduction).
 
 -}
 
