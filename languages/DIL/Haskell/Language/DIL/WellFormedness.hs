@@ -15,7 +15,7 @@ Well-formedness of DIL MLMs:
 * Each structure name is declared not more than once in a given DIL MLM.
 * Instantiation chains are acyclic.
 * Each field is defined (introduced) not more than once in any instantiation chain.
-* Each field is set (assigned) in a manner aligned durability-wise with its definition (introduction).
+* Each field is set (assigned) in a manner aligned durability-wise and type-wise with its definition (introduction).
 
 -}
 
@@ -338,10 +338,8 @@ type family FieldAbsentFromFields f fs :: Constraint where
 
 {-
 ------------------------------------------------------------
-Field assignments are durability-aligned with field definitions
+Field assignments are aligned with field definitions
 ------------------------------------------------------------
-
-Option A:
 
 For every assignment `set f` in structure S:
 
@@ -349,9 +347,10 @@ For every assignment `set f` in structure S:
 2. Find the unique definition `def f d t`.
 3. Let k be the number of instantiation edges from S to the defining structure.
 4. Require k == d.
+5. Require the assignment type to equal the definition type.
 
-This constraint intentionally checks durability alignment only. It does not yet
-check that the type used at `set` is the same as the type used at `def`.
+The uniqueness of field definitions in chains makes the found definition
+unambiguous.
 -}
 
 type family FieldSetsAlignedWithDefs levels :: Constraint where
@@ -377,19 +376,20 @@ type family FieldSetsAlignedInFDecls s fs allDecls :: Constraint where
     FieldSetsAlignedInFDecls s fs allDecls
 
   FieldSetsAlignedInFDecls s (FDecl 'FFormSet f durability t :> fs) allDecls =
-    ( FieldSetAlignedWithDef f s allDecls
+    ( FieldSetAlignedWithDef f t s allDecls
     , FieldSetsAlignedInFDecls s fs allDecls
     )
 
-type family FieldSetAlignedWithDef f s allDecls :: Constraint where
-  FieldSetAlignedWithDef f s allDecls =
-    FieldSetAlignedWithDefFrom f s s allDecls End 0
+type family FieldSetAlignedWithDef f setType s allDecls :: Constraint where
+  FieldSetAlignedWithDef f setType s allDecls =
+    FieldSetAlignedWithDefFrom f setType s s allDecls End 0
 
-type family FieldSetAlignedWithDefFrom f origin s allDecls visited distance :: Constraint where
-  FieldSetAlignedWithDefFrom f origin s allDecls visited distance =
+type family FieldSetAlignedWithDefFrom f setType origin s allDecls visited distance :: Constraint where
+  FieldSetAlignedWithDefFrom f setType origin s allDecls visited distance =
     ( StructureNotVisited s visited
     , FieldSetAlignedWithDefInSDecl
         f
+        setType
         origin
         s
         (LookupSDecl s allDecls)
@@ -398,10 +398,11 @@ type family FieldSetAlignedWithDefFrom f origin s allDecls visited distance :: C
         distance
     )
 
-type family FieldSetAlignedWithDefInSDecl f origin s sdecl allDecls visited distance :: Constraint where
+type family FieldSetAlignedWithDefInSDecl f setType origin s sdecl allDecls visited distance :: Constraint where
 
   FieldSetAlignedWithDefInSDecl
     f
+    setType
     origin
     s
     (SDeclValue '(s, potency, base, fs))
@@ -410,59 +411,102 @@ type family FieldSetAlignedWithDefInSDecl f origin s sdecl allDecls visited dist
     distance =
       FieldSetAlignedWithDefAt
         f
+        setType
         origin
         s
-        (FieldDefDurability f fs)
+        (FieldDefInfo f fs)
         base
         allDecls
         visited
         distance
 
-type family FieldSetAlignedWithDefAt f origin s maybeDurability base allDecls visited distance :: Constraint where
+type family FieldSetAlignedWithDefAt f setType origin s maybeDefInfo base allDecls visited distance :: Constraint where
 
-  FieldSetAlignedWithDefAt f origin s ('Just durability) base allDecls visited distance =
-    RequireSameNat
-      distance
-      durability
-      ( 'Text "Field assignment is not durability-aligned with its definition. Field: "
-        ':<>: 'ShowType f
-        ':<>: 'Text ", assigned in structure: "
-        ':<>: 'ShowType origin
-        ':<>: 'Text ", defined in structure: "
-        ':<>: 'ShowType s
-        ':<>: 'Text ", assignment distance: "
-        ':<>: 'ShowType distance
-        ':<>: 'Text ", declared durability: "
-        ':<>: 'ShowType durability
+  FieldSetAlignedWithDefAt
+    f
+    setType
+    origin
+    s
+    ('Just '(defDurability, defType))
+    base
+    allDecls
+    visited
+    distance =
+      ( RequireSameNat
+          distance
+          defDurability
+          ( 'Text "Field assignment is not durability-aligned with its definition. Field: "
+            ':<>: 'ShowType f
+            ':<>: 'Text ", assigned in structure: "
+            ':<>: 'ShowType origin
+            ':<>: 'Text ", defined in structure: "
+            ':<>: 'ShowType s
+            ':<>: 'Text ", assignment distance: "
+            ':<>: 'ShowType distance
+            ':<>: 'Text ", declared durability: "
+            ':<>: 'ShowType defDurability
+          )
+      , RequireSameType
+          setType
+          defType
+          ( 'Text "Field assignment is not type-aligned with its definition. Field: "
+            ':<>: 'ShowType f
+            ':<>: 'Text ", assigned in structure: "
+            ':<>: 'ShowType origin
+            ':<>: 'Text ", defined in structure: "
+            ':<>: 'ShowType s
+            ':<>: 'Text ", assignment type: "
+            ':<>: 'ShowType setType
+            ':<>: 'Text ", definition type: "
+            ':<>: 'ShowType defType
+          )
       )
 
-  FieldSetAlignedWithDefAt f origin s 'Nothing 'Nothing allDecls visited distance =
-    TypeError
-      ( 'Text "Field assignment has no corresponding field definition in its instantiation chain. Field: "
-        ':<>: 'ShowType f
-        ':<>: 'Text ", assigned in structure: "
-        ':<>: 'ShowType origin
-      )
+  FieldSetAlignedWithDefAt
+    f
+    setType
+    origin
+    s
+    'Nothing
+    'Nothing
+    allDecls
+    visited
+    distance =
+      TypeError
+        ( 'Text "Field assignment has no corresponding field definition in its instantiation chain. Field: "
+          ':<>: 'ShowType f
+          ':<>: 'Text ", assigned in structure: "
+          ':<>: 'ShowType origin
+        )
 
-  FieldSetAlignedWithDefAt f origin s 'Nothing ('Just base) allDecls visited distance =
-    FieldSetAlignedWithDefFrom f origin base allDecls visited (distance + 1)
+  FieldSetAlignedWithDefAt
+    f
+    setType
+    origin
+    s
+    'Nothing
+    ('Just base)
+    allDecls
+    visited
+    distance =
+      FieldSetAlignedWithDefFrom f setType origin base allDecls visited (distance + 1)
 
--- Find the durability of a field definition in one structure declaration's
--- field list. Assignments are ignored.
+-- Find the durability and type of a field definition in one structure
+-- declaration's field list. Assignments are ignored.
 
-type family FieldDefDurability f fs where
+type family FieldDefInfo f fs where
 
-  FieldDefDurability f End =
+  FieldDefInfo f End =
     'Nothing
 
-  FieldDefDurability f (FDecl 'FFormDef f (Durability durability) t :> fs) =
-    'Just durability
+  FieldDefInfo f (FDecl 'FFormDef f (Durability durability) t :> fs) =
+    'Just '(durability, t)
 
-  FieldDefDurability f (FDecl 'FFormDef f' durability t :> fs) =
-    FieldDefDurability f fs
+  FieldDefInfo f (FDecl 'FFormDef f' durability t :> fs) =
+    FieldDefInfo f fs
 
-  FieldDefDurability f (FDecl 'FFormSet f' durability t :> fs) =
-    FieldDefDurability f fs
+  FieldDefInfo f (FDecl 'FFormSet f' durability t :> fs) =
+    FieldDefInfo f fs
 
 -- Produce a custom type error instead of exposing a raw type-level natural
 -- equality failure.
@@ -477,4 +521,14 @@ type family RequireSameNat' ordering actual expected message :: Constraint where
     ()
 
   RequireSameNat' ordering actual expected message =
+    TypeError message
+
+-- Produce a custom type error instead of exposing a raw type equality failure.
+
+type family RequireSameType actual expected message :: Constraint where
+
+  RequireSameType actual actual message =
+    ()
+
+  RequireSameType actual expected message =
     TypeError message
