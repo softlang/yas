@@ -29,6 +29,7 @@ import Data.HList
 import GHC.TypeLits
   ( Nat
   , type (+)
+  , CmpNat
   , TypeError
   , ErrorMessage(Text, ShowType, (:<>:))
   )
@@ -44,6 +45,7 @@ class
   , UniqueStructures a
   , NoInstantiationCycles a
   , UniqueFieldDefsInChains a
+  , FieldSetsAlignedWithDefs a
   ) => MLM a
 
 instance
@@ -52,6 +54,7 @@ instance
   , UniqueStructures a
   , NoInstantiationCycles a
   , UniqueFieldDefsInChains a
+  , FieldSetsAlignedWithDefs a
   ) => MLM a
 
 {-
@@ -84,8 +87,6 @@ type family LevelsDescending levels :: Constraint where
 ------------------------------------------------------------
 Unique structure declarations
 ------------------------------------------------------------
-
-A structure name must not occur more than once in the whole MLM.
 -}
 
 type family UniqueStructures levels :: Constraint where
@@ -189,16 +190,6 @@ type family LookupSDecl s decls where
 ------------------------------------------------------------
 No instantiation cycles
 ------------------------------------------------------------
-
-Every structure induces an instantiation chain:
-
-    S -> base(S) -> base(base(S)) -> ...
-
-A well-formed chain must eventually reach a root structure, that is, a
-structure whose base is 'Nothing.
-
-We detect cycles by carrying an HList of already visited structure names.
-If we encounter the same structure name again, the chain is cyclic.
 -}
 
 type family NoInstantiationCycles levels :: Constraint where
@@ -262,18 +253,11 @@ and check that the field names introduced along that chain are unique.
 This is intentionally not global field-name uniqueness. Sibling branches may
 introduce the same field independently because they do not occur in the same
 instantiation chain.
-
-The traversal is cycle-safe even though NoInstantiationCycles is also an
-explicit MLM constraint. This avoids relying on GHC reducing superclass
-constraints in any particular order.
 -}
 
 type family UniqueFieldDefsInChains levels :: Constraint where
   UniqueFieldDefsInChains levels =
     UniqueFieldDefsInSDecls (AllSDecls levels) (AllSDecls levels)
-
--- Check every structure declaration against the complete declaration
--- environment.
 
 type family UniqueFieldDefsInSDecls decls allDecls :: Constraint where
 
@@ -284,9 +268,6 @@ type family UniqueFieldDefsInSDecls decls allDecls :: Constraint where
     ( UniqueFieldDefsInChain s allDecls
     , UniqueFieldDefsInSDecls decls allDecls
     )
-
--- Compute the field definitions along one instantiation chain and require
--- their names to be unique.
 
 type family UniqueFieldDefsInChain s allDecls :: Constraint where
   UniqueFieldDefsInChain s allDecls =
@@ -320,9 +301,6 @@ type family FieldDefsInChainSafe' s sdecl allDecls visited where
       (FieldDefs fs)
       (FieldDefsInChainSafe base allDecls (s :> visited))
 
--- Extract field names introduced with `def`.
--- Ignore field assignments with `set`.
-
 type family FieldDefs fs where
 
   FieldDefs End =
@@ -333,8 +311,6 @@ type family FieldDefs fs where
 
   FieldDefs (FDecl 'FFormSet f durability t :> fs) =
     FieldDefs fs
-
--- Require uniqueness of field names in an HList.
 
 type family UniqueFields fs :: Constraint where
 
@@ -359,3 +335,146 @@ type family FieldAbsentFromFields f fs :: Constraint where
 
   FieldAbsentFromFields f (f' :> fs) =
     FieldAbsentFromFields f fs
+
+{-
+------------------------------------------------------------
+Field assignments are durability-aligned with field definitions
+------------------------------------------------------------
+
+Option A:
+
+For every assignment `set f` in structure S:
+
+1. Follow the instantiation chain from S upward.
+2. Find the unique definition `def f d t`.
+3. Let k be the number of instantiation edges from S to the defining structure.
+4. Require k == d.
+
+This constraint intentionally checks durability alignment only. It does not yet
+check that the type used at `set` is the same as the type used at `def`.
+-}
+
+type family FieldSetsAlignedWithDefs levels :: Constraint where
+  FieldSetsAlignedWithDefs levels =
+    FieldSetsAlignedInSDecls (AllSDecls levels) (AllSDecls levels)
+
+type family FieldSetsAlignedInSDecls decls allDecls :: Constraint where
+
+  FieldSetsAlignedInSDecls End allDecls =
+    ()
+
+  FieldSetsAlignedInSDecls (SDeclValue '(s, potency, base, fs) :> decls) allDecls =
+    ( FieldSetsAlignedInFDecls s fs allDecls
+    , FieldSetsAlignedInSDecls decls allDecls
+    )
+
+type family FieldSetsAlignedInFDecls s fs allDecls :: Constraint where
+
+  FieldSetsAlignedInFDecls s End allDecls =
+    ()
+
+  FieldSetsAlignedInFDecls s (FDecl 'FFormDef f durability t :> fs) allDecls =
+    FieldSetsAlignedInFDecls s fs allDecls
+
+  FieldSetsAlignedInFDecls s (FDecl 'FFormSet f durability t :> fs) allDecls =
+    ( FieldSetAlignedWithDef f s allDecls
+    , FieldSetsAlignedInFDecls s fs allDecls
+    )
+
+type family FieldSetAlignedWithDef f s allDecls :: Constraint where
+  FieldSetAlignedWithDef f s allDecls =
+    FieldSetAlignedWithDefFrom f s s allDecls End 0
+
+type family FieldSetAlignedWithDefFrom f origin s allDecls visited distance :: Constraint where
+  FieldSetAlignedWithDefFrom f origin s allDecls visited distance =
+    ( StructureNotVisited s visited
+    , FieldSetAlignedWithDefInSDecl
+        f
+        origin
+        s
+        (LookupSDecl s allDecls)
+        allDecls
+        (s :> visited)
+        distance
+    )
+
+type family FieldSetAlignedWithDefInSDecl f origin s sdecl allDecls visited distance :: Constraint where
+
+  FieldSetAlignedWithDefInSDecl
+    f
+    origin
+    s
+    (SDeclValue '(s, potency, base, fs))
+    allDecls
+    visited
+    distance =
+      FieldSetAlignedWithDefAt
+        f
+        origin
+        s
+        (FieldDefDurability f fs)
+        base
+        allDecls
+        visited
+        distance
+
+type family FieldSetAlignedWithDefAt f origin s maybeDurability base allDecls visited distance :: Constraint where
+
+  FieldSetAlignedWithDefAt f origin s ('Just durability) base allDecls visited distance =
+    RequireSameNat
+      distance
+      durability
+      ( 'Text "Field assignment is not durability-aligned with its definition. Field: "
+        ':<>: 'ShowType f
+        ':<>: 'Text ", assigned in structure: "
+        ':<>: 'ShowType origin
+        ':<>: 'Text ", defined in structure: "
+        ':<>: 'ShowType s
+        ':<>: 'Text ", assignment distance: "
+        ':<>: 'ShowType distance
+        ':<>: 'Text ", declared durability: "
+        ':<>: 'ShowType durability
+      )
+
+  FieldSetAlignedWithDefAt f origin s 'Nothing 'Nothing allDecls visited distance =
+    TypeError
+      ( 'Text "Field assignment has no corresponding field definition in its instantiation chain. Field: "
+        ':<>: 'ShowType f
+        ':<>: 'Text ", assigned in structure: "
+        ':<>: 'ShowType origin
+      )
+
+  FieldSetAlignedWithDefAt f origin s 'Nothing ('Just base) allDecls visited distance =
+    FieldSetAlignedWithDefFrom f origin base allDecls visited (distance + 1)
+
+-- Find the durability of a field definition in one structure declaration's
+-- field list. Assignments are ignored.
+
+type family FieldDefDurability f fs where
+
+  FieldDefDurability f End =
+    'Nothing
+
+  FieldDefDurability f (FDecl 'FFormDef f (Durability durability) t :> fs) =
+    'Just durability
+
+  FieldDefDurability f (FDecl 'FFormDef f' durability t :> fs) =
+    FieldDefDurability f fs
+
+  FieldDefDurability f (FDecl 'FFormSet f' durability t :> fs) =
+    FieldDefDurability f fs
+
+-- Produce a custom type error instead of exposing a raw type-level natural
+-- equality failure.
+
+type family RequireSameNat actual expected message :: Constraint where
+  RequireSameNat actual expected message =
+    RequireSameNat' (CmpNat actual expected) actual expected message
+
+type family RequireSameNat' ordering actual expected message :: Constraint where
+
+  RequireSameNat' 'EQ actual expected message =
+    ()
+
+  RequireSameNat' ordering actual expected message =
+    TypeError message
