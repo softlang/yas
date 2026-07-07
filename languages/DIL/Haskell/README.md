@@ -46,6 +46,7 @@ keywords = {deep characterization, domain metatypes, ontological metamodeling},
 location = {Montreal, Quebec, Canada},
 series = {OOPSLA '07}
 }
+```
 
 ## Haskell-based embedding syntax
 
