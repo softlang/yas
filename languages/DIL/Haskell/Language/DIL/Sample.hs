@@ -34,13 +34,13 @@ import Data.HList
 -- * Film2001^0 < DVD
 --   * price^0 : 19.95
 
-data ProductType; instance {-# OVERLAPPING #-} Structure ProductType
-data TaxRate; instance {-# OVERLAPPING #-} Field TaxRate
-data Price; instance {-# OVERLAPPING #-} Field Price
-data Book; instance {-# OVERLAPPING #-} Structure Book
-data DVD; instance {-# OVERLAPPING #-} Structure DVD
-data MobyDick; instance {-# OVERLAPPING #-} Structure MobyDick
-data Film2001; instance {-# OVERLAPPING #-} Structure Film2001
+data ProductType; instance Structure ProductType
+data TaxRate; instance Field TaxRate
+data Price; instance Field Price
+data Book; instance Structure Book
+data DVD; instance Structure DVD
+data MobyDick; instance Structure MobyDick
+data Film2001; instance Structure Film2001
 
 sample = mlm $
  (
