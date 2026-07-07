@@ -8,6 +8,8 @@ A language in the tradition of multi-level modeling with focus on deep instantia
 
 ---
 ## Details
-More details forthcoming
+
+See the Haskell-based implementation for details:
+https://github.com/softlang/yas/tree/master/languages/DIL/Haskell
 
 ---

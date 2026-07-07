@@ -25,6 +25,7 @@ import Language.DIL.Syntax
 
 import Data.Kind (Constraint)
 import Data.HList
+import Data.Type.Equality (type (==))
 
 import GHC.TypeLits
   ( Nat
@@ -68,12 +69,14 @@ type family LevelsDescending levels :: Constraint where
   LevelsDescending End =
     ()
 
-  LevelsDescending ((Level 0, decls) :> End) =
-    SDecls decls
+  LevelsDescending ((Level n, decls) :> End) =
+    ( SDecls decls
+    , RequireLevelZero n
+    )
 
   LevelsDescending ((Level (m :: Nat), decls1) :> (Level (n :: Nat), decls2) :> levels) =
     ( SDecls decls1
-    , m ~ (n + 1)
+    , RequireSuccessorLevel m n
     , LevelsDescending ((Level n, decls2) :> levels)
     )
 
@@ -81,6 +84,41 @@ type family LevelsDescending levels :: Constraint where
     TypeError
       ( 'Text "Malformed DIL MLM levels: "
         ':<>: 'ShowType levels
+      )
+
+type family RequireSuccessorLevel higher lower :: Constraint where
+  RequireSuccessorLevel higher lower =
+    RequireSuccessorLevel'
+      (CmpNat higher (lower + 1))
+      higher
+      lower
+
+type family RequireSuccessorLevel' ordering higher lower :: Constraint where
+
+  RequireSuccessorLevel' 'EQ higher lower =
+    ()
+
+  RequireSuccessorLevel' ordering higher lower =
+    TypeError
+      ( 'Text "Malformed DIL MLM levels: expected adjacent descending levels, but found "
+        ':<>: 'ShowType higher
+        ':<>: 'Text " followed by "
+        ':<>: 'ShowType lower
+      )
+
+type family RequireLevelZero n :: Constraint where
+  RequireLevelZero n =
+    RequireLevelZero' (CmpNat n 0) n
+
+type family RequireLevelZero' ordering n :: Constraint where
+
+  RequireLevelZero' 'EQ n =
+    ()
+
+  RequireLevelZero' ordering n =
+    TypeError
+      ( 'Text "Malformed DIL MLM levels: final level must be 0, but found "
+        ':<>: 'ShowType n
       )
 
 {-
@@ -135,13 +173,18 @@ type family StructureAbsentFromDecls s decls :: Constraint where
   StructureAbsentFromDecls s End =
     ()
 
-  StructureAbsentFromDecls s (SDeclValue '(s, potency, base, fs) :> decls) =
+  StructureAbsentFromDecls s (SDeclValue '(s', potency, base, fs) :> decls) =
+    StructureAbsentFromDecls' (s == s') s decls
+
+type family StructureAbsentFromDecls' equal s decls :: Constraint where
+
+  StructureAbsentFromDecls' 'True s decls =
     TypeError
       ( 'Text "Duplicate structure declaration in DIL MLM: "
         ':<>: 'ShowType s
       )
 
-  StructureAbsentFromDecls s (SDeclValue '(s', potency, base, fs) :> decls) =
+  StructureAbsentFromDecls' 'False s decls =
     StructureAbsentFromDecls s decls
 
 {-
@@ -180,10 +223,19 @@ type family LookupSDecl s decls where
         ':<>: 'ShowType s
       )
 
-  LookupSDecl s (SDeclValue '(s, potency, base, fs) :> decls) =
-    SDeclValue '(s, potency, base, fs)
-
   LookupSDecl s (SDeclValue '(s', potency, base, fs) :> decls) =
+    LookupSDecl'
+      (s == s')
+      s
+      (SDeclValue '(s', potency, base, fs))
+      decls
+
+type family LookupSDecl' equal s sdecl decls where
+
+  LookupSDecl' 'True s sdecl decls =
+    sdecl
+
+  LookupSDecl' 'False s sdecl decls =
     LookupSDecl s decls
 
 {-
@@ -208,9 +260,18 @@ type family NoInstantiationCyclesInSDecls decls allDecls :: Constraint where
 
 type family NoInstantiationCycleFrom s allDecls visited :: Constraint where
   NoInstantiationCycleFrom s allDecls visited =
-    ( StructureNotVisited s visited
-    , NoInstantiationCycleFrom' (LookupSDecl s allDecls) allDecls (s :> visited)
-    )
+    NoInstantiationCycleFromChecked (IsVisited s visited) s allDecls visited
+
+type family NoInstantiationCycleFromChecked seen s allDecls visited :: Constraint where
+
+  NoInstantiationCycleFromChecked 'True s allDecls visited =
+    TypeError
+      ( 'Text "Instantiation cycle in DIL MLM involving structure: "
+        ':<>: 'ShowType s
+      )
+
+  NoInstantiationCycleFromChecked 'False s allDecls visited =
+    NoInstantiationCycleFrom' (LookupSDecl s allDecls) allDecls (s :> visited)
 
 type family NoInstantiationCycleFrom' sdecl allDecls visited :: Constraint where
 
@@ -221,18 +282,40 @@ type family NoInstantiationCycleFrom' sdecl allDecls visited :: Constraint where
     NoInstantiationCycleFrom base allDecls visited
 
 type family StructureNotVisited s visited :: Constraint where
+  StructureNotVisited s visited =
+    StructureNotVisited' (IsVisited s visited) s
 
-  StructureNotVisited s End =
+type family StructureNotVisited' seen s :: Constraint where
+
+  StructureNotVisited' 'False s =
     ()
 
-  StructureNotVisited s (s :> visited) =
+  StructureNotVisited' 'True s =
     TypeError
       ( 'Text "Instantiation cycle in DIL MLM involving structure: "
         ':<>: 'ShowType s
       )
 
-  StructureNotVisited s (s' :> visited) =
-    StructureNotVisited s visited
+-- Type-level membership test for HLists of structure names.
+-- Use explicit type equality rather than a non-linear equation such as
+-- StructureNotVisited s (s :> visited), because the latter can fail to
+-- reduce early enough and lead to reduction-stack overflows.
+
+type family IsVisited s visited where
+
+  IsVisited s End =
+    'False
+
+  IsVisited s (s' :> visited) =
+    IsVisited' (s == s') s visited
+
+type family IsVisited' equal s visited where
+
+  IsVisited' 'True s visited =
+    'True
+
+  IsVisited' 'False s visited =
+    IsVisited s visited
 
 {-
 ------------------------------------------------------------
@@ -279,6 +362,21 @@ type family FieldDefsInChain s allDecls where
 
 type family FieldDefsInChainSafe s allDecls visited where
   FieldDefsInChainSafe s allDecls visited =
+    FieldDefsInChainSafeChecked
+      (IsVisited s visited)
+      s
+      allDecls
+      visited
+
+type family FieldDefsInChainSafeChecked seen s allDecls visited where
+
+  FieldDefsInChainSafeChecked 'True s allDecls visited =
+    TypeError
+      ( 'Text "Instantiation cycle in DIL MLM involving structure: "
+        ':<>: 'ShowType s
+      )
+
+  FieldDefsInChainSafeChecked 'False s allDecls visited =
     FieldDefsInChainSafe'
       s
       (LookupSDecl s allDecls)
@@ -287,16 +385,10 @@ type family FieldDefsInChainSafe s allDecls visited where
 
 type family FieldDefsInChainSafe' s sdecl allDecls visited where
 
-  FieldDefsInChainSafe' s sdecl allDecls (s :> visited) =
-    TypeError
-      ( 'Text "Instantiation cycle in DIL MLM involving structure: "
-        ':<>: 'ShowType s
-      )
-
-  FieldDefsInChainSafe' s (SDeclValue '(s, potency, 'Nothing, fs)) allDecls visited =
+  FieldDefsInChainSafe' s (SDeclValue '(s', potency, 'Nothing, fs)) allDecls visited =
     FieldDefs fs
 
-  FieldDefsInChainSafe' s (SDeclValue '(s, potency, 'Just base, fs)) allDecls visited =
+  FieldDefsInChainSafe' s (SDeclValue '(s', potency, 'Just base, fs)) allDecls visited =
     Append
       (FieldDefs fs)
       (FieldDefsInChainSafe base allDecls (s :> visited))
@@ -327,13 +419,18 @@ type family FieldAbsentFromFields f fs :: Constraint where
   FieldAbsentFromFields f End =
     ()
 
-  FieldAbsentFromFields f (f :> fs) =
+  FieldAbsentFromFields f (f' :> fs) =
+    FieldAbsentFromFields' (f == f') f fs
+
+type family FieldAbsentFromFields' equal f fs :: Constraint where
+
+  FieldAbsentFromFields' 'True f fs =
     TypeError
       ( 'Text "Duplicate field introduction in DIL MLM instantiation chain: "
         ':<>: 'ShowType f
       )
 
-  FieldAbsentFromFields f (f' :> fs) =
+  FieldAbsentFromFields' 'False f fs =
     FieldAbsentFromFields f fs
 
 {-
@@ -386,17 +483,34 @@ type family FieldSetAlignedWithDef f setType s allDecls :: Constraint where
 
 type family FieldSetAlignedWithDefFrom f setType origin s allDecls visited distance :: Constraint where
   FieldSetAlignedWithDefFrom f setType origin s allDecls visited distance =
-    ( StructureNotVisited s visited
-    , FieldSetAlignedWithDefInSDecl
-        f
-        setType
-        origin
-        s
-        (LookupSDecl s allDecls)
-        allDecls
-        (s :> visited)
-        distance
-    )
+    FieldSetAlignedWithDefFromChecked
+      (IsVisited s visited)
+      f
+      setType
+      origin
+      s
+      allDecls
+      visited
+      distance
+
+type family FieldSetAlignedWithDefFromChecked seen f setType origin s allDecls visited distance :: Constraint where
+
+  FieldSetAlignedWithDefFromChecked 'True f setType origin s allDecls visited distance =
+    TypeError
+      ( 'Text "Instantiation cycle in DIL MLM involving structure: "
+        ':<>: 'ShowType s
+      )
+
+  FieldSetAlignedWithDefFromChecked 'False f setType origin s allDecls visited distance =
+    FieldSetAlignedWithDefInSDecl
+      f
+      setType
+      origin
+      s
+      (LookupSDecl s allDecls)
+      allDecls
+      (s :> visited)
+      distance
 
 type family FieldSetAlignedWithDefInSDecl f setType origin s sdecl allDecls visited distance :: Constraint where
 
@@ -405,7 +519,7 @@ type family FieldSetAlignedWithDefInSDecl f setType origin s sdecl allDecls visi
     setType
     origin
     s
-    (SDeclValue '(s, potency, base, fs))
+    (SDeclValue '(s', potency, base, fs))
     allDecls
     visited
     distance =
@@ -499,13 +613,18 @@ type family FieldDefInfo f fs where
   FieldDefInfo f End =
     'Nothing
 
-  FieldDefInfo f (FDecl 'FFormDef f (Durability durability) t :> fs) =
-    'Just '(durability, t)
-
-  FieldDefInfo f (FDecl 'FFormDef f' durability t :> fs) =
-    FieldDefInfo f fs
+  FieldDefInfo f (FDecl 'FFormDef f' (Durability durability) t :> fs) =
+    FieldDefInfo' (f == f') f durability t fs
 
   FieldDefInfo f (FDecl 'FFormSet f' durability t :> fs) =
+    FieldDefInfo f fs
+
+type family FieldDefInfo' equal f durability t fs where
+
+  FieldDefInfo' 'True f durability t fs =
+    'Just '(durability, t)
+
+  FieldDefInfo' 'False f durability t fs =
     FieldDefInfo f fs
 
 -- Produce a custom type error instead of exposing a raw type-level natural
@@ -526,9 +645,13 @@ type family RequireSameNat' ordering actual expected message :: Constraint where
 -- Produce a custom type error instead of exposing a raw type equality failure.
 
 type family RequireSameType actual expected message :: Constraint where
+  RequireSameType actual expected message =
+    RequireSameType' (actual == expected) actual expected message
 
-  RequireSameType actual actual message =
+type family RequireSameType' equal actual expected message :: Constraint where
+
+  RequireSameType' 'True actual expected message =
     ()
 
-  RequireSameType actual expected message =
+  RequireSameType' 'False actual expected message =
     TypeError message
