@@ -123,6 +123,17 @@ Type-level programming is employed to enforce several constraints.
 
 See here for the code: https://github.com/softlang/yas/blob/master/languages/DIL/Haskell/Language/DIL/WellFormedness.hs
 
+The following concepts of type-level programming are leveraged:
+
+* HLists
+* Proxy
+* TypeEquality
+* Type classes
+* Type families
+* Promotion of data types to the kind level
+* GADTs
+* Type-level type error messages
+
 ## DIL well-formedness tests
 
 These are compile-result tests for `Language.DIL.WellFormedness`.
