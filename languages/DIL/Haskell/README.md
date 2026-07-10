@@ -120,7 +120,7 @@ Type-level programming is employed to enforce several constraints.
 * Structures must be unique across a model.
 * Instantiation must not be cyclic.
 * Field definitions (introductions) must be unique along instantiation chains.
-* Field sets (assignments) must be alined with definitions in terms of durabilities.
+* Field sets (assignments) must be aligned with definitions in terms of durabilities.
 
 See here for the code: https://github.com/softlang/yas/blob/master/languages/DIL/Haskell/Language/DIL/WellFormedness.hs
 
