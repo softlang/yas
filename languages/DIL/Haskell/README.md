@@ -114,13 +114,13 @@ For what it matters, the internal representation mainly consists of proxies for 
 
 ## Well-formedness of DIL models
 
-Type-level programming is employed to enforce several constraints.
+Type-level programming is employed to enforce several constraints -- in particular:
 
 * Levels must be descending one by one down to zero.
-* Structures must be unique across a model.
-* Instantiation must not be cyclic.
-* Field definitions (introductions) must be unique along instantiation chains.
+* Names of structure must be unique across a model.
+* Names of defined (introduced) fields must be unique along instantiation chains.
 * Field sets (assignments) must be aligned with definitions in terms of durabilities.
+* Instantiation must not be cyclic.
 
 See here for the code: https://github.com/softlang/yas/blob/master/languages/DIL/Haskell/Language/DIL/WellFormedness.hs
 
