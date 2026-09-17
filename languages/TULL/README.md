@@ -1,4 +1,4 @@
-# Language *ULL*
+# Language *TULL*
 ## Expansion
 Tiny Untyped Lambda Language
 
