@@ -1,32 +1,51 @@
-module Language.ZigZag where
+module Language.ZigZag.Syntax where
 
 {-
 
+In concrete syntax:
+
 ProductType = { taxRate: int^1, price: float^2 }
-Book = ProductType <- { taxRate = 7 }
+Book = ProductType <- { taxRate = 7, owner: Person^2 }
 MobyDick = Book <- { price = 9.95 }
+Person = { name : String^1 }
+Bookworm = Person <- { name = "bookworm" }
 
 -}
 
-type Prog = [Def]
-type Def = (Name, Elem)
-type Name = String
-data Elem
-  = Literal [Field]
-  | Instance Name [Field]
+-- Abstract syntax definition
+type Prog = [EDef]
+type EDef = (EName, Element)
+data Element
+  = Literal [PDef]
+  | Instance EName [PDef]
   deriving (Read, Show, Eq)
-data Field
-  = Decl Name Type Durability
-  | Def Name Value
+type PDef = (PName, Property)
+data Property
+  = Decl Type Durability
+  | Set Value
   deriving (Read, Show, Eq)
-type Value = Either Int Float
-data Type = IntType | FloatType
+data Value
+  = IntValue Int
+  | FloatValue Float
+  | StringValue String
+  | ElementValue EName
+  deriving (Read, Show, Eq)
+data Type
+  = IntType
+  | FloatType
+  | StringType
+  | ElementType EName
   deriving (Read, Show, Eq)
 type Durability = Int
+type EName = String
+type PName = String
 
+-- The same sample as above
 sample :: Prog
 sample = [
-    ("ProductType", Literal [Decl "taxRate" IntType 1, Decl "price" FloatType 2]),
-    ("Book", Instance "ProductType" [Def "taxRate" (Left 7)]),
-    ("MobyDick", Instance "Book" [Def "price" (Right 9.95)])
+    ("ProductType", Literal [("taxRate", (Decl IntType 1)), ("price", Decl FloatType 2)]),
+    ("Book", Instance "ProductType" [("taxRate", Set (IntValue 7)), ("owner", (Decl (ElementType "Person") 2))]),
+    ("MobyDick", Instance "Book" [("price", Set (FloatValue 9.95))]),
+    ("Person", Literal [("name", Decl StringType 1)]),
+    ("Bookworm", Instance "Person" [("name", Set (StringValue "bookworm"))])
   ]
