@@ -1,0 +1,22 @@
+// A tour of BIPL static-semantics diagnostics.
+{
+  x = 5;
+
+  // type error: condition of 'if' must be boolean, x is int
+  if (x)
+    y = 1;
+
+  // warning: y was only assigned on one branch of the if
+  z = y + 1;
+
+  // type error: x is int but gets a boolean value
+  x = 1 < 2;
+
+  // type error: '+' expects integers, (2 < 3) is boolean
+  w = (2 < 3) + 4;
+
+  // while-body assignments are not definite: the loop may run zero times
+  while (z > 10)
+    v = z;
+  u = v;
+}

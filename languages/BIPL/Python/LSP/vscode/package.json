@@ -1,0 +1,52 @@
+{
+  "name": "bipl-lsp-vscode",
+  "displayName": "BIPL LSP Demo",
+  "description": "Minimal VS Code client for the BIPL language server demo.",
+  "version": "0.1.0",
+  "publisher": "softlang",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": ["Programming Languages"],
+  "main": "./out/extension.js",
+  "activationEvents": ["onLanguage:bipl"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "bipl",
+        "aliases": ["BIPL"],
+        "extensions": [".bipl"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "bipl",
+        "scopeName": "source.bipl",
+        "path": "./syntaxes/bipl.tmLanguage.json"
+      }
+    ],
+    "configuration": {
+      "title": "BIPL",
+      "properties": {
+        "bipl.serverCommand": {
+          "type": "string",
+          "default": "bipl-lsp",
+          "description": "Command used to start the BIPL language server (absolute path or a command on PATH)."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.75.0",
+    "typescript": "^5.4.0"
+  }
+}
