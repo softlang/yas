@@ -1,0 +1,53 @@
+{
+  "name": "bnl-lsp-client",
+  "displayName": "BNL Language Server Client",
+  "description": "VS Code client for the BNL language server",
+  "version": "0.1.0",
+  "publisher": "christian-breiler",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": ["Programming Languages"],
+  "main": "./out/extension.js",
+  "activationEvents": ["onLanguage:bnl"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "bnl",
+        "aliases": ["BNL"],
+        "extensions": [".bnl"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "bnl",
+        "scopeName": "source.bnl",
+        "path": "./syntaxes/bnl.tmLanguage.json"
+      }
+    ],
+    "configuration": {
+      "title": "BNL",
+      "properties": {
+        "bnl.serverCommand": {
+          "type": "string",
+          "default": "bnl-lsp",
+          "description": "Command used to start the BNL language server (absolute path or a command on PATH)."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p .",
+    "watch": "tsc -w -p ."
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.75.0",
+    "typescript": "^5.4.0"
+  }
+}

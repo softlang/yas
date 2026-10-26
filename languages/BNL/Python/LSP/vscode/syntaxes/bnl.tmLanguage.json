@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "BNL",
+  "scopeName": "source.bnl",
+  "patterns": [
+    { "include": "#numbers" },
+    { "include": "#invalid" }
+  ],
+  "repository": {
+    "numbers": {
+      "patterns": [
+        { "name": "constant.numeric.binary.bnl", "match": "[01]+(\\.[01]+)?" }
+      ]
+    },
+    "invalid": {
+      "patterns": [
+        { "name": "invalid.illegal.bnl", "match": "[^01\\s]" }
+      ]
+    }
+  }
+}
